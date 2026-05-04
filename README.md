@@ -12,6 +12,8 @@ PhysLit asks whether a language model can do physics — not solve physics probl
 
 - [docs/product-spec.md](./docs/product-spec.md) — what PhysLit is, the methodology, the four design rules, pre-registered predictions
 - [docs/implementation-guide.md](./docs/implementation-guide.md) — phase-by-phase build plan
+- [CLAUDE.md](./CLAUDE.md) — architectural rules and Claude Code project guide
+- [CHANGELOG.md](./CHANGELOG.md) — phase-by-phase release notes
 
 ## Stack
 
