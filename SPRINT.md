@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-04 21:14 UTC  
+**Generated:** 2026-05-04 21:21 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 2 |
+| Total commits | 3 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **2** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **3** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 4**
 
+- `f808b1a` docs: add CLAUDE.md, CHANGELOG.md, link both from README — _dongzhang84_ `2026-05-04 14:21`
 - `bb269bd` feat: Phase 0 — repo scaffold + Python env (uv, 3.13) — _dongzhang84_ `2026-05-04 14:14`
 - `f426637` initial commit — PhysLit docs + CI — _dongzhang84_ `2026-05-04 13:56`
 
