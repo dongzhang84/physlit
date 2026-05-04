@@ -1,0 +1,29 @@
+Creative Commons Attribution 4.0 International License (CC BY 4.0)
+
+Copyright (c) 2026 Dong Zhang
+
+The phenomenon sets, predictions, prompts, model responses, and analysis
+content in this repository — specifically the contents of `frameworks/`,
+`predictions/`, `prompts/`, `analysis/`, and `results/` — are licensed
+under the Creative Commons Attribution 4.0 International License.
+
+You are free to:
+
+  - Share — copy and redistribute the material in any medium or format
+  - Adapt — remix, transform, and build upon the material for any purpose,
+    even commercially.
+
+Under the following terms:
+
+  - Attribution — You must give appropriate credit to PhysLit and Dong
+    Zhang, provide a link to the license, and indicate if changes were
+    made. You may do so in any reasonable manner, but not in any way that
+    suggests the licensor endorses you or your use.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+---
+
+The source code in this repository (anything outside the directories
+listed above, primarily `src/physlit/`, `tests/`, `scripts/`, and config
+files) is licensed under the MIT License — see `LICENSE`.
