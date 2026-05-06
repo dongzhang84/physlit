@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-06 06:42 UTC  
+**Generated:** 2026-05-06 15:33 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -9,13 +9,13 @@
 
 | Stat | Value |
 |------|-------|
-| Status | ❌ Stalled |
-| Active days | 2 / 7 |
-| Total commits | 6 |
+| Status | ⚠️ Slow |
+| Active days | 3 / 7 |
+| Total commits | 7 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **3** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **3** | **3** | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 4**
 
@@ -28,6 +28,10 @@
 - `7a1e511` content: draft Aristotelian phenomenon set (6 files, all DRAFT) — _dongzhang84_ `2026-05-05 23:42`
 - `8c31889` docs: add evaluation pipeline diagram to README — _dongzhang84_ `2026-05-05 23:35`
 - `778a7a5` feat: Phase 1 — FrameworkSpec schema + validator + first Tier 3 framework — _dongzhang84_ `2026-05-05 23:26`
+
+**Wed – Wednesday, May 6**
+
+- `4888cc8` docs: add Chinese translation of product-spec — _dongzhang84_ `2026-05-06 08:33`
 
 ---
 
