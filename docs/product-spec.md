@@ -2,6 +2,8 @@
 
 > An open-source diagnostic for physics literacy in large language models — replacing percentage benchmarks with binary cognitive judgments across induction, formulation, and prediction.
 
+> **中文版：** [product-spec.zh.md](./product-spec.zh.md)
+
 ---
 
 ## Table of Contents
