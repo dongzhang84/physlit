@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-04 21:21 UTC  
+**Generated:** 2026-05-06 06:27 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -10,18 +10,22 @@
 | Stat | Value |
 |------|-------|
 | Status | ❌ Stalled |
-| Active days | 1 / 7 |
-| Total commits | 3 |
+| Active days | 2 / 7 |
+| Total commits | 4 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **3** | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 4**
 
 - `f808b1a` docs: add CLAUDE.md, CHANGELOG.md, link both from README — _dongzhang84_ `2026-05-04 14:21`
 - `bb269bd` feat: Phase 0 — repo scaffold + Python env (uv, 3.13) — _dongzhang84_ `2026-05-04 14:14`
 - `f426637` initial commit — PhysLit docs + CI — _dongzhang84_ `2026-05-04 13:56`
+
+**Tue – Tuesday, May 5**
+
+- `778a7a5` feat: Phase 1 — FrameworkSpec schema + validator + first Tier 3 framework — _dongzhang84_ `2026-05-05 23:26`
 
 ---
 
