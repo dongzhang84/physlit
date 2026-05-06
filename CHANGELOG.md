@@ -42,10 +42,11 @@ adapted for a research project: each entry is one phase of the implementation gu
 All checks green:
 `uv run ruff check .` · `uv run ruff format --check .` · `uv run mypy src/`.
 
-### Pending external setup
+### External setup
 
-- Add `PLAYBOOK_TOKEN` repository secret so `notify-playbook` workflow
-  can dispatch sprint-summary updates back to indie-product-playbook.
+- `PLAYBOOK_TOKEN` repository secret configured for the
+  `notify-playbook` workflow that dispatches sprint summaries back to
+  indie-product-playbook. (Confirmed 2026-05-05.)
 
 ---
 

@@ -64,6 +64,40 @@ physlit/
 
 Phase tags in brackets point at `docs/implementation-guide.md`. Empty directories use `.gitkeep` until populated; do not delete the placeholder before adding real content.
 
+## Evaluation pipeline
+
+End-to-end shape of one framework × all tested models. This is the v0.1 target
+architecture; today only the schema layer (top-left input) is wired up.
+
+```
+                                    ┌─ Claude Opus 4.7 ─┐
+observations.md ──┐                 │                   │
+                  │                 │  5 fresh sessions │
+prompts/stage1    │   runner        │  × 2 temperatures │ ──▶ results/<model-ver>/
+_induction.md  ───┼──▶ orchestrator ┼─ GPT-5 ───────────┤       01_aristotelian/
+                  │   (replicate.sh)│  (same)           │       induction/
+                  │                 │                   │         trial_0_t0.0.json
+                  │                 └─ Gemini 3 ────────┘         trial_0_t1.0.json
+                  │                                                ...
+                  ▼
+           save trial JSON verbatim
+                  │
+                  ▼
+        Judges (Claude + GPT, independent)
+        read response_text + pass_fail_criteria.md
+        → emit PASS / FAIL + reasoning
+                  │
+                  ▼
+        IRR check (do the two judges agree?)
+                  │
+                  ▼
+        analysis/ → capability matrix HTML
+```
+
+Per-trial isolation is load-bearing: every trial gets a fresh API client and
+a new session UUID, and stages 1/2/3 never share context. See `CLAUDE.md`
+("Architectural Rules") for the methodology rationale.
+
 ## Quick start
 
 ```bash
