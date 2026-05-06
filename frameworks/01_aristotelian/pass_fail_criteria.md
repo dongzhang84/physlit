@@ -1,0 +1,95 @@
+# Aristotelian Mechanics — Pass / Fail Criteria
+
+> **Status:** DRAFT — author review required before prereg lock.
+> **Created:** 2026-05-05
+> **Framework ID:** 01_aristotelian
+> **Audience:** PhysLit judges (Claude + GPT) and human reviewers.
+
+PhysLit judgments are **binary**: PASS or FAIL, no partial credit, no
+weighting. Stage-level pass requires consistent results across at least
+**4 of 5 trials**; trial-level disagreement is reported separately as
+an instability signal.
+
+## Stage 1 — Induction
+
+A trial PASSES when **all** of the following hold; otherwise FAIL.
+
+- [ ] The response proposes a set of named or numbered laws (or
+  equivalent rules) intended to explain the observations.
+- [ ] Every observation in `observations.md` is covered by at least
+  one proposed law, either explicitly cited or unambiguously implied.
+- [ ] No forbidden concept (see `ideal_induction.md` §"Concepts that
+  must NOT appear") is named or used. Naming a concept *only to deny
+  its applicability* still counts as use.
+- [ ] The proposed laws are mutually consistent: no two laws make
+  contradictory claims about the same kind of body in the same
+  situation.
+- [ ] The laws collectively cover the natural-vs-forced motion
+  distinction (L1 + L3 of the ideal induction) in some form.
+
+## Stage 2 — Formulation
+
+A trial PASSES when **all** of the following hold; otherwise FAIL.
+
+- [ ] Each law from Stage 1 is restated in operational form: a
+  proportionality, a ranking rule, an explicit conditional, or a
+  procedure that a third party could apply.
+- [ ] Scope is stated for each law (which bodies, which media, which
+  kind of motion).
+- [ ] The response either identifies a conserved quantity *consistent
+  with Stage 1* or explicitly states that nothing is conserved. It
+  does not import a conservation law (energy, momentum) absent from
+  Stage 1.
+- [ ] No new forbidden concept is introduced relative to Stage 1.
+- [ ] Boundary cases are listed; observations not covered are named,
+  not silently dropped.
+
+## Stage 3 — Prediction
+
+The model produces one prediction per scenario in `prediction_tests.md`.
+A trial PASSES *for that scenario* when **all** of the following hold;
+otherwise FAIL.
+
+- [ ] The prediction matches the *Aristotelian (PASS)* column of the
+  scenario.
+- [ ] The justification cites the model's own Stage 2 operational laws
+  (or paraphrases them faithfully).
+- [ ] No standard-physics concept appears in the justification, even
+  in passing or as a contrast.
+- [ ] The numeric or ordinal claim, where applicable (Scenarios 1 and
+  3), is qualitatively in the right direction; exact factor matching
+  is not required, but the prediction must clearly favour the heavier
+  body in the expected ratio sense.
+
+## Cross-stage consistency
+
+Independent of per-stage pass/fail. A framework PASSES the cross-stage
+check when **all** of the following hold; otherwise FAIL.
+
+- [ ] The laws stated at Stage 2 are derivable from the rules
+  proposed at Stage 1 (no smuggled additions).
+- [ ] Every Stage 3 prediction is derivable from the Stage 2 laws as
+  stated, applied directly. A Stage 3 prediction that contradicts the
+  Stage 2 laws — even if it matches the Aristotelian column — counts
+  as a cross-stage failure.
+- [ ] The framework named or implied at each stage is the same. A
+  trial that begins inside the Aristotelian framework at Stage 1 and
+  drifts to standard physics at Stage 3 fails cross-stage even if
+  individual stages pass.
+
+## Meta-cognitive
+
+See `meta_questions.md`. Scored separately, not aggregated into the
+stage matrix.
+
+## Notes for judges
+
+- **Forbidden concept use is the dominant signal.** If a forbidden
+  concept appears, the trial fails the corresponding stage even if
+  every other criterion is satisfied. Both judges should record the
+  exact phrase as evidence.
+- **Inter-rater disagreements** on a trial are escalated for human
+  review. Disagreement rate is published per framework.
+- **Hedging is not a pass.** "It depends on the framework you assume"
+  is a failure of commitment unless the model goes on to commit
+  inside the Aristotelian framework specifically.

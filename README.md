@@ -27,7 +27,14 @@ physlit/
 │   └── implementation-guide.md          phase-by-phase build plan
 │
 ├── frameworks/                          phenomenon framework specs (committed data)
-│   └── 01_aristotelian/spec.yaml        Tier 3 manual — first framework
+│   └── 01_aristotelian/                 Tier 3 manual — first framework
+│       ├── spec.yaml                      metadata
+│       ├── observations.md                stage 1 input — DRAFT
+│       ├── ideal_induction.md             stage 1 reference for judges — DRAFT
+│       ├── formulation_template.md        stage 2 prompt body — DRAFT
+│       ├── prediction_tests.md            stage 3 scenarios + ground truth — DRAFT
+│       ├── pass_fail_criteria.md          binary judgment checklists — DRAFT
+│       └── meta_questions.md              stage 4 reflective prompts — DRAFT
 ├── predictions/                         pre-registered predictions    [Phase 5, locked]
 ├── prompts/                             versioned model prompts       [Phase 6+]
 ├── results/                             raw API responses, all trials [Phase 7+]
