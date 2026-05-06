@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-06 06:27 UTC  
+**Generated:** 2026-05-06 06:35 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 4 |
+| Total commits | 5 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **3** | **2** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 4**
 
@@ -25,6 +25,7 @@
 
 **Tue – Tuesday, May 5**
 
+- `8c31889` docs: add evaluation pipeline diagram to README — _dongzhang84_ `2026-05-05 23:35`
 - `778a7a5` feat: Phase 1 — FrameworkSpec schema + validator + first Tier 3 framework — _dongzhang84_ `2026-05-05 23:26`
 
 ---
