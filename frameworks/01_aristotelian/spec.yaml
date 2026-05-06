@@ -1,0 +1,19 @@
+id: "01_aristotelian"
+name: "Aristotelian Mechanics"
+category: "A_historical"
+tier: "tier3_manual"
+
+description: |
+  Pre-Newtonian framework: motion requires a sustained applied force,
+  objects have a "natural place" they tend toward, heavier objects fall
+  faster than lighter ones in the same medium, no concept of inertia.
+
+rationale: |
+  Cannot be cleanly coded — "natural place" is conceptual, not numeric.
+  AI generation (Tier 2) deferred to v0.5 due to contamination risk
+  between generator and tested model. Manual authorship for v0.1 with
+  explicit "manual" flag on every observation.
+
+manual_authoring_note: |
+  Each observation reviewed by author + 1 external physics-trained reader
+  before the prereg lock to reduce subjective bias.

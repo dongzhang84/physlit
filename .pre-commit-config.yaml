@@ -25,3 +25,10 @@ repos:
         pass_filenames: false
         # This hook only runs after Phase 5 (when prereg file exists).
         # Until then, it's a no-op because the file doesn't exist yet.
+
+      - id: validate-specs
+        name: Validate framework specs
+        entry: uv run python scripts/validate_specs.py
+        language: system
+        files: ^frameworks/.*\.ya?ml$
+        pass_filenames: false

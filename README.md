@@ -6,7 +6,10 @@ PhysLit asks whether a language model can do physics — not solve physics probl
 
 ## Status
 
-**v0.0.1 — Phase 0 (scaffolding)**, 2026-05-04. Docs complete, Python environment initialized, repo skeleton ready. Phenomenon sets, runners, and analysis pipeline still to build.
+**v0.0.2 — Phase 1 (Framework Spec Schema)**, 2026-05-05. Pydantic
+`FrameworkSpec` model + tier decision-tree validation, first Tier 3
+framework (Aristotelian Mechanics), spec validator wired into pre-commit.
+Phenomenon generators, runners, and analysis pipeline still to build.
 
 ## Docs
 
@@ -15,24 +18,71 @@ PhysLit asks whether a language model can do physics — not solve physics probl
 - [CLAUDE.md](./CLAUDE.md) — architectural rules and Claude Code project guide
 - [CHANGELOG.md](./CHANGELOG.md) — phase-by-phase release notes
 
-## Stack
+## Repo layout
 
-- Python 3.13
-- [uv](https://docs.astral.sh/uv/) for dependency management
-- pydantic for schema validation
-- anthropic / openai / google-genai SDKs
-- Jinja2 for static-site rendering
-- GitHub Pages + GitHub Actions for hosting and CI
+```
+physlit/
+├── docs/
+│   ├── product-spec.md                  methodology, design rules, predictions
+│   └── implementation-guide.md          phase-by-phase build plan
+│
+├── frameworks/                          phenomenon framework specs (committed data)
+│   └── 01_aristotelian/spec.yaml        Tier 3 manual — first framework
+├── predictions/                         pre-registered predictions    [Phase 5, locked]
+├── prompts/                             versioned model prompts       [Phase 6+]
+├── results/                             raw API responses, all trials [Phase 7+]
+├── analysis/                            cost log, IRR reports, matrix [Phase 9+]
+│
+├── scripts/
+│   ├── validate_specs.py                frameworks/*/spec.yaml schema check
+│   └── extract-sprint-summary.py        sprint report helper
+│
+├── src/physlit/
+│   ├── schema/                          pydantic models (cross-module contracts)
+│   │   └── framework_spec.py            FrameworkSpec + tier validation
+│   ├── generators/
+│   │   ├── tier1/                       Python simulators              [Phase 2]
+│   │   ├── tier2/                       AI generator (stub only in v0.1) [Phase 3]
+│   │   └── tier3/                       manual-authoring loaders       [Phase 4]
+│   ├── runners/                         tested-model orchestration     [Phase 6–7]
+│   ├── judges/                          dual-LLM IRR pipeline          [Phase 8]
+│   ├── analysis/                        cross-stage / meta analysis    [Phase 9]
+│   └── site/                            Jinja2 static-site renderer    [Phase 10]
+│
+├── tests/
+│   └── test_schemas.py                  FrameworkSpec + committed-spec sweep
+│
+├── CLAUDE.md                            architectural rules (load-bearing)
+├── CHANGELOG.md                         phase-by-phase release notes
+├── SPRINT.md                            auto-generated activity report
+├── .pre-commit-config.yaml              ruff + verify-prereg + validate-specs
+├── pyproject.toml                       uv-managed; mypy strict, ruff
+├── uv.lock                              committed — required for reproducibility
+├── LICENSE                              MIT — code
+└── LICENSE-DATA                         CC BY 4.0 — frameworks, predictions, prompts, results, analysis
+```
 
-**No backend, no database, no auth, no payments.** All results are JSON files committed to the repo. The capability matrix is a static site.
+Phase tags in brackets point at `docs/implementation-guide.md`. Empty directories use `.gitkeep` until populated; do not delete the placeholder before adding real content.
 
-## Quick start (after Phase 0 is checked in)
+## Quick start
 
 ```bash
 git clone https://github.com/dongzhang84/physlit.git
 cd physlit
-uv sync                    # install deps in .venv
-uv run pytest              # run tests
+uv sync                              # install deps + dev tools into .venv
+uv run pre-commit install            # one-time: hook ruff + spec validators
+
+uv run pytest                        # run tests
+uv run python scripts/validate_specs.py   # validate every frameworks/*/spec.yaml
+```
+
+Local gates (must all pass before commit):
+
+```bash
+uv run ruff format --check .
+uv run ruff check .
+uv run mypy
+uv run pytest
 ```
 
 To reproduce a full evaluation run (requires API keys and budget):

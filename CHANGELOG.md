@@ -47,9 +47,44 @@ All checks green:
 - Add `PLAYBOOK_TOKEN` repository secret so `notify-playbook` workflow
   can dispatch sprint-summary updates back to indie-product-playbook.
 
-### Next: Phase 1
+---
 
-- `src/physlit/schema/framework_spec.py` — pydantic `FrameworkSpec` model
-- `frameworks/01_aristotelian/spec.yaml` — first manual (Tier 3) framework
-- `scripts/validate_specs.py` — schema validator
-- `tests/test_schemas.py` — schema validation tests
+## [0.0.2] — 2026-05-05
+
+### Phase 1 — Framework Spec Schema
+
+- `src/physlit/schema/framework_spec.py` — pydantic v2 `FrameworkSpec`
+  with `extra="forbid"`, `frozen=True`, id pattern `^\d{2}_[a-z0-9_]+$`,
+  and a `model_validator` enforcing the tier decision tree:
+  Tier 1 requires `simulator_module` (and only that), Tier 2 requires
+  both `generation_prompt` and `generator_model`, Tier 3 requires
+  `manual_authoring_note`. Architectural slot for Tier 2 is preserved
+  for v0.5 even though no Tier 2 spec is permitted in v0.1.
+- `src/physlit/schema/__init__.py` — re-exports `FrameworkSpec`,
+  `Tier`, `Category` so other modules import from `physlit.schema`.
+- `frameworks/01_aristotelian/spec.yaml` — first Tier 3 manual
+  framework (Category A_historical). `frameworks/.gitkeep` removed
+  now that the directory is populated.
+- `scripts/validate_specs.py` — walks `frameworks/*/spec.yaml`,
+  validates each against the schema, and additionally enforces that
+  the declared `id` matches the parent directory name. Exits non-zero
+  on any failure.
+- `tests/test_schemas.py` — 9 tests: happy paths for Tier 1 and
+  Tier 3, all three tier-mismatch errors, id pattern, `extra="forbid"`,
+  frozen mutation rejection, and a parametrized sweep that loads every
+  committed `spec.yaml` so any future spec drift fails CI.
+- `.pre-commit-config.yaml` — added local `validate-specs` hook
+  scoped to `frameworks/**.y(a)ml`, runs `validate_specs.py`.
+- `pyproject.toml` — added `types-pyyaml` to dev deps so mypy strict
+  passes on `yaml.safe_load` calls.
+
+All checks green:
+`uv run ruff format --check . && uv run ruff check . && uv run mypy
+&& uv run pytest`.
+
+### Next: Phase 2
+
+- `src/physlit/generators/tier1/base.py` — `Tier1Simulator` base class
+- `src/physlit/generators/tier1/f_equals_mv.py` — first Tier 1
+  simulator (F=mv counterfactual world)
+- `tests/test_simulators.py` — byte-identity determinism contract
