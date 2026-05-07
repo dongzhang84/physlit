@@ -20,7 +20,7 @@
 10. [Repository Structure](#10-repository-structure)
 11. [Risk Analysis](#11-risk-analysis)
 11A. [Limitations](#11a-limitations)
-12. [Week by Week Execution Plan](#12-week-by-week-execution-plan)
+12. [Execution Rhythm](#12-execution-rhythm)
 
 ---
 
@@ -40,9 +40,18 @@ The output is not a score. The output is a diagnostic judgment.
 
 ### 1.3 Project Status
 
-Phase: pre-development. This document is the initial research plan.
+**v0.0.3 — scope reduction + Aristotelian content drafted**, 2026-05-07.
 
-Target v0.1 release: four weeks from project start.
+The original v0.1 / v0.5 / v1.0 ladder (1 → 5–7 → 15–20 frameworks; arXiv;
+five academic citations) has been retired. The project is now bounded to:
+
+- **v0.1**: a single framework (Aristotelian Mechanics) × 3 models, ≤ $50 USD.
+- **v0.2**: up to 5 frameworks across categories A/B/C, ≤ $250 USD —
+  *optional and gated on v0.1 outcome*.
+- Beyond v0.2: no commitment.
+
+This is a research artifact developed in evenings, not a funded benchmark.
+See §8 for the revised milestones.
 
 ---
 
@@ -101,6 +110,12 @@ We hypothesize that current frontier LLMs do not possess physics literacy as def
 ### 3.3 Pre-registered Predictions
 
 To prevent post-hoc rationalization of results, we pre-register the following testable predictions **before** running the v0.1 evaluation. The predictions are timestamped at this document's commit hash. After v0.1 results are available, each prediction is evaluated as **confirmed**, **partially confirmed**, or **refuted**, and the verdict is published verbatim regardless of outcome.
+
+**Scope under the revised plan (§8):** v0.1 prereg lock commits **P1 and P3
+only**, since these are testable on Aristotelian alone. **P2, P4, and P5
+require multi-framework testing** and are deferred to a separate v0.2
+prereg lock if v0.2 is undertaken. All five predictions remain part of the
+long-term research frame.
 
 **P1 — Induction failure under training-data conflict**: At least one frontier model will, in at least 3 of 5 trials on a Category A set (e.g., Aristotelian Mechanics), introduce real-physics concepts (e.g., "inertia," "F=ma," "momentum conservation") that are not derivable from the given observations.
 
@@ -256,9 +271,12 @@ These are fictional but internally consistent physics frameworks that do not app
 
 These are completely fictional worlds with rules that do not correspond to any meaningful physical theory. Examples include color-dependent forces, contact-dependent mass exchange, and observer-dependent physics. The challenge is to reason from arbitrary premises with maximum protection against pattern matching.
 
-### 5.2 The Initial Fifteen Phenomenon Sets
+### 5.2 The Long-Term Roster of Phenomenon Sets
 
-The v1.0 release will contain at least fifteen phenomenon sets, spanning all three categories.
+The list below is the *long-term reference roster*, not a v0.1 commitment.
+Per the revised milestones in §8, **v0.1 covers item 1 only (Aristotelian
+Mechanics); v0.2 covers up to 5 items across all three categories;
+expansion beyond v0.2 is uncommitted.**
 
 **Category A: Historically Real**
 
@@ -306,7 +324,12 @@ Each phenomenon set is a self-contained directory with the following files.
 
 ### 6.1 Models Tested
 
-The v0.1 release evaluates three frontier models: Claude Opus 4.7, GPT-5, and Gemini 3. The v1.0 release expands to include open-weight models such as DeepSeek and Llama, and reasoning-optimized models specifically.
+The v0.1 release evaluates three frontier models: **Claude Opus 4.7, GPT-5,
+and Gemini 3**. v0.1 runs at **temperature=0 only** under the revised $50
+budget cap; the temperature=0.7 secondary pass described in §4.5 is deferred
+to v0.2 (or a budget extension), whichever comes first. Open-weight models
+(DeepSeek, Llama) and reasoning-optimized variants are not in scope under
+the current plan.
 
 ### 6.2 Protocol Steps
 
@@ -411,84 +434,112 @@ PhysLit occupies a position no existing benchmark fills: a diagnostic instrument
 
 ## 8. Research Milestones
 
-### 8.1 Phase 1: v0.1 (Weeks 1–4)
+The original v0.1 / v0.5 / v1.0 ladder (4 + 8 + 14 weeks; 1 → 5–7 → 15–20
+frameworks) has been retired (2026-05-07) in favour of a smaller,
+budget-bounded plan. This is a research artifact developed in evenings, not
+a funded benchmark.
 
-**Goal**: release an end-to-end working diagnostic on one phenomenon set, with full pre-registration and reproducibility kit.
+### 8.1 v0.1 — Aristotelian probe
+
+**Goal**: end-to-end working diagnostic on Aristotelian Mechanics, with
+full pre-registration and reproducibility kit, fitted to a $50 USD
+evaluation budget.
+
+**Scope**:
+- 1 framework: Aristotelian Mechanics (Category A, Tier 3 manual)
+- 3 models tested: Claude Opus 4.7, GPT-5, Gemini 3
+- Protocol: N=5 trials × temperature=0 × 4 stages (induction, formulation,
+  prediction, meta)
+- temperature=0.7 secondary pass deferred (budget); to be added when budget
+  allows
+- Dual-judge IRR (Claude + GPT) on Stage 1–3 responses
+- Pre-registration: P1 + P3 only; P2 / P4 / P5 require multi-framework
+  testing and are deferred to v0.2 prereg lock
 
 **Deliverables**:
-- Complete methodology document
-- Pre-registered predictions committed before any model is run
-- One fully developed phenomenon set (Aristotelian Mechanics)
+- Methodology document (this file) ✅
+- Aristotelian phenomenon set (DRAFT — awaiting external physics-trained
+  reader review before prereg lock)
+- Phase 1.5 dry run smoke test (Claude only, N=1, exploratory; output
+  in `results/_dryrun/`)
+- Pre-registered v0.1 predictions committed before any production model run
 - Automated runners for Claude, OpenAI, and Gemini APIs
-- Diagnostic reports for three frontier models
-- Public GitHub repository with README
-- One accompanying blog post / preprint outline
+- Dual-judge IRR pipeline
+- Diagnostic report for three frontier models on Aristotelian
+- One blog post or preprint outline
 
-**Indicators that Phase 1 worked**:
-- Methodology document is complete enough that an external researcher could follow it
-- v0.1 results are reproducible from the repository alone
-- At least one substantive piece of external commentary on the methodology (in any direction)
+**Budget**: ≤ $50 USD total (tested models + judges).
 
-### 8.2 Phase 2: v0.5 (Weeks 5–12)
+### 8.2 v0.2 — Five-framework expansion (optional, gated on v0.1 outcome)
 
-**Goal**: establish credibility via preprint and methodology depth.
+**Goal**: extend the probe to up to 5 frameworks covering all three
+categories.
 
-**Deliverables**:
-- 5–7 phenomenon sets across categories A and B
-- Cross-set consistency analysis
-- Explicit comparison with NewtonBench and other prior work
-- Visual diagnostic reports including capability matrices
-- Standardized contribution template for community-submitted phenomenon sets
-- arXiv preprint posted
+**Gating conditions before starting v0.2**:
+- v0.1 produces at least one substantively interesting finding
+- v0.1 dual-judge disagreement on Aristotelian < 25%
+- Budget remains available (≤ $250 USD target for v0.2)
 
-**Indicators that Phase 2 worked**:
-- arXiv preprint is publicly available
-- At least one external party attempts a replication
-- At least one academic citation, blog discussion, or substantive critique
+**Tentative framework selection (subject to revision before v0.2 prereg
+lock)**:
+- 01_aristotelian (Category A) — carried over from v0.1
+- 02_phlogiston (Category A)
+- F=mv world (Category B, Tier 1 simulator)
+- Reverse-gravity world (Category B, Tier 1 simulator)
+- Color-force world (Category C, Tier 1 simulator)
 
-### 8.3 Phase 3: v1.0 (Weeks 13–26)
+This selection covers all three categories, mixes two Tier 3 (manual)
+frameworks with three Tier 1 (simulator-generated) frameworks, and
+exercises the Phase 2 simulator base class.
 
-**Goal**: establish PhysLit as a recognized standard in LLM cognitive evaluation.
+**Pre-registration**: P2, P4, P5 committed at v0.2 prereg lock.
 
-**Deliverables**:
-- 15–20 phenomenon sets including all three categories
-- Public capability matrix accepting external model submissions
-- At least three community-contributed phenomenon sets
-- Complete academic paper
-- Optional: NeurIPS or ICLR Datasets & Benchmarks Track submission
+**Budget**: ≤ $250 USD total.
 
-**Indicators that Phase 3 worked**:
-- Five or more external academic citations
-- Methodology is referenced in academic discussion of LLM physics reasoning
-- At least one major AI lab evaluates its models against PhysLit's framework
+### 8.3 Beyond v0.2
+
+No commitment. Optional paths considered only if v0.2 is itself worthwhile:
+
+- temperature=0.7 secondary pass on v0.1 + v0.2 frameworks (budget
+  permitting)
+- Community-contributed frameworks (no marginal API cost to authors)
+- Blog post or arXiv preprint based on v0.1 + v0.2 findings
+
+Earlier ambitions of 15-framework coverage, multiple academic citations,
+and standardised community submission templates are deferred indefinitely.
+The project's contribution is the methodological frame; framework count is
+a secondary multiplier.
 
 ---
 
 ## 9. Success Criteria
 
-Each phase has explicit success criteria. Failure to meet these triggers a project review, not an extension. The review options are: revise the plan, accept reduced scope, or terminate the project.
+Success is binary at each milestone, not graded. Failure triggers project
+review (revise scope / accept reduced scope / archive the project), not
+extension.
 
-### 9.1 Phase 1 Criteria (Week 4)
+### 9.1 v0.1 success criteria
 
-- Repository is public with permissive license
-- Methodology document is complete and self-contained (an external researcher can run the protocol from the repo alone)
-- Pre-registered predictions are committed, timestamped, and unmodified since first commit
-- v0.1 results are reproducible end-to-end with the provided replication kit
-- At least one substantive piece of external feedback on the methodology has been received
+- Repository public with permissive license ✅
+- Methodology document complete and self-contained (an external researcher
+  can run the protocol from the repo alone)
+- Aristotelian phenomenon set reviewed by author + external
+  physics-trained reader before prereg lock
+- Pre-registered predictions (P1 + P3) committed, timestamped, and
+  unmodified since first commit
+- v0.1 results reproducible end-to-end with the provided replication kit
+- Total cost ≤ $50 USD
+- At least one substantive piece of external feedback on the methodology
 
-### 9.2 Phase 2 Criteria (Week 12)
+### 9.2 v0.2 success criteria
 
-- arXiv preprint is posted
-- At least one external replication attempt has been made
-- At least one academic citation, formal blog post, or peer critique exists
+- Five frameworks complete with phenomenon-set artifacts
+- v0.2 prereg (P2 + P4 + P5) committed before any model is run
+- Diagnostic reports for all three models on all five frameworks
+- Total v0.2 cost ≤ $250 USD
+- One public write-up (blog post or preprint outline)
 
-### 9.3 Phase 3 Criteria (Week 26)
-
-- Five external academic citations
-- At least one major AI lab or company has evaluated its models using PhysLit's framework
-- The methodology is referenced in academic discussion of LLM physics reasoning
-
-If any phase fails its criteria, the project enters review mode for one week before proceeding.
+If v0.1 fails its criteria, v0.2 does not start.
 
 ---
 
@@ -592,108 +643,14 @@ Methodologically, PhysLit also acknowledges:
 
 ---
 
-## 12. Week by Week Execution Plan
+## 12. Execution rhythm
 
-### Week 1: Methodology, Pre-registration, Foundation
-
-**Monday–Wednesday**:
-- Finalize methodology document
-- Define exact pass/fail criteria for all three stages
-- Write the three-layer test protocol in operational detail
-- Decide on exact prompts and instructions to be used
-- **Commit pre-registered predictions before any model is run**
-
-**Thursday–Friday**:
-- Create the GitHub repository
-- Write the initial README
-- Set up the directory structure
-- Commit methodology, pre-registration, and product plan
-
-**Weekend**:
-- Review with at least one external person if available
-- Refine based on feedback
-
-**Deliverable**: methodology document, pre-registration, repository created with initial structure.
-
-### Week 2: First Phenomenon Set
-
-**Monday–Tuesday**:
-- Write `observations.md` for Aristotelian Mechanics
-- Ensure phenomena are written without theoretical loading
-- Verify that the observations are sufficient for the inductive reasoning expected
-
-**Wednesday**:
-- Write `ideal_induction.md` describing the expected successful induction
-- Write `formulation_template.md`
-
-**Thursday–Friday**:
-- Write `prediction_tests.md` with five novel scenarios
-- Write `pass_fail_criteria.md` with explicit binary criteria
-- Write `meta_questions.md`
-
-**Weekend**:
-- Self-review the entire phenomenon set
-- Test the prompts informally on one model to catch issues
-
-**Deliverable**: complete Aristotelian phenomenon set.
-
-### Week 3: Automation and Execution
-
-**Monday–Tuesday**:
-- Implement `claude_runner.py` using the Anthropic API
-- Implement `openai_runner.py` using the OpenAI API
-- Implement `gemini_runner.py` using the Google API
-- Shared utilities for prompt assembly, response logging, and 5-trial orchestration
-
-**Wednesday**:
-- Run the full protocol against Claude Opus 4.7 (5 trials per stage)
-- Record all responses
-- Apply pass/fail criteria
-
-**Thursday**:
-- Run the full protocol against GPT-5
-- Record all responses
-- Apply pass/fail criteria
-
-**Friday**:
-- Run the full protocol against Gemini 3
-- Record all responses
-- Apply pass/fail criteria
-
-**Weekend**:
-- Begin analysis of results
-- Compare against pre-registered predictions
-
-**Deliverable**: three complete model evaluation runs with raw data and judgments.
-
-### Week 4: Analysis, Publication, Release
-
-**Monday**:
-- Write `v0_1_findings.md` with diagnostic conclusions
-- Evaluate each pre-registered prediction (confirmed / partial / refuted)
-- Create capability matrix visualization
-- Finalize all documentation
-
-**Tuesday–Wednesday**:
-- Write the launch blog post / preprint outline
-- Prepare social media materials
-- Finalize the README
-
-**Thursday**:
-- Final review of repository
-- Verify the replication kit reproduces results
-- Public release
-
-**Friday**:
-- Release announcement on Twitter, Hacker News, relevant subreddits
-- Engage with early discussions
-- Collect feedback
-
-**Weekend**:
-- Review feedback
-- Decide whether to proceed to Phase 2
-
-**Deliverable**: public v0.1 release, blog post, initial community engagement.
+The project has no fixed weekly schedule. Work proceeds in self-contained
+phases (see [`implementation-guide.md`](./implementation-guide.md)), each
+landing as a single feature commit on `main`. Each phase ends with a public
+push so the remote tracks every step. The original four-week sprint plan
+has been retired in favour of phase-bounded work; cadence is reflected in
+[`CHANGELOG.md`](../CHANGELOG.md).
 
 ---
 

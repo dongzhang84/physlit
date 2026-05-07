@@ -299,6 +299,89 @@ CI 把它接进 `.github/workflows/ci.yml`（Phase 12）。
 
 ---
 
+## Phase 1.5 — Aristotelian Dry Run（Smoke Test）
+
+> **加入时间：** 2026-05-07，作为修订后的 v0.1 计划（≤ $50 预算上限，单一框架，
+> 三模型 × N=5 × temp=0 × dual-judge）落地之前的小成本探针。详细动机见
+> `docs/product-spec.md` §1.3 / §8.1。
+
+### 1.5.1 为什么这一步
+
+正式 v0.1 评测（3 模型 × N=5 × dual-judge）之前先跑一次最小成本的
+smoke test。目的：
+
+- 在 prereg lock 之前发现 prompt / 观察 / 判据的 bug——lock 之后修改
+  成本极高（需要新 tag 和"deviation from prereg"声明）
+- 确认 API key、runner 框架、verbatim 落盘格式都跑得通
+- 用真实的 Claude 输出验证 markdown 内容是不是过分容易或过分难
+
+**这一步的结果不算 v0.1 正式数据**，存到 `results/_dryrun/<timestamp>/`，
+与正式结果路径明确分开。
+
+### 1.5.2 范围
+
+| 项 | 值 |
+| --- | --- |
+| Framework | 仅 Aristotelian |
+| Model | 仅 Claude Opus 4.7（完整版本字符串 pin） |
+| Trials | N=1 |
+| Temperature | 0 |
+| Stages | 4 个全跑（induction、formulation、prediction、meta） |
+| Judges | **不跑**——肉眼看 response |
+| Prereg | **跳过**——这次跑不算正式数据 |
+| 预算 | < $1 |
+| 落盘路径 | `results/_dryrun/<UTC ISO timestamp>/01_aristotelian/` |
+
+### 1.5.3 必须保留的方法论硬规则
+
+即使是 smoke test，下面这些 `CLAUDE.md` 硬规则**不让步**：
+
+1. 每个 stage 起 **fresh API client + 新 UUID**（`runners/base.py` 强制）
+2. 模型用**完整版本字符串**（如 `claude-opus-4-7-20260101`），调完比对
+   `response.model`，不一致直接报错
+3. 每个 trial 的 prompt + response **逐字** commit 到 dry-run 路径
+
+可以省的：dual-judge、temperature=0.7 第二遍、5 次试次、跨模型对比。
+
+### 1.5.4 依赖（要在 Phase 1.5 之前/同期写出来的最小代码）
+
+dry run 真要跑起来，至少需要：
+
+- `prompts/stage1_induction.md` ~ `stage4_meta.md`（4 个全局 prompt 模板，
+  Phase 6.2 的子集）
+- `src/physlit/prompts/loader.py`（front-matter 解析 + `{{var}}` 替换）
+- `src/physlit/runners/base.py`（`TrialRecord` + `run_trial` 抽象类）
+- `src/physlit/runners/claude.py`（最小 ClaudeRunner，只调 `messages.create`）
+- `scripts/dryrun_aristotelian.py`（编排脚本，跑 4 stage，落盘）
+
+GPT / Gemini runner 不在 Phase 1.5 范围内——v0.1 正式跑时再加。
+
+### 1.5.5 通过条件（人工判断）
+
+- 4 个 stage 都成功调通 API，没有 framework 之外的报错
+- 4 个 trial JSON 文件落到 `results/_dryrun/<ts>/01_aristotelian/` 下
+- `response.model` 全部等于 pin 的版本字符串
+- 输出能看出"模型在尝试 reason about Aristotelian"——不一定要 PASS，但
+  要看到方向感
+- 至少识别出 **1–2 个**可改进的 prompt / 观察 / 判据条目
+
+### 1.5.6 产出
+
+跑完后：
+
+- 4 个 JSON trial 文件在 `results/_dryrun/<ts>/01_aristotelian/`
+- `analysis/dryrun_findings.md`：发现的问题清单 + 拟修订
+- 上述修订在 v0.1 prereg lock（Phase 5）之前**全部完成**
+
+### 1.5.7 与 prereg lock 的边界
+
+Phase 1.5 dry run **必须在 Phase 5（prereg lock）之前**跑。一旦 prereg
+lock，prompt / 观察 / 判据全部冻结；那之后任何修订都要新 tag +
+"deviation from prereg"声明。所以 Phase 1.5 是改 markdown 和 prompt 的
+最后窗口期。
+
+---
+
 ## Phase 2 — Tier 1 Simulator Framework
 
 ### 2.1 Simulator base class

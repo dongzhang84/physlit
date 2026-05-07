@@ -89,3 +89,64 @@ All checks green:
 - `src/physlit/generators/tier1/f_equals_mv.py` — first Tier 1
   simulator (F=mv counterfactual world)
 - `tests/test_simulators.py` — byte-identity determinism contract
+
+---
+
+## [0.0.3] — 2026-05-07
+
+### Scope reduction (planning, no code change)
+
+The original v0.1 / v0.5 / v1.0 ladder (1 → 5–7 → 15–20 frameworks; arXiv;
+five academic citations) has been retired in favour of a smaller,
+budget-bounded plan:
+
+- **v0.1**: Aristotelian only × 3 models, **≤ $50 USD**.
+- **v0.2**: up to 5 frameworks across A/B/C, **≤ $250 USD** —
+  *optional and gated on v0.1 outcome*.
+- Beyond v0.2: no commitment.
+
+This better matches the project's nature as a research artifact
+("evening project") rather than a funded benchmark.
+
+#### Affected sections
+
+- `docs/product-spec.md` §1.3 (status), §3.3 (prereg scope), §5.2
+  (long-term roster), §6.1 (models), §8 (milestones rewritten),
+  §9 (success criteria), §12 (week-by-week plan replaced by phase
+  cadence).
+- `docs/product-spec.zh.md` mirrored.
+- `docs/implementation-guide.md` — new **Phase 1.5 — Aristotelian
+  Dry Run** inserted between Phase 1 and Phase 2.
+- `CLAUDE.md` Cost Awareness rewritten ($50 / $250 caps; replicate.sh
+  confirmation threshold lowered to $5).
+- `README.md` status line updated.
+
+#### v0.1 protocol changes from this scope reduction
+
+- **Temperature=0.7 secondary pass deferred** (budget). v0.1 headline
+  result uses temperature=0 only. To be added back in v0.2 or when
+  budget allows.
+- **Pre-registration scope split**: P1 + P3 in v0.1 prereg lock;
+  P2 + P4 + P5 deferred to v0.2 prereg lock (they require multi-framework
+  testing).
+- Three-model coverage (Claude Opus 4.7, GPT-5, Gemini 3) **retained**.
+- N=5 trials per (model, stage) **retained**.
+- Dual-judge IRR (Claude + GPT) **retained**.
+
+#### v0.2 tentative selection (revisable before v0.2 prereg lock)
+
+01_aristotelian (A) + 02_phlogiston (A) + F=mv world (B, Tier 1) +
+reverse-gravity world (B, Tier 1) + color-force world (C, Tier 1).
+
+### Next: Phase 1.5 (Aristotelian Dry Run)
+
+Smoke-test the v0.1 pipeline at < $1 cost before prereg lock:
+
+- `prompts/stage{1..4}_*.md` — global prompt templates
+- `src/physlit/prompts/loader.py` — front-matter parser
+- `src/physlit/runners/base.py` — `TrialRecord` + `run_trial` abstract base
+- `src/physlit/runners/claude.py` — minimal Claude runner
+- `scripts/dryrun_aristotelian.py` — orchestrate 4 stages, single trial,
+  Claude only, output to `results/_dryrun/<ts>/01_aristotelian/`
+- `tests/test_runners_with_mock.py` — mock-based, CI-safe
+- `analysis/dryrun_findings.md` — exploratory write-up after the run

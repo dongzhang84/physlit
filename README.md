@@ -6,10 +6,14 @@ PhysLit asks whether a language model can do physics — not solve physics probl
 
 ## Status
 
-**v0.0.2 — Phase 1 (Framework Spec Schema)**, 2026-05-05. Pydantic
-`FrameworkSpec` model + tier decision-tree validation, first Tier 3
-framework (Aristotelian Mechanics), spec validator wired into pre-commit.
-Phenomenon generators, runners, and analysis pipeline still to build.
+**v0.0.3 — Scope reduction + Aristotelian content drafted**, 2026-05-07.
+The v0.1 plan is now bounded to a single framework (Aristotelian) × 3
+models × **$50 USD budget cap**, with temperature=0.7 secondary pass and
+three of the five pre-registered predictions deferred to a hypothetical
+v0.2 (≤ 5 frameworks, ≤ $250 USD, gated on v0.1 outcome). The original
+15-framework v1.0 ambition is retired. See `CHANGELOG.md` and
+`docs/product-spec.md` §8 for the new shape; `docs/implementation-guide.md`
+Phase 1.5 for the Aristotelian dry-run smoke test that comes next.
 
 ## Docs
 
