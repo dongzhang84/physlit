@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-06 15:33 UTC  
+**Generated:** 2026-05-07 09:10 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ⚠️ Slow |
-| Active days | 3 / 7 |
-| Total commits | 7 |
+| Active days | 4 / 7 |
+| Total commits | 8 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **3** | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **3** | **3** | **1** | **1** | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 4**
 
@@ -32,6 +32,10 @@
 **Wed – Wednesday, May 6**
 
 - `4888cc8` docs: add Chinese translation of product-spec — _dongzhang84_ `2026-05-06 08:33`
+
+**Thu – Thursday, May 7**
+
+- `1f532a0` docs: scope reduction — v0.1 ≤ $50, v0.2 ≤ $250, retire v1.0 — _dongzhang84_ `2026-05-07 02:10`
 
 ---
 
