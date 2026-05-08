@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-08 08:37 UTC  
+**Generated:** 2026-05-08 21:34 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 12 |
+| Total commits | 13 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **3** | **1** | **1** | **4** | ⚪ | ⚪ |
+| **3** | **3** | **1** | **1** | **5** | ⚪ | ⚪ |
 
 **Mon – Monday, May 4**
 
@@ -39,6 +39,7 @@
 
 **Fri – Friday, May 8**
 
+- `645fd92` spec+code: resolve all 7 dryrun findings; draft v0.1 prereg (not yet locked) — _dongzhang84_ `2026-05-08 14:34`
 - `b40a78f` content: Phase 1.5 dry run executed — 4 trials + findings — _dongzhang84_ `2026-05-08 01:37`
 - `b4cdd3e` feat: Phase 1.5 dry-run scaffolding (runner + prompts + tests) — _dongzhang84_ `2026-05-08 01:29`
 - `f77d6a3` content: rewrite ideal_induction.md in lean (necessary-conditions) style — _dongzhang84_ `2026-05-08 01:03`
