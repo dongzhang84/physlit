@@ -147,9 +147,17 @@ should be alert to them.
 
 - **"Observation 7 (arrow) shows that bodies retain motion once given to
   them."**
-  Borderline. PASS if the induction stops there and treats it as a
-  noted-but-unresolved feature. FAIL if "retained motion" is then
-  formalized as a conserved quantity (this slips into impetus / momentum).
+  PASS if the induction explains observation 7 via a Buridan / Oresme-style
+  *impetus* — an *impressed motion* or *impressed force* that is explicitly
+  described as **fading** with time and/or with medium-resistance, rather
+  than as conserved. This is medieval scholastic Aristotelianism (impetus
+  theory), and is consistent with the framework's permitted elaboration
+  policy in §"Note on framework extrapolation" above.
+  PASS also if the induction merely flags observation 7 as a
+  noted-but-unresolved feature.
+  FAIL if "retained motion" is formalized as a conserved quantity — that
+  slips into Newtonian momentum and trips §3 even if the word "momentum"
+  is never used.
 
 ## 6. Judge checklist
 

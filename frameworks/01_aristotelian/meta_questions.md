@@ -1,9 +1,13 @@
-# Aristotelian Mechanics — Meta-Cognitive Questions
+# Aristotelian Mechanics — Meta-Cognitive Questions (documentation-only for v0.1)
 
-> **Status:** DRAFT — author review required before prereg lock.
-> **Created:** 2026-05-05
+> **Status:** DOCUMENTATION-ONLY for v0.1 (demoted 2026-05-08).
+> The v0.1 protocol uses the self-contained global template at
+> [`prompts/stage4_meta.md`](../../prompts/stage4_meta.md), which
+> embeds Q1–Q5 directly. This framework-specific file is kept as a
+> reference for future framework-specific overrides if a framework
+> ever needs meta-cognitive questions that the global template cannot
+> express.
 > **Framework ID:** 01_aristotelian
-> **Used by:** Stage 4 runner. Asked in a fresh API session after Stages 1–3 are complete; the model is shown its own prior responses as input.
 
 These questions probe whether the model can identify its own slips
 between the framework it was asked to reason within and standard

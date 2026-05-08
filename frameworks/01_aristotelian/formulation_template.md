@@ -1,18 +1,18 @@
-# Aristotelian Mechanics — Stage 2 Formulation Prompt
+# Aristotelian Mechanics — Stage 2 Formulation Prompt (documentation-only for v0.1)
 
-> **Status:** DRAFT — author review required before prereg lock.
-> **Created:** 2026-05-05
+> **Status:** DOCUMENTATION-ONLY for v0.1 (demoted 2026-05-08).
+> The v0.1 protocol uses the self-contained global template at
+> [`prompts/stage2_formulation.md`](../../prompts/stage2_formulation.md).
+> This framework-specific file is kept as a reference for future
+> framework-specific overrides if a framework ever needs Stage 2
+> wording that the global template cannot express.
 > **Framework ID:** 01_aristotelian
-> **Used by:** Stage 2 runner. Concatenated into `prompts/stage2_formulation.md` (Phase 6).
 
-This file holds the *framework-specific* portion of the Stage 2 prompt.
-The global Stage 2 wrapper (built in Phase 6) injects:
-
-- the laws the model proposed at Stage 1 (verbatim, as `{{induced_laws}}`),
-- this file's body,
-
-into one fresh API session. The model has no memory of its Stage 1
-session — it sees only the text it produced there, replayed as input.
+This file holds the *framework-specific* portion of the Stage 2 prompt
+as it was originally drafted on 2026-05-05. As of v0.1 (Phase 1.5
+dry-run review, 2026-05-08), the global template at
+`prompts/stage2_formulation.md` is self-contained and does not consume
+this file. The text below is preserved as a v0.5+ override candidate.
 
 ## Body
 

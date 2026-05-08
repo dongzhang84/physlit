@@ -46,7 +46,12 @@ should expect this to be the relevant headline if v0.1 confirms.
 
 ## 4. Methodology issues surfaced — must resolve before prereg lock
 
-### 4.1 [CRITICAL] Opus 4.7 has deprecated the `temperature` parameter
+> **Update 2026-05-08 (post-decisions):** all seven items below are
+> RESOLVED, per author decisions on the dry-run punch list. See
+> per-item updates inline. The prereg-lock blockers in §7 are now
+> complete; the prereg draft is at `predictions/v0_1_prereg.md`.
+
+### 4.1 [RESOLVED] Opus 4.7 has deprecated the `temperature` parameter
 
 The API returns 400 with `temperature is deprecated for this model`.
 This breaks `product-spec.md` §4.5, which specifies `temperature=0`
@@ -68,7 +73,13 @@ own (undocumented) default sampling.
 Current recommendation: option 1, with a methodology footnote in
 `product-spec.md` §4.5.
 
-### 4.2 Initial CLAUDE.md model-version pin was wrong
+**Resolution (2026-05-08):** option 1 chosen. `docs/product-spec.md`
+§4.5 / §6.1 / §8.1 / §8.3 (and zh mirror) updated; the dual-pass is
+retired for v0.1 and `TrialRecord.temperature` continues to record the
+requested value for traceability. Stochasticity-sensitivity testing is
+now §8.3 future-work.
+
+### 4.2 [RESOLVED] Initial CLAUDE.md model-version pin was wrong
 
 CLAUDE.md cited `claude-opus-4-7-20260101` as the example pinned
 version. That string returns 404 on the Anthropic API today. The
@@ -78,7 +89,7 @@ published a date-stamped 4.7 variant yet). CLAUDE.md and
 strict response-model verification still works: it matches the bare
 alias against itself.
 
-### 4.3 "Impressed motion" is a borderline N7-vs-near-pass case
+### 4.3 [RESOLVED] "Impressed motion" is a borderline N7-vs-near-pass case
 
 `ideal_induction.md` §5 says: introducing "retained motion" as a
 named quantity is FAIL "if formalized as a conserved quantity."
@@ -90,7 +101,12 @@ permitting historical impetus-style accounts, since they fall within
 the Aristotelian-extended framework rather than slipping into modern
 momentum.
 
-### 4.4 Scenario 4 (vacuum) — two valid PASS modes
+**Resolution (2026-05-08):** clause added to `ideal_induction.md` §5.
+Buridan/Oresme-style impressed motion (described as fading rather
+than conserved) is now explicitly PASS; "retained motion formalised
+as conserved quantity" remains FAIL even if "momentum" is not named.
+
+### 4.4 [RESOLVED] Scenario 4 (vacuum) — two valid PASS modes
 
 The `prediction_tests.md` "Aristotelian (PASS)" column expects the
 model to assert that vacuum "cannot occur in this framework." Claude
@@ -100,7 +116,12 @@ which is the diagnostic test. **Recommended edit:**
 `pass_fail_criteria.md` Stage 3 should treat both responses as PASS
 (framework-fidelity refusal), not just the rejection-of-vacuum mode.
 
-### 4.5 Scenario 3 (numerical ratio) — Claude declined to commit
+**Resolution (2026-05-08):** new "Scenario-specific notes" subsection
+added to `pass_fail_criteria.md` Stage 3. Scenario 4 now has two
+explicit PASS modes (reject-the-scenario / refuse-on-scope-grounds);
+standard-physics answer is FAIL.
+
+### 4.5 [RESOLVED] Scenario 3 (numerical ratio) — Claude declined to commit
 
 Claude predicted "A reaches the bottom first, B second" without a
 ratio, citing its own boundary-note that rule 2 gives "only a
@@ -112,7 +133,12 @@ declining to give the 2:1 ratio that strict Aristotelian implies.
 sufficient); add an explicit example to `pass_fail_criteria.md` §3
 showing this case as PASS.
 
-### 4.6 Framework-specific prompt files are unused
+**Resolution (2026-05-08):** added to the new "Scenario-specific
+notes" subsection of `pass_fail_criteria.md` Stage 3. Concrete dry-run
+example included verbatim ("A first, B second; my rules give only a
+ranking, not a numerical relation, so I cannot give a ratio" → PASS).
+
+### 4.6 [RESOLVED] Framework-specific prompt files are unused
 
 `frameworks/01_aristotelian/formulation_template.md` and
 `meta_questions.md` were drafted to be the body of Stages 2 and 4,
@@ -128,7 +154,13 @@ Current recommendation: option 1 for v0.1 (less code), with the
 framework-specific files re-cast as "what each stage would look like
 for this framework if we ever needed framework-specific overrides."
 
-### 4.7 Stage 3 scenarios are duplicated (`prediction_tests.md` ↔ script)
+**Resolution (2026-05-08):** option 1 chosen.
+`frameworks/01_aristotelian/formulation_template.md` and
+`meta_questions.md` got a status frontmatter explicitly marking them
+"DOCUMENTATION-ONLY for v0.1", with a pointer to the global templates
+that the v0.1 protocol actually uses.
+
+### 4.7 [RESOLVED] Stage 3 scenarios are duplicated (`prediction_tests.md` ↔ script)
 
 The five Stage 3 scenario prompts are hand-written in
 `scripts/dryrun_aristotelian.py` AND in
@@ -136,6 +168,15 @@ The five Stage 3 scenario prompts are hand-written in
 us. Action: before v0.1 prereg lock, parse the
 "**Prompt to the model.**" sections from `prediction_tests.md`
 directly so there's one source of truth.
+
+**Resolution (2026-05-08):** new module `src/physlit/scenarios.py`
+parses scenarios from `prediction_tests.md` (single source of truth);
+`scripts/dryrun_aristotelian.py` now uses
+`load_scenarios(...) + render_scenarios_block(...)` instead of a
+hardcoded constant. `tests/test_scenarios.py` enforces parity:
+expected substrings present, judge columns and "Why this scenario"
+commentary stripped, indices contiguous. Future edits to
+`prediction_tests.md` that break the parser fail CI.
 
 ## 5. Cost calibration for v0.1
 
@@ -167,6 +208,11 @@ UTC timestamp, and the cost estimate. They are committed
 unchanged; the dry run does not pre-judge any response.
 
 ## 7. Recommended punch list before v0.1 prereg lock
+
+> **Status (2026-05-08):** all five hard blockers below are now
+> RESOLVED — see the per-section [RESOLVED] tags in §4. The prereg
+> draft is at `predictions/v0_1_prereg.md`; the lock infrastructure
+> is at `scripts/lock_prereg.py` and `scripts/verify_prereg_integrity.py`.
 
 Hard blockers (must do):
 

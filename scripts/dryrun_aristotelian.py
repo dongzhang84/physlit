@@ -22,28 +22,13 @@ from pathlib import Path
 
 from physlit.prompts import PromptTemplate
 from physlit.runners.claude import ClaudeRunner
+from physlit.scenarios import load_scenarios, render_scenarios_block
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 FRAMEWORK_ID = "01_aristotelian"
 FRAMEWORK_DIR = REPO_ROOT / "frameworks" / FRAMEWORK_ID
 PROMPTS_DIR = REPO_ROOT / "prompts"
 RESULTS_DRYRUN_ROOT = REPO_ROOT / "results" / "_dryrun"
-
-# Stage 3 scenario prompts. Hand-extracted from prediction_tests.md;
-# only the model-facing portion (no PASS/FAIL columns or commentary).
-# TODO post-dry-run: parse this directly from prediction_tests.md so
-# the two files cannot drift.
-STAGE3_SCENARIOS = """\
-Scenario 1. A solid iron ball and a hollow wooden ball of the same outer dimensions are released from rest at the same instant from the top of a 30-metre stone tower into still air. Which ball strikes the ground first, and roughly by how much?
-
-Scenario 2. A small cart sits on a sheet of perfectly smooth ice, far from any wall. A person gives the cart one quick push and immediately steps back, no longer touching the cart. Describe the cart's subsequent motion.
-
-Scenario 3. Two stones, identical in shape and size, are released at the same instant from just below the surface of a still pond. Stone A weighs twice what stone B weighs. Which reaches the bottom first, and roughly in what ratio of times?
-
-Scenario 4. A glass chamber is sealed and all air has been removed from it so that nothing remains inside. A small feather is released from rest near the top of the chamber. What happens?
-
-Scenario 5. An archer fires an arrow horizontally over an open field with still air. Once the arrow has left the bowstring, what sustains its forward motion through the air, and why does it eventually fall to the ground?\
-"""
 
 
 def _load_dotenv() -> None:
@@ -129,12 +114,15 @@ def main() -> int:
     runner.save_trial(s2_record, output_root)
     print(f"  → {len(s2_record.response_text)} chars, ~${s2_record.cost_usd_estimate:.4f}")
 
-    # Stage 3 — Prediction
+    # Stage 3 — Prediction. Scenarios parsed from prediction_tests.md
+    # (single source of truth) so the model prompt cannot drift from the
+    # judge-side ground truth in that file.
     print("[Stage 3 — prediction] Calling Claude...")
+    scenarios = load_scenarios(FRAMEWORK_DIR / "prediction_tests.md")
     s3_tmpl = PromptTemplate(PROMPTS_DIR / "stage3_prediction.md")
     s3_prompt = s3_tmpl.render(
         operational_rules=s2_record.response_text,
-        scenarios=STAGE3_SCENARIOS,
+        scenarios=render_scenarios_block(scenarios),
     )
     s3_record = runner.run_trial(
         framework_id=FRAMEWORK_ID,

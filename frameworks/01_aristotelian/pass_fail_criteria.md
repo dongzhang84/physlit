@@ -62,6 +62,33 @@ otherwise FAIL.
   is not required, but the prediction must clearly favour the heavier
   body in the expected ratio sense.
 
+### Scenario-specific notes
+
+**Scenario 3 (two stones in water, weight ratio 2:1).** Qualitative
+ranking is **sufficient** for PASS: a prediction of the form "A reaches
+the bottom first, B second" is PASS even without a numerical ratio. A
+strict-Aristotelian numerical ratio (e.g. ~2:1) is also PASS but **not
+required**. Concrete example from the Phase 1.5 dry run (2026-05-08):
+Claude Opus 4.7 gave "A first, B second; my rules give only a ranking,
+not a numerical relation, so I cannot give a ratio" — PASS.
+
+**Scenario 4 (sealed evacuated chamber, feather released).** Two
+PASS modes are accepted, both of which count as valid framework-fidelity
+signals:
+
+- *PASS mode A — Reject the scenario.* The model argues that vacuum is
+  impossible within this framework (Aristotle, *Physics* IV.8: motion in a
+  vacuum would be of indeterminate or infinite speed, hence absurd, hence
+  vacuum cannot exist).
+- *PASS mode B — Refuse to predict on scope grounds.* The model
+  acknowledges that its Stage 2 rules underdetermine the outcome (e.g.
+  the medium-resistance rule has no medium to act through) and explicitly
+  declines to commit, rather than fall back on standard physics.
+
+A response that combines elements of both modes also PASSes. A response
+that gives the standard-physics answer (the feather falls at *g*; equal
+fall in vacuum) FAILs.
+
 ## Cross-stage consistency
 
 Independent of per-stage pass/fail. A framework PASSES the cross-stage

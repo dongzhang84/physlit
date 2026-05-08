@@ -243,7 +243,7 @@ Every test produces a binary outcome: pass or fail. The criteria for each are sp
 
 **Trials per stage**: Each stage is run with **N=5 independent trials** per (model, phenomenon set, stage). Conversation context is reset between trials. Stage-level pass requires consistent results across at least **4 of 5 trials**; trial-level disagreement is reported separately as an instability signal.
 
-**Sampling settings**: Headline results use **temperature=0** (greedy decoding) where the API supports it. A secondary pass at **temperature=0.7** is reported separately to test whether stochasticity changes the diagnosis. Both results appear in the final report.
+**Sampling settings**: Each tested model runs under its **default sampling regime** for v0.1. The original specification (drafted 2026-05-04) was a `temperature=0` headline pass plus a `temperature=0.7` secondary pass. On 2026-05-08, the Phase 1.5 dry run discovered that Anthropic Opus 4.7 has deprecated the `temperature` parameter and rejects requests that include it. Rather than substitute a different model line-up — which would weaken cross-vendor comparability — v0.1 accepts each vendor's default sampling as the **single sampling mode** for v0.1, and treats stochasticity-sensitivity testing as deferred to v0.2 (gated on a sampling-controlled line-up being available across all three vendors). `TrialRecord.temperature` continues to record the requested value for audit-trail purposes; the API may ignore it.
 
 **Context isolation**: Stages 1, 2, and 3 are run in **fresh API sessions**, not as a single multi-turn conversation. This prevents stage-2 reasoning from leaking into stage-3 predictions. The model receives only the documents specified at the start of each stage.
 
@@ -325,9 +325,10 @@ Each phenomenon set is a self-contained directory with the following files.
 ### 6.1 Models Tested
 
 The v0.1 release evaluates three frontier models: **Claude Opus 4.7, GPT-5,
-and Gemini 3**. v0.1 runs at **temperature=0 only** under the revised $50
-budget cap; the temperature=0.7 secondary pass described in §4.5 is deferred
-to v0.2 (or a budget extension), whichever comes first. Open-weight models
+and Gemini 3**. Each model runs under its **default sampling regime** (see
+§4.5 for the methodology footnote about Opus 4.7's deprecation of the
+`temperature` parameter and the resulting decision to retire the
+temperature=0 / temperature=0.7 dual pass for v0.1). Open-weight models
 (DeepSeek, Llama) and reasoning-optimized variants are not in scope under
 the current plan.
 
@@ -352,7 +353,7 @@ For each model evaluated, a diagnostic report is produced with the following str
 ```
 Model: GPT-5 (gpt-5-20260201)
 Date: 2026-XX-XX
-Settings: temperature=0, n_trials=5
+Settings: default sampling, n_trials=5
 
 Per-Set Results
 ===============
@@ -395,7 +396,7 @@ PhysLit commits to the following reproducibility standards from v0.1 onward:
 - **Open prompts** — every prompt sent to a model is published verbatim in the repository
 - **Open responses** — every model response is published verbatim with timestamp and model version pin
 - **Pinned model versions** — each result is tagged with the exact model version (e.g., `claude-opus-4-7-20260101`, `gpt-5-20260201`), never just the family name
-- **Deterministic settings** — temperature=0 trials are the headline result; non-deterministic results are clearly labeled
+- **Default sampling** — v0.1 results use each model's default sampling regime (the deterministic-headline approach in the original draft was retired after the Phase 1.5 dry run; see §4.5)
 - **Versioned phenomenon sets** — phenomenon sets are version-tagged (v1.0, v1.1, …) so future evaluations against the same set are directly comparable
 - **Replication kit** — a `replicate.sh` script re-runs the evaluation given valid API keys, producing identical-or-equivalent results
 - **Pre-registration archive** — predictions are stored with commit hashes, so any reader can verify what was predicted before results were known
@@ -448,10 +449,10 @@ evaluation budget.
 **Scope**:
 - 1 framework: Aristotelian Mechanics (Category A, Tier 3 manual)
 - 3 models tested: Claude Opus 4.7, GPT-5, Gemini 3
-- Protocol: N=5 trials × temperature=0 × 4 stages (induction, formulation,
-  prediction, meta)
-- temperature=0.7 secondary pass deferred (budget); to be added when budget
-  allows
+- Protocol: N=5 trials × default sampling × 4 stages (induction,
+  formulation, prediction, meta)
+- The original temperature=0 / temperature=0.7 dual pass is retired for
+  v0.1; see §4.5 for the methodology footnote
 - Dual-judge IRR (Claude + GPT) on Stage 1–3 responses
 - Pre-registration: P1 + P3 only; P2 / P4 / P5 require multi-framework
   testing and are deferred to v0.2 prereg lock
@@ -500,8 +501,9 @@ exercises the Phase 2 simulator base class.
 
 No commitment. Optional paths considered only if v0.2 is itself worthwhile:
 
-- temperature=0.7 secondary pass on v0.1 + v0.2 frameworks (budget
-  permitting)
+- Stochasticity-sensitivity testing (originally `temperature=0.7`
+  secondary pass) once a sampling-controlled line-up is available across
+  all three vendors
 - Community-contributed frameworks (no marginal API cost to authors)
 - Blog post or arXiv preprint based on v0.1 + v0.2 findings
 

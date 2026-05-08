@@ -242,7 +242,7 @@ flowchart TD
 
 **每 stage 的试次数**：每一个 (模型, 现象集, stage) 组合跑 **N=5 次独立试运行**。试次之间清空对话上下文。Stage 级别"通过"要求 5 次中至少 **4 次**结果一致；试次间不一致单独报出来作为不稳定性信号。
 
-**采样设置**：头条结果用 **temperature=0**（贪心解码，API 支持的话）。次要再跑一遍 **temperature=0.7**，单独报出来，用于检验随机性是否改变诊断结论。两套结果都进最终报告。
+**采样设置**：v0.1 每个被测模型都跑在各自的**默认采样模式**下。原计划（2026-05-04 起草）是 `temperature=0` headline + `temperature=0.7` secondary pass。2026-05-08 跑 Phase 1.5 dry run 时发现 Anthropic Opus 4.7 已**弃用 `temperature` 参数**——传 temperature 直接 400。改用其它模型线就破坏跨厂家可比性，因此 v0.1 接受各家"默认采样"作为唯一采样模式，把"随机性敏感性测试"推迟到 v0.2（前提是届时三家都有可控采样的模型线可用）。`TrialRecord.temperature` 仍记录 runner 请求的值供 audit 追溯，API 可能忽略。
 
 **上下文隔离**：Stage 1、2、3 在**全新 API 会话**里独立跑，不是单一 multi-turn 对话。这防止 stage 2 的推理泄漏到 stage 3 的预测。每个 stage 开始时模型只看到当 stage 指定的文档。
 
@@ -322,10 +322,10 @@ v0.2 之后无承诺。**
 
 ### 6.1 受测模型
 
-v0.1 评测三个前沿模型：**Claude Opus 4.7、GPT-5、Gemini 3**。在修订后的
-$50 预算上限下，v0.1 **只跑 temperature=0**；§4.5 描述的 temperature=0.7
-secondary pass 推迟到 v0.2（或者预算扩展时再补，看哪个先到）。开源权重
-模型（DeepSeek、Llama）和推理优化变体不在当前计划内。
+v0.1 评测三个前沿模型：**Claude Opus 4.7、GPT-5、Gemini 3**。每个模型都
+跑在各自的**默认采样模式**下（详见 §4.5 的方法论脚注：Opus 4.7 弃用了
+`temperature`，因此 v0.1 退役了原计划的 temperature=0 / 0.7 dual pass）。
+开源权重模型（DeepSeek、Llama）和推理优化变体不在当前计划内。
 
 ### 6.2 协议步骤
 
@@ -348,7 +348,7 @@ secondary pass 推迟到 v0.2（或者预算扩展时再补，看哪个先到）
 ```
 模型: GPT-5 (gpt-5-20260201)
 日期: 2026-XX-XX
-设置: temperature=0, n_trials=5
+设置: 默认采样, n_trials=5
 
 各集合结果
 ==========
@@ -391,7 +391,7 @@ PhysLit 从 v0.1 起承诺以下复现标准：
 - **公开 prompt** — 发给模型的每一条 prompt 在仓库中**逐字公开**
 - **公开响应** — 每一条模型响应**逐字保存**，附时间戳和模型版本锁
 - **锁定模型版本** — 每条结果都打**完整版本字符串**（如 `claude-opus-4-7-20260101`、`gpt-5-20260201`），从不只用 family name
-- **确定性设置** — temperature=0 是头条结果；非确定性结果显式标注
+- **默认采样** — v0.1 用各家默认采样作为单一头条结果（原计划的"确定性 temperature=0"在 Phase 1.5 dry run 之后退役，见 §4.5）
 - **现象集版本化** — 现象集打 version tag（v1.0、v1.1……），保证未来对同一集合的重测可比
 - **复现工具包** — `replicate.sh` 在有合法 API key 的前提下能重跑评测，结果与原结果一致或等价
 - **预注册存档** — 预测附 commit hash 存档，任何读者都能验证"结果出来之前预测了什么"
@@ -443,9 +443,10 @@ PhysLit 占据一个现有 benchmark 都没填的位置：一个**诊断仪器**
 
 - 1 个框架：亚里士多德力学（Category A，Tier 3 manual）
 - 受测 3 个模型：Claude Opus 4.7、GPT-5、Gemini 3
-- 协议：N=5 次试运行 × **temperature=0** × 4 个 stage（归纳、形式化、
-  预测、元认知）
-- temperature=0.7 secondary pass **推迟**（预算所限）；预算松动后再补
+- 协议：N=5 次试运行 × **默认采样** × 4 个 stage（归纳、形式化、预测、
+  元认知）
+- 原计划的 temperature=0 / 0.7 dual pass **退役** for v0.1，详见 §4.5
+  方法论脚注
 - Stage 1–3 的响应过 dual-judge IRR（Claude + GPT）
 - 预注册：**只锁 P1 + P3**；P2 / P4 / P5 需要跨多框架测试，留到 v0.2
   prereg lock
@@ -494,7 +495,8 @@ PhysLit 占据一个现有 benchmark 都没填的位置：一个**诊断仪器**
 
 **无承诺**。仅在 v0.2 自身值得继续的情况下，可选路径：
 
-- 给 v0.1 + v0.2 的框架补上 temperature=0.7 secondary pass（预算允许时）
+- 三家厂家都有可控采样的模型线可用之后，补做"随机性敏感性测试"（原
+  `temperature=0.7` secondary pass 的位置）
 - 接受社区贡献的框架（作者一方无 API 边际成本）
 - 基于 v0.1 + v0.2 结果写博客 / arXiv 预印本
 
