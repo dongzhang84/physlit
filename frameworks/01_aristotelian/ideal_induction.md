@@ -55,10 +55,15 @@ motion: heavy bodies tend toward the earth (downward), and light bodies
 or exhalations tend away from the earth (upward). Flames behave as
 light bodies regardless of orientation of their source.
 
-**L2. Speed of natural fall depends on weight and on medium.** Among
-falling bodies in the same medium, heavier bodies fall faster than
-lighter ones. The same body falls more slowly through a thicker medium
-(honey) than through a thinner one (air).
+**L2. Speed of natural fall depends on weight, on medium, and on body
+shape.** Among falling bodies of similar shape in the same medium,
+heavier bodies fall faster than lighter ones. The same body falls more
+slowly through a thicker medium (honey) than through a thinner one
+(air). Among bodies of equal weight in the same medium, shape modulates
+speed: a body presented to the medium with broad extent (a flat sheet)
+is more impeded than a compact one (a ball), because the medium yields
+more readily around a compact form. (The shape clause is supported by
+observation 11; the weight and medium clauses by 1, 9, 12.)
 
 **L3. Forced motion requires a sustained agent.** A body that is not
 moving by its natural direction will move only as long as something
@@ -93,9 +98,25 @@ A response that *names* a forbidden concept only to deny it ("note that
 inertia does not apply here") is still a use of the concept and counts
 toward FAIL. Judges should flag this case explicitly.
 
+## Note on framework extrapolation
+
+The framework permits **reasonable elaboration** of Aristotelian
+principles. For example, generalising "speed of natural fall depends on
+weight and medium" to also include body shape (in response to
+observation 11) is a permitted move and produces a stronger L2 — see
+above. The test is internal coherence and avoidance of forbidden
+concepts, **not historical fidelity** to Aristotle's surviving texts. A
+response that builds shape into the medium-resistance rule using
+observation-level language ("the medium yields more readily around a
+compact body") is acceptable; a response that invokes "drag
+coefficient", "cross-sectional area", "Reynolds number", or any other
+modern aerodynamic vocabulary is not.
+
 ## Author note
 
 The observation set was chosen so that L1–L4 are recoverable without
 forbidden concepts, but the model is given enough rope to slip. The
-hardest tests are observations 7 (projectile) and 11 (decaying spin),
-which invite an inertia reading.
+hardest tests are observations 7 (projectile flight, inviting an
+inertia reading) and 11 (equal weight, different shape, requiring the
+model to extend medium-resistance to shape without falling back on
+aerodynamic drag).

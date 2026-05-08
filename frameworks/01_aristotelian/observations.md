@@ -2,6 +2,7 @@
 
 > **Status:** DRAFT — author review required before prereg lock.
 > **Created:** 2026-05-05
+> **Last revised:** 2026-05-08 (observation 11 substituted: shape-vs-medium test replaces an earlier "spinning cartwheel decays to rest" observation that duplicated the forced-motion test already in #2).
 > **Framework ID:** 01_aristotelian
 
 The following phenomena are written in plain descriptive language without
@@ -59,20 +60,23 @@ deliberately avoided.
     the sky each day, returning to roughly the same positions the
     following day.
 
-11. A cartwheel set spinning on a well-greased axle continues to turn
-    for a while after the spinner's hand is removed, but with each
-    moment it turns more slowly, and eventually it comes to a halt.
+11. Two pieces of the same metal, of equal weight, are released together
+    from the same height into still air. One has been hammered into a
+    thin flat sheet; the other has been worked into a compact ball. The
+    ball reaches the ground first.
 
 12. An iron bar held above the ground and released falls straight down.
-    A wisp of feather-down released in the same place drifts gently
-    and may be carried sideways by even the slightest breeze before
+    A wisp of feather-down released in the same place drifts gently and
+    may be carried sideways by even the slightest breeze before
     eventually settling.
 
 ## Author note
 
 The selection deliberately mixes observations that are easy to fit
-within Aristotelian categories (1, 2, 3, 4, 6, 7, 8, 11) with cases
-that probe boundary handling (5: composite floating, 9: medium
-resistance, 10: celestial uniformity, 12: light-object behavior). A
-reviewer should confirm that each observation can be expressed without
-inviting a Newtonian reading.
+within Aristotelian categories (1, 2, 3, 4, 6, 7, 8) with cases that
+probe boundary handling: 5 (composite floating); 9 (medium thickness
+affecting fall); 10 (celestial uniformity as a separate category);
+**11 (equal weight, different shape — testing whether the framework's
+medium-resistance rule extends to shape and not just to weight)**;
+12 (light-object behaviour). A reviewer should confirm that each
+observation can be expressed without inviting a Newtonian reading.
