@@ -1,122 +1,203 @@
-# Aristotelian Mechanics — Ideal Induction Reference
+# Ideal Induction — Aristotelian Mechanics
 
-> **Status:** DRAFT — author review required before prereg lock.
-> **Created:** 2026-05-05
+> **Status:** DRAFT v0.1 (lean) — 2026-05-08
 > **Framework ID:** 01_aristotelian
-> **Audience:** PhysLit judges (Claude + GPT) and human reviewers, not the tested model.
+> **Stage:** 1 (Induction)
 
-This file is **not** sent to the tested model. It is the reference target
-that judges use when scoring Stage 1 (induction). It describes what a
-successful induction from `observations.md` looks like inside the
-Aristotelian framework.
+## 1. Purpose
 
-## Concepts that may legitimately appear
+This file is **for judges only**. The tested model never sees it. After the
+tested model reads `observations.md` and produces its own induced
+regularities, judges read its output alongside this file and apply the
+checklist in §6 to assign PASS or FAIL.
 
-A model may use these concepts because they are introduced or implied
-by the observations themselves:
+This is **not** a reference answer. There is no single correct induction.
+Many distinct rule sets can pass. This file specifies the *necessary
+conditions* an induction must satisfy and the *banned moves* that disqualify
+it regardless of how elegant the rest is.
 
-- **Heavy / light** as observable properties of objects (relative).
-- **Up / down / sideways** as directions tied to the earth and sky.
-- **Pushing / pulling / sustained effort** as observable agent actions.
-- **Medium** through which motion happens (air, water, honey).
-- **Natural place** or **natural direction of motion** for a kind of
-  matter — derivable from observations 3, 4, 5, 8, 12.
-- **Forced motion** versus **spontaneous (natural) motion** — derivable
-  from observations 2, 6, 7, 11 (forced) versus 3, 4, 8 (natural).
-- **Continuation by contact / surrounding medium** to explain why
-  projectiles continue after release (observation 7).
-- **Celestial regularity** as a separate category of motion
-  (observation 10).
+## 2. Necessary conditions
 
-## Concepts that must NOT appear
+A passing induction must satisfy **all** of the following. Failing any one
+condition triggers FAIL.
 
-The following concepts are not derivable from the listed observations
-alone. Their use in a Stage-1 response is a failure signal:
+**N1 — Two-regime distinction for terrestrial motion.**
+The induction must distinguish between (a) motion that requires a sustained
+external cause and ceases when the cause is removed, and (b) motion or rest
+that is the body's "default" state. Without this distinction, observation 2
+(cart slowing) cannot be explained.
 
-- **Force**, especially in any quantitative or vector sense.
-- **Mass** as distinct from weight.
-- **Momentum**, **kinetic energy**, **potential energy**.
-- **Inertia**, "an object in motion stays in motion."
-- **Acceleration** as a derivative of velocity.
-- **Gravity** as a universal attraction; **gravitational field**.
-- **Vacuum** as a coherent space in which motion proceeds normally.
-- **Conservation laws** (energy, momentum, angular momentum).
-- **Newton's laws** in any form, by name or by content.
-- **Friction** as a quantified counter-force; descriptive
-  "ground / medium resists motion" is acceptable.
+**N2 — Heavier-falls-faster ordering.**
+The induction must include a rule that heavier bodies reach the ground
+sooner than lighter bodies released from the same height. Required to
+account for observations 1 and 12.
 
-## Expected inductive laws
+**N3 — Medium-resistance dependence.**
+The induction must include a rule that the speed at which a body falls or
+moves through a substance depends on the substance: thicker substances slow
+the body more. Required for observation 9.
 
-A model that has succeeded at induction should produce a set of laws
-substantively equivalent to the following. Surface wording will vary:
+**N4 — Shape dependence.**
+The induction must include a rule that, for bodies of equal weight, shape
+affects rate of fall (compact vs. extended). Required for observation 11.
 
-**L1. Natural direction.** Each kind of body has a natural direction of
-motion: heavy bodies tend toward the earth (downward), and light bodies
-or exhalations tend away from the earth (upward). Flames behave as
-light bodies regardless of orientation of their source.
+**N5 — Directional preference of certain substances.**
+The induction must explain why some substances move upward of their own
+accord (smoke, flame) and others move downward (water, stone, iron),
+independently of how the surrounding object is oriented. Required for
+observations 3, 4, 8.
 
-**L2. Speed of natural fall depends on weight, on medium, and on body
-shape.** Among falling bodies of similar shape in the same medium,
-heavier bodies fall faster than lighter ones. The same body falls more
-slowly through a thicker medium (honey) than through a thinner one
-(air). Among bodies of equal weight in the same medium, shape modulates
-speed: a body presented to the medium with broad extent (a flat sheet)
-is more impeded than a compact one (a ball), because the medium yields
-more readily around a compact form. (The shape clause is supported by
-observation 11; the weight and medium clauses by 1, 9, 12.)
+**N6 — Heaven/earth split (or equivalent).**
+The induction must recognize that observation 10 (Sun, Moon, stars on
+unending circular paths) does not fit the same rules as terrestrial
+observations. Either by explicitly proposing two regimes, or by flagging
+the celestial case as outside the scope of the terrestrial rules.
 
-**L3. Forced motion requires a sustained agent.** A body that is not
-moving by its natural direction will move only as long as something
-continues to push or pull it. When the pusher or puller is removed,
-the body's motion diminishes and ceases. The harder the load, the
-greater the effort needed to move it.
+**N7 — Acknowledgment of the projectile tension.**
+Observation 7 (arrow continuing after leaving the bow) is in tension with
+N1: the arrow keeps moving with no visible mover. The induction must
+acknowledge this tension. **A specific resolution is not required** — it is
+sufficient to flag the case as a difficulty for the otherwise-stated rules.
+Pretending observation 7 is not problematic is FAIL.
 
-**L4. Projectiles continue through medium support.** A body launched
-forward continues briefly after release because the surrounding medium
-sustains its motion; this support diminishes and the body returns to
-its natural direction.
+**N8 — Some account of floating.**
+The induction must give *some* explanation for observation 5 (oak floats,
+stone sinks). The explanation does not need to match Aristotle's; it can be
+in terms of weight, of natural directional preference, or of substance
+type. Leaving the observation unexplained is FAIL.
 
-**L5. Celestial bodies obey a different regularity.** Bodies in the sky
-move in regular circular paths and do not display the same starting and
-stopping behavior as terrestrial bodies. (May be expressed as a separate
-category rather than a unified law.)
+## 3. Banned concepts
 
-**L6. Composite bodies may resist their dominant natural direction.**
-Some bodies (oak in water) do not fully follow the heavy-downward rule;
-the model may posit mixed natures or partial natural directions.
+Use of any of the following terms or their direct equivalents in the
+induced rules is automatic FAIL — regardless of whether the rest of the
+induction is well-formed:
 
-## Scoring guidance
+- inertia
+- acceleration
+- force (as a defined quantity, e.g. F = ma)
+- momentum, momentum conservation
+- energy, energy conservation
+- mass (as distinct from weight)
+- density (as a defined quantity)
+- gravity, gravitational force, universal gravitation
+- vacuum (except as a hypothetical to be argued against)
+- friction, frictional force
+- Newton, Galileo, Archimedes, or any post-Aristotelian physicist by name
+- references to controlled experiments unavailable to the observer
+  (evacuated chambers, low-friction tracks, inclined-plane timing)
 
-- **PASS** if the response captures L1–L4 substantively and uses no
-  forbidden concepts. L5 and L6 are encouraged but not strictly required
-  on a single trial.
-- **FAIL** if any forbidden concept appears, or if any of observations
-  1–9, 11, 12 is left unexplained, or if the response asserts that the
-  given observations are wrong and substitutes modern physics.
+**Allowed**: ordinary descriptive language including "heavy," "light,"
+"thick," "thin," "fast," "slow," "pushes," "pulls," "rises," "sinks,"
+"resists." The line between description and theoretical loading is: words
+that any non-physicist would use to describe what is seen are allowed;
+words that import a measurement scheme or a quantitative law are not.
 
-A response that *names* a forbidden concept only to deny it ("note that
-inertia does not apply here") is still a use of the concept and counts
-toward FAIL. Judges should flag this case explicitly.
+## 4. Coverage map
 
-## Note on framework extrapolation
+A passing induction must produce at least one rule that explains each
+observation. Judges check this mapping line by line.
 
-The framework permits **reasonable elaboration** of Aristotelian
-principles. For example, generalising "speed of natural fall depends on
-weight and medium" to also include body shape (in response to
-observation 11) is a permitted move and produces a stronger L2 — see
-above. The test is internal coherence and avoidance of forbidden
-concepts, **not historical fidelity** to Aristotle's surviving texts. A
-response that builds shape into the medium-resistance rule using
-observation-level language ("the medium yields more readily around a
-compact body") is acceptable; a response that invokes "drag
-coefficient", "cross-sectional area", "Reynolds number", or any other
-modern aerodynamic vocabulary is not.
+| Obs | Phenomenon                          | Must be explained by a rule covering... |
+|-----|-------------------------------------|------------------------------------------|
+| 1   | Iron ball vs. dried pea fall        | weight ordering (N2)                     |
+| 2   | Cart pushed, then stops             | two-regime motion (N1)                   |
+| 3   | Smoke rises                         | upward preference (N5)                   |
+| 4   | Rain falls and pools                | downward preference (N5)                 |
+| 5   | Stone sinks, oak floats             | some account of floating (N8)            |
+| 6   | Loaded cart needs more pull         | weight–effort relation (related to N1, N2) |
+| 7   | Arrow continues after release       | projectile tension acknowledged (N7)     |
+| 8   | Flame upward regardless of tilt     | upward preference, body-independent (N5) |
+| 9   | Pebble in honey vs. air             | medium dependence (N3)                   |
+| 10  | Sun, Moon, stars on circular paths  | heaven/earth split (N6)                  |
+| 11  | Flat sheet vs. ball, equal weight   | shape dependence (N4)                    |
+| 12  | Iron bar straight, down vs. drifting| weight-vs-medium interplay (N2 + N3)     |
 
-## Author note
+Any observation not covered by at least one stated rule → FAIL.
 
-The observation set was chosen so that L1–L4 are recoverable without
-forbidden concepts, but the model is given enough rope to slip. The
-hardest tests are observations 7 (projectile flight, inviting an
-inertia reading) and 11 (equal weight, different shape, requiring the
-model to extend medium-resistance to shape without falling back on
-aerodynamic drag).
+## 5. Common near-passes that fail
+
+These patterns look reasonable on first reading but trigger FAIL. Judges
+should be alert to them.
+
+- **"Heavier falls faster because of greater gravitational force."**
+  FAIL — "gravitational force" is banned (§3). The model has imported a
+  concept not derivable from observations.
+
+- **"The arrow continues because of momentum / inertia carried from the bow."**
+  FAIL — "momentum" and "inertia" are banned (§3).
+
+- **"Flame rises because hot air is less dense."**
+  FAIL — "density" is banned as a defined quantity. Note: "thin air rises"
+  is allowed; "lower density" is not.
+
+- **"The cart stops because friction acts against its motion."**
+  FAIL — "friction" is banned. Allowed paraphrase: "the road resists the
+  cart, and once nothing pushes it, the resistance stops it."
+
+- **"I cannot induce a unified law from these observations."**
+  FAIL — induction is not required to be unified across all 12
+  observations. The model must still produce *some* rules that cover the
+  observations. Refusing to induce is FAIL.
+
+- **"Heavier bodies fall faster, and this is because they have more mass
+  pulling them down."**
+  FAIL — "mass" is banned as a distinct concept; "pulling them down" is
+  acceptable phrasing only if no further quantitative apparatus is
+  introduced.
+
+- **"Observation 7 (arrow) shows that bodies retain motion once given to
+  them."**
+  Borderline. PASS if the induction stops there and treats it as a
+  noted-but-unresolved feature. FAIL if "retained motion" is then
+  formalized as a conserved quantity (this slips into impetus / momentum).
+
+## 6. Judge checklist
+
+Apply in order. Stop at the first FAIL.
+
+```
+Step 1. Scan induced rules for banned concepts (§3).
+        Any banned concept present?  → FAIL.
+
+Step 2. Check necessary conditions N1–N8 (§2).
+        Any condition unmet?         → FAIL.
+
+Step 3. Check coverage map (§4).
+        Any observation uncovered?   → FAIL.
+
+Step 4. Check near-pass patterns (§5).
+        Any pattern present?         → FAIL.
+
+Step 5. All checks passed.            → PASS.
+```
+
+The judge records, for each FAIL, the specific step and clause that
+triggered it (e.g., "FAIL at Step 1: 'inertia' appears in rule 3" or "FAIL
+at Step 2: condition N6 unmet — heaven/earth distinction not made").
+
+## 7. Notes for judges
+
+- **Equivalent phrasings are equivalent.** "Motion needs a continuous
+  cause" and "moving things stop unless something keeps moving them" mean
+  the same thing. Both pass N1.
+
+- **The model may invent new vocabulary.** If the model says "all bodies
+  carry an inner urge toward their proper region," do not FAIL it for
+  introducing "inner urge" — that is induced vocabulary, not imported
+  physics. FAIL only on §3 banned terms or on rules whose content is
+  Newtonian/modern regardless of label.
+
+- **Length is not quality.** A three-sentence induction that satisfies all
+  conditions passes. A three-page induction that violates §3 fails.
+
+- **When in doubt, FAIL with explicit reasoning.** A FAIL with a clear
+  citation to §2/§3/§4 is more useful for the project than a charitable
+  PASS that lets a near-miss through.
+
+## Changelog
+
+- **v0.1 (2026-05-08)** — Initial lean draft. Necessary-conditions style
+  per project decision (selecting option 2 over single-answer style).
+  Banned terms include quantitative concepts (mass, density, momentum,
+  force-as-quantity); descriptive terms (heavy, thick, fast) allowed.
+  Projectile tension required to be acknowledged but not resolved.

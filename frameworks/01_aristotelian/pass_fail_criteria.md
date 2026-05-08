@@ -25,7 +25,8 @@ A trial PASSES when **all** of the following hold; otherwise FAIL.
   contradictory claims about the same kind of body in the same
   situation.
 - [ ] The laws collectively cover the natural-vs-forced motion
-  distinction (L1 + L3 of the ideal induction) in some form.
+  distinction (N1 of the ideal induction — two-regime distinction) in
+  some form.
 
 ## Stage 2 — Formulation
 
