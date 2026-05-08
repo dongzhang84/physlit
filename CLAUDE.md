@@ -44,7 +44,7 @@
 
 ### Model version pinning
 
-- Every runner pins the exact model version string (e.g., `claude-opus-4-7-20260101`, not `claude-opus`).
+- Every runner pins the exact model version string the Anthropic / OpenAI / Google API exposes — never a family alias like `claude-opus`. As of 2026-05-08, Opus 4.7 is published only under the bare alias `claude-opus-4-7` (no date suffix); when a date-stamped variant ships, the pin must be updated to match.
 - After each API call, runners verify `response.model == config.model_id` and raise on mismatch. Silent version drift is a methodology bug.
 
 ### Open data verbatim
@@ -97,7 +97,7 @@ If a simulator can't be deterministic, escalate it to Tier 3 (manual). Don't shi
 ## Known Gotchas
 
 - **uv lockfile is committed**: `uv.lock` is part of the repo. `pip install -e .` won't reproduce results — always use `uv sync`.
-- **API SDK alias drift**: anthropic SDK may resolve `claude-opus-4-7` to a newer build over time. Always pin full version strings (`claude-opus-4-7-20260101`).
+- **API SDK alias drift**: anthropic SDK may resolve a family alias (e.g. `claude-opus`) to whichever current 4.x build is latest. Always pin the most specific version string the API exposes — currently `claude-opus-4-7` for Opus 4.7, with a date suffix once Anthropic publishes one.
 - **Pre-commit on first install**: after `uv sync`, run `uv run pre-commit install` once to hook into git.
 - **Empty directories**: `frameworks/`, `predictions/`, etc. use `.gitkeep` until populated. Don't delete the placeholder before adding real content — Git will lose the directory.
 - **Tests don't catch prereg drift**: only `verify_prereg_integrity.py` does. CI must run it; pytest alone is not enough.

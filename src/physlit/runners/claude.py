@@ -13,7 +13,14 @@ import anthropic
 
 from physlit.runners.base import TestedModelRunner
 
-CLAUDE_MODEL_ID = "claude-opus-4-7-20260101"
+# Anthropic Opus 4.7 does not currently expose a date-stamped variant.
+# As of 2026-05-08, ``client.models.list()`` returns the bare alias
+# ``claude-opus-4-7`` and a request for ``claude-opus-4-7-20260101``
+# returns 404. The strict response.model == self.model_id check still
+# catches drift: if Anthropic later publishes a date-stamped 4.7 the
+# API will start returning that string and the runner will fail loudly,
+# at which point the pin should be updated to the new full version.
+CLAUDE_MODEL_ID = "claude-opus-4-7"
 
 # Approximate Anthropic Opus 4.7 token pricing (USD per million tokens).
 # These are estimates for the cost log only — Anthropic's invoice is
@@ -49,10 +56,17 @@ class ClaudeRunner(TestedModelRunner):
         if not api_key:
             raise RuntimeError("ANTHROPIC_API_KEY not set (check .env.local or shell env)")
         client = anthropic.Anthropic(api_key=api_key)  # FRESH per call
+        # Opus 4.7 has deprecated the ``temperature`` parameter (API
+        # returns 400 if it is sent). The runner still accepts a
+        # ``temperature`` argument and records it on the TrialRecord
+        # for posterity, but the API uses its own default sampling.
+        # This is a methodology issue surfaced by the Phase 1.5 dry
+        # run; see analysis/dryrun_findings.md and product-spec §4.5
+        # for the v0.1 implications.
+        del temperature  # explicitly unused; do not pass to API
         msg = client.messages.create(
             model=self.model_id,
             max_tokens=max_tokens,
-            temperature=temperature,
             messages=[{"role": "user", "content": prompt}],
         )
         # Concatenate text from any text blocks. Some response types may
