@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-09 20:05 UTC  
+**Generated:** 2026-05-09 20:08 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 6 / 7 |
-| Total commits | 23 |
+| Total commits | 24 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **3** | **1** | **1** | **5** | **10** | ⚪ |
+| **3** | **3** | **1** | **1** | **5** | **11** | ⚪ |
 
 **Mon – Monday, May 4**
 
@@ -47,6 +47,7 @@
 
 **Sat – Saturday, May 9**
 
+- `15fff7a` tools: render Response as markdown prose, not a code block — _dongzhang84_ `2026-05-09 13:07`
 - `1186ce1` docs: add Chinese translation of Aristotelian observations — _dongzhang84_ `2026-05-09 13:05`
 - `7d28caf` audit: link worksheet cases to .md companions instead of raw JSON — _dongzhang84_ `2026-05-09 13:01`
 - `20fdcaa` tools: render trial JSONs to companion .md (60 files) — _dongzhang84_ `2026-05-09 12:59`
