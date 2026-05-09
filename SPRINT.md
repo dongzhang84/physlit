@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-09 20:01 UTC  
+**Generated:** 2026-05-09 20:05 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 6 / 7 |
-| Total commits | 22 |
+| Total commits | 23 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **3** | **1** | **1** | **5** | **9** | ⚪ |
+| **3** | **3** | **1** | **1** | **5** | **10** | ⚪ |
 
 **Mon – Monday, May 4**
 
@@ -47,6 +47,7 @@
 
 **Sat – Saturday, May 9**
 
+- `1186ce1` docs: add Chinese translation of Aristotelian observations — _dongzhang84_ `2026-05-09 13:05`
 - `7d28caf` audit: link worksheet cases to .md companions instead of raw JSON — _dongzhang84_ `2026-05-09 13:01`
 - `20fdcaa` tools: render trial JSONs to companion .md (60 files) — _dongzhang84_ `2026-05-09 12:59`
 - `d6bc594` audit: build worksheet for the 22 DISAGREE cases — _dongzhang84_ `2026-05-09 12:05`
