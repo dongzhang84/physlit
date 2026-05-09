@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-09 20:00 UTC  
+**Generated:** 2026-05-09 20:01 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 6 / 7 |
-| Total commits | 21 |
+| Total commits | 22 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **3** | **1** | **1** | **5** | **8** | ⚪ |
+| **3** | **3** | **1** | **1** | **5** | **9** | ⚪ |
 
 **Mon – Monday, May 4**
 
@@ -47,6 +47,7 @@
 
 **Sat – Saturday, May 9**
 
+- `7d28caf` audit: link worksheet cases to .md companions instead of raw JSON — _dongzhang84_ `2026-05-09 13:01`
 - `20fdcaa` tools: render trial JSONs to companion .md (60 files) — _dongzhang84_ `2026-05-09 12:59`
 - `d6bc594` audit: build worksheet for the 22 DISAGREE cases — _dongzhang84_ `2026-05-09 12:05`
 - `d7102ad` data: v0.1 production + dual-judge — P1 partial, P3 confirmed — _dongzhang84_ `2026-05-09 11:51`
