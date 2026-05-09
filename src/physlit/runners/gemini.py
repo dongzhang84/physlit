@@ -18,11 +18,22 @@ performs the strict equality check and halts the run on mismatch.
 from __future__ import annotations
 
 import os
+import time
 
 from google import genai
 from google.genai import types as genai_types
 
 from physlit.runners.base import CallResult, TestedModelRunner
+
+# Retry policy for transient Gemini API failures (e.g. 503 UNAVAILABLE
+# from "high demand" capacity throttling, observed 2026-05-09 during
+# calibration). Methodology: a retry that succeeds is still one trial
+# under the prereg's "fresh API client per call" rule, because each
+# retry constructs a new ``genai.Client``. Non-transient failures
+# (e.g. authentication, quota exhaustion, identity drift) propagate
+# unchanged.
+_RETRY_BACKOFF_SECONDS = (5, 10, 20)
+_RETRYABLE_TOKENS = ("503", "unavailable", "high demand")
 
 GEMINI_MODEL_ID = "gemini-3.1-pro-preview"
 
@@ -63,14 +74,36 @@ class GeminiRunner(TestedModelRunner):
             raise RuntimeError(
                 "GEMINI_API_KEY / GOOGLE_API_KEY not set (check .env.local or shell env)"
             )
-        client = genai.Client(api_key=api_key)  # FRESH per call
         del temperature  # v0.1 uses default sampling across all vendors
+        config = genai_types.GenerateContentConfig(max_output_tokens=max_tokens)
 
-        response = client.models.generate_content(
-            model=self.model_id,
-            contents=prompt,
-            config=genai_types.GenerateContentConfig(max_output_tokens=max_tokens),
-        )
+        # Retry transient 503 / UNAVAILABLE errors with exponential backoff.
+        # Each attempt constructs a fresh ``genai.Client``, preserving the
+        # "fresh API client per call" methodology rule.
+        last_exc: Exception | None = None
+        response = None
+        for attempt, backoff_s in enumerate((0, *_RETRY_BACKOFF_SECONDS)):
+            if backoff_s:
+                time.sleep(backoff_s)
+            client = genai.Client(api_key=api_key)
+            try:
+                response = client.models.generate_content(
+                    model=self.model_id,
+                    contents=prompt,
+                    config=config,
+                )
+                break
+            except Exception as exc:
+                last_exc = exc
+                msg = str(exc).lower()
+                retryable = any(token in msg for token in _RETRYABLE_TOKENS)
+                if not retryable or attempt >= len(_RETRY_BACKOFF_SECONDS):
+                    raise
+        if response is None:
+            raise RuntimeError(
+                f"Gemini retry exhausted after {len(_RETRY_BACKOFF_SECONDS) + 1} "
+                f"attempts: {last_exc}"
+            )
 
         # Extract text from the first candidate. google-genai exposes a
         # convenience .text property that concatenates text parts; if it
