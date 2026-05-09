@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-09 17:44 UTC  
+**Generated:** 2026-05-09 18:00 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 6 / 7 |
-| Total commits | 17 |
+| Total commits | 18 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **3** | **1** | **1** | **5** | **4** | ⚪ |
+| **3** | **3** | **1** | **1** | **5** | **5** | ⚪ |
 
 **Mon – Monday, May 4**
 
@@ -47,6 +47,7 @@
 
 **Sat – Saturday, May 9**
 
+- `bd04be3` feat: Phase 8 dual-judge pipeline + Gemini retry — _dongzhang84_ `2026-05-09 11:00`
 - `8bcfc8c` data: v0.1 calibration N=1 across 3 models — costs + initial signals — _dongzhang84_ `2026-05-09 10:43`
 - `4212c3b` feat: v0.1 production runner — three vendors + R1(a)/R1(b) Gemini drift monitor — _dongzhang84_ `2026-05-09 10:43`
 - `3a8eaf0` lock: pre-register PhysLit v0.1 predictions — _dongzhang84_ `2026-05-09 02:47`
