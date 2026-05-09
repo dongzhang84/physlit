@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-08 21:34 UTC  
+**Generated:** 2026-05-09 09:47 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ✅ Good |
-| Active days | 5 / 7 |
-| Total commits | 13 |
+| Active days | 6 / 7 |
+| Total commits | 14 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **3** | **1** | **1** | **5** | ⚪ | ⚪ |
+| **3** | **3** | **1** | **1** | **5** | **1** | ⚪ |
 
 **Mon – Monday, May 4**
 
@@ -44,6 +44,10 @@
 - `b4cdd3e` feat: Phase 1.5 dry-run scaffolding (runner + prompts + tests) — _dongzhang84_ `2026-05-08 01:29`
 - `f77d6a3` content: rewrite ideal_induction.md in lean (necessary-conditions) style — _dongzhang84_ `2026-05-08 01:03`
 - `b755f10` content: revise Aristotelian observation 11 (shape vs medium) — _dongzhang84_ `2026-05-08 00:01`
+
+**Sat – Saturday, May 9**
+
+- `c6f10fc` prep: prereg final fixes + discover-and-pin OpenAI / Gemini versions — _dongzhang84_ `2026-05-09 02:46`
 
 ---
 
