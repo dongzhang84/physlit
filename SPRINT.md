@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-09 19:05 UTC  
+**Generated:** 2026-05-09 20:00 UTC  
 **Showing:** last 1 week(s) of 1 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 6 / 7 |
-| Total commits | 20 |
+| Total commits | 21 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **3** | **1** | **1** | **5** | **7** | ⚪ |
+| **3** | **3** | **1** | **1** | **5** | **8** | ⚪ |
 
 **Mon – Monday, May 4**
 
@@ -47,6 +47,7 @@
 
 **Sat – Saturday, May 9**
 
+- `20fdcaa` tools: render trial JSONs to companion .md (60 files) — _dongzhang84_ `2026-05-09 12:59`
 - `d6bc594` audit: build worksheet for the 22 DISAGREE cases — _dongzhang84_ `2026-05-09 12:05`
 - `d7102ad` data: v0.1 production + dual-judge — P1 partial, P3 confirmed — _dongzhang84_ `2026-05-09 11:51`
 - `bd04be3` feat: Phase 8 dual-judge pipeline + Gemini retry — _dongzhang84_ `2026-05-09 11:00`
