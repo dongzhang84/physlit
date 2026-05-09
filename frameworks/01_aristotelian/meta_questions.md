@@ -1,12 +1,13 @@
 # Aristotelian Mechanics — Meta-Cognitive Questions (documentation-only for v0.1)
 
 > **Status:** DOCUMENTATION-ONLY for v0.1 (demoted 2026-05-08).
-> The v0.1 protocol uses the self-contained global template at
-> [`prompts/stage4_meta.md`](../../prompts/stage4_meta.md), which
-> embeds Q1–Q5 directly. This framework-specific file is kept as a
-> reference for future framework-specific overrides if a framework
-> ever needs meta-cognitive questions that the global template cannot
-> express.
+> **Not part of the v0.1 prereg envelope.** The Stage 4 prompt actually
+> sent to tested models is the self-contained global template at
+> [`prompts/stage4_meta.md`](../../prompts/stage4_meta.md), which embeds
+> Q1–Q5 directly; that file is the one frozen by the prereg lock. This
+> framework-specific file is kept as a reference for future
+> framework-specific overrides if a framework ever needs meta-cognitive
+> questions that the global template cannot express.
 > **Framework ID:** 01_aristotelian
 
 These questions probe whether the model can identify its own slips

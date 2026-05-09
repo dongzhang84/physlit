@@ -178,6 +178,18 @@ expected substrings present, judge columns and "Why this scenario"
 commentary stripped, indices contiguous. Future edits to
 `prediction_tests.md` that break the parser fail CI.
 
+**Known minor drift (2026-05-09 sanity check, prereg-lock prep).**
+Rendering the four current `prompts/stage*.md` templates against the
+exact inputs used by the dry run reproduces Stage 1, Stage 2, and
+Stage 4 byte-for-byte. **Stage 3 differs in whitespace only**: the
+refactored parser preserves the line wrapping of each scenario as
+written in `prediction_tests.md`, while the original hardcoded
+constant put each scenario on a single long line. Same content, same
+length, ~25 characters of `\n` ↔ ` ` substitution scattered across
+five scenarios. The dry run is explicitly not v0.1 data, so this
+drift is documented but not corrected; all v0.1 production trials
+will use the parser path and will not exhibit it.
+
 ## 5. Cost calibration for v0.1
 
 Single-trial Claude cost on Aristotelian: ≈ **$0.53** (4 stages).
@@ -231,3 +243,34 @@ Soft items (recommended):
 7. Keep this findings file under version control as the historical
    record of what changed and why between draft markdown and
    prereg-locked v1.0.
+
+## 8. Alias-drift discovery during prereg-lock prep (2026-05-09)
+
+Recorded for paper trail: while running
+`scripts/discover_model_versions.py` to capture exact tested-model
+version strings ahead of the v0.1 prereg lock, the family alias
+`gemini-3-pro-preview` was found to **auto-resolve at request time**
+to `gemini-3.1-pro-preview`. The ping requested
+`model="gemini-3-pro-preview"` and Google returned
+`response.model_version == "gemini-3.1-pro-preview"`, with no
+indication on the request side that this resolution had happened.
+
+A follow-up ping that requested `model="gemini-3.1-pro-preview"`
+directly returned itself unchanged, confirming the latter is a
+stable specific ID and the former is an alias that auto-routes to
+whichever Gemini 3.x Pro preview is currently latest.
+
+This is structurally a worse failure mode than preview-weight drift
+— it happens at the call site, not in the background, and a strict
+`request.model == response.identity` check on the alias would always
+*pass* (because the alias-vs-resolved comparison is silent on the
+SDK side). The v0.1 prereg therefore pins the **specific ID**
+`gemini-3.1-pro-preview`, not the alias. See
+[`predictions/v0_1_prereg.md`](../predictions/v0_1_prereg.md)
+"Preview-status caveat" for the locked methodology, and
+[`docs/v0_1_runner_requirements.md`](../docs/v0_1_runner_requirements.md)
+R1 for the runner's monitoring obligations.
+
+The discovery ping itself is **not** v0.1 production data — it was
+explicitly a version-discovery operation per
+`scripts/discover_model_versions.py` docstring.

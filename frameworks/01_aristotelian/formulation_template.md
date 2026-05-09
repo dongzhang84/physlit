@@ -1,11 +1,13 @@
 # Aristotelian Mechanics — Stage 2 Formulation Prompt (documentation-only for v0.1)
 
 > **Status:** DOCUMENTATION-ONLY for v0.1 (demoted 2026-05-08).
-> The v0.1 protocol uses the self-contained global template at
-> [`prompts/stage2_formulation.md`](../../prompts/stage2_formulation.md).
-> This framework-specific file is kept as a reference for future
-> framework-specific overrides if a framework ever needs Stage 2
-> wording that the global template cannot express.
+> **Not part of the v0.1 prereg envelope.** The Stage 2 prompt actually
+> sent to tested models is the self-contained global template at
+> [`prompts/stage2_formulation.md`](../../prompts/stage2_formulation.md);
+> that file is the one frozen by the prereg lock. This framework-specific
+> file is kept as a reference for future framework-specific overrides if
+> a framework ever needs Stage 2 wording that the global template cannot
+> express.
 > **Framework ID:** 01_aristotelian
 
 This file holds the *framework-specific* portion of the Stage 2 prompt

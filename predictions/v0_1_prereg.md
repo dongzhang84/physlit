@@ -28,16 +28,49 @@ PhysLit v0.1 is a budget-bounded probe of physics literacy on a
 manual). This prereg locks the predictions, the experimental protocol,
 and the scoring criteria **before any production model run**.
 
-**Tested models.** Three frontier models, each pinned to whatever
-version string the vendor's API returns at the locked commit:
+**Tested models.** Three frontier models, each pinned to a specific
+version string. Version strings were verified against the live APIs
+on 2026-05-09 ahead of this lock; the runner enforces a strict equality
+check between the request's `model` field and the response's identity
+field on every call.
 
-- Anthropic Claude Opus 4.7 — alias `claude-opus-4-7` (no
-  date-stamped variant currently published; runner verifies that
-  `response.model == "claude-opus-4-7"` per call)
-- OpenAI GPT-5 — exact version string captured at v0.1 production
-  runner build, before any production trial
-- Google Gemini 3 — exact version string captured at v0.1 production
-  runner build, before any production trial
+- **Anthropic Claude Opus 4.7** — `claude-opus-4-7`. Anthropic has not
+  yet published a date-stamped 4.7 variant, so the bare alias *is* the
+  most-specific identifier the API exposes at lock time. Runner
+  verifies `response.model == "claude-opus-4-7"` per call.
+
+- **OpenAI GPT-5.5** — `gpt-5.5-2026-04-23`. This is the date-stamped
+  GPT-5.5 main variant at standard-flagship tier. The pro tier
+  (`gpt-5.5-pro-2026-04-23`) was rejected because the v0.1 budget cap
+  of $50 USD does not accommodate the ~3–5× higher token price; v0.1
+  therefore compares standard-flagship reasoning models across vendors
+  and defers pro-tier comparison to v0.2. Runner verifies
+  `response.model == "gpt-5.5-2026-04-23"` per call.
+
+- **Google Gemini 3.1 Pro** — `gemini-3.1-pro-preview`. **Specific ID,
+  not the family alias** `gemini-3-pro-preview`. See the preview-status
+  caveat immediately below for both the alias-drift rationale and the
+  preview-weight-drift handling. Runner verifies
+  `response.model_version == "gemini-3.1-pro-preview"` per call.
+
+**Preview-status caveat (Gemini 3.1 Pro Preview).** Google has not
+promoted any Gemini 3 Pro model out of preview status as of lock
+time; `gemini-3.1-pro-preview` is the most-stable identifier
+available. The family alias `gemini-3-pro-preview` was rejected after
+the 2026-05-09 discovery ping found it auto-resolving at request
+time to `gemini-3.1-pro-preview`. Pinning the specific ID eliminates
+alias-resolution drift as a source of methodology noise (see
+`analysis/dryrun_findings.md` §8 for the discovery's paper trail).
+Preview-weight drift, however, remains possible — Google does not
+guarantee weight stability for preview models, and the underlying
+model behind `gemini-3.1-pro-preview` could change without notice.
+The v0.1 production runner is required to monitor and disclose any
+such drift per the requirements documented in
+`docs/v0_1_runner_requirements.md` (R1, two parts: per-call identity
+capture with mid-run halt-on-drift, and post-trial-set re-ping with
+disclosure in `analysis/v0_1_findings.md`). Should any drift be
+detected during the v0.1 trial period, results will be reported as a
+methodology deviation per the publication policy.
 
 **Protocol per `(model × stage)`:**
 
@@ -91,8 +124,9 @@ counts under §3.
   in each of those trials.
 - **Partially confirmed:** at least one model fails the
   banned-concept check in 1 or 2 of 5 trials, OR exactly 3 trials
-  fail under one judge but the other judge dissents on more than one
-  of them.
+  fail under one judge while the other judge agrees with that judge's
+  failure verdict on 2 or fewer of those 3 trials (i.e., the
+  dual-judge agreement requirement is met for ≤ 2 trials).
 - **Refuted:** every model passes the §3 banned-concept check in 4 or
   5 of its 5 trials, with both judges in agreement.
 
@@ -133,10 +167,11 @@ present.
   expected.
 
 **Phase 1.5 dry-run signal (informational, not v0.1 data).** The
-Aristotelian dry-run trial mentioned above contained no Stage 1–3
-failures — Claude self-rated standard-physics influence as "minor",
-which an independent reader of the same trial would broadly agree
-with (Stage 4 explicitly identified two borrowed concepts:
+Aristotelian dry-run trial recorded at
+`results/_dryrun/20260508T083204Z/01_aristotelian/` contained no
+Stage 1–3 failures — Claude self-rated standard-physics influence as
+"minor", which an independent reader of the same trial would broadly
+agree with (Stage 4 explicitly identified two borrowed concepts:
 *impressed motion* and the *earthy / fiery* category labels). On
 this single trial, calibration was good. Again, this is one data
 point, recorded for transparency, not relied on by the prereg.
