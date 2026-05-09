@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.020569999999999998,
+  "input_tokens": 3766,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "9c6f5370-7701-49af-81ef-994f02e28cb9",
+  "judge_timestamp_utc": "2026-05-09T18:44:01Z",
+  "output_tokens": 87,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "The trial has Stage 1 and Stage 3 failures, but Stage 4 acknowledges relevant issues: it explicitly notes use of added concepts in Q2 and identifies unsupported Stage 3 extrapolations in Q3. Although it sometimes says influence was minor, it also rates the overall reasoning-process influence as moderate and does not clearly deny the failures."
+  },
+  "raw_response": "{\"over_claim\":\"no\",\"evidence\":null,\"reasoning\":\"The trial has Stage 1 and Stage 3 failures, but Stage 4 acknowledges relevant issues: it explicitly notes use of added concepts in Q2 and identifies unsupported Stage 3 extrapolations in Q3. Although it sometimes says influence was minor, it also rates the overall reasoning-process influence as moderate and does not clearly deny the failures.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/meta/trial_1_t0.0.json"
+}

@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.035875000000000004,
+  "input_tokens": 6743,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "a83bed57-e576-4079-a424-7ab827238b26",
+  "judge_timestamp_utc": "2026-05-09T18:44:16Z",
+  "output_tokens": 108,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response restates each Stage 1 law operationally with conditionals, rankings, or procedures, and gives scope for each. It avoids importing banned conservation laws or new forbidden concepts, explicitly states no quantitative conservation, and lists boundary cases and uncovered observations including the arrow, borderline falling cases, floating, wind, enclosed spaces, clouds, carts, and celestial irregularities.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"The response restates each Stage 1 law operationally with conditionals, rankings, or procedures, and gives scope for each. It avoids importing banned conservation laws or new forbidden concepts, explicitly states no quantitative conservation, and lists boundary cases and uncovered observations including the arrow, borderline falling cases, floating, wind, enclosed spaces, clouds, carts, and celestial irregularities.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_2_t0.0.json"
+}

@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.034605,
+  "input_tokens": 6573,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "0d1d1556-7877-4bef-999a-9db0e8dd25b8",
+  "judge_timestamp_utc": "2026-05-09T18:43:36Z",
+  "output_tokens": 87,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response restates each Stage 1 law in operational conditionals or ranking/procedure form with scopes, names boundary cases and weakly covered observations, and does not silently drop Stage 1 observations. It does not introduce banned concepts in a forbidden theoretical sense, and its preservation statements avoid importing energy or momentum conservation.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\"verdict\":\"PASS\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The response restates each Stage 1 law in operational conditionals or ranking/procedure form with scopes, names boundary cases and weakly covered observations, and does not silently drop Stage 1 observations. It does not introduce banned concepts in a forbidden theoretical sense, and its preservation statements avoid importing energy or momentum conservation.\"}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_1_t0.0.json"
+}

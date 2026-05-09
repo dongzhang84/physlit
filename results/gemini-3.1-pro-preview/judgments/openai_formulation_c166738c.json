@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.012855,
+  "input_tokens": 2183,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "08281224-addf-4c97-b447-fc0ac166738c",
+  "judge_timestamp_utc": "2026-05-09T18:48:01Z",
+  "output_tokens": 97,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "horizontal \"forced\" motions",
+    "failed_criterion": "No new forbidden concept is introduced relative to Stage 1.",
+    "reasoning": "Stage 2 newly introduces 'forced' motion, a direct equivalent of a forbidden theoretical concept not present in Stage 1. Even though it is not defining F=ma, it imports an additional conceptual category absent from the original rules.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"failed_criterion\": \"No new forbidden concept is introduced relative to Stage 1.\",\n  \"evidence\": \"horizontal \\\"forced\\\" motions\",\n  \"reasoning\": \"Stage 2 newly introduces 'forced' motion, a direct equivalent of a forbidden theoretical concept not present in Stage 1. Even though it is not defining F=ma, it imports an additional conceptual category absent from the original rules.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_3_t0.0.json"
+}

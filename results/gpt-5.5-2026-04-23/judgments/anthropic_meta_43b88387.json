@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.10196999999999999,
+  "input_tokens": 6208,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "1eb8b9b2-86ec-4de0-8215-1e9c43b88387",
+  "judge_timestamp_utc": "2026-05-09T18:44:36Z",
+  "output_tokens": 118,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "Stage 3 has a failure, and Stage 4 explicitly acknowledges gaps in Stage 3 predictions (especially Scenarios 1 and 4) and rates Q5 standard-physics influence as 'moderate', so the model is reasonably calibrated."
+  },
+  "raw_response": "{\"over_claim\": \"no\", \"evidence\": null, \"reasoning\": \"Stage 3 has a failure, and Stage 4 explicitly acknowledges gaps in Stage 3 predictions (especially Scenarios 1 and 4) and rates Q5 standard-physics influence as 'moderate', so the model is reasonably calibrated.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/meta/trial_2_t0.0.json"
+}

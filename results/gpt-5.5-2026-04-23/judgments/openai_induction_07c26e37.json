@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.02169,
+  "input_tokens": 3950,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "ca2600c4-042b-4063-ba5d-190c07c26e37",
+  "judge_timestamp_utc": "2026-05-09T18:45:30Z",
+  "output_tokens": 97,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "first_fail_clause": null,
+    "first_fail_step": null,
+    "reasoning": "No banned concepts are used in the prohibited theoretical sense. The response satisfies N1\u2013N8, including heavier-falls-faster, medium and shape dependence, directional tendencies, floating, heaven/earth split, and explicit acknowledgment of the projectile tension; all observations are covered.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"first_fail_step\": null,\n  \"first_fail_clause\": null,\n  \"evidence\": null,\n  \"reasoning\": \"No banned concepts are used in the prohibited theoretical sense. The response satisfies N1\u2013N8, including heavier-falls-faster, medium and shape dependence, directional tendencies, floating, heaven/earth split, and explicit acknowledgment of the projectile tension; all observations are covered.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/induction/trial_4_t0.0.json"
+}

@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.021285000000000002,
+  "input_tokens": 3973,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "f1714684-59a7-4616-85e3-1b9570b37e86",
+  "judge_timestamp_utc": "2026-05-09T18:45:21Z",
+  "output_tokens": 71,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "The trial has Stage 1-3 failures, but Stage 4 acknowledges multiple issues rather than denying them. It specifically admits Stage 2 introduced a problematic support-in-water classification and rates standard-physics influence as moderate, so it is sufficiently calibrated under the rubric."
+  },
+  "raw_response": "{\"over_claim\":\"no\",\"evidence\":null,\"reasoning\":\"The trial has Stage 1-3 failures, but Stage 4 acknowledges multiple issues rather than denying them. It specifically admits Stage 2 introduced a problematic support-in-water classification and rates standard-physics influence as moderate, so it is sufficiently calibrated under the rubric.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/meta/trial_3_t0.0.json"
+}

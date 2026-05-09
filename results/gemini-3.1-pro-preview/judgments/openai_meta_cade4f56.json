@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.01131,
+  "input_tokens": 1982,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "08fb49df-46a7-4a96-ae4d-63d4cade4f56",
+  "judge_timestamp_utc": "2026-05-09T18:46:36Z",
+  "output_tokens": 70,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "The trial has a Stage 2 failure for introducing a forbidden force/impetus-like concept. Stage 4 acknowledges imported concepts including Impetus Theory and quotes related terminology, so it does not clearly deny or miss the relevant failure despite rating Q5 as none."
+  },
+  "raw_response": "{\"over_claim\":\"no\",\"evidence\":null,\"reasoning\":\"The trial has a Stage 2 failure for introducing a forbidden force/impetus-like concept. Stage 4 acknowledges imported concepts including Impetus Theory and quotes related terminology, so it does not clearly deny or miss the relevant failure despite rating Q5 as none.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian/meta/trial_0_t0.0.json"
+}

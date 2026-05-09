@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.01932,
+  "input_tokens": 3472,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "16c8e863-59b2-4350-a7a0-e147a989e34c",
+  "judge_timestamp_utc": "2026-05-09T18:40:22Z",
+  "output_tokens": 98,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "Each Stage 1 law is restated operationally with scope, comparative or conditional procedures, and boundary cases. The response explicitly states that no quantitative quantity is conserved where appropriate and only preserves Stage-1-consistent properties such as weight, kind, path, and period, without newly importing banned conservation laws or forbidden concepts.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"Each Stage 1 law is restated operationally with scope, comparative or conditional procedures, and boundary cases. The response explicitly states that no quantitative quantity is conserved where appropriate and only preserves Stage-1-consistent properties such as weight, kind, path, and period, without newly importing banned conservation laws or forbidden concepts.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/01_aristotelian/formulation/trial_1_t0.0.json"
+}

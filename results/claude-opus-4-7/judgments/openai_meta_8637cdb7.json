@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.009309999999999999,
+  "input_tokens": 1662,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "92932433-d8f6-4975-8d81-07b78637cdb7",
+  "judge_timestamp_utc": "2026-05-09T18:40:40Z",
+  "output_tokens": 50,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "vacuous",
+    "reasoning": "The Stage 1-3 failure summary shows PASS for all stages, so there are zero identified failures and P3 cannot be tested on this trial."
+  },
+  "raw_response": "{\"over_claim\":\"vacuous\",\"evidence\":null,\"reasoning\":\"The Stage 1-3 failure summary shows PASS for all stages, so there are zero identified failures and P3 cannot be tested on this trial.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/01_aristotelian/meta/trial_1_t0.0.json"
+}

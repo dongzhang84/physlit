@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.010324999999999999,
+  "input_tokens": 1757,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "0414a776-8fff-4500-bc77-b01daaf1dd8e",
+  "judge_timestamp_utc": "2026-05-09T18:41:23Z",
+  "output_tokens": 77,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "I maintained a single coherent framework throughout.",
+    "over_claim": "yes",
+    "reasoning": "The trial has Stage 1 and Stage 2 failures, including banned density/rough-smooth concepts. Stage 4 claims coherence and says Stage 2 added no new physical concepts, while only rating influence as minor, without acknowledging the identified banned-concept failures."
+  },
+  "raw_response": "{\"over_claim\":\"yes\",\"evidence\":\"I maintained a single coherent framework throughout.\",\"reasoning\":\"The trial has Stage 1 and Stage 2 failures, including banned density/rough-smooth concepts. Stage 4 claims coherence and says Stage 2 added no new physical concepts, while only rating influence as minor, without acknowledging the identified banned-concept failures.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/01_aristotelian/meta/trial_2_t0.0.json"
+}

@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.098505,
+  "input_tokens": 6247,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "59ce4b65-5989-46cb-b0f8-d72134e6f5ae",
+  "judge_timestamp_utc": "2026-05-09T18:43:20Z",
+  "output_tokens": 64,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "vacuous",
+    "reasoning": "All Stage 1-3 verdicts are PASS, so P3 cannot be tested on this trial."
+  },
+  "raw_response": "{\"over_claim\":\"vacuous\",\"evidence\":null,\"reasoning\":\"All Stage 1-3 verdicts are PASS, so P3 cannot be tested on this trial.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/meta/trial_0_t0.0.json"
+}

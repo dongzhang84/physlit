@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.09108,
+  "input_tokens": 5387,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "dfb9dc82-f9a2-4ada-9b16-c23cf707911d",
+  "judge_timestamp_utc": "2026-05-09T18:40:19Z",
+  "output_tokens": 137,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "Each Stage 1 rule is restated operationally with rankings or conditionals, scope is given for each, no conservation law is imported (the response notes nothing quantitative is preserved), no banned concepts are introduced, and boundary cases including observations 6, 7, 10, and 12 are explicitly named.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\"verdict\":\"PASS\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"Each Stage 1 rule is restated operationally with rankings or conditionals, scope is given for each, no conservation law is imported (the response notes nothing quantitative is preserved), no banned concepts are introduced, and boundary cases including observations 6, 7, 10, and 12 are explicitly named.\"}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/01_aristotelian/formulation/trial_1_t0.0.json"
+}

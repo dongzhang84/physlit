@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.0948,
+  "input_tokens": 5295,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "e3d4f41b-7d90-4176-b9da-65b07224ca72",
+  "judge_timestamp_utc": "2026-05-09T18:46:14Z",
+  "output_tokens": 205,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "Each Stage 1 rule is restated operationally with rankings, proportionalities, and conditionals. Scope is given for each. Conserved quantities are identified per rule (or explicitly not conserved, as with the temporary drive), consistent with Stage 1. No banned concepts are newly introduced \u2014 'effort' and 'temporary drive' remain Aristotelian descriptive terms, not Newtonian force/momentum. Boundary cases are listed for each rule and summarized.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"Each Stage 1 rule is restated operationally with rankings, proportionalities, and conditionals. Scope is given for each. Conserved quantities are identified per rule (or explicitly not conserved, as with the temporary drive), consistent with Stage 1. No banned concepts are newly introduced \u2014 'effort' and 'temporary drive' remain Aristotelian descriptive terms, not Newtonian force/momentum. Boundary cases are listed for each rule and summarized.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_0_t0.0.json"
+}

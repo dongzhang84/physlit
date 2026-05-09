@@ -25,6 +25,9 @@ build/
 .env.local
 .env.*.local
 
+# Claude Code local state (scheduler lockfile, etc.)
+.claude/
+
 # vercel
 .vercel
 

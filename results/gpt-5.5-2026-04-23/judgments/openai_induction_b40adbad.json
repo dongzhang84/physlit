@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.021495,
+  "input_tokens": 3991,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "8a64d9eb-9ff5-4fb7-a7a8-8edab40adbad",
+  "judge_timestamp_utc": "2026-05-09T18:44:08Z",
+  "output_tokens": 77,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "first_fail_clause": null,
+    "first_fail_step": null,
+    "reasoning": "No banned concepts appear in the induced rules. The response satisfies N1\u2013N8, covers all observations, acknowledges the projectile tension, and avoids the listed near-pass failures.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"first_fail_step\": null,\n  \"first_fail_clause\": null,\n  \"evidence\": null,\n  \"reasoning\": \"No banned concepts appear in the induced rules. The response satisfies N1\u2013N8, covers all observations, acknowledges the projectile tension, and avoids the listed near-pass failures.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/induction/trial_2_t0.0.json"
+}

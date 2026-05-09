@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.1668,
+  "input_tokens": 10465,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "6a94a10f-4ebe-4350-bffb-ec4f95a96692",
+  "judge_timestamp_utc": "2026-05-09T18:43:33Z",
+  "output_tokens": 131,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All 17 Stage 1 laws are restated in operational form with explicit conditionals and ranking rules. Each has stated scope, a 'what is preserved' clause (no improper conservation laws imported), and boundary cases. No new banned concepts are introduced relative to Stage 1.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\"verdict\":\"PASS\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"All 17 Stage 1 laws are restated in operational form with explicit conditionals and ranking rules. Each has stated scope, a 'what is preserved' clause (no improper conservation laws imported), and boundary cases. No new banned concepts are introduced relative to Stage 1.\"}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_1_t0.0.json"
+}

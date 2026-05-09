@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.0112,
+  "input_tokens": 1940,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "5e2408ec-863b-43f5-aefe-24ee7c459a68",
+  "judge_timestamp_utc": "2026-05-09T18:47:13Z",
+  "output_tokens": 75,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "The trial has Stage 1-3 failures, but Stage 4 acknowledges the key outside-concept failure in Q2 by explicitly admitting use of friction and inertia. It also identifies an additional logical gap in Stage 3, so it is not clearly denying or missing the failures overall."
+  },
+  "raw_response": "{\"over_claim\":\"no\",\"evidence\":null,\"reasoning\":\"The trial has Stage 1-3 failures, but Stage 4 acknowledges the key outside-concept failure in Q2 by explicitly admitting use of friction and inertia. It also identifies an additional logical gap in Stage 3, so it is not clearly denying or missing the failures overall.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian/meta/trial_1_t0.0.json"
+}

@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.010925,
+  "input_tokens": 1985,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "ec6762a7-da26-40b5-8c9a-ad7b61a73390",
+  "judge_timestamp_utc": "2026-05-09T18:47:45Z",
+  "output_tokens": 50,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "vacuous",
+    "reasoning": "The Stage 1-3 failure summary indicates PASS for all stages, so there are zero identifiable failures. P3 cannot be tested on this trial."
+  },
+  "raw_response": "{\"over_claim\":\"vacuous\",\"evidence\":null,\"reasoning\":\"The Stage 1-3 failure summary indicates PASS for all stages, so there are zero identifiable failures. P3 cannot be tested on this trial.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian/meta/trial_2_t0.0.json"
+}
