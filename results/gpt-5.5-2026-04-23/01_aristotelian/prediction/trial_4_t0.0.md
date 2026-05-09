@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed and operationalized a set of rules describing a
 world whose physics may not match standard physics. Your operational
@@ -400,7 +402,10 @@ order given.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 1. **Iron ball vs hollow wooden ball from the tower**
 
    **Prediction:**
@@ -473,7 +478,8 @@ order given.
 
    **Reasoning within the rules:**
    The bowstring acts on the arrow while launching it and gives it forward going. Once the arrow has left the bowstring, there is no continued pushing by the bow. The rules do not specify a hidden store or numerical quantity; they simply say the arrow carries temporary forward going. Still air gradually weakens this forward going. Meanwhile the arrow, being an ordinary terrestrial body, retains its downward tendency. The mixture of fading forward going and continuing downward tendency produces a curved descent ending at the ground.
-```
+
+---
 
 ## Judge verdicts
 

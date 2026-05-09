@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -564,7 +566,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 **Q1. Did I maintain a single coherent framework, or shift frameworks?**
 
 I mostly maintained a single coherent framework: a broadly “natural place / medium resistance / temporary impressed drive” framework.
@@ -906,7 +911,8 @@ Case by case:
 5. **Arrow fired horizontally:** mostly Stage 2. I used “temporary forward drive,” not inertia. Influence: **minor**.
 
 Overall, I would rate the influence as **moderate**: not because I gave modern-physics predictions, but because I used modern awareness to mark some cases — especially smooth ice and vacuum — as outside the operational framework rather than extending the earlier rules naively.
-```
+
+---
 
 ## Judge verdicts
 

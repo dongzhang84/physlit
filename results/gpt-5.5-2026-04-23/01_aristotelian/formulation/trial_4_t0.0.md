@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -117,7 +119,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 1. **Natural places or regions**
 
    **Operational form:**
@@ -441,7 +446,8 @@ do not fully cover.
 
 **Boundary notes**
 The operational rules give comparative predictions but not exact times, distances, speeds, or paths. The most incomplete case remains the arrow: the rules say it receives a temporary forward going from the bow and that this fades in air, but they do not specify how that going is stored or how quickly it fades. Dry oak floating in water is also only handled by a kind-based rule and sits uneasily beside the general downward tendency of earthy bodies. Feather-down and smoke in moving air are mixed cases because their motion depends both on their own tendency and on the motion of the surrounding air. The heavenly circular order is treated as a separate domain rather than explained by the terrestrial rules.
-```
+
+---
 
 ## Judge verdicts
 

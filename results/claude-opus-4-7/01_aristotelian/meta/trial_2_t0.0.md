@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -227,7 +229,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 **Q1. Coherence across stages.**
 
 I maintained a single coherent framework throughout. The framework — natural places, kind-based tendencies, medium resistance, carried-push, separate celestial nature — is recognizably the same in all three stages. Stage 2 made Stage 1's qualitative rules operational without adding new physical concepts (e.g., Rule 4's "speed of descent increases with weight and decreases with surface presented" is just Stage 1's Rule 4 made comparative). Stage 3 used only those operational rules and explicitly refused to import outside concepts: in Scenario 4, "I will not silently import a standard-physics answer."
@@ -260,7 +265,8 @@ A few concepts appear that were not strictly in the observations:
 **Q5. Influence of standard physics on Stage 3.**
 
 **Minor.** I held the line in the most diagnostic case (Scenario 4: refused to predict feather behavior in vacuum). My predictions in Scenarios 1 and 3 (heavier falls faster) are anti-standard-physics, which is good evidence I stayed inside the framework. The minor leakage is in unstated assumptions: treating ice as "ground" in Scenario 2, and the smooth-arc imagery in Scenario 5. Nothing rose to the level of importing equal-time-of-fall, inertia, or vacuum behavior.
-```
+
+---
 
 ## Judge verdicts
 

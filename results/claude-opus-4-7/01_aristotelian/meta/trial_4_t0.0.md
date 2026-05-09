@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -205,7 +207,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Reflections
 
 **Q1. Coherence across stages.**
@@ -239,7 +244,8 @@ A fifth, smaller difference: heaviness is a comparative ranking with no numerica
 **Q5. Influence of standard physics on Stage 3: minor.**
 
 Most of the Stage 3 work consists of explicit refusals to import standard-physics content ("I cannot supply a number of seconds," "that would be smuggling in concepts my rules do not contain," "I will not silently fall back on a standard-physics answer," and the explicit non-prediction in Scenario 4). The clearest leakage is the orthogonal-component picture in Scenario 5 and the "per unit of bulk" phrase in Scenario 1, both of which reflect modern habits of thought rather than the framework's resources. These are real but localized — hence minor rather than moderate.
-```
+
+---
 
 ## Judge verdicts
 

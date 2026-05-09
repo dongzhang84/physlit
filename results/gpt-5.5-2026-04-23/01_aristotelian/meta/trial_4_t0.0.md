@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -510,7 +512,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 **Q1. Did I maintain a single coherent framework, or shift frameworks?**
 
 Mostly, I maintained a single coherent framework: a qualitative, kind-based framework in which terrestrial bodies have natural upward/downward tendencies, media hinder motion, sideways motion requires a cause, and heavenly circular motion is treated separately.
@@ -805,7 +810,8 @@ Breakdown:
    The prediction followed the Stage 2 projectile rule almost exactly: temporary forward going, air hindrance, downward tendency, curved path. Standard physics overlaps in outcome but not in explanation.
 
 Overall, I would rate the Stage 3 predictions as **minor** standard-physics influence, because most predictions used the stated Stage 2 framework. The main exceptions are not places where I fully imported standard physics, but places where standard physics shaped my caution about scope: especially the smooth-ice cart and vacuum feather.
-```
+
+---
 
 ## Judge verdicts
 

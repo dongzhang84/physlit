@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 1. **Every kind of thing has a customary place or region toward which it tends when not prevented.**
    Earthy and watery things tend downward toward the ground. Airy and smoky things tend upward into the open air. Flames also tend upward. Heavenly lights move in their own circular paths above.
 
@@ -153,7 +158,8 @@ difficult.
 
 **Remaining tension:**
 The hardest case is the arrow. The rules explain its continued forward flight by saying the bow gives it a temporary forward flight that gradually weakens, but the observations do not directly show what maintains that forward motion after the arrow has left the string. This makes the arrow less straightforward than falling stones, rising smoke, floating wood, or rolling carts.
-```
+
+---
 
 ## Judge verdicts
 

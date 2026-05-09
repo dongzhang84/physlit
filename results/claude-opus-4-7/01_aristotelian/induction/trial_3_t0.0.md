@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Proposed Rules for This World
 
 **1. Every body has a natural place toward which it tends to move on its own accord.**
@@ -129,7 +134,8 @@ Their natural motion is neither downward nor upward but circular, and they repea
 
 - **Obs. 7 (the arrow)** sits least comfortably. Rule 5 says a thing moving along the ground stops once nothing pushes it, yet Rule 6 grants the arrow continued flight with no hand on it. The difference invoked — that air "helps to bear" a violently launched body but does not help the cart — is a stipulation rather than something the observations directly demand. Why air sustains the arrow but slows the falling pea (Rule 3) is not fully reconciled; the air seems to play opposite roles in the two cases.
 - **Obs. 10 (heavenly bodies)** is handled only by exempting them from the other rules. That is consistent but unexplanatory: it tells us the heavens are different without saying what governs their circular return.
-```
+
+---
 
 ## Judge verdicts
 

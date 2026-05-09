@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 1. **Kinds of bodies have natural places.**
    Earthy and stony bodies, iron, rainwater, and similar heavy things naturally seek the lower region, toward the earth. Fiery, smoky, and flame-like things naturally seek the upper region, toward the sky.
 
@@ -147,7 +152,8 @@ difficult.
 
 **Remaining tension:**
 The hardest observation to fit neatly is the arrow’s continued forward flight after it has left the bowstring. The rules above account for it by allowing a temporary carried-over forward tendency, but the observations do not say exactly how that tendency is stored, how long it lasts, or why it fades at the rate it does.
-```
+
+---
 
 ## Judge verdicts
 

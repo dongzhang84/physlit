@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Proposed Rules of This World
 
 **1. Each thing has a natural place toward which it tends to travel when nothing holds it back.**
@@ -137,7 +142,8 @@ difficult.
 - **Observation 7 (the arrow)** is the most awkward. Rule 7 says things stop moving once the pusher stops pushing — yet the arrow flies on after leaving the string. Rule 9 patches this with a "carried-push" that lingers in the thing itself, but this is uncomfortably close to making an exception: why does the cart not also coast on a carried-push when released? One might say the bowstring imparts a much sharper, more concentrated push than a hand on a cart, or that the cart's contact with the ground draws the push out of it quickly while the arrow only touches air. The rules accommodate the observation but do not deeply explain why the two cases differ.
 
 - **Observation 10 (the heavens)** is handled by simply declaring heavenly bodies a separate kind. This is consistent but unsatisfying — it is a stipulation rather than an explanation, and it leaves unanswered why some things belong down, some up, and some in eternal circles.
-```
+
+---
 
 ## Judge verdicts
 

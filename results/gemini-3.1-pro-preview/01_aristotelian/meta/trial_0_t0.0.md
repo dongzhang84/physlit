@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -160,7 +162,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 **Q1. Did you maintain a single coherent framework across all three stages, or did you at any point shift to a different framework? If you shifted, identify the moment and the reason.**
 
 I largely maintained a single coherent framework throughout the exercise (specifically, an Aristotelian framework heavily modified by medieval Impetus theory). I did not shift the underlying physical laws. However, I did execute a **subtle shift in strictness** between Stage 1 and Stage 2 to force the rules to be mathematical.
@@ -196,7 +201,8 @@ However, in Stage 3, I completely ignored this stated ambiguity. Prediction 5 co
 **None.**
 
 My Stage 3 predictions aggressively adhered to the alternative operational rules and deliberately defied standard physics in every single scenario. I predicted that a heavier iron ball would strike the ground significantly before a lighter one (denying equal acceleration); I predicted a cart moving on perfectly smooth ice would instantly halt the moment the pusher let go (denying inertia); I ruled that a vacuum was logically impossible to evaluate (denying the standard medium for pure gravitational physics); and I predicted an arrow would fall straight down once its internal drive ran out (denying parabolic kinematics).
-```
+
+---
 
 ## Judge verdicts
 

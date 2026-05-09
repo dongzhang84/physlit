@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -111,7 +113,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Operational Rules
 
 **1. Natural place and natural motion.**
@@ -183,7 +188,8 @@ do not fully cover.
 ---
 
 *Boundary notes.* Several observations remain only partially covered. Observation 7 (the arrow) is described by Rule 9's trajectory account but the persistence of motion after release is asserted, not explained. Observation 10 (heavenly circles) is similarly stipulated by Rule 11. Observation 11 (feather-down drifting) is handled qualitatively by Rules 4 and 5 but the rules give no way to predict *how far* a feather drifts in a given breeze. Observations 1 and 12, where weight and shape both vary, can be ranked only when one of the two is held fixed; the rules give no combined ordering. No rule provides absolute times, distances, or speeds — all predictions are comparative rankings.
-```
+
+---
 
 ## Judge verdicts
 

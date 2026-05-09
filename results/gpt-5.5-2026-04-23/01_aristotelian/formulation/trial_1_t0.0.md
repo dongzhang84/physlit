@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -123,7 +125,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 1. **Natural place and natural direction of travel**
 
    **Operational form:**
@@ -500,7 +505,8 @@ do not fully cover.
 **Boundary notes**
 
 The operational rules remain weakest for the arrow: they say the bow gives a temporary forward-going power that persists after release and then weakens, but they do not fully explain the manner of that persistence. Floating is also only partly operational: stone sinks and dry oak floats, but the rules do not provide a full general test for every material or shape in water. Feather-down and smoke are handled qualitatively, not with exact paths, because slight breezes and spreading are not measured by the observations. The heavenly rule gives daily circular motion but does not explain its cause or detailed differences among Sun, Moon, and stars.
-```
+
+---
 
 ## Judge verdicts
 

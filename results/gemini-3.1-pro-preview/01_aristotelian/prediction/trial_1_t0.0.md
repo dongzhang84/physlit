@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed and operationalized a set of rules describing a
 world whose physics may not match standard physics. Your operational
@@ -125,7 +127,10 @@ order given.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Based on the provided operational rules, here are the predictions for each scenario:
 
 1. **The solid iron ball strikes the ground first.**
@@ -142,7 +147,8 @@ The scenario describes an environment where "nothing remains inside." The operat
 
 5. **The arrow's forward motion is sustained by an imparted "onward property," and it eventually falls because this property inevitably depletes.**
 *Rule 3* dictates that a terrestrial object launched swiftly and horizontally into the air, free from the ground, gains a temporary "onward property." This property is proportional to the swiftness of the launch and is what sustains the horizontal path. The arrow falls because this onward property is explicitly not preserved; it continuously depletes over distance. As the property depletes, *Rule 3* states the path smoothly curves downward. Once the onward property is entirely exhausted, *Rule 1* takes over, and the arrow falls straight downward to the solid earth as dictated by its natural woody/earthy substance.
-```
+
+---
 
 ## Judge verdicts
 

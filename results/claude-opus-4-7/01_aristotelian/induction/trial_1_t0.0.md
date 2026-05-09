@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Proposed Rules of This World
 
 **1. Each thing has a natural place toward which it tends to travel when nothing holds it back.**
@@ -139,7 +144,8 @@ difficult.
 
 - **Observation 6** is the most awkward. Rule 1 says heavy things tend *downward*, not *backward*, yet the ox must pull *horizontally* harder when the wagon is heavier. I patched this with rule 9 (heavier press → road drains motion faster), but strictly the observations do not show that a heavier wagon on a perfectly smooth surface would be harder to pull — I am extrapolating.
 - **Observation 7** requires the idea of a "lingering push" that is not directly visible; it is inferred from the arrow's continued flight. Without it, rule 6 alone would predict the arrow drops the moment the string releases it. The two rules (6 and 7) sit together only because the cart's lingering push is drained quickly by the road while the arrow's is drained slowly by the air — a distinction the observations support but do not compel.
-```
+
+---
 
 ## Judge verdicts
 

@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -107,7 +109,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Operational Rules of This World
 
 **1. Each thing has a natural place.**
@@ -175,7 +180,8 @@ do not fully cover.
 ## Boundary notes
 
 The operational rules leave several observations only partly covered. **Observation 7 (the arrow's flight)** is described qualitatively by Rule 9 but the rule cannot predict how far a given arrow travels or how sharply it arcs; the contrast with the cart (Rule 7) is asserted rather than derived. **Observation 12 (feather-down pushed about by stirrings of air)** is consistent with Rule 4 but the sideways motion caused by air-stirrings is not itself predicted by any rule — we have no operational account of what air-stirrings do to bodies. **Observation 10 (heavens)** is handled by stipulation only; no prediction beyond "same circle, same day" follows from Rule 10. Finally, the rules give no operational account of mixed-kind bodies, of the moment of transition between media, or of how deep an intermediate body sits at a fluid boundary.
-```
+
+---
 
 ## Judge verdicts
 

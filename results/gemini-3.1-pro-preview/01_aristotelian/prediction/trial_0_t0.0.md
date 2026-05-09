@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed and operationalized a set of rules describing a
 world whose physics may not match standard physics. Your operational
@@ -128,7 +130,10 @@ order given.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Here are the predictions based strictly on the operationalized rules provided:
 
 **1.** The solid iron ball strikes the ground first.
@@ -147,7 +152,8 @@ Here are the predictions based strictly on the operationalized rules provided:
 
 **5.** The arrow is sustained by a temporary forward drive, and falls because this drive strictly diminishes to zero.
 * **Prediction & Rules:** According to **Rule 5 (Temporary Flight in Air)**, horizontal motion in a thin medium initiated by a swift snap imbues the arrow with a "temporary forward drive" ($D_{temp} > 0$). This drive is what allows the arrow to continue horizontally without an active pusher following the bowstring's release. The arrow eventually falls because **Rule 5** dictates that this temporary drive explicitly does *not* conserve itself; it strictly decreases over time or distance. Once the drive is entirely exhausted ($D_{temp} = 0$), the arrow's horizontal speed instantly drops to zero, at which point **Rule 1** dictates that the arrow must immediately resume its natural movement: a strictly straight vertical path downward to the ground.
-```
+
+---
 
 ## Judge verdicts
 

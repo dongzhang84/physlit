@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Here is a self-consistent set of rules to explain the observations, relying only on the provided phenomena and ordinary descriptive language:
 
 **The Rules:**
@@ -123,7 +128,8 @@ There is a significant tension between **Observation 2** (the cart coming to res
 
 **What makes it difficult:**
 Rule 4 establishes that horizontal movement requires a continuous physical pusher and stops when the pusher is removed. However, the arrow in Observation 7 travels a great distance horizontally through still air *without* any continuous physical pusher. To account for both, the rules must introduce a "temporary forward drive" for the arrow (Rule 5). The tension lies in why an object sliding or rolling along the earth strictly requires constant physical contact to keep moving, while an object launched into the air does not. The rules successfully describe *what* happens in both cases, but they struggle to neatly unify *why* the need for a continuous pusher vanishes just because the object was launched into the air.
-```
+
+---
 
 ## Judge verdicts
 

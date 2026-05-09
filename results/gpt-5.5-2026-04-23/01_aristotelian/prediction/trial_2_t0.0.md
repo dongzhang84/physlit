@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed and operationalized a set of rules describing a
 world whose physics may not match standard physics. Your operational
@@ -478,7 +480,10 @@ order given.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 1. **Iron ball and hollow wooden ball dropped from a tower**
 
    **Prediction:**
@@ -567,7 +572,8 @@ order given.
 
    **Scope note:**
    The rules answer “what sustains it” only by saying: **the temporary forward flight given by the bow**. They do not identify a further mechanism after the string is no longer touching the arrow.
-```
+
+---
 
 ## Judge verdicts
 

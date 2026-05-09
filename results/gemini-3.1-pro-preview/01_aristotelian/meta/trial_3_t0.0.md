@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -131,7 +133,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Based on a critical review of the three prior stages, here are the answers to your questions:
 
 **Q1. Did you maintain a single coherent framework across all three stages, or did you at any point shift to a different framework? If you shifted, identify the moment and the reason.**
@@ -165,7 +170,8 @@ Nothing in the Stage 2 operational rules provides a mechanism for forced motion 
 **Minor.**
 
 I successfully suppressed standard physics for almost all of the test: I correctly refused to apply inertia to the cart on ice (Scenario 2), I refused to calculate falling physics in a vacuum (Scenario 4), and I concluded the heavier iron ball falls faster than wood (Scenario 1). However, standard physics exerted a *minor* influence in my handling of the arrow (Scenario 5), where I unconsciously relied on a modern sense of decoupled vector motion (horizontal motion wearing off and allowing vertical gravity to take over) to resolve a situation my Stage 2 rules explicitly could not handle. Furthermore, in Scenario 3, my strict refusal to calculate a ratio of speeds for a stone twice as heavy as another was likely influenced by my modern knowledge that speed is *not* directly proportional to weight, whereas pure adherence to the unfamiliar framework might have naturally yielded a $v \propto W$ calculation.
-```
+
+---
 
 ## Judge verdicts
 

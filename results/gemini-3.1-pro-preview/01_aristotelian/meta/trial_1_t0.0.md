@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -149,7 +151,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Based on a review of the three stages, here are the answers to your questions:
 
 **Q1. Coherence Across All Three Stages**
@@ -185,7 +190,8 @@ My Stage 3 predictions actively and consistently contradicted standard physics i
 *   In Scenario 1 (iron vs. wood) and Scenario 3 (large stone vs. small stone), standard physics would predict the objects hit the ground/bottom simultaneously. I explicitly predicted the heavier ones would strike first.
 *   In Scenario 2 (cart on smooth ice), standard physics would predict the cart glides a great distance due to near-zero friction. I predicted it would stop in a *"very short distance"* because Rule 2 strictly tied horizontal travel to continuous pushing, ignoring the ice's smoothness entirely.
 *   In Scenario 4 (vacuum), standard physics has no problem predicting the feather will drop identically to a hammer. I ruled that the entire scenario was mechanically impossible to predict under this framework.
-```
+
+---
 
 ## Judge verdicts
 

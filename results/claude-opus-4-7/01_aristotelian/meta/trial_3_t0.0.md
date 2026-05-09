@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -189,7 +191,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Reflections
 
 **Q1. Coherence across stages.**
@@ -223,7 +228,8 @@ The most significant gap is Scenario 1's implicit appeal to magnitude.
 **Q5. Influence of standard physics on Stage 3: minor.**
 
 I largely held the line. I refused to predict in Scenarios 2 and 4 precisely because my rules ran out, rather than substituting a default answer (the ice-cart and empty-chamber cases are exactly where standard physics would give crisp answers, and I declined). In Scenario 5 I explicitly flagged the unreconciled stipulation about air rather than smoothing it into a momentum story. The main leakage is in Scenario 1, where "the gap should be substantial because the weight difference is large" hints at a proportional intuition my rules don't supply — that's a minor influence, not moderate, because I caught and qualified it ("I cannot say 'roughly by how much'").
-```
+
+---
 
 ## Judge verdicts
 

@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -221,7 +223,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Reflections
 
 **Q1. Coherence across stages.**
@@ -253,7 +258,8 @@ A few concepts crept in that were not strictly licensed by the original observat
 **Q5. Influence of standard physics on Stage 3: minor.**
 
 I'd say **minor**. The predictions mostly track the Stage 2 rules: I committed to heavier-falls-faster in Scenario 1, declined to predict in Scenario 4 rather than smuggling in vacuum-fall behavior, and kept the lingering-push account for the arrow in Scenario 5. The leakage shows up at the edges — the "perfectly smooth idealization" framing in Scenario 2 has a faintly Galilean flavor, and my repeated insistence that "the rules give only a ranking, not a ratio" is itself a habit of mind from a more quantitative tradition. But I did not predict, e.g., that the iron and wooden balls would land together, which is what default physics would have pushed me toward.
-```
+
+---
 
 ## Judge verdicts
 

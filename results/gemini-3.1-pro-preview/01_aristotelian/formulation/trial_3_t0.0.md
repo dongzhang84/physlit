@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -77,7 +79,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Here are the rules translated into an operational form, allowing a third party to predict outcomes using only the quantities and concepts established in the observations.
 
 **1. Natural Tendencies of Substances**
@@ -108,7 +113,8 @@ Here are the rules translated into an operational form, allowing a third party t
 
 **Boundary notes**
 Beyond the specific boundary cases noted under each rule, these operational rules completely fail to cover horizontal "forced" motions (like pushing a cart) or what dictates the speed of carts rolling on earth, as the rules only govern vertical natural motion and celestial circles. They also do not address what happens to fiery/smoky substances when they encounter solid resistance (such as smoke trapped beneath a ceiling), nor do they quantify "heaviness" or "thickness" on a numerical scale, meaning predictions can only be made as relative rankings (A is faster than B) rather than precise measurements.
-```
+
+---
 
 ## Judge verdicts
 

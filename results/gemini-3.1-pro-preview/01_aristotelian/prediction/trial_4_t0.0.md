@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed and operationalized a set of rules describing a
 world whose physics may not match standard physics. Your operational
@@ -128,7 +130,10 @@ order given.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Based on the operationalized rules provided, here are the predictions for each scenario:
 
 **1. Prediction: The solid iron ball strikes the ground first, by a visibly substantial margin.**
@@ -150,7 +155,8 @@ Based on the operationalized rules provided, here are the predictions for each s
 **5. Prediction: The arrow's forward motion is sustained by a temporary drive imparted by the swift release of the bowstring. It falls to the ground because this temporary forward drive continuously decays while its inherent downward speed remains constant.**
 *   **Derivation:** According to **Rule 5 (Persistence of Sideways Motion)**, once the bowstring (the pusher) breaks contact, the arrow retains a "temporary drive" proportional to the swiftness of the string's release. Because it is in the air, its persistence is high (many paces). However, as it travels, this horizontal drive continuously decays. Simultaneously, according to **Rule 1** and **Rule 2**, the arrow's earthly material dictates it must possess a constant, inherent downward quickness ($v_{down}$). Because the sideways drive continuously decreases to zero while the inherent downward motion remains constant and preserved, the downward tendency permanently overtakes the forward motion, resulting in a curved downward path to the ground.
 *   **Rules cited:** Rule 1, Rule 2, Rule 5.
-```
+
+---
 
 ## Judge verdicts
 

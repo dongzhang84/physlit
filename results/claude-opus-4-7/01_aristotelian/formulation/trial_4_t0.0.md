@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -109,7 +111,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Operational Rules
 
 **1. Natural place and natural motion.**
@@ -177,7 +182,8 @@ do not fully cover.
 ## Boundary notes
 
 The operational rules leave several observations imperfectly covered. **Observation 7 (the arrow)** is described by rule 9 only qualitatively: the rules give no rate of fading and do not resolve the tension between the medium resisting passage (rule 4) and the medium failing to stop the arrow at once. **Observation 2 (the cart)** is similarly under-specified: rule 7 asserts that motion is consumed but assigns no measure to it and does not predict the stopping distance. **Observation 10 (heavenly bodies)** is acknowledged by exemption rather than derivation; rule 10 does not predict any new celestial situation, only catalogues the daily return. Finally, the symmetric case of light bodies — whether smoke rises faster than flame, or whether shape affects ascent the way it affects descent — is not addressed by any observation, and our rules 5 and 6 are stated only for downward natural motion.
-```
+
+---
 
 ## Judge verdicts
 

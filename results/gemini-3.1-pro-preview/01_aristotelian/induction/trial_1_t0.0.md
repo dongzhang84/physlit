@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Here is a self-consistent set of rules derived strictly from the observations provided:
 
 1. **Natural Directions:** Every substance possesses a natural direction of travel. Earthy objects (iron, stone, wood, peas, pebbles) and water naturally move downward toward the solid earth. Fiery entities (candle flames) and smoke naturally move upward toward the open sky. Celestial bodies (the Sun, Moon, and stars) naturally travel in endless circular paths across the sky.
@@ -117,7 +122,8 @@ Observation 2 (the cart stopping in a short distance on the dirt road) remains i
 
 **What makes it difficult:**
 Both observations involve an object traveling horizontally after its pusher (the hands or the bowstring) has let go. Under Rule 3, the arrow is carried forward by an "imparted temporary onward property." The cart also continues to roll when the hands let go, but only for a very "short distance." The rules struggle to elegantly unify these two outcomes without inventing outside concepts. Because we cannot invoke an unseen interaction (like "friction") to explain why the dirt road strips the motion away so much faster than the air does, we are left simply observing that imparted horizontal motion sustains itself very well in the air but almost not at all along the ground, making them feel mechanically disjointed.
-```
+
+---
 
 ## Judge verdicts
 

@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed and operationalized a set of rules describing a
 world whose physics may not match standard physics. Your operational
@@ -138,7 +140,10 @@ order given.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Predictions
 
 **Scenario 1. Iron ball vs. hollow wooden ball, same outer dimensions, dropped from 30 m.**
@@ -192,7 +197,8 @@ The arrow is also of earthy kind and has a downward tendency toward its natural 
 So: the lingering push sustains the forward motion; the arrow falls because the lingering push fades while the downward tendency, which is preserved (Rule 1), does not.
 
 *Rules used: 1, 4, 7.*
-```
+
+---
 
 ## Judge verdicts
 

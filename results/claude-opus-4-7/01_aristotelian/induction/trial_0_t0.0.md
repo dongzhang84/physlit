@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Proposed Rules of This World
 
 **1. Every body has a natural place toward which it tends to move when nothing holds it back.**
@@ -141,7 +146,8 @@ They neither fall nor rise to rest; they simply continue their daily round. (Obs
 
 - **Observation 7 (the arrow) vs. Rule 7 (the cart).** Rule 7 says a pushed body stops shortly after the push ends, but the arrow keeps flying for many paces. I have patched this with Rule 9 (air wears motion away gradually, ground wears it away quickly), but I have not *explained* why the air-borne body retains its motion at all once the bowstring is gone. Some additional principle — perhaps that the parted air closes in behind and continues to drive the arrow — would be needed to make this fully coherent.
 - **Observation 10 (heavenly circular motion).** Rule 11 simply asserts that heavenly bodies behave differently from earthly ones. The observations give no way to derive *why* their natural motion is circular and unceasing while earthly natural motion is straight and terminates; this split is stipulated rather than explained.
-```
+
+---
 
 ## Judge verdicts
 

@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -89,7 +91,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Here is the operationalized set of rules, translated into precise conditionals, rankings, and proportionalities based strictly on the provided observations.
 
 **1. Inherent Vertical Destinations**
@@ -141,7 +146,8 @@ Here is the operationalized set of rules, translated into precise conditionals, 
 
 ### Boundary notes
 The most significant boundary case the operational rules fail to fully cover is the stark contradiction between the halting cart and the flying arrow (the tension between Rules 4 and 5). Because the forbidden-concept list prevents importing a concept that robs motion from the cart, Rule 5 is forced to treat the dirt road and the air as entirely distinct, non-continuous regimes of "persistence." Furthermore, Rule 2 struggles to operationally separate weight from material: because the observations compare an iron ball to a pea, the rules cannot definitively predict the downward speed of a large wooden log compared to a small iron pebble, as both weight and material differ simultaneously. Finally, Rule 3 leaves an unresolved tension regarding wood: wood is defined in Rule 1 as an "earthly" downward-seeking material, yet in Rule 3 it is perfectly content to rest permanently atop water rather than fulfilling its inherent earthward destination.
-```
+
+---
 
 ## Judge verdicts
 

@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 1. **Bodies have natural regions toward which they tend.**
    Earthy and watery things tend downward toward the earth. Fiery and smoky things tend upward toward the sky. This accounts for falling rain, dropped stones and iron, sinking stones in ponds, and the upward rising of smoke and flame.
 
@@ -147,7 +152,8 @@ difficult.
 
 **Remaining tension:**
 The main difficulty is the arrow. The rules say the bow gives it a temporary forward drive that slowly weakens, while its downward tendency continues. This explains the observed curved path, but the observations do not show exactly how the arrow keeps that forward drive after leaving the bowstring, nor how quickly it weakens. The rule is therefore plausible within the observations, but less directly visible than the rules for falling, floating, rising smoke, or the daily circular paths of the heavenly bodies.
-```
+
+---
 
 ## Judge verdicts
 

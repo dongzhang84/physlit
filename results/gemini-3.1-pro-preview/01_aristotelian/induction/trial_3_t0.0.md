@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Based on the provided observations, here is a self-consistent set of rules derived without modern physics concepts.
 
 **Proposed Rules:**
@@ -107,7 +112,8 @@ Based on the provided observations, here is a self-consistent set of rules deriv
 1. **Natural Tendencies of Substances:** Every material possesses an inherent preferred direction of travel based on its nature. Earthy and watery substances (such as iron, pebbles, stone, wood, water, carts, and dried peas) naturally seek to move straight downward to settle upon the earth. Fiery and smoky substances (such as candle flames and wood smoke) naturally seek to move straight upward toward the open sky, independent of the orientation of their source. Meanwhile, the heavenly bodies (Sun, Moon, stars) inherently trace continuous returning circles across the sky.
 2. **Resistance of the Surroundings:** An object traveling downward must pass through its surroundings (such as air, water, or honey), which act to slow the object's passage. Thicker or more substantial surroundings slow an object down much more than thinner ones (honey slows a dropping pebble more than air does). If an object is not heavy enough to overcome this resistance, it cannot pass through the surroundings at all and remains at the surface (dry oak rests on water, whereas a heavy stone sinks).
 3. **The Role of Heaviness and Shape in Falling:** Because a falling object must push through its surroundings, its downward speed is determined by its heaviness and its physical shape. A heavier object is better equipped to overcome the surroundings' resistance and therefore reaches the ground faster than a lighter, similar object (a solid iron ball falls faster than a dried pea). Additionally, a wide, flat, or wispy
-```
+
+---
 
 ## Judge verdicts
 

@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -117,7 +119,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 1. **Kinds of bodies have natural places.**
    **Operational form:**
    Assign each observed body-kind to a natural direction:
@@ -414,7 +419,8 @@ do not fully cover.
 
 **Boundary notes**
 The operational rules still do not fully explain the arrow’s continued forward flight: they allow a temporary carried-over forward tendency, but do not say exactly how it is acquired, stored, measured, or exhausted. They also classify dry oak as surface-supported in water without giving a deeper operational test for other woods or mixed bodies. Feather-down and smoke are handled qualitatively, but their exact drifting or spreading paths depend on air movement, which the observations do not measure. The heavenly lights are assigned circular motion as a separate order, but the rules do not explain detailed differences among Sun, Moon, and fixed stars.
-```
+
+---
 
 ## Judge verdicts
 

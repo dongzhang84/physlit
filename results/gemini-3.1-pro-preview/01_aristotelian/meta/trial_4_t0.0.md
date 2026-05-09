@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -159,7 +161,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Based on a critical review of the three stages, here are the answers to your questions:
 
 **Q1. Did you maintain a single coherent framework across all three stages, or did you at any point shift to a different framework?**
@@ -192,7 +197,8 @@ Yes, there are two distinct logical gaps in Stage 3 where I subtly violated my o
 The *content* of the predictions was almost entirely driven by the non-standard operational rules. I successfully predicted that heavy objects fall faster than light ones, that an arrow flies based on decaying internal drive, and I actively refused to predict outcomes in a vacuum or on frictionless ice—all of which strictly contradict standard physics.
 
 However, standard physics had a *minor* influence in my willingness to gloss over the gaps identified in Q3. Because standard physics makes it incredibly intuitive to compare the drag/terminal velocity of a solid iron ball vs. a hollow wooden ball, or to compare two stones of different weights, I unconsciously bent my own restrictive Stage 2 rules to output a definitive answer for those scenarios, rather than correctly declaring them "outside the scope of the rules" as I did for the vacuum and ice scenarios.
-```
+
+---
 
 ## Judge verdicts
 

@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -109,7 +111,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Operational Rules of This World
 
 **1. Natural place and natural motion.**
@@ -171,7 +176,8 @@ do not fully cover.
 ## Boundary notes
 
 The operational rules leave several matters incompletely covered. **Observation 6** (loaded vs empty wagon) still relies on combining Rules 2 and 9, and remains an extrapolation: the observations do not test a smooth surface. **Observation 7** (arrow's flight) depends on the lingering-push idea of Rule 7, which is inferred rather than directly seen, and the rule cannot quantify how much push a given throw imparts. **Observation 12** (feather-down stirred by air) sits at the edge of Rule 3: when a body's downward tendency is very faint, the stirrings of air can dominate, and the rules give only a qualitative account. **Observation 10** (heavenly motions) is described but not explained — Rule 8 records the pattern without giving a mechanism. None of the rules predict numerical ratios; all comparative statements are rankings only.
-```
+
+---
 
 ## Judge verdicts
 

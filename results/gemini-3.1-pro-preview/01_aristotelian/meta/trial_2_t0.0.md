@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -159,7 +161,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 **Q1. Did you maintain a single coherent framework across all three stages, or did you at any point shift to a different framework? If you shifted, identify the moment and the reason.**
 
 I maintained a single, highly coherent framework across all three stages without shifting. The framework consistently relies on the non-Newtonian ideas that objects have innate absolute directions, that weight dictates speed, that continuous horizontal motion requires continuous effort, and that projectiles fly via an internal, depleting charge.
@@ -202,7 +207,8 @@ My Stage 3 predictions actively rejected standard physics at every opportunity t
 *   In Scenario 1, standard physics dictates the iron and wood balls would hit the ground at roughly the same time; I confidently predicted the iron ball would win.
 *   In Scenario 2, standard physics dictates a cart on perfectly smooth ice would slide indefinitely (inertia); I predicted it would permanently stop "after a very short rolling distance."
 *   In Scenario 4, standard physics dictates a feather in a vacuum falls quickly at standard gravitational acceleration; I predicted the scenario was "genuinely outside the scope" because the framework cannot process an absence of a physical medium.
-```
+
+---
 
 ## Judge verdicts
 

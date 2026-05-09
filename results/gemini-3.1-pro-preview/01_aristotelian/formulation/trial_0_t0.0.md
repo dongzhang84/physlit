@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -93,7 +95,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Here are the operationalized rules, translating the descriptive physics into a precise, predictive format without importing standard modern physics concepts.
 
 **1. Natural Directions**
@@ -145,7 +150,8 @@ Here are the operationalized rules, translating the descriptive physics into a p
 
 **Boundary notes**
 The most significant boundary cases these rules struggle to cleanly cover involve the transitions and thresholds between the distinct types of movement. The operational rules mandate that an object pushed on the ground stops instantly when released (Rule 4), yet an object shot into the air carries a depleting temporary drive (Rule 5); the observations provide no mechanism to explain why contact with the ground negates this temporary drive. Furthermore, the rules fail to smoothly link downward speed and horizontal deflection: Rule 6 treats sideways drift from wind as something that only applies to "very light" objects like feathers, leaving the precise behavior of moderately heavy objects in strong crosswinds entirely unhandled. Finally, the rules dictate strict, independent right-angle behaviors (horizontal flight until drive expires, followed by vertical drop), which awkwardly models the likely curved reality of an arrow's actual trajectory.
-```
+
+---
 
 ## Judge verdicts
 

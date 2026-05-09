@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed and operationalized a set of rules describing a
 world whose physics may not match standard physics. Your operational
@@ -125,7 +127,10 @@ order given.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Based on the operationalized rules provided, here are the predictions for each scenario:
 
 **1. Scenario 1 (Iron ball vs. wooden ball from a tower)**
@@ -152,7 +157,8 @@ Based on the operationalized rules provided, here are the predictions for each s
 *   **Prediction:** Forward motion is sustained initially because the arrow possesses a "carried push" from the bowstring. It eventually falls to the ground because this carried push diminishes over distance, eventually allowing its solid nature to restore its downward speed.
 *   **Rules Cited:** Rule 7 (Carried Motion in the Air) and Rule 1 (Natural Directions).
 *   **Reasoning:** Under Rule 7, the swift initial horizontal push of the bowstring imparts a "carried push" to the arrow. While this carried push is high, Horizontal Speed is > 0 and Downward Speed is temporarily forced to 0. However, the carried push strictly decreases over distance. Once the carried push drops below a critical threshold, Downward Speed becomes > 0. This restores Rule 1, which dictates that an object of solid composition (the arrow) must pursue a downward path toward the earth, causing the arrow's trajectory to curve downward into the ground.
-```
+
+---
 
 ## Judge verdicts
 

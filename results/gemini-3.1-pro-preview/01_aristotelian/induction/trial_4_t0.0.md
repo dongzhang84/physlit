@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Here is a self-consistent set of rules derived strictly from the given observations:
 
 1. **Inherent Vertical Destinations:** Materials possess an inherent tendency to seek specific vertical locations. Earthly and watery materials (iron, wood, stone, water, peas, pebbles) naturally seek downward toward the earth. Fiery and airy materials (smoke, candle flame) naturally seek upward toward the open sky, actively pointing or traveling upward regardless of the orientation of their source body.
@@ -119,7 +124,8 @@ Here is a self-consistent set of rules derived strictly from the given observati
 Observation 7 (the arrow) remains in tension with Observation 2 (the cart). Observation 2 heavily implies that horizontal motion is strictly dependent on continuous contact with a pusher; the cart slows and comes to rest almost immediately once the hands let go. Observation 7 directly contradicts this need for continuous contact, showing an unpushed arrow traveling many paces.
 
 While Rule 5 attempts to bridge this contradiction by proposing a "temporary forward drive" that fades at different rates, it struggles to explain the vast, qualitative difference between the two events. Because the rules forbid importing external explanations (like the dirt road actively robbing the cart of its motion), it is difficult to cleanly reconcile why horizontal motion demands a continuous pusher in one observation, yet easily persists without one in the other.
-```
+
+---
 
 ## Judge verdicts
 

@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed and operationalized a set of rules describing a
 world whose physics may not match standard physics. Your operational
@@ -107,7 +109,10 @@ order given.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Based on the operational rules provided, here are the predictions for the scenarios:
 
 **1. Scenario 1: Solid iron ball vs. hollow wooden ball in air.**
@@ -134,7 +139,8 @@ Based on the operational rules provided, here are the predictions for the scenar
 *   **Prediction:** The sustenance of the arrow's forward horizontal motion cannot be explained or predicted, but it eventually falls because it is made of earthy material.
 *   **Citations:** Rule 1 (Conditional 1), Rule 1 (Boundary cases), and Boundary notes.
 *   **Explanation:** What sustains the arrow's forward horizontal travel is genuinely outside the scope of the rules. As stated in the Boundary notes, the rules "completely fail to cover horizontal 'forced' motions." However, the reason it eventually falls to the ground is fully explained by Rule 1 (Conditional 1). An arrow is constructed of earthy/watery materials (like wood and metal). Therefore, its unalterable natural tendency is to travel in a straight downward line toward the earth. Once the horizontal non-natural motion fails to keep it aloft, its inherent composition dictates that it must travel downward.
-```
+
+---
 
 ## Judge verdicts
 

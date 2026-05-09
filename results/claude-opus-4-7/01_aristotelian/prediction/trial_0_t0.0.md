@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed and operationalized a set of rules describing a
 world whose physics may not match standard physics. Your operational
@@ -148,7 +150,10 @@ order given.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Predictions
 
 **Scenario 1. Iron ball vs. hollow wooden ball, same outer dimensions, dropped from 30 m.**
@@ -170,7 +175,8 @@ This scenario is outside the scope of my rules. Rules 3 and 4, which govern desc
 **Scenario 5. What sustains the arrow's forward motion, and why does it fall?**
 
 By Rule 9, a body launched into the air continues forward after release; the air gradually wears the forward motion away, while the downward tendency (Rule 1) acts at every moment. The path is nearly straight at first, then curves downward more strongly as the forward motion fades, ending at the ground. *Why* the forward motion persists at all after the bowstring is gone is not explained by my rules — Rule 9's boundary cases explicitly acknowledge this as an open tension: the rule describes the trajectory but not its cause. The arrow falls because (a) the air progressively reduces its forward motion, and (b) the downward tendency of heavy stuffs toward their natural place (Rule 1) is present throughout the flight. (Rules 1, 9; persistence-of-motion acknowledged as unexplained.)
-```
+
+---
 
 ## Judge verdicts
 

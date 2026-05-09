@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 1. **Each kind of body has a natural place and a natural direction of travel when unheld.**
    Earthy and stony things, iron, water, peas, and similar dense bodies tend downward toward the ground. Fiery and smoky things tend upward toward the open sky. The heavenly lights belong to a different region and move around the sky in daily circles.
 
@@ -153,7 +158,8 @@ difficult.
 
 **Remaining tension:**
 The most difficult case is the arrow. The rules say the bow gives it a temporary forward-going power that gradually weakens, while the arrow’s downward tendency remains. This accounts for its forward flight and later downward curving path, but the exact manner by which the received forward-going power is preserved for many paces after the bowstring no longer touches it is less directly supported than the rules for falling, sinking, floating, rising smoke, and rolling carts.
-```
+
+---
 
 ## Judge verdicts
 

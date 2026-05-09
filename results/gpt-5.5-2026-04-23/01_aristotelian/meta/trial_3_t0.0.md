@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You were earlier asked to reason inside an unfamiliar framework, given
 only a list of plain-language observations. Below are your three
@@ -496,7 +498,10 @@ physics rather than by your Stage 2 operational rules.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 **Q1. Did I maintain a single coherent framework, or did I shift?**
 
 Mostly, I maintained a single coherent framework: the framework of **natural places**, **natural motions**, **medium hindrance**, **mover-dependent forced motion**, and **temporary carried-over motion** for projectiles.
@@ -861,7 +866,8 @@ Case by case:
    The explanation stayed close to the Stage 2 rule: “carried-over forward tendency” fades; downward seeking eventually dominates. This differs substantially from standard physics, so standard influence was limited.
 
 Overall, the Stage 3 answers were **not majorly governed by standard physics**, because I repeatedly avoided modern predictions in the smooth-ice and vacuum cases. But the treatment of edge cases and some extrapolations, especially stones in water and vacuum, show **moderate residual influence** from standard physics.
-```
+
+---
 
 ## Judge verdicts
 

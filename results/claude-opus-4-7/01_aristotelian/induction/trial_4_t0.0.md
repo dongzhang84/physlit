@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Proposed Rules of This World
 
 **1. Every body has a natural place toward which it tends to move when nothing holds it back.**
@@ -139,7 +144,8 @@ They follow their own circular daily courses through the heavens and return to t
 - **Observation 7 (the arrow)** is the most strained. Rule 9 asserts that imparted motion "fades," but the rules do not explain *why* motion through still air should fade when the air is also what (per rule 4) the arrow is parting. One might expect the parted air to keep pushing the arrow along, or alternatively to stop it almost at once; the gradual curving descent sits awkwardly between these.
 - **Observation 2 (the cart)** has a related difficulty: the cart stops "within a short distance," but rule 7 does not specify what consumes the motion (the road, the air, or the cart itself), only that it is consumed. The arrow and the cart may need a more unified account of why imparted motion lasts longer in some cases than others.
 - **Observation 10 (heavenly bodies)** is handled by exempting the heavens from the earthly rules rather than by deriving their behavior — a real gap, not a contradiction.
-```
+
+---
 
 ## Judge verdicts
 

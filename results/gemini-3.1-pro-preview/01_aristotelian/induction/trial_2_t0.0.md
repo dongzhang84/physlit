@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You are presented with a list of observed phenomena from a world whose
 physics may not match the physics you know.
@@ -99,7 +101,10 @@ difficult.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Here is a proposed set of rules to explain the observations, built entirely from the phenomena described:
 
 1. **Natural Directions:** Every kind of thing possesses a natural direction of travel. Solid and liquid things (like iron, stone, earth, water, wood, and peas) naturally travel downward to collect on or strike the earth. Fiery and smoky things (smoke, candle flames) naturally travel upward toward the open sky, regardless of the orientation of their source. Celestial bodies (the Sun, the Moon, the stars) naturally travel in endless circles above the earth.
@@ -117,7 +122,8 @@ Here is a proposed set of rules to explain the observations, built entirely from
 **Observation 7 (the arrow's flight)** remains in tension with the established rules, specifically the rule that earthly things have a natural tendency to move downward.
 
 The observation notes that the arrow "continues flying forward... for many paces... *before* its path curves downward." If an earthly object constantly seeks the ground, it is difficult to explain why a horizontal push from a bowstring completely suspends the object's downward nature for many paces. Even if a horizontal push is "carried" by the arrow, one would expect the persistent downward tendency to act on the arrow instantly, causing its path to curve immediately upon leaving the string rather than flying straight horizontally first.
-```
+
+---
 
 ## Judge verdicts
 

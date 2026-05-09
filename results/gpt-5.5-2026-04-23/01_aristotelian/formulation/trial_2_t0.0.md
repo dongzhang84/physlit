@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -123,7 +125,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 1. **Customary-place rule**
 
    **Operational form:**
@@ -525,7 +530,8 @@ do not fully cover.
 
 *Boundary notes*
 The operational rules still do not fully cover the arrow, because they say that the bow gives temporary forward flight but do not directly show what maintains that flight after the string no longer touches the arrow. The rules also lack sharp tests for borderline cases: when a body counts as “light and delicate,” how to compare a heavier broad body with a lighter compact body, whether an unfamiliar solid will sink or float in water, and how strong wind, enclosed spaces, wet wood, mist, clouds, downhill carts, or very smooth roads should be treated. Heavenly motion is also only described as circular and daily; more detailed celestial irregularities are not covered.
-```
+
+---
 
 ## Judge verdicts
 

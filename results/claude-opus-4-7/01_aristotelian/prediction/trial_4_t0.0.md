@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed and operationalized a set of rules describing a
 world whose physics may not match standard physics. Your operational
@@ -144,7 +146,10 @@ order given.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Predictions
 
 **Scenario 1. Iron ball vs. hollow wooden ball, dropped from a 30-m tower.**
@@ -176,7 +181,8 @@ Rule 1 does say a heavy body, unsupported, travels toward its natural place — 
 By rule 9, the arrow was given an imparted motion in a direction other than its natural (downward) one. That imparted motion persists for some span and then fades; my rules do not say *what* sustains it, and they explicitly note (boundary case of rule 9) that they do not resolve whether the medium sustains it, resists it, or merely accompanies its fading. So I cannot answer "what sustains it" — I can only say that imparted motion, once given, lasts for a finite span without needing a continuing push, and then diminishes.
 
 Why it eventually falls: by rule 9, the natural downward tendency of a heavy body (the arrow, by rule 2, is heavy relative to air) is preserved throughout the flight and acts concurrently with the imparted horizontal motion (rule 1 also notes this concurrence). The horizontal component shrinks while the downward component does not, so the path bends increasingly downward until only the natural downward motion remains, and the arrow meets the earth. Rule 4 (thickness of air) and rule 8 (heaviness consumes motion) are also in play, but the rules give no rate.
-```
+
+---
 
 ## Judge verdicts
 

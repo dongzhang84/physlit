@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -87,7 +89,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 Here are the rules translated into an operational form, explicitly detailing their scope, what is preserved, and their boundary cases without relying on outside concepts.
 
 ### 1. Natural Directions
@@ -136,7 +141,8 @@ Here are the rules translated into an operational form, explicitly detailing the
 
 ### Boundary notes
 The most glaring limitation of these operational rules is their inability to elegantly reconcile horizontal motion in the air versus on the ground. Because Rule 3 dictates that horizontal launches impart an "onward property" that carries an object forward, but Rule 2 dictates that horizontal movement on the ground requires continuous physical strain and ceases "shortly" without it, the rules struggle to explain a rolling cart. The cart experiences a swift push, yet its onward property depletes in a fraction of the distance an arrow's does. Without importing forbidden concepts like friction or inertia, the rules merely observe this disjointed reality without mathematically unifying it. Furthermore, the binary sorting threshold in Rule 7 provides no operational mechanism to handle mixed-material objects (like an iron-tipped wooden arrow landing in a lake), and Rule 4 offers no independent metric for a medium's "thickness" other than the circular observation that it slows things down.
-```
+
+---
 
 ## Judge verdicts
 

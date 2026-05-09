@@ -23,6 +23,8 @@ _re-run the script to regenerate. The JSON file is the source of truth._
 
 ## Prompt
 
+_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._
+
 ```
 You previously proposed rules to explain a set of observations from a
 world whose physics may not match standard physics. Your rules were:
@@ -99,7 +101,10 @@ do not fully cover.
 
 ## Response
 
-```
+_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._
+
+---
+
 # Operational Rules
 
 **1. Natural place and spontaneous motion.**
@@ -149,7 +154,8 @@ do not fully cover.
 ## Boundary notes
 
 Several observations remain awkward under these operational rules. **Obs. 7 (the arrow)** still requires the unexplained stipulation that air carries violently launched bodies but resists falling ones — Rules 3 and 6 assign opposite roles to air without reconciling them. **Obs. 10 (heavenly bodies)** is handled only by exemption: Rule 7 records the circular return as a brute fact rather than deriving it. **Obs. 12 (the feather)** is partially handled by Rule 3 (high resistance against a wide light shape) but the rules give no way to predict the feather's drifting path, only that it falls slowly. **Obs. 5 (oak floating)** is handled qualitatively by Rule 4 but the rules give no way to predict, before the test, which woods will float and which will sink. None of the rules supplies numerical proportionalities; all comparisons are ordinal.
-```
+
+---
 
 ## Judge verdicts
 

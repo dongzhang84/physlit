@@ -178,6 +178,7 @@ def render_one(
 
     title = f"# `{model}` — Trial {trial_index} — {stage_title}"
 
+    response_text = str(trial.get("response_text", "")).rstrip()
     parts: list[str] = [
         title,
         "",
@@ -191,11 +192,19 @@ def render_one(
         "",
         "## Prompt",
         "",
+        "_Verbatim, in a code block (the prompt was sent to the API exactly as-is)._",
+        "",
         _code_block(str(trial.get("prompt_text", ""))),
         "",
         "## Response",
         "",
-        _code_block(str(trial.get("response_text", ""))),
+        "_Rendered as markdown for readability — model output is already markdown-formatted, so headings, bullets, and code blocks below are how the model meant them to appear. The byte-exact text is in the JSON._",
+        "",
+        "---",
+        "",
+        response_text,
+        "",
+        "---",
         "",
     ]
 
