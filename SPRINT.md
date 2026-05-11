@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-11 09:15 UTC  
+**Generated:** 2026-05-11 16:21 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 4 |
+| Total commits | 5 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **4** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **5** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 11**
 
+- `2de1c80` docs: add v0.1 full report (analysis/v0_1_report.md) — _dongzhang84_ `2026-05-11 09:21`
 - `91432a1` findings: trim cost figures and script filenames from pipeline diagram — _dongzhang84_ `2026-05-11 02:14`
 - `a725619` findings: add mermaid pipeline diagram — _dongzhang84_ `2026-05-11 02:12`
 - `bc3b990` audit: apply 22 human verdicts; P1 CONFIRMED, P3 CONFIRMED — _dongzhang84_ `2026-05-11 01:49`
