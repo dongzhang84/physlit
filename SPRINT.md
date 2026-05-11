@@ -1,21 +1,35 @@
 # Sprint Report
 
-**Generated:** 2026-05-09 20:08 UTC  
-**Showing:** last 1 week(s) of 1 total  
+**Generated:** 2026-05-11 06:23 UTC  
+**Showing:** last 2 week(s) of 2 total  
 
 ---
 
-## Week 1 _(current)_ · 2026-05-04 to 2026-05-10
+## Week 2 _(current)_ · 2026-05-11 to 2026-05-17
+
+| Stat | Value |
+|------|-------|
+| Status | ❌ Stalled |
+| Active days | 0 / 7 |
+| Total commits | 0 |
+
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|
+| ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+
+---
+
+## Week 1 · 2026-05-04 to 2026-05-10
 
 | Stat | Value |
 |------|-------|
 | Status | ✅ Good |
-| Active days | 6 / 7 |
-| Total commits | 24 |
+| Active days | 7 / 7 |
+| Total commits | 25 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | **3** | **1** | **1** | **5** | **11** | ⚪ |
+| **3** | **3** | **1** | **1** | **5** | **11** | **1** |
 
 **Mon – Monday, May 4**
 
@@ -58,6 +72,10 @@
 - `4212c3b` feat: v0.1 production runner — three vendors + R1(a)/R1(b) Gemini drift monitor — _dongzhang84_ `2026-05-09 10:43`
 - `3a8eaf0` lock: pre-register PhysLit v0.1 predictions — _dongzhang84_ `2026-05-09 02:47`
 - `c6f10fc` prep: prereg final fixes + discover-and-pin OpenAI / Gemini versions — _dongzhang84_ `2026-05-09 02:46`
+
+**Sun – Sunday, May 10**
+
+- `bb245e0` audit: link each case to same-trial Stage 2 (formulation) md — _dongzhang84_ `2026-05-10 23:23`
 
 ---
 
