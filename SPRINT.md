@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-11 16:21 UTC  
+**Generated:** 2026-05-11 17:36 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 5 |
+| Total commits | 6 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **5** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 11**
 
+- `466c788` docs: rewrite README around v0.1 result — _dongzhang84_ `2026-05-11 10:36`
 - `2de1c80` docs: add v0.1 full report (analysis/v0_1_report.md) — _dongzhang84_ `2026-05-11 09:21`
 - `91432a1` findings: trim cost figures and script filenames from pipeline diagram — _dongzhang84_ `2026-05-11 02:14`
 - `a725619` findings: add mermaid pipeline diagram — _dongzhang84_ `2026-05-11 02:12`
