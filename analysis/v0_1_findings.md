@@ -18,7 +18,7 @@ flowchart TD
     INPUTS["Frozen inputs:<br/>12 Aristotelian observations<br/>+ judging criteria<br/>+ stage 1-4 prompt templates"]
     PRE --> INPUTS
 
-    INPUTS --> RUNNER["scripts/run_v0_1.py<br/>3 models × 5 trials × 4 stages<br/>= 60 API calls · $5.76"]
+    INPUTS --> RUNNER["Production runner<br/>3 models × 5 trials × 4 stages<br/>= 60 API calls"]
 
     RUNNER --> ST3["Stages 1-3: content reasoning<br/>induction · formulation · prediction<br/>45 trial JSONs"]
     RUNNER --> ST4["Stage 4: meta self-reflection<br/>(after stages 1-3 done)<br/>15 trial JSONs"]
@@ -26,10 +26,10 @@ flowchart TD
     ST3 --> JCON["Dual-judge content check<br/>(Claude + OpenAI)<br/>45 × 2 = 90 verdicts"]
     ST4 --> JMETA["Dual-judge over-claim check<br/>(Claude + OpenAI)<br/>15 × 2 = 30 verdicts"]
 
-    JCON --> JTOTAL["120 judge verdicts<br/>$8.23"]
+    JCON --> JTOTAL["120 judge verdicts total"]
     JMETA --> JTOTAL
 
-    JTOTAL --> AGG1["scripts/judge_v0_1.py aggregator<br/>per-trial = both judges agree<br/>(PASS / FAIL / DISAGREE)"]
+    JTOTAL --> AGG1["Aggregator pass 1<br/>per-trial = both judges agree<br/>(PASS / FAIL / DISAGREE)"]
 
     AGG1 --> R1["Pre-audit verdicts<br/>P1: partially confirmed<br/>P3: confirmed (40 %)<br/>IRR overall: 36.67 %"]
 
@@ -37,7 +37,7 @@ flowchart TD
     IRR -->|no — would publish as-is| EPUB["(publish pre-audit)"]
     IRR -->|yes — triggers audit| AUDIT["Human audit · 22 DISAGREE cases<br/>S1: 5 · S2: 7 · S3: 5 · meta: 5"]
 
-    AUDIT --> APPLY["scripts/apply_audit.py<br/>override every DISAGREE row<br/>with audit verdict"]
+    AUDIT --> APPLY["Apply audit overrides<br/>replace DISAGREE rows<br/>with audit verdicts"]
     APPLY --> AGG2["Aggregator pass 2<br/>recompute P1 / P3 / IRR"]
 
     AGG2 --> R2["Post-audit verdicts (publish)<br/>P1: CONFIRMED · Claude 3/5 · Gemini 3/5<br/>P3: CONFIRMED (70 %)<br/>IRR post-audit: 0 % by construction"]
@@ -63,7 +63,7 @@ flowchart TD
 - **Orange** = IRR gate + human audit (the prereg-mandated tie-breaker)
 - **Green** = publication-ready verdicts
 
-**Total API calls:** 60 production + 120 judging = **180 calls**, $13.99 USD.
+**Total API calls:** 60 production + 120 judging = **180 calls**.
 
 ---
 
