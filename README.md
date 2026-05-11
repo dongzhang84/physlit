@@ -1,124 +1,119 @@
 # PhysLit
 
-> An open-source diagnostic for physics literacy in large language models — replacing percentage benchmarks with binary cognitive judgments across induction, formulation, and prediction.
+> **A pre-registered, audit-resolved diagnostic for physics literacy in large language models.**
+> PhysLit asks whether a frontier LLM can reason *inside* an unfamiliar physics framework — not whether it can solve textbook problems. Outputs are binary cognitive judgments, not leaderboard scores.
 
-PhysLit asks whether a language model can do physics — not solve physics problems, but reason from observation to law to prediction inside an unfamiliar framework. We test 15 framework worlds (some historically real, some counterfactual, some arbitrary) and produce binary cognitive judgments, not a leaderboard score.
+PhysLit is a research artifact, not a product. Every design decision optimizes for **methodological auditability**: pre-registered predictions, SHA-256-sealed inputs, fresh API session per stage, dual-LLM judging with an IRR gate, and a human-audit pathway for disagreement.
 
-## Status
+---
 
-**v0.0.3 — Scope reduction + Aristotelian content drafted**, 2026-05-07.
-The v0.1 plan is now bounded to a single framework (Aristotelian) × 3
-models × **$50 USD budget cap**, with temperature=0.7 secondary pass and
-three of the five pre-registered predictions deferred to a hypothetical
-v0.2 (≤ 5 frameworks, ≤ $250 USD, gated on v0.1 outcome). The original
-15-framework v1.0 ambition is retired. See `CHANGELOG.md` and
-`docs/product-spec.md` §8 for the new shape; `docs/implementation-guide.md`
-Phase 1.5 for the Aristotelian dry-run smoke test that comes next.
+## v0.1 result (2026-05-11)
 
-## Docs
+Two predictions, locked at SHA-256 `769818275e6a256...0c7df425` (tag [`prereg-v0.1-locked`](https://github.com/dongzhang84/physlit/releases/tag/prereg-v0.1-locked)) **before any production trial**, evaluated on Aristotelian Mechanics across Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro at N=5 trials each:
 
-- [docs/product-spec.md](./docs/product-spec.md) — what PhysLit is, the methodology, the four design rules, pre-registered predictions ([中文版](./docs/product-spec.zh.md))
-- [docs/implementation-guide.md](./docs/implementation-guide.md) — phase-by-phase build plan
-- [CLAUDE.md](./CLAUDE.md) — architectural rules and Claude Code project guide
-- [CHANGELOG.md](./CHANGELOG.md) — phase-by-phase release notes
+- **P1 — Induction failure under training-data conflict: CONFIRMED.** 2 of 3 models (Claude, Gemini) introduce banned modern-physics concepts (`dense`, `forceful`, `surface-supported`, …) in ≥ 3/5 trials of Stage 1, despite an explicit ban in the prompt.
+- **P3 — Meta-cognitive miscalibration: CONFIRMED.** 10 trials contain at least one Stage-1-3 failure; in **7 of those 10 (70 %)** the model fails to identify its own failure during Stage 4 self-reflection — well above the pre-registered 30 % threshold.
+
+A third finding emerged from the methodology itself:
+
+- **Cross-vendor LLM-judge inter-rater reliability = 36.67 %.** Two independent judges (Claude + OpenAI) disagreed on more than a third of all PASS/FAIL classifications, triggering the prereg-mandated human audit. No single-judge LLM benchmark would have been reliable on this material.
+
+**Scope**: 1 framework × 3 models × N=5 × 4 stages = 60 production API calls + 120 judge calls = **180 calls, ≈ $14 USD total.**
+
+| Where to look | What's in it |
+| --- | --- |
+| [`analysis/v0_1_report.md`](./analysis/v0_1_report.md) | English narrative report — motivation, design, results, next steps |
+| [`analysis/v0_1_findings.md`](./analysis/v0_1_findings.md) | Auto-generated pre- and post-audit numerics + pipeline diagram |
+| [`analysis/v0_1_audit_human_review.md`](./analysis/v0_1_audit_human_review.md) | All 22 human-audit verdicts on DISAGREE cases |
+| [`results/<model-id>/`](./results/) | Verbatim trial JSONs + judge verdicts for every API call |
+
+---
+
+## Why this exists
+
+Existing LLM physics benchmarks count correct answers and report a percentage. Two structural flaws follow:
+
+1. The percentage cannot distinguish *"understands physics"* from *"has seen similar problems during training."*
+2. The percentage carries no information about cognitive boundaries — *90 % vs 91 %* tells you nothing about what the model can and cannot do.
+
+PhysLit asks a different question: **can the model do the cognitive work that constitutes physical reasoning** — induction, formulation, prediction — inside a framework whose conclusions don't match its training prior? Aristotelian Mechanics is the cleanest test case: historically real, internally consistent, present in training data primarily as a *position the training data argues against*. A model that has "learned Aristotle" is precisely a model that has learned to dismiss this framework; the test is whether it can suspend that dismissal long enough to reason inside the framework on its own terms.
+
+Full motivation and design rationale: [`docs/product-spec.md`](./docs/product-spec.md) ([中文](./docs/product-spec.zh.md)).
+
+---
+
+## How it works
+
+```mermaid
+flowchart LR
+    PRE["prereg<br/>(SHA-256 sealed)"] --> RUN["Production runner<br/>3 models × 5 trials × 4 stages"]
+    RUN --> JUDGE["Dual-judge<br/>(Claude + OpenAI)"]
+    JUDGE --> IRR{"IRR > 25 %?"}
+    IRR -->|no| PUB["Publish verdicts"]
+    IRR -->|yes| AUDIT["Human audit"] --> PUB
+```
+
+Four design rules, all enforced in code:
+
+1. **Pre-registration is irreversible.** Predictions live in `predictions/v0_1_prereg.md`, SHA-256-sealed and git-tag-locked. A pre-commit hook (`scripts/verify_prereg_integrity.py`) and a matching CI check fail any silent edit. New predictions require a new tag.
+2. **Fresh API session per stage.** Stages 1, 2, 3, 4 each create a new client and a new session UUID. No context reuse, no multi-turn — the model only sees its own prior outputs replayed as text.
+3. **Open data verbatim.** Every prompt sent + every response received is committed under `prompts/` and `results/`. Selective publishing is forbidden — failed trials are committed as failure records.
+4. **Dual-judge IRR + human-audit gate.** Stage-1-3 PASS/FAIL judgments run through two independent LLM judges; disagreement > 25 % on any stage triggers a human audit before results can be published.
+
+Full architectural rules: [`CLAUDE.md`](./CLAUDE.md).
+
+---
+
+## Reproduce v0.1
+
+Every verdict in the v0.1 report is reproducible from the locked tag.
+
+```bash
+git clone https://github.com/dongzhang84/physlit
+cd physlit
+git checkout prereg-v0.1-locked
+uv sync
+
+# .env.local
+ANTHROPIC_API_KEY=...
+OPENAI_API_KEY=...
+GEMINI_API_KEY=...
+
+uv run python scripts/run_v0_1.py        # ≈ $5.76, 60 production API calls, ~30 min
+uv run python scripts/judge_v0_1.py      # ≈ $8.23, 120 judge API calls
+uv run python scripts/apply_audit.py     # 0 cost — replays the 22 committed audit verdicts
+```
+
+`analysis/v0_1_findings.md` will now contain both pre-audit and post-audit blocks. The 22 audit verdicts are committed both as prose ([`analysis/v0_1_audit_human_review.md`](./analysis/v0_1_audit_human_review.md)) and as an embedded dict in `scripts/apply_audit.py`; no human re-audit is required to reproduce the published verdicts. Tested-model output is non-deterministic across vendors, so your trial responses will not be byte-identical to ours — but the verdict pattern is robust per prereg.
+
+---
 
 ## Repo layout
 
 ```
 physlit/
-├── docs/
-│   ├── product-spec.md                  methodology, design rules, predictions
-│   └── implementation-guide.md          phase-by-phase build plan
-│
-├── frameworks/                          phenomenon framework specs (committed data)
-│   └── 01_aristotelian/                 Tier 3 manual — first framework
-│       ├── spec.yaml                      metadata
-│       ├── observations.md                stage 1 input — DRAFT
-│       ├── ideal_induction.md             stage 1 reference for judges — DRAFT
-│       ├── formulation_template.md        stage 2 prompt body — DRAFT
-│       ├── prediction_tests.md            stage 3 scenarios + ground truth — DRAFT
-│       ├── pass_fail_criteria.md          binary judgment checklists — DRAFT
-│       └── meta_questions.md              stage 4 reflective prompts — DRAFT
-├── predictions/                         pre-registered predictions    [Phase 5, locked]
-├── prompts/                             versioned model prompts       [Phase 6+]
-├── results/                             raw API responses, all trials [Phase 7+]
-├── analysis/                            cost log, IRR reports, matrix [Phase 9+]
-│
-├── scripts/
-│   ├── validate_specs.py                frameworks/*/spec.yaml schema check
-│   └── extract-sprint-summary.py        sprint report helper
-│
-├── src/physlit/
-│   ├── schema/                          pydantic models (cross-module contracts)
-│   │   └── framework_spec.py            FrameworkSpec + tier validation
-│   ├── generators/
-│   │   ├── tier1/                       Python simulators              [Phase 2]
-│   │   ├── tier2/                       AI generator (stub only in v0.1) [Phase 3]
-│   │   └── tier3/                       manual-authoring loaders       [Phase 4]
-│   ├── runners/                         tested-model orchestration     [Phase 6–7]
-│   ├── judges/                          dual-LLM IRR pipeline          [Phase 8]
-│   ├── analysis/                        cross-stage / meta analysis    [Phase 9]
-│   └── site/                            Jinja2 static-site renderer    [Phase 10]
-│
-├── tests/
-│   └── test_schemas.py                  FrameworkSpec + committed-spec sweep
-│
-├── CLAUDE.md                            architectural rules (load-bearing)
-├── CHANGELOG.md                         phase-by-phase release notes
-├── SPRINT.md                            auto-generated activity report
-├── .pre-commit-config.yaml              ruff + verify-prereg + validate-specs
-├── pyproject.toml                       uv-managed; mypy strict, ruff
-├── uv.lock                              committed — required for reproducibility
-├── LICENSE                              MIT — code
-└── LICENSE-DATA                         CC BY 4.0 — frameworks, predictions, prompts, results, analysis
+├── predictions/v0_1_prereg.md            pre-reg, SHA-256 sealed, tag-locked
+├── frameworks/01_aristotelian/           12 observations, criteria, prediction scenarios
+├── prompts/                              all stage + judge prompts, frozen at lock
+├── results/<model-id>/01_aristotelian/   60 trial JSONs + 120 judge verdicts, verbatim
+├── analysis/                             findings, audit, narrative report
+├── scripts/                              run / judge / audit / verify
+├── src/physlit/                          runners, schema, judges (Python, mypy strict)
+├── docs/product-spec.md                  methodology, design rules, predictions
+├── docs/implementation-guide.md          phase-by-phase build plan
+├── CLAUDE.md                             architectural rules (load-bearing)
+├── CHANGELOG.md                          phase-by-phase release notes
+├── LICENSE                               MIT — code
+└── LICENSE-DATA                          CC BY 4.0 — frameworks, predictions, prompts, results, analysis
 ```
 
-Phase tags in brackets point at `docs/implementation-guide.md`. Empty directories use `.gitkeep` until populated; do not delete the placeholder before adding real content.
+---
 
-## Evaluation pipeline
-
-End-to-end shape of one framework × all tested models. This is the v0.1 target
-architecture; today only the schema layer (top-left input) is wired up.
-
-```
-                                    ┌─ Claude Opus 4.7 ─┐
-observations.md ──┐                 │                   │
-                  │                 │  5 fresh sessions │
-prompts/stage1    │   runner        │  × 2 temperatures │ ──▶ results/<model-ver>/
-_induction.md  ───┼──▶ orchestrator ┼─ GPT-5 ───────────┤       01_aristotelian/
-                  │   (replicate.sh)│  (same)           │       induction/
-                  │                 │                   │         trial_0_t0.0.json
-                  │                 └─ Gemini 3 ────────┘         trial_0_t1.0.json
-                  │                                                ...
-                  ▼
-           save trial JSON verbatim
-                  │
-                  ▼
-        Judges (Claude + GPT, independent)
-        read response_text + pass_fail_criteria.md
-        → emit PASS / FAIL + reasoning
-                  │
-                  ▼
-        IRR check (do the two judges agree?)
-                  │
-                  ▼
-        analysis/ → capability matrix HTML
-```
-
-Per-trial isolation is load-bearing: every trial gets a fresh API client and
-a new session UUID, and stages 1/2/3 never share context. See `CLAUDE.md`
-("Architectural Rules") for the methodology rationale.
-
-## Quick start
+## Local development
 
 ```bash
-git clone https://github.com/dongzhang84/physlit.git
-cd physlit
-uv sync                              # install deps + dev tools into .venv
-uv run pre-commit install            # one-time: hook ruff + spec validators
-
-uv run pytest                        # run tests
-uv run python scripts/validate_specs.py   # validate every frameworks/*/spec.yaml
+uv sync                              # install deps + dev tools
+uv run pre-commit install            # one-time: hook ruff + prereg-integrity + spec validators
 ```
 
 Local gates (must all pass before commit):
@@ -128,19 +123,64 @@ uv run ruff format --check .
 uv run ruff check .
 uv run mypy
 uv run pytest
+uv run python scripts/verify_prereg_integrity.py    # confirms prereg SHA-256 unchanged
 ```
 
-To reproduce a full evaluation run (requires API keys and budget):
+CI never runs real API calls — only mocks in `tests/test_runners_with_mock.py`. Costly runs (`run_v0_1.py`, `judge_v0_1.py`) are gated by a confirmation prompt when the estimated spend exceeds $5.
 
-```bash
-ANTHROPIC_API_KEY=... OPENAI_API_KEY=... GOOGLE_API_KEY=... ./replicate.sh
-```
+---
+
+## Status & roadmap
+
+| Version | Scope | Budget cap | Status |
+| --- | --- | --- | --- |
+| **v0.1** | Aristotelian × 3 models × N=5 | $50 | ✅ Done — 2026-05-11 |
+| v0.1.1 | Re-judge v0.1 trials with structural criteria (N9-N12: parsimony, independence, traceability, hierarchy) | ~$10 | Planned |
+| v0.2 | 5 frameworks across Categories A/B/C × 3 models × N=5 | $250 | Planned, gated on v0.1.1 reliability check |
+
+The original v1.0 ambition of 15 frameworks has been retired in favor of methodology-first iteration. Reasoning in [`analysis/v0_1_report.md`](./analysis/v0_1_report.md) §4.
+
+---
+
+## Contributing
+
+PhysLit welcomes:
+
+- **Reproduction reports** — run `scripts/run_v0_1.py` + `judge_v0_1.py` + `apply_audit.py` yourself and open an issue if your verdict pattern diverges from ours.
+- **Methodology critique** as GitHub issues — especially around the IRR threshold (25 %) and the audit pathway.
+- **Framework proposals** for v0.2 — open an issue describing the framework, its Category (A: historical / B: counterfactual self-consistent / C: arbitrary rules), and a draft observation set. Authoring tier and minimum content checklist live in [`docs/implementation-guide.md`](./docs/implementation-guide.md).
+- **Code PRs** must pass `ruff check`, `mypy --strict`, `pytest`, and the prereg integrity hook.
+
+PhysLit does **not** accept:
+
+- Changes to the locked prereg or any frozen artifact under the `prereg-v0.1-locked` tag.
+- Pull requests that compromise the four design rules (multi-turn shortcuts, judge-pruning to lower IRR, selective result publishing, alias-pinned model IDs).
+
+---
 
 ## License
 
 - **Code** (`src/`, `tests/`, `scripts/`, configs) — [MIT](./LICENSE)
-- **Data** (`frameworks/`, `predictions/`, `prompts/`, `analysis/`, `results/`) — [CC BY 4.0](./LICENSE-DATA)
+- **Data** (`frameworks/`, `predictions/`, `prompts/`, `results/`, `analysis/`) — [CC BY 4.0](./LICENSE-DATA)
+
+The split is deliberate: re-use the code freely without attribution friction; re-use the data with attribution so the prereg trail stays traceable.
+
+---
+
+## Citation
+
+If you use PhysLit in academic or evaluation work, please cite the locked prereg tag:
+
+```bibtex
+@misc{physlit_v0_1_2026,
+  author       = {Zhang, Dong},
+  title        = {{PhysLit v0.1}: A Pre-Registered Diagnostic of LLM Physics Literacy on Aristotelian Mechanics},
+  year         = {2026},
+  howpublished = {\url{https://github.com/dongzhang84/physlit}},
+  note         = {Pre-registration tag \texttt{prereg-v0.1-locked}, SHA-256 \texttt{769818275e6a25665116f13be2a4be440f00a8f49453fd8587239b410c7df425}}
+}
+```
 
 ## Upstream
 
-Born out of [`indie-product-playbook`](https://github.com/dongzhang84/indie-product-playbook). See `ideas/physlit.md` and `implementation-guides/physlit.md` upstream for the original spec.
+PhysLit grew out of [`indie-product-playbook`](https://github.com/dongzhang84/indie-product-playbook). The original spec lives at `ideas/physlit.md` upstream.
