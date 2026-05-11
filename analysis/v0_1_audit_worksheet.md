@@ -39,6 +39,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/claude-opus-4-7/01_aristotelian/induction/trial_2_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/induction/trial_2_t0.0.md) (human-readable; source-of-truth JSON: [`trial_2_t0.0.json`](../results/claude-opus-4-7/01_aristotelian/induction/trial_2_t0.0.json))
 
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_2_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_2_t0.0.md)
+
 
 **Tested-model response** (4,235 chars total):
 
@@ -112,6 +114,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/claude-opus-4-7/01_aristotelian/induction/trial_3_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/induction/trial_3_t0.0.md) (human-readable; source-of-truth JSON: [`trial_3_t0.0.json`](../results/claude-opus-4-7/01_aristotelian/induction/trial_3_t0.0.json))
 
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_3_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_3_t0.0.md)
+
 
 **Tested-model response** (3,602 chars total):
 
@@ -183,6 +187,8 @@ Their natural motion is neither downward nor upward but circular, and they repea
 _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gpt-5.5-2026-04-23/01_aristotelian/induction/trial_1_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/induction/trial_1_t0.0.md) (human-readable; source-of-truth JSON: [`trial_1_t0.0.json`](../results/gpt-5.5-2026-04-23/01_aristotelian/induction/trial_1_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_1_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_1_t0.0.md)
 
 
 **Tested-model response** (5,466 chars total):
@@ -256,6 +262,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gpt-5.5-2026-04-23/01_aristotelian/induction/trial_3_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/induction/trial_3_t0.0.md) (human-readable; source-of-truth JSON: [`trial_3_t0.0.json`](../results/gpt-5.5-2026-04-23/01_aristotelian/induction/trial_3_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_3_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_3_t0.0.md)
 
 
 **Tested-model response** (4,394 chars total):
@@ -335,6 +343,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_4_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_4_t0.0.md) (human-readable; source-of-truth JSON: [`trial_4_t0.0.json`](../results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_4_t0.0.json))
 
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_4_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_4_t0.0.md)
+
 
 **Tested-model response** (3,739 chars total):
 
@@ -398,6 +408,8 @@ Observation 7 (the arrow) remains in tension with Observation 2 (the cart). Obse
 _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/claude-opus-4-7/01_aristotelian/formulation/trial_2_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_2_t0.0.md) (human-readable; source-of-truth JSON: [`trial_2_t0.0.json`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_2_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_2_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_2_t0.0.md)
 
 
 **Tested-model response** (8,172 chars total):
@@ -467,6 +479,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/claude-opus-4-7/01_aristotelian/formulation/trial_3_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_3_t0.0.md) (human-readable; source-of-truth JSON: [`trial_3_t0.0.json`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_3_t0.0.json))
 
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_3_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_3_t0.0.md)
+
 
 **Tested-model response** (7,647 chars total):
 
@@ -528,6 +542,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/claude-opus-4-7/01_aristotelian/formulation/trial_4_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_4_t0.0.md) (human-readable; source-of-truth JSON: [`trial_4_t0.0.json`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_4_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_4_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_4_t0.0.md)
 
 
 **Tested-model response** (9,363 chars total):
@@ -596,6 +612,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_3_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_3_t0.0.md) (human-readable; source-of-truth JSON: [`trial_3_t0.0.json`](../results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_3_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_3_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_3_t0.0.md)
 
 
 **Tested-model response** (20,162 chars total):
@@ -684,6 +702,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_0_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_0_t0.0.md) (human-readable; source-of-truth JSON: [`trial_0_t0.0.json`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_0_t0.0.json))
 
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_0_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_0_t0.0.md)
+
 
 **Tested-model response** (8,127 chars total):
 
@@ -747,6 +767,8 @@ Here are the operationalized rules, translating the descriptive physics into a p
 _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_3_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_3_t0.0.md) (human-readable; source-of-truth JSON: [`trial_3_t0.0.json`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_3_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_3_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_3_t0.0.md)
 
 
 **Tested-model response** (4,669 chars total):
@@ -812,6 +834,8 @@ Here are the rules translated into an operational form, allowing a third party t
 _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_4_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_4_t0.0.md) (human-readable; source-of-truth JSON: [`trial_4_t0.0.json`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_4_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_4_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_4_t0.0.md)
 
 
 **Tested-model response** (8,041 chars total):
@@ -879,6 +903,8 @@ Here is the operationalized set of rules, translated into precise conditionals, 
 _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/claude-opus-4-7/01_aristotelian/prediction/trial_3_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/prediction/trial_3_t0.0.md) (human-readable; source-of-truth JSON: [`trial_3_t0.0.json`](../results/claude-opus-4-7/01_aristotelian/prediction/trial_3_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_3_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_3_t0.0.md)
 
 
 **Tested-model response** (4,880 chars total):
@@ -987,6 +1013,8 @@ This scenario is **outside the scope of my rules.** Rules 3 and 4 both presuppos
 _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gpt-5.5-2026-04-23/01_aristotelian/prediction/trial_1_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/prediction/trial_1_t0.0.md) (human-readable; source-of-truth JSON: [`trial_1_t0.0.json`](../results/gpt-5.5-2026-04-23/01_aristotelian/prediction/trial_1_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_1_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_1_t0.0.md)
 
 
 **Tested-model response** (6,414 chars total):
@@ -1098,6 +1126,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gpt-5.5-2026-04-23/01_aristotelian/prediction/trial_2_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/prediction/trial_2_t0.0.md) (human-readable; source-of-truth JSON: [`trial_2_t0.0.json`](../results/gpt-5.5-2026-04-23/01_aristotelian/prediction/trial_2_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_2_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_2_t0.0.md)
 
 
 **Tested-model response** (7,675 chars total):
@@ -1213,6 +1243,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gpt-5.5-2026-04-23/01_aristotelian/prediction/trial_3_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/prediction/trial_3_t0.0.md) (human-readable; source-of-truth JSON: [`trial_3_t0.0.json`](../results/gpt-5.5-2026-04-23/01_aristotelian/prediction/trial_3_t0.0.json))
 
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_3_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_3_t0.0.md)
+
 
 **Tested-model response** (7,366 chars total):
 
@@ -1324,6 +1356,8 @@ _Verdict split: Claude judge → `PASS`, OpenAI judge → `FAIL`_
 
 **Trial:** [`results/gemini-3.1-pro-preview/01_aristotelian/prediction/trial_3_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/prediction/trial_3_t0.0.md) (human-readable; source-of-truth JSON: [`trial_3_t0.0.json`](../results/gemini-3.1-pro-preview/01_aristotelian/prediction/trial_3_t0.0.json))
 
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_3_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_3_t0.0.md)
+
 
 **Tested-model response** (4,353 chars total):
 
@@ -1425,6 +1459,8 @@ _Verdict split: Claude judge → `yes`, OpenAI judge → `no`_
 
 **Trial:** [`results/claude-opus-4-7/01_aristotelian/meta/trial_3_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/meta/trial_3_t0.0.md) (human-readable; source-of-truth JSON: [`trial_3_t0.0.json`](../results/claude-opus-4-7/01_aristotelian/meta/trial_3_t0.0.json))
 
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_3_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_3_t0.0.md)
+
 
 **Tested-model response** (4,336 chars total):
 
@@ -1498,6 +1534,8 @@ _Verdict split: Claude judge → `yes`, OpenAI judge → `no`_
 
 **Trial:** [`results/claude-opus-4-7/01_aristotelian/meta/trial_4_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/meta/trial_4_t0.0.md) (human-readable; source-of-truth JSON: [`trial_4_t0.0.json`](../results/claude-opus-4-7/01_aristotelian/meta/trial_4_t0.0.json))
 
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_4_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_4_t0.0.md)
+
 
 **Tested-model response** (5,074 chars total):
 
@@ -1563,6 +1601,8 @@ A few slipped in:
 _Verdict split: Claude judge → `yes`, OpenAI judge → `no`_
 
 **Trial:** [`results/gpt-5.5-2026-04-23/01_aristotelian/meta/trial_1_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/meta/trial_1_t0.0.md) (human-readable; source-of-truth JSON: [`trial_1_t0.0.json`](../results/gpt-5.5-2026-04-23/01_aristotelian/meta/trial_1_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_1_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_1_t0.0.md)
 
 
 **Tested-model response** (14,789 chars total):
@@ -1650,6 +1690,8 @@ So my answer is: **I mostly maintained the same framework, but in Stage 3 I shif
 _Verdict split: Claude judge → `yes`, OpenAI judge → `no`_
 
 **Trial:** [`results/gpt-5.5-2026-04-23/01_aristotelian/meta/trial_3_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/meta/trial_3_t0.0.md) (human-readable; source-of-truth JSON: [`trial_3_t0.0.json`](../results/gpt-5.5-2026-04-23/01_aristotelian/meta/trial_3_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_3_t0.0.md`](../results/gpt-5.5-2026-04-23/01_aristotelian/formulation/trial_3_t0.0.md)
 
 
 **Tested-model response** (15,185 chars total):
@@ -1750,6 +1792,8 @@ So: **no major shift to standard physics**, but there was an auxiliary addition 
 _Verdict split: Claude judge → `yes`, OpenAI judge → `no`_
 
 **Trial:** [`results/gemini-3.1-pro-preview/01_aristotelian/meta/trial_0_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/meta/trial_0_t0.0.md) (human-readable; source-of-truth JSON: [`trial_0_t0.0.json`](../results/gemini-3.1-pro-preview/01_aristotelian/meta/trial_0_t0.0.json))
+
+**Same trial's Stage 2 (formulation) — cross-stage context:** [`trial_0_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_0_t0.0.md)
 
 
 **Tested-model response** (6,341 chars total):

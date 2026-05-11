@@ -292,10 +292,17 @@ def main() -> int:
                 f"results/{case.model}/{FRAMEWORK_ID}/{case.stage}/trial_{case.trial_index}_t0.0.md"
             )
             json_path = md_path[:-3] + ".json"
+            formulation_md_path = (
+                f"results/{case.model}/{FRAMEWORK_ID}/formulation/trial_{case.trial_index}_t0.0.md"
+            )
             lines.append(
                 f"**Trial:** [`{md_path}`](../{md_path}) "
                 f"(human-readable; source-of-truth JSON: "
                 f"[`{Path(json_path).name}`](../{json_path}))\n"
+            )
+            lines.append(
+                f"**Same trial's Stage 2 (formulation) — cross-stage context:** "
+                f"[`{Path(formulation_md_path).name}`](../{formulation_md_path})\n"
             )
 
             response, total_len = _load_trial_response(case.model, case.trial_index, case.stage)
