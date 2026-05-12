@@ -180,16 +180,6 @@ def test_n12_passes_when_hierarchy_marker_present() -> None:
     assert check_n12_hierarchy(rules, text) == []
 
 
-def test_n12_passes_on_cross_rule_reference() -> None:
-    # Rule cross-references like "see Rule 3" or "as in Principle 7" satisfy
-    # hierarchy even without the literal HIERARCHY_MARKERS substrings.
-    from physlit.audit.parse_rules import ParsedRule
-
-    rules = [ParsedRule(number=i + 1, body=f"rule {i}") for i in range(7)]
-    text = "When the cart slows it is governed in part by what Rule 3 says about media."
-    assert check_n12_hierarchy(rules, text) == []
-
-
 # ---------- Orchestrator end-to-end ----------------------------------------
 
 

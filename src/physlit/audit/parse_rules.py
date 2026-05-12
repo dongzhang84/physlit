@@ -31,11 +31,6 @@ _RULE_PATTERNS: tuple[re.Pattern[str], ...] = (
         r"^\s*Rule\s+(\d{1,3})\s*[\.\):]\s*(.+?)(?=\n\s*Rule\s+\d|\n\s*\n|\Z)",
         re.MULTILINE | re.IGNORECASE | re.DOTALL,
     ),
-    # ### 1. body  /  ## 2. body  — markdown heading + number (Gemini style)
-    re.compile(
-        r"^\s*#{2,6}\s+(\d{1,3})[\.\):]\s+(.+?)$",
-        re.MULTILINE,
-    ),
     # 1. body  /  1) body  — plain numbered list
     re.compile(
         r"^\s*(\d{1,3})[\.\)]\s+(.+?)(?=\n\s*\d{1,3}[\.\)]\s|\n\s*\n|\Z)",
