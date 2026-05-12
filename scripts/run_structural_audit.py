@@ -34,22 +34,6 @@ from physlit.audit import audit_trial_response  # noqa: E402
 from physlit.audit.llm_smuggle import SmuggleDetectorLLM  # noqa: E402
 from physlit.audit.models import StructuralAuditReport  # noqa: E402
 
-
-def _load_dotenv() -> None:
-    """Load `.env.local` keys into os.environ (matches scripts/judge_v0_1.py convention)."""
-    env_path = REPO_ROOT / ".env.local"
-    if not env_path.exists():
-        return
-    import os
-
-    for raw in env_path.read_text().splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, _, value = line.partition("=")
-        os.environ.setdefault(key.strip(), value.strip())
-
-
 DEFAULT_RESULTS_ROOT = REPO_ROOT / "results"
 DEFAULT_OUTPUT_ROOT = REPO_ROOT / "analysis" / "structural_audit"
 DEFAULT_FRAMEWORK = "01_aristotelian"
@@ -108,7 +92,6 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    _load_dotenv()
     models = tuple(args.model) if args.model else ALL_MODELS
 
     observations_text = ""
