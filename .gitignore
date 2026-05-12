@@ -53,3 +53,12 @@ yarn-error.log*
 # misc
 Thumbs.db
 coverage/
+
+# Structural-audit (Agent 2) raw run output. Per-trial JSONs are cheap to
+# regenerate via `scripts/run_structural_audit.py`; committed calibration
+# results live in `analysis/v0_2_agent2_calibration.md` (Step 4 deliverable).
+analysis/structural_audit/
+
+# Local-only analysis drafts (zh blog + X post). Marked .zh.md and kept
+# uncommitted per author preference; promote to repo if/when published.
+analysis/*.zh.md
