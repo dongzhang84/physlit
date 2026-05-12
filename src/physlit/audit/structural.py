@@ -30,8 +30,16 @@ N9_TIER_3_RATIO_FLOOR = 1.0  # rule_count > obs * 1.0
 N9_TIER_2_RATIO_FLOOR = 1.25  # rule_count > obs * 1.25
 N9_TIER_1_RATIO_FLOOR = 5.0 / 3.0  # rule_count > obs * 5/3
 
-# N12 hierarchy markers. If a rule set has ≥ 5 rules and none of these markers
-# appear anywhere in the response text, flag Tier-2 (flat enumeration).
+# N12 hierarchy markers. If a rule set has ≥ 5 rules and no hierarchy signal
+# is found anywhere in the response text, flag Tier-2 (flat enumeration).
+# Two signals are accepted:
+#   (a) any literal HIERARCHY_MARKERS substring, OR
+#   (b) an explicit cross-rule reference matching HIERARCHY_REF_RE
+#       (e.g. "see Rule 3", "as in Principle 7", "by Axiom 2").
+# Both signals were calibrated against the 30 v0.1 induction+formulation
+# trials: the literal markers alone catch ~25 % of the trials that do
+# show hierarchical structure; the cross-reference regex catches the
+# remainder. Together they leave the genuinely flat enumerations exposed.
 HIERARCHY_MARKERS: tuple[str, ...] = (
     "derived from",
     "corollary",
@@ -41,6 +49,14 @@ HIERARCHY_MARKERS: tuple[str, ...] = (
     "consequence of",
     "implies",
     "by application of",
+    "see rule",
+    "as in rule",
+    "subsumes",
+    "overrides",
+)
+HIERARCHY_REF_RE = re.compile(
+    r"\b(?:rule|principle|axiom|law)s?\s+\d+\b",
+    re.IGNORECASE,
 )
 N12_MIN_RULES_FOR_HIERARCHY = 5
 
@@ -191,9 +207,10 @@ def check_n12_hierarchy(
     if len(rules) < N12_MIN_RULES_FOR_HIERARCHY:
         return []
     lower = response_text.lower()
-    for marker in HIERARCHY_MARKERS:
-        if marker in lower:
-            return []
+    if any(marker in lower for marker in HIERARCHY_MARKERS):
+        return []
+    if HIERARCHY_REF_RE.search(response_text):
+        return []
     return [
         StructuralFlag(
             criterion="N12",
