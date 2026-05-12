@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-12 23:11 UTC  
+**Generated:** 2026-05-12 23:12 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 15 |
+| Total commits | 16 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **9** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | **10** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 11**
 
@@ -28,6 +28,7 @@
 
 **Tue – Tuesday, May 12**
 
+- `1ca149a` docs(v0.2): add design plan (planning-only, not a prereg) — _dongzhang84_ `2026-05-12 16:12`
 - `850953c` chore: drop gitignore entry for analysis/structural_audit/ — _dongzhang84_ `2026-05-12 16:11`
 - `fe95ca1` Revert "feat(audit): Agent 2 prototype — N9/N11/N12 structural-audit layer" — _dongzhang84_ `2026-05-12 16:10`
 - `029a2f1` Revert "audit(tune): widen parser + N12 hierarchy detection" — _dongzhang84_ `2026-05-12 16:10`
