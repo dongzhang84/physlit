@@ -4,6 +4,16 @@
 > **Framework ID:** 01_aristotelian
 > **Stage:** 1 (Induction)
 
+> **v0.1 reproducers note (added 2026-05-12):** This file has been
+> extended post-`prereg-v0.1-locked` with §8 (Structural criteria
+> N9-N12). §8 is **documentation only** and does NOT modify the
+> v0.1 judge checklist (§6) or N1-N8 in §2. The judge prompts at
+> the locked tag (`prompts/judge_stage*.md`) score only against
+> N1-N8. To reproduce v0.1 verdicts byte-for-byte, run from the
+> locked tag: `git checkout prereg-v0.1-locked`. N9-N12 will be
+> operationalized as flags by the v0.2 Structural Auditor agent
+> (see `analysis/v0_1_report.md` §3.5 and §4).
+
 ## 1. Purpose
 
 This file is **for judges only**. The tested model never sees it. After the
@@ -202,6 +212,103 @@ at Step 2: condition N6 unmet — heaven/earth distinction not made").
   citation to §2/§3/§4 is more useful for the project than a charitable
   PASS that lets a near-miss through.
 
+## 8. Structural criteria (post-v0.1 documentation)
+
+> **Documentation only.** These criteria were surfaced during the v0.1
+> human audit (see [`analysis/v0_1_audit_human_review.md`](../../analysis/v0_1_audit_human_review.md)
+> and [`analysis/v0_1_report.md`](../../analysis/v0_1_report.md) §3.5).
+> They are **not** part of the v0.1 judge checklist in §6 and were
+> **not** applied to any v0.1 verdict. In v0.2 they will be
+> operationalized as **flags** emitted by the Structural Auditor agent
+> (Agent 2), not as criteria scored by the dual judges, to avoid
+> amplifying inter-judge disagreement on threshold-laden questions.
+
+### Motivation
+
+The v0.1 dual-judge architecture detects **content violations** (banned
+words, missing rules, individual-rule failures) but not **structural
+violations** of the rule set as a whole — redundancy,
+over-parameterisation, fabricated mechanism, flat enumeration. Both
+judges can silently PASS a structurally broken rule set if every
+individual rule clears N1-N8 and avoids §3 banned words. The v0.1 audit
+surfaced one clear case of this (GPT trial 3) and indications of milder
+versions in others.
+
+N9-N12 close that gap.
+
+### N9 — Parsimony
+
+The total rule count should not vastly exceed the observation count.
+With 12 observations as input, an induction producing significantly
+more than ~12 rules suggests either redundancy or fabrication beyond
+what the observations support.
+
+**Proposed v0.2 thresholds (Agent 2):**
+- `rule_count > 15` → Tier-2 structural flag.
+- `rule_count > 20` → Tier-1 structural flag.
+
+**Trigger case (v0.1):** GPT trial 3 Stage 2 produced 17 rules from 12
+observations. Both judges PASSed it because parsimony is not in N1-N8.
+
+### N10 — Independence
+
+No two rules should describe the same phenomenon. Each rule must add
+content the other rules do not already cover.
+
+**Operationalization:** Agent 2 clusters rule statements by semantic
+similarity (LLM judgment, low temperature). Any cluster with > 1
+member → flag, with the cluster members listed verbatim for human
+review.
+
+**Trigger case (v0.1):** GPT trial 3 Stage 2 — rule 9 and rule 13 both
+stated "the cart stops once pushing ceases" with slightly different
+framings.
+
+### N11 — Coverage traceability
+
+Each rule must trace to specific observation(s). A rule that does not
+trace to any observation has been fabricated. This is functionally
+equivalent to introducing a banned concept: the rule content is not
+derivable from the input, even if no §3 word appears.
+
+**Operationalization:** Agent 2 prompts the model output (or applies a
+post-hoc trace) for an observation-id citation per rule. Any rule with
+no traceable source → flag.
+
+**Trigger case (v0.1):** GPT trial 3 Stage 2 rule 13 introduced "the
+road and air rob motion from the cart." No observation among the 12
+mentions the road or air as a motion-robbing mechanism. The mechanism
+is fabricated and conceptually equivalent to Newtonian friction, but
+does not trip §3 because the word "friction" is never used.
+
+### N12 — Hierarchy
+
+The rule set should have logical structure — core principles and
+derived corollaries — not a flat enumeration. A list of N rules with
+no explicit relations between them is a sign of pattern-matching
+rather than theory-building.
+
+**Operationalization:** Agent 2 scans for hierarchy markers (`derived
+from`, `corollary of`, `combined with`, `special case of`, `follows
+from rule N`, etc.). Total absence in a rule set of size ≥ 5 → Tier-2
+flag.
+
+### Why these are not in §2 or §6
+
+N1-N8 (§2) check that each individual rule is *content-acceptable* —
+no banned words, covers the required phenomena. N9-N12 check that the
+rule *set* is *structurally acceptable* — parsimonious, independent,
+traceable, hierarchical. The two axes are orthogonal: a rule set can
+have zero banned words and still be a redundant, fabricated, flat soup.
+
+The v0.1 prereg locked N1-N8 only. Bolting N9-N12 into §6 (the judge
+checklist) would require the dual LLM judges to score on
+threshold-laden criteria ("how many rules is too many?", "are these
+two rules really saying the same thing?"), which is the class of
+question where inter-judge IRR is hardest to control. v0.2 keeps the
+axes separate: dual judges apply N1-N8, Agent 2 emits N9-N12 flags,
+and human review is the tie-breaker on both pathways.
+
 ## Changelog
 
 - **v0.1 (2026-05-08)** — Initial lean draft. Necessary-conditions style
@@ -209,3 +316,10 @@ at Step 2: condition N6 unmet — heaven/earth distinction not made").
   Banned terms include quantitative concepts (mass, density, momentum,
   force-as-quantity); descriptive terms (heavy, thick, fast) allowed.
   Projectile tension required to be acknowledged but not resolved.
+
+- **2026-05-12 — post-v0.1 documentation expansion.** Added §8
+  Structural criteria (N9-N12). Documentation-only; does NOT modify
+  §2 (N1-N8) or §6 (judge checklist) used at the
+  `prereg-v0.1-locked` tag. v0.1 reproducers should checkout the
+  locked tag for the original file. N9-N12 will be operationalized
+  as flags by the v0.2 Structural Auditor agent (Agent 2).
