@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-11 17:36 UTC  
+**Generated:** 2026-05-12 08:30 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ❌ Stalled |
-| Active days | 1 / 7 |
-| Total commits | 6 |
+| Active days | 2 / 7 |
+| Total commits | 7 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 11**
 
@@ -25,6 +25,10 @@
 - `a725619` findings: add mermaid pipeline diagram — _dongzhang84_ `2026-05-11 02:12`
 - `bc3b990` audit: apply 22 human verdicts; P1 CONFIRMED, P3 CONFIRMED — _dongzhang84_ `2026-05-11 01:49`
 - `d58e0ab` audit: persist Stage 1-3 human review (17/22 cases done) — _dongzhang84_ `2026-05-11 01:20`
+
+**Tue – Tuesday, May 12**
+
+- `a1ce4cc` docs: add §8 Structural criteria (N9-N12) to ideal_induction.md — _dongzhang84_ `2026-05-12 01:30`
 
 ---
 
