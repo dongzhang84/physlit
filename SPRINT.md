@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-12 08:37 UTC  
+**Generated:** 2026-05-12 08:41 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 9 |
+| Total commits | 10 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **3** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | **4** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 11**
 
@@ -28,6 +28,7 @@
 
 **Tue – Tuesday, May 12**
 
+- `f3388cf` audit(tune): widen parser + N12 hierarchy detection — _dongzhang84_ `2026-05-12 01:41`
 - `bce99a7` chore: gitignore Agent-2 dryrun output + local zh.md drafts — _dongzhang84_ `2026-05-12 01:37`
 - `29e4e17` feat(audit): Agent 2 prototype — N9/N11/N12 structural-audit layer — _dongzhang84_ `2026-05-12 01:36`
 - `a1ce4cc` docs: add §8 Structural criteria (N9-N12) to ideal_induction.md — _dongzhang84_ `2026-05-12 01:30`
