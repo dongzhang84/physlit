@@ -1,17 +1,19 @@
-"""Verify ``predictions/v0_1_prereg.md`` integrity.
+"""Verify integrity of every locked ``predictions/v0_*_prereg.md``.
 
-Pre-commit hook + CI guard. Computes SHA-256 of the canonical content
-(everything below the ``<!-- LOCK BOUNDARY -->`` line), compares to the
-declared hash in the header. Fails on mismatch.
+Pre-commit hook + CI guard. For each prereg file under ``predictions/``
+matching ``v*_prereg.md``, computes SHA-256 of its canonical content
+(everything below the ``<!-- LOCK BOUNDARY -->`` line) and compares to
+the declared hash in that file's header. Fails on any mismatch.
 
-No-op if:
+Per-file behaviour:
 
-- the prereg file does not exist (Phase 5 not yet started); or
-- the header has not yet been populated by the lock script
-  (drafted but not locked).
+- prereg file missing: not checked (the file simply does not exist).
+- header has not yet been populated by the lock script: not checked
+  (drafted but not locked is allowed).
+- header declares a hash: must match the computed hash exactly.
 
-Once locked, any silent edit to the canonical content fails this
-script and therefore the pre-commit hook and CI.
+Once a prereg is locked, any silent edit to its canonical content
+fails this script and therefore the pre-commit hook and CI.
 """
 
 from __future__ import annotations
@@ -21,7 +23,8 @@ import re
 import sys
 from pathlib import Path
 
-PREREG_PATH = Path("predictions/v0_1_prereg.md")
+PREREG_DIR = Path("predictions")
+PREREG_GLOB = "v*_prereg.md"
 BOUNDARY = "<!-- LOCK BOUNDARY"
 
 _DECLARED_HASH_RE = re.compile(
@@ -30,11 +33,11 @@ _DECLARED_HASH_RE = re.compile(
 )
 
 
-def _canonical_bytes(text: str) -> bytes:
+def _canonical_bytes(text: str, path: Path) -> bytes:
     idx = text.find(BOUNDARY)
     if idx < 0:
         print(
-            f"PREREG INTEGRITY FAILURE: {PREREG_PATH}: missing LOCK BOUNDARY marker.",
+            f"PREREG INTEGRITY FAILURE: {path}: missing LOCK BOUNDARY marker.",
             file=sys.stderr,
         )
         sys.exit(1)
@@ -44,34 +47,51 @@ def _canonical_bytes(text: str) -> bytes:
     return after_boundary_line[1].encode("utf-8")
 
 
-def main() -> int:
-    if not PREREG_PATH.exists():
-        return 0
-
-    text = PREREG_PATH.read_text()
+def _check_one(path: Path) -> tuple[str, str] | None:
+    """Return ``(declared, actual)`` on mismatch, else ``None``."""
+    text = path.read_text()
     header = text.split(BOUNDARY, 1)[0]
     match = _DECLARED_HASH_RE.search(header)
     if match is None:
-        # Drafted but not yet locked — hook is a no-op.
-        return 0
-
+        # Drafted but not yet locked — skip.
+        return None
     declared = match.group(1).lower()
-    actual = hashlib.sha256(_canonical_bytes(text)).hexdigest()
+    actual = hashlib.sha256(_canonical_bytes(text, path)).hexdigest()
     if declared == actual:
+        return None
+    return declared, actual
+
+
+def main() -> int:
+    if not PREREG_DIR.is_dir():
+        return 0
+    prereg_paths = sorted(PREREG_DIR.glob(PREREG_GLOB))
+    if not prereg_paths:
         return 0
 
-    print(
-        f"PREREG INTEGRITY FAILURE: {PREREG_PATH}\n"
-        f"  declared SHA-256: {declared}\n"
-        f"  actual SHA-256:   {actual}\n"
-        f"\n"
-        f"  The canonical content (everything below the LOCK BOUNDARY\n"
-        f"  line) has been edited since the lock. To revise the prereg,\n"
-        f"  create a new version (e.g. v0.1.1) with its own tag, NOT by\n"
-        f"  editing this file in place. See `CLAUDE.md` 'Pre-registration\n"
-        f"  is irreversible' for the methodology rationale.",
-        file=sys.stderr,
-    )
+    failed: list[tuple[Path, str, str]] = []
+    for path in prereg_paths:
+        result = _check_one(path)
+        if result is not None:
+            declared, actual = result
+            failed.append((path, declared, actual))
+
+    if not failed:
+        return 0
+
+    for path, declared, actual in failed:
+        print(
+            f"PREREG INTEGRITY FAILURE: {path}\n"
+            f"  declared SHA-256: {declared}\n"
+            f"  actual SHA-256:   {actual}\n"
+            f"\n"
+            f"  The canonical content (everything below the LOCK BOUNDARY\n"
+            f"  line) has been edited since the lock. To revise the prereg,\n"
+            f"  create a new version (e.g. v0.1.1, v0.2.1) with its own tag,\n"
+            f"  NOT by editing this file in place. See `CLAUDE.md`\n"
+            f"  'Pre-registration is irreversible' for the methodology rationale.",
+            file=sys.stderr,
+        )
     return 1
 
 

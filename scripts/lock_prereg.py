@@ -1,4 +1,4 @@
-"""Lock ``predictions/v0_1_prereg.md``.
+"""Lock ``predictions/<version>_prereg.md``.
 
 Computes SHA-256 of the **canonical content** (everything below the
 ``<!-- LOCK BOUNDARY -->`` line), reads HEAD commit + UTC timestamp,
@@ -14,6 +14,10 @@ rule is intentional and applies only to this lock operation.
 
 Usage:
     uv run python scripts/lock_prereg.py [version]   # default v0.1
+                                                     # e.g. v0.2
+
+The version arg maps to ``predictions/<version_with_underscores>_prereg.md``
+(``v0.1`` → ``predictions/v0_1_prereg.md``).
 """
 
 from __future__ import annotations
@@ -25,15 +29,19 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
-PREREG_PATH = Path("predictions/v0_1_prereg.md")
 BOUNDARY = "<!-- LOCK BOUNDARY"
 
 
-def _canonical_bytes(text: str) -> bytes:
+def _prereg_path_for(version: str) -> Path:
+    """Map ``v0.1`` → ``predictions/v0_1_prereg.md`` etc."""
+    return Path(f"predictions/{version.replace('.', '_')}_prereg.md")
+
+
+def _canonical_bytes(text: str, path: Path) -> bytes:
     """Return everything below the LOCK BOUNDARY line as UTF-8 bytes."""
     idx = text.find(BOUNDARY)
     if idx < 0:
-        raise SystemExit(f"{PREREG_PATH}: missing LOCK BOUNDARY marker")
+        raise SystemExit(f"{path}: missing LOCK BOUNDARY marker")
     after_boundary_line = text[idx:].split("\n", 1)
     if len(after_boundary_line) < 2:
         return b""
@@ -57,9 +65,10 @@ def _replace_unique_line(text: str, prefix: str, replacement: str) -> str:
 def main() -> int:
     version = sys.argv[1] if len(sys.argv) > 1 else "v0.1"
     tag = f"prereg-{version}-locked"
+    prereg_path = _prereg_path_for(version)
 
-    if not PREREG_PATH.exists():
-        raise SystemExit(f"{PREREG_PATH} does not exist")
+    if not prereg_path.exists():
+        raise SystemExit(f"{prereg_path} does not exist")
 
     rc = subprocess.run(
         ["git", "rev-parse", "-q", "--verify", f"refs/tags/{tag}"],
@@ -68,10 +77,10 @@ def main() -> int:
         check=False,
     )
     if rc.returncode == 0:
-        raise SystemExit(f"Tag {tag} already exists. Use a new version (e.g. v0.1.1).")
+        raise SystemExit(f"Tag {tag} already exists. Use a new version (e.g. {version}.1).")
 
-    text = PREREG_PATH.read_text()
-    canonical_hash = hashlib.sha256(_canonical_bytes(text)).hexdigest()
+    text = prereg_path.read_text()
+    canonical_hash = hashlib.sha256(_canonical_bytes(text, prereg_path)).hexdigest()
     head_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
     timestamp = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -97,16 +106,16 @@ def main() -> int:
         f"BOUNDARY line): `{canonical_hash}`",
     )
 
-    PREREG_PATH.write_text(text)
+    prereg_path.write_text(text)
 
-    print(f"Updated {PREREG_PATH} with lock metadata:")
+    print(f"Updated {prereg_path} with lock metadata:")
     print(f"  commit:    {head_commit}")
     print(f"  tag:       {tag}")
     print(f"  timestamp: {timestamp}")
     print(f"  sha-256:   {canonical_hash}")
     print()
-    print("Now review `git diff predictions/v0_1_prereg.md` and run:")
-    print(f"  git add {PREREG_PATH}")
+    print(f"Now review `git diff {prereg_path}` and run:")
+    print(f"  git add {prereg_path}")
     print(f"  git commit -m 'lock: pre-register PhysLit {version} predictions'")
     print(f"  git tag -a {tag} -m 'Pre-registered predictions locked at {timestamp}'")
     print("  git push origin main")
