@@ -114,8 +114,12 @@ class GeminiAgent(JudgeBase):
 
         text = response.text or ""
         usage = getattr(response, "usage_metadata", None)
-        in_tok = int(getattr(usage, "prompt_token_count", 0)) if usage else 0
-        out_tok = int(getattr(usage, "candidates_token_count", 0)) if usage else 0
+        # Gemini 2.5 Pro returns `usage_metadata` with `candidates_token_count`
+        # set to None (not missing) when the response is empty or truncated.
+        # Treat None the same as 0 to keep the cost-estimator and audit fields
+        # numeric.
+        in_tok = int(getattr(usage, "prompt_token_count", None) or 0) if usage else 0
+        out_tok = int(getattr(usage, "candidates_token_count", None) or 0) if usage else 0
         return text, in_tok, out_tok
 
     def estimate_cost(self, input_tokens: int, output_tokens: int) -> float:
