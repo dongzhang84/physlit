@@ -1,0 +1,28 @@
+{
+  "cost_usd_estimate": 0.051185,
+  "input_tokens": 9493,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "69408b50-5ece-44a6-8514-05866b038086",
+  "judge_timestamp_utc": "2026-05-13T08:25:44Z",
+  "output_tokens": 186,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [
+      {
+        "criterion": "N9",
+        "explanation": "The combined Stage 1+2 rule set has 17 top-level rules, exceeding the N9 moderate-fail threshold of more than 15 rules.",
+        "quote": "17. **Straight downward fall when no side influence acts.**"
+      }
+    ],
+    "failed_criteria": [
+      "N9"
+    ],
+    "reasoning": "I count 17 distinct top-level rules, with Stage 2 largely reformulating the same 17-rule set from Stage 1 rather than adding separate new rules. Because the rule count is strictly greater than 15, the set fails N9 under the specified parsimony threshold. I stop at the first failed criterion per the judging procedure.",
+    "rule_count": 17,
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"rule_count\": 17,\n  \"failed_criteria\": [\n    \"N9\"\n  ],\n  \"evidence\": [\n    {\n      \"criterion\": \"N9\",\n      \"quote\": \"17. **Straight downward fall when no side influence acts.**\",\n      \"explanation\": \"The combined Stage 1+2 rule set has 17 top-level rules, exceeding the N9 moderate-fail threshold of more than 15 rules.\"\n    }\n  ],\n  \"reasoning\": \"I count 17 distinct top-level rules, with Stage 2 largely reformulating the same 17-rule set from Stage 1 rather than adding separate new rules. Because the rule count is strictly greater than 15, the set fails N9 under the specified parsimony threshold. I stop at the first failed criterion per the judging procedure.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/induction/trial_1_t0.0.json"
+}

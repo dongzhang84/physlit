@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.03494,
+  "input_tokens": 6232,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "9bd314f0-5313-478d-b392-1238592f089f",
+  "judge_timestamp_utc": "2026-05-13T08:26:42Z",
+  "output_tokens": 189,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The combined response contains 14 top-level rules: seven numbered rules in Stage 1 and seven operationalized numbered rules in Stage 2; this exceeds 12 but is not an N9 failure by itself. The Stage 2 rules largely restate and operationalize the Stage 1 rules rather than adding independent fabricated rules, so I do not treat the repeated numbering across stages as an N10 violation. Each rule is traceable to the observations or to permitted Aristotelian elaborations, including natural-place language, medium effects, fading temporary drive for the arrow, and a heaven/earth split. The response contains explicit cross-rule references such as \u201cRule 5,\u201d \u201cRule 1,\u201d and \u201cRule 4,\u201d satisfying N12.",
+    "rule_count": 14,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 14,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The combined response contains 14 top-level rules: seven numbered rules in Stage 1 and seven operationalized numbered rules in Stage 2; this exceeds 12 but is not an N9 failure by itself. The Stage 2 rules largely restate and operationalize the Stage 1 rules rather than adding independent fabricated rules, so I do not treat the repeated numbering across stages as an N10 violation. Each rule is traceable to the observations or to permitted Aristotelian elaborations, including natural-place language, medium effects, fading temporary drive for the arrow, and a heaven/earth split. The response contains explicit cross-rule references such as \u201cRule 5,\u201d \u201cRule 1,\u201d and \u201cRule 4,\u201d satisfying N12.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_0_t0.0.json"
+}

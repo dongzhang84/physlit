@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.15757500000000002,
+  "input_tokens": 9015,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "04e4034f-558d-492c-afbd-09432a08dc1f",
+  "judge_timestamp_utc": "2026-05-13T08:27:03Z",
+  "output_tokens": 298,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The rule set contains 7 distinct top-level rules (same 7 in Stage 1 and Stage 2), well within the parsimony threshold. Each rule addresses a distinct phenomenon (natural directions, weight-speed, shape-speed, medium hindrance, floating, ground-effort, projectile motion) with no paraphrase pairs. All rules trace to specific observations (1-12) and use permitted Aristotelian elaborations (natural place, medium resistance, impressed/carried motion with explicit fading). Cross-rule references appear explicitly (e.g., 'restoring Rule 1', 'Rule 3 vs Rule 2', 'Rule 6 strictly couples...'), satisfying N12.",
+    "rule_count": 7,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 7,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The rule set contains 7 distinct top-level rules (same 7 in Stage 1 and Stage 2), well within the parsimony threshold. Each rule addresses a distinct phenomenon (natural directions, weight-speed, shape-speed, medium hindrance, floating, ground-effort, projectile motion) with no paraphrase pairs. All rules trace to specific observations (1-12) and use permitted Aristotelian elaborations (natural place, medium resistance, impressed/carried motion with explicit fading). Cross-rule references appear explicitly (e.g., 'restoring Rule 1', 'Rule 3 vs Rule 2', 'Rule 6 strictly couples...'), satisfying N12.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_2_t0.0.json"
+}

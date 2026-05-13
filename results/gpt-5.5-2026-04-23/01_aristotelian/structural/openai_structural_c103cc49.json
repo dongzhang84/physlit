@@ -1,0 +1,28 @@
+{
+  "cost_usd_estimate": 0.052254999999999996,
+  "input_tokens": 9663,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "e2d1600f-f606-4386-8600-8e9fc103cc49",
+  "judge_timestamp_utc": "2026-05-13T08:25:57Z",
+  "output_tokens": 197,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [
+      {
+        "criterion": "N9",
+        "explanation": "Counting the 17 top-level numbered rules in Stage 1 plus the 17 top-level numbered operational rules in Stage 2 gives 34 distinct top-level rules, exceeding the N9 high-severity threshold of rule_count > 20.",
+        "quote": "17. **Joint-dependence rule**"
+      }
+    ],
+    "failed_criteria": [
+      "N9"
+    ],
+    "reasoning": "The combined Stage 1 and Stage 2 response contains 34 top-level numbered rules when treated mechanically as the input rule set. This exceeds the N9 parsimony fail threshold of more than 20 rules, so the judging procedure stops at N9. No further criteria are adjudicated after the first fail under the specified procedure.",
+    "rule_count": 34,
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"rule_count\": 34,\n  \"failed_criteria\": [\n    \"N9\"\n  ],\n  \"evidence\": [\n    {\n      \"criterion\": \"N9\",\n      \"quote\": \"17. **Joint-dependence rule**\",\n      \"explanation\": \"Counting the 17 top-level numbered rules in Stage 1 plus the 17 top-level numbered operational rules in Stage 2 gives 34 distinct top-level rules, exceeding the N9 high-severity threshold of rule_count > 20.\"\n    }\n  ],\n  \"reasoning\": \"The combined Stage 1 and Stage 2 response contains 34 top-level numbered rules when treated mechanically as the input rule set. This exceeds the N9 parsimony fail threshold of more than 20 rules, so the judging procedure stops at N9. No further criteria are adjudicated after the first fail under the specified procedure.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian/induction/trial_2_t0.0.json"
+}

@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.03369,
+  "input_tokens": 6166,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "b17dbd96-3280-431a-8f4d-dc14bea6675e",
+  "judge_timestamp_utc": "2026-05-13T08:26:57Z",
+  "output_tokens": 143,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The combined response presents seven distinct top-level rules, with Stage 2 reformulating the same seven rather than adding new independent rules, so N9 passes. The rules cover different operational domains and do not duplicate the same phenomenon closely enough to trigger N10. Each rule is traceable to the observations or to permitted Aristotelian elaborations, and the response contains explicit cross-rule references such as Rule 7, Rule 2, Rule 3, and Rule 1, so N11 and N12 pass.",
+    "rule_count": 7,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 7,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The combined response presents seven distinct top-level rules, with Stage 2 reformulating the same seven rather than adding new independent rules, so N9 passes. The rules cover different operational domains and do not duplicate the same phenomenon closely enough to trigger N10. Each rule is traceable to the observations or to permitted Aristotelian elaborations, and the response contains explicit cross-rule references such as Rule 7, Rule 2, Rule 3, and Rule 1, so N11 and N12 pass.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_1_t0.0.json"
+}

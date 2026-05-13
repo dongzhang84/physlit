@@ -60,6 +60,17 @@ def _load_dotenv() -> None:
         os.environ.setdefault(key.strip(), value.strip())
 
 
+def _verdict_label(parsed: dict[str, object]) -> str:
+    """Normalise a content-judge verdict label.
+
+    Stage 3 judgments use the ``overall_verdict`` JSON key (one verdict
+    over five scenarios); Stages 1-2 use ``verdict``. Mirrors the
+    fallback used in ``physlit.judges.aggregate._verdict_str``.
+    """
+    raw = parsed.get("verdict") or parsed.get("overall_verdict") or "?"
+    return str(raw)
+
+
 def _build_prompt(
     template: PromptTemplate,
     *,
@@ -133,9 +144,9 @@ def main() -> int:
                 "stage": case.stage,
             },
             tested_response=case.response_text,
-            judge_a_verdict=str(case.judge_a_parsed.get("verdict", "?")),
+            judge_a_verdict=_verdict_label(case.judge_a_parsed),
             judge_a_reasoning=str(case.judge_a_parsed.get("reasoning", "")),
-            judge_b_verdict=str(case.judge_b_parsed.get("verdict", "?")),
+            judge_b_verdict=_verdict_label(case.judge_b_parsed),
             judge_b_reasoning=str(case.judge_b_parsed.get("reasoning", "")),
             ideal_induction_md=ideal_induction_md,
             pass_fail_criteria_md=pass_fail_criteria_md,

@@ -8,14 +8,14 @@
 
 ## Headline
 
-**Agreement: 3 / 17 (17.6 %)** — v0.2.1 prereg threshold for V1 CONFIRMED was ≥ 12 of 17; **REFUTED**.
+**Agreement: 5 / 17 (29.4 %)** — v0.2.1 prereg threshold for V1 CONFIRMED was ≥ 12 of 17; **REFUTED**.
 
-**Directional bias.** Of 14 disagreements: **13** are *Agent 1 = PASS, human = FAIL* (Agent 1 too lenient); **1** are *Agent 1 = FAIL, human = PASS* (Agent 1 too strict). The bias is overwhelmingly toward over-pass.
+**Directional bias.** Of 12 disagreements: **11** are *Agent 1 = PASS, human = FAIL* (Agent 1 too lenient); **1** are *Agent 1 = FAIL, human = PASS* (Agent 1 too strict). The bias is overwhelmingly toward over-pass.
 
 **Same-vendor subset (Gemini was v0.1 tested model).**
 
-- Gemini-tested subset (5 cases): 1/5 agreement (20.0 %)
-- Cross-vendor (Claude + GPT tested, 12 cases): 2/12 agreement (16.7 %)
+- Gemini-tested subset (5 cases): 2/5 agreement (40.0 %)
+- Cross-vendor (Claude + GPT tested, 12 cases): 3/12 agreement (25.0 %)
 
 v0.2.1 resolver is `gemini-2.5-pro`, one generation behind the v0.1 tested Gemini (`gemini-3.1-pro-preview`); the same-vendor subset is same-vendor different-generation.
 
@@ -23,39 +23,63 @@ v0.2.1 resolver is `gemini-2.5-pro`, one generation behind the v0.1 tested Gemin
 
 ## Agreement (3 cases)
 
+### Case 7 — `claude-opus-4-7` trial 3 (formulation)
+
+- **Dual-judge:** Claude `PASS` vs OpenAI `FAIL`
+- **Human verdict:** **FAIL**
+  - Reasoning: Rule 3 uses "denser medium (honey) than a thinner one" — density adjective derivative
+- **Agent 1 verdict:** **FAIL** (agreed_with: `judge_b`)
+  - Failed clause: `pass_fail_criteria Stage 2 bullet 4, referencing ideal_induction §3, banned concept 'density'`
+  - Evidence quote: > For a given body, descent is slower in a denser medium (honey) than in a thinner one (air); rank the media by observed slowness of a standard pebble passing through them.
+  - Reasoning: I agree with Judge B. The Stage 2 criteria state that no new forbidden concept may be introduced. The list of forbidden concepts in `ideal_induction.md` §3 includes 'density (as a defined quantity)'. The 'Common near-passes' section (§5) further clarifies that a phrase like 'less dense' constitutes a FAIL. The tested response uses the comparative 'denser', which falls under this prohibition. By providing an operational procedure to rank media by this property ('rank the media by observed slowness of a standard pebble'), the response is treating 'density' as a defined quantity, even if it's defined in Aristotelian terms. The use of this specific, banned term, when allowed alternatives like 'thicker' were available, triggers an automatic fail according to a mechanical reading of the criteria.
+
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_formulation_2cb3db46.json`)_
+
 ### Case 1 — `claude-opus-4-7` trial 2 (induction)
 
 - **Dual-judge:** Claude `PASS` vs OpenAI `FAIL`
 - **Human verdict:** **FAIL**
   - Reasoning: Rule uses "denser than itself" — density adjective derivative, matches §5 failure exemplar "lower density"
 - **Agent 1 verdict:** **FAIL** (agreed_with: `judge_b`)
-  - Failed clause: `ideal_induction.md §3, banned concept 'density (as a defined quantity)'`
+  - Failed clause: `ideal_induction.md §3, banned concept 'density', as clarified by the near-pass example in §5`
   - Evidence quote: > A thing placed in a medium denser than itself is held up by that medium and rests at the boundary.
-  - Reasoning: I agree with Judge B. The Judge Checklist (§6) requires an immediate FAIL at Step 1 if any banned concept from §3 is present. The response uses the word 'denser' in its explanation for floating. The criteria in §3 ban 'density (as a defined quantity)', and the 'Common near-passes' section (§5) clarifies this by explicitly marking 'less dense' as a FAIL condition. The response's use of 'denser' is functionally equivalent to this forbidden example, as it imports a concept for comparing substances to explain buoyancy, which is post-Aristotelian. While Judge A correctly noted the response's strengths against criteria N1-N8, the presence of a banned term is a non-negotiable failure according to the evaluation protocol.
+  - Reasoning: The verdict is FAIL based on a strict application of the criteria's Step 1 checklist. Judge B correctly identifies that the response uses a banned concept. The criteria in §3 ban 'density (as a defined quantity)'. While the tested model does not provide a formal definition, the 'Common near-passes that fail' section (§5) explicitly states that a response like 'Flame rises because hot air is less dense' is a FAIL. The model's use of 'denser' in its Rule 6 is conceptually equivalent to the 'less dense' example and thus constitutes a banned move. Although the rest of the induction is strong and meets all other necessary conditions as noted by Judge A, the checklist requires stopping at the first failure, which occurs at Step 1.
 
-_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_induction_51b40be6.json`)_
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_induction_7c74f6bf.json`)_
+
+### Case 5 — `gemini-3.1-pro-preview` trial 4 (induction)
+
+- **Dual-judge:** Claude `PASS` vs OpenAI `FAIL`
+- **Human verdict:** **FAIL**
+  - Reasoning: Tension Note mentions "the dirt road actively robbing the cart of its motion" — friction implication; 12 observations contain no "road acts on cart" mechanism
+- **Agent 1 verdict:** **FAIL** (agreed_with: `judge_b`)
+  - Failed clause: `pass_fail_criteria.md Stage 1 bullet 3`
+  - Evidence quote: > Because the rules forbid importing external explanations (like the dirt road actively robbing the cart of its motion), it is difficult to cleanly reconcile why horizontal motion demands a continuous pusher in one observation, yet easily persists without one in the other.
+  - Reasoning: I agree with Judge B. While the model's induced rules are otherwise compliant, the 'Tension Note' violates a critical clause. The `pass_fail_criteria.md` for Stage 1 states: 'Naming a concept *only to deny its applicability* still counts as use.' The model's response explicitly names a mechanism equivalent to the banned concept 'friction' — 'the dirt road actively robbing the cart of its motion' — and then states that the rules forbid importing such an explanation. This action is a direct violation of the specified criterion. Judge A's assessment that no banned concepts appear is incorrect under this strict but explicit rule. Following the instruction to be conservative and apply criteria literally, this constitutes a FAIL.
+
+_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved/google_agent1_content_induction_2e549868.json`)_
 
 ### Case 17 — `gemini-3.1-pro-preview` trial 3 (prediction)
 
 - **Dual-judge:** Claude `PASS` vs OpenAI `FAIL`
 - **Human verdict:** **PASS**
   - Reasoning: Stage 2 boundary notes explicitly state "rules completely fail to cover horizontal forced motions" — Stage 3 "outside scope" is genuine underdetermination
-- **Agent 1 verdict:** **PASS** (agreed_with: `neither`)
-  - Evidence quote: > For Scenario 4: A feather released in a sealed chamber with absolutely nothing inside. Prediction: This scenario is genuinely outside the scope of the rules. Explanation: ...Because all air has been removed and there is no medium present to provide thickness, the rules lack the necessary concepts to determine whether the object will move or how its speed would be ranked.
-  - Reasoning: The tested model's response is a clear PASS for Stage 3. It correctly handles all five scenarios according to the criteria in `pass_fail_criteria.md`. For scenarios 1 and 3, it makes the correct qualitative prediction. For scenarios involving horizontal motion (2 and 5) or a vacuum (4), it correctly identifies them as outside the scope of its induced rules, which is a sign of strong framework fidelity and cross-stage consistency. Its handling of the vacuum chamber scenario is a textbook example of the explicitly permitted 'PASS mode B'. The response consistently avoids banned concepts and bases its reasoning on its own internal rules. Since both judges returned '?' as their verdict, my PASS verdict agrees with neither.
+- **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
+  - Evidence quote: > Prediction: This scenario is genuinely outside the scope of the rules. ... Explanation: The operational rules dictate that an object's downward speed is the steady outcome of a competition between an object's heaviness/shape and the thickness of the surrounding medium (Rule 2 and Rule 3). ... Because all air has been removed and there is no medium present to provide thickness, the rules lack the necessary concepts to determine whether the object will move or how its speed would be ranked.
+  - Reasoning: The tested response passes all criteria for a Stage 3 prediction. For each scenario, the prediction is consistent with an Aristotelian framework, correctly cites its own rules, and avoids all banned concepts. The refusals to predict in scenarios 2 (horizontal motion) and 4 (vacuum) are particularly strong evidence of framework fidelity, as the model correctly identifies the limitations of its own rules rather than defaulting to standard physics. The handling of scenario 4 is a textbook example of the allowed 'Pass mode B' defined in the criteria. As the response satisfies the requirements for all five scenarios, I agree with Judge A's PASS verdict.
 
-_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved/google_agent1_content_prediction_664c215c.json`)_
+_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved/google_agent1_content_prediction_00e17772.json`)_
 
 ### Case 14 — `gpt-5.5-2026-04-23` trial 1 (prediction)
 
 - **Dual-judge:** Claude `PASS` vs OpenAI `FAIL`
 - **Human verdict:** **PASS**
   - Reasoning: Stage 2 Rule 10 boundary cases explicitly state "does not cover smooth roads, slopes, ice" — Stage 3 "outside scope" answer is faithful to Stage 2's self-defined limit (§4.4 PASS mode B)
-- **Agent 1 verdict:** **PASS** (agreed_with: `neither`)
-  - Evidence quote: > This scenario is **outside the scope** of the operational rules. The rules discuss feather-down moving through **air**, where air hindrance and breezes matter. They do not contain a rule for a chamber in which all air has been removed and nothing remains inside.
-  - Reasoning: The tested model's response passes the Stage 3 criteria for all five scenarios. It consistently provides predictions aligned with an Aristotelian or impetus-theory framework, cites its own internal rules, and avoids all banned concepts. The response for Scenario 4 (vacuum chamber) is a textbook example of the allowed 'PASS mode B' from the criteria, refusing to predict on scope grounds. Similarly, the response for Scenario 3 (stones in water) correctly provides an ordinal ranking while correctly stating that a numerical ratio is outside the scope of its rules, another explicit PASS condition. As the provided judge verdicts were empty, I could not agree with either judge and performed the evaluation from scratch, finding the model's performance to be a clear PASS.
+- **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
+  - Evidence quote: > Prediction: This scenario is outside the scope of the operational rules. The rules discuss feather-down moving through air, where air hindrance and breezes matter. They do not contain a rule for a chamber in which all air has been removed and nothing remains inside.
+  - Reasoning: The tested response correctly provides Aristotelian-style predictions for all applicable scenarios and appropriately identifies scenarios outside the scope of its induced rules, demonstrating strong framework fidelity. Its handling of Scenario 4 (feather in a vacuum) perfectly matches 'PASS mode B' from the `pass_fail_criteria.md` document by refusing to predict on scope grounds. The response also correctly uses a non-Newtonian, impetus-style explanation for the arrow in Scenario 5 and provides proper qualitative rankings in Scenarios 1 and 3, all while citing its own rules and avoiding banned concepts. As all Stage 3 criteria are met across all five scenarios, the verdict is PASS, in agreement with Judge A.
 
-_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_prediction_44263980.json`)_
+_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_prediction_f1cbf393.json`)_
 
 ---
 
@@ -68,20 +92,9 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/goo
   - Reasoning: Boundary cases introduce "smooth vs rough ground" — friction-related concept; observations only mention "level dirt road", no roughness distinction
 - **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
   - Evidence quote: > Does not address pulls on smooth versus rough ground (the rules have no concept distinguishing these), nor pulling through fluid media.
-  - Reasoning: The disagreement hinges on whether mentioning 'smooth versus rough ground' is equivalent to the banned concept 'friction'. I find that it is not. The criteria in `ideal_induction.md` §3 explicitly distinguish between banned theoretical terms like 'friction' and allowed 'ordinary descriptive language' like 'smooth' and 'rough'. The model uses this descriptive language correctly, not to introduce a new rule, but to define a boundary case that its theory does not cover, which is a requirement of Stage 2. Judge B incorrectly equated this descriptive phrasing with a banned theoretical concept. Judge A's assessment was correct: the response meets all Stage 2 criteria, and this specific mention is a feature (defining scope limitations), not a bug.
+  - Reasoning: The response meets all Stage 2 criteria. I agree with Judge A's assessment. Judge B's reason for failure is a misinterpretation of the criteria. The cited phrase is not an introduction of a new concept; rather, it is an explicit statement of a boundary case, which is a requirement for a Stage 2 pass ('Boundary cases are listed; observations not covered are named, not silently dropped.'). The model correctly notes that its own rules do not have a concept to distinguish between smooth and rough surfaces, which is the opposite of introducing and using a banned concept. The terms 'smooth' and 'rough' are acceptable descriptive language, not a forbidden theoretical concept like 'friction'.
 
-_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_formulation_e2b7d272.json`)_
-
-### Case 7 — `claude-opus-4-7` trial 3 (formulation)
-
-- **Dual-judge:** Claude `PASS` vs OpenAI `FAIL`
-- **Human verdict:** **FAIL**
-  - Reasoning: Rule 3 uses "denser medium (honey) than a thinner one" — density adjective derivative
-- **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
-  - Evidence quote: > For a given body, descent is slower in a denser medium (honey) than in a thinner one (air); rank the media by observed slowness of a standard pebble passing through them.
-  - Reasoning: I agree with Judge A. The disagreement hinges on whether the use of 'denser' violates the ban on 'density (as a defined quantity)'. Judge B's FAIL verdict is based on a too-literal interpretation. The criteria explicitly allow descriptive words like 'thick' and 'thin', and the response uses 'denser' and 'thinner' as comparative equivalents. Crucially, the response does not import the modern, quantitative concept of density (mass/volume); instead, it provides its own operational definition derived from the observations: a 'denser' medium is one in which a standard pebble moves more slowly. This is an act of induction, not concept-smuggling. Since the response meets all other Stage 2 criteria (operational form, scope, boundary cases), the verdict is PASS.
-
-_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_formulation_0eb215aa.json`)_
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_formulation_4647aaa9.json`)_
 
 ### Case 8 — `claude-opus-4-7` trial 4 (formulation)
 
@@ -90,9 +103,9 @@ _(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google
   - Reasoning: Rule 9 decomposes arrow motion into "imparted-direction component" and "natural component" — vector component decomposition; no such structure in observations
 - **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
   - Evidence quote: > While the imparted motion persists, it adds to the natural tendency, producing a curved path: the imparted-direction component shrinks over time while the natural component (downward, for heavy bodies) does not.
-  - Reasoning: The verdict is PASS, agreeing with Judge A. The disagreement hinges on Judge B's claim that the response's 'component-style decomposition of motion' in Rule 9 is a forbidden concept. This interpretation is incorrect. The response describes a qualitative composite motion where an 'imparted' motion fades while a 'natural' motion persists. This is not equivalent to modern vector analysis; rather, it is a formulation of impetus theory, a known medieval scholastic development of Aristotelianism. The `ideal_induction.md` criteria, in §5, explicitly identify such an explanation as a PASS case, provided the imparted motion is described as fading and not conserved, which the response does perfectly. Judge B over-interpreted the descriptive term 'component' as importing a banned quantitative scheme, but the model's formulation remains firmly within the permitted conceptual space.
+  - Reasoning: I agree with Judge A's PASS verdict. Judge B flagged the use of 'component-style decomposition' in Rule 9 as a forbidden post-Aristotelian concept. However, this interpretation is incorrect when read against the criteria. The quoted language is used to describe a model of projectile motion based on a fading 'imparted motion' combined with a constant 'natural tendency', which is a qualitative description of impetus theory. The criteria file `ideal_induction.md` §5 explicitly allows for this, stating a response PASSES if it 'explains observation 7 via a Buridan / Oresme-style impetus — an impressed motion... that is explicitly described as fading with time'. The response's model of a 'shrinking' imparted component perfectly matches this allowed explanation. Therefore, the use of 'component' here is not an import of forbidden Newtonian kinematics but a descriptive term for a permitted physical model. The response meets all other Stage 2 criteria, including operationalizing rules, stating scope, and identifying boundary cases.
 
-_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_formulation_b0d1e3a6.json`)_
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_formulation_a76190be.json`)_
 
 ### Case 10 — `gemini-3.1-pro-preview` trial 0 (formulation)
 
@@ -100,10 +113,10 @@ _(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google
 - **Human verdict:** **FAIL**
   - Reasoning: Uses "a slow, forceful push by a hand" — "forceful" is a force derivative; observations only have "strain harder"
 - **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
-  - Evidence quote: > If an Earthly object is horizontally launched by a swift snap in a thin medium (air), it is imbued with a temporary forward drive ($D_{temp} > 0$). ... The temporary forward drive is explicitly *not* conserved; it strictly diminishes until completely exhausted.
-  - Reasoning: The response meets all Stage 2 criteria from `pass_fail_criteria.md`. It operationalizes each rule, states its scope, discusses what is preserved, and lists boundary cases. I agree with Judge A's assessment. Judge B's verdict hinges on the word 'forceful' being a banned concept, but this interpretation is not supported by the criteria. The `ideal_induction.md` file bans 'force (as a defined quantity, e.g. F = ma)', not the common-language adjective 'forceful' which falls under allowed descriptive language. Furthermore, the model's 'temporary forward drive' is a textbook example of an impetus-style theory, which is explicitly permitted as a passing explanation for projectile motion in `ideal_induction.md` §5. Therefore, the response does not introduce any forbidden concepts and successfully completes the Stage 2 task.
+  - Evidence quote: > whether a slow, forceful push by a hand throwing a stone also imparts this drive, or if it only applies to mechanical launchers like bows.
+  - Reasoning: I agree with Judge A's PASS verdict. Judge B's FAIL verdict hinges on the word 'forceful' being a newly introduced banned concept, but this interpretation is incorrect according to the criteria. The banned concepts list in `ideal_induction.md` §3 prohibits 'force (as a defined quantity, e.g. F = ma)', not the descriptive adjective 'forceful'. The use of 'forceful' here is consistent with the allowed 'ordinary descriptive language' such as 'pushes' or 'pulls'. Because the allegedly banned term is in fact permissible, the response does not violate the Stage 2 criterion against introducing new forbidden concepts. The response meets all other Stage 2 requirements, including operationalization, scope definition, and discussion of boundary cases.
 
-_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved/google_agent1_content_formulation_d54b436c.json`)_
+_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved/google_agent1_content_formulation_44e1a77c.json`)_
 
 ### Case 11 — `gemini-3.1-pro-preview` trial 3 (formulation)
 
@@ -111,10 +124,11 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved
 - **Human verdict:** **FAIL**
   - Reasoning: Classifies horizontal motion as "horizontal forced motions" — "forced motion" category not in 12 observations, imported from external framework
 - **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
-  - Evidence quote: > Boundary cases: This rule handles horizontal motion (like carts moving along the ground) awkwardly, as horizontal travel is neither straight up, straight down, nor celestial, implying it must be a non-natural ("forced") motion, which is not operationalized here.
-  - Reasoning: I agree with Judge A. The disagreement hinges on whether the term 'forced motion' constitutes a forbidden concept. The criteria in `ideal_induction.md` §3 ban 'force (as a defined quantity, e.g. F = ma)', but not the descriptive use of related terms. The model uses 'forced motion' to categorize phenomena like the pushed cart, contrasting it with the 'natural motion' its rules primarily describe. This is not only permissible but is a direct engagement with the 'two-regime distinction' (N1) required from Stage 1. By identifying forced motion as a boundary case that its rules do not yet operationalize, the model is correctly fulfilling the Stage 2 criterion to 'list boundary cases' and name 'observations not covered'. Judge B's claim that this is a forbidden concept is an over-interpretation of the criteria.
+  - Evidence quote: > Boundary notes
+Beyond the specific boundary cases noted under each rule, these operational rules completely fail to cover horizontal "forced" motions (like pushing a cart) or what dictates the speed of carts rolling on earth, as the rules only govern vertical natural motion and celestial circles.
+  - Reasoning: The verdict is PASS. I agree with Judge A's assessment. Judge B incorrectly flags the term 'forced motion' as a forbidden concept. The core of the Aristotelian framework, as specified in the criteria for Stage 1 (`ideal_induction.md` §2, N1), requires a distinction between natural motion and motion requiring a sustained external cause. 'Forced motion' is the standard Aristotelian term for the latter and is not on the banned concepts list in §3. The model uses this term descriptively to correctly identify the limitations of its rules, which is a required behavior for a Stage 2 PASS ('Boundary cases are listed...'). Since the term is not forbidden and its use is appropriate to the framework, Judge B's reason for failure is invalid, and the response meets all Stage 2 criteria.
 
-_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved/google_agent1_content_formulation_56bfecc6.json`)_
+_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved/google_agent1_content_formulation_0d55cc64.json`)_
 
 ### Case 12 — `gemini-3.1-pro-preview` trial 4 (formulation)
 
@@ -123,9 +137,9 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved
   - Reasoning: Boundary cases mention "lunar phases or seasonal changes" — Obs 10 only says "Sun, Moon, fixed stars return to roughly the same positions each day", no lunar phases or seasons
 - **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
   - Evidence quote: > The rule defines a constant circle but does not account for whatever mechanism causes the daily position to be only 'roughly' the same (e.g., seasonal changes or lunar phases), as those specific observations are absent.
-  - Reasoning: The response meets all criteria for a Stage 2 PASS. It successfully restates its rules in operational form, provides a scope and a discussion of conservation for each, and lists boundary cases as required. I agree with Judge A's assessment. Judge B's FAIL verdict is based on a misinterpretation of the criteria; the model mentions 'lunar phases' not as a newly introduced concept for its theory, but as an example of a phenomenon its simplified rules do not cover, which is a required part of the 'Boundary cases' analysis. This demonstrates a correct handling of the task by identifying the limits of its own rules, rather than smuggling in new content.
+  - Reasoning: I agree with Judge A's PASS verdict. The response meets all specified criteria for a Stage 2 submission: rules are operationalized, scope is defined, conservation is addressed, and no banned concepts are used. Judge B's FAIL verdict hinges on the introduction of 'lunar phases'. However, the model mentions this concept not as new explanatory content within a rule, but within a 'Boundary cases' section to illustrate a specific limitation of its own simplified rule, even noting that 'those specific observations are absent'. This is an example of successfully fulfilling the Stage 2 criterion to list boundary cases, not a failure to stay within the provided observations.
 
-_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved/google_agent1_content_formulation_4edcd4f2.json`)_
+_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved/google_agent1_content_formulation_9f3d4240.json`)_
 
 ### Case 9 — `gpt-5.5-2026-04-23` trial 3 (formulation)
 
@@ -133,10 +147,10 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved
 - **Human verdict:** **FAIL**
   - Reasoning: Classifies "dry oak floats" as "Surface-supported in water" — buoyancy proto-concept; observations only describe the phenomenon, not the support mechanism
 - **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
-  - Evidence quote: > If it is dry oak or similar dry woody material, the water supports it at the surface and it does not pass downward... The rule does not explain why dry oak is supported while stone is not, except by classification.
-  - Reasoning: I agree with Judge A's PASS verdict. Judge B's claim that the response introduces a 'direct equivalent of the banned concept buoyancy/support-in-water' is not supported by the criteria. The model's use of phrases like 'the water supports it at the surface' and 'dense heavy' falls under the 'ordinary descriptive language' explicitly permitted in `ideal_induction.md` §3. The response does not introduce a quantitative or theoretical mechanism for buoyancy; in fact, it wisely limits its own explanation by stating the rule is a 'classification' and does not explain the underlying 'why'. This careful phrasing avoids banned concepts and demonstrates strong adherence to the framework's constraints. The response successfully meets all Stage 2 criteria outlined in `pass_fail_criteria.md`.
+  - Evidence quote: > If it is dry oak or similar dry woody material, the water supports it at the surface and it does not pass downward.
+  - Reasoning: I disagree with Judge B's verdict. The response does not introduce a banned concept or a direct equivalent. The word 'buoyancy' is never used. The term 'supports' is an allowed descriptive term under the criteria ('ordinary descriptive language... that any non-physicist would use'), not an import of a forbidden theoretical mechanism. The model explains floating via classification by substance type ('dry oak-like body'), which is explicitly permitted by the Stage 1 criteria (N8). The use of 'dense' is adjectival, not a violation of the ban on 'density (as a defined quantity)'. Therefore, the response does not violate Stage 2 bullet 4. As it satisfies all other Stage 2 criteria, the correct verdict is PASS, in agreement with Judge A.
 
-_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_formulation_b6cc9fb5.json`)_
+_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_formulation_062fa2cc.json`)_
 
 ### Case 2 — `claude-opus-4-7` trial 3 (induction)
 
@@ -145,20 +159,9 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/goo
   - Reasoning: Rule 3 uses "dense iron ball" — same density derivative
 - **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
   - Evidence quote: > The flat pea is resisted more than the dense iron ball (Obs. 1).
-  - Reasoning: I agree with Judge A's PASS verdict. The disagreement hinges on Judge B's claim that the use of 'dense' constitutes a banned concept. However, the criteria in `ideal_induction.md` §3 ban 'density (as a defined quantity),' not the adjectival use of 'dense' as ordinary description. The response uses 'dense' to describe the iron ball, contrasting it with the 'flat pea,' which falls under the allowed category of 'ordinary descriptive language.' It does not propose density as a theoretical quantity or explanatory mechanism. Since the response does not use any banned concepts and, as Judge A correctly notes, meets all necessary conditions (N1-N8) and coverage requirements, it passes the induction stage.
+  - Reasoning: I find that the model's response passes, concurring with Judge A. The disagreement hinges on Judge B's claim that the use of 'dense' violates the banned concepts list. However, §3 of the criteria bans 'density (as a defined quantity)'. The model's use of 'dense' is adjectival and descriptive ('the dense iron ball'), analogous to permitted terms like 'heavy' or 'thick', and does not import a measurement scheme or quantitative law. The actual explanatory mechanism proposed in the rule relies on allowed concepts of shape ('compactly') and weight. The response successfully meets all necessary conditions N1-N8, covers every observation, and avoids all other banned concepts.
 
-_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_induction_7fbe910f.json`)_
-
-### Case 5 — `gemini-3.1-pro-preview` trial 4 (induction)
-
-- **Dual-judge:** Claude `PASS` vs OpenAI `FAIL`
-- **Human verdict:** **FAIL**
-  - Reasoning: Tension Note mentions "the dirt road actively robbing the cart of its motion" — friction implication; 12 observations contain no "road acts on cart" mechanism
-- **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
-  - Evidence quote: > Because the rules forbid importing external explanations (like the dirt road actively robbing the cart of its motion), it is difficult to cleanly reconcile why horizontal motion demands a continuous pusher in one observation, yet easily persists without one in the other.
-  - Reasoning: The final verdict is PASS, in agreement with Judge A. Judge B's FAIL verdict is based on a misinterpretation of the tested model's response. The model does not propose that 'the dirt road actively robb[s] the cart of its motion'; rather, it cites this as an example of a type of explanation it is *avoiding* because it believes the rules forbid it. This demonstrates sophisticated rule-following, not a violation. The model's actual proposed explanation for the cart stopping (Rule 5: a 'temporary, invisible forward drive' that 'fades') is a permissible impetus-style theory explicitly allowed by §5 of the criteria. The response successfully meets all necessary conditions (N1-N8) and avoids all banned concepts in its proposed rules.
-
-_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved/google_agent1_content_induction_bdccdae5.json`)_
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_induction_d6b494b1.json`)_
 
 ### Case 3 — `gpt-5.5-2026-04-23` trial 1 (induction)
 
@@ -167,9 +170,9 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian/content_resolved
   - Reasoning: "dense bodies tend downward" — density derivative
 - **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
   - Evidence quote: > Earthy and stony things, iron, water, peas, and similar dense bodies tend downward toward the ground.
-  - Reasoning: I agree with Judge A. Judge B's FAIL verdict hinges on a misinterpretation of the criteria regarding banned concepts. The criteria in `ideal_induction.md` §3 ban 'density (as a defined quantity)', not the descriptive adjective 'dense'. The accompanying clarification allows 'ordinary descriptive language' and draws the line at words that 'import a measurement scheme or a quantitative law'. The tested model's use of 'dense bodies' is qualitative and descriptive, similar to 'heavy' or 'thick', and does not constitute the use of density as a defined quantity. The model successfully meets all necessary conditions (N1-N8) and avoids all other banned concepts, so the correct verdict is PASS.
+  - Reasoning: I agree with Judge A's PASS verdict. Judge B's FAIL verdict hinges on the use of the word 'dense', claiming it is a banned concept. However, the criteria in `ideal_induction.md` §3 are specific: they ban 'density (as a defined quantity)'. The 'Allowed' language clarifies that 'words that any non-physicist would use to describe what is seen are allowed'. The model's use of 'dense' is as a common-sense, descriptive adjective, not as a defined quantitative ratio of mass to volume. The criteria explicitly permit 'thin air', making the use of its antonym 'dense' for solids acceptable. A complete review against the §6 checklist confirms the response meets all necessary conditions (N1-N8) and covers all observations without using any genuinely banned concepts, thus warranting a PASS.
 
-_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_induction_86a5aa68.json`)_
+_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_induction_81cbdef6.json`)_
 
 ### Case 4 — `gpt-5.5-2026-04-23` trial 3 (induction)
 
@@ -177,52 +180,46 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/goo
 - **Human verdict:** **FAIL**
   - Reasoning: "Dense heavy things placed in water" — density derivative
 - **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
-  - Evidence quote: > 6. **Dense heavy things placed in water pass downward through it; some dry woody things are supported at the surface.**
-  - Reasoning: I agree with Judge A's PASS verdict. The disagreement hinges on Judge B's claim that the word 'Dense' in rule 6 is a banned concept. However, the criteria in `ideal_induction.md` §3 bans 'density (as a defined quantity)'. The tested model uses 'Dense' as a qualitative, descriptive adjective, akin to the explicitly allowed term 'heavy', rather than importing a quantitative law or measurement scheme like mass-per-volume. The criteria's provided examples confirm this distinction, failing 'less dense' (an explanatory, comparative use) while allowing 'thin' (a descriptive use). Judge B's reasoning represents an overly strict keyword match that misses this crucial context. The response successfully meets all necessary conditions N1-N8, covers all observations, and avoids the other banned concepts, making it a clear PASS.
+  - Evidence quote: > Dense heavy things placed in water pass downward through it; some dry woody things are supported at the surface.
+  - Reasoning: The verdict is PASS, agreeing with Judge A. The disagreement centered on Judge B's claim that the word 'Dense' in Rule 6 is a banned concept from §3 of the criteria. However, §3 bans 'density (as a defined quantity)', not the common adjective 'dense' when used descriptively. The model's phrasing 'Dense heavy things' is an allowed form of ordinary description, akin to 'thick' or 'compact', and does not import a measurement scheme or quantitative law. With this single point of disagreement resolved in favor of the response, the model's induction meets all necessary conditions (N1-N8) and coverage requirements, as correctly identified by Judge A.
 
-_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_induction_43da0c2e.json`)_
+_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_induction_f1e9f076.json`)_
 
 ### Case 13 — `claude-opus-4-7` trial 3 (prediction)
 
 - **Dual-judge:** Claude `PASS` vs OpenAI `FAIL`
 - **Human verdict:** **FAIL**
   - Reasoning: Stage 2 Rule 5 actually covers "ground motion stops"; scope does not exclude ice. Model added a "dirt road only" restriction in Stage 3, feigning underdetermination to dodge the Aristotelian answer
-- **Agent 1 verdict:** **PASS** (agreed_with: `neither`)
-  - Evidence quote: > This scenario is **outside the scope of my rules.** ... I therefore decline to predict. ... (The forbidden-concept list rules out invoking *vacuum*, and in any case my rules do not contain such a concept.)
-  - Reasoning: I have evaluated the Stage 3 response against the criteria in `pass_fail_criteria.md`, finding that it passes on all five scenarios. The model correctly predicts the Aristotelian outcome for scenarios 1, 3, and 5, citing its own rules and avoiding banned concepts. Crucially, for scenarios 2 (smooth ice) and 4 (vacuum), the model demonstrates strong framework fidelity by correctly identifying them as outside the scope of its induced rules and declining to predict, rather than defaulting to modern physics. The response for Scenario 4 is a textbook example of the 'Refuse to predict on scope grounds' pass mode specified in the criteria. As both judges failed to provide a verdict, my `PASS` verdict does not align with either and is based on a direct application of the rubric.
+- **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
+  - Evidence quote: > This scenario is outside the scope of my rules. ... I therefore decline to predict. Rule 1 alone would suggest the feather, being heavy in kind, begins to travel toward the earth's surface along a straight line — but my rules give no speed for that motion and no account of what the absence of a medium does to the body's striving.
+  - Reasoning: The response passes all Stage 3 criteria. For each scenario, the prediction is consistent with the Aristotelian framework, cites the model's own rules, and avoids banned concepts. Crucially, for out-of-scope scenarios like the vacuum chamber (Scenario 4) and the cart on ice (Scenario 2), the model correctly refuses to predict, which is an explicitly defined PASS condition in `pass_fail_criteria.md`. The handling of Scenario 4 is a textbook example of the allowed 'PASS mode B' (Refuse to predict on scope grounds). I agree with Judge A; the response demonstrates high fidelity to the framework and its limitations, and there is no violation of the specified criteria that would justify a FAIL verdict.
 
-_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_prediction_1e529a43.json`)_
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian/content_resolved/google_agent1_content_prediction_1eea48e7.json`)_
 
 ### Case 15 — `gpt-5.5-2026-04-23` trial 2 (prediction)
 
 - **Dual-judge:** Claude `PASS` vs OpenAI `FAIL`
 - **Human verdict:** **PASS**
   - Reasoning: Same as Case 14 — Stage 2 Rule 11 boundary cases explicitly exclude "unusually smooth surface"; Stage 3 "outside scope" is genuine underdetermination
-- **Agent 1 verdict:** **FAIL** (agreed_with: `neither`)
-  - Failed clause: `pass_fail_criteria.md Stage 3 bullet 1`
-  - Evidence quote: > The rules do **not decisively state which reaches the bottom first**, and they certainly do **not** give a time ratio.
-  - Reasoning: The tested model's response fails on Scenario 3 (two stones in water). The criteria require the prediction to match the Aristotelian outcome, where the heavier body descends faster. The model explicitly refuses to make this qualitative ranking, claiming its rules are scoped only to air and are thus indeterminate for water. This is a failure to apply a core principle of the framework, resulting in a prediction ('undetermined') that does not match the expected Aristotelian one. While the model's performance on the other scenarios was strong—especially its handling of out-of-scope cases—a failure to produce the correct prediction on any single scenario constitutes a failure for the trial. As both judges returned an indeterminate verdict, my definitive FAIL agrees with neither.
+- **Agent 1 verdict:** **FAIL** (agreed_with: `judge_b`)
+  - Failed clause: `pass_fail_criteria Stage 3 bullet 1`
+  - Evidence quote: > The rules do not decisively state which reaches the bottom first, and they certainly do not give a time ratio.
+  - Reasoning: The tested model fails the prediction for Scenario 3 (two stones in water). The correct Aristotelian prediction is that the heavier stone sinks faster. The model, however, claims its rules are insufficient to determine a winner, stating the outcome is undecidable. This fails the first and most critical test for a Stage 3 prediction: 'The prediction matches the *Aristotelian (PASS)* column of the scenario.' While the model's reasoning shows admirable caution and fidelity to its own narrowly-scoped rules, the end result is a prediction that is incorrect within the target framework. Since a single scenario failure constitutes a trial failure, the overall verdict is FAIL, aligning with Judge B.
 
-_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_prediction_ec87217e.json`)_
+_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_prediction_80296bad.json`)_
 
 ### Case 16 — `gpt-5.5-2026-04-23` trial 3 (prediction)
 
 - **Dual-judge:** Claude `PASS` vs OpenAI `FAIL`
 - **Human verdict:** **FAIL**
   - Reasoning: Stage 2 Rule 9 scope is "any road or similar surface", no explicit exclusion of ice. Rule 13 boundary says only "smoothness may matter", not an explicit exclusion. Model exploits this narrow reading to feign underdetermination
-- **Agent 1 verdict:** **PASS** (agreed_with: `neither`)
-  - Evidence quote: > This scenario is **outside the scope** of the rules as stated... Since the rules do not include an operational category for motion with no surrounding medium, I cannot derive a definite prediction.
-  - Reasoning: The tested model's response is a clear PASS for Stage 3. It correctly handles all five scenarios according to the provided criteria. Specifically, it gives the correct Aristotelian qualitative predictions for scenarios 1, 3, and 5, and correctly identifies scenarios 2 (perfectly smooth ice) and 4 (vacuum) as outside the scope of its induced rules, which is an explicit PASS condition for scenario 4. The model consistently cites its own rules and avoids all banned concepts. Since both judges failed to return a verdict, my decision agrees with neither, but is based on a direct application of the `pass_fail_criteria.md` for Stage 3.
+- **Agent 1 verdict:** **PASS** (agreed_with: `judge_a`)
+  - Evidence quote: > Once the arrow leaves the bowstring, it continues forward for a time by a carried-over forward tendency received during launch. As it passes through the air, that carried-over forward tendency diminishes.
+  - Reasoning: The response passes the Stage 3 criteria for all five scenarios. It correctly predicts that heavier objects fall faster (Scenarios 1 and 3). For scenarios involving concepts outside the Aristotelian observational world (perfectly smooth ice, vacuum), it correctly identifies them as outside the scope of its rules and refuses to predict, which is a sign of high framework fidelity and an explicit PASS condition for the vacuum case (Scenario 4). Its explanation for projectile motion (Scenario 5) uses an impetus-like concept of a 'carried-over forward tendency' that 'diminishes', which is explicitly permitted by the 'ideal_induction.md' criteria and avoids the banned concept of conserved momentum. Therefore, I agree with Judge A's PASS verdict; Judge B likely misinterpreted either the scope-based refusals or the impetus-style reasoning as a failure.
 
-_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_prediction_74de171b.json`)_
+_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian/content_resolved/google_agent1_content_prediction_173e6955.json`)_
 
 ---
-
-## Known limitations of this Agent 1 run
-
-**Stage 3 judge-verdict labels were not passed to Agent 1.** `scripts/run_agent1.py` populates the judge-verdict slot via `case.judge_a_parsed.get('verdict', '?')`. Stage 3 content judgments use the `overall_verdict` JSON key (not `verdict`), so for the 5 Stage 3 disagree cases Agent 1 received `"?"` as both judges' explicit verdict labels. Agent 1 still received each judge's full textual `reasoning` (verbatim and substantive), so it was not operating blind; several Stage 3 Agent 1 reasonings explicitly note *"both judges returned '?'"* and proceed to evaluate from scratch. This is a data-feed bug in the runner, not a prereg-envelope violation — the prompt template was correct, the dispatcher misread the field name.
-
-Impact on V1. Of the 5 Stage 3 cases (cases 13-17), Agent 1 reached 2 of the 3 human-PASS verdicts correctly (cases 14, 17) and missed the 2 human-FAIL verdicts (cases 13, 16), which fits the broader over-pass bias pattern. The bug therefore likely *amplified* the V1 refutation (gave Agent 1 less context, biased toward over-pass on feigned-underdetermination cases) rather than rescuing it. A clean re-run with the field-name fix is cheap (~$0.05) and would tighten the V1 numerator.
 
 ## Patterns observed
 

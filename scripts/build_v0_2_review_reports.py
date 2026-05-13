@@ -300,36 +300,6 @@ def render_agent1_report(
         lines.append("---")
         lines.append("")
 
-    # Known limitations
-    lines.append("## Known limitations of this Agent 1 run")
-    lines.append("")
-    lines.append(
-        "**Stage 3 judge-verdict labels were not passed to Agent 1.**"
-        " `scripts/run_agent1.py` populates the judge-verdict slot via"
-        " `case.judge_a_parsed.get('verdict', '?')`. Stage 3 content"
-        " judgments use the `overall_verdict` JSON key (not `verdict`), so for"
-        ' the 5 Stage 3 disagree cases Agent 1 received `"?"` as both judges\''
-        " explicit verdict labels. Agent 1 still received each judge's full"
-        " textual `reasoning` (verbatim and substantive), so it was not"
-        " operating blind; several Stage 3 Agent 1 reasonings explicitly note"
-        " *\"both judges returned '?'\"* and proceed to evaluate from scratch."
-        " This is a data-feed bug in the runner, not a prereg-envelope"
-        " violation — the prompt template was correct, the dispatcher misread"
-        " the field name."
-    )
-    lines.append("")
-    lines.append(
-        "Impact on V1. Of the 5 Stage 3 cases (cases 13-17), Agent 1 reached"
-        " 2 of the 3 human-PASS verdicts correctly (cases 14, 17) and missed"
-        " the 2 human-FAIL verdicts (cases 13, 16), which fits the broader"
-        " over-pass bias pattern. The bug therefore likely *amplified* the V1"
-        " refutation (gave Agent 1 less context, biased toward over-pass on"
-        " feigned-underdetermination cases) rather than rescuing it. A clean"
-        " re-run with the field-name fix is cheap (~$0.05) and would tighten"
-        " the V1 numerator."
-    )
-    lines.append("")
-
     # Patterns observed
     lines.append("## Patterns observed")
     lines.append("")

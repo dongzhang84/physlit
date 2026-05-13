@@ -300,9 +300,10 @@ def _emit_findings(
     struct_disagree: int,
 ) -> str:
     lines: list[str] = []
-    lines.append("## v0.2 final report")
+    lines.append("## v0.2.1 final report")
     lines.append(f"- Generated: `{time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}`")
-    lines.append("- Prereg lock: `prereg-v0.2-locked`")
+    lines.append("- Prereg lock: `prereg-v0.2.1-locked`")
+    lines.append("- Resolver agent (Agent 1 + Agent 2): `gemini-2.5-pro`")
     lines.append("")
 
     # V1
