@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-13 06:15 UTC  
+**Generated:** 2026-05-13 06:23 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 17 |
+| Total commits | 18 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **11** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | **12** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 11**
 
@@ -28,6 +28,7 @@
 
 **Tue – Tuesday, May 12**
 
+- `475c2a4` v0.2: prereg paragraph on GPT rejection + 4 frozen artifacts — _dongzhang84_ `2026-05-12 23:23`
 - `dc1cf16` draft(v0.2): predictions/v0_2_prereg.md — NOT yet locked — _dongzhang84_ `2026-05-12 23:15`
 - `1ca149a` docs(v0.2): add design plan (planning-only, not a prereg) — _dongzhang84_ `2026-05-12 16:12`
 - `850953c` chore: drop gitignore entry for analysis/structural_audit/ — _dongzhang84_ `2026-05-12 16:11`
