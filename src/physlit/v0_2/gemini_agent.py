@@ -1,9 +1,9 @@
-"""Gemini 3.1 Pro as v0.2 disagree-resolver agent.
+"""Gemini 2.5 Pro as v0.2.1 disagree-resolver agent.
 
 Used for both Agent 1 (content-axis disagree resolution) and Agent 2
-(structural-axis disagree resolution). Per the prereg, both agents
-are the *same model* — the difference is which prompt template the
-runner passes in.
+(structural-axis disagree resolution). Per the v0.2.1 prereg, both
+agents are the *same model* — the difference is which prompt template
+the runner passes in.
 
 Methodologically a stateless JSON-out evaluator, so this class
 subclasses ``JudgeBase`` to reuse ``judge_one`` orchestration + the
@@ -11,6 +11,16 @@ subclasses ``JudgeBase`` to reuse ``judge_one`` orchestration + the
 verdict is set to `"google"`; the `stage` field is set to
 `"agent1_content"` or `"agent2_structural"` to disambiguate the role
 the agent was playing on a given call.
+
+Model history:
+- v0.2 (prereg-v0.2-locked): `gemini-3.1-pro-preview` — preview tier,
+  retired after sustained `503 UNAVAILABLE` throttle on 2026-05-13.
+- v0.2.1 (prereg-v0.2.1-locked, current): `gemini-2.5-pro` — GA tier,
+  one generation behind. See `predictions/v0_2_1_prereg.md` §0 for the
+  deviation rationale.
+
+Reproducers of v0.2 (the original locked tag) should `git checkout
+prereg-v0.2-locked`, which keeps the file at its v0.2 state.
 """
 
 from __future__ import annotations
@@ -22,15 +32,17 @@ from google import genai
 from google.genai import types as genai_types
 
 from physlit.judges.judge_base import JudgeBase
-from physlit.runners.gemini import (
-    GEMINI_INPUT_PRICE_PER_MTOK,
-    GEMINI_MODEL_ID,
-    GEMINI_OUTPUT_PRICE_PER_MTOK,
-)
 
-# Per the v0.2 prereg, the resolver model is pinned to the same
-# identifier verified in v0.1's Phase 1.5 dry-run paper trail.
-GEMINI_AGENT_MODEL_ID = GEMINI_MODEL_ID
+# Per the v0.2.1 prereg envelope. Reverting to `gemini-3.1-pro-preview`
+# (v0.2) requires a new prereg version, not an in-place edit.
+GEMINI_AGENT_MODEL_ID = "gemini-2.5-pro"
+
+# Approximate Gemini 2.5 Pro pricing (USD per million tokens),
+# placeholder for the audit cost_usd_estimate field. Google's invoice
+# is authoritative. As of 2026-05-13, public list price for 2.5 Pro is
+# $1.25/M input / $5.00/M output (≤200K context).
+GEMINI_INPUT_PRICE_PER_MTOK = 1.25
+GEMINI_OUTPUT_PRICE_PER_MTOK = 5.00
 
 # Anthropic / OpenAI judges accept up to 2048 max_tokens by convention.
 # Agent verdicts are structured JSON with rationale — match the
