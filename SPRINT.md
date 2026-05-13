@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 19 |
+| Total commits | 20 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | **12** | **2** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 11**
 
@@ -43,6 +43,7 @@
 
 **Wed – Wednesday, May 13**
 
+- `b020938` lock: pre-register PhysLit v0.2 predictions — _dongzhang84_ `2026-05-13 01:13`
 - `3e42ff1` infra(prereg): parameterize lock + integrity scripts by version — _dongzhang84_ `2026-05-13 01:13`
 
 ---
