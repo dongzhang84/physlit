@@ -73,6 +73,23 @@ Aristotelian Mechanics.
   and the relevant criteria file. The agent emits PASS/FAIL plus
   a written rationale.
 
+  **Why not GPT-5.5 as resolver.** Using GPT-5.5 in the resolver role
+  would put OpenAI in three of the six LLM seats in the v0.2 pipeline
+  (content judge + structural judge + resolver), against two each for
+  Anthropic and Google. Same-vendor judge+resolver compounds any
+  OpenAI-specific systematic bias: the vendor whose model produced
+  one of the conflicting judgments would also be the vendor
+  adjudicating the conflict, and that bias is not observable from the
+  pipeline output (the resolver effectively agrees with itself across
+  roles, so cross-vendor cross-checks fail silently). Gemini-as-resolver
+  carries a different risk — same-vendor-with-tested-model on the 5 of
+  17 content disagree cases where Gemini was the v0.1 tested model —
+  but that risk is bounded (small known subset), visible (subset
+  identity known before running), and analyzable (the V1 scoring step
+  below requires a separately-tabulated same-vendor vs cross-vendor
+  cross-check). The same-vendor judge+resolver risk has no equivalent
+  mitigation.
+
   **Same-vendor judging disclosure.** Gemini 3.1 Pro was the v0.1
   *tested* model for 5 of the 17 content disagree cases (and an
   unknown number of structural disagree cases, which will be reported
