@@ -34,6 +34,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from physlit.prompts import PromptTemplate  # noqa: E402
 from physlit.v0_2 import GeminiAgent, find_content_disagree_cases  # noqa: E402
+from physlit.v0_2.gemini_agent import DEFAULT_AGENT_MAX_TOKENS  # noqa: E402
 
 FRAMEWORK_ID = "01_aristotelian"
 FRAMEWORK_DIR = REPO_ROOT / "frameworks" / FRAMEWORK_ID
@@ -144,6 +145,7 @@ def main() -> int:
             trial_path=case.trial_path,
             stage=f"agent1_content_{case.stage}",
             prompt=prompt,
+            max_tokens=DEFAULT_AGENT_MAX_TOKENS,
         )
 
         out_dir = RESULTS_ROOT / case.model_id / FRAMEWORK_ID / "content_resolved"

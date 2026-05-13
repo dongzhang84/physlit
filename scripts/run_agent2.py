@@ -33,6 +33,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from physlit.prompts import PromptTemplate  # noqa: E402
 from physlit.v0_2 import GeminiAgent, load_structural_verdicts  # noqa: E402
+from physlit.v0_2.gemini_agent import DEFAULT_AGENT_MAX_TOKENS  # noqa: E402
 
 FRAMEWORK_ID = "01_aristotelian"
 FRAMEWORK_DIR = REPO_ROOT / "frameworks" / FRAMEWORK_ID
@@ -172,6 +173,7 @@ def main() -> int:
             trial_path=trial_path,
             stage="agent2_structural",
             prompt=prompt,
+            max_tokens=DEFAULT_AGENT_MAX_TOKENS,
         )
 
         out_dir = RESULTS_ROOT / model_id / FRAMEWORK_ID / "structural_resolved"

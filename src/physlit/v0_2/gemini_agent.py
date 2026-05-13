@@ -44,11 +44,14 @@ GEMINI_AGENT_MODEL_ID = "gemini-2.5-pro"
 GEMINI_INPUT_PRICE_PER_MTOK = 1.25
 GEMINI_OUTPUT_PRICE_PER_MTOK = 5.00
 
-# Anthropic / OpenAI judges accept up to 2048 max_tokens by convention.
-# Agent verdicts are structured JSON with rationale — match the
-# allowance, with room for the slightly larger N11 evidence quotes
-# that Agent 2 may emit.
-DEFAULT_AGENT_MAX_TOKENS = 2048
+# Gemini 2.5 Pro has dynamic-budget extended thinking enabled by
+# default. The first v0.2.1 run dispatched calls with max_tokens=2048
+# (the v0.1 judge convention) and 15 of 17 Agent 1 calls + all 6
+# Agent 2 calls returned EMPTY `response.text` — thinking-tokens
+# consumed the budget before the JSON output started. Bumping to
+# 16384 leaves ample room for thinking + JSON. At $5/M output the
+# worst case is ~$0.08 per call; ≤ $2 across the v0.2.1 agent run.
+DEFAULT_AGENT_MAX_TOKENS = 16384
 
 # Retry policy for transient Gemini API failures (e.g. 503 UNAVAILABLE
 # from "high demand" capacity throttling). Mirrors
