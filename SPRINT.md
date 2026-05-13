@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-13 08:28 UTC  
+**Generated:** 2026-05-13 18:47 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 22 |
+| Total commits | 23 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **4** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | **12** | **5** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 11**
 
@@ -43,6 +43,7 @@
 
 **Wed – Wednesday, May 13**
 
+- `8806fc5` draft(v0.2.1): switch resolver to gemini-2.5-pro (deviation from v0.2) — _dongzhang84_ `2026-05-13 11:47`
 - `dc7f555` v0.2(fix): add 503 retry to GeminiAgent (mirror GeminiRunner pattern) — _dongzhang84_ `2026-05-13 01:28`
 - `7db03b3` v0.2: 4 runner scripts + Gemini-agent + data loaders — _dongzhang84_ `2026-05-13 01:21`
 - `b020938` lock: pre-register PhysLit v0.2 predictions — _dongzhang84_ `2026-05-13 01:13`
