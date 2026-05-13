@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-13 06:23 UTC  
+**Generated:** 2026-05-13 08:13 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -9,13 +9,13 @@
 
 | Stat | Value |
 |------|-------|
-| Status | ❌ Stalled |
-| Active days | 2 / 7 |
-| Total commits | 18 |
+| Status | ⚠️ Slow |
+| Active days | 3 / 7 |
+| Total commits | 19 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | **12** | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 11**
 
@@ -40,6 +40,10 @@
 - `bce99a7` chore: gitignore Agent-2 dryrun output + local zh.md drafts — _dongzhang84_ `2026-05-12 01:37`
 - `29e4e17` feat(audit): Agent 2 prototype — N9/N11/N12 structural-audit layer — _dongzhang84_ `2026-05-12 01:36`
 - `a1ce4cc` docs: add §8 Structural criteria (N9-N12) to ideal_induction.md — _dongzhang84_ `2026-05-12 01:30`
+
+**Wed – Wednesday, May 13**
+
+- `3e42ff1` infra(prereg): parameterize lock + integrity scripts by version — _dongzhang84_ `2026-05-13 01:13`
 
 ---
 
