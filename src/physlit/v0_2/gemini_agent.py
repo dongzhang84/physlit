@@ -16,6 +16,7 @@ the agent was playing on a given call.
 from __future__ import annotations
 
 import os
+import time
 
 from google import genai
 from google.genai import types as genai_types
@@ -37,6 +38,14 @@ GEMINI_AGENT_MODEL_ID = GEMINI_MODEL_ID
 # that Agent 2 may emit.
 DEFAULT_AGENT_MAX_TOKENS = 2048
 
+# Retry policy for transient Gemini API failures (e.g. 503 UNAVAILABLE
+# from "high demand" capacity throttling). Mirrors
+# `runners/gemini.py`'s convention; each retry constructs a fresh
+# client, so "fresh API client per call" still holds. Non-transient
+# failures (auth, quota, identity mismatch) propagate unchanged.
+_RETRY_BACKOFF_SECONDS = (5, 10, 20)
+_RETRYABLE_TOKENS = ("503", "unavailable", "high demand")
+
 
 class GeminiAgent(JudgeBase):
     """Gemini 3.1 Pro Preview acting as a v0.2 resolver agent."""
@@ -55,15 +64,33 @@ class GeminiAgent(JudgeBase):
             raise RuntimeError(
                 "GEMINI_API_KEY / GOOGLE_API_KEY not set (check .env.local or shell env)"
             )
-        client = genai.Client(api_key=api_key)  # FRESH per call
 
-        response = client.models.generate_content(
-            model=self.judge_model,
-            contents=prompt,
-            config=genai_types.GenerateContentConfig(
-                max_output_tokens=max_tokens,
-            ),
-        )
+        config = genai_types.GenerateContentConfig(max_output_tokens=max_tokens)
+
+        response = None
+        last_exc: Exception | None = None
+        for attempt, backoff_s in enumerate((0, *_RETRY_BACKOFF_SECONDS)):
+            if backoff_s:
+                time.sleep(backoff_s)
+            client = genai.Client(api_key=api_key)  # FRESH per call (including retries)
+            try:
+                response = client.models.generate_content(
+                    model=self.judge_model,
+                    contents=prompt,
+                    config=config,
+                )
+                break
+            except Exception as exc:
+                last_exc = exc
+                msg = str(exc).lower()
+                retryable = any(token in msg for token in _RETRYABLE_TOKENS)
+                if not retryable or attempt >= len(_RETRY_BACKOFF_SECONDS):
+                    raise
+        if response is None:
+            raise RuntimeError(
+                f"Gemini agent retry exhausted after {len(_RETRY_BACKOFF_SECONDS) + 1} "
+                f"attempts: {last_exc}"
+            )
 
         # Strict pin: agent response must come from the pinned model.
         returned = getattr(response, "model_version", None) or getattr(response, "model", None)
