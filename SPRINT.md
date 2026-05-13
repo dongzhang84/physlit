@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-13 18:49 UTC  
+**Generated:** 2026-05-13 18:59 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 25 |
+| Total commits | 26 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **7** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | **12** | **8** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 11**
 
@@ -43,6 +43,7 @@
 
 **Wed – Wednesday, May 13**
 
+- `4aadd63` v0.2.1(fix): bump Gemini agent max_tokens 2048 -> 16384 — _dongzhang84_ `2026-05-13 11:58`
 - `338b7df` v0.2.1(fix): tolerate None token counts in Gemini usage_metadata — _dongzhang84_ `2026-05-13 11:48`
 - `62bd018` lock: pre-register PhysLit v0.2.1 predictions — _dongzhang84_ `2026-05-13 11:47`
 - `8806fc5` draft(v0.2.1): switch resolver to gemini-2.5-pro (deviation from v0.2) — _dongzhang84_ `2026-05-13 11:47`
