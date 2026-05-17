@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-17 09:25 UTC  
+**Generated:** 2026-05-17 09:32 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 33 |
+| Total commits | 34 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **4** |
+| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **5** |
 
 **Mon – Monday, May 11**
 
@@ -60,6 +60,7 @@
 
 **Sun – Sunday, May 17**
 
+- `bab550d` chore: gitignore analysis/*.zh.txt local X-post drafts — _dongzhang84_ `2026-05-17 02:32`
 - `1c17cf4` docs(v0.2): rename composite table column to Structural — _dongzhang84_ `2026-05-17 02:25`
 - `a4ce94d` docs(v0.2): drop inline (was X) annotations + bold from matrices — _dongzhang84_ `2026-05-17 02:22`
 - `5731b18` audit(v0.2): apply human structural-axis verdicts; revise matrices — _dongzhang84_ `2026-05-17 02:19`
