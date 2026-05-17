@@ -97,7 +97,17 @@ def _classify_content_axis() -> dict[tuple[str, int, str], str]:
 
     Algorithm:
     - If both v0.1 judges agree (PASS, PASS) or (FAIL, FAIL): that's the verdict.
-    - If they disagree: load Agent 1's verdict for that case; that's the verdict.
+    - If they disagree: use the v0.1 post-audit human verdict from
+      ``HUMAN_AUDIT_CONTENT_VERDICTS``. The v0.1 human audit is the
+      canonical, frozen resolution of those 17 disagree cases (see
+      ``analysis/v0_1_findings.md`` "Per-trial classification matrix
+      (audit-resolved)"); the v0.2 composite content axis is layered
+      strictly on top of it.
+    - Agent 1's verdict is deliberately NOT used here. V1 found Agent 1
+      unreliable as a resolver (29.4 % agreement with the human audit),
+      so feeding Agent 1 into the composite would publish a known-bad
+      content classification. Agent 1 is scored against the human audit
+      in ``_agent1_human_agreement`` and reported as the V1 metric only.
     - If still missing: MISSING.
     """
     judgments_root = RESULTS_ROOT
@@ -108,28 +118,6 @@ def _classify_content_axis() -> dict[tuple[str, int, str], str]:
             continue
         loaded = load_trial_verdicts(verdict_dir)
         by_key.update(loaded)
-
-    agent1_verdicts: dict[tuple[str, int, str], str] = {}
-    for model_id in DEFAULT_MODELS:
-        agent1_dir = RESULTS_ROOT / model_id / FRAMEWORK_ID / "content_resolved"
-        if not agent1_dir.is_dir():
-            continue
-        for path in sorted(agent1_dir.glob("*.json")):
-            data = json.loads(path.read_text())
-            stage_label = data.get("stage", "")
-            if not stage_label.startswith("agent1_content_"):
-                continue
-            content_stage = stage_label[len("agent1_content_") :]
-            trial_path = Path(data["trial_path"])
-            trial_filename = trial_path.name
-            if not trial_filename.startswith("trial_"):
-                continue
-            trial_index = int(trial_filename.split("_")[1])
-            parsed = data.get("parsed_verdict", {}) or {}
-            v = _verdict_str(parsed)
-            if v is None:
-                continue
-            agent1_verdicts[(model_id, trial_index, content_stage)] = v
 
     out: dict[tuple[str, int, str], str] = {}
     for model_id in DEFAULT_MODELS:
@@ -147,12 +135,12 @@ def _classify_content_axis() -> dict[tuple[str, int, str], str]:
                 if v_a == v_b:
                     out[(model_id, trial_index, stage)] = v_a
                     continue
-                # Disagree → Agent 1
-                agent_v = agent1_verdicts.get((model_id, trial_index, stage))
-                if agent_v is None:
+                # Disagree → v0.1 post-audit human verdict (canonical).
+                human_v = HUMAN_AUDIT_CONTENT_VERDICTS.get((model_id, trial_index, stage))
+                if human_v is None:
                     out[(model_id, trial_index, stage)] = "DISAGREE"
                 else:
-                    out[(model_id, trial_index, stage)] = agent_v
+                    out[(model_id, trial_index, stage)] = human_v
     return out
 
 

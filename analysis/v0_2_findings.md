@@ -44,46 +44,53 @@ Of the 5 v0.1 all-content-PASS trials (Claude trial 1, GPT trials 0/2/4, Gemini 
 - `gemini-3.1-pro-preview` trial 2
 
 > **Superseded in part — see "Post-audit revision" below.** The
-> 2026-05-17 human audit reverses the structural verdict on Gemini
-> trial 2 (it no longer flips) and adds Gemini trial 0 as a new flip.
-> The CONFIRMED verdict still holds under every reading (flips remain
-> ≥ 2), but the flipped-trial list above is the pre-audit version.
+> 2026-05-17 human audit of the structural axis reverses Gemini trial
+> 2's structural verdict to PASS, so it no longer flips. Under the
+> human standard exactly 3 trials flip — GPT t0, t2, t4. V2 stays
+> CONFIRMED (threshold ≥ 2); the 4-trial list above is the pre-audit
+> version.
 
 ### Structural-axis IRR
 Structural judges disagreed on **6 of 15 trials (40.00 %)**. Compare to v0.1 content-axis IRR of 36.67 %.
 
 ### Composite per-trial verdicts (content AND structural)
 
-> **Revised 2026-05-17 — human standard.** The `Structural` column now
-> uses the human audit verdict for the 6 disagree trials
-> (`analysis/v0_2_structural_audit_human_review.md`) and the
-> dual-judge agreed verdict for the 9 non-disagree trials (`†` = not
-> human-audited; may still be affected by the Stage 1+2 double-count
-> design bug — see "Post-audit revision" below). `Content-only` =
-> S1 ∧ S2 ∧ S3, i.e. the verdict if there were no structural axis.
+> **Content axis = v0.1 audit-resolved (canonical).** S1/S2/S3 are the
+> v0.1 post-audit human-resolved content verdicts — dual-judge
+> consensus where the two judges agreed, the v0.1 human audit verdict
+> where they disagreed (verbatim from `analysis/v0_1_findings.md` →
+> "Per-trial classification matrix (audit-resolved)"). Agent 1's
+> content verdicts are **not** used in the composite: V1 found Agent 1
+> unreliable as a resolver (29.4 %), so the composite is layered
+> strictly on top of the frozen v0.1 audit. `Content-only` =
+> S1 ∧ S2 ∧ S3 — the verdict if there were no structural axis. The
+> `Structural` column uses the human audit verdict for the 6 disagree
+> trials (`analysis/v0_2_structural_audit_human_review.md`) and the
+> dual-judge agreed verdict for the 9 non-disagree trials (`†` = the
+> structural verdict was not human-audited).
 
 | Model | Trial | S1 | S2 | S3 | Content-only | Structural | Composite |
 |---|---|---|---|---|---|---|---|
 | `claude-opus-4-7` | 0 | PASS | FAIL | PASS | FAIL | PASS † | FAIL |
 | `claude-opus-4-7` | 1 | PASS | PASS | PASS | PASS | PASS † | PASS |
-| `claude-opus-4-7` | 2 | FAIL | PASS | PASS | FAIL | PASS † | FAIL |
-| `claude-opus-4-7` | 3 | PASS | FAIL | PASS | FAIL | PASS | FAIL |
-| `claude-opus-4-7` | 4 | FAIL | PASS | PASS | FAIL | PASS | FAIL |
+| `claude-opus-4-7` | 2 | FAIL | FAIL | PASS | FAIL | PASS † | FAIL |
+| `claude-opus-4-7` | 3 | FAIL | FAIL | FAIL | FAIL | PASS | FAIL |
+| `claude-opus-4-7` | 4 | FAIL | FAIL | PASS | FAIL | PASS | FAIL |
 | `gpt-5.5-2026-04-23` | 0 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
-| `gpt-5.5-2026-04-23` | 1 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
-| `gpt-5.5-2026-04-23` | 2 | PASS | PASS | FAIL | FAIL | FAIL † | FAIL |
-| `gpt-5.5-2026-04-23` | 3 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
+| `gpt-5.5-2026-04-23` | 1 | FAIL | PASS | PASS | FAIL | FAIL † | FAIL |
+| `gpt-5.5-2026-04-23` | 2 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
+| `gpt-5.5-2026-04-23` | 3 | FAIL | FAIL | FAIL | FAIL | FAIL † | FAIL |
 | `gpt-5.5-2026-04-23` | 4 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
-| `gemini-3.1-pro-preview` | 0 | PASS | PASS | PASS | PASS | FAIL | FAIL |
+| `gemini-3.1-pro-preview` | 0 | PASS | FAIL | PASS | FAIL | FAIL | FAIL |
 | `gemini-3.1-pro-preview` | 1 | FAIL | FAIL | PASS | FAIL | PASS | FAIL |
 | `gemini-3.1-pro-preview` | 2 | PASS | PASS | PASS | PASS | PASS | PASS |
-| `gemini-3.1-pro-preview` | 3 | FAIL | PASS | PASS | FAIL | FAIL † | FAIL |
-| `gemini-3.1-pro-preview` | 4 | FAIL | PASS | FAIL | FAIL | PASS | FAIL |
+| `gemini-3.1-pro-preview` | 3 | FAIL | FAIL | PASS | FAIL | FAIL † | FAIL |
+| `gemini-3.1-pro-preview` | 4 | FAIL | FAIL | FAIL | FAIL | PASS | FAIL |
 
-Composite PASS (human standard): **2 of 15** — `claude-opus-4-7`
-trial 1 and `gemini-3.1-pro-preview` trial 2. (Same count as the
-pre-audit table, but the membership changed: Gemini trial 0 dropped
-out, Gemini trial 2 entered.)
+Content-only: **5 of 15** trials PASS — `claude` t1; `gpt` t0, t2, t4;
+`gemini` t2. With the structural axis, composite PASS drops to **2 of
+15** — `claude` t1 and `gemini` t2. The structural axis flips 3
+content-PASS trials to FAIL — **all three are GPT** (t0, t2, t4).
 
 ---
 
@@ -275,40 +282,47 @@ core principles (the Stage 1 count). Stage 2 operational expansions
 of the same rules do not count as additional rules. N10 redundancy is
 assessed within the Stage 1 core set."
 
-### Conclusion without the structural axis vs with it (human standard)
+### Conclusion without the structural axis vs with it
 
-Using the human-audited structural verdicts (6 disagree trials) plus
-the dual-judge agreed verdict (9 non-disagree trials, not
-human-audited, marked `†`):
+Content axis = the v0.1 audit-resolved verdicts (canonical). Structural
+axis = the human audit for the 6 disagree trials plus the dual-judge
+agreed verdict for the 9 non-disagree trials (the latter not
+human-audited, marked `†` in the composite table).
 
-- **Content-only** (S1 ∧ S2 ∧ S3, no structural axis): **7 of 15**
-  trials PASS — `claude` t1; `gpt` t0, t1, t3, t4; `gemini` t0, t2.
+- **Content-only** (S1 ∧ S2 ∧ S3, no structural axis): **5 of 15**
+  trials PASS — `claude` t1; `gpt` t0, t2, t4; `gemini` t2.
 - **With the structural axis** (composite): **2 of 15** trials PASS —
   `claude` t1 and `gemini` t2.
 
-The structural axis flips **5 content-PASS trials to composite FAIL**:
-`gpt` trials 0, 1, 3, 4 and `gemini` trial 0. The prereg V2 prediction
+The structural axis flips **3 content-PASS trials to composite FAIL**,
+and **all three are GPT** — trials 0, 2, 4. The prereg V2 prediction
 ("structural axis adds detection over content-only", threshold ≥ 2)
-therefore remains **CONFIRMED** under the human standard.
+therefore remains **CONFIRMED**.
 
-Two caveats on that count:
+Caveat on that count: all 3 flips rest on dual-judge *agree-FAIL*
+structural verdicts that were **not human-audited** (both judges said
+FAIL, so there was no disagreement for a human to resolve). Their
+firmness varies:
 
-1. Four of the five flips (`gpt` trials 0/1/3/4) rest on dual-judge
-   *agree-FAIL* verdicts that were **not human-audited**. GPT trials 0
-   and 4 fail on a Stage-1 count of 15 rules — an N9 *soft signal*,
-   not a hard fail by itself — so their structural FAIL may not
-   survive a human audit under the corrected core-count rule. GPT
-   trials 1/2/3 are firmer (17 core rules, or a within-Stage-1 N10
-   duplicate). A follow-up audit of the 9 non-disagree trials is
-   recommended before the V2 count is treated as final.
-2. The one human-audited new flip — `gemini` trial 0 — is solid: it
-   fails N10 on a genuine within-Stage-1 redundancy (Rules 1 and 7),
-   independent of the double-count bug.
+- **GPT trial 2 — firm.** 17 core rules: a hard N9 failure, count
+  convention aside.
+- **GPT trial 4 — likely firm.** 15 core rules (N9 soft signal only),
+  but it also fails N12 — a flat enumeration with no cross-rule
+  references anywhere — and N12 is count-independent.
+- **GPT trial 0 — shaky.** 15 core rules and nothing else; the Claude
+  judge's own reasoning leaned PASS. This flip may not survive a
+  human audit under the corrected core-count rule.
+
+So V2 is CONFIRMED at 3 flips now, and stays CONFIRMED (≥ 2) even if
+GPT trial 0 reverts. It would only fall to REFUTED if both t0 and t4
+reverted — unlikely given t4's N12 failure. A human audit of the 9
+non-disagree structural trials is still recommended before the V2
+count is treated as final.
 
 ### Revised headline
 
 - **Structural axis, human standard:** Claude 5/5 structural-PASS,
-  GPT 0/5, Gemini 4/5 (`gemini` trial 0 FAIL on real internal
+  GPT 0/5, Gemini 3/5 (`gemini` trial 0 FAIL on real internal
   redundancy; `gemini` trial 3 FAIL not human-audited).
 - **Agent 2 (`gemini-2.5-pro`) reproduced human structural judgment
   on 3/6 disagree cases.** Combined with the V1 content-axis result
