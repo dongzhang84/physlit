@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-17 23:28 UTC  
+**Generated:** 2026-05-17 23:35 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 38 |
+| Total commits | 39 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **9** |
+| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **10** |
 
 **Mon – Monday, May 11**
 
@@ -60,6 +60,7 @@
 
 **Sun – Sunday, May 17**
 
+- `cdccfb1` content: draft F=mv world ideal_induction.md (judge criteria, DRAFT) — _dongzhang84_ `2026-05-17 16:34`
 - `9c1547f` content(02_fmv): clarify Obs 11 — 'from the point where it was released' — _dongzhang84_ `2026-05-17 16:28`
 - `80fc75c` content: add Chinese translation of 02_fmv observations — _dongzhang84_ `2026-05-17 14:18`
 - `f98f4e0` content: draft F=mv world observation set (02_fmv, DRAFT) — _dongzhang84_ `2026-05-17 03:09`
