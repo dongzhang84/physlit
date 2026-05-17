@@ -61,24 +61,22 @@ Structural judges disagreed on **6 of 15 trials (40.00 %)**. Compare to v0.1 con
 > human-audited; may still be affected by the Stage 1+2 double-count
 > design bug — see "Post-audit revision" below). `Content-only` =
 > S1 ∧ S2 ∧ S3, i.e. the verdict if there were no structural axis.
-> Rows whose composite flipped against the pre-audit table are marked
-> ⇄.
 
 | Model | Trial | S1 | S2 | S3 | Content-only | Structural (human std) | Composite |
 |---|---|---|---|---|---|---|---|
 | `claude-opus-4-7` | 0 | PASS | FAIL | PASS | FAIL | PASS † | FAIL |
 | `claude-opus-4-7` | 1 | PASS | PASS | PASS | PASS | PASS † | PASS |
 | `claude-opus-4-7` | 2 | FAIL | PASS | PASS | FAIL | PASS † | FAIL |
-| `claude-opus-4-7` | 3 | PASS | FAIL | PASS | FAIL | **PASS** (was FAIL) | FAIL |
+| `claude-opus-4-7` | 3 | PASS | FAIL | PASS | FAIL | PASS | FAIL |
 | `claude-opus-4-7` | 4 | FAIL | PASS | PASS | FAIL | PASS | FAIL |
 | `gpt-5.5-2026-04-23` | 0 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
 | `gpt-5.5-2026-04-23` | 1 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
 | `gpt-5.5-2026-04-23` | 2 | PASS | PASS | FAIL | FAIL | FAIL † | FAIL |
 | `gpt-5.5-2026-04-23` | 3 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
 | `gpt-5.5-2026-04-23` | 4 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
-| `gemini-3.1-pro-preview` | 0 | PASS | PASS | PASS | PASS | **FAIL** (was PASS) | FAIL ⇄ |
+| `gemini-3.1-pro-preview` | 0 | PASS | PASS | PASS | PASS | FAIL | FAIL |
 | `gemini-3.1-pro-preview` | 1 | FAIL | FAIL | PASS | FAIL | PASS | FAIL |
-| `gemini-3.1-pro-preview` | 2 | PASS | PASS | PASS | PASS | **PASS** (was FAIL) | PASS ⇄ |
+| `gemini-3.1-pro-preview` | 2 | PASS | PASS | PASS | PASS | PASS | PASS |
 | `gemini-3.1-pro-preview` | 3 | FAIL | PASS | PASS | FAIL | FAIL † | FAIL |
 | `gemini-3.1-pro-preview` | 4 | FAIL | PASS | FAIL | FAIL | PASS | FAIL |
 
@@ -121,18 +119,18 @@ trials were not human-audited (`— not audited`).
 | `claude-opus-4-7` | 0 | PASS (rc 11) | PASS (rc 11) | — | PASS | — not audited |
 | `claude-opus-4-7` | 1 | PASS (rc 9) | PASS (rc 9) | — | PASS | — not audited |
 | `claude-opus-4-7` | 2 | PASS (rc 10) | PASS (rc 20) | — | PASS | — not audited |
-| `claude-opus-4-7` | 3 | PASS (rc 7) | FAIL (rc 14, N10) | FAIL (rc 14, N10+N11) | FAIL | **PASS** (Agent 2 wrong) |
-| `claude-opus-4-7` | 4 | PASS (rc 10) | FAIL (rc 20, N9) | PASS (rc 10) | PASS | **PASS** (Agent 2 right) |
+| `claude-opus-4-7` | 3 | PASS (rc 7) | FAIL (rc 14, N10) | FAIL (rc 14, N10+N11) | FAIL | PASS |
+| `claude-opus-4-7` | 4 | PASS (rc 10) | FAIL (rc 20, N9) | PASS (rc 10) | PASS | PASS |
 | `gpt-5.5-2026-04-23` | 0 | FAIL (rc 15, N9) | FAIL (rc 30, N9+N10) | — | FAIL | — not audited |
 | `gpt-5.5-2026-04-23` | 1 | FAIL (rc 17, N9+N12) | FAIL (rc 17, N9) | — | FAIL | — not audited |
 | `gpt-5.5-2026-04-23` | 2 | FAIL (rc 17, N9) | FAIL (rc 34, N9) | — | FAIL | — not audited |
 | `gpt-5.5-2026-04-23` | 3 | FAIL (rc 15, N10) | FAIL (rc 15, N10) | — | FAIL | — not audited |
 | `gpt-5.5-2026-04-23` | 4 | FAIL (rc 15, N9+N12) | FAIL (rc 30, N9+N10) | — | FAIL | — not audited |
-| `gemini-3.1-pro-preview` | 0 | FAIL (rc 7, N12) | PASS (rc 14) | PASS (rc 7) | PASS | **FAIL** (Agent 2 wrong) |
-| `gemini-3.1-pro-preview` | 1 | FAIL (rc 7, N12) | PASS (rc 7) | PASS (rc 7) | PASS | **PASS** (Agent 2 right) |
-| `gemini-3.1-pro-preview` | 2 | PASS (rc 7) | FAIL (rc 14, N10) | FAIL (rc 14, N10) | FAIL | **PASS** (Agent 2 wrong) |
+| `gemini-3.1-pro-preview` | 0 | FAIL (rc 7, N12) | PASS (rc 14) | PASS (rc 7) | PASS | FAIL |
+| `gemini-3.1-pro-preview` | 1 | FAIL (rc 7, N12) | PASS (rc 7) | PASS (rc 7) | PASS | PASS |
+| `gemini-3.1-pro-preview` | 2 | PASS (rc 7) | FAIL (rc 14, N10) | FAIL (rc 14, N10) | FAIL | PASS |
 | `gemini-3.1-pro-preview` | 3 | FAIL (rc 3, N11) | FAIL (rc 6, N10) | — | FAIL | — not audited |
-| `gemini-3.1-pro-preview` | 4 | FAIL (rc 7, N12) | PASS (rc 14) | PASS (rc 7) | PASS | **PASS** (Agent 2 right) |
+| `gemini-3.1-pro-preview` | 4 | FAIL (rc 7, N12) | PASS (rc 14) | PASS (rc 7) | PASS | PASS |
 
 Disagree cases (6 of 15, IRR 40.00 %): Claude trials 3 & 4; Gemini
 trials 0, 1, 2, 4. Gemini trial 3 is an *agree-FAIL* — both judges
@@ -236,12 +234,12 @@ summarised here.
 
 | Case | Trial | Agent 2 | Human | Agent 2 correct? |
 |---|---|---|---|---|
-| 1 | `claude-opus-4-7` trial 3 | FAIL | **PASS** | ❌ |
-| 2 | `claude-opus-4-7` trial 4 | PASS | **PASS** | ✅ |
-| 3 | `gemini-3.1-pro-preview` trial 0 | PASS | **FAIL** | ❌ |
-| 4 | `gemini-3.1-pro-preview` trial 1 | PASS | **PASS** | ✅ |
-| 5 | `gemini-3.1-pro-preview` trial 2 | FAIL | **PASS** | ❌ |
-| 6 | `gemini-3.1-pro-preview` trial 4 | PASS | **PASS** | ✅ |
+| 1 | `claude-opus-4-7` trial 3 | FAIL | PASS | ❌ |
+| 2 | `claude-opus-4-7` trial 4 | PASS | PASS | ✅ |
+| 3 | `gemini-3.1-pro-preview` trial 0 | PASS | FAIL | ❌ |
+| 4 | `gemini-3.1-pro-preview` trial 1 | PASS | PASS | ✅ |
+| 5 | `gemini-3.1-pro-preview` trial 2 | FAIL | PASS | ❌ |
+| 6 | `gemini-3.1-pro-preview` trial 4 | PASS | PASS | ✅ |
 
 **Agent 2 agreed with the human audit on 3 of 6 (50 %).** This is the
 structural-axis analogue of the V1 finding for Agent 1 on the content
