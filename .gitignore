@@ -54,6 +54,8 @@ yarn-error.log*
 Thumbs.db
 coverage/
 
-# Local-only analysis drafts (zh blog + X post). Marked .zh.md and kept
-# uncommitted per author preference; promote to repo if/when published.
+# Local-only analysis drafts (zh blog + X post). Marked .zh.md / .zh.txt
+# and kept uncommitted per author preference; promote to repo if/when
+# published.
 analysis/*.zh.md
+analysis/*.zh.txt
