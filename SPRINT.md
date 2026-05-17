@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-17 09:32 UTC  
+**Generated:** 2026-05-17 09:53 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 34 |
+| Total commits | 35 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **5** |
+| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **6** |
 
 **Mon – Monday, May 11**
 
@@ -60,6 +60,7 @@
 
 **Sun – Sunday, May 17**
 
+- `ceae094` fix(v0.2): composite content axis must use v0.1 audit-resolved verdicts — _dongzhang84_ `2026-05-17 02:53`
 - `bab550d` chore: gitignore analysis/*.zh.txt local X-post drafts — _dongzhang84_ `2026-05-17 02:32`
 - `1c17cf4` docs(v0.2): rename composite table column to Structural — _dongzhang84_ `2026-05-17 02:25`
 - `a4ce94d` docs(v0.2): drop inline (was X) annotations + bold from matrices — _dongzhang84_ `2026-05-17 02:22`
