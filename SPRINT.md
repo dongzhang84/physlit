@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-17 07:11 UTC  
+**Generated:** 2026-05-17 09:19 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 30 |
+| Total commits | 31 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **1** |
+| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **2** |
 
 **Mon – Monday, May 11**
 
@@ -60,6 +60,7 @@
 
 **Sun – Sunday, May 17**
 
+- `5731b18` audit(v0.2): apply human structural-axis verdicts; revise matrices — _dongzhang84_ `2026-05-17 02:19`
 - `65540bd` audit: v0.2 structural-axis (N9-N12) human-audit worksheet — _dongzhang84_ `2026-05-17 00:11`
 
 ---
