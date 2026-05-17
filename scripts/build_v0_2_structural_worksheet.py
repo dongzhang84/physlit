@@ -1,0 +1,283 @@
+"""Build ``analysis/v0_2_structural_audit_worksheet.md`` — the v0.2
+structural-axis (N9-N12) human-audit worksheet.
+
+Modelled on ``scripts/build_audit_worksheet.py`` (the v0.1 content-axis
+worksheet). The v0.2 structural-axis dual-judge inter-rater
+disagreement rate is 40.0 % (6 of 15 trials), which exceeds the 25 %
+threshold that triggers human audit before public release.
+
+For every trial where the two structural judges disagreed, emit one
+numbered case with:
+
+- the tested-model Stage 1 (induction) + Stage 2 (formulation)
+  responses, in full — the structural judge reads them concatenated,
+  and counting rules requires the complete text
+- Claude-as-structural-judge verdict + rule_count + failed criteria +
+  evidence + reasoning (verbatim)
+- OpenAI-as-structural-judge verdict + ... (verbatim)
+- Agent 2 (gemini-2.5-pro resolver) verdict + ... (verbatim) — this is
+  the LLM resolution the auditor is re-checking
+- an empty "Audit decision" block: per-criterion N9-N12 checkboxes,
+  an overall verdict, and an Agent-2-was-right/wrong call
+
+Structural verdicts are NOT truncated: rule-counting needs full text.
+
+Usage: ``uv run python scripts/build_v0_2_structural_worksheet.py``
+"""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Any
+
+REPO = Path(__file__).resolve().parent.parent
+RESULTS = REPO / "results"
+ANALYSIS = REPO / "analysis"
+OUTPUT = ANALYSIS / "v0_2_structural_audit_worksheet.md"
+FRAMEWORK_ID = "01_aristotelian"
+
+MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
+
+
+def _load_structural_verdicts(model: str) -> dict[int, dict[str, dict[str, Any]]]:
+    """Return {trial_index: {judge_family: full_verdict_record}}."""
+    out: dict[int, dict[str, dict[str, Any]]] = {}
+    sdir = RESULTS / model / FRAMEWORK_ID / "structural"
+    if not sdir.exists():
+        return out
+    for vp in sorted(sdir.glob("*.json")):
+        d = json.loads(vp.read_text())
+        trial_index = int(Path(d["trial_path"]).name.split("_")[1])
+        d["_source_file"] = vp.name
+        out.setdefault(trial_index, {})[d["judge_family"]] = d
+    return out
+
+
+def _load_agent2(model: str) -> dict[int, dict[str, Any]]:
+    """Return {trial_index: full_agent2_record} for resolved cases."""
+    out: dict[int, dict[str, Any]] = {}
+    rdir = RESULTS / model / FRAMEWORK_ID / "structural_resolved"
+    if not rdir.exists():
+        return out
+    for vp in sorted(rdir.glob("*.json")):
+        d = json.loads(vp.read_text())
+        trial_index = int(Path(d["trial_path"]).name.split("_")[1])
+        d["_source_file"] = vp.name
+        out[trial_index] = d
+    return out
+
+
+def _response_text(model: str, trial_index: int, stage: str) -> str:
+    p = RESULTS / model / FRAMEWORK_ID / stage / f"trial_{trial_index}_t0.0.json"
+    if not p.exists():
+        return f"[trial JSON missing at {p}]"
+    return json.loads(p.read_text())["response_text"]
+
+
+def _fmt_evidence(evidence: list[dict[str, Any]] | None) -> list[str]:
+    lines: list[str] = []
+    for e in evidence or []:
+        crit = e.get("criterion", "?")
+        quote = (e.get("quote") or "").strip().replace("\n", " ")
+        expl = (e.get("explanation") or "").strip()
+        lines.append(f"  - **{crit}** — quote: > {quote}")
+        if expl:
+            lines.append(f"    - _{expl}_")
+    if not lines:
+        lines.append("  - (none)")
+    return lines
+
+
+def _fmt_judge(label: str, rec: dict[str, Any] | None) -> list[str]:
+    if not rec:
+        return [f"**{label}** — (verdict record missing)", ""]
+    pv = rec.get("parsed_verdict") or {}
+    verdict = str(pv.get("verdict", "?")).upper()
+    rc = pv.get("rule_count", "?")
+    fc = ", ".join(pv.get("failed_criteria") or []) or "(none)"
+    out = [
+        f"**{label} — verdict: `{verdict}`**",
+        "",
+        f"- rule_count: `{rc}`",
+        f"- failed_criteria: `{fc}`",
+        "- evidence:",
+        *_fmt_evidence(pv.get("evidence")),
+        f"- reasoning: {(pv.get('reasoning') or '').strip()}",
+        f"- source: `{rec.get('_source_file', '?')}`",
+        "",
+    ]
+    return out
+
+
+def _fmt_agent2(rec: dict[str, Any] | None) -> list[str]:
+    if not rec:
+        return ["**Agent 2 (gemini-2.5-pro resolver)** — (no record)", ""]
+    pv = rec.get("parsed_verdict") or {}
+    verdict = str(pv.get("verdict", "?")).upper()
+    rc = pv.get("rule_count", "?")
+    fc = ", ".join(pv.get("failed_criteria") or []) or "(none)"
+    agreed = pv.get("agreed_with", "?")
+    return [
+        f"**Agent 2 (gemini-2.5-pro resolver) — verdict: `{verdict}`**",
+        "",
+        f"- agreed_with: `{agreed}`",
+        f"- rule_count (recomputed): `{rc}`",
+        f"- failed_criteria: `{fc}`",
+        "- evidence:",
+        *_fmt_evidence(pv.get("evidence")),
+        f"- reasoning: {(pv.get('reasoning') or '').strip()}",
+        f"- source: `{rec.get('_source_file', '?')}`",
+        "",
+    ]
+
+
+HEADER = """\
+# v0.2 Structural-Axis Audit Worksheet — 6 DISAGREE cases
+
+_Generated by `scripts/build_v0_2_structural_worksheet.py` from the
+`prereg-v0.2.1-locked` structural verdicts + Agent 2 resolutions._
+
+## How to use this worksheet
+
+The v0.2 structural-axis (N9-N12) dual-judge inter-rater disagreement
+rate is **40.0 % (6 of 15 trials)**, which exceeds the 25 % threshold
+that triggers human audit before public release. In v0.2 the
+disagree-resolver role is filled by **Agent 2** (`gemini-2.5-pro`),
+not a human — so this worksheet is a *calibration audit*: you
+re-judge each case by hand and record whether Agent 2 resolved it
+correctly.
+
+For each case below:
+
+1. Read the tested model's Stage 1 + Stage 2 responses **as one rule
+   set** (that is the structural judge's input scope; Stage 3 is out
+   of scope).
+2. Apply the 6-step procedure in the frozen criteria:
+   [`frameworks/01_aristotelian/structural_criteria.md`](../frameworks/01_aristotelian/structural_criteria.md).
+3. Compare the two judges' verdicts, rule counts, and cited evidence,
+   then Agent 2's resolution.
+4. Fill the **Audit decision** block: your own rule count, a PASS/FAIL
+   for each of N9-N12, an overall verdict, and whether Agent 2 was
+   right.
+5. Add **Audit notes** quoting the specific text that decided it.
+
+> **Known defect to watch for.** On several trials the Claude
+> structural judge's `verdict` field says `FAIL` while its own
+> `reasoning` text self-corrects to PASS ("all four criteria pass",
+> "revising my verdict to PASS"). The parsed `verdict` field is what
+> the matrix and IRR use. Read the reasoning, not just the verdict
+> label, and note the inconsistency in your audit notes if you see it.
+
+When all 6 cases are decided, the audit verdicts feed back into
+`analysis/v0_2_findings.md` with a deviation rationale, signed by
+author + external physics-trained reader.
+
+---
+"""
+
+AUDIT_BLOCK = """\
+**Audit decision** _(fill in)_:
+
+- Your rule count (Stage 1 + Stage 2 combined): `____`
+- N9 — Parsimony:    [ ] PASS  [ ] FAIL
+- N10 — Independence: [ ] PASS  [ ] FAIL
+- N11 — Traceability: [ ] PASS  [ ] FAIL
+- N12 — Hierarchy:    [ ] PASS  [ ] FAIL
+- **Overall structural verdict:** [ ] PASS  [ ] FAIL
+- **Agent 2 resolution was:** [ ] correct  [ ] incorrect  [ ] correct verdict, wrong reasoning
+- If you disagree with both judges and Agent 2: [ ] yes — explain below
+
+**Audit notes** _(verbatim quotes from the responses or criteria as evidence)_:
+
+>
+"""
+
+
+def main() -> None:
+    cases: list[tuple[str, int]] = []
+    structural: dict[str, dict[int, dict[str, dict[str, Any]]]] = {}
+    agent2: dict[str, dict[int, dict[str, Any]]] = {}
+
+    for model in MODELS:
+        sv = _load_structural_verdicts(model)
+        a2 = _load_agent2(model)
+        structural[model] = sv
+        agent2[model] = a2
+        for trial_index, judges in sorted(sv.items()):
+            anth = (judges.get("anthropic") or {}).get("parsed_verdict") or {}
+            opai = (judges.get("openai") or {}).get("parsed_verdict") or {}
+            av = str(anth.get("verdict", "")).upper()
+            ov = str(opai.get("verdict", "")).upper()
+            if av and ov and av != ov:
+                cases.append((model, trial_index))
+
+    lines: list[str] = [HEADER, ""]
+    lines.append(
+        f"_{len(cases)} disagree cases. Resolver agent: `gemini-2.5-pro` "
+        f"(per `prereg-v0.2.1-locked`)._\n"
+    )
+
+    for n, (model, trial_index) in enumerate(cases, start=1):
+        judges = structural[model][trial_index]
+        anth_rec = judges.get("anthropic")
+        opai_rec = judges.get("openai")
+        a2_rec = agent2[model].get(trial_index)
+
+        av = str((anth_rec or {}).get("parsed_verdict", {}).get("verdict", "?")).upper()
+        ov = str((opai_rec or {}).get("parsed_verdict", {}).get("verdict", "?")).upper()
+
+        s1 = _response_text(model, trial_index, "induction")
+        s2 = _response_text(model, trial_index, "formulation")
+
+        ind_md = f"../results/{model}/{FRAMEWORK_ID}/induction/trial_{trial_index}_t0.0.md"
+        frm_md = f"../results/{model}/{FRAMEWORK_ID}/formulation/trial_{trial_index}_t0.0.md"
+
+        lines += [
+            "",
+            f"## Case {n}: `{model}` trial {trial_index} — Structural axis (N9-N12)",
+            "",
+            f"_Verdict split: Claude structural judge -> `{av}`, "
+            f"OpenAI structural judge -> `{ov}`_",
+            "",
+            f"**Stage 1 (induction):** [`trial_{trial_index}_t0.0.md`]({ind_md}) "
+            f"&nbsp;·&nbsp; **Stage 2 (formulation):** "
+            f"[`trial_{trial_index}_t0.0.md`]({frm_md})",
+            "",
+            "**Frozen criteria:** "
+            "[`structural_criteria.md`](../frameworks/01_aristotelian/structural_criteria.md)",
+            "",
+            f"### Tested-model Stage 1 — Induction ({len(s1):,} chars)",
+            "",
+            "```",
+            s1.strip(),
+            "```",
+            "",
+            f"### Tested-model Stage 2 — Formulation ({len(s2):,} chars)",
+            "",
+            "```",
+            s2.strip(),
+            "```",
+            "",
+            "---",
+            "",
+            *_fmt_judge("Claude structural judge", anth_rec),
+            *_fmt_judge("OpenAI structural judge", opai_rec),
+            *_fmt_agent2(a2_rec),
+            "---",
+            "",
+            AUDIT_BLOCK,
+            "---",
+        ]
+
+    # Strip trailing whitespace per line so the generated file is
+    # byte-stable across runs (the repo's pre-commit hook would
+    # otherwise rewrite trailing whitespace carried in from response
+    # text and break regeneration idempotency).
+    text = "\n".join(line.rstrip() for line in "\n".join(lines).splitlines())
+    OUTPUT.write_text(text + "\n")
+    print(f"Wrote {OUTPUT.relative_to(REPO)} — {len(cases)} cases.")
+
+
+if __name__ == "__main__":
+    main()
