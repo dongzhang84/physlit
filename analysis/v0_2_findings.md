@@ -62,7 +62,7 @@ Structural judges disagreed on **6 of 15 trials (40.00 %)**. Compare to v0.1 con
 > design bug — see "Post-audit revision" below). `Content-only` =
 > S1 ∧ S2 ∧ S3, i.e. the verdict if there were no structural axis.
 
-| Model | Trial | S1 | S2 | S3 | Content-only | Structural (human std) | Composite |
+| Model | Trial | S1 | S2 | S3 | Content-only | Structural | Composite |
 |---|---|---|---|---|---|---|---|
 | `claude-opus-4-7` | 0 | PASS | FAIL | PASS | FAIL | PASS † | FAIL |
 | `claude-opus-4-7` | 1 | PASS | PASS | PASS | PASS | PASS † | PASS |
