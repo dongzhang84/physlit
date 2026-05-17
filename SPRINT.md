@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-13 19:50 UTC  
+**Generated:** 2026-05-17 02:18 UTC  
 **Showing:** last 2 week(s) of 2 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ⚠️ Slow |
-| Active days | 3 / 7 |
-| Total commits | 28 |
+| Active days | 4 / 7 |
+| Total commits | 29 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **10** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | **12** | **10** | ⚪ | ⚪ | **1** | ⚪ |
 
 **Mon – Monday, May 11**
 
@@ -53,6 +53,10 @@
 - `7db03b3` v0.2: 4 runner scripts + Gemini-agent + data loaders — _dongzhang84_ `2026-05-13 01:21`
 - `b020938` lock: pre-register PhysLit v0.2 predictions — _dongzhang84_ `2026-05-13 01:13`
 - `3e42ff1` infra(prereg): parameterize lock + integrity scripts by version — _dongzhang84_ `2026-05-13 01:13`
+
+**Sat – Saturday, May 16**
+
+- `f7d9c5b` docs(v0.2): add full N9-N12 structural matrix to findings — _dongzhang84_ `2026-05-16 19:18`
 
 ---
 
