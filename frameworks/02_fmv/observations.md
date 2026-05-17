@@ -76,7 +76,7 @@ avoided.
 
 11. A stone is carried forward in a moving hand and then let go. It
     does not sail onward through the air. The instant it leaves the
-    hand it drops straight down to the ground from that spot.
+    hand it drops straight down from the point where it was released.
 
 12. Objects fall at the same one steady pace whether released through
     open air or through a tall jar from which the air has been
