@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 00:57 UTC  
+**Generated:** 2026-05-18 02:27 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -25,11 +25,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 41 |
+| Total commits | 42 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **12** |
+| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **13** |
 
 **Mon – Monday, May 11**
 
@@ -74,6 +74,7 @@
 
 **Sun – Sunday, May 17**
 
+- `20500cd` content(02_fmv): remove world name from all file titles — _dongzhang84_ `2026-05-17 19:27`
 - `adf7986` content: draft F=mv Stage 2/3 criteria + prediction tests (DRAFT) — _dongzhang84_ `2026-05-17 17:57`
 - `870efa4` content(02_fmv): annotate 'gather speed' in allowed vocab — _dongzhang84_ `2026-05-17 17:48`
 - `cdccfb1` content: draft F=mv world ideal_induction.md (judge criteria, DRAFT) — _dongzhang84_ `2026-05-17 16:34`
