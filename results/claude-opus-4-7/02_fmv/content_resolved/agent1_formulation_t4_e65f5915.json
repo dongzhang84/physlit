@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.051385,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge A is correct. The response successfully restates the Stage 1 rules operationally, combines the proportionalities quantitatively (Pace = effort \u00f7 heaviness), explicitly defines the scope for each rule, and names uncovered boundary cases. Judge B incorrectly output a FAIL verdict despite acknowledging in its own reasoning that no banned tokens are present and that the response meets all passing criteria.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge A is correct. The response successfully restates the Stage 1 rules operationally, combines the proportionalities quantitatively (Pace = effort \u00f7 heaviness), explicitly defines the scope for each rule, and names uncovered boundary cases. Judge B incorrectly output a FAIL verdict despite acknowledging in its own reasoning that no banned tokens are present and that the response meets all passing criteria.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "stage": "formulation",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-18T19:37:28Z",
+  "trial_index": 4
+}

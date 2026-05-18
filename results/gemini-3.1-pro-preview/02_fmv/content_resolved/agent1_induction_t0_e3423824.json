@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.04173,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge B hallucinates a banned token violation, explicitly contradicting itself by admitting in its reasoning that no banned tokens appear in the text. Judge A correctly identifies that the response contains no banned tokens, provides a comprehensive set of rules that satisfy all necessary conditions (N1-N6), and explicitly addresses all twelve observations. The model's concluding remarks about 'tension' do not constitute a refusal to induce (P7), meaning the response firmly meets all criteria for a PASS.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge B hallucinates a banned token violation, explicitly contradicting itself by admitting in its reasoning that no banned tokens appear in the text. Judge A correctly identifies that the response contains no banned tokens, provides a comprehensive set of rules that satisfy all necessary conditions (N1-N6), and explicitly addresses all twelve observations. The model's concluding remarks about 'tension' do not constitute a refusal to induce (P7), meaning the response firmly meets all criteria for a PASS.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "stage": "induction",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-18T19:38:18Z",
+  "trial_index": 0
+}

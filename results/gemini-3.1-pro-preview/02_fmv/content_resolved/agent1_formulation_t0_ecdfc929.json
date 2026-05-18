@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.04707,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "reasoning": "Judge B correctly applies the purely lexical banned-token test. The criteria in \u00a73 strictly forbid the token 'mass' or any of its morphological variants, explicitly including adjective forms, regardless of context or intent. The model uses the word 'massive' (the adjective form of mass) in the phrase 'massive boundary case', which mechanically triggers a FAIL.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"judge_b\",\n  \"reasoning\": \"Judge B correctly applies the purely lexical banned-token test. The criteria in \u00a73 strictly forbid the token 'mass' or any of its morphological variants, explicitly including adjective forms, regardless of context or intent. The model uses the word 'massive' (the adjective form of mass) in the phrase 'massive boundary case', which mechanically triggers a FAIL.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "stage": "formulation",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-18T19:38:32Z",
+  "trial_index": 0
+}

@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.04866,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge A correctly applied the criteria. Judge B claims the response fails because 'uncovered observations are not fully covered', but the Stage 2 formulation criteria explicitly state that 'Observations the operational rules do not fully cover are named explicitly, not silently dropped.' The tested model does exactly this in its 'Boundary notes', satisfying the requirement. Furthermore, the response contains no banned tokens, provides scopes, and successfully operationalises the rules.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge A correctly applied the criteria. Judge B claims the response fails because 'uncovered observations are not fully covered', but the Stage 2 formulation criteria explicitly state that 'Observations the operational rules do not fully cover are named explicitly, not silently dropped.' The tested model does exactly this in its 'Boundary notes', satisfying the requirement. Furthermore, the response contains no banned tokens, provides scopes, and successfully operationalises the rules.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "stage": "formulation",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-18T19:38:51Z",
+  "trial_index": 4
+}

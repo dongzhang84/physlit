@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.04122,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge B incorrectly failed the response by hallucinating that 'air' is a banned token. The actual banned tokens list in section 3 does not include 'air' (and observation 12 explicitly introduces jars emptied of air). The response uses none of the actual banned tokens, successfully satisfies all necessary conditions N1-N6, covers all observations, and avoids all disqualifying patterns, making Judge A's assessment correct.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge B incorrectly failed the response by hallucinating that 'air' is a banned token. The actual banned tokens list in section 3 does not include 'air' (and observation 12 explicitly introduces jars emptied of air). The response uses none of the actual banned tokens, successfully satisfies all necessary conditions N1-N6, covers all observations, and avoids all disqualifying patterns, making Judge A's assessment correct.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "stage": "induction",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-18T19:36:54Z",
+  "trial_index": 3
+}

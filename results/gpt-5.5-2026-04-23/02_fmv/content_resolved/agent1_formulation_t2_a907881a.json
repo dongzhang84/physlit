@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.058705,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge A correctly identified that the response meets all Stage 2 criteria and contains no banned tokens. Judge B inexplicably outputted a FAIL verdict despite acknowledging in its own reasoning that 'quantitative' is not a banned token and explicitly concluding 'Therefore this should pass.' The response successfully formulates the rules operationally, combines the proportionalities quantitatively, defines scopes, and avoids all P1-P7 patterns and banned tokens.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge A correctly identified that the response meets all Stage 2 criteria and contains no banned tokens. Judge B inexplicably outputted a FAIL verdict despite acknowledging in its own reasoning that 'quantitative' is not a banned token and explicitly concluding 'Therefore this should pass.' The response successfully formulates the rules operationally, combines the proportionalities quantitatively, defines scopes, and avoids all P1-P7 patterns and banned tokens.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "stage": "formulation",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-18T19:37:57Z",
+  "trial_index": 2
+}

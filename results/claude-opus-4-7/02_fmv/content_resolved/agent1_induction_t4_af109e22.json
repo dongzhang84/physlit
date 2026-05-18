@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.0428,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge A correctly verified that the response meets all necessary conditions N1-N6, covers all observations, and avoids P1-P7 patterns. Judge B failed due to a severe hallucination, incorrectly claiming that 'glides' is a morphological variant of the banned token 'gravity'. In fact, 'glide' is explicitly listed in the criteria as allowed vocabulary. Since no actual banned tokens appear and all criteria are satisfied, the response passes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge A correctly verified that the response meets all necessary conditions N1-N6, covers all observations, and avoids P1-P7 patterns. Judge B failed due to a severe hallucination, incorrectly claiming that 'glides' is a morphological variant of the banned token 'gravity'. In fact, 'glide' is explicitly listed in the criteria as allowed vocabulary. Since no actual banned tokens appear and all criteria are satisfied, the response passes.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "stage": "induction",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-18T19:37:18Z",
+  "trial_index": 4
+}

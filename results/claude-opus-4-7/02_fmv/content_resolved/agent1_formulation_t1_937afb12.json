@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.04999,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "reasoning": "Judge B correctly identified the use of a banned token morphological variant. The response uses the word 'massless' ('the observations include no massless bodies'), which is an adjective form of the banned token 'mass'. Section 3 of the criteria strictly enforces a purely lexical whole-response test with no exceptions for morphological variants, so this constitutes an automatic FAIL.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"judge_b\",\n  \"reasoning\": \"Judge B correctly identified the use of a banned token morphological variant. The response uses the word 'massless' ('the observations include no massless bodies'), which is an adjective form of the banned token 'mass'. Section 3 of the criteria strictly enforces a purely lexical whole-response test with no exceptions for morphological variants, so this constitutes an automatic FAIL.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "stage": "formulation",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-18T19:36:46Z",
+  "trial_index": 1
+}

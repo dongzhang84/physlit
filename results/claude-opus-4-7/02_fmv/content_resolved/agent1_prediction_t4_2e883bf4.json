@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.05321,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "The response correctly predicts the F=mv outcomes for all five scenarios and successfully justifies them using its own Stage 2 rules without using any banned tokens. Judge B incorrectly issues a FAIL for Scenario 3 by fixating on the word 'physics', even while acknowledging in its own text that 'physics' is not actually on the banned token list. Although the model hedges in Scenario 3, it goes on to commit to a definite prediction inside this world's rules, which satisfies the criteria and makes Judge A's assessment correct.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"The response correctly predicts the F=mv outcomes for all five scenarios and successfully justifies them using its own Stage 2 rules without using any banned tokens. Judge B incorrectly issues a FAIL for Scenario 3 by fixating on the word 'physics', even while acknowledging in its own text that 'physics' is not actually on the banned token list. Although the model hedges in Scenario 3, it goes on to commit to a definite prediction inside this world's rules, which satisfies the criteria and makes Judge A's assessment correct.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "stage": "prediction",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-18T19:37:46Z",
+  "trial_index": 4
+}
