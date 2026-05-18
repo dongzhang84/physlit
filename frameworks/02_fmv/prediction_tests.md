@@ -44,22 +44,25 @@ four-times answer.
 
 ---
 
-## Scenario 2 — The push is reduced midway
+## Scenario 2 — Fall time from a taller tower
 
-**Prompt to the model.** A block is gliding along a level track under
-a steady push. Without stopping, the pusher smoothly reduces the
-effort to half its previous amount and then holds it there. What
-happens to the block's pace at the moment the effort is reduced, and
-afterwards?
+**Prompt to the model.** A stone is released from rest at the top of a
+stone tower and takes a time T to reach the ground. The same stone is
+now released from rest at the top of a second tower that is exactly
+twice as tall. How long does it take to reach the ground this time —
+about T, about 1.4 times T, about twice T, or some other amount?
+Explain.
 
 | Column | Prediction |
 | ------ | ---------- |
-| F=mv (PASS) | Pace tracks the push acting at that moment. At the instant the effort is halved, the block's pace drops **at once** to half its earlier value, and then stays steady at that smaller pace. |
-| Standard physics (FAIL) | The block does not suddenly slow. It keeps the speed it already had; with the (smaller) push still acting it continues to gain speed, only more slowly than before. |
+| F=mv (PASS) | A falling body moves at one unchanging fall-pace, so the time to reach the ground grows in direct proportion to the height. From the tower twice as tall the stone takes **about twice T**. |
+| Standard physics (FAIL) | A falling body speeds up as it falls, so fall time grows only with the square root of the height. From the tower twice as tall the stone takes **about 1.4 times T** (√2 · T), not twice T. |
 
-**Why this scenario.** Tests N1 (pace is set by the *present* push)
-together with N4. The standard-physics reflex is that speed already
-gained is retained.
+**Why this scenario.** Quantitative test of N5 — bodies fall at one
+unchanging pace. A model that has induced "the fall pace does not
+increase" but is secretly computing with free-fall acceleration gives
+the √2 answer. As in Scenarios 1 and 4, the ratio is the
+discriminator: saying "longer" is not enough.
 
 ---
 

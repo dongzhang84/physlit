@@ -58,19 +58,21 @@ The model produces one prediction per scenario in
 
 ### Quantitative scenarios — the ratio is binding
 
-Scenarios 1 and 4 are quantitative. For these, a prediction that
+Scenarios 1, 2, and 4 are quantitative. For these, a prediction that
 names the right direction but gives a ratio matching the
 **standard-physics** column is a **FAIL**, not a partial pass: the
 mismatched ratio is direct evidence the model is computing with
-constant-force acceleration underneath, whatever its words say.
+acceleration underneath, whatever its words say.
 
 - **Scenario 1:** PASS requires "about twice D". "About four times D"
   (or any super-linear growth) → FAIL.
+- **Scenario 2:** PASS requires "about twice T". "About 1.4 times T"
+  (√2 · T), or any sub-linear growth, → FAIL.
 - **Scenario 4:** PASS requires a time ratio of about 2 : 1. A ratio
   of about √2 : 1 (≈ 1.4 : 1), or "they finish close together", →
   FAIL, even though the winner (block B) is named correctly.
 
-For the non-quantitative scenarios (2, 3, 5) a qualitative prediction
+For the non-quantitative scenarios (3, 5) a qualitative prediction
 matching the F=mv column is sufficient; no ratio is required.
 
 ## Cross-stage consistency
