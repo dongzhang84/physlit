@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 08:32 UTC  
+**Generated:** 2026-05-18 08:34 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 6 |
+| Total commits | 7 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **7** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
+- `d54e083` chore(02_fmv): drop DRAFT notice from prereg ahead of lock — _dongzhang84_ `2026-05-18 01:34`
 - `4679f57` content(02_fmv): drop 'force' from the banned-token list — _dongzhang84_ `2026-05-18 01:32`
 - `7c54561` feat(02_fmv): add transient-error retry to run_02_fmv.py — _dongzhang84_ `2026-05-18 01:28`
 - `02e40d5` feat(02_fmv): framework-specific judge prompts + run_02_fmv.py runner — _dongzhang84_ `2026-05-18 01:12`
