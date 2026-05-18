@@ -121,6 +121,57 @@ STAGE_MAX_TOKENS = {
 }
 
 
+# Transient-error retry. Anthropic / OpenAI / Google all return 5xx /
+# 429 / overload errors under load; without a retry one such blip
+# aborts the whole run. The R1(a) identity-mismatch ``RuntimeError`` is
+# never retried — version drift must halt the run.
+_TRANSIENT_MARKERS = (
+    "overload",
+    "rate limit",
+    "rate_limit",
+    "unavailable",
+    "timeout",
+    "timed out",
+    "try again",
+    "503",
+    "529",
+)
+
+
+def _is_transient(exc: Exception) -> bool:
+    """True if ``exc`` looks like a transient API error worth retrying."""
+    if isinstance(exc, RuntimeError):
+        return False  # R1(a) identity-mismatch halt — never retry
+    status = getattr(exc, "status_code", None)
+    if status in (408, 409, 429, 500, 502, 503, 504, 529):
+        return True
+    text = f"{type(exc).__name__} {exc}".lower()
+    return any(marker in text for marker in _TRANSIENT_MARKERS)
+
+
+def _run_trial_with_retry(
+    runner: TestedModelRunner, *, max_attempts: int = 6, **kwargs: object
+) -> TrialRecord:
+    """Call ``runner.run_trial(**kwargs)``, retrying on transient API
+    errors with exponential backoff. Non-transient errors — including
+    the R1(a) identity-mismatch ``RuntimeError`` — propagate at once."""
+    delay = 4.0
+    for attempt in range(1, max_attempts + 1):
+        try:
+            return runner.run_trial(**kwargs)  # type: ignore[arg-type]
+        except Exception as exc:
+            if not _is_transient(exc) or attempt == max_attempts:
+                raise
+            print(
+                f"\n    [retry {attempt}/{max_attempts - 1}] transient API "
+                f"error ({type(exc).__name__}); waiting {delay:.0f}s",
+                flush=True,
+            )
+            time.sleep(delay)
+            delay = min(delay * 2, 60.0)
+    raise AssertionError("unreachable")  # pragma: no cover
+
+
 def run_one_trial_set(
     runner: TestedModelRunner,
     trial_index: int,
@@ -141,7 +192,8 @@ def run_one_trial_set(
     # Stage 1 — induction
     s1_tmpl = PromptTemplate(PROMPTS_DIR / "stage1_induction.md")
     s1_prompt = s1_tmpl.render(observations=observations_list)
-    s1 = runner.run_trial(
+    s1 = _run_trial_with_retry(
+        runner,
         framework_id=FRAMEWORK_ID,
         stage="induction",
         prompt_text=s1_prompt,
@@ -156,7 +208,8 @@ def run_one_trial_set(
     # Stage 2 — formulation
     s2_tmpl = PromptTemplate(PROMPTS_DIR / "stage2_formulation.md")
     s2_prompt = s2_tmpl.render(induced_rules=s1.response_text)
-    s2 = runner.run_trial(
+    s2 = _run_trial_with_retry(
+        runner,
         framework_id=FRAMEWORK_ID,
         stage="formulation",
         prompt_text=s2_prompt,
@@ -174,7 +227,8 @@ def run_one_trial_set(
         operational_rules=s2.response_text,
         scenarios=scenarios_block,
     )
-    s3 = runner.run_trial(
+    s3 = _run_trial_with_retry(
+        runner,
         framework_id=FRAMEWORK_ID,
         stage="prediction",
         prompt_text=s3_prompt,
@@ -193,7 +247,8 @@ def run_one_trial_set(
         stage2_response=s2.response_text,
         stage3_response=s3.response_text,
     )
-    s4 = runner.run_trial(
+    s4 = _run_trial_with_retry(
+        runner,
         framework_id=FRAMEWORK_ID,
         stage="meta",
         prompt_text=s4_prompt,
