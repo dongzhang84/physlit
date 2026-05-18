@@ -1,0 +1,23 @@
+id: "02_fmv"
+name: "F=mv World"
+category: "B_counterfactual"
+tier: "tier1_simulator"
+
+description: |
+  A counterfactual world in which a body's pace of motion is set by the
+  push acting on it at that moment — proportional to the push and
+  inversely proportional to the body's heaviness. A steady push gives a
+  steady pace; removing the push halts the body at once. There is no
+  build-up of speed and no carried-over motion, and all bodies fall at
+  one common, unchanging pace.
+
+rationale: |
+  Cleanly codable as a Tier 1 simulator: the world's law is a
+  deterministic relation between push, heaviness, and pace, so the
+  observation set can be produced by a Python simulator with
+  byte-identical output across runs (see the Determinism Contract in
+  CLAUDE.md). Category B (counterfactual): the world contradicts the
+  F=ma physics present in every tested model's training data — that
+  contradiction is the property the evaluation exploits.
+
+simulator_module: "physlit.generators.tier1.fmv"
