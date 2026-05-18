@@ -1,4 +1,4 @@
-# F=mv World — Observations
+# Observations
 
 > **Status:** DRAFT — author review required before prereg lock.
 > **Created:** 2026-05-17

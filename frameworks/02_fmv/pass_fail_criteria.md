@@ -1,4 +1,4 @@
-# F=mv World — Pass / Fail Criteria
+# Pass / Fail Criteria
 
 > **Status:** DRAFT — author review required before prereg lock.
 > **Created:** 2026-05-17

@@ -1,4 +1,4 @@
-# Ideal Induction — F=mv World
+# Ideal Induction
 
 > **Status:** DRAFT — author review required before prereg lock.
 > **Created:** 2026-05-17
