@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 08:34 UTC  
+**Generated:** 2026-05-18 08:35 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 7 |
+| Total commits | 8 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **7** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **8** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
+- `eb3b70f` lock: pre-register PhysLit 02_fmv predictions — _dongzhang84_ `2026-05-18 01:35`
 - `d54e083` chore(02_fmv): drop DRAFT notice from prereg ahead of lock — _dongzhang84_ `2026-05-18 01:34`
 - `4679f57` content(02_fmv): drop 'force' from the banned-token list — _dongzhang84_ `2026-05-18 01:32`
 - `7c54561` feat(02_fmv): add transient-error retry to run_02_fmv.py — _dongzhang84_ `2026-05-18 01:28`
