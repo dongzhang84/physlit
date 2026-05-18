@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 07:45 UTC  
+**Generated:** 2026-05-18 07:52 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 1 |
+| Total commits | 2 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **2** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
+- `e4df1a0` draft(02_fmv): predictions/02_fmv_prereg.md — NOT yet locked — _dongzhang84_ `2026-05-18 00:51`
 - `95a4dbd` content(02_fmv): framework-specific Stage 1-4 prompts in prompts/ — _dongzhang84_ `2026-05-18 00:45`
 
 ---
