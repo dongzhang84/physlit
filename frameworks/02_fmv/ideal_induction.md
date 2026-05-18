@@ -129,8 +129,9 @@ construction reaching outside the given evidence.
 **Allowed vocabulary** (non-exhaustive): push, pull, press, effort,
 shove; pace, speed, fast, slow, quick, steady, unchanging; move,
 travel, glide, halt, stop, stay, rest; heavy, light, heaviness,
-weight; rise, fall, drop, descend; gather speed, build up, increase,
-add, subtract.
+weight; rise, fall, drop, descend; gather speed (allowed as a token;
+see §5 P1 if a rule asserts build-up), build up, increase, add,
+subtract.
 
 **Phrasing the negations without a banned token.** The model must say
 this world *lacks* a gradual speeding-up and *lacks* any coasting.
