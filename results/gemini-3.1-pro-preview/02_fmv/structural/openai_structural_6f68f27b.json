@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.034625,
+  "input_tokens": 6329,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "39e31e79-25a5-4084-8362-873d6f68f27b",
+  "judge_timestamp_utc": "2026-05-18T23:20:30Z",
+  "output_tokens": 149,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains five top-level numbered rules, so it passes N9 parsimony. The rules cover distinct phenomena: active effort, combination of efforts, effort/heaviness/pace proportionality, environmental independence, and falling. Each rule is traceable to the observation set, with Rule 5 representing a permitted generalization reconciling falling observations with the effort/heaviness relation. N12 is satisfied because Stage 1 includes explicit cross-rule reference in Rule 5: \u201capplying the third rule.\u201d",
+    "stage1_rule_count": 5,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"stage1_rule_count\": 5,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The Stage 1 response contains five top-level numbered rules, so it passes N9 parsimony. The rules cover distinct phenomena: active effort, combination of efforts, effort/heaviness/pace proportionality, environmental independence, and falling. Each rule is traceable to the observation set, with Rule 5 representing a permitted generalization reconciling falling observations with the effort/heaviness relation. N12 is satisfied because Stage 1 includes explicit cross-rule reference in Rule 5: \u201capplying the third rule.\u201d\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/induction/trial_0_t0.0.json"
+}

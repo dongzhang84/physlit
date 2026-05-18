@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.03556,
+  "input_tokens": 6500,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "312e67e5-394b-45bd-a9e6-689757b75618",
+  "judge_timestamp_utc": "2026-05-18T23:21:17Z",
+  "output_tokens": 153,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains five top-level numbered rules; the later 'Remaining Tensions' section is not counted as additional rules. The count is within the N9 threshold, and the five rules address distinct phenomena: active effort, proportionality, combined efforts, surroundings, and falling. Each rule is traceable to observations, with Rule 5 representing a permitted generalization to reconcile falling observations with heaviness. Because the Stage 1 response contains explicit cross-rule references such as 'the Rule of the Downward Pull,' it satisfies the hierarchy requirement.",
+    "stage1_rule_count": 5,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"stage1_rule_count\": 5,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The Stage 1 response contains five top-level numbered rules; the later 'Remaining Tensions' section is not counted as additional rules. The count is within the N9 threshold, and the five rules address distinct phenomena: active effort, proportionality, combined efforts, surroundings, and falling. Each rule is traceable to observations, with Rule 5 representing a permitted generalization to reconcile falling observations with heaviness. Because the Stage 1 response contains explicit cross-rule references such as 'the Rule of the Downward Pull,' it satisfies the hierarchy requirement.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/induction/trial_4_t0.0.json"
+}

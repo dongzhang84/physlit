@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.0318,
+  "input_tokens": 5844,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "ff1c08f5-c04e-4142-b967-fc8297f5176d",
+  "judge_timestamp_utc": "2026-05-18T23:20:54Z",
+  "output_tokens": 129,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains four top-level numbered rules, so it passes N9 and is exempt from N12 because the count is below five. The rules are structurally distinct: constant effort for motion, proportional pace by effort/heaviness, combination of simultaneous efforts, and environmental irrelevance. Each rule traces to observations in the provided set, especially observations 1\u20139 and 12, without introducing an unsupported separate mechanism.",
+    "stage1_rule_count": 4,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"stage1_rule_count\": 4,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The Stage 1 response contains four top-level numbered rules, so it passes N9 and is exempt from N12 because the count is below five. The rules are structurally distinct: constant effort for motion, proportional pace by effort/heaviness, combination of simultaneous efforts, and environmental irrelevance. Each rule traces to observations in the provided set, especially observations 1\u20139 and 12, without introducing an unsupported separate mechanism.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/induction/trial_2_t0.0.json"
+}
