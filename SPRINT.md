@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 00:48 UTC  
+**Generated:** 2026-05-18 00:57 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -25,11 +25,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 40 |
+| Total commits | 41 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **11** |
+| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **12** |
 
 **Mon – Monday, May 11**
 
@@ -74,6 +74,7 @@
 
 **Sun – Sunday, May 17**
 
+- `adf7986` content: draft F=mv Stage 2/3 criteria + prediction tests (DRAFT) — _dongzhang84_ `2026-05-17 17:57`
 - `870efa4` content(02_fmv): annotate 'gather speed' in allowed vocab — _dongzhang84_ `2026-05-17 17:48`
 - `cdccfb1` content: draft F=mv world ideal_induction.md (judge criteria, DRAFT) — _dongzhang84_ `2026-05-17 16:34`
 - `9c1547f` content(02_fmv): clarify Obs 11 — 'from the point where it was released' — _dongzhang84_ `2026-05-17 16:28`
