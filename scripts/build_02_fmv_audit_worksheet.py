@@ -189,6 +189,23 @@ AUDIT_META = """\
 """
 
 
+def _trial_links(model: str, trial: int, stage: str) -> list[str]:
+    """Markdown links (relative to analysis/) to the trial's .md and
+    .json for the stage under judgment, plus links to the trial's other
+    stages. The .md companions are produced by render_02_fmv_to_md.py."""
+    base = f"../results/{model}/{FRAMEWORK_ID}"
+    others = " · ".join(
+        f"[{s}]({base}/{s}/trial_{trial}_t0.0.md)" for s in (*CONTENT_STAGES, "meta") if s != stage
+    )
+    return [
+        f"**Trial files** (stage under judgment = `{stage}`): "
+        f"[`.md` — human-readable]({base}/{stage}/trial_{trial}_t0.0.md) · "
+        f"[`.json` — source of truth]({base}/{stage}/trial_{trial}_t0.0.json)",
+        f"**Same trial, other stages:** {others}",
+        "",
+    ]
+
+
 def main() -> None:
     # Collect disagree cases, grouped by stage.
     cases: dict[str, list[tuple[str, int]]] = {s: [] for s in (*CONTENT_STAGES, "meta")}
@@ -232,6 +249,7 @@ def main() -> None:
             a = j[(trial, stage, "anthropic")]
             b = j[(trial, stage, "openai")]
             lines += ["", f"### Case {n}: `{model}` trial {trial} — {STAGE_TITLE[stage]}", ""]
+            lines += _trial_links(model, trial, stage)
 
             if stage == "meta":
                 lines.append(
