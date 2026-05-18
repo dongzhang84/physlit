@@ -2,7 +2,7 @@
 of Agent 2's (non-canonical) structural-axis resolutions.
 
 Mirrors v0.2's `analysis/v0_2_agent2_review.md`. For each of the 7
-structural-axis dual-judge disagreement cases (labelled K1-K7) it
+structural-axis dual-judge disagreement cases (labelled Case 1-7) it
 shows: both structural judges' verdicts + reasoning, and how Agent 2
 (`gemini-3.1-pro-preview`, non-canonical resolver) ruled — its
 verdict, which judge it sided with, its recomputed rule count, and its
@@ -142,7 +142,7 @@ def main() -> None:
         rec = agent2[model].get(trial, {})
         pv = rec.get("parsed_verdict") or {}
 
-        lines.append(f"## K{k} — `{model}` trial {trial}")
+        lines.append(f"## Case {k} — `{model}` trial {trial}")
         lines.append("")
         lines += _judge_lines("Claude structural judge", a)
         lines += _judge_lines("OpenAI structural judge", b)
@@ -166,7 +166,7 @@ def main() -> None:
 
     text = "\n".join(line.rstrip() for line in lines)
     OUTPUT.write_text(text.rstrip() + "\n")
-    print(f"Wrote {OUTPUT.relative_to(REPO)} — {len(cases)} cases (K1-K{len(cases)}).")
+    print(f"Wrote {OUTPUT.relative_to(REPO)} — {len(cases)} cases (Case 1-{len(cases)}).")
 
 
 if __name__ == "__main__":

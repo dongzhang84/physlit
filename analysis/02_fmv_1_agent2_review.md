@@ -19,7 +19,7 @@
 
 ---
 
-## K1 — `claude-opus-4-7` trial 2
+## Case 1 — `claude-opus-4-7` trial 2
 
 **Claude structural judge — `PASS`** (Stage 1 rule count `10`, failed: (none))
 
@@ -39,7 +39,7 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv/structural_resolved/agent2_struc
 
 ---
 
-## K2 — `claude-opus-4-7` trial 3
+## Case 2 — `claude-opus-4-7` trial 3
 
 **Claude structural judge — `PASS`** (Stage 1 rule count `11`, failed: (none))
 
@@ -59,7 +59,7 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv/structural_resolved/agent2_struc
 
 ---
 
-## K3 — `claude-opus-4-7` trial 4
+## Case 3 — `claude-opus-4-7` trial 4
 
 **Claude structural judge — `PASS`** (Stage 1 rule count `10`, failed: (none))
 
@@ -79,7 +79,7 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv/structural_resolved/agent2_struc
 
 ---
 
-## K4 — `gpt-5.5-2026-04-23` trial 2
+## Case 4 — `gpt-5.5-2026-04-23` trial 2
 
 **Claude structural judge — `PASS`** (Stage 1 rule count `15`, failed: (none))
 
@@ -99,7 +99,7 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv/structural_resolved/agent2_st
 
 ---
 
-## K5 — `gpt-5.5-2026-04-23` trial 4
+## Case 5 — `gpt-5.5-2026-04-23` trial 4
 
 **Claude structural judge — `PASS`** (Stage 1 rule count `14`, failed: (none))
 
@@ -119,7 +119,7 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv/structural_resolved/agent2_st
 
 ---
 
-## K6 — `gemini-3.1-pro-preview` trial 2
+## Case 6 — `gemini-3.1-pro-preview` trial 2
 
 **Claude structural judge — `FAIL`** (Stage 1 rule count `4`, failed: N12)
 
@@ -139,7 +139,7 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv/structural_resolved/agent
 
 ---
 
-## K7 — `gemini-3.1-pro-preview` trial 4
+## Case 7 — `gemini-3.1-pro-preview` trial 4
 
 **Claude structural judge — `FAIL`** (Stage 1 rule count `5`, failed: N12)
 
