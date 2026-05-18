@@ -1,0 +1,23 @@
+{
+  "cost_usd_estimate": 0.0416,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "failed_criteria": [
+      "N10"
+    ],
+    "reasoning": "Judge B correctly identifies an N10 (Independence) violation between Rules 1 and 2. Both rules make the identical operational claim that a body's pace is determined exclusively by the present push, explicitly stating that when the push ceases, motion ceases ('when the push stops, the pace stops' in Rule 1; 'with no push, there is no motion' in Rule 2). Rule 2 adds no distinct operational content. The rule set passes N9 (11 rules is below the parsimony threshold), N11 (all rules trace to observations without fabrication), and N12 (the 'Tension' section explicitly references 'rule 8').",
+    "stage1_rule_count": 11,
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"judge_b\",\n  \"stage1_rule_count\": 11,\n  \"failed_criteria\": [\n    \"N10\"\n  ],\n  \"reasoning\": \"Judge B correctly identifies an N10 (Independence) violation between Rules 1 and 2. Both rules make the identical operational claim that a body's pace is determined exclusively by the present push, explicitly stating that when the push ceases, motion ceases ('when the push stops, the pace stops' in Rule 1; 'with no push, there is no motion' in Rule 2). Rule 2 adds no distinct operational content. The rule set passes N9 (11 rules is below the parsimony threshold), N11 (all rules trace to observations without fabrication), and N12 (the 'Tension' section explicitly references 'rule 8').\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.1",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-18T23:25:22Z",
+  "trial_index": 3
+}

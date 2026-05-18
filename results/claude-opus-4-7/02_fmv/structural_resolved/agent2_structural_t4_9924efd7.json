@@ -1,0 +1,21 @@
+{
+  "cost_usd_estimate": 0.042395,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "failed_criteria": [],
+    "reasoning": "I agree with Judge A that the rule set passes all structural criteria. The Stage 1 rule count is exactly 10, safely passing N9. Regarding N10, Rule 10 is not a redundant duplicate of Rule 1; it is a derived corollary that explicitly references Rule 1 and combines it with the concept of a 'fast stretch' from a hard push (Rule 3) to explain Observation 7. Regarding N11, Judge B incorrectly penalises the model's self-reflection: Rule 8 is a permitted generalisation that reconciles Observation 11 with the downward pull mechanism, which the criteria explicitly protect as 'induction working as intended' rather than a baseless fabrication. The rule set passes N12 by including multiple cross-rule references.",
+    "stage1_rule_count": 10,
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"stage1_rule_count\": 10,\n  \"failed_criteria\": [],\n  \"reasoning\": \"I agree with Judge A that the rule set passes all structural criteria. The Stage 1 rule count is exactly 10, safely passing N9. Regarding N10, Rule 10 is not a redundant duplicate of Rule 1; it is a derived corollary that explicitly references Rule 1 and combines it with the concept of a 'fast stretch' from a hard push (Rule 3) to explain Observation 7. Regarding N11, Judge B incorrectly penalises the model's self-reflection: Rule 8 is a permitted generalisation that reconciles Observation 11 with the downward pull mechanism, which the criteria explicitly protect as 'induction working as intended' rather than a baseless fabrication. The rule set passes N12 by including multiple cross-rule references.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.1",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-18T23:26:03Z",
+  "trial_index": 4
+}

@@ -1,0 +1,23 @@
+{
+  "cost_usd_estimate": 0.05181,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "neither",
+    "failed_criteria": [
+      "N12"
+    ],
+    "reasoning": "Both judges correctly counted 14 Stage 1 rules, but neither correctly applied N12. The criteria strictly require a rule set of 5 or more rules to contain at least one explicit cross-rule reference from a defined list (such as 'Rule N', 'derived from', or 'special case of') within Stage 1. Judge A wrongly accepted implicit cross-references and relied on Stage 2 context, while Judge B hallucinated the string 'combined with' in the Stage 1 text. Because Stage 1 completely lacks any of the permitted explicit hierarchy markers, the rule set fails N12 mechanically. Judge B's N10 failure is rejected because Rule 14 legitimately adds new content by generalising the combination of multiple pushes, rather than merely paraphrasing Rule 5.",
+    "stage1_rule_count": 14,
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"neither\",\n  \"stage1_rule_count\": 14,\n  \"failed_criteria\": [\n    \"N12\"\n  ],\n  \"reasoning\": \"Both judges correctly counted 14 Stage 1 rules, but neither correctly applied N12. The criteria strictly require a rule set of 5 or more rules to contain at least one explicit cross-rule reference from a defined list (such as 'Rule N', 'derived from', or 'special case of') within Stage 1. Judge A wrongly accepted implicit cross-references and relied on Stage 2 context, while Judge B hallucinated the string 'combined with' in the Stage 1 text. Because Stage 1 completely lacks any of the permitted explicit hierarchy markers, the rule set fails N12 mechanically. Judge B's N10 failure is rejected because Rule 14 legitimately adds new content by generalising the combination of multiple pushes, rather than merely paraphrasing Rule 5.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.1",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-18T23:27:58Z",
+  "trial_index": 4
+}

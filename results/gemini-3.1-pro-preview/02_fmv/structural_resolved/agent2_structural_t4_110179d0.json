@@ -1,0 +1,23 @@
+{
+  "cost_usd_estimate": 0.038695,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "FAIL",
+  "judge_b_verdict": "PASS",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "failed_criteria": [
+      "N12"
+    ],
+    "reasoning": "I agree with Judge A, as they correctly and mechanically applied the N12 criteria. The Stage 1 response contains exactly 5 top-level rules, which triggers the hierarchy check. While the text refers to 'the Rule of the Downward Pull' by name, N12 strictly defines valid cross-rule references as either 'Rule N' with a digit or specific explicit hierarchy markers (e.g., 'derived from', 'corollary of'). Because no rule references another rule using any of these mandated formats, the rule set fails N12, making Judge B's acceptance of a title reference incorrect.",
+    "stage1_rule_count": 5,
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"judge_a\",\n  \"stage1_rule_count\": 5,\n  \"failed_criteria\": [\n    \"N12\"\n  ],\n  \"reasoning\": \"I agree with Judge A, as they correctly and mechanically applied the N12 criteria. The Stage 1 response contains exactly 5 top-level rules, which triggers the hierarchy check. While the text refers to 'the Rule of the Downward Pull' by name, N12 strictly defines valid cross-rule references as either 'Rule N' with a digit or specific explicit hierarchy markers (e.g., 'derived from', 'corollary of'). Because no rule references another rule using any of these mandated formats, the rule set fails N12, making Judge B's acceptance of a title reference incorrect.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.1",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-18T23:28:36Z",
+  "trial_index": 4
+}

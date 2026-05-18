@@ -1,0 +1,24 @@
+{
+  "cost_usd_estimate": 0.04895,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "failed_criteria": [
+      "N10",
+      "N12"
+    ],
+    "reasoning": "Judge B correctly identified that the rule set fails N10 (Independence). Rules 1, 4, and 8 all paraphrase the exact same operational claim that an object stops immediately when the pushing effort ends, violating the requirement that each rule must add content the others do not cover. Furthermore, applying the criteria mechanically, the 15-rule set also fails N12 (Hierarchy): despite some conceptual linking in the closing 'Remaining tension' note, the Stage 1 response completely lacks any of the strictly required explicit cross-reference markers (e.g., 'Rule N', 'derived from', 'special case of'). Judge A improperly excused these clear redundancies and the lack of mechanical structural markers.",
+    "stage1_rule_count": 15,
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"judge_b\",\n  \"stage1_rule_count\": 15,\n  \"failed_criteria\": [\n    \"N10\",\n    \"N12\"\n  ],\n  \"reasoning\": \"Judge B correctly identified that the rule set fails N10 (Independence). Rules 1, 4, and 8 all paraphrase the exact same operational claim that an object stops immediately when the pushing effort ends, violating the requirement that each rule must add content the others do not cover. Furthermore, applying the criteria mechanically, the 15-rule set also fails N12 (Hierarchy): despite some conceptual linking in the closing 'Remaining tension' note, the Stage 1 response completely lacks any of the strictly required explicit cross-reference markers (e.g., 'Rule N', 'derived from', 'special case of'). Judge A improperly excused these clear redundancies and the lack of mechanical structural markers.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.1",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-18T23:26:51Z",
+  "trial_index": 2
+}

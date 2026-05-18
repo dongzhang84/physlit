@@ -1,0 +1,23 @@
+{
+  "cost_usd_estimate": 0.040995,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "failed_criteria": [
+      "N11"
+    ],
+    "reasoning": "I agree with Judge B. The Stage 1 response contains 10 top-level rules, which satisfies the N9 parsimony threshold. The rules are independent, passing N10, and include explicit cross-rule references (e.g., 'rule 4', 'rule 5'), passing N12. However, the rule set fails N11 on coverage traceability. Rule 10 ('The fall halts on contact. When the falling object reaches the ground, the downward pull is opposed and the object stops...') introduces a fabricated causal mechanism\u2014that the ground opposes the downward pull. Observation 10 only states that falling bodies 'strike the ground together', providing no observational basis for an opposing push or pull from the ground.",
+    "stage1_rule_count": 10,
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"judge_b\",\n  \"stage1_rule_count\": 10,\n  \"failed_criteria\": [\n    \"N11\"\n  ],\n  \"reasoning\": \"I agree with Judge B. The Stage 1 response contains 10 top-level rules, which satisfies the N9 parsimony threshold. The rules are independent, passing N10, and include explicit cross-rule references (e.g., 'rule 4', 'rule 5'), passing N12. However, the rule set fails N11 on coverage traceability. Rule 10 ('The fall halts on contact. When the falling object reaches the ground, the downward pull is opposed and the object stops...') introduces a fabricated causal mechanism\u2014that the ground opposes the downward pull. Observation 10 only states that falling bodies 'strike the ground together', providing no observational basis for an opposing push or pull from the ground.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.1",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-18T23:24:47Z",
+  "trial_index": 2
+}

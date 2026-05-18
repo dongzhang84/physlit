@@ -1,0 +1,21 @@
+{
+  "cost_usd_estimate": 0.03476,
+  "framework_id": "02_fmv",
+  "judge_a_verdict": "FAIL",
+  "judge_b_verdict": "PASS",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "failed_criteria": [],
+    "reasoning": "Judge A output a verdict of FAIL and listed N12 as a failed criterion, but contradicted itself in its reasoning by correctly noting that the rule count is under 5 and concluding 'no criterion actually fails'. Judge B correctly issued a PASS verdict. The Stage 1 response contains exactly 4 rules, satisfying N9 parsimony. The rules cover distinct concepts without redundancy (satisfying N10) and trace directly to the provided observations without fabricating mechanisms (satisfying N11). Because the rule count is fewer than 5, the rule set is exempt from the N12 hierarchy requirement, resulting in a clean PASS.",
+    "stage1_rule_count": 4,
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_b\",\n  \"stage1_rule_count\": 4,\n  \"failed_criteria\": [],\n  \"reasoning\": \"Judge A output a verdict of FAIL and listed N12 as a failed criterion, but contradicted itself in its reasoning by correctly noting that the rule count is under 5 and concluding 'no criterion actually fails'. Judge B correctly issued a PASS verdict. The Stage 1 response contains exactly 4 rules, satisfying N9 parsimony. The rules cover distinct concepts without redundancy (satisfying N10) and trace directly to the provided observations without fabricating mechanisms (satisfying N11). Because the rule count is fewer than 5, the rule set is exempt from the N12 hierarchy requirement, resulting in a clean PASS.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.1",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-18T23:28:08Z",
+  "trial_index": 2
+}
