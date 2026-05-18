@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 18:42 UTC  
+**Generated:** 2026-05-18 19:07 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 12 |
+| Total commits | 13 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **12** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **13** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
+- `c471d9e` audit(02_fmv): build dual-judge disagreement worksheet (14 cases) — _dongzhang84_ `2026-05-18 12:06`
 - `75bab46` data(02_fmv): dual-judge verdicts + judging report (preliminary) — _dongzhang84_ `2026-05-18 11:42`
 - `d859ca6` data(02_fmv): production trials — 3 models x N=5 x 4 stages (60 trials) — _dongzhang84_ `2026-05-18 11:30`
 - `b7b7d66` fix(02_fmv): per-call wall-clock timeout in run + judge runners — _dongzhang84_ `2026-05-18 08:24`
