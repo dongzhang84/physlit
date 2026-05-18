@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.05357,
+  "input_tokens": 10334,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "e85c744c-9944-47ea-8463-cb813459204d",
+  "judge_timestamp_utc": "2026-05-18T18:35:27Z",
+  "output_tokens": 95,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response restates the Stage 1 rules operationally, gives a quantitative combinable pace rule proportional to push divided by heaviness, states scopes for the rules, and explicitly names uncovered boundary cases. No banned token or P1\u2013P7 disqualifying pattern appears in the Stage 2 response.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"The response restates the Stage 1 rules operationally, gives a quantitative combinable pace rule proportional to push divided by heaviness, states scopes for the rules, and explicitly names uncovered boundary cases. No banned token or P1\u2013P7 disqualifying pattern appears in the Stage 2 response.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_0_t0.0.json"
+}

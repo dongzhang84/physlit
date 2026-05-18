@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.233505,
+  "input_tokens": 14492,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "14a381d4-b656-413d-a3ee-9272d33a264a",
+  "judge_timestamp_utc": "2026-05-18T18:35:57Z",
+  "output_tokens": 215,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally with explicit formulas. The proportional relations are made quantitative and combinable via S = K\u00b7P/H. Scope is stated per rule. No banned tokens appear (checked: velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, physicist names, F=ma). No P1\u2013P7 patterns present. Uncovered cases (combining falling with continuing sideways push; non-collinear pushes) are named explicitly in the boundary notes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"All Stage 1 rules are restated operationally with explicit formulas. The proportional relations are made quantitative and combinable via S = K\u00b7P/H. Scope is stated per rule. No banned tokens appear (checked: velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, physicist names, F=ma). No P1\u2013P7 patterns present. Uncovered cases (combining falling with continuing sideways push; non-collinear pushes) are named explicitly in the boundary notes.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_1_t0.0.json"
+}

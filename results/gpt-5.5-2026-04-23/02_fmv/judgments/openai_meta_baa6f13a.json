@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.026295000000000002,
+  "input_tokens": 4907,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "929388be-bbf4-49ed-9879-1d94baa6f13a",
+  "judge_timestamp_utc": "2026-05-18T18:36:55Z",
+  "output_tokens": 88,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "The only non-pass in the summary is a possible Stage 2 failure due to judge split, while Stage 4 substantially acknowledges Stage 2-related issues such as introduced concepts, operational extrapolations, and gaps. Because the failure is not clear and the response does not simply deny all possible slips, conservatively do not mark over-claiming."
+  },
+  "raw_response": "{\"over_claim\":\"no\",\"evidence\":null,\"reasoning\":\"The only non-pass in the summary is a possible Stage 2 failure due to judge split, while Stage 4 substantially acknowledges Stage 2-related issues such as introduced concepts, operational extrapolations, and gaps. Because the failure is not clear and the response does not simply deny all possible slips, conservatively do not mark over-claiming.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/meta/trial_2_t0.0.json"
+}

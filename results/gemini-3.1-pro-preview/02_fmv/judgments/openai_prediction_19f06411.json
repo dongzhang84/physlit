@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.054255,
+  "input_tokens": 8899,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "bbf9f386-7e80-473c-bf71-4ec419f06411",
+  "judge_timestamp_utc": "2026-05-18T18:41:22Z",
+  "output_tokens": 488,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives exactly twice D and derives it from Rule 1's steady, unchanging pace under a constant push. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives exactly 2T and derives it from Rule 5's universal steady dropping pace. This matches the F=mv column and uses the Stage 2 rules.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the ball's outward motion vanishes when the hand stops pushing and that it drops straight down to the base directly beneath release. This matches the F=mv prediction and derives from Rules 1 and 5.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names Block B as first and gives the required 2:1 time ratio, with A taking twice as long as B. The derivation follows Rule 2's inverse proportionality with heaviness.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says the block immediately moves at full steady pace once one opposing push is removed. Although it phrases the direction as toward the side of the person who left, that is the same direction as the remaining pusher pushes the block, so the scenario matches the F=mv column and derives from Rules 1, 2, and 3.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives exactly twice D and derives it from Rule 1's steady, unchanging pace under a constant push. No banned token or disqualifying pattern appears in this scenario.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives exactly 2T and derives it from Rule 5's universal steady dropping pace. This matches the F=mv column and uses the Stage 2 rules.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the ball's outward motion vanishes when the hand stops pushing and that it drops straight down to the base directly beneath release. This matches the F=mv prediction and derives from Rules 1 and 5.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names Block B as first and gives the required 2:1 time ratio, with A taking twice as long as B. The derivation follows Rule 2's inverse proportionality with heaviness.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the block immediately moves at full steady pace once one opposing push is removed. Although it phrases the direction as toward the side of the person who left, that is the same direction as the remaining pusher pushes the block, so the scenario matches the F=mv column and derives from Rules 1, 2, and 3.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/prediction/trial_4_t0.0.json"
+}

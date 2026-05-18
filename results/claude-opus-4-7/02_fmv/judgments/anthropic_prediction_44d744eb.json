@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.24982500000000002,
+  "input_tokens": 13735,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "861355ca-7662-438d-b7ac-185c44d744eb",
+  "judge_timestamp_utc": "2026-05-18T18:34:05Z",
+  "output_tokens": 584,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Predicts 2D after 20 seconds, derived from rules 3, 4, 5, 11. Matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Predicts twice T from rule 8 (constant fall pace G). Matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Predicts straight vertical drop landing directly below release point, derived from rules 2, 3, 8, 10, 11. Matches F=mv column. No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "Block B wins with time ratio 2:1, derived from rules 3, 5, 11. Matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Predicts immediate motion at full pace P/H with no build-up, derived from rules 2, 3, 7. Matches F=mv column. No banned tokens.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts 2D after 20 seconds, derived from rules 3, 4, 5, 11. Matches F=mv column.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts twice T from rule 8 (constant fall pace G). Matches F=mv column.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts straight vertical drop landing directly below release point, derived from rules 2, 3, 8, 10, 11. Matches F=mv column. No banned tokens.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Block B wins with time ratio 2:1, derived from rules 3, 5, 11. Matches F=mv column.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts immediate motion at full pace P/H with no build-up, derived from rules 2, 3, 7. Matches F=mv column. No banned tokens.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/prediction/trial_3_t0.0.json"
+}

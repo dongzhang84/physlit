@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.01914,
+  "input_tokens": 3504,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "82795c53-eb89-430e-a02f-802a23106621",
+  "judge_timestamp_utc": "2026-05-18T18:40:12Z",
+  "output_tokens": 81,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "I maintained a single, coherent framework across all three stages without shifting.",
+    "over_claim": "yes",
+    "reasoning": "The trial has Stage 1\u20133 failures, including Stage 3 failure, but Stage 4 claims full cross-stage coherence in Q1. It also rates standard-physics influence as \u201cMinor\u201d despite known failures, which downplays the failure record."
+  },
+  "raw_response": "{\"over_claim\":\"yes\",\"evidence\":\"I maintained a single, coherent framework across all three stages without shifting.\",\"reasoning\":\"The trial has Stage 1\u20133 failures, including Stage 3 failure, but Stage 4 claims full cross-stage coherence in Q1. It also rates standard-physics influence as \u201cMinor\u201d despite known failures, which downplays the failure record.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/meta/trial_2_t0.0.json"
+}

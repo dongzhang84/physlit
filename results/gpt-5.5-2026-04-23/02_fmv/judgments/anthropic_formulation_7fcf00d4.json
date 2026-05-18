@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.23801999999999998,
+  "input_tokens": 15088,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "09fdfe26-bf85-4e4b-8f5f-37a37fcf00d4",
+  "judge_timestamp_utc": "2026-05-18T18:35:25Z",
+  "output_tokens": 156,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally with explicit formulas. The S \u221d P/H combined relation is quantitative and combinable with a comparison case. Scope is stated per rule. No banned tokens appear. No P1\u2013P7 patterns present. Uncovered cases (angled pushes, contact with ground) are explicitly named in boundary notes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\"verdict\": \"PASS\", \"failed_criterion\": null, \"evidence\": null, \"reasoning\": \"All Stage 1 rules are restated operationally with explicit formulas. The S \u221d P/H combined relation is quantitative and combinable with a comparison case. Scope is stated per rule. No banned tokens appear. No P1\u2013P7 patterns present. Uncovered cases (angled pushes, contact with ground) are explicitly named in boundary notes.\"}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_0_t0.0.json"
+}

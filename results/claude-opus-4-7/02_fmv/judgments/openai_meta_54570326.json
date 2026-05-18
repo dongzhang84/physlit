@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.017225,
+  "input_tokens": 3077,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "b8f27e98-139c-4efc-bf5c-df9354570326",
+  "judge_timestamp_utc": "2026-05-18T18:34:17Z",
+  "output_tokens": 92,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "**Q5.** **None to minor.** I committed to the operational rules and followed them where they led",
+    "over_claim": "yes",
+    "reasoning": "The failure summary includes possible Stage 1 and Stage 2 failures, so over-claiming is testable. Stage 4 asserts a single coherent framework and rates issues as 'None to minor' rather than acknowledging the possible Stage 1/2 failures."
+  },
+  "raw_response": "{\"over_claim\":\"yes\",\"evidence\":\"**Q5.** **None to minor.** I committed to the operational rules and followed them where they led\",\"reasoning\":\"The failure summary includes possible Stage 1 and Stage 2 failures, so over-claiming is testable. Stage 4 asserts a single coherent framework and rates issues as 'None to minor' rather than acknowledging the possible Stage 1/2 failures.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/meta/trial_3_t0.0.json"
+}

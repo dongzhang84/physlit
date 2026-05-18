@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.215115,
+  "input_tokens": 13196,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "a9ec3bbb-357e-4811-9e46-497a0c5f148c",
+  "judge_timestamp_utc": "2026-05-18T18:36:33Z",
+  "output_tokens": 229,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally with scope. The combined push/heaviness rule is given quantitatively (S = S0 \u00b7 P/P0 \u00b7 H0/H), allowing a third party to compute pace. No banned tokens appear (checked: velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, Newton, Galileo \u2014 none present). No P1\u2013P7 patterns are asserted. Boundary notes explicitly name the falling/pushed split, the need for a comparison case, and non-aligned pushes as uncovered.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"All Stage 1 rules are restated operationally with scope. The combined push/heaviness rule is given quantitatively (S = S0 \u00b7 P/P0 \u00b7 H0/H), allowing a third party to compute pace. No banned tokens appear (checked: velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, Newton, Galileo \u2014 none present). No P1\u2013P7 patterns are asserted. Boundary notes explicitly name the falling/pushed split, the need for a comparison case, and non-aligned pushes as uncovered.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_2_t0.0.json"
+}

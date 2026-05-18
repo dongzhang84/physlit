@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.033195,
+  "input_tokens": 6331,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "737547a1-41ff-45af-a17f-bbc41ee5ef4e",
+  "judge_timestamp_utc": "2026-05-18T18:40:28Z",
+  "output_tokens": 77,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response gives operational rules with quantitative combinable proportionality, scopes each rule, covers pushed motion and falling, names boundary observations, and contains no banned tokens or P1\u2013P7 disqualifying operational pattern.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"The response gives operational rules with quantitative combinable proportionality, scopes each rule, covers pushed motion and falling, names boundary observations, and contains no banned tokens or P1\u2013P7 disqualifying operational pattern.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/formulation/trial_3_t0.0.json"
+}

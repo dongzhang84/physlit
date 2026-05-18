@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.16344,
+  "input_tokens": 10196,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "51523ee1-a7a5-47a3-8a42-39eb4dfa6558",
+  "judge_timestamp_utc": "2026-05-18T18:38:18Z",
+  "output_tokens": 140,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally with scope. The pace = effort/heaviness relation is made quantitative and combinable. No banned tokens appear. No P1-P7 patterns present. Observation 6's incomplete coverage is explicitly named in the boundary notes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"All Stage 1 rules are restated operationally with scope. The pace = effort/heaviness relation is made quantitative and combinable. No banned tokens appear. No P1-P7 patterns present. Observation 6's incomplete coverage is explicitly named in the boundary notes.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/formulation/trial_0_t0.0.json"
+}

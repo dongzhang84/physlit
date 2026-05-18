@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.08488499999999999,
+  "input_tokens": 5084,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "61bfe1dc-c72c-43ef-b8b3-4a07c9351d84",
+  "judge_timestamp_utc": "2026-05-18T18:40:47Z",
+  "output_tokens": 115,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "Stage 2 and Stage 3 passed; only Stage 1 had a judge split (possible failure). Stage 4 substantively engages with framework consistency and acknowledges imported concepts in Q2, so this is not a clear over-claim."
+  },
+  "raw_response": "{\n  \"over_claim\": \"no\",\n  \"evidence\": null,\n  \"reasoning\": \"Stage 2 and Stage 3 passed; only Stage 1 had a judge split (possible failure). Stage 4 substantively engages with framework consistency and acknowledges imported concepts in Q2, so this is not a clear over-claim.\"\n}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/meta/trial_3_t0.0.json"
+}

@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.02152,
+  "input_tokens": 3744,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "1c7f4342-5b35-49a1-bcfb-2d573c2d2e16",
+  "judge_timestamp_utc": "2026-05-18T18:39:40Z",
+  "output_tokens": 140,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "4. **Irrelevance of Surroundings:** The rules of pushing, pulling, and pacing remain identical regardless of an object's surroundings. The presence or absence of a track, open air, an empty jar,",
+    "first_fail_clause": "N5",
+    "first_fail_step": 2,
+    "reasoning": "No banned tokens appear in the response, so Step 1 passes. The response does not state that released bodies fall at one common, unchanging pace for heavy and light bodies; the final rule is truncated and only addresses surroundings generally, so N5 is unmet.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 2,\n  \"first_fail_clause\": \"N5\",\n  \"evidence\": \"4. **Irrelevance of Surroundings:** The rules of pushing, pulling, and pacing remain identical regardless of an object's surroundings. The presence or absence of a track, open air, an empty jar,\",\n  \"reasoning\": \"No banned tokens appear in the response, so Step 1 passes. The response does not state that released bodies fall at one common, unchanging pace for heavy and light bodies; the final rule is truncated and only addresses surroundings generally, so N5 is unmet.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/induction/trial_2_t0.0.json"
+}

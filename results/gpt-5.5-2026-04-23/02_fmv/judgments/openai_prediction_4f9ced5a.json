@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.06357,
+  "input_tokens": 10782,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "07ddd61c-285f-47b7-b3b6-acf74f9ced5a",
+  "judge_timestamp_utc": "2026-05-18T18:36:49Z",
+  "output_tokens": 483,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives the required quantitative result, twice D, and justifies it from the Stage 2 steady-pace rules. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives the required quantitative result, twice T, and derives it from Rule 12's fixed falling pace and proportional fall time. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the outward pushed pace ends at release, the ball falls straight downward from the release point, and it lands directly below the release point, matching the F=mv column. The justification cites the model's own Rules 4, 11, 12, and 15.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names Block B as first and gives the required time ratio t_A : t_B = 2 : 1. It derives this from the Stage 2 inverse heaviness-to-pace rule.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says the equal opposite pushes cancel, and when one stops the block immediately moves at the full steady pace due to the remaining push. This matches the F=mv column and is justified by the Stage 2 push-combination and immediate-full-pace rules.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives the required quantitative result, twice D, and justifies it from the Stage 2 steady-pace rules. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives the required quantitative result, twice T, and derives it from Rule 12's fixed falling pace and proportional fall time. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the outward pushed pace ends at release, the ball falls straight downward from the release point, and it lands directly below the release point, matching the F=mv column. The justification cites the model's own Rules 4, 11, 12, and 15.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names Block B as first and gives the required time ratio t_A : t_B = 2 : 1. It derives this from the Stage 2 inverse heaviness-to-pace rule.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the equal opposite pushes cancel, and when one stops the block immediately moves at the full steady pace due to the remaining push. This matches the F=mv column and is justified by the Stage 2 push-combination and immediate-full-pace rules.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/prediction/trial_2_t0.0.json"
+}

@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.17106,
+  "input_tokens": 10779,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "5dc31078-45eb-4c18-8a22-aa0a160a2915",
+  "judge_timestamp_utc": "2026-05-18T18:33:13Z",
+  "output_tokens": 125,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally; the proportional relations are combined as V = P/H allowing a third party to compute pace; scope is stated per rule; no banned tokens appear; no P1\u2013P7 patterns present; boundary notes name uncovered cases.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\"verdict\":\"PASS\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"All Stage 1 rules are restated operationally; the proportional relations are combined as V = P/H allowing a third party to compute pace; scope is stated per rule; no banned tokens appear; no P1\u2013P7 patterns present; boundary notes name uncovered cases.\"}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/formulation/trial_2_t0.0.json"
+}

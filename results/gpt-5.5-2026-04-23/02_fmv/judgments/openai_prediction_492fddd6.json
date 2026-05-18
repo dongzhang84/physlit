@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.06743500000000001,
+  "input_tokens": 11743,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "490f545e-37ce-4cbe-98cc-5892492fddd6",
+  "judge_timestamp_utc": "2026-05-18T18:36:15Z",
+  "output_tokens": 436,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives about twice D and derives it from the steady-pace push/heaviness rules. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives about twice T from a fixed falling pace, matching the F=mv column. It cites and applies the model's Stage 2 falling rules.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the sideways pace becomes zero after release and the ball drops straight down to the base, matching the F=mv column. It cites the model's own release and falling rules.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names block B as first and gives the required 2:1 time ratio. The calculation follows directly from the Stage 2 inverse heaviness rule.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says equal opposed pushes cancel, then the remaining push makes the block move immediately at a steady pace with no growth. This matches the F=mv column and follows from the cited Stage 2 rules.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice D and derives it from the steady-pace push/heaviness rules. No banned token or disqualifying pattern appears in this scenario.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice T from a fixed falling pace, matching the F=mv column. It cites and applies the model's Stage 2 falling rules.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the sideways pace becomes zero after release and the ball drops straight down to the base, matching the F=mv column. It cites the model's own release and falling rules.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names block B as first and gives the required 2:1 time ratio. The calculation follows directly from the Stage 2 inverse heaviness rule.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says equal opposed pushes cancel, then the remaining push makes the block move immediately at a steady pace with no growth. This matches the F=mv column and follows from the cited Stage 2 rules.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/prediction/trial_1_t0.0.json"
+}

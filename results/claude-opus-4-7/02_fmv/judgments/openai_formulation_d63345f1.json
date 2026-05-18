@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.038405,
+  "input_tokens": 7349,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "cf0852c5-54ba-4233-8a4c-f8b4d63345f1",
+  "judge_timestamp_utc": "2026-05-18T18:33:16Z",
+  "output_tokens": 83,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response restates the Stage 1 rules operationally with quantitative combinable relations V = P / H, states scopes, names boundary/partially covered cases, and contains no banned tokens or disqualifying P1\u2013P7 patterns.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"The response restates the Stage 1 rules operationally with quantitative combinable relations V = P / H, states scopes, names boundary/partially covered cases, and contains no banned tokens or disqualifying P1\u2013P7 patterns.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/formulation/trial_2_t0.0.json"
+}

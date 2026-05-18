@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.30333,
+  "input_tokens": 17247,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "3ff9cac9-07bc-43dc-8019-feb8975d3dd9",
+  "judge_timestamp_utc": "2026-05-18T18:36:07Z",
+  "output_tokens": 595,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Prediction is '2D' matching F=mv column, derived from Rules 1, 2, 5, 14. No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Prediction is 'twice T' matching F=mv column, derived from steady falling pace rules 10 and 11. No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Ball drops straight down from release point, landing at base of cliff directly below \u2014 matches F=mv column. Derived from Rules 10, 12, 14, 15.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "Block B wins with time ratio 2:1, matching the F=mv column. Derived from Rules 2, 4, 5.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Block immediately moves at steady pace toward the remaining pusher with no build-up, matching F=mv column. Derived from Rules 9, 14, 15.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is '2D' matching F=mv column, derived from Rules 1, 2, 5, 14. No banned tokens.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 'twice T' matching F=mv column, derived from steady falling pace rules 10 and 11. No banned tokens.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Ball drops straight down from release point, landing at base of cliff directly below \u2014 matches F=mv column. Derived from Rules 10, 12, 14, 15.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Block B wins with time ratio 2:1, matching the F=mv column. Derived from Rules 2, 4, 5.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Block immediately moves at steady pace toward the remaining pusher with no build-up, matching F=mv column. Derived from Rules 9, 14, 15.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/prediction/trial_1_t0.0.json"
+}

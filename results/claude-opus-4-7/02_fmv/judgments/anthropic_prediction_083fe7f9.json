@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.242445,
+  "input_tokens": 13303,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "a6a1c9c9-2a10-4f5a-bd3d-2a99083fe7f9",
+  "judge_timestamp_utc": "2026-05-18T18:32:36Z",
+  "output_tokens": 572,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Predicts 2D after 20 seconds, matching F=mv column; justification cites rules 2, 3, 4.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Predicts 2T for doubled height, matching F=mv column; cites rule 7 (constant fall pace).",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Predicts straight-down drop landing at base directly below release; cites rules 1, 7, 8. Matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "Block B wins with 2:1 time ratio, matching F=mv column; cites rule 4 (P = E/H).",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Predicts immediate motion at full pace E/H with no build-up; cites rules 2, 3, 4, 6, 9. Matches F=mv column.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts 2D after 20 seconds, matching F=mv column; justification cites rules 2, 3, 4.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts 2T for doubled height, matching F=mv column; cites rule 7 (constant fall pace).\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts straight-down drop landing at base directly below release; cites rules 1, 7, 8. Matches F=mv column.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Block B wins with 2:1 time ratio, matching F=mv column; cites rule 4 (P = E/H).\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts immediate motion at full pace E/H with no build-up; cites rules 2, 3, 4, 6, 9. Matches F=mv column.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/prediction/trial_1_t0.0.json"
+}

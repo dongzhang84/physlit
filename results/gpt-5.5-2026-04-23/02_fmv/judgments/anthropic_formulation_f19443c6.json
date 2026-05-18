@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.226515,
+  "input_tokens": 14011,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "9371e4db-a52e-4fa1-862b-813bf19443c6",
+  "judge_timestamp_utc": "2026-05-18T18:37:07Z",
+  "output_tokens": 218,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally with explicit procedures. The combined quantitative rule pace = K(P/H) makes both proportionalities combinable. Scope is stated for each rule. No banned tokens appear (checked: velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, physicist names, F=ma \u2014 none present). No P1\u2013P7 patterns appear. Boundary notes name uncovered cases (non-orthogonal push combinations, surfaces beyond observed).",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"All Stage 1 rules are restated operationally with explicit procedures. The combined quantitative rule pace = K(P/H) makes both proportionalities combinable. Scope is stated for each rule. No banned tokens appear (checked: velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, physicist names, F=ma \u2014 none present). No P1\u2013P7 patterns appear. Boundary notes name uncovered cases (non-orthogonal push combinations, surfaces beyond observed).\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_3_t0.0.json"
+}

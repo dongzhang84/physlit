@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.07067,
+  "input_tokens": 12294,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "884e850a-f361-44f7-94e9-ee15a360c8c7",
+  "judge_timestamp_utc": "2026-05-18T18:35:41Z",
+  "output_tokens": 460,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives about twice D and derives it from steady pace under a steady push using the Stage 2 rules. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives about twice T and derives it from constant falling pace using the Stage 2 falling rules. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the ball's forward pace becomes zero after release and it drops straight down below the release point. This matches the F=mv answer and is justified by the model's Rule 12 and falling rules.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names block B as first and gives the required 2:1 time ratio, derived from inverse proportionality of pace to heaviness in Rule 5. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says the block immediately moves in the direction of the remaining push at the steady pace assigned to that effort, with no start-up period. This matches the F=mv answer and cites the Stage 2 opposed-effort and immediate-pace rules.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice D and derives it from steady pace under a steady push using the Stage 2 rules. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice T and derives it from constant falling pace using the Stage 2 falling rules. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the ball's forward pace becomes zero after release and it drops straight down below the release point. This matches the F=mv answer and is justified by the model's Rule 12 and falling rules.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names block B as first and gives the required 2:1 time ratio, derived from inverse proportionality of pace to heaviness in Rule 5. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the block immediately moves in the direction of the remaining push at the steady pace assigned to that effort, with no start-up period. This matches the F=mv answer and cites the Stage 2 opposed-effort and immediate-pace rules.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/prediction/trial_0_t0.0.json"
+}

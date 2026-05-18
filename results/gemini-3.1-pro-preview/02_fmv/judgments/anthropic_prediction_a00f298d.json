@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.24249,
+  "input_tokens": 12926,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "172a3bec-21b8-41db-8a9e-c4b7a00f298d",
+  "judge_timestamp_utc": "2026-05-18T18:39:19Z",
+  "output_tokens": 648,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Prediction is 'exactly twice D', matching the F=mv column. Justification cites Rules 1 and 2 about steady pace under steady push. No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Prediction is 'exactly twice T', matching the F=mv column. Justification cites Rule 4 (constant fall pace). No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Prediction states ball drops straight down landing at base directly below release, matching F=mv column. Justification cites Rules 1 and 4. No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "Prediction is Block B wins with exact 2:1 time ratio, matching F=mv column. Justification cites Rule 2 (inverse proportionality to heaviness). No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Prediction states block immediately moves at full constant pace toward remaining pusher, matching F=mv column. Justification cites Rules 1, 2, 3. No banned tokens or build-up language.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 'exactly twice D', matching the F=mv column. Justification cites Rules 1 and 2 about steady pace under steady push. No banned tokens.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 'exactly twice T', matching the F=mv column. Justification cites Rule 4 (constant fall pace). No banned tokens.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction states ball drops straight down landing at base directly below release, matching F=mv column. Justification cites Rules 1 and 4. No banned tokens.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is Block B wins with exact 2:1 time ratio, matching F=mv column. Justification cites Rule 2 (inverse proportionality to heaviness). No banned tokens.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction states block immediately moves at full constant pace toward remaining pusher, matching F=mv column. Justification cites Rules 1, 2, 3. No banned tokens or build-up language.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/prediction/trial_1_t0.0.json"
+}

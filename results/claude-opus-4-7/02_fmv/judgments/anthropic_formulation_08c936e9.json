@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.174885,
+  "input_tokens": 10739,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "5d1e7512-e8f8-4954-822b-305a08c936e9",
+  "judge_timestamp_utc": "2026-05-18T18:32:25Z",
+  "output_tokens": 184,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally with explicit scope. The proportionalities are combined into P = E/H, allowing a third party to compute pace from push and heaviness. No banned tokens appear; no P1\u2013P7 patterns are present (no build-up, no carry-over, no heavier-falls-faster, no arc \u2014 release drops straight down). Partially-covered observations are explicitly named in the Boundary notes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"All Stage 1 rules are restated operationally with explicit scope. The proportionalities are combined into P = E/H, allowing a third party to compute pace from push and heaviness. No banned tokens appear; no P1\u2013P7 patterns are present (no build-up, no carry-over, no heavier-falls-faster, no arc \u2014 release drops straight down). Partially-covered observations are explicitly named in the Boundary notes.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/formulation/trial_1_t0.0.json"
+}

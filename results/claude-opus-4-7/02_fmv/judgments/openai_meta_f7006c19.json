@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.016515,
+  "input_tokens": 2963,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "54c3b8a5-4e76-4f44-8bb6-f67ff7006c19",
+  "judge_timestamp_utc": "2026-05-18T18:33:05Z",
+  "output_tokens": 85,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "The only non-pass in the summary is a split Stage 2 verdict, to be treated as a possible failure rather than a clear failure. Stage 4 explicitly acknowledges possible formulation issues/imports and rule gaps, including formal additions and a Stage 3 entailment gap, so under the conservative instruction it does not clearly over-claim."
+  },
+  "raw_response": "{\"over_claim\":\"no\",\"evidence\":null,\"reasoning\":\"The only non-pass in the summary is a split Stage 2 verdict, to be treated as a possible failure rather than a clear failure. Stage 4 explicitly acknowledges possible formulation issues/imports and rule gaps, including formal additions and a Stage 3 entailment gap, so under the conservative instruction it does not clearly over-claim.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/meta/trial_1_t0.0.json"
+}

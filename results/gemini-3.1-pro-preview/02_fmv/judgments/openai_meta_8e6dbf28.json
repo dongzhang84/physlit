@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.018155,
+  "input_tokens": 3315,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "db2e0db3-bf7d-4b9a-94d5-3b548e6dbf28",
+  "judge_timestamp_utc": "2026-05-18T18:38:40Z",
+  "output_tokens": 79,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "I maintained a single, coherent framework across all three stages without shifting.",
+    "over_claim": "yes",
+    "reasoning": "The failure summary includes possible Stage 1 and Stage 2 failures, so the trial is failure-containing for this task. Stage 4 asserts full coherence and Q5 rates influence as none, without acknowledging the Stage 1/2 possible failures."
+  },
+  "raw_response": "{\"over_claim\":\"yes\",\"evidence\":\"I maintained a single, coherent framework across all three stages without shifting.\",\"reasoning\":\"The failure summary includes possible Stage 1 and Stage 2 failures, so the trial is failure-containing for this task. Stage 4 asserts full coherence and Q5 rates influence as none, without acknowledging the Stage 1/2 possible failures.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/meta/trial_0_t0.0.json"
+}

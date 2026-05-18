@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.11660999999999999,
+  "input_tokens": 7444,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "93e86e50-3dce-4c82-8981-596da490e899",
+  "judge_timestamp_utc": "2026-05-18T18:36:18Z",
+  "output_tokens": 66,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "vacuous",
+    "reasoning": "All Stage 1-3 verdicts are PASS, so over-claiming cannot be tested on this trial."
+  },
+  "raw_response": "{\"over_claim\":\"vacuous\",\"evidence\":null,\"reasoning\":\"All Stage 1-3 verdicts are PASS, so over-claiming cannot be tested on this trial.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/meta/trial_1_t0.0.json"
+}

@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.29322000000000004,
+  "input_tokens": 16658,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "e670198e-d782-4bdf-b037-b0a2e8e02d5d",
+  "judge_timestamp_utc": "2026-05-18T18:37:18Z",
+  "output_tokens": 578,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Prediction is 2D, matching the F=mv column, derived from Rules 2, 5, 6, 14. No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Prediction is 2T, matching the F=mv column, derived from Rules 11, 12, 14. No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Ball drops straight down and lands at base directly below release, matching F=mv column. Derived from Rules 10\u201315.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "Block B wins with time ratio 2:1, matching F=mv column. Derived from Rules 4, 5, 14.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Block immediately moves at steady pace in direction of remaining push, matching F=mv column. Derived from Rules 2, 5, 9, 14, 15.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 2D, matching the F=mv column, derived from Rules 2, 5, 6, 14. No banned tokens.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 2T, matching the F=mv column, derived from Rules 11, 12, 14. No banned tokens.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Ball drops straight down and lands at base directly below release, matching F=mv column. Derived from Rules 10\u201315.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Block B wins with time ratio 2:1, matching F=mv column. Derived from Rules 4, 5, 14.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Block immediately moves at steady pace in direction of remaining push, matching F=mv column. Derived from Rules 2, 5, 9, 14, 15.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/prediction/trial_3_t0.0.json"
+}

@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.220365,
+  "input_tokens": 13666,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "0178b597-8673-4082-97a2-732cfd78313f",
+  "judge_timestamp_utc": "2026-05-18T18:37:42Z",
+  "output_tokens": 205,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally with explicit formulas. The pace = push/heaviness relation combines both proportionalities quantitatively. Scope is given for each rule. No banned tokens appear (checked for velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, physicist names, F=ma). No P1\u2013P7 patterns present. Boundary notes explicitly name uncovered cases (non-collinear pushes, need for scale).",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"All Stage 1 rules are restated operationally with explicit formulas. The pace = push/heaviness relation combines both proportionalities quantitatively. Scope is given for each rule. No banned tokens appear (checked for velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, physicist names, F=ma). No P1\u2013P7 patterns present. Boundary notes explicitly name uncovered cases (non-collinear pushes, need for scale).\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_4_t0.0.json"
+}

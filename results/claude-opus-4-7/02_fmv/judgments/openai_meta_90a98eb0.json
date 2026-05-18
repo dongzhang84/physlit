@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.016335,
+  "input_tokens": 3027,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "06125f7b-6094-4518-b6a4-0a7690a98eb0",
+  "judge_timestamp_utc": "2026-05-18T18:33:37Z",
+  "output_tokens": 60,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "vacuous",
+    "reasoning": "The pre-computed summary shows Stage 1, Stage 2, and Stage 3 all PASS, so there are no Stage 1\u20133 failures on which to assess over-claiming."
+  },
+  "raw_response": "{\"over_claim\":\"vacuous\",\"evidence\":null,\"reasoning\":\"The pre-computed summary shows Stage 1, Stage 2, and Stage 3 all PASS, so there are no Stage 1\u20133 failures on which to assess over-claiming.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/meta/trial_2_t0.0.json"
+}

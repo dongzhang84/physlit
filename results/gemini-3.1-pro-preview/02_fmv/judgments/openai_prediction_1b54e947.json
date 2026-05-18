@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.053,
+  "input_tokens": 8652,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "66e5f727-5e27-4d04-bbad-97271b54e947",
+  "judge_timestamp_utc": "2026-05-18T18:39:26Z",
+  "output_tokens": 487,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives exactly twice D and justifies it from Rules 1 and 2: steady push gives an unchanging pace, so distance grows directly with time. No banned token appears in the Stage 3 response.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives exactly twice T and justifies it from Rule 4: falling occurs at a fixed, unchanging pace, so doubling height doubles time. No banned token appears in the Stage 3 response.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the ball drops straight down and lands directly below the release point, matching the F=mv column. The justification cites Rule 1 for no carried-over horizontal pace and Rule 4 for downward falling.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names Block B as first and gives a 2:1 time ratio, with Block A taking twice as long. This follows directly from Rule 2's inverse proportionality between pace and heaviness and Rule 1's unchanging pace.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says the block immediately moves in the direction of the remaining push at full constant pace, with no gradual build-up. The justification cites Rule 3 for subtracting opposing pushes and Rules 1 and 2 for the immediate steady pace.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives exactly twice D and justifies it from Rules 1 and 2: steady push gives an unchanging pace, so distance grows directly with time. No banned token appears in the Stage 3 response.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives exactly twice T and justifies it from Rule 4: falling occurs at a fixed, unchanging pace, so doubling height doubles time. No banned token appears in the Stage 3 response.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the ball drops straight down and lands directly below the release point, matching the F=mv column. The justification cites Rule 1 for no carried-over horizontal pace and Rule 4 for downward falling.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names Block B as first and gives a 2:1 time ratio, with Block A taking twice as long. This follows directly from Rule 2's inverse proportionality between pace and heaviness and Rule 1's unchanging pace.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the block immediately moves in the direction of the remaining push at full constant pace, with no gradual build-up. The justification cites Rule 3 for subtracting opposing pushes and Rules 1 and 2 for the immediate steady pace.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/prediction/trial_1_t0.0.json"
+}

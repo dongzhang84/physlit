@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.021904999999999997,
+  "input_tokens": 4121,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "a3128548-70db-4ab7-846f-6333c82ed1c6",
+  "judge_timestamp_utc": "2026-05-18T18:32:20Z",
+  "output_tokens": 65,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "first_fail_clause": null,
+    "first_fail_step": null,
+    "reasoning": "No banned tokens appear in the response. The rules satisfy N1\u2013N6, cover all observations, are mutually consistent, and do not contain any disqualifying pattern.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\"verdict\":\"PASS\",\"first_fail_step\":null,\"first_fail_clause\":null,\"evidence\":null,\"reasoning\":\"No banned tokens appear in the response. The rules satisfy N1\u2013N6, cover all observations, are mutually consistent, and do not contain any disqualifying pattern.\"}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/induction/trial_1_t0.0.json"
+}

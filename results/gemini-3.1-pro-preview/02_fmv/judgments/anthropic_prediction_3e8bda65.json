@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.24556499999999998,
+  "input_tokens": 13106,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "8384fd6c-ab9c-46e1-b9ad-0aa13e8bda65",
+  "judge_timestamp_utc": "2026-05-18T18:38:29Z",
+  "output_tokens": 653,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Prediction is 'exactly twice D', matching the F=mv column. Justification cites Rule 1 (steady pace under steady push). No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Prediction is 'exactly twice T', matching the F=mv column. Justification cites Rule 5's steady downward pace. No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Prediction is that the ball drops straight down and lands directly below the point of release, matching the F=mv column. Justification cites Rules 1 and 5. No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "Prediction is a 2:1 time ratio with Block B winning, matching the F=mv column. Justification cites Rule 3 (inverse proportion to heaviness). No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Prediction states the block immediately moves at a steady constant pace in the remaining pusher's direction, with no build-up \u2014 matches the F=mv column. Justification cites Rules 1 and 2. No banned tokens.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 'exactly twice D', matching the F=mv column. Justification cites Rule 1 (steady pace under steady push). No banned tokens.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 'exactly twice T', matching the F=mv column. Justification cites Rule 5's steady downward pace. No banned tokens.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is that the ball drops straight down and lands directly below the point of release, matching the F=mv column. Justification cites Rules 1 and 5. No banned tokens.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is a 2:1 time ratio with Block B winning, matching the F=mv column. Justification cites Rule 3 (inverse proportion to heaviness). No banned tokens.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction states the block immediately moves at a steady constant pace in the remaining pusher's direction, with no build-up \u2014 matches the F=mv column. Justification cites Rules 1 and 2. No banned tokens.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/prediction/trial_0_t0.0.json"
+}

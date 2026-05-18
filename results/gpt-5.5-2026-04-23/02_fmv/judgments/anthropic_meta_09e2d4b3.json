@@ -1,0 +1,18 @@
+{
+  "cost_usd_estimate": 0.125925,
+  "input_tokens": 7650,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "d7c4b07c-2eeb-46f2-a7fc-124d09e2d4b3",
+  "judge_timestamp_utc": "2026-05-18T18:36:53Z",
+  "output_tokens": 149,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "Stage 1 and Stage 3 passed; Stage 2 is only a judge-split possible failure. Stage 4 acknowledges several introduced concepts in Q2 (algebraic formula, instantaneous sharpening, stored-motion phrasing, direction decomposition, support conditions) and notes gaps in Q3, so the model is not denying a clear failure."
+  },
+  "raw_response": "{\"over_claim\":\"no\",\"evidence\":null,\"reasoning\":\"Stage 1 and Stage 3 passed; Stage 2 is only a judge-split possible failure. Stage 4 acknowledges several introduced concepts in Q2 (algebraic formula, instantaneous sharpening, stored-motion phrasing, direction decomposition, support conditions) and notes gaps in Q3, so the model is not denying a clear failure.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv/meta/trial_2_t0.0.json"
+}

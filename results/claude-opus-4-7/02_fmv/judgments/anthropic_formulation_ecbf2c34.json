@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.17532,
+  "input_tokens": 10818,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "94c7374e-ea17-4d5c-a045-7d84ecbf2c34",
+  "judge_timestamp_utc": "2026-05-18T18:31:49Z",
+  "output_tokens": 174,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "No banned tokens appear. Rules are operational (P = E/H, signed addition, k constant). Scope is stated per rule. Proportional relations combine quantitatively. Uncovered/extrapolated cases (angled efforts, time-varying efforts, heaviness measurement, release transition, value of k) are explicitly named in Boundary notes. No P1\u2013P7 patterns present.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"No banned tokens appear. Rules are operational (P = E/H, signed addition, k constant). Scope is stated per rule. Proportional relations combine quantitatively. Uncovered/extrapolated cases (angled efforts, time-varying efforts, heaviness measurement, release transition, value of k) are explicitly named in Boundary notes. No P1\u2013P7 patterns present.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/formulation/trial_0_t0.0.json"
+}

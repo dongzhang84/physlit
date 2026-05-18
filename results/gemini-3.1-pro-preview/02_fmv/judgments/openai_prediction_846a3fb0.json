@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.049615,
+  "input_tokens": 8467,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "15ac6ab8-545f-4457-9f4a-3aea846a3fb0",
+  "judge_timestamp_utc": "2026-05-18T18:40:43Z",
+  "output_tokens": 364,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives exactly twice D and justifies it from Rules 1 and 2: steady pace under an unchanged push and heaviness, with no gathering speed.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives exactly twice T and derives it from Rule 5 and Rule 1: falling has a steady, unchanging pace, so time is proportional to height.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the ball falls straight down and lands directly below the release point. The justification cites Rule 1 for no carried-over horizontal movement and Rule 5 for immediate steady downward falling.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction identifies block B as first and states B takes half A's time, equivalent to the required A:B time ratio of 2:1. It derives this from Rule 2's inverse proportionality with heaviness and Rule 1's steady pace.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says the block instantly moves in the direction of the remaining push at full steady pace, without gathering speed. It cites Rule 3 for cancellation/removal of one push and Rules 1\u20132 for immediate steady motion from the remaining push.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\"scenarios\":[{\"index\":1,\"verdict\":\"PASS\",\"direction\":\"correct\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction gives exactly twice D and justifies it from Rules 1 and 2: steady pace under an unchanged push and heaviness, with no gathering speed.\"},{\"index\":2,\"verdict\":\"PASS\",\"direction\":\"correct\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction gives exactly twice T and derives it from Rule 5 and Rule 1: falling has a steady, unchanging pace, so time is proportional to height.\"},{\"index\":3,\"verdict\":\"PASS\",\"direction\":\"n/a\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction says the ball falls straight down and lands directly below the release point. The justification cites Rule 1 for no carried-over horizontal movement and Rule 5 for immediate steady downward falling.\"},{\"index\":4,\"verdict\":\"PASS\",\"direction\":\"correct\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction identifies block B as first and states B takes half A's time, equivalent to the required A:B time ratio of 2:1. It derives this from Rule 2's inverse proportionality with heaviness and Rule 1's steady pace.\"},{\"index\":5,\"verdict\":\"PASS\",\"direction\":\"n/a\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction says the block instantly moves in the direction of the remaining push at full steady pace, without gathering speed. It cites Rule 3 for cancellation/removal of one push and Rules 1\u20132 for immediate steady motion from the remaining push.\"}],\"overall_verdict\":\"PASS\"}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv/prediction/trial_3_t0.0.json"
+}

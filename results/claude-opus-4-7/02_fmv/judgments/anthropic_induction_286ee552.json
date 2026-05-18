@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.111375,
+  "input_tokens": 6280,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "502edac2-7f40-45a9-b5d0-64b2286ee552",
+  "judge_timestamp_utc": "2026-05-18T18:34:22Z",
+  "output_tokens": 229,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "first_fail_clause": null,
+    "first_fail_step": null,
+    "reasoning": "No banned tokens appear. N1-N6 are all stated (Rules 2, 3, 4, 1/2, 7, 5). All 12 observations are covered. Rules are mutually consistent (the model explicitly addresses the held-vs-released case with Rule 8). No P1-P7 patterns: no build-up, no carry-over, no hidden resistance (Rule 6 attributes resistance to heaviness itself, not an external balancing agent), no heavier-falls-faster, no falling speed-up, no projectile arc, no refusal.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\"verdict\": \"PASS\", \"first_fail_step\": null, \"first_fail_clause\": null, \"evidence\": null, \"reasoning\": \"No banned tokens appear. N1-N6 are all stated (Rules 2, 3, 4, 1/2, 7, 5). All 12 observations are covered. Rules are mutually consistent (the model explicitly addresses the held-vs-released case with Rule 8). No P1-P7 patterns: no build-up, no carry-over, no hidden resistance (Rule 6 attributes resistance to heaviness itself, not an external balancing agent), no heavier-falls-faster, no falling speed-up, no projectile arc, no refusal.\"}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.json"
+}
