@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 08:44 UTC  
+**Generated:** 2026-05-18 15:25 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 9 |
+| Total commits | 10 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **10** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
+- `b7b7d66` fix(02_fmv): per-call wall-clock timeout in run + judge runners — _dongzhang84_ `2026-05-18 08:24`
 - `43532ef` feat(02_fmv): judge_02_fmv.py — dual-judge orchestrator + P1-P4 aggregator — _dongzhang84_ `2026-05-18 01:43`
 - `eb3b70f` lock: pre-register PhysLit 02_fmv predictions — _dongzhang84_ `2026-05-18 01:35`
 - `d54e083` chore(02_fmv): drop DRAFT notice from prereg ahead of lock — _dongzhang84_ `2026-05-18 01:34`
