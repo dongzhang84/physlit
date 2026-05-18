@@ -40,9 +40,9 @@ For each rule you proposed, do the following.
 
 5. **Do not import additional concepts.** If a concept was not present
    in the original observations or in the rules you proposed at Stage
-   1, it must not appear here. Do not introduce *force*, *velocity*,
-   *mass*, *acceleration*, *momentum*, *inertia*, *energy*, *gravity*,
-   or *friction*, and do not name a physicist or write the relation
+   1, it must not appear here. Do not introduce *velocity*, *mass*,
+   *acceleration*, *momentum*, *inertia*, *energy*, *gravity*, or
+   *friction*, and do not name a physicist or write the relation
    `F = ma`. Naming such a concept only to deny that it applies still
    counts as using it.
 

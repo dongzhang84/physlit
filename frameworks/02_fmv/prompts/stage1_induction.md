@@ -15,9 +15,9 @@ physics may not match the physics you know.
   vocabulary the observations themselves introduce — push, pull,
   effort, pace, speed, heavy, light, fall, and the like.
 - Do **not** use any of these words, in any form, anywhere in your
-  response: *force*, *velocity*, *acceleration*, *inertia*,
-  *momentum*, *mass*, *gravity*, *friction*, *energy*. Do not name a
-  physicist, and do not write the relation `F = ma`. Naming one of
+  response: *velocity*, *acceleration*, *inertia*, *momentum*,
+  *mass*, *gravity*, *friction*, *energy*. Do not name a physicist,
+  and do not write the relation `F = ma`. Naming one of
   these concepts only to deny that it applies still counts as using
   it — to say this world lacks a gradual speeding-up, write "the pace
   does not increase", not "there is no acceleration".

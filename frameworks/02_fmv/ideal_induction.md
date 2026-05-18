@@ -105,7 +105,6 @@ applicability still counts as use.)
 
 **Banned tokens:**
 
-- `force`
 - `velocity` (catches "terminal velocity")
 - `acceleration` (and `accelerate`, `accelerating`, `decelerate`)
 - `inertia` (and `inertial`)

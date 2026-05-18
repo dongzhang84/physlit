@@ -18,10 +18,10 @@ scenario:
 - Where a scenario asks "how much", "how far", or "in what ratio",
   give a definite quantitative answer that follows from your own
   rules. Do not hedge to a merely directional answer.
-- Use only the language your own rules use. Do not use *force*,
-  *velocity*, *acceleration*, *inertia*, *momentum*, *mass*,
-  *gravity*, *friction*, or *energy*, in any form; do not name a
-  physicist, and do not write `F = ma`.
+- Use only the language your own rules use. Do not use *velocity*,
+  *acceleration*, *inertia*, *momentum*, *mass*, *gravity*,
+  *friction*, or *energy*, in any form; do not name a physicist, and
+  do not write `F = ma`.
 - If a scenario is genuinely outside the scope of your rules, say so
   explicitly and explain why; do not silently fall back to the
   physics you would otherwise default to.
