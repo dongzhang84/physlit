@@ -29,6 +29,31 @@ A third finding emerged from the methodology itself:
 
 ---
 
+## 02_fmv result (2026-05-18)
+
+PhysLit's second framework experiment: the **F=mv World**, a counterfactual world where a body's pace is set by the push acting on it at that moment (force ∝ velocity, not acceleration). Four predictions locked at tag [`prereg-02_fmv-locked`](https://github.com/dongzhang84/physlit/releases/tag/prereg-02_fmv-locked) **before any production trial**, evaluated across the same three models at N=5:
+
+- **P1 — Induction failure: REFUTED.** Only 4 of 15 Stage 1 trials failed — all four Gemini. Claude and GPT induced the F=mv rules cleanly, without sliding back to F=ma. Frontier models did *not* fail to reason inside this counterfactual world — the opposite of v0.1.
+- **P2 — Meta-cognitive miscalibration: CONFIRMED.** 4 of 6 failure-containing trials over-claim in Stage 4 self-reflection (66.7 %).
+- **P3 — Mechanical criteria reduce judge disagreement: PARTIALLY CONFIRMED.** Dual-judge IRR 26.67 % — down from v0.1's 36.67 %, but not below the 25 % bar.
+- **P4 — Stage 3 quantitative leak: REFUTED.** 0 of 45 quantitative predictions named the right direction with an F=ma ratio.
+
+Two methodology findings:
+
+- **A mechanically-specified criterion makes an LLM disagree-resolver reliable.** An LLM resolver run against the mechanical 02_fmv criteria agreed with the human audit on **12/12 content cases (100 %)** — versus 29.4 % in v0.2 on v0.1's interpretation-laden criteria.
+- **Judge reliability does not transfer across frameworks.** The OpenAI judge was the more reliable of the two on v0.1 Aristotelian; on F=mv it agreed with the human audit on 3/14 disagreement cases, the Claude judge on 11/14 — same prompts, same models.
+
+**Scope**: content axis only (the N9-N12 structural axis is out of scope by explicit prereg decision). 60 production + 120 judge + 12 resolver calls ≈ **$17.3 USD**.
+
+| Where to look | What's in it |
+| --- | --- |
+| [`analysis/02_fmv_report.md`](./analysis/02_fmv_report.md) | English narrative report — motivation, design, results |
+| [`analysis/02_fmv_findings.md`](./analysis/02_fmv_findings.md) | Judging report + post-audit numerics |
+| [`analysis/02_fmv_audit_human_review.md`](./analysis/02_fmv_audit_human_review.md) | Human verdicts on all 14 disagreement cases |
+| [`results/<model-id>/02_fmv/`](./results/) | Verbatim trial JSONs (+ `.md` companions) + judge verdicts |
+
+---
+
 ## Why this exists
 
 Existing LLM physics benchmarks count correct answers and report a percentage. Two structural flaws follow:
@@ -132,13 +157,14 @@ CI never runs real API calls — only mocks in `tests/test_runners_with_mock.py`
 
 ## Status & roadmap
 
-| Version | Scope | Budget cap | Status |
-| --- | --- | --- | --- |
-| **v0.1** | Aristotelian × 3 models × N=5 | $50 | ✅ Done — 2026-05-11 |
-| v0.1.1 | Re-judge v0.1 trials with structural criteria (N9-N12: parsimony, independence, traceability, hierarchy) | ~$10 | Planned |
-| v0.2 | 5 frameworks across Categories A/B/C × 3 models × N=5 | $250 | Planned, gated on v0.1.1 reliability check |
+| Round | Scope | Status |
+| --- | --- | --- |
+| **v0.1** | Aristotelian Mechanics, content axis × 3 models × N=5 | ✅ Done — 2026-05-11 |
+| **v0.2** | Structural axis (N9-N12) + LLM disagree-resolvers, additive re-analysis of v0.1 | ✅ Done — 2026-05-13 |
+| **02_fmv** | F=mv counterfactual world, content axis × 3 models × N=5 | ✅ Done — 2026-05-18 |
+| next | Structural axis on F=mv; further frameworks judged under a common mechanical-criteria standard | Planned |
 
-The original v1.0 ambition of 15 frameworks has been retired in favor of methodology-first iteration. Reasoning in [`analysis/v0_1_report.md`](./analysis/v0_1_report.md) §4.
+Pre-registration is framework-scoped from 02_fmv onward (tag `prereg-<id>-locked`). The original v1.0 ambition of 15 frameworks has been retired in favor of methodology-first iteration.
 
 ---
 

@@ -150,3 +150,76 @@ Smoke-test the v0.1 pipeline at < $1 cost before prereg lock:
   Claude only, output to `results/_dryrun/<ts>/01_aristotelian/`
 - `tests/test_runners_with_mock.py` — mock-based, CI-safe
 - `analysis/dryrun_findings.md` — exploratory write-up after the run
+
+---
+
+## [0.1.0] — 2026-05-11
+
+### v0.1 — Aristotelian production experiment
+
+The changelog lapsed during the v0.1 and v0.2 production phases; this
+and the next entry are condensed catch-up. Full detail is in the
+per-round reports under `analysis/`.
+
+- v0.1 prereg drafted and locked (`prereg-v0.1-locked`); production
+  runner + dual-judge pipeline built.
+- Production: 3 models (Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro) ×
+  N=5 × 4 stages on Aristotelian Mechanics — 60 trials, 120 judge
+  verdicts.
+- Dual-judge content IRR 36.67 % → prereg-mandated human audit of 22
+  disagreement cases.
+- Result: P1 (induction failure) and P3 (meta miscalibration) both
+  CONFIRMED post-audit. Report: `analysis/v0_1_report.md`.
+
+---
+
+## [0.2.0] — 2026-05-13
+
+### v0.2 — Structural axis + disagree-resolver agents
+
+- Additive analysis layer over the frozen v0.1 dataset: a structural
+  judging axis (N9-N12 — parsimony, independence, traceability,
+  hierarchy) and two LLM disagree-resolver agents replacing the v0.1
+  human-audit pathway. Locked as `prereg-v0.2-locked`; `v0.2.1` is a
+  deviation switching the resolver model.
+- Result: V1 (Agent 1 reproduces the human audit) REFUTED — 29.4 %
+  agreement; V2 (structural axis adds failure detection) CONFIRMED.
+- A follow-up human audit of the structural-axis disagreements found
+  the structural criteria carried a Stage 1+2 double-count defect and
+  that the v0.2 LLM resolvers did not reliably reproduce human
+  structural judgment.
+
+---
+
+## [02_fmv] — 2026-05-18
+
+### 02_fmv — F=mv counterfactual-world experiment
+
+First from-scratch experiment since v0.1, and the first
+framework-scoped pre-registration (`prereg-02_fmv-locked`).
+
+- New framework `frameworks/02_fmv/` — the F=mv World, a counterfactual
+  world where pace tracks the present push (force ∝ velocity). 12
+  hand-authored observations; criteria written mechanical-first (§3 is
+  a purely lexical banned-token test, fixing the v0.1 ambiguity);
+  framework-specific Stage 1-4 model prompts and judge prompts.
+- New, independent tooling: `run_02_fmv.py`, `judge_02_fmv.py`,
+  `build_02_fmv_audit_worksheet.py`, `apply_02_fmv_audit.py`,
+  `render_02_fmv_to_md.py`, `run_agent1_02_fmv.py`. A SIGALRM per-call
+  timeout was added to the runners after a vendor SDK call hung
+  indefinitely.
+- Production: 3 models × N=5 × 4 stages = 60 trials; 120 judge
+  verdicts. Content axis only — the N9-N12 structural axis is out of
+  scope by explicit prereg decision.
+- Dual-judge IRR 26.67 % → human audit of 14 disagreement cases.
+- Result, post-audit: **P1 REFUTED** (4/15 Stage 1 FAIL, all Gemini —
+  Claude and GPT induced the F=mv rules cleanly), **P2 CONFIRMED**
+  (66.7 % over-claim), **P3 PARTIALLY CONFIRMED** (IRR 26.67 %),
+  **P4 REFUTED** (0/45 quantitative leak).
+- Methodology: a non-canonical Agent 1 resolver run against the
+  mechanical criteria agreed with the human audit on 12/12 content
+  cases (vs 29.4 % in v0.2) — evidence the v0.2 resolver-unreliability
+  finding was substantially a criteria-ambiguity artifact. Judge
+  reliability reversed across frameworks (OpenAI reliable on v0.1,
+  Claude on F=mv).
+- Cost ≈ $17.3 USD. Report: `analysis/02_fmv_report.md`.
