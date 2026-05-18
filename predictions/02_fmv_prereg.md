@@ -125,9 +125,10 @@ settle.
 
 ## 2. Predictions
 
-Three predictions are committed by this lock: **P1** (induction
+Four predictions are committed by this lock: **P1** (induction
 failure), **P2** (meta-cognitive miscalibration), **P3** (mechanical
-criteria reduce dual-judge disagreement).
+criteria reduce dual-judge disagreement), **P4** (quantitative leak in
+Stage 3).
 
 ### P1 — Induction failure under training-data conflict
 
@@ -203,6 +204,35 @@ wrong; that is a publishable negative result.
 IRR is computed over all Stage 1–3 judgments (3 models × 5 trials × 3
 stages = 45 judged units, two judges each).
 
+### P4 — Quantitative leak in Stage 3 predictions
+
+**Prediction.** Across the 45 quantitative-scenario predictions (15
+trials × Scenarios 1, 2, and 4), **at least 30 %** name the correct
+direction but give a ratio that matches the **standard-physics (F=ma)
+column** rather than the F=mv column — "direction-correct,
+ratio-leaked".
+
+**Rationale.** Scenarios 1, 2, and 4 are built so that the *direction*
+is shared by both physics — longer / slower / the lighter block wins —
+and only the *ratio* discriminates (2×D vs 4×D; 2T vs √2·T; 2 : 1 vs
+√2 : 1; see `prediction_tests.md` and `pass_fail_criteria.md`). A model
+can therefore sound in-framework — pick the right direction — while
+its arithmetic is still F=ma kinematics underneath. P4 measures how
+often the words pass but the computation leaks.
+
+**Scoring.**
+
+- **Confirmed:** ≥ 30 % of the 45 quantitative predictions are
+  direction-correct / ratio-leaked.
+- **Partially confirmed:** 15–29 %.
+- **Refuted:** < 15 %.
+
+Each quantitative prediction is classified into exactly one of:
+F=mv-correct (direction and ratio both F=mv), direction-correct /
+ratio-leaked (the P4 bucket), or direction-wrong-or-other. Per-scenario
+counts and a breakdown restricted to Stage-1-passing trials are
+published alongside the headline.
+
 ## 3. Scoring procedure
 
 1. Production trials are run: 3 models × 5 trials × 4 stages, fresh
@@ -222,11 +252,13 @@ stages = 45 judged units, two judges each).
 4. Stage 4 responses are classified per the Meta-cognitive rubric in
    `pass_fail_criteria.md`.
 5. P1 is computed from the Stage 1 FAIL count; P2 from the Stage 4
-   over-claiming rate; P3 from the Stage 1–3 dual-judge IRR.
+   over-claiming rate; P3 from the Stage 1–3 dual-judge IRR; P4 from
+   the classification of the 45 quantitative-scenario predictions
+   (Scenarios 1, 2, 4).
 6. The findings document (`analysis/02_fmv_findings.md`) records: the
    per-trial stage matrix; the dual-judge IRR; any human-audit
-   verdicts; the P1 / P2 / P3 verdicts; and any deviation from this
-   prereg, with timestamps and rationale.
+   verdicts; the P1 / P2 / P3 / P4 verdicts; and any deviation from
+   this prereg, with timestamps and rationale.
 
 ## 4. Frozen artifacts (referenced by the `prereg-02_fmv-locked` tag)
 
@@ -246,10 +278,11 @@ version:
 - `frameworks/02_fmv/prompts/stage2_formulation.md`
 - `frameworks/02_fmv/prompts/stage3_prediction.md`
 - `frameworks/02_fmv/prompts/stage4_meta.md`
-- the content-judge prompts used by both judges (the exact files —
-  shared global `prompts/judge_*.md` or `02_fmv`-specific overrides —
-  are confirmed during runner build and listed here verbatim before
-  the lock)
+- the four `02_fmv`-specific content-judge prompts (the shared global
+  `prompts/judge_*.md` are **not** reused — the F=mv banned-token set
+  differs from v0.1's): `frameworks/02_fmv/prompts/judge_stage1.md`,
+  `judge_stage2.md`, `judge_stage3.md`, `judge_meta.md` — authored
+  before the lock
 
 The `.zh.md` translation aids (`observations.zh.md`,
 `prediction_tests.zh.md`) are **not** part of the envelope; on any
@@ -267,7 +300,7 @@ triggered, and all Stage 4 classifications — under the same commit
 that publishes `analysis/02_fmv_findings.md`. Selective publication is
 forbidden by `CLAUDE.md`.
 
-The author commits to publishing the P1 / P2 / P3 verdicts
+The author commits to publishing the P1 / P2 / P3 / P4 verdicts
 **regardless of direction**. A refutation of P1 (the models induce the
 F=mv rules cleanly) is as publishable as confirmation. A refutation of
 P3 (mechanical criteria do not reduce judge disagreement) is
