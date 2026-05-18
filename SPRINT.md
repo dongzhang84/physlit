@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 08:28 UTC  
+**Generated:** 2026-05-18 08:32 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 5 |
+| Total commits | 6 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **5** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
+- `4679f57` content(02_fmv): drop 'force' from the banned-token list — _dongzhang84_ `2026-05-18 01:32`
 - `7c54561` feat(02_fmv): add transient-error retry to run_02_fmv.py — _dongzhang84_ `2026-05-18 01:28`
 - `02e40d5` feat(02_fmv): framework-specific judge prompts + run_02_fmv.py runner — _dongzhang84_ `2026-05-18 01:12`
 - `c224279` draft(02_fmv): add P4 (Stage 3 quantitative leak); judge prompts framework-specific — _dongzhang84_ `2026-05-18 01:05`
