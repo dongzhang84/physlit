@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 06:16 UTC  
+**Generated:** 2026-05-18 06:20 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -25,11 +25,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 44 |
+| Total commits | 45 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **15** |
+| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **16** |
 
 **Mon – Monday, May 11**
 
@@ -74,6 +74,7 @@
 
 **Sun – Sunday, May 17**
 
+- `d8a41a2` content(02_fmv): add spec.yaml, formulation_template.md, meta_questions.md — _dongzhang84_ `2026-05-17 23:19`
 - `4d96dcf` content(02_fmv): replace Stage 3 Scenario 2 with a falling test — _dongzhang84_ `2026-05-17 23:16`
 - `055ba3e` content: add Chinese translation of 02_fmv prediction tests — _dongzhang84_ `2026-05-17 22:57`
 - `20500cd` content(02_fmv): remove world name from all file titles — _dongzhang84_ `2026-05-17 19:27`
