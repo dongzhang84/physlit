@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 23:07 UTC  
+**Generated:** 2026-05-18 23:13 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 20 |
+| Total commits | 21 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **20** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **21** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
+- `15adc10` feat(02_fmv.1): structural-axis judging runner (on standby for lock) — _dongzhang84_ `2026-05-18 16:13`
 - `4d1d73a` draft(02_fmv.1): structural judge prompt + prereg — _dongzhang84_ `2026-05-18 16:07`
 - `b5fec7b` draft(02_fmv.1): corrected structural criteria — fixes the Stage 1+2 double-count — _dongzhang84_ `2026-05-18 16:00`
 - `dd9b6f5` docs: record the 02_fmv round in README + CHANGELOG — _dongzhang84_ `2026-05-18 15:51`
