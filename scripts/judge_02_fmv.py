@@ -43,6 +43,7 @@ import argparse
 import glob
 import json
 import os
+import signal
 import sys
 import time
 from pathlib import Path
@@ -97,7 +98,25 @@ _TRANSIENT_MARKERS = (
 )
 
 
+# Per-call wall-clock timeout. The vendor SDKs do blocking network I/O
+# with no default timeout; a hung socket would stall the whole judging
+# run forever. SIGALRM interrupts the blocking call; the _CallTimeout it
+# raises is treated as transient and retried. SIGALRM is Unix /
+# main-thread only — fine for this runner.
+CALL_TIMEOUT_SECONDS = 300
+
+
+class _CallTimeout(Exception):
+    """Raised when one judge call exceeds CALL_TIMEOUT_SECONDS."""
+
+
+def _on_alarm(signum: int, frame: object) -> None:
+    raise _CallTimeout(f"judge call exceeded {CALL_TIMEOUT_SECONDS}s")
+
+
 def _is_transient(exc: Exception) -> bool:
+    if isinstance(exc, _CallTimeout):
+        return True
     status = getattr(exc, "status_code", None)
     if status in (408, 409, 429, 500, 502, 503, 504, 529):
         return True
@@ -116,24 +135,30 @@ def _judge_with_retry(
     """``judge.judge_one`` with exponential-backoff retry on transient
     API errors."""
     delay = 4.0
+    signal.signal(signal.SIGALRM, _on_alarm)
     for attempt in range(1, max_attempts + 1):
+        signal.alarm(CALL_TIMEOUT_SECONDS)
         try:
-            return judge.judge_one(
+            result = judge.judge_one(
                 trial_path=trial_path,
                 stage=stage,
                 prompt=prompt,
                 max_tokens=JUDGE_MAX_TOKENS,
             )
         except Exception as exc:
+            signal.alarm(0)
             if not _is_transient(exc) or attempt == max_attempts:
                 raise
             print(
-                f"      [retry {attempt}/{max_attempts - 1}] transient API "
-                f"error ({type(exc).__name__}); waiting {delay:.0f}s",
+                f"      [retry {attempt}/{max_attempts - 1}] "
+                f"{type(exc).__name__}; waiting {delay:.0f}s",
                 flush=True,
             )
             time.sleep(delay)
             delay = min(delay * 2, 60.0)
+        else:
+            signal.alarm(0)
+            return result
     raise AssertionError("unreachable")  # pragma: no cover
 
 

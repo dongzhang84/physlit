@@ -43,6 +43,7 @@ import argparse
 import json
 import os
 import re
+import signal
 import sys
 import time
 from dataclasses import dataclass
@@ -138,10 +139,28 @@ _TRANSIENT_MARKERS = (
 )
 
 
+# Per-call wall-clock timeout. The vendor SDKs do blocking network I/O
+# with no default timeout; a hung socket stalls the whole run forever
+# (observed: a Gemini Stage 4 call hung ~5 hours). SIGALRM interrupts
+# the blocking call; the _CallTimeout it raises is treated as transient
+# and retried. SIGALRM is Unix / main-thread only — fine for this runner.
+CALL_TIMEOUT_SECONDS = 300
+
+
+class _CallTimeout(Exception):
+    """Raised when one run_trial call exceeds CALL_TIMEOUT_SECONDS."""
+
+
+def _on_alarm(signum: int, frame: object) -> None:
+    raise _CallTimeout(f"API call exceeded {CALL_TIMEOUT_SECONDS}s")
+
+
 def _is_transient(exc: Exception) -> bool:
     """True if ``exc`` looks like a transient API error worth retrying."""
     if isinstance(exc, RuntimeError):
         return False  # R1(a) identity-mismatch halt — never retry
+    if isinstance(exc, _CallTimeout):
+        return True
     status = getattr(exc, "status_code", None)
     if status in (408, 409, 429, 500, 502, 503, 504, 529):
         return True
@@ -156,19 +175,25 @@ def _run_trial_with_retry(
     errors with exponential backoff. Non-transient errors — including
     the R1(a) identity-mismatch ``RuntimeError`` — propagate at once."""
     delay = 4.0
+    signal.signal(signal.SIGALRM, _on_alarm)
     for attempt in range(1, max_attempts + 1):
+        signal.alarm(CALL_TIMEOUT_SECONDS)
         try:
-            return runner.run_trial(**kwargs)  # type: ignore[arg-type]
+            result = runner.run_trial(**kwargs)  # type: ignore[arg-type]
         except Exception as exc:
+            signal.alarm(0)
             if not _is_transient(exc) or attempt == max_attempts:
                 raise
             print(
-                f"\n    [retry {attempt}/{max_attempts - 1}] transient API "
-                f"error ({type(exc).__name__}); waiting {delay:.0f}s",
+                f"\n    [retry {attempt}/{max_attempts - 1}] "
+                f"{type(exc).__name__}; waiting {delay:.0f}s",
                 flush=True,
             )
             time.sleep(delay)
             delay = min(delay * 2, 60.0)
+        else:
+            signal.alarm(0)
+            return result
     raise AssertionError("unreachable")  # pragma: no cover
 
 
