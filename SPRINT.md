@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 23:52 UTC  
+**Generated:** 2026-05-18 23:54 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 26 |
+| Total commits | 27 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **26** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **27** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
+- `4d57b0c` 02_fmv.1: relabel Agent 2 review cases K1-K7 -> Case 1-7 — _dongzhang84_ `2026-05-18 16:54`
 - `addadcf` 02_fmv.1: case-by-case Agent 2 structural-axis review (K1-K7) — _dongzhang84_ `2026-05-18 16:52`
 - `3e171da` analysis(02_fmv.1): Agent 2 structural side-resolution + human-audit worksheet — _dongzhang84_ `2026-05-18 16:30`
 - `1a5294e` data(02_fmv.1): structural-axis verdicts + report (preliminary) — _dongzhang84_ `2026-05-18 16:22`
