@@ -70,10 +70,11 @@ back to the F=ma physics that saturates their training data.
   Stage 3 prediction → Stage 4 meta. Each stage is an independent
   fresh session; the runner replays the model's own prior-stage
   responses as input where a stage requires them.
-- **Sampling:** default sampling for all three vendors. As of the
-  draft date Anthropic Opus 4.7 still rejects the `temperature`
-  parameter; the v0.1 convention "default sampling, no temperature
-  override" carries forward. No temperature=0.7 secondary pass.
+- **Sampling:** every call requests `temperature = 0`, matching the
+  v0.1 runner. OpenAI and Google honour the parameter; Anthropic Opus
+  4.7 rejects it and runs at its own default — the requested value is
+  still recorded. Result files carry the requested value
+  (`trial_N_t0.0.json`). No temperature=0.7 secondary pass.
 - **Observations are hand-authored.** `02_fmv` is a Tier 1
   (simulator) framework, but its first production run uses the
   hand-written observation set `frameworks/02_fmv/observations.md`.
