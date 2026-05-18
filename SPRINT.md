@@ -1,21 +1,35 @@
 # Sprint Report
 
-**Generated:** 2026-05-17 23:35 UTC  
-**Showing:** last 2 week(s) of 2 total  
+**Generated:** 2026-05-18 00:48 UTC  
+**Showing:** last 3 week(s) of 3 total  
 
 ---
 
-## Week 2 _(current)_ · 2026-05-11 to 2026-05-17
+## Week 3 _(current)_ · 2026-05-18 to 2026-05-24
+
+| Stat | Value |
+|------|-------|
+| Status | ❌ Stalled |
+| Active days | 0 / 7 |
+| Total commits | 0 |
+
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|
+| ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+
+---
+
+## Week 2 · 2026-05-11 to 2026-05-17
 
 | Stat | Value |
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 39 |
+| Total commits | 40 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **10** |
+| **6** | **12** | **10** | ⚪ | ⚪ | **1** | **11** |
 
 **Mon – Monday, May 11**
 
@@ -60,6 +74,7 @@
 
 **Sun – Sunday, May 17**
 
+- `870efa4` content(02_fmv): annotate 'gather speed' in allowed vocab — _dongzhang84_ `2026-05-17 17:48`
 - `cdccfb1` content: draft F=mv world ideal_induction.md (judge criteria, DRAFT) — _dongzhang84_ `2026-05-17 16:34`
 - `9c1547f` content(02_fmv): clarify Obs 11 — 'from the point where it was released' — _dongzhang84_ `2026-05-17 16:28`
 - `80fc75c` content: add Chinese translation of 02_fmv observations — _dongzhang84_ `2026-05-17 14:18`
