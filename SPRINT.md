@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-18 23:13 UTC  
+**Generated:** 2026-05-18 23:18 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,14 +11,16 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 21 |
+| Total commits | 23 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **21** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **23** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
+- `8f7878f` lock: pre-register PhysLit 02_fmv.1 predictions — _dongzhang84_ `2026-05-18 16:18`
+- `0f35231` chore(02_fmv.1): drop DRAFT notice from prereg ahead of lock — _dongzhang84_ `2026-05-18 16:17`
 - `15adc10` feat(02_fmv.1): structural-axis judging runner (on standby for lock) — _dongzhang84_ `2026-05-18 16:13`
 - `4d1d73a` draft(02_fmv.1): structural judge prompt + prereg — _dongzhang84_ `2026-05-18 16:07`
 - `b5fec7b` draft(02_fmv.1): corrected structural criteria — fixes the Stage 1+2 double-count — _dongzhang84_ `2026-05-18 16:00`
