@@ -1,10 +1,5 @@
 # Pre-Registered Predictions for PhysLit — F=mv World (`02_fmv`)
 
-> **DRAFT — NOT YET LOCKED.** This file is under author review. The
-> canonical content below the LOCK BOUNDARY is not frozen until
-> `scripts/lock_prereg.py` runs and tags `prereg-02_fmv-locked`. Edit
-> freely until then.
-
 **Lock metadata** (auto-populated by `scripts/lock_prereg.py` — values
 below show `<PENDING>` until the lock script runs):
 
