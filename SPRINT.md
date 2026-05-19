@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-19 15:15 UTC  
+**Generated:** 2026-05-19 18:00 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 31 |
+| Total commits | 32 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **3** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **4** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -50,6 +50,7 @@
 
 **Tue – Tuesday, May 19**
 
+- `923f86d` 02_fmv.2: draft prereg — axiomatisation control experiment (pending review + lock) — _dongzhang84_ `2026-05-19 10:59`
 - `c31a88b` 02_fmv.1 report: add Aristotelian cross-round comparison to Discussion — _dongzhang84_ `2026-05-19 08:15`
 - `01ee0e5` 02_fmv.1 report: add Discussion section (content correctness vs architecture) — _dongzhang84_ `2026-05-19 08:10`
 - `1d1a5f0` 02_fmv.1: expand per-trial matrix with S1/S2/S3 + Content-only columns — _dongzhang84_ `2026-05-19 00:42`
