@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-19 07:42 UTC  
+**Generated:** 2026-05-19 15:10 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 29 |
+| Total commits | 30 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **2** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -50,6 +50,7 @@
 
 **Tue – Tuesday, May 19**
 
+- `01ee0e5` 02_fmv.1 report: add Discussion section (content correctness vs architecture) — _dongzhang84_ `2026-05-19 08:10`
 - `1d1a5f0` 02_fmv.1: expand per-trial matrix with S1/S2/S3 + Content-only columns — _dongzhang84_ `2026-05-19 00:42`
 
 ---
