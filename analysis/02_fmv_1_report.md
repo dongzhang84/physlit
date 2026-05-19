@@ -311,6 +311,44 @@ The `02_fmv` Stage 4 result points the same way — models over-claimed
 in self-reflection (content-round P2 CONFIRMED), i.e. they also failed
 to audit the structure of their own output.
 
+**Relationship to the Aristotelian round (v0.1 / v0.2).** The
+content-vs-architecture split is not unique to F=mv — but F=mv is what
+made it *legible*. The v0.1 Aristotelian content axis and the v0.2
+structural axis, audit-resolved, give:
+
+| Round | Content-only PASS | Structural PASS | Composite PASS |
+|---|---|---|---|
+| v0.1 / v0.2 Aristotelian | 5/15 (Claude 1, GPT 3, Gemini 1) | 8/15 (Claude 5, GPT 0, Gemini 3) | 2/15 |
+| `02_fmv` / `02_fmv.1` F=mv | 9/15 (Claude 4, GPT 5, Gemini 0) | 5/15 (Claude 2, GPT 0, Gemini 3) | 1/15 |
+
+Two things carry across, and one does not.
+
+*What replicates.* The anti-correlation between content and structure
+is present in both rounds, and the GPT signature is identical:
+content-strongest, structure-weakest. On Aristotelian, GPT led the
+content axis (3/5) and failed all 5 structural trials — both v0.2
+structural judges agreed FAIL on every GPT trial, no disagreement to
+resolve. Claude was the mirror image (content 1/5, structural 5/5).
+GPT "accumulates rather than axiomatises" in *both* counterfactual and
+historical frameworks — that is genuine corroboration of §2.7's core.
+
+*What does not replicate.* The stronger headline — *architecture is
+the bottleneck* — is specific to F=mv. On Aristotelian the structural
+axis (8/15) was the *easier* of the two; the composite collapse to
+2/15 there is driven by the anti-correlation (the content-passers and
+the structure-passers are different trials), not by the structural
+axis being uniformly brutal. And the v0.2 structural axis still
+carried the Stage 1+2 double-count defect, which inflated structural
+FAILs — so the true Aristotelian structural pass rate is a floor of
+8/15, reinforcing that structure was not the Aristotelian bottleneck.
+
+So F=mv did not merely *repeat* the Aristotelian result. On
+Aristotelian, content competence was itself low (5/15), so "knows the
+rule but cannot organise it" and "does not know the rule" are
+confounded. F=mv raised content competence high enough (9/15) to
+*separate* the two — which is precisely what the counterfactual world
+was designed to do (§1.1 of `02_fmv_report.md`).
+
 **Scope of the claim.** This is one counterfactual framework (F=mv),
 one round, N=5 per model. The conclusion should be stated as observed
 *on the F=mv World* — that frontier models can produce physically
