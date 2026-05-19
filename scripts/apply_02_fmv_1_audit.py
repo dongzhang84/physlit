@@ -32,25 +32,26 @@ FRAMEWORK_ID = "02_fmv"
 FINDINGS = REPO / "analysis" / "02_fmv_1_findings.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 
-# Content-axis verdict per trial, inherited verbatim from the 02_fmv
-# post-audit final results (analysis/02_fmv_findings.md). A trial's
-# content axis is PASS iff its Stage 1, 2 and 3 are all PASS.
-CONTENT_AXIS = {
-    ("claude-opus-4-7", 0): "PASS",
-    ("claude-opus-4-7", 1): "FAIL",
-    ("claude-opus-4-7", 2): "PASS",
-    ("claude-opus-4-7", 3): "PASS",
-    ("claude-opus-4-7", 4): "PASS",
-    ("gpt-5.5-2026-04-23", 0): "PASS",
-    ("gpt-5.5-2026-04-23", 1): "PASS",
-    ("gpt-5.5-2026-04-23", 2): "PASS",
-    ("gpt-5.5-2026-04-23", 3): "PASS",
-    ("gpt-5.5-2026-04-23", 4): "PASS",
-    ("gemini-3.1-pro-preview", 0): "FAIL",
-    ("gemini-3.1-pro-preview", 1): "FAIL",
-    ("gemini-3.1-pro-preview", 2): "FAIL",
-    ("gemini-3.1-pro-preview", 3): "FAIL",
-    ("gemini-3.1-pro-preview", 4): "FAIL",
+# Per-stage content verdicts (S1, S2, S3), inherited verbatim from the
+# 02_fmv post-audit final results (analysis/02_fmv_findings.md →
+# "Resolved per-trial matrix (audit-applied)"). A trial's content axis
+# is PASS iff its Stage 1, 2 and 3 are all PASS.
+STAGE_VERDICTS = {
+    ("claude-opus-4-7", 0): ("PASS", "PASS", "PASS"),
+    ("claude-opus-4-7", 1): ("PASS", "FAIL", "PASS"),
+    ("claude-opus-4-7", 2): ("PASS", "PASS", "PASS"),
+    ("claude-opus-4-7", 3): ("PASS", "PASS", "PASS"),
+    ("claude-opus-4-7", 4): ("PASS", "PASS", "PASS"),
+    ("gpt-5.5-2026-04-23", 0): ("PASS", "PASS", "PASS"),
+    ("gpt-5.5-2026-04-23", 1): ("PASS", "PASS", "PASS"),
+    ("gpt-5.5-2026-04-23", 2): ("PASS", "PASS", "PASS"),
+    ("gpt-5.5-2026-04-23", 3): ("PASS", "PASS", "PASS"),
+    ("gpt-5.5-2026-04-23", 4): ("PASS", "PASS", "PASS"),
+    ("gemini-3.1-pro-preview", 0): ("PASS", "FAIL", "PASS"),
+    ("gemini-3.1-pro-preview", 1): ("FAIL", "FAIL", "PASS"),
+    ("gemini-3.1-pro-preview", 2): ("FAIL", "FAIL", "FAIL"),
+    ("gemini-3.1-pro-preview", 3): ("FAIL", "PASS", "PASS"),
+    ("gemini-3.1-pro-preview", 4): ("FAIL", "PASS", "PASS"),
 }
 
 # Human-audit verdicts on the 7 structural dual-judge disagreement
@@ -109,12 +110,16 @@ def main() -> int:
             else:
                 disagree += 1
                 structural = HUMAN_STRUCTURAL[(model, t)]
-            content = CONTENT_AXIS[(model, t)]
+            s1, s2, s3 = STAGE_VERDICTS[(model, t)]
+            content = "PASS" if s1 == s2 == s3 == "PASS" else "FAIL"
             composite = "PASS" if content == "PASS" and structural == "PASS" else "FAIL"
             rows.append(
                 {
                     "model": model,
                     "trial": t,
+                    "s1": s1,
+                    "s2": s2,
+                    "s3": s3,
                     "content": content,
                     "structural": structural,
                     "composite": composite,
@@ -154,17 +159,44 @@ def main() -> int:
         "structural disagree cases resolved by human audit (canonical, per "
         "`prereg-02_fmv.1-locked` §1).\n\n"
     )
-    o.append("### Resolved per-trial structural + composite matrix (audit-applied)\n\n")
-    o.append("| Model | Trial | Content | Structural | Composite |\n|---|---|---|---|---|\n")
+    o.append("### Resolved per-trial matrix (audit-applied)\n\n")
+    o.append(
+        "> `S1`/`S2`/`S3` — the 02_fmv post-audit content verdicts per "
+        "stage (induction / formulation / prediction), inherited verbatim "
+        "from `analysis/02_fmv_findings.md`. `Content-only` = S1 ∧ S2 ∧ S3 "
+        "— the per-trial verdict if there were no structural axis. "
+        "`Structural` uses the human-audit verdict for the 7 dual-judge "
+        "disagree trials and the dual-judge agreed verdict for the other 8 "
+        "(`†` = the structural verdict was not human-audited). `Composite` "
+        "= Content-only ∧ Structural.\n\n"
+    )
+    o.append(
+        "| Model | Trial | S1 | S2 | S3 | Content-only | Structural | "
+        "Composite |\n|---|---|---|---|---|---|---|---|\n"
+    )
     for r in rows:
-        mark = " *(audit)*" if r["is_disagree"] else ""
+        mark = "" if r["is_disagree"] else " †"
         o.append(
-            f"| `{r['model']}` | {r['trial']} | {r['content']} | "
-            f"{r['structural']}{mark} | {r['composite']} |\n"
+            f"| `{r['model']}` | {r['trial']} | {r['s1']} | {r['s2']} | "
+            f"{r['s3']} | {r['content']} | {r['structural']}{mark} | "
+            f"{r['composite']} |\n"
         )
     o.append("\n")
+    n_content_pass = sum(1 for r in rows if r["content"] == "PASS")
+    n_struct_pass = sum(1 for r in rows if r["structural"] == "PASS")
     n_comp_pass = sum(1 for r in rows if r["composite"] == "PASS")
-    o.append(f"Composite: **{n_comp_pass}/15 PASS**, {15 - n_comp_pass}/15 FAIL.\n\n")
+    comp_pass_ids = ", ".join(
+        f"`{r['model']}` t{r['trial']}" for r in rows if r["composite"] == "PASS"
+    )
+    o.append(
+        f"**Content-only: {n_content_pass}/15 PASS.** Structural axis: "
+        f"{n_struct_pass}/15 PASS. With both axes, **composite PASS drops "
+        f"to {n_comp_pass}/15** ({comp_pass_ids}). The structural axis "
+        f"flips {len(flipped)} content-PASS trials to FAIL — every GPT "
+        f"trial (5/5) and three Claude trials (t2, t3, t4); GPT passed all "
+        f"three content stages in every trial yet failed the structural "
+        f"axis in every trial.\n\n"
+    )
 
     o.append(f"### P1 — Mechanical structural criteria reduce disagreement  ·  **{p1}**\n")
     o.append(
@@ -208,8 +240,11 @@ def main() -> int:
         f"all-content-PASS trials flipped.\n"
     )
 
-    with FINDINGS.open("a") as fh:
-        fh.write("".join(o))
+    # Idempotent: drop any prior post-audit block, then append a fresh one.
+    marker = "\n## 02_fmv.1 post-audit final results\n"
+    existing = FINDINGS.read_text()
+    head = existing.split(marker)[0].rstrip()
+    FINDINGS.write_text(head + "\n" + "".join(o))
 
     print(f"P1 {p1} (IRR {irr:.2%}, {disagree}/15)")
     print(f"P2 {p2} ({len(flipped)}/{len(content_pass)} content-PASS trials flipped)")

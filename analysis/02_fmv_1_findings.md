@@ -38,30 +38,32 @@ All-content-PASS trials: 9. Flipped to composite FAIL via the structural axis: *
 - 5 content-PASS trial(s) have a structural DISAGREE pending audit: claude-opus-4-7 t2, claude-opus-4-7 t3, claude-opus-4-7 t4, gpt-5.5-2026-04-23 t2, gpt-5.5-2026-04-23 t4.
 
 ## 02_fmv.1 post-audit final results
-- Generated: `2026-05-19T06:36:32Z`
+- Generated: `2026-05-19T07:41:38Z`
 - Audit: `analysis/02_fmv_1_structural_audit_human_review.md` — 7 structural disagree cases resolved by human audit (canonical, per `prereg-02_fmv.1-locked` §1).
 
-### Resolved per-trial structural + composite matrix (audit-applied)
+### Resolved per-trial matrix (audit-applied)
 
-| Model | Trial | Content | Structural | Composite |
-|---|---|---|---|---|
-| `claude-opus-4-7` | 0 | PASS | PASS | PASS |
-| `claude-opus-4-7` | 1 | FAIL | PASS | FAIL |
-| `claude-opus-4-7` | 2 | PASS | FAIL *(audit)* | FAIL |
-| `claude-opus-4-7` | 3 | PASS | FAIL *(audit)* | FAIL |
-| `claude-opus-4-7` | 4 | PASS | FAIL *(audit)* | FAIL |
-| `gpt-5.5-2026-04-23` | 0 | PASS | FAIL | FAIL |
-| `gpt-5.5-2026-04-23` | 1 | PASS | FAIL | FAIL |
-| `gpt-5.5-2026-04-23` | 2 | PASS | FAIL *(audit)* | FAIL |
-| `gpt-5.5-2026-04-23` | 3 | PASS | FAIL | FAIL |
-| `gpt-5.5-2026-04-23` | 4 | PASS | FAIL *(audit)* | FAIL |
-| `gemini-3.1-pro-preview` | 0 | FAIL | PASS | FAIL |
-| `gemini-3.1-pro-preview` | 1 | FAIL | FAIL | FAIL |
-| `gemini-3.1-pro-preview` | 2 | FAIL | PASS *(audit)* | FAIL |
-| `gemini-3.1-pro-preview` | 3 | FAIL | PASS | FAIL |
-| `gemini-3.1-pro-preview` | 4 | FAIL | FAIL *(audit)* | FAIL |
+> `S1`/`S2`/`S3` — the 02_fmv post-audit content verdicts per stage (induction / formulation / prediction), inherited verbatim from `analysis/02_fmv_findings.md`. `Content-only` = S1 ∧ S2 ∧ S3 — the per-trial verdict if there were no structural axis. `Structural` uses the human-audit verdict for the 7 dual-judge disagree trials and the dual-judge agreed verdict for the other 8 (`†` = the structural verdict was not human-audited). `Composite` = Content-only ∧ Structural.
 
-Composite: **1/15 PASS**, 14/15 FAIL.
+| Model | Trial | S1 | S2 | S3 | Content-only | Structural | Composite |
+|---|---|---|---|---|---|---|---|
+| `claude-opus-4-7` | 0 | PASS | PASS | PASS | PASS | PASS † | PASS |
+| `claude-opus-4-7` | 1 | PASS | FAIL | PASS | FAIL | PASS † | FAIL |
+| `claude-opus-4-7` | 2 | PASS | PASS | PASS | PASS | FAIL | FAIL |
+| `claude-opus-4-7` | 3 | PASS | PASS | PASS | PASS | FAIL | FAIL |
+| `claude-opus-4-7` | 4 | PASS | PASS | PASS | PASS | FAIL | FAIL |
+| `gpt-5.5-2026-04-23` | 0 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
+| `gpt-5.5-2026-04-23` | 1 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
+| `gpt-5.5-2026-04-23` | 2 | PASS | PASS | PASS | PASS | FAIL | FAIL |
+| `gpt-5.5-2026-04-23` | 3 | PASS | PASS | PASS | PASS | FAIL † | FAIL |
+| `gpt-5.5-2026-04-23` | 4 | PASS | PASS | PASS | PASS | FAIL | FAIL |
+| `gemini-3.1-pro-preview` | 0 | PASS | FAIL | PASS | FAIL | PASS † | FAIL |
+| `gemini-3.1-pro-preview` | 1 | FAIL | FAIL | PASS | FAIL | FAIL † | FAIL |
+| `gemini-3.1-pro-preview` | 2 | FAIL | FAIL | FAIL | FAIL | PASS | FAIL |
+| `gemini-3.1-pro-preview` | 3 | FAIL | PASS | PASS | FAIL | PASS † | FAIL |
+| `gemini-3.1-pro-preview` | 4 | FAIL | PASS | PASS | FAIL | FAIL | FAIL |
+
+**Content-only: 9/15 PASS.** Structural axis: 5/15 PASS. With both axes, **composite PASS drops to 1/15** (`claude-opus-4-7` t0). The structural axis flips 8 content-PASS trials to FAIL — every GPT trial (5/5) and three Claude trials (t2, t3, t4); GPT passed all three content stages in every trial yet failed the structural axis in every trial.
 
 ### P1 — Mechanical structural criteria reduce disagreement  ·  **REFUTED**
 Structural-axis dual-judge IRR **46.67%** (7/15). The IRR is audit-invariant — it counts trials where the two structural judges disagreed, which the human audit does not change. Confirmed bar < 40% (the v0.2 Aristotelian structural IRR); 46.67% ≥ 40%. The Stage-1-only count fix did **not** lower structural disagreement — evidence against the double-count diagnosis as the dominant cause.
