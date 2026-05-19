@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-19 22:34 UTC  
+**Generated:** 2026-05-19 22:39 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 40 |
+| Total commits | 41 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **12** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **13** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -50,6 +50,7 @@
 
 **Tue – Tuesday, May 19**
 
+- `28d34a8` 02_fmv.2: Agent 1 + Agent 2 verdicts (non-canonical) — _dongzhang84_ `2026-05-19 15:39`
 - `149d170` 02_fmv.2: Agent 1 + Agent 2 non-canonical resolver scripts — _dongzhang84_ `2026-05-19 15:34`
 - `6e5f5f9` 02_fmv.2: human-audit worksheet for the 16 treatment-arm disagreements — _dongzhang84_ `2026-05-19 12:14`
 - `7346211` 02_fmv.2: treatment-arm dual-judge verdicts (content + structural) — _dongzhang84_ `2026-05-19 12:12`
