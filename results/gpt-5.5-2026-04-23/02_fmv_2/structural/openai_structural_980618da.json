@@ -1,0 +1,28 @@
+{
+  "cost_usd_estimate": 0.042495,
+  "input_tokens": 7679,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "303b7cc0-16ed-403d-93be-a6bd980618da",
+  "judge_timestamp_utc": "2026-05-19T19:06:30Z",
+  "output_tokens": 205,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [
+      {
+        "criterion": "N12",
+        "explanation": "The Stage 1 response has 6 top-level rules but contains no explicit cross-rule reference or hierarchy marker anywhere in the Stage 1 rule set.",
+        "quote": "1. **A body\u2019s pace is set directly by the total push or pull on it at that moment.**"
+      }
+    ],
+    "failed_criteria": [
+      "N12"
+    ],
+    "reasoning": "The Stage 1 response contains 6 distinct top-level numbered rules, so N9 passes. The rules are not duplicates within Stage 1, and each traces to observations or legitimate generalization from them, so N10 and N11 pass. However, because the rule set has 5 or more rules and contains no cross-rule reference or explicit hierarchy marker in Stage 1, it fails N12.",
+    "stage1_rule_count": 6,
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"stage1_rule_count\": 6,\n  \"failed_criteria\": [\"N12\"],\n  \"evidence\": [\n    {\n      \"criterion\": \"N12\",\n      \"quote\": \"1. **A body\u2019s pace is set directly by the total push or pull on it at that moment.**\",\n      \"explanation\": \"The Stage 1 response has 6 top-level rules but contains no explicit cross-rule reference or hierarchy marker anywhere in the Stage 1 rule set.\"\n    }\n  ],\n  \"reasoning\": \"The Stage 1 response contains 6 distinct top-level numbered rules, so N9 passes. The rules are not duplicates within Stage 1, and each traces to observations or legitimate generalization from them, so N10 and N11 pass. However, because the rule set has 5 or more rules and contains no cross-rule reference or explicit hierarchy marker in Stage 1, it fails N12.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_2_t0.0.json"
+}

@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.033729999999999996,
+  "input_tokens": 6206,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "5927076a-005f-4a64-a678-2f63a1526cfe",
+  "judge_timestamp_utc": "2026-05-19T19:03:42Z",
+  "output_tokens": 135,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains five top-level numbered rules, so it is well below the N9 failure thresholds. The rules are independent: they address push-tied motion, proportional pace, combination of pushes, falling, and no carried-over motion. Each rule traces to specific observations, and the Stage 1 response includes explicit cross-rule references such as Rule 2, Rule 4, and combinations like Rule 1 with Rule 2, satisfying N12.",
+    "stage1_rule_count": 5,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"stage1_rule_count\": 5,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The Stage 1 response contains five top-level numbered rules, so it is well below the N9 failure thresholds. The rules are independent: they address push-tied motion, proportional pace, combination of pushes, falling, and no carried-over motion. Each rule traces to specific observations, and the Stage 1 response includes explicit cross-rule references such as Rule 2, Rule 4, and combinations like Rule 1 with Rule 2, satisfying N12.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv_2/induction/trial_3_t0.0.json"
+}

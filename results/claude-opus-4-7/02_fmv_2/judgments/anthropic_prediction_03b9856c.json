@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.235185,
+  "input_tokens": 12794,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "24bdefe1-4484-4f99-b86a-d07203b9856c",
+  "judge_timestamp_utc": "2026-05-19T19:02:50Z",
+  "output_tokens": 577,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Prediction is 2D, matching the F=mv column, derived from Rules 1 and 2.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Prediction is 2T, matching the F=mv column, derived from Rule 3 (steady fall pace k) and Rule 1.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Predicts straight vertical drop from release point, matching F=mv column. Derives from Rules 1, 3, 4. No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "B wins; A takes twice as long as B (2:1 ratio A:B), matching F=mv column. Derived from Rules 1 and 2.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Predicts immediate motion at fixed pace with no build-up, matching F=mv column. Derived from Rules 1 and 2.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 2D, matching the F=mv column, derived from Rules 1 and 2.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 2T, matching the F=mv column, derived from Rule 3 (steady fall pace k) and Rule 1.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts straight vertical drop from release point, matching F=mv column. Derives from Rules 1, 3, 4. No banned tokens.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"B wins; A takes twice as long as B (2:1 ratio A:B), matching F=mv column. Derived from Rules 1 and 2.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts immediate motion at fixed pace with no build-up, matching F=mv column. Derived from Rules 1 and 2.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv_2/prediction/trial_2_t0.0.json"
+}

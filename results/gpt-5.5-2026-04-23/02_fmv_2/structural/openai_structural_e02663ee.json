@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.040135000000000004,
+  "input_tokens": 7487,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "6f90d0dc-fc1a-4b2d-aec4-1e58e02663ee",
+  "judge_timestamp_utc": "2026-05-19T19:05:50Z",
+  "output_tokens": 135,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains 6 top-level numbered rules, so it passes N9. The rules are not redundant within Stage 1: they separately address instantaneous push/pace dependence, heaviness, combination of pushes, environmental invariance, falling, and release/no carry-over. Each rule traces to the observation set, and Rule 3 references rule 2 while Rule 5 and Rule 6 explicitly build on the earlier principles, satisfying the hierarchy requirement.",
+    "stage1_rule_count": 6,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"stage1_rule_count\": 6,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The Stage 1 response contains 6 top-level numbered rules, so it passes N9. The rules are not redundant within Stage 1: they separately address instantaneous push/pace dependence, heaviness, combination of pushes, environmental invariance, falling, and release/no carry-over. Each rule traces to the observation set, and Rule 3 references rule 2 while Rule 5 and Rule 6 explicitly build on the earlier principles, satisfying the hierarchy requirement.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_1_t0.0.json"
+}

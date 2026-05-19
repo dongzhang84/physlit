@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.033035,
+  "input_tokens": 5931,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "c83f8a60-c4ed-4a4d-ac45-be19d5d68e62",
+  "judge_timestamp_utc": "2026-05-19T19:10:27Z",
+  "output_tokens": 169,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains three top-level numbered rules; the later note is explanatory commentary rather than an additional rule. N9 passes because the count is far below the parsimony thresholds, and N10 passes because the three rules cover distinct phenomena: effort-to-pace, combination of efforts, and downward falling. N11 passes because each rule traces to observations: Rules 1 and 2 to observations 1\u20139 and 11, and Rule 3 to observations 10 and 12, with the open-space qualification tied to observation 6. N12 is exempt because the rule set has fewer than five rules.",
+    "stage1_rule_count": 3,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"stage1_rule_count\": 3,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The Stage 1 response contains three top-level numbered rules; the later note is explanatory commentary rather than an additional rule. N9 passes because the count is far below the parsimony thresholds, and N10 passes because the three rules cover distinct phenomena: effort-to-pace, combination of efforts, and downward falling. N11 passes because each rule traces to observations: Rules 1 and 2 to observations 1\u20139 and 11, and Rule 3 to observations 10 and 12, with the open-space qualification tied to observation 6. N12 is exempt because the rule set has fewer than five rules.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_3_t0.0.json"
+}

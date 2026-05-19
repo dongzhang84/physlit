@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.03156,
+  "input_tokens": 5708,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "e08f11c4-f8d8-4f1a-85a2-dfe9364bf101",
+  "judge_timestamp_utc": "2026-05-19T19:09:11Z",
+  "output_tokens": 151,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains three top-level numbered rules: Effort and Pace, Combination, and Downward Pull. This passes N9 because the count is well below the parsimony threshold, and it is exempt from N12 because there are fewer than five rules. The rules are independent within Stage 1, and each traces to observations: Rules 1 and 2 directly cover pushed/pulled motion and combined efforts, while Rule 3 legitimately generalizes falling behavior by linking downward pull to heaviness and applying Rule 1.",
+    "stage1_rule_count": 3,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"stage1_rule_count\": 3,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The Stage 1 response contains three top-level numbered rules: Effort and Pace, Combination, and Downward Pull. This passes N9 because the count is well below the parsimony threshold, and it is exempt from N12 because there are fewer than five rules. The rules are independent within Stage 1, and each traces to observations: Rules 1 and 2 directly cover pushed/pulled motion and combined efforts, while Rule 3 legitimately generalizes falling behavior by linking downward pull to heaviness and applying Rule 1.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_1_t0.0.json"
+}

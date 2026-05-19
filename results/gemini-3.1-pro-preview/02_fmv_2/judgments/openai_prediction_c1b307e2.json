@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.05089,
+  "input_tokens": 8370,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "04899bcf-d9bc-4ccb-acfc-706ac1b307e2",
+  "judge_timestamp_utc": "2026-05-19T19:09:38Z",
+  "output_tokens": 452,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives exactly twice D and justifies it from Rule 1's steady pace under constant push. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives exactly twice T and justifies it from Rule 2's constant, unchanging falling pace. This matches the F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the horizontal motion stops when the hand's push ends, the ball drops straight down, and it lands directly below the release point. This follows Rules 1 and 2 and matches the F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names Block B as first and gives the binding F=mv time ratio of 2:1 for A:B. The justification derives from Rule 1's inverse proportionality between pace and heaviness.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says that once one push is removed, the remaining push immediately gives the block a full steady pace with no gradual build-up. This follows Rule 1's push-combination and instant-pace clauses.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives exactly twice D and justifies it from Rule 1's steady pace under constant push. No banned token or disqualifying pattern appears in this scenario.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives exactly twice T and justifies it from Rule 2's constant, unchanging falling pace. This matches the F=mv column.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the horizontal motion stops when the hand's push ends, the ball drops straight down, and it lands directly below the release point. This follows Rules 1 and 2 and matches the F=mv column.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names Block B as first and gives the binding F=mv time ratio of 2:1 for A:B. The justification derives from Rule 1's inverse proportionality between pace and heaviness.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says that once one push is removed, the remaining push immediately gives the block a full steady pace with no gradual build-up. This follows Rule 1's push-combination and instant-pace clauses.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_2_t0.0.json"
+}

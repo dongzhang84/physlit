@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.262815,
+  "input_tokens": 14766,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "d8c18140-c9f7-4527-9680-2cf82395a3b3",
+  "judge_timestamp_utc": "2026-05-19T19:06:50Z",
+  "output_tokens": 551,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Predicts about twice D with steady pace justified by Rule 1; matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Predicts 2T, citing Rule 5's fixed unchanging falling pace; matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Ball drops straight down to base directly below release; cites Rules 5 and 6; matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "Block B wins with 2:1 time ratio, derived from Rule 4's inverse proportion; matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Block immediately moves at steady pace of remaining push with no build-up; cites Rules 1 and 3; matches F=mv column.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts about twice D with steady pace justified by Rule 1; matches F=mv column.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts 2T, citing Rule 5's fixed unchanging falling pace; matches F=mv column.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Ball drops straight down to base directly below release; cites Rules 5 and 6; matches F=mv column.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Block B wins with 2:1 time ratio, derived from Rule 4's inverse proportion; matches F=mv column.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Block immediately moves at steady pace of remaining push with no build-up; cites Rules 1 and 3; matches F=mv column.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_3_t0.0.json"
+}

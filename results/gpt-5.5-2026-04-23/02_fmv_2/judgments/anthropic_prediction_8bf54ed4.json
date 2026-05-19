@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.27109500000000003,
+  "input_tokens": 15248,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "c8f3c0f1-3303-4933-a81a-dcab8bf54ed4",
+  "judge_timestamp_utc": "2026-05-19T19:05:31Z",
+  "output_tokens": 565,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Predicts about 2D after 20 seconds, derived from Rule 1 (steady push, steady pace). No banned tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Predicts about 2T, derived from Rule 5 (constant falling pace). Matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Predicts straight vertical drop landing directly below release point, derived from Rule 6 (no carry-over).",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "Predicts B wins with time ratio 2:1, derived from Rule 2 (pace inversely proportional to heaviness).",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Predicts immediate steady motion at full pace toward remaining pusher, derived from Rules 1 and 3, with no build-up.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts about 2D after 20 seconds, derived from Rule 1 (steady push, steady pace). No banned tokens.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts about 2T, derived from Rule 5 (constant falling pace). Matches F=mv column.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts straight vertical drop landing directly below release point, derived from Rule 6 (no carry-over).\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts B wins with time ratio 2:1, derived from Rule 2 (pace inversely proportional to heaviness).\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts immediate steady motion at full pace toward remaining pusher, derived from Rules 1 and 3, with no build-up.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_1_t0.0.json"
+}

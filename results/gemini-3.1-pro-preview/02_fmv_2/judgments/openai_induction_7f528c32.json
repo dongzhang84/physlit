@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.02122,
+  "input_tokens": 3924,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "a7c8d496-9425-4314-87e0-62897f528c32",
+  "judge_timestamp_utc": "2026-05-19T19:09:57Z",
+  "output_tokens": 80,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "open air",
+    "first_fail_clause": "banned: air",
+    "first_fail_step": 1,
+    "reasoning": "The response contains a banned token under the Step 1 lexical scan. Per \u00a73, any banned token appearing anywhere in the response triggers an automatic FAIL.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 1,\n  \"first_fail_clause\": \"banned: air\",\n  \"evidence\": \"open air\",\n  \"reasoning\": \"The response contains a banned token under the Step 1 lexical scan. Per \u00a73, any banned token appearing anywhere in the response triggers an automatic FAIL.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_3_t0.0.json"
+}

@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.059410000000000004,
+  "input_tokens": 10082,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "59be94b2-f3ad-4524-974e-ece4ed8ee54a",
+  "judge_timestamp_utc": "2026-05-19T19:06:56Z",
+  "output_tokens": 450,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives about twice D and justifies it from Rule 1's steady pace with no build-up. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives about twice T and justifies it from Rule 5's fixed downward falling pace. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the ball does not keep moving outward, falls straight down from the release point, and lands directly below, matching the F=mv column. It cites Rules 5 and 6 faithfully.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names Block B as first and gives the required 2:1 time ratio, derived from Rule 4's inverse proportionality with heaviness. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says equal opposite pushes cancel, then the remaining push produces a steady pace with no build-up, matching the F=mv column. It cites Rules 3 and 1 faithfully.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice D and justifies it from Rule 1's steady pace with no build-up. No banned token or disqualifying pattern appears in this scenario.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice T and justifies it from Rule 5's fixed downward falling pace. No banned token or disqualifying pattern appears in this scenario.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the ball does not keep moving outward, falls straight down from the release point, and lands directly below, matching the F=mv column. It cites Rules 5 and 6 faithfully.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names Block B as first and gives the required 2:1 time ratio, derived from Rule 4's inverse proportionality with heaviness. No banned token or disqualifying pattern appears in this scenario.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says equal opposite pushes cancel, then the remaining push produces a steady pace with no build-up, matching the F=mv column. It cites Rules 3 and 1 faithfully.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_3_t0.0.json"
+}

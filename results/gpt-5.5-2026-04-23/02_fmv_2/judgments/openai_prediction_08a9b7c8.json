@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.06293,
+  "input_tokens": 10594,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "a0fdd63c-2e33-4af4-803f-8a4108a9b7c8",
+  "judge_timestamp_utc": "2026-05-19T19:06:18Z",
+  "output_tokens": 498,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives about twice D, matching the F=mv answer. It cites and applies the Stage 2 steady-pace pushed-motion rules, and no banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives about twice T, matching the F=mv answer. It cites and applies the Stage 2 falling rule that fall pace is fixed and does not grow, and no banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the ball falls straight downward from the release point and lands directly below, matching the F=mv answer. It cites and applies the Stage 2 no-carry-over and falling rules, and no banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names block B as first and gives the required 2:1 time ratio with B taking half A's time. It derives this from the Stage 2 inverse heaviness rule, and no banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says equal opposite pushes cancel, then the remaining push makes the block move at once with steady pace. This matches the F=mv answer and derives from the Stage 2 combination and present-push pace rules, with no banned token or disqualifying pattern.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice D, matching the F=mv answer. It cites and applies the Stage 2 steady-pace pushed-motion rules, and no banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice T, matching the F=mv answer. It cites and applies the Stage 2 falling rule that fall pace is fixed and does not grow, and no banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the ball falls straight downward from the release point and lands directly below, matching the F=mv answer. It cites and applies the Stage 2 no-carry-over and falling rules, and no banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names block B as first and gives the required 2:1 time ratio with B taking half A's time. It derives this from the Stage 2 inverse heaviness rule, and no banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says equal opposite pushes cancel, then the remaining push makes the block move at once with steady pace. This matches the F=mv answer and derives from the Stage 2 combination and present-push pace rules, with no banned token or disqualifying pattern.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_2_t0.0.json"
+}

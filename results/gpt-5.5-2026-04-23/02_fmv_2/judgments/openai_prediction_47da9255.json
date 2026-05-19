@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.06004,
+  "input_tokens": 10140,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "9618e29d-bcfb-4bfc-82ae-ab1347da9255",
+  "judge_timestamp_utc": "2026-05-19T19:07:36Z",
+  "output_tokens": 467,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives about twice D and justifies it from Rules 1 and 2: steady unchanged push gives steady unchanged pace, so distance is proportional to time. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives about twice T for double height and derives it from Rule 5's fixed, non-increasing falling pace. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the ball falls straight downward from the release point and lands directly below it, matching the F=mv column. It cites Rules 1 and 5 faithfully, with no banned token or disqualifying pattern.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names block B as first and gives the required time ratio A:B = 2:1, derived from Rule 3's inverse proportionality with heaviness. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says the block moves at once under the remaining push with a steady pace, matching the F=mv column and Rules 1 and 2. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice D and justifies it from Rules 1 and 2: steady unchanged push gives steady unchanged pace, so distance is proportional to time. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice T for double height and derives it from Rule 5's fixed, non-increasing falling pace. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the ball falls straight downward from the release point and lands directly below it, matching the F=mv column. It cites Rules 1 and 5 faithfully, with no banned token or disqualifying pattern.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names block B as first and gives the required time ratio A:B = 2:1, derived from Rule 3's inverse proportionality with heaviness. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the block moves at once under the remaining push with a steady pace, matching the F=mv column and Rules 1 and 2. No banned token or disqualifying pattern appears.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_4_t0.0.json"
+}

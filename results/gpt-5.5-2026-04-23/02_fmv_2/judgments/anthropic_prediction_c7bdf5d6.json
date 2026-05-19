@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.278295,
+  "input_tokens": 15553,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "e2ead72d-eb99-4531-8a85-0f2fc7bdf5d6",
+  "judge_timestamp_utc": "2026-05-19T19:06:11Z",
+  "output_tokens": 600,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Predicts about twice D, derived from steady pace under steady push (Rules 1, 2, 4). Matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Predicts about twice T, derived from fixed falling pace (Rule 5). Matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Predicts straight downward fall, landing directly below release point, derived from Rules 6 and 5. Matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "Predicts t_A : t_B = 2 : 1 with B finishing first, derived from inverse-heaviness proportionality (Rules 1, 2). Matches F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Predicts the block moves at once at steady pace in the direction of the remaining push, derived from Rules 1, 2, 3. Matches F=mv column with no build-up.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts about twice D, derived from steady pace under steady push (Rules 1, 2, 4). Matches F=mv column.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts about twice T, derived from fixed falling pace (Rule 5). Matches F=mv column.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts straight downward fall, landing directly below release point, derived from Rules 6 and 5. Matches F=mv column.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts t_A : t_B = 2 : 1 with B finishing first, derived from inverse-heaviness proportionality (Rules 1, 2). Matches F=mv column.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Predicts the block moves at once at steady pace in the direction of the remaining push, derived from Rules 1, 2, 3. Matches F=mv column with no build-up.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_2_t0.0.json"
+}

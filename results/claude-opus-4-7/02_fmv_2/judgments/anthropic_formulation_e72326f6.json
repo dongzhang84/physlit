@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.16704000000000002,
+  "input_tokens": 10201,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "dc6a7e71-7d4b-4e21-8ecb-3ec8e72326f6",
+  "judge_timestamp_utc": "2026-05-19T19:03:57Z",
+  "output_tokens": 187,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally with explicit procedures. The proportional relations are quantitative and combinable (pace = E/H, with doubling/halving stated). Scope is given for each rule. No banned tokens appear. No P1\u2013P7 patterns are present (the falling rule explicitly avoids build-up). Boundary cases for observations 6 and 11, angled pushes, and transition instants are explicitly named.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"All Stage 1 rules are restated operationally with explicit procedures. The proportional relations are quantitative and combinable (pace = E/H, with doubling/halving stated). Scope is given for each rule. No banned tokens appear. No P1\u2013P7 patterns are present (the falling rule explicitly avoids build-up). Boundary cases for observations 6 and 11, angled pushes, and transition instants are explicitly named.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv_2/formulation/trial_4_t0.0.json"
+}

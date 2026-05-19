@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.032815000000000004,
+  "input_tokens": 6187,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "cfa24e4e-11f8-4ab8-8d0c-7a1e288ffb66",
+  "judge_timestamp_utc": "2026-05-19T19:08:47Z",
+  "output_tokens": 94,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "physical situations",
+    "failed_criterion": "No banned token appears anywhere in the response\n  (`ideal_induction.md` \u00a73).",
+    "reasoning": "The banned-token test is purely lexical and applies to the whole response, including morphological variants. The response contains the banned token variant \"physical\" from the banned physicist/physics-related token family.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"failed_criterion\": \"No banned token appears anywhere in the response\\n  (`ideal_induction.md` \u00a73).\",\n  \"evidence\": \"physical situations\",\n  \"reasoning\": \"The banned-token test is purely lexical and applies to the whole response, including morphological variants. The response contains the banned token variant \\\"physical\\\" from the banned physicist/physics-related token family.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_1_t0.0.json"
+}

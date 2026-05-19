@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.051949999999999996,
+  "input_tokens": 8398,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "119180ab-059d-431c-a1f2-419442df40f1",
+  "judge_timestamp_utc": "2026-05-19T19:02:19Z",
+  "output_tokens": 498,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives about twice D and justifies it from Stage 2 rules 1, 2, and 4: fixed push and heaviness give fixed pace, so distance is proportional to time. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives about twice T and justifies it from Stage 2 rule 3: falling has one fixed downward pace, so doubling height doubles time. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the forward pace ends when the hand stops pushing and the ball falls straight down, landing directly below the release point. This matches the F=mv column and is derived from Stage 2 rules 1 and 3.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names B as the winner and gives the required 2:1 time ratio, derived from rule 2: same effort and twice the heaviness gives half the pace and twice the time. No banned token or disqualifying pattern appears.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says that when one push is removed, the block immediately takes the full steady pace produced by the remaining push, with no gradual build-up. This matches the F=mv column and follows from Stage 2 rules 1 and 2.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice D and justifies it from Stage 2 rules 1, 2, and 4: fixed push and heaviness give fixed pace, so distance is proportional to time. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about twice T and justifies it from Stage 2 rule 3: falling has one fixed downward pace, so doubling height doubles time. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the forward pace ends when the hand stops pushing and the ball falls straight down, landing directly below the release point. This matches the F=mv column and is derived from Stage 2 rules 1 and 3.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names B as the winner and gives the required 2:1 time ratio, derived from rule 2: same effort and twice the heaviness gives half the pace and twice the time. No banned token or disqualifying pattern appears.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says that when one push is removed, the block immediately takes the full steady pace produced by the remaining push, with no gradual build-up. This matches the F=mv column and follows from Stage 2 rules 1 and 2.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv_2/prediction/trial_1_t0.0.json"
+}

@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.0366,
+  "input_tokens": 7004,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "684407d5-b821-4a3d-9fee-ec2c80a31218",
+  "judge_timestamp_utc": "2026-05-19T19:03:59Z",
+  "output_tokens": 79,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response gives operational, quantitative, combinable rules for push and heaviness, states scope for each rule, names uncovered or boundary observations explicitly, and contains no banned tokens or disqualifying P1\u2013P7 patterns.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"The response gives operational, quantitative, combinable rules for push and heaviness, states scope for each rule, names uncovered or boundary observations explicitly, and contains no banned tokens or disqualifying P1\u2013P7 patterns.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv_2/formulation/trial_4_t0.0.json"
+}

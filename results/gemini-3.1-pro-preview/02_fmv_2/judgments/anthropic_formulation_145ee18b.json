@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.149625,
+  "input_tokens": 9140,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "667ce803-26be-464c-a68d-1110145ee18b",
+  "judge_timestamp_utc": "2026-05-19T19:09:22Z",
+  "output_tokens": 167,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response restates each Stage 1 rule operationally, makes the proportionality quantitative (pace \u221d effort, inversely \u221d heaviness, combinable), states scope for each rule, contains no banned tokens or morphological variants, exhibits no P1\u2013P7 patterns, and explicitly names Observation 6 as not fully covered in the boundary notes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"The response restates each Stage 1 rule operationally, makes the proportionality quantitative (pace \u221d effort, inversely \u221d heaviness, combinable), states scope for each rule, contains no banned tokens or morphological variants, exhibits no P1\u2013P7 patterns, and explicitly names Observation 6 as not fully covered in the boundary notes.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.json"
+}

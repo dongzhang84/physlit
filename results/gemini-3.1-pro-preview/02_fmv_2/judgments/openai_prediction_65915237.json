@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.05154,
+  "input_tokens": 8488,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "20719aa7-4610-41e1-b134-29ae65915237",
+  "judge_timestamp_utc": "2026-05-19T19:10:52Z",
+  "output_tokens": 455,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives twice D and justifies it from Rule 3's steady, unchanging pace under constant effort and heaviness. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives twice T and derives it from Rule 4's single, universal, unchanging dropping pace. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the ball drops straight down and lands exactly beneath the point of release, matching the F=mv column. The justification cites Rule 1 and Rule 4 faithfully.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names Block B as first and gives the required 2:1 time ratio, deriving it from Rule 3's inverse proportionality of pace to heaviness. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says the block instantly reaches the full steady pace from the remaining push with no gradual build-up, matching the F=mv column. It is justified from Rules 1 and 3.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives twice D and justifies it from Rule 3's steady, unchanging pace under constant effort and heaviness. No banned token or disqualifying pattern appears in this scenario.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives twice T and derives it from Rule 4's single, universal, unchanging dropping pace. No banned token or disqualifying pattern appears in this scenario.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the ball drops straight down and lands exactly beneath the point of release, matching the F=mv column. The justification cites Rule 1 and Rule 4 faithfully.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names Block B as first and gives the required 2:1 time ratio, deriving it from Rule 3's inverse proportionality of pace to heaviness. No banned token or disqualifying pattern appears in this scenario.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the block instantly reaches the full steady pace from the remaining push with no gradual build-up, matching the F=mv column. It is justified from Rules 1 and 3.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_4_t0.0.json"
+}

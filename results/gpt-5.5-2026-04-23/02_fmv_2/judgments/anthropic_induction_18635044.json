@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.10041,
+  "input_tokens": 5609,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "026f4e73-fd12-4f4a-a625-31a518635044",
+  "judge_timestamp_utc": "2026-05-19T19:05:15Z",
+  "output_tokens": 217,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "first_fail_clause": null,
+    "first_fail_step": null,
+    "reasoning": "No banned tokens appear. N1-N6 are all stated: rule 1 covers N1, N2, N4; rule 2 covers N3; rule 3 covers N6; rule 5 covers N5; rule 6 reinforces N4(b). All 12 observations are covered, rules are consistent, and no P1-P7 patterns appear (rule 5 explicitly denies build-up and heavier-falls-faster; rule 6 denies projectile arc and carry-over).",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"first_fail_step\": null,\n  \"first_fail_clause\": null,\n  \"evidence\": null,\n  \"reasoning\": \"No banned tokens appear. N1-N6 are all stated: rule 1 covers N1, N2, N4; rule 2 covers N3; rule 3 covers N6; rule 5 covers N5; rule 6 reinforces N4(b). All 12 observations are covered, rules are consistent, and no P1-P7 patterns appear (rule 5 explicitly denies build-up and heavier-falls-faster; rule 6 denies projectile arc and carry-over).\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_1_t0.0.json"
+}

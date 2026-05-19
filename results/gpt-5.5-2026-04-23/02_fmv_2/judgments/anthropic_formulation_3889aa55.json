@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.19257,
+  "input_tokens": 11948,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "eb377bb7-6ca3-4bc1-b002-946a3889aa55",
+  "judge_timestamp_utc": "2026-05-19T19:06:00Z",
+  "output_tokens": 178,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally with quantitative proportional relations (pace \u221d push/heaviness) allowing a third party to compute pace from push and heaviness. Scopes are stated per rule. No banned tokens appear, no P1\u2013P7 patterns present, and boundary notes name the awkward cases (oblique pushes, need for a standard case, falling as special sub-rule).",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"All Stage 1 rules are restated operationally with quantitative proportional relations (pace \u221d push/heaviness) allowing a third party to compute pace from push and heaviness. Scopes are stated per rule. No banned tokens appear, no P1\u2013P7 patterns present, and boundary notes name the awkward cases (oblique pushes, need for a standard case, falling as special sub-rule).\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_2_t0.0.json"
+}

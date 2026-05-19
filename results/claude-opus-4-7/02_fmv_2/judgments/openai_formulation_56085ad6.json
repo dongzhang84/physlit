@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.035305,
+  "input_tokens": 6685,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "c115eda6-237c-482f-bfa9-532056085ad6",
+  "judge_timestamp_utc": "2026-05-19T19:03:18Z",
+  "output_tokens": 94,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response states operational, scoped rules for push-tied motion, quantitative P = F/H pace, push combination, falling, and release. It names boundary/partly covered observations including observation 11, contains no banned tokens, and no P1\u2013P7 disqualifying pattern is present.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"The response states operational, scoped rules for push-tied motion, quantitative P = F/H pace, push combination, falling, and release. It names boundary/partly covered observations including observation 11, contains no banned tokens, and no P1\u2013P7 disqualifying pattern is present.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv_2/formulation/trial_3_t0.0.json"
+}

@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.0595,
+  "input_tokens": 10452,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "757da20b-ab12-4ce2-a696-be2081a477d3",
+  "judge_timestamp_utc": "2026-05-19T19:05:36Z",
+  "output_tokens": 362,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives about twice D and justifies it from the steady present push and unchanged pace in the Stage 2 rules. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives about twice T, deriving it from Rule 5's steady falling pace. The explicit rejection of 1.4T does not use a banned token and matches the F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the ball drops straight down from the release point and lands directly below, citing Rule 6's no carried-over motion and Rule 5's downward fall. This matches the F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names block B as first and gives the required time ratio t_A : t_B = 2 : 1. The calculation follows Rule 2's inverse proportionality of pace to heaviness.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says the block immediately moves in the direction of the remaining push at a steady pace set by that push divided by heaviness. This follows Rules 1 and 3 and matches the F=mv column.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\"scenarios\":[{\"index\":1,\"verdict\":\"PASS\",\"direction\":\"correct\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction gives about twice D and justifies it from the steady present push and unchanged pace in the Stage 2 rules. No banned token or disqualifying pattern appears in this scenario.\"},{\"index\":2,\"verdict\":\"PASS\",\"direction\":\"correct\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction gives about twice T, deriving it from Rule 5's steady falling pace. The explicit rejection of 1.4T does not use a banned token and matches the F=mv column.\"},{\"index\":3,\"verdict\":\"PASS\",\"direction\":\"n/a\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction says the ball drops straight down from the release point and lands directly below, citing Rule 6's no carried-over motion and Rule 5's downward fall. This matches the F=mv column.\"},{\"index\":4,\"verdict\":\"PASS\",\"direction\":\"correct\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction names block B as first and gives the required time ratio t_A : t_B = 2 : 1. The calculation follows Rule 2's inverse proportionality of pace to heaviness.\"},{\"index\":5,\"verdict\":\"PASS\",\"direction\":\"n/a\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction says the block immediately moves in the direction of the remaining push at a steady pace set by that push divided by heaviness. This follows Rules 1 and 3 and matches the F=mv column.\"}],\"overall_verdict\":\"PASS\"}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_1_t0.0.json"
+}

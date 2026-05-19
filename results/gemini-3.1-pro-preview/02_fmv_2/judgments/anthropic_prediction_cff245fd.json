@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.23556,
+  "input_tokens": 12699,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "1140498f-3ae5-490c-985f-e5c5cff245fd",
+  "judge_timestamp_utc": "2026-05-19T19:10:47Z",
+  "output_tokens": 601,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "Prediction is 'exactly twice D', matching F=mv column. Justification cites Rule 3 (steady pace, no build-up).",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "Prediction is 'exactly twice T', matching F=mv column. Justification cites Rule 4 (universal constant fall pace).",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "Prediction is straight vertical drop landing at base directly below release, matching F=mv column. Cites Rules 1 and 4.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "Prediction is Block B wins with 2:1 time ratio, matching F=mv column. Justification cites Rule 3 (pace = effort/heaviness).",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "Prediction is instant full steady pace with no build-up, matching F=mv column. Cites Rules 3 and 1. No banned tokens detected in response.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 'exactly twice D', matching F=mv column. Justification cites Rule 3 (steady pace, no build-up).\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is 'exactly twice T', matching F=mv column. Justification cites Rule 4 (universal constant fall pace).\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is straight vertical drop landing at base directly below release, matching F=mv column. Cites Rules 1 and 4.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is Block B wins with 2:1 time ratio, matching F=mv column. Justification cites Rule 3 (pace = effort/heaviness).\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"Prediction is instant full steady pace with no build-up, matching F=mv column. Cites Rules 3 and 1. No banned tokens detected in response.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_4_t0.0.json"
+}

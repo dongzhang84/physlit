@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.15606,
+  "input_tokens": 9604,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "8c4910a7-6f9e-45e1-86ca-55a3c52e2d0e",
+  "judge_timestamp_utc": "2026-05-19T19:10:01Z",
+  "output_tokens": 160,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally; pace = push/heaviness is quantitatively combinable; scope is given for each rule; no banned tokens appear; no P1\u2013P7 pattern is present (instant start/stop, no build-up, no carry-over, equal fall pace); the open-space tension is named explicitly in Boundary notes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"All Stage 1 rules are restated operationally; pace = push/heaviness is quantitatively combinable; scope is given for each rule; no banned tokens appear; no P1\u2013P7 pattern is present (instant start/stop, no build-up, no carry-over, equal fall pace); the open-space tension is named explicitly in Boundary notes.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_3_t0.0.json"
+}

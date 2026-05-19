@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.034895,
+  "input_tokens": 6507,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "f47670bf-4391-4b74-9bc7-8867f424809e",
+  "judge_timestamp_utc": "2026-05-19T19:02:04Z",
+  "output_tokens": 118,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "**4. Track, open space, and air are inert.**",
+    "failed_criterion": "No banned token appears anywhere in the response\n  (`ideal_induction.md` \u00a73).",
+    "reasoning": "The Stage 2 response contains the banned token variant \"inert,\" which is a morphological variant of the banned token \"inertia\"/\"inertial\" under the purely lexical test. Presence anywhere in the response is an automatic Stage 2 fail.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"failed_criterion\": \"No banned token appears anywhere in the response\\n  (`ideal_induction.md` \u00a73).\",\n  \"evidence\": \"**4. Track, open space, and air are inert.**\",\n  \"reasoning\": \"The Stage 2 response contains the banned token variant \\\"inert,\\\" which is a morphological variant of the banned token \\\"inertia\\\"/\\\"inertial\\\" under the purely lexical test. Presence anywhere in the response is an automatic Stage 2 fail.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv_2/formulation/trial_1_t0.0.json"
+}

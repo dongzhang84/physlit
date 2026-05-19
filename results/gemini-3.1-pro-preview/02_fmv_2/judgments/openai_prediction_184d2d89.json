@@ -1,0 +1,58 @@
+{
+  "cost_usd_estimate": 0.05117,
+  "input_tokens": 8426,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "d9ef02e3-11a8-4da3-8951-d57c184d2d89",
+  "judge_timestamp_utc": "2026-05-19T19:10:19Z",
+  "output_tokens": 452,
+  "parse_error": null,
+  "parsed_verdict": {
+    "overall_verdict": "PASS",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 1,
+        "reasoning": "The prediction gives exactly twice D and justifies it using Rule 1's steady pace under unchanged effort and heaviness. No banned token or disqualifying pattern appears in this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives exactly twice T and derives it from Rule 3's identical steady falling pace and Rule 1's steady pace. This matches the F=mv answer.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction says the horizontal pace vanishes when the hand's push ceases and the ball drops straight down to the base of the cliff. This follows from Rules 1 and 3 and matches the F=mv column.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 4,
+        "reasoning": "The prediction names block B as the winner and gives the required 2:1 A:B time ratio. It derives the ratio from Rule 1's inverse proportionality between pace and heaviness.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The prediction says the block instantly assumes the steady pace from the remaining push after the opposing push is removed. This follows from Rules 2 and 1 and matches the F=mv answer.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives exactly twice D and justifies it using Rule 1's steady pace under unchanged effort and heaviness. No banned token or disqualifying pattern appears in this scenario.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives exactly twice T and derives it from Rule 3's identical steady falling pace and Rule 1's steady pace. This matches the F=mv answer.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the horizontal pace vanishes when the hand's push ceases and the ball drops straight down to the base of the cliff. This follows from Rules 1 and 3 and matches the F=mv column.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction names block B as the winner and gives the required 2:1 A:B time ratio. It derives the ratio from Rule 1's inverse proportionality between pace and heaviness.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction says the block instantly assumes the steady pace from the remaining push after the opposing push is removed. This follows from Rules 2 and 1 and matches the F=mv answer.\"\n    }\n  ],\n  \"overall_verdict\": \"PASS\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_3_t0.0.json"
+}

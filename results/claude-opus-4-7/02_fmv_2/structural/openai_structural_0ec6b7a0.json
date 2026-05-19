@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.034325,
+  "input_tokens": 6325,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "99a204d4-7821-45d1-979a-b3280ec6b7a0",
+  "judge_timestamp_utc": "2026-05-19T19:03:04Z",
+  "output_tokens": 135,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains four top-level numbered rules, so N9 passes and N12 is exempt because the rule count is below 5. The four rules are not redundant: they separately cover push-duration, effort/heaviness proportionality, downward falling behavior, and setting equivalence. Each rule traces to the observations, with rule 3 legitimately generalizing from the falling observations and rule 4 from the track/open-space/airless-jar comparisons.",
+    "stage1_rule_count": 4,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"stage1_rule_count\": 4,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The Stage 1 response contains four top-level numbered rules, so N9 passes and N12 is exempt because the rule count is below 5. The four rules are not redundant: they separately cover push-duration, effort/heaviness proportionality, downward falling behavior, and setting equivalence. Each rule traces to the observations, with rule 3 legitimately generalizing from the falling observations and rule 4 from the track/open-space/airless-jar comparisons.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv_2/induction/trial_2_t0.0.json"
+}

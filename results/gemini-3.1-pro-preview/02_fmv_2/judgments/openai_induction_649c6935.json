@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.02095,
+  "input_tokens": 3742,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "94f511d6-bb81-4943-80d3-5e43649c6935",
+  "judge_timestamp_utc": "2026-05-19T19:09:19Z",
+  "output_tokens": 112,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "The pace of any moving object is exactly proportional to the total effort acting on it, and inversely proportional to its heaviness.",
+    "first_fail_clause": "banned: proportional",
+    "first_fail_step": 1,
+    "reasoning": "Step 1 requires scanning the whole response for banned tokens or morphological variants. The response contains 'proportional', a morphological variant of the banned token 'proportional' under the lexical test.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 1,\n  \"first_fail_clause\": \"banned: proportional\",\n  \"evidence\": \"The pace of any moving object is exactly proportional to the total effort acting on it, and inversely proportional to its heaviness.\",\n  \"reasoning\": \"Step 1 requires scanning the whole response for banned tokens or morphological variants. The response contains 'proportional', a morphological variant of the banned token 'proportional' under the lexical test.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_2_t0.0.json"
+}

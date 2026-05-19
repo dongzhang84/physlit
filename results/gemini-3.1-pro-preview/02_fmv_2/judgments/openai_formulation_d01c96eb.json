@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.034190000000000005,
+  "input_tokens": 6410,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "4ab42d3e-430f-4e25-8a4f-fd8fd01c96eb",
+  "judge_timestamp_utc": "2026-05-19T19:10:04Z",
+  "output_tokens": 107,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response states operational quantitative rules for pace as push divided by heaviness, includes doubling and inverse-doubling behavior, gives scope for pushed motion, falling, open space, and combined pushes, and names the boundary tension involving open space rather than dropping it. No banned tokens or disqualifying P1\u2013P7 patterns appear in the Stage 2 response.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"The response states operational quantitative rules for pace as push divided by heaviness, includes doubling and inverse-doubling behavior, gives scope for pushed motion, falling, open space, and combined pushes, and names the boundary tension involving open space rather than dropping it. No banned tokens or disqualifying P1\u2013P7 patterns appear in the Stage 2 response.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_3_t0.0.json"
+}

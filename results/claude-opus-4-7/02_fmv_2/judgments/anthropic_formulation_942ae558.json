@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.15765,
+  "input_tokens": 9660,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "4b97c07d-32f3-4e35-97b1-622b942ae558",
+  "judge_timestamp_utc": "2026-05-19T19:01:22Z",
+  "output_tokens": 170,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All Stage 1 rules are restated operationally with scope; the proportional relations are made quantitative (P = P\u2080\u00b7(E/E\u2080)\u00b7(H\u2080/H)) so a third party can compute pace from push and heaviness. No banned tokens appear, no P1\u2013P7 patterns are present, and observation 11's incomplete coverage is explicitly named in the Boundary notes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"All Stage 1 rules are restated operationally with scope; the proportional relations are made quantitative (P = P\u2080\u00b7(E/E\u2080)\u00b7(H\u2080/H)) so a third party can compute pace from push and heaviness. No banned tokens appear, no P1\u2013P7 patterns are present, and observation 11's incomplete coverage is explicitly named in the Boundary notes.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/02_fmv_2/formulation/trial_0_t0.0.json"
+}

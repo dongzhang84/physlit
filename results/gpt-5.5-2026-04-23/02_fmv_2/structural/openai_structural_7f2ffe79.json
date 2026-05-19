@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.040905,
+  "input_tokens": 7421,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "2bf0f22b-de3f-4433-9cee-954d7f2ffe79",
+  "judge_timestamp_utc": "2026-05-19T19:07:08Z",
+  "output_tokens": 190,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains six top-level numbered rules, so it is well below the N9 parsimony failure thresholds. The rules are not redundant within Stage 1: each addresses a distinct aspect of the observed system, such as total present push, absence of push, combination of pushes, heaviness, falling, and release from a hand. Each rule traces to one or more observations, with the falling rule being a legitimate generalization from the falling observations rather than an unsupported fabrication. Because the set has at least five rules, N12 applies; the Stage 1 response contains cross-rule structure through the final statement that the observations are reconciled by the rules and through the internal relation between rules, so it passes hierarchy.",
+    "stage1_rule_count": 6,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"stage1_rule_count\": 6,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The Stage 1 response contains six top-level numbered rules, so it is well below the N9 parsimony failure thresholds. The rules are not redundant within Stage 1: each addresses a distinct aspect of the observed system, such as total present push, absence of push, combination of pushes, heaviness, falling, and release from a hand. Each rule traces to one or more observations, with the falling rule being a legitimate generalization from the falling observations rather than an unsupported fabrication. Because the set has at least five rules, N12 applies; the Stage 1 response contains cross-rule structure through the final statement that the observations are reconciled by the rules and through the internal relation between rules, so it passes hierarchy.\" \n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_3_t0.0.json"
+}
