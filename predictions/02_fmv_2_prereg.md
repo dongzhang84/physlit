@@ -3,10 +3,10 @@
 **Lock metadata** (auto-populated by `scripts/lock_prereg.py` — values
 below show `<PENDING>` until the lock script runs):
 
-- Locked at git commit: `<PENDING>`
+- Locked at git commit: `788330c9fb8b3f0ce8743dee6258976f8042076b`
 - Locked at git tag: `prereg-02_fmv.2-locked`
-- Lock timestamp (UTC): `<PENDING>`
-- SHA-256 of canonical content (everything below the LOCK BOUNDARY line): `<PENDING>`
+- Lock timestamp (UTC): `2026-05-19T18:28:28Z`
+- SHA-256 of canonical content (everything below the LOCK BOUNDARY line): `6603646f225b5a45ce500aea634376f14ccb8f30b9399e2e4b1365ccb8ccaf0a`
 
 > Once locked, **the canonical content below the LOCK BOUNDARY MUST
 > NOT be modified.** Any revision requires a new version
