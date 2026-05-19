@@ -36,3 +36,48 @@ Structural IRR 46.67% (Confirmed < 40%; v0.2 Aristotelian structural IRR was 40%
 ### P2 — Structural axis catches a content-missed failure  ·  **CONFIRMED**
 All-content-PASS trials: 9. Flipped to composite FAIL via the structural axis: **3** (gpt-5.5-2026-04-23 t0, gpt-5.5-2026-04-23 t1, gpt-5.5-2026-04-23 t3). Threshold ≥ 1.
 - 5 content-PASS trial(s) have a structural DISAGREE pending audit: claude-opus-4-7 t2, claude-opus-4-7 t3, claude-opus-4-7 t4, gpt-5.5-2026-04-23 t2, gpt-5.5-2026-04-23 t4.
+
+## 02_fmv.1 post-audit final results
+- Generated: `2026-05-19T06:36:32Z`
+- Audit: `analysis/02_fmv_1_structural_audit_human_review.md` — 7 structural disagree cases resolved by human audit (canonical, per `prereg-02_fmv.1-locked` §1).
+
+### Resolved per-trial structural + composite matrix (audit-applied)
+
+| Model | Trial | Content | Structural | Composite |
+|---|---|---|---|---|
+| `claude-opus-4-7` | 0 | PASS | PASS | PASS |
+| `claude-opus-4-7` | 1 | FAIL | PASS | FAIL |
+| `claude-opus-4-7` | 2 | PASS | FAIL *(audit)* | FAIL |
+| `claude-opus-4-7` | 3 | PASS | FAIL *(audit)* | FAIL |
+| `claude-opus-4-7` | 4 | PASS | FAIL *(audit)* | FAIL |
+| `gpt-5.5-2026-04-23` | 0 | PASS | FAIL | FAIL |
+| `gpt-5.5-2026-04-23` | 1 | PASS | FAIL | FAIL |
+| `gpt-5.5-2026-04-23` | 2 | PASS | FAIL *(audit)* | FAIL |
+| `gpt-5.5-2026-04-23` | 3 | PASS | FAIL | FAIL |
+| `gpt-5.5-2026-04-23` | 4 | PASS | FAIL *(audit)* | FAIL |
+| `gemini-3.1-pro-preview` | 0 | FAIL | PASS | FAIL |
+| `gemini-3.1-pro-preview` | 1 | FAIL | FAIL | FAIL |
+| `gemini-3.1-pro-preview` | 2 | FAIL | PASS *(audit)* | FAIL |
+| `gemini-3.1-pro-preview` | 3 | FAIL | PASS | FAIL |
+| `gemini-3.1-pro-preview` | 4 | FAIL | FAIL *(audit)* | FAIL |
+
+Composite: **1/15 PASS**, 14/15 FAIL.
+
+### P1 — Mechanical structural criteria reduce disagreement  ·  **REFUTED**
+Structural-axis dual-judge IRR **46.67%** (7/15). The IRR is audit-invariant — it counts trials where the two structural judges disagreed, which the human audit does not change. Confirmed bar < 40% (the v0.2 Aristotelian structural IRR); 46.67% ≥ 40%. The Stage-1-only count fix did **not** lower structural disagreement — evidence against the double-count diagnosis as the dominant cause.
+
+### P2 — Structural axis catches a content-missed failure  ·  **CONFIRMED**
+All-content-PASS trials: **9**. Reclassified to composite FAIL by the structural axis: **8** (`claude-opus-4-7` t2, `claude-opus-4-7` t3, `claude-opus-4-7` t4, `gpt-5.5-2026-04-23` t0, `gpt-5.5-2026-04-23` t1, `gpt-5.5-2026-04-23` t2, `gpt-5.5-2026-04-23` t3, `gpt-5.5-2026-04-23` t4). Threshold ≥ 1. The structural axis demonstrably detects failures the content axis missed on this framework.
+
+### Structural judge vs the human audit (7 disagree cases)
+
+- Claude structural judge: **1/7** (14%)
+- OpenAI structural judge: **6/7** (86%)
+
+This **reverses** the 02_fmv content axis, where the Claude judge agreed with the human audit on 86% and the OpenAI judge on 21%. Same models, same framework, different judgment task — judge reliability is task-dependent, not model-dependent.
+
+### Agent 2 (non-canonical resolver) vs the human audit
+
+Agent 2 (`gemini-3.1-pro-preview`) agreed with the human audit on **6/7** (86%) of the structural disagree cases — the lone miss is Case 3 (`claude-opus-4-7` t4), where Agent 2 PASS vs human FAIL on N10. Agent 2 is a side analysis; it does not feed P1 / P2.
+
+**Verdict summary (post-audit, final):** P1 REFUTED · P2 CONFIRMED. The audit resolved all 7 structural DISAGREE rows; P1 is unchanged from the preliminary verdict (IRR audit-invariant); P2 firmed from a lower bound of 3 to 8 of 9 all-content-PASS trials flipped.

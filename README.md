@@ -54,6 +54,29 @@ Two methodology findings:
 
 ---
 
+## 02_fmv.1 result (2026-05-18)
+
+The **structural axis** (necessary conditions N9-N12: parsimony, independence, traceability, hierarchy) applied to the 60 frozen `02_fmv` trials — an additive re-analysis layer, no new tested-model trials. Two predictions locked at tag [`prereg-02_fmv.1-locked`](https://github.com/dongzhang84/physlit/releases/tag/prereg-02_fmv.1-locked) before judging:
+
+- **P1 — Mechanical (Stage-1-only) criteria lower the structural IRR: REFUTED.** The structural-axis dual-judge IRR is 46.67 % — *above* v0.2 Aristotelian's 40 %, not below. The v0.2 Stage 1+2 double-count was a real defect, but it was not the dominant cause of structural disagreement: the 7 splits were N10/N11/N12 judgment calls, not counting artifacts.
+- **P2 — The structural axis catches a content-missed failure: CONFIRMED.** 8 of the 9 trials that passed all three content stages fail the structural axis. Only 1 of 15 trials survives as composite PASS.
+
+Two methodology findings:
+
+- **Judge reliability reverses completely between axes.** On the content axis the Claude judge agreed with the human audit 86 % and the OpenAI judge 21 %; on the structural axis the order flips — Claude 14 %, OpenAI 86 %. Same models, same trials, only the task changed. Judge reliability is task-dependent, not model-dependent.
+- **Content and structural quality are anti-correlated.** GPT passed all 5 content axes but failed all 5 structural; Gemini failed all 5 content but passed 3 of 5 structural. The two axes measure genuinely different competences.
+
+**Scope**: structural axis over the frozen `02_fmv` trials. 30 structural-judge + 7 resolver calls ≈ **$4.0 USD**.
+
+| Where to look | What's in it |
+| --- | --- |
+| [`analysis/02_fmv_1_report.md`](./analysis/02_fmv_1_report.md) | English narrative report — design, results |
+| [`analysis/02_fmv_1_findings.md`](./analysis/02_fmv_1_findings.md) | Judging report + post-audit numerics |
+| [`analysis/02_fmv_1_structural_audit_human_review.md`](./analysis/02_fmv_1_structural_audit_human_review.md) | Human verdicts on all 7 structural disagreement cases |
+| [`results/<model-id>/02_fmv/structural/`](./results/) | Verbatim structural-judge verdicts |
+
+---
+
 ## Why this exists
 
 Existing LLM physics benchmarks count correct answers and report a percentage. Two structural flaws follow:
@@ -162,7 +185,8 @@ CI never runs real API calls — only mocks in `tests/test_runners_with_mock.py`
 | **v0.1** | Aristotelian Mechanics, content axis × 3 models × N=5 | ✅ Done — 2026-05-11 |
 | **v0.2** | Structural axis (N9-N12) + LLM disagree-resolvers, additive re-analysis of v0.1 | ✅ Done — 2026-05-13 |
 | **02_fmv** | F=mv counterfactual world, content axis × 3 models × N=5 | ✅ Done — 2026-05-18 |
-| next | Structural axis on F=mv; further frameworks judged under a common mechanical-criteria standard | Planned |
+| **02_fmv.1** | Structural axis (N9-N12) on the F=mv trials, additive re-analysis | ✅ Done — 2026-05-18 |
+| next | Further frameworks judged under a common mechanical-criteria standard; per-axis judge validation | Planned |
 
 Pre-registration is framework-scoped from 02_fmv onward (tag `prereg-<id>-locked`). The original v1.0 ambition of 15 frameworks has been retired in favor of methodology-first iteration.
 

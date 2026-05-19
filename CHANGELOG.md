@@ -223,3 +223,33 @@ framework-scoped pre-registration (`prereg-02_fmv-locked`).
   reliability reversed across frameworks (OpenAI reliable on v0.1,
   Claude on F=mv).
 - Cost ≈ $17.3 USD. Report: `analysis/02_fmv_report.md`.
+
+## [02_fmv.1] — 2026-05-18
+
+### 02_fmv.1 — structural axis on the F=mv trials
+
+Additive analysis layer over the frozen `02_fmv` content trials —
+the structural axis (N9-N12), exactly as v0.2 added structure to v0.1.
+Pre-registered at `prereg-02_fmv.1-locked`; no new tested-model trials.
+
+- Corrected structural criteria (`frameworks/02_fmv/structural_criteria.md`):
+  the rule count, N9 parsimony, and N10 redundancy check are scoped to
+  **Stage 1 only**, fixing the v0.2 Stage 1+2 double-count defect.
+  New structural judge prompt; two predictions (P1, P2).
+- New tooling: `judge_structural_02_fmv.py`,
+  `build_02_fmv_1_structural_worksheet.py`, `apply_02_fmv_1_audit.py`,
+  `run_agent2_02_fmv.py`, `build_02_fmv_1_agent2_review.py`.
+- 30 structural dual-judge verdicts over the 15 trials; structural-axis
+  IRR 46.67 % → human audit of all 7 disagreement cases.
+- Result, post-audit: **P1 REFUTED** — the Stage-1-only fix did *not*
+  lower the structural IRR (46.67 % > v0.2's 40 %); the 7 splits were
+  N10/N11/N12 judgment calls, not counting artifacts, refuting the
+  double-count diagnosis as the dominant cause. **P2 CONFIRMED** — 8 of
+  9 all-content-PASS trials flip to composite FAIL; only 1/15 trials is
+  composite PASS.
+- Methodology: judge reliability reverses completely between axes —
+  Claude judge 86 % content / 14 % structural, OpenAI 21 % / 86 % (same
+  models, same trials). Content and structural quality are
+  anti-correlated (GPT 5/5 content, 0/5 structural; Gemini 0/5, 3/5).
+  Non-canonical Agent 2 resolver agreed with the human audit 6/7.
+- Cost ≈ $4.0 USD. Report: `analysis/02_fmv_1_report.md`.
