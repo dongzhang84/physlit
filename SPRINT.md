@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-19 18:28 UTC  
+**Generated:** 2026-05-19 18:29 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 34 |
+| Total commits | 35 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **6** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **7** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -50,6 +50,7 @@
 
 **Tue – Tuesday, May 19**
 
+- `85908fe` lock: pre-register PhysLit 02_fmv.2 predictions — _dongzhang84_ `2026-05-19 11:28`
 - `788330c` 02_fmv.2: treatment Stage 1 prompt + treatment-arm runner — _dongzhang84_ `2026-05-19 11:28`
 - `011def1` 02_fmv.2 prereg: three-tier P1 scoring (strongly / directionally / refuted) — _dongzhang84_ `2026-05-19 11:16`
 - `923f86d` 02_fmv.2: draft prereg — axiomatisation control experiment (pending review + lock) — _dongzhang84_ `2026-05-19 10:59`
