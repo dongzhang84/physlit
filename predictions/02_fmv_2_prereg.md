@@ -171,16 +171,30 @@ instruction maps onto N9 (parsimony), N10 (independence), and N12
 (hierarchy); N11 (traceability) was already cued by the original
 prompt and is not a target of the treatment.
 
-**Scoring.**
+**Scoring.** The verdict is three-tier, fixed here so that the
+magnitude of any effect is interpreted by a pre-committed rule, not
+post-hoc. The control baseline is 5/15.
 
-- **Confirmed:** treatment structural-axis PASS > 5/15 (i.e. ≥ 6/15).
-- **Refuted:** treatment structural-axis PASS ≤ 5/15 — the
-  instruction does not help, which would be evidence the structural
-  shortfall is a capability limit rather than a default-behaviour one.
+- **Strongly confirmed:** treatment structural-axis PASS ≥ 10/15 — the
+  structural pass rate at least doubles the control's 5/15, a margin
+  clearly beyond the per-trial variation of an N = 15 sample.
+- **Directionally confirmed:** treatment structural-axis PASS is
+  6–9/15 — the sign is correct (the instruction helped) but the margin
+  is small enough that the aggregate count alone is unreliable. In
+  this band the **per-model and per-criterion (N9–N12) breakdown is
+  the primary reading**: the verdict is reported together with whether
+  the gain is broad (present in all three models) or concentrated (one
+  model), and which criteria moved.
+- **Refuted:** treatment structural-axis PASS ≤ 5/15 — the instruction
+  does not help, which would be evidence the structural shortfall is a
+  capability limit rather than a default-behaviour one.
 
-The per-model breakdown and the per-criterion (N9–N12) movement are
-reported alongside the verdict, so that a marginal one-trial shift is
-visible and not over-read.
+PhysLit reports N = 5 per model descriptively and does not claim
+statistical significance; the thresholds above are descriptive
+magnitude bands, not the output of an inferential test. If P2 is
+Refuted (content degraded under the treatment), any non-Refuted P1
+tier is additionally reported as potentially confounded by content
+loss.
 
 ### P2 — Content competence does not degrade under the treatment
 
