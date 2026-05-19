@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-19 18:29 UTC  
+**Generated:** 2026-05-19 18:36 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 35 |
+| Total commits | 36 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **7** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **8** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -50,6 +50,7 @@
 
 **Tue – Tuesday, May 19**
 
+- `36c05a8` 02_fmv.2: judging pipeline — dual-judge orchestrator + P1/P2 aggregator — _dongzhang84_ `2026-05-19 11:36`
 - `85908fe` lock: pre-register PhysLit 02_fmv.2 predictions — _dongzhang84_ `2026-05-19 11:28`
 - `788330c` 02_fmv.2: treatment Stage 1 prompt + treatment-arm runner — _dongzhang84_ `2026-05-19 11:28`
 - `011def1` 02_fmv.2 prereg: three-tier P1 scoring (strongly / directionally / refuted) — _dongzhang84_ `2026-05-19 11:16`
