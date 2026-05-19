@@ -273,7 +273,53 @@ criteria it does not. Agent 2 did not feed P1/P2 — but as a side
 analysis it is consistent evidence that criteria specificity, not
 resolver capability, governs LLM-resolver reliability.
 
-### 2.7 A design limitation, disclosed
+### 2.7 Discussion — content correctness vs. theoretical architecture
+
+The two axes, read together, point to a single conclusion that is
+sharper than either prediction.
+
+**The induction → formulation → prediction content chain is not the
+weak point.** Content-only PASS is 9 of 15 — a majority — and the
+split is `claude-opus-4-7` 4/5, `gpt-5.5-2026-04-23` 5/5,
+`gemini-3.1-pro-preview` 0/5. Two of the three frontier models induced
+the F=mv rules from the bare observations, expressed them
+operationally, and applied them to novel scenarios — without sliding
+back to the F=ma physics in their training data. On the *content* of
+the reasoning chain, Claude and GPT were competent; only Gemini was
+not. "Frontier LLMs are weak at physical induction" is **not** what
+this experiment shows.
+
+**The weak point is theoretical architecture.** Structural PASS is
+only 5 of 15, and the single most telling number is GPT: **5/5
+content, 0/5 structural.** GPT got the physics right in every trial
+and, in every trial, organised it into a sprawling rule set — 14–15
+rules with paraphrase duplicates (N10), occasionally a fabricated
+mechanism (N11), no explicit hierarchy. It was *accumulating* rules,
+not *axiomatising* a theory. Three Claude trials show the same
+pattern. Composite PASS collapses to 1 of 15 because passing the
+physics and building a disciplined theory of it are different
+abilities, and the models are markedly weaker at the second.
+
+**This is a self-organisation gap, not a knowledge gap.** The failure
+is not "the model does not know the right rule" — it demonstrably
+does. It is "the model cannot compress what it knows into a parsimonious,
+non-redundant, traceable, hierarchical system." A physicist's work is
+not only to state correct laws but to organise them into a minimal
+axiomatic structure; that second, architectural competence is what
+the structural axis isolates, and it is where the models fall down.
+The `02_fmv` Stage 4 result points the same way — models over-claimed
+in self-reflection (content-round P2 CONFIRMED), i.e. they also failed
+to audit the structure of their own output.
+
+**Scope of the claim.** This is one counterfactual framework (F=mv),
+one round, N=5 per model. The conclusion should be stated as observed
+*on the F=mv World* — that frontier models can produce physically
+correct rules yet cannot converge them into a clean theoretical
+architecture — and not generalised to "LLMs and physics" at large
+without further frameworks. Establishing it as a general property is
+the motivation for the multi-framework next step (§3.2).
+
+### 2.8 A design limitation, disclosed
 
 The N12 hierarchy criterion treats a rule set of exactly 5 rules as
 requiring an explicit cross-reference (Case 7, Gemini t4, failed on
@@ -284,7 +330,7 @@ revision. This does not affect the `02_fmv.1` verdicts — the criteria
 are frozen at the locked commit — but is recorded here as a known
 limitation.
 
-### 2.8 Cost and reproducibility
+### 2.9 Cost and reproducibility
 
 | Component | Calls | Cost (est., USD) |
 |---|---|---|
@@ -312,7 +358,7 @@ lowers the IRR would be the natural P1 of a `02_fmv.2`.
 
 ### 3.2 Raise the N12 small-set exemption
 
-Per §2.7, lift the hierarchy exemption from < 5 to < 7 rules in the
+Per §2.8, lift the hierarchy exemption from < 5 to < 7 rules in the
 next criteria version, with the change pre-registered and the affected
 case (Gemini t4) re-scored under the new and old rule for comparison.
 
