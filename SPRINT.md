@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-19 06:40 UTC  
+**Generated:** 2026-05-19 07:42 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ❌ Stalled |
-| Active days | 1 / 7 |
-| Total commits | 28 |
+| Active days | 2 / 7 |
+| Total commits | 29 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -47,6 +47,10 @@
 - `c224279` draft(02_fmv): add P4 (Stage 3 quantitative leak); judge prompts framework-specific — _dongzhang84_ `2026-05-18 01:05`
 - `e4df1a0` draft(02_fmv): predictions/02_fmv_prereg.md — NOT yet locked — _dongzhang84_ `2026-05-18 00:51`
 - `95a4dbd` content(02_fmv): framework-specific Stage 1-4 prompts in prompts/ — _dongzhang84_ `2026-05-18 00:45`
+
+**Tue – Tuesday, May 19**
+
+- `1d1a5f0` 02_fmv.1: expand per-trial matrix with S1/S2/S3 + Content-only columns — _dongzhang84_ `2026-05-19 00:42`
 
 ---
 
