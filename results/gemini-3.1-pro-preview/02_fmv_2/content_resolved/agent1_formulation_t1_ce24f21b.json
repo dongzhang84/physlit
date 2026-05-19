@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.0444,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge B incorrectly hallucinates that 'physical' is a banned token. The criteria explicitly ban 'Newton, Newtonian, Galileo, or any physicist's proper name', not the word 'physical' or 'physics'. Judge A correctly notes that the response meets all Stage 2 criteria, including operationalizing the rules quantitatively, defining scope, and explicitly addressing boundary cases/uncovered observations without violating any P1-P7 disqualifying patterns.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge B incorrectly hallucinates that 'physical' is a banned token. The criteria explicitly ban 'Newton, Newtonian, Galileo, or any physicist's proper name', not the word 'physical' or 'physics'. Judge A correctly notes that the response meets all Stage 2 criteria, including operationalizing the rules quantitatively, defining scope, and explicitly addressing boundary cases/uncovered observations without violating any P1-P7 disqualifying patterns.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "stage": "formulation",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-19T22:36:06Z",
+  "trial_index": 1
+}

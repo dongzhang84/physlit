@@ -1,0 +1,23 @@
+{
+  "cost_usd_estimate": 0.042555,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "FAIL",
+  "judge_b_verdict": "PASS",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "failed_criteria": [
+      "N12"
+    ],
+    "reasoning": "The Stage 1 response contains exactly 5 top-level rules, meaning the N12 hierarchy requirement applies. To satisfy N12, the mechanical criteria demand explicit structural markers such as 'Rule N' (with a digit) or specific hierarchy strings like 'corollary of' or 'follows from'. The model merely repeats thematic content ('Since sideways motion requires...') without using any of the mandated explicit markers, triggering an N12 fail. Judge A correctly applied the rigid pattern-matching standard, whereas Judge B improperly credited intent over the prescribed mechanical check.",
+    "stage1_rule_count": 5,
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"judge_a\",\n  \"stage1_rule_count\": 5,\n  \"failed_criteria\": [\n    \"N12\"\n  ],\n  \"reasoning\": \"The Stage 1 response contains exactly 5 top-level rules, meaning the N12 hierarchy requirement applies. To satisfy N12, the mechanical criteria demand explicit structural markers such as 'Rule N' (with a digit) or specific hierarchy strings like 'corollary of' or 'follows from'. The model merely repeats thematic content ('Since sideways motion requires...') without using any of the mandated explicit markers, triggering an N12 fail. Judge A correctly applied the rigid pattern-matching standard, whereas Judge B improperly credited intent over the prescribed mechanical check.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-19T22:38:04Z",
+  "trial_index": 4
+}

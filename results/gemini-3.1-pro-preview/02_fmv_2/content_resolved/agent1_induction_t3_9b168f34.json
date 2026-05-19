@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.040775,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge B hallucinated that 'air' is a banned token; the lexical list in \u00a73 does not include it, and in fact 'air' is part of the provided observation 12. The response successfully induces all rules N1-N6 using allowed terminology without triggering any disqualifying patterns (P1-P7). The model's appended note about a 'tension' does not constitute a P7 refusal because it does not decline to induce the regularities, instead providing a fully consistent set of operational rules before making its observation.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge B hallucinated that 'air' is a banned token; the lexical list in \u00a73 does not include it, and in fact 'air' is part of the provided observation 12. The response successfully induces all rules N1-N6 using allowed terminology without triggering any disqualifying patterns (P1-P7). The model's appended note about a 'tension' does not constitute a P7 refusal because it does not decline to induce the regularities, instead providing a fully consistent set of operational rules before making its observation.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "stage": "induction",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-19T22:36:49Z",
+  "trial_index": 3
+}

@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.041775,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "FAIL",
+  "judge_b_verdict": "PASS",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "reasoning": "Judge A incorrectly applied P3 (Hidden-resistance rescue). Pattern P3 explicitly forbids positing a rubbing, resistance, drag, or opposing agent that balances or cancels a push to explain a steady pace or stop. Rule 4 posits a downward pull as the primary driver of falling, not an opposing or balancing resistance, which is a perfectly valid way to satisfy N5 in this framework. The response satisfies all necessary conditions, covers all observations, and uses no banned tokens, making Judge B's PASS verdict correct.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_b\",\n  \"reasoning\": \"Judge A incorrectly applied P3 (Hidden-resistance rescue). Pattern P3 explicitly forbids positing a rubbing, resistance, drag, or opposing agent that balances or cancels a push to explain a steady pace or stop. Rule 4 posits a downward pull as the primary driver of falling, not an opposing or balancing resistance, which is a perfectly valid way to satisfy N5 in this framework. The response satisfies all necessary conditions, covers all observations, and uses no banned tokens, making Judge B's PASS verdict correct.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "stage": "induction",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-19T22:34:57Z",
+  "trial_index": 4
+}

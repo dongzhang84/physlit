@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.044585,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge B misapplied disqualifying pattern P3. P3 explicitly targets rules that explain the steady pace under a push, or the immediate stop, by positing a hidden balancing resistance or drag (a Newtonian rescue). The model instead posits an upward push from a solid track to balance a downward pull, explaining rest on a surface rather than horizontal pushed motion, which is not forbidden by P3. Judge A correctly recognized that the response operationalizes the rules quantitatively, avoids all banned tokens and disqualifying patterns, and explicitly names the uncovered Observation 6 as required.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge B misapplied disqualifying pattern P3. P3 explicitly targets rules that explain the steady pace under a push, or the immediate stop, by positing a hidden balancing resistance or drag (a Newtonian rescue). The model instead posits an upward push from a solid track to balance a downward pull, explaining rest on a surface rather than horizontal pushed motion, which is not forbidden by P3. Judge A correctly recognized that the response operationalizes the rules quantitatively, avoids all banned tokens and disqualifying patterns, and explicitly names the uncovered Observation 6 as required.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "stage": "formulation",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-19T22:36:26Z",
+  "trial_index": 2
+}

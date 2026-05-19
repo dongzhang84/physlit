@@ -1,0 +1,23 @@
+{
+  "cost_usd_estimate": 0.034345,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "failed_criteria": [
+      "N11"
+    ],
+    "reasoning": "Judge B correctly identified that Rule 4 violates N11 by introducing an unsupported entity ('Invisible surroundings'). While the rule is cut off in Stage 1, the prompt instructions allow using Stage 2 as context to confirm its meaning. Stage 2 reveals Rule 4 posits an opposing push from the medium that slows objects down. No observation in the set supports this mechanism; in fact, Observation 12 explicitly contradicts it by stating that the presence or absence of air makes no difference to an object's pace. Because it introduces a fabricated mechanism with no observational basis, the rule set fails N11.",
+    "stage1_rule_count": 4,
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"judge_b\",\n  \"stage1_rule_count\": 4,\n  \"failed_criteria\": [\n    \"N11\"\n  ],\n  \"reasoning\": \"Judge B correctly identified that Rule 4 violates N11 by introducing an unsupported entity ('Invisible surroundings'). While the rule is cut off in Stage 1, the prompt instructions allow using Stage 2 as context to confirm its meaning. Stage 2 reveals Rule 4 posits an opposing push from the medium that slows objects down. No observation in the set supports this mechanism; in fact, Observation 12 explicitly contradicts it by stating that the presence or absence of air makes no difference to an object's pace. Because it introduces a fabricated mechanism with no observational basis, the rule set fails N11.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-19T22:38:19Z",
+  "trial_index": 0
+}

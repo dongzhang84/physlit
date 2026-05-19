@@ -1,0 +1,21 @@
+{
+  "cost_usd_estimate": 0.04376,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "FAIL",
+  "judge_b_verdict": "PASS",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "failed_criteria": [],
+    "reasoning": "Judge B correctly concluded that the rule set satisfies all structural criteria. The Stage 1 response contains 6 distinct top-level rules, satisfying the N9 parsimony threshold. There is no N10 redundancy, and each rule legitimately traces to observations (N11), with Rule 5 explicitly matching the permissible generalization example given in the criteria. For N12, Judge A correctly realized in its own reasoning that Rule 3 contains the explicit cross-reference 'as in rule 2', which strictly satisfies the hierarchy requirement, but Judge A failed to update its final verdict. Thus, the rule set passes all checks.",
+    "stage1_rule_count": 6,
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_b\",\n  \"stage1_rule_count\": 6,\n  \"failed_criteria\": [],\n  \"reasoning\": \"Judge B correctly concluded that the rule set satisfies all structural criteria. The Stage 1 response contains 6 distinct top-level rules, satisfying the N9 parsimony threshold. There is no N10 redundancy, and each rule legitimately traces to observations (N11), with Rule 5 explicitly matching the permissible generalization example given in the criteria. For N12, Judge A correctly realized in its own reasoning that Rule 3 contains the explicit cross-reference 'as in rule 2', which strictly satisfies the hierarchy requirement, but Judge A failed to update its final verdict. Thus, the rule set passes all checks.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-19T22:37:27Z",
+  "trial_index": 1
+}

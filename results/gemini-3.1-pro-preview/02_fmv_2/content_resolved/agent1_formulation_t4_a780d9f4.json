@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.0449,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge A correctly applied the Stage 2 criteria, noting that the response restates rules operationally, combines proportionalities, states scopes, avoids P1-P7, and explicitly names uncovered observations. Judge B failed the response for using the word 'vacuum', but 'vacuum' is not on the frozen list of banned tokens in Section 3 of ideal_induction.md. Since there are no actual banned tokens and all positive criteria are met, the response passes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge A correctly applied the Stage 2 criteria, noting that the response restates rules operationally, combines proportionalities, states scopes, avoids P1-P7, and explicitly names uncovered observations. Judge B failed the response for using the word 'vacuum', but 'vacuum' is not on the frozen list of banned tokens in Section 3 of ideal_induction.md. Since there are no actual banned tokens and all positive criteria are met, the response passes.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "stage": "formulation",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-19T22:37:00Z",
+  "trial_index": 4
+}

@@ -1,0 +1,23 @@
+{
+  "cost_usd_estimate": 0.043805,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "FAIL",
+  "judge_b_verdict": "PASS",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "failed_criteria": [
+      "N12"
+    ],
+    "reasoning": "Judge A is correct that the Stage 1 response fails N12 (Hierarchy). The criteria mechanically require any Stage 1 rule set of 5 or more rules to contain a cross-rule reference, such as citing a rule by number or using explicit hierarchy markers like 'corollary of' or 'special case of'. Since the Stage 1 response consists of 6 top-level rules but contains no cross-rule references of any kind, it triggers the strict N12 FAIL condition. Judge B incorrectly interpreted a general concluding sentence as satisfying the hierarchy requirement. The rule set passes N9, N10, and N11.",
+    "stage1_rule_count": 6,
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"judge_a\",\n  \"stage1_rule_count\": 6,\n  \"failed_criteria\": [\n    \"N12\"\n  ],\n  \"reasoning\": \"Judge A is correct that the Stage 1 response fails N12 (Hierarchy). The criteria mechanically require any Stage 1 rule set of 5 or more rules to contain a cross-rule reference, such as citing a rule by number or using explicit hierarchy markers like 'corollary of' or 'special case of'. Since the Stage 1 response consists of 6 top-level rules but contains no cross-rule references of any kind, it triggers the strict N12 FAIL condition. Judge B incorrectly interpreted a general concluding sentence as satisfying the hierarchy requirement. The rule set passes N9, N10, and N11.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-19T22:37:41Z",
+  "trial_index": 3
+}

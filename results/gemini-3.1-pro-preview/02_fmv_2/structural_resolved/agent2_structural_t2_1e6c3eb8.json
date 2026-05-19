@@ -1,0 +1,21 @@
+{
+  "cost_usd_estimate": 0.033905,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "FAIL",
+  "judge_b_verdict": "PASS",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains exactly 3 top-level rules, well below the N9 parsimony threshold. Because there are fewer than 5 rules, the rule set is automatically exempt from the N12 hierarchy requirement. The rules cover distinct phenomena (effort/pace, downward pull, passive environments), passing N10, and the downward pull scaling with heaviness is explicitly permitted by N11 as a valid generalization to reconcile observations 5 and 10. Judge B correctly evaluated all criteria and issued a PASS, whereas Judge A accidentally emitted a FAIL verdict for N12 despite noting in its own reasoning that the rule set is exempt.",
+    "stage1_rule_count": 3,
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_b\",\n  \"stage1_rule_count\": 3,\n  \"failed_criteria\": [],\n  \"reasoning\": \"The Stage 1 response contains exactly 3 top-level rules, well below the N9 parsimony threshold. Because there are fewer than 5 rules, the rule set is automatically exempt from the N12 hierarchy requirement. The rules cover distinct phenomena (effort/pace, downward pull, passive environments), passing N10, and the downward pull scaling with heaviness is explicitly permitted by N11 as a valid generalization to reconcile observations 5 and 10. Judge B correctly evaluated all criteria and issued a PASS, whereas Judge A accidentally emitted a FAIL verdict for N12 despite noting in its own reasoning that the rule set is exempt.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-19T22:38:33Z",
+  "trial_index": 2
+}

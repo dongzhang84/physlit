@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.048605,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge A correctly evaluates the response as meeting all Stage 2 criteria, including the required quantitative formulation (pace = total effort \u00f7 heaviness). Judge B incorrectly applies pattern P3 (Hidden-resistance rescue). P3 specifically forbids positing a hidden drag or resistance to explain a steady pace under a steady push or an immediate stop, as that would contradict the 'no contact' and 'no air' observations. It does not forbid positing an upward support force from a track to explain why a resting object does not fall through it, since the track is in physical contact with the object. With no banned tokens or valid disqualifying patterns, the response passes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge A correctly evaluates the response as meeting all Stage 2 criteria, including the required quantitative formulation (pace = total effort \\u00f7 heaviness). Judge B incorrectly applies pattern P3 (Hidden-resistance rescue). P3 specifically forbids positing a hidden drag or resistance to explain a steady pace under a steady push or an immediate stop, as that would contradict the 'no contact' and 'no air' observations. It does not forbid positing an upward support force from a track to explain why a resting object does not fall through it, since the track is in physical contact with the object. With no banned tokens or valid disqualifying patterns, the response passes.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "stage": "formulation",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-19T22:34:35Z",
+  "trial_index": 2
+}

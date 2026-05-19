@@ -1,0 +1,21 @@
+{
+  "cost_usd_estimate": 0.04473,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "FAIL",
+  "judge_b_verdict": "PASS",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "failed_criteria": [],
+    "reasoning": "The Stage 1 response contains 6 top-level rules, passing N9 parsimony. The rules are independent (passing N10) and trace to specific observations (passing N11). Regarding N12 hierarchy, the criterion requires a cross-rule reference 'anywhere in the Stage 1 response' formatted as 'Rule N' or similar. The response includes the phrase 'rule 6' in its concluding tension note. Since this matches the allowed pattern and appears within the Stage 1 response, it satisfies N12. Judge A incorrectly failed the response despite explicitly acknowledging this phrase and the 'anywhere in the Stage 1 response' rule, while Judge B correctly applied the mechanical criteria.",
+    "stage1_rule_count": 6,
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_b\",\n  \"stage1_rule_count\": 6,\n  \"failed_criteria\": [],\n  \"reasoning\": \"The Stage 1 response contains 6 top-level rules, passing N9 parsimony. The rules are independent (passing N10) and trace to specific observations (passing N11). Regarding N12 hierarchy, the criterion requires a cross-rule reference 'anywhere in the Stage 1 response' formatted as 'Rule N' or similar. The response includes the phrase 'rule 6' in its concluding tension note. Since this matches the allowed pattern and appears within the Stage 1 response, it satisfies N12. Judge A incorrectly failed the response despite explicitly acknowledging this phrase and the 'anywhere in the Stage 1 response' rule, while Judge B correctly applied the mechanical criteria.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-19T22:37:15Z",
+  "trial_index": 0
+}

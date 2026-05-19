@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.04014,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge B incorrectly hallucinates that 'air' is a banned token, but it is not listed anywhere in section 3 of ideal_induction.md (which contains the exhaustive list of banned physics terms). Judge A correctly evaluates the response: it contains no banned tokens, accurately formulates the N1-N6 rules (including N4's simultaneous start/stop requirement and N5's unchanging fall pace), and cleanly avoids all disqualifying patterns P1-P7.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge B incorrectly hallucinates that 'air' is a banned token, but it is not listed anywhere in section 3 of ideal_induction.md (which contains the exhaustive list of banned physics terms). Judge A correctly evaluates the response: it contains no banned tokens, accurately formulates the N1-N6 rules (including N4's simultaneous start/stop requirement and N5's unchanging fall pace), and cleanly avoids all disqualifying patterns P1-P7.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "stage": "induction",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-19T22:35:09Z",
+  "trial_index": 4
+}

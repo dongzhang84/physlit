@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.046205,
+  "framework_id": "02_fmv_2",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "reasoning": "Judge B incorrectly identifies the word 'inert' as a banned morphological variant of 'inertia'. The criteria explicitly list 'inertia (and inertial)', and 'inertial' is the adjective form of the physics concept. 'Inert' is a standard English word meaning inactive and is appropriately used here to describe the track and air. The response successfully translates the Stage 1 rules into operational form, quantifies the relationships correctly without using any banned tokens, and explicitly names the boundary cases, satisfying all Stage 2 criteria.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"reasoning\": \"Judge B incorrectly identifies the word 'inert' as a banned morphological variant of 'inertia'. The criteria explicitly list 'inertia (and inertial)', and 'inertial' is the adjective form of the physics concept. 'Inert' is a standard English word meaning inactive and is appropriately used here to describe the track and air. The response successfully translates the Stage 1 rules into operational form, quantifies the relationships correctly without using any banned tokens, and explicitly names the boundary cases, satisfying all Stage 2 criteria.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "02_fmv.2",
+  "stage": "formulation",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-19T22:34:17Z",
+  "trial_index": 1
+}
