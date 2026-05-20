@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-20 17:31 UTC  
+**Generated:** 2026-05-20 17:36 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 52 |
+| Total commits | 53 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **9** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **15** | **10** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -68,6 +68,7 @@
 
 **Wed – Wednesday, May 20**
 
+- `e395232` v0.3: render + worksheet + agent pipeline (hook-formatted) — _dongzhang84_ `2026-05-20 10:35`
 - `733de1c` v0.3: dual-judge verdicts (hook-formatted) — _dongzhang84_ `2026-05-20 10:30`
 - `ad1d292` v0.3: fix judge_v0_3.py — slice v0.1 criteria into per-stage sections — _dongzhang84_ `2026-05-20 10:14`
 - `942370d` v0.3: treatment-arm production trials + .md (hook-formatted) — _dongzhang84_ `2026-05-20 10:13`
