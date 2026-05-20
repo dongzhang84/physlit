@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.047895,
+  "framework_id": "v0_3",
+  "judge_a_verdict": "FAIL",
+  "judge_b_verdict": "PASS",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "Judge B correctly concluded that the rule set passes all structural criteria. Judge A's reasoning text also concluded that the response should PASS, but it erroneously output a FAIL verdict with N12 as the failed criterion. The response contains explicit cross-rule references (e.g., 'water also serves as a supporting medium in Rule 4' and 'that requires Rule 5'), satisfying N12. N9 passes because the 14 top-level numbered rules (7 in Stage 1, 7 in Stage 2) are below the strict threshold of > 15. N10 and N11 also pass since the 7 core concepts are independent and fully traceable to the provided observations or permitted Aristotelian elaborations.",
+    "rule_count": 14,
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_b\",\n  \"rule_count\": 14,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"Judge B correctly concluded that the rule set passes all structural criteria. Judge A's reasoning text also concluded that the response should PASS, but it erroneously output a FAIL verdict with N12 as the failed criterion. The response contains explicit cross-rule references (e.g., 'water also serves as a supporting medium in Rule 4' and 'that requires Rule 5'), satisfying N12. N9 passes because the 14 top-level numbered rules (7 in Stage 1, 7 in Stage 2) are below the strict threshold of > 15. N10 and N11 also pass since the 7 core concepts are independent and fully traceable to the provided observations or permitted Aristotelian elaborations.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "v0.3",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-20T17:42:11Z",
+  "trial_index": 1
+}
