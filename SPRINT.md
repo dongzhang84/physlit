@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-20 16:24 UTC  
+**Generated:** 2026-05-20 16:29 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 46 |
+| Total commits | 48 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **3** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **15** | **5** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -68,6 +68,8 @@
 
 **Wed – Wednesday, May 20**
 
+- `b79098c` lock: pre-register PhysLit v0.3 predictions — _dongzhang84_ `2026-05-20 09:28`
+- `41c11fe` v0.3: treatment-arm runner — Aristotelian axiomatisation control — _dongzhang84_ `2026-05-20 09:28`
 - `2672dcb` v0.3: Aristotelian treatment Stage 1 prompt (axiomatised) — _dongzhang84_ `2026-05-20 09:24`
 - `b5e21fa` v0.3: draft prereg — Aristotelian axiomatisation control (pending review + lock) — _dongzhang84_ `2026-05-20 08:17`
 - `86692d1` 02_fmv.2: apply human audit, finalize P1/P2, write report — _dongzhang84_ `2026-05-20 02:10`
