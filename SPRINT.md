@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-20 17:13 UTC  
+**Generated:** 2026-05-20 17:15 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 50 |
+| Total commits | 51 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **7** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **15** | **8** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -68,6 +68,7 @@
 
 **Wed – Wednesday, May 20**
 
+- `ad1d292` v0.3: fix judge_v0_3.py — slice v0.1 criteria into per-stage sections — _dongzhang84_ `2026-05-20 10:14`
 - `942370d` v0.3: treatment-arm production trials + .md (hook-formatted) — _dongzhang84_ `2026-05-20 10:13`
 - `ea39ff0` v0.3: judging + apply pipeline (ruff-formatted) — _dongzhang84_ `2026-05-20 09:32`
 - `b79098c` lock: pre-register PhysLit v0.3 predictions — _dongzhang84_ `2026-05-20 09:28`
