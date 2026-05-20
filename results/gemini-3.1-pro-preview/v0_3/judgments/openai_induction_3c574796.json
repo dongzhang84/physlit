@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.02526,
+  "input_tokens": 4660,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "60520d11-d3d7-429a-b5df-55b23c574796",
+  "judge_timestamp_utc": "2026-05-20T17:27:37Z",
+  "output_tokens": 98,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "*   **Vertical Fall:** A heavier object overcomes",
+    "first_fail_clause": "N2",
+    "first_fail_step": 2,
+    "reasoning": "No banned concept appears in the provided response fragment. However, the response is truncated before completing any rule that heavier bodies reach the ground sooner than lighter bodies released from the same height, so N2 is not satisfied.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 2,\n  \"first_fail_clause\": \"N2\",\n  \"evidence\": \"*   **Vertical Fall:** A heavier object overcomes\",\n  \"reasoning\": \"No banned concept appears in the provided response fragment. However, the response is truncated before completing any rule that heavier bodies reach the ground sooner than lighter bodies released from the same height, so N2 is not satisfied.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/v0_3/induction/trial_4_t0.0.json"
+}

@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.04190000000000001,
+  "input_tokens": 7580,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "73add643-4ae9-43ef-aaf5-03917973c4fa",
+  "judge_timestamp_utc": "2026-05-20T17:19:52Z",
+  "output_tokens": 200,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "Counting Stage 1 and Stage 2 top-level numbered rules together gives 14 rules: seven induction rules and seven formulation rules. This is above 12 but not over the N9 fail threshold, and the Stage 2 rules largely restate the Stage 1 rules in operational form rather than creating an excessive unstructured set. The rules are traceable to the observations, avoid unsupported fabricated mechanisms, and include cross-rule references such as \u201csee Rule 7,\u201d \u201crefinement of Rule 1,\u201d \u201chandled only by Rule 4,\u201d and overlaps between Rule 5 and Rule 6, satisfying hierarchy. No pair rises to a clear N10 failure because the repeated Stage 1/Stage 2 counterparts function as reformulations across stages rather than independent duplicate claims within a flat rule set.",
+    "rule_count": 14,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 14,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"Counting Stage 1 and Stage 2 top-level numbered rules together gives 14 rules: seven induction rules and seven formulation rules. This is above 12 but not over the N9 fail threshold, and the Stage 2 rules largely restate the Stage 1 rules in operational form rather than creating an excessive unstructured set. The rules are traceable to the observations, avoid unsupported fabricated mechanisms, and include cross-rule references such as \u201csee Rule 7,\u201d \u201crefinement of Rule 1,\u201d \u201chandled only by Rule 4,\u201d and overlaps between Rule 5 and Rule 6, satisfying hierarchy. No pair rises to a clear N10 failure because the repeated Stage 1/Stage 2 counterparts function as reformulations across stages rather than independent duplicate claims within a flat rule set.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/v0_3/induction/trial_0_t0.0.json"
+}

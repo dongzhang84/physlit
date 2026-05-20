@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.01356,
+  "input_tokens": 2248,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "3723cdef-9f33-4599-b1b9-2a4900a0f3f3",
+  "judge_timestamp_utc": "2026-05-20T17:24:16Z",
+  "output_tokens": 116,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response operationalizes each Stage 1 law with conditionals, rankings, or proportionalities, states scope for each, and identifies only non-dynamical preserved features or explicitly says no dynamical quantity is conserved. It does not introduce banned concepts in their forbidden technical senses, and it lists boundary cases and uncovered observations such as smoke dispersal, feather fluttering, trajectory geometry, and wind's dual role.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"The response operationalizes each Stage 1 law with conditionals, rankings, or proportionalities, states scope for each, and identifies only non-dynamical preserved features or explicitly says no dynamical quantity is conserved. It does not introduce banned concepts in their forbidden technical senses, and it lists boundary cases and uncovered observations such as smoke dispersal, feather fluttering, trajectory geometry, and wind's dual role.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/v0_3/formulation/trial_0_t0.0.json"
+}

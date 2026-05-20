@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.013264999999999999,
+  "input_tokens": 2249,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "5b1d997b-e36b-46b6-916c-0fe7fa521d9d",
+  "judge_timestamp_utc": "2026-05-20T17:26:06Z",
+  "output_tokens": 101,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "Because the rules lack a concept of *density* or *specific weight*",
+    "failed_criterion": "No new forbidden concept is introduced relative to Stage 1.",
+    "reasoning": "The Stage 2 response newly introduces the banned concept \"density,\" which was not present in Stage 1. Under the frozen criteria, any new forbidden concept relative to Stage 1 is an automatic fail.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"failed_criterion\": \"No new forbidden concept is introduced relative to Stage 1.\",\n  \"evidence\": \"Because the rules lack a concept of *density* or *specific weight*\",\n  \"reasoning\": \"The Stage 2 response newly introduces the banned concept \\\"density,\\\" which was not present in Stage 1. Under the frozen criteria, any new forbidden concept relative to Stage 1 is an automatic fail.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/v0_3/formulation/trial_2_t0.0.json"
+}

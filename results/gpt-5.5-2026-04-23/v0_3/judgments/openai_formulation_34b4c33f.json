@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.02542,
+  "input_tokens": 4676,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "bfc1d44e-859d-4005-ba5b-32df34b4c33f",
+  "judge_timestamp_utc": "2026-05-20T17:20:08Z",
+  "output_tokens": 102,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "The response restates each Stage 1 law operationally with conditionals or ranking rules, gives scope for each, and repeatedly avoids importing energy or momentum conservation while saying no quantitative conservation principle is supplied. It does not newly introduce banned technical concepts in the prohibited sense, and it lists boundary cases and undercovered observations rather than silently dropping them.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"The response restates each Stage 1 law operationally with conditionals or ranking rules, gives scope for each, and repeatedly avoids importing energy or momentum conservation while saying no quantitative conservation principle is supplied. It does not newly introduce banned technical concepts in the prohibited sense, and it lists boundary cases and undercovered observations rather than silently dropping them.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/v0_3/formulation/trial_1_t0.0.json"
+}

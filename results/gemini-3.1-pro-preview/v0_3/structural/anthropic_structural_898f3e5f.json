@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.137235,
+  "input_tokens": 7939,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "b827fad5-2d95-4506-bed1-125f898f3e5f",
+  "judge_timestamp_utc": "2026-05-20T17:26:30Z",
+  "output_tokens": 242,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The rule set consists of 3 top-level rules (Natural Directions, Mediums and Resistance, Weight as Downward Strength), well under N9 thresholds. Each rule covers a distinct domain (no N10 overlap) and traces to specific observations: Rule 1 to obs. 3, 4, 5, 8, 10, 12; Rule 2 to obs. 9, 11, 12; Rule 3 to obs. 1, 5, 6. With fewer than 5 rules, N12 hierarchy is exempt. All four criteria pass.",
+    "rule_count": 3,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 3,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The rule set consists of 3 top-level rules (Natural Directions, Mediums and Resistance, Weight as Downward Strength), well under N9 thresholds. Each rule covers a distinct domain (no N10 overlap) and traces to specific observations: Rule 1 to obs. 3, 4, 5, 8, 10, 12; Rule 2 to obs. 9, 11, 12; Rule 3 to obs. 1, 5, 6. With fewer than 5 rules, N12 hierarchy is exempt. All four criteria pass.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/v0_3/induction/trial_2_t0.0.json"
+}

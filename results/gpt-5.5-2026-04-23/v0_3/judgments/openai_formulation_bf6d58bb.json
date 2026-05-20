@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.0252,
+  "input_tokens": 4660,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "d9bfda4f-7e87-42de-b4ac-7721bf6d58bb",
+  "judge_timestamp_utc": "2026-05-20T17:19:22Z",
+  "output_tokens": 95,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "Each Stage 1 rule is restated operationally with explicit scope, comparative rankings or conditionals, and boundary cases. The response does not introduce banned concepts in a prohibited technical sense, and it explicitly avoids importing energy or momentum conservation while naming only preservation of kind/shape/load or no quantitative conserved quantity.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"Each Stage 1 rule is restated operationally with explicit scope, comparative rankings or conditionals, and boundary cases. The response does not introduce banned concepts in a prohibited technical sense, and it explicitly avoids importing energy or momentum conservation while naming only preservation of kind/shape/load or no quantitative conserved quantity.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/v0_3/formulation/trial_0_t0.0.json"
+}
