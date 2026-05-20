@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-20 04:48 UTC  
+**Generated:** 2026-05-20 09:11 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -9,13 +9,13 @@
 
 | Stat | Value |
 |------|-------|
-| Status | ❌ Stalled |
-| Active days | 2 / 7 |
-| Total commits | 43 |
+| Status | ⚠️ Slow |
+| Active days | 3 / 7 |
+| Total commits | 44 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **15** | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -65,6 +65,10 @@
 - `c31a88b` 02_fmv.1 report: add Aristotelian cross-round comparison to Discussion — _dongzhang84_ `2026-05-19 08:15`
 - `01ee0e5` 02_fmv.1 report: add Discussion section (content correctness vs architecture) — _dongzhang84_ `2026-05-19 08:10`
 - `1d1a5f0` 02_fmv.1: expand per-trial matrix with S1/S2/S3 + Content-only columns — _dongzhang84_ `2026-05-19 00:42`
+
+**Wed – Wednesday, May 20**
+
+- `86692d1` 02_fmv.2: apply human audit, finalize P1/P2, write report — _dongzhang84_ `2026-05-20 02:10`
 
 ---
 
