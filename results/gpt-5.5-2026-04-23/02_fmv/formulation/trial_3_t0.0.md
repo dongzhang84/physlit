@@ -357,13 +357,13 @@ These operational rules cover the track cases, open-space pushing, carrying, sam
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with explicit procedures. The combined quantitative rule pace = K(P/H) makes both proportionalities combinable. Scope is stated for each rule. No banned tokens appear (checked: velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, physicist names, F=ma — none present). No P1–P7 patterns appear. Boundary notes name uncovered cases (non-orthogonal push combinations, surfaces beyond observed).
 - judge call cost (USD): `$0.2265`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response operationalizes each Stage 1 rule, states quantitative combinable relations for push and heaviness, gives scope conditions, avoids banned tokens, avoids P1–P7, and explicitly names limitations such as non-collinear push combination and reference cases.

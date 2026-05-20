@@ -134,13 +134,13 @@ Observation 10 requires an object's heaviness to be perfectly linked to the down
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated: pace from present push, more push more pace, more heaviness less pace, instant start/stop with no build-up or coasting, common unchanging fall pace, and combination of pushes. All observations are covered, rules are mutually consistent, and no P1-P7 patterns are triggered (the downward pull explains falling but is matched exactly to heaviness so fall pace is steady and equal for all).
 - judge call cost (USD): `$0.1011`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -148,3 +148,19 @@ Observation 10 requires an object's heaviness to be perfectly linked to the down
 - evidence: open air
 - reasoning: The response contains a banned token under the Step 1 lexical scan. Per §3, any banned token appearing anywhere in the response triggers an automatic FAIL.
 - judge call cost (USD): `$0.0212`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `3`
+- reasoning: Stage 1 contains 3 top-level rules, well under the N9 threshold. The three rules cover distinct domains (effort-pace relation, combination of efforts, downward pull) with no paraphrase overlap, so N10 passes. Each rule traces to observations (Rule 1 to obs 1-6, Rule 2 to obs 8-9, Rule 3 to obs 10-12), and Rule 3's downward-pull-proportional-to-heaviness is a legitimate generalisation reconciling obs 5 and 10, not a fabrication. N12 is not applicable since the rule count is below 5.
+- judge call cost (USD): `$0.1527`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `3`
+- reasoning: The Stage 1 response contains three top-level numbered rules; the later note is explanatory commentary rather than an additional rule. N9 passes because the count is far below the parsimony thresholds, and N10 passes because the three rules cover distinct phenomena: effort-to-pace, combination of efforts, and downward falling. N11 passes because each rule traces to observations: Rules 1 and 2 to observations 1–9 and 11, and Rule 3 to observations 10 and 12, with the open-space qualification tied to observation 6. N12 is exempt because the rule set has fewer than five rules.
+- judge call cost (USD): `$0.0330`

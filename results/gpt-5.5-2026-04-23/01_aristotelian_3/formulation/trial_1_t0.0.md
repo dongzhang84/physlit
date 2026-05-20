@@ -323,13 +323,13 @@ The operational rules still handle several cases only incompletely. The continue
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is restated operationally with rankings, conditionals, and procedures. Scope is stated per rule. No quantitative conservation is imported; the response explicitly states no conserved quantity. No banned concepts are introduced beyond Stage 1, and boundary cases are explicitly listed.
 - judge call cost (USD): `$0.1212`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates each Stage 1 law operationally with conditionals or ranking rules, gives scope for each, and repeatedly avoids importing energy or momentum conservation while saying no quantitative conservation principle is supplied. It does not newly introduce banned technical concepts in the prohibited sense, and it lists boundary cases and undercovered observations rather than silently dropping them.

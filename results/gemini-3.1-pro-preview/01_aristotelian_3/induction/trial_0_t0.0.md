@@ -130,7 +130,7 @@ Here is a proposed set of rules that explains the observations using only the pe
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -140,7 +140,7 @@ Here is a proposed set of rules that explains the observations using only the pe
 - reasoning: The response covers medium resistance (N3), two-regime motion (N1), natural directional preferences (N5), celestial paths (N6), and weight-effort (related to N2/N6), but it does not include any rule about shape dependence for bodies of equal weight (flat sheet vs. ball, observation 11). N4 is unmet, and observation 11 is uncovered. Also, no clear rule establishes heavier-falls-faster ordering (N2) for observations 1 and 12, and observation 5 (floating of oak vs. stone) is not explicitly explained (N8). The first failing condition encountered is N4.
 - judge call cost (USD): `$0.1304`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -148,3 +148,19 @@ Here is a proposed set of rules that explains the observations using only the pe
 - evidence: Imparting this motion to a fully loaded or heavier object requires visibly greater effort than moving an empty or lighter one.
 - reasoning: No banned concepts appear at Step 1. The response fails N2 because it does not state that heavier bodies reach the ground sooner than lighter bodies released from the same height; it only mentions heavier objects requiring greater effort to move.
 - judge call cost (USD): `$0.0256`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `3`
+- reasoning: The rule set contains 3 top-level rules (Natural Tendencies, Imparted Motion, Hindrance of Surroundings), well within the parsimony threshold. The three rules describe distinct phenomena and do not paraphrase each other. Each rule traces to specific observations (Rule 1 to obs 3,4,5,8,10,12; Rule 2 to obs 2,6,7; Rule 3 to obs 2,9,11), and the medium-resistance and natural-place language are permitted Aristotelian elaborations. With fewer than 5 rules, N12 hierarchy is not required, though the rules do cross-reference each other (e.g., the breeze contradiction between Rule 2 and Rule 3).
+- judge call cost (USD): `$0.1410`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `3`
+- reasoning: The combined Stage 1 and Stage 2 response presents three top-level rules: Natural Tendencies, Imparted Motion, and Hindrance of Surroundings. This is parsimonious relative to the 12 observations, and the rules cover distinct operational domains rather than duplicating the same claim. Each rule is traceable to the observations, with natural-place, fading impressed motion, medium resistance, and celestial circularity all permitted Aristotelian elaborations. Because the rule set has fewer than five rules, it is exempt from the N12 hierarchy requirement.
+- judge call cost (USD): `$0.0289`

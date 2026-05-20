@@ -121,7 +121,7 @@ Here is a set of rules describing the workings of this world, built entirely fro
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -130,7 +130,7 @@ Here is a set of rules describing the workings of this world, built entirely fro
 - reasoning: The response is truncated and never addresses falling bodies. N5 (bodies fall at one common, unchanging pace) is unmet, and observations 10, 11, and 12 are uncovered.
 - judge call cost (USD): `$0.0952`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -138,3 +138,20 @@ Here is a set of rules describing the workings of this world, built entirely fro
 - evidence: 4. **Irrelevance of Surroundings:** The rules of pushing, pulling, and pacing remain identical regardless of an object's surroundings. The presence or absence of a track, open air, an empty jar,
 - reasoning: No banned tokens appear in the response, so Step 1 passes. The response does not state that released bodies fall at one common, unchanging pace for heavy and light bodies; the final rule is truncated and only addresses surroundings generally, so N5 is unmet.
 - judge call cost (USD): `$0.0215`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- stage1_rule_count: `4`
+- evidence: [{'criterion': 'N12', 'explanation': 'Stage 1 has 4 top-level rules and contains no cross-rule references — however, N12 exempts rule sets with fewer than 5 rules, so this does not trigger FAIL.', 'quote': "4. **Irrelevance of Surroundings:** The rules of pushing, pulling, and pacing remain identical regardless of an object's surroundings. The presence or absence of a track, open air, an empty jar,"}]
+- reasoning: Stage 1 contains 4 top-level numbered rules, well under the N9 threshold. The rules are independent (effort requirement, proportionality, combination, environment-independence) with no paraphrase duplicates, satisfying N10. Each rule traces to observations (Rule 1 ↔ obs 1-3,6,7,11; Rule 2 ↔ obs 4,5; Rule 3 ↔ obs 8,9; Rule 4 ↔ obs 6,12), satisfying N11. N12 is not applicable since the rule count is below 5; therefore the verdict is PASS — correcting my evidence note: no criterion actually fails.
+- judge call cost (USD): `$0.1642`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `4`
+- reasoning: The Stage 1 response contains four top-level numbered rules, so it passes N9 and is exempt from N12 because the count is below five. The rules are structurally distinct: constant effort for motion, proportional pace by effort/heaviness, combination of simultaneous efforts, and environmental irrelevance. Each rule traces to observations in the provided set, especially observations 1–9 and 12, without introducing an unsupported separate mechanism.
+- judge call cost (USD): `$0.0318`

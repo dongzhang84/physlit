@@ -146,7 +146,7 @@ Here are the predictions based strictly on your operational rules.
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -162,7 +162,7 @@ Here are the predictions based strictly on your operational rules.
   - reasoning: Imparted drive sustains motion, depleted by air resistance, then natural downward motion takes over (straight-down drop). Classic Aristotelian projectile picture, no standard-physics terms.
 - judge call cost (USD): `$0.1280`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

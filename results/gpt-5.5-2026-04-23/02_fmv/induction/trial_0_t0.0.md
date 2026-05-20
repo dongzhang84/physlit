@@ -161,14 +161,32 @@ No listed observation remains in tension with these rules. The same pattern expl
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated (rules 1,2,3,4,5,8,9,10,11,13,14,15). All 12 observations are covered. Rules are mutually consistent and none trigger P1-P7: rule 11 explains equal fall pace via cancellation (not heavier-falls-faster), and no rule asserts build-up, carry-over, hidden resistance, or projectile arc.
 - judge call cost (USD): `$0.1077`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response satisfies N1–N6, covers all observations, is mutually consistent, and contains no disqualifying pattern.
 - judge call cost (USD): `$0.0228`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10']`
+- stage1_rule_count: `15`
+- evidence: [{'criterion': 'N10', 'explanation': "Rule 1 makes the same operational claim as Rule 15 ('no present effort, no motion'): both say that absent a present push/pull, the body does not move, and motion ceases immediately when the push ends.", 'quote': '**Motion lasts only while a push or pull is being applied.**  \n   A thing at rest stays at rest unless something is pushing or pulling it. When the push or pull stops, the thing stops at once.'}, {'criterion': 'N10', 'explanation': "Rule 15 paraphrases Rule 1's claim that motion exists only while a present push/pull acts; they collapse to the same operational statement about the same kind of body in the same situation.", 'quote': '**The general rule of stopping is: no present effort, no motion.**  \n   Past pushing does not matter. Only the push or pull acting now determines whether the object moves and how fast it moves.'}]
+- reasoning: Stage 1 contains 15 distinct top-level numbered rules, so N9 is a soft signal but not a FAIL on its own. Rules 1 and 15 are paraphrases of the same claim ('motion exists only while a present push/pull acts; otherwise pace = 0'), triggering N10. N11 is satisfied — even the seemingly extra mechanism in Rule 11 (downward pull scaling with heaviness) is the legitimate-generalisation case explicitly carved out in the criteria, reconciling obs. 5 with obs. 10. N12 is satisfied by the explicit cross-reference 'Combining Rules 4 and 5' and similar hierarchy markers in Stage 1's structure (Rules 14–15 are framed as general rules subsuming earlier ones).
+- judge call cost (USD): `$0.2640`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10']`
+- stage1_rule_count: `15`
+- evidence: [{'criterion': 'N10', 'explanation': 'Rules 1 and 15 both state the same operational claim that present push or pull alone determines motion and that motion ceases immediately when no present effort remains.', 'quote': '1. **Motion lasts only while a push or pull is being applied.**  \n   A thing at rest stays at rest unless something is pushing or pulling it. When the push or pull stops, the thing stops at once.\n\n15. **The general rule of stopping is: no present effort, no motion.**  \n   Past pushing does not matter. Only the push or pull acting now determines whether the object moves and how fast it moves.'}]
+- reasoning: The Stage 1 response contains 15 top-level numbered rules, so N9 is only a soft parsimony signal and not a failure by itself. Within Stage 1, Rule 15 substantially duplicates Rule 1’s no-present-effort/no-motion claim rather than adding an independent phenomenon. The remaining rules are broadly traceable to the observations, and the response contains explicit hierarchy/generalization markers such as “general rule,” but the N10 duplication is sufficient for a structural FAIL.
+- judge call cost (USD): `$0.0552`

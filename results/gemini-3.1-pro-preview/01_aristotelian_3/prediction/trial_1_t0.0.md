@@ -147,7 +147,7 @@ Based strictly on the operational rules provided, here are the predictions for e
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -163,7 +163,7 @@ Based strictly on the operational rules provided, here are the predictions for e
   - reasoning: Predicts arrow falls straight down once free from bow, citing Rule 1's inherent downward direction. No standard physics concepts (no inertia, momentum) invoked.
 - judge call cost (USD): `$0.1179`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 

@@ -204,7 +204,7 @@ Why does the arrow eventually fall? Two things happen together, per Rule 4: (i) 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -220,7 +220,7 @@ Why does the arrow eventually fall? Two things happen together, per Rule 4: (i) 
   - reasoning: Cites Rule 4's carrying-condition and Rule 1's natural downward tendency for the fall, honestly notes the rules don't name a sustaining mechanism. No standard-physics terms used.
 - judge call cost (USD): `$0.1420`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

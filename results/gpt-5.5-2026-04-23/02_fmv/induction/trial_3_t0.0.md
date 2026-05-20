@@ -161,14 +161,32 @@ No observation remains in tension with these rules. They fit the track cases, op
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. All N1–N6 are addressed: present push sets pace (rules 1,2,14), more push more pace (3), more heaviness less pace (4), no build-up and no carry-over (1,2,7,10,14), common unchanging fall pace (11,12,13), and pushes combine (8,9). All 12 observations are covered, rules are consistent, and no P1–P7 patterns appear.
 - judge call cost (USD): `$0.1061`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response states all necessary conditions N1–N6, covers all observations, is mutually consistent, and contains no disqualifying pattern.
 - judge call cost (USD): `$0.0228`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10']`
+- stage1_rule_count: `15`
+- evidence: [{'criterion': 'N10', 'explanation': "Rule 1 and Rule 14 ('All motion is local to the present push or pull... Past motion does not continue by itself once the present push or pull is gone') make the same operational claim — motion exists only under present push, with no carryover from past motion.", 'quote': '1. **Motion exists only while there is an active push or pull.**   A thing that is not being pushed or pulled does not keep moving on its own. When the push or pull stops, the thing stops at once.'}, {'criterion': 'N10', 'explanation': "Rule 14 paraphrases Rule 1's claim that motion ceases when the push ceases and does not persist on its own, applied to the same kind of body in the same situation.", 'quote': '14. **All motion is local to the present push or pull.**   The direction and pace of an object at any moment are determined only by the pushes and pulls acting on it at that moment, together with how heavy it is. Past motion does not continue by itself once the present push or pull is gone.'}]
+- reasoning: Stage 1 contains 15 top-level numbered rules, which is a soft N9 signal but not a FAIL on its own. However, Rules 1 and 14 both state the same core claim — motion exists only while a present push or pull acts, with no preservation of past motion — about the same bodies in the same situations, which triggers N10. Rule 15 ('Rest is the default state when pushes and pulls balance or are absent') also overlaps heavily with Rule 1's no-push-no-motion claim, reinforcing the redundancy. Hierarchy (N12) is satisfied through explicit cross-references (e.g., 'Rules 11–13', 'Rule 12'), and traceability (N11) is fine since the downward-pull-proportional-to-heaviness in Rule 12 is a legitimate generalisation reconciling obs 5 and obs 10.
+- judge call cost (USD): `$0.2513`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10']`
+- stage1_rule_count: `15`
+- evidence: [{'criterion': 'N10', 'explanation': 'Rules 1 and 14 both state the same operational claim that motion does not persist from past motion and is determined by current push or pull.', 'quote': '1. **Motion exists only while there is an active push or pull.**  \n   A thing that is not being pushed or pulled does not keep moving on its own. When the push or pull stops, the thing stops at once.\n\n14. **All motion is local to the present push or pull.**  \n   The direction and pace of an object at any moment are determined only by the pushes and pulls acting on it at that moment, together with how heavy it is. Past motion does not continue by itself once the present push or pull is gone.'}]
+- reasoning: The Stage 1 response contains 15 top-level numbered rules, which is above the observation count but below the N9 fail threshold, so N9 does not fail by itself. Within Stage 1, Rule 14 substantially duplicates Rule 1’s claim that only present pushes or pulls determine motion and that past motion does not continue once the present push or pull is gone. Because N10 fails, the structural verdict is FAIL.
+- judge call cost (USD): `$0.0513`

@@ -463,13 +463,13 @@ These operational rules do not fully cover angled pushes or pulls, because the o
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with explicit formulas. The S ∝ P/H combined relation is quantitative and combinable with a comparison case. Scope is stated per rule. No banned tokens appear. No P1–P7 patterns present. Uncovered cases (angled pushes, contact with ground) are explicitly named in boundary notes.
 - judge call cost (USD): `$0.2380`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates the Stage 1 rules operationally, gives a quantitative combinable pace rule proportional to push divided by heaviness, states scopes for the rules, and explicitly names uncovered boundary cases. No banned token or P1–P7 disqualifying pattern appears in the Stage 2 response.

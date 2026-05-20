@@ -122,7 +122,7 @@ The most significant observation these operational rules fail to handle predicti
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No new forbidden concept is introduced relative to Stage 1.`
@@ -130,7 +130,7 @@ The most significant observation these operational rules fail to handle predicti
 - reasoning: The Boundary notes explicitly introduce 'density' (a banned concept) as a named concept missing from the rules. While framed as an absence, naming it as the explanatory concept imports the forbidden term into the Stage 2 formulation, which was not present in Stage 1.
 - judge call cost (USD): `$0.0670`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No new forbidden concept is introduced relative to Stage 1.`

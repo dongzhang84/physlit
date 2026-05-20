@@ -139,14 +139,30 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1 (rule 2), N2/N3 (rule 3), N4 (rules 1 and 2), N5 (rule 6), N6 (rule 4) are all stated. All 12 observations are covered. Rules are mutually consistent, and no P1–P7 patterns are triggered.
 - judge call cost (USD): `$0.0973`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The rules satisfy N1–N6, cover all observations, are mutually consistent, and contain no disqualifying patterns.
 - judge call cost (USD): `$0.0208`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `6`
+- reasoning: Stage 1 contains 6 top-level rules, well under the N9 threshold. Each rule covers distinct content (motion requires effort, instantaneous pace, proportionality, additive combination, setting-independence, falling), with no two paraphrasing the same claim. Each rule traces to specific observations cited explicitly, and rule 6's downward-effort-proportional-to-heaviness is a legitimate reconciling generalisation of obs 5+10, not fabrication. Cross-rule references appear throughout (rule 4 cites rule 3; rule 6 cites rule 3 and rule 5; rule 5 cites rule 11), satisfying N12.
+- judge call cost (USD): `$0.1548`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `6`
+- reasoning: The Stage 1 response contains 6 top-level numbered rules, so it passes N9. The rules are not duplicates: each addresses a distinct structural role such as motion requiring effort, proportional pace, combination of efforts, environmental irrelevance, or falling. Each rule is traceable to named observations, and rule 6's downward effort proportional to heaviness is a permitted generalization reconciling observations 10 and 12 with rule 3. Because the response contains explicit cross-rule references such as "by rule 3" and "together with rule 5," it also passes N12.
+- judge call cost (USD): `$0.0338`

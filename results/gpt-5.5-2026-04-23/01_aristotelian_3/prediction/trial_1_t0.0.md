@@ -378,7 +378,7 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -394,7 +394,7 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
   - reasoning: Attributes forward motion to imparted motion from bow that fades, with natural downward tendency causing descent. Cites Rules 5, 1, 2 without standard-physics concepts.
 - judge call cost (USD): `$0.1802`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

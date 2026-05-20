@@ -150,14 +150,30 @@ The hardest observation to fit with the fewest rules is the arrow: it continues 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: The induction covers all 12 observations with rules satisfying N1 (rule 4, two-regime motion), N2 (rule 2, iron ball vs pea), N3 (rule 2, honey vs air), N4 (rule 2, ball vs sheet), N5 (rule 1, natural places for smoke/flame/heavy bodies), N6 (rule 6, heavenly lights as separate regime), N7 (stored cast acknowledged with explicit tension noted), and N8 (rule 3, oak upheld vs stone received). No banned concepts appear; 'stored cast' is described as fading rather than conserved, consistent with impetus-style PASS in §5.
 - judge call cost (USD): `$0.1404`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned concepts appear in the prohibited theoretical sense. The response satisfies N1–N8, including heavier-falls-faster, medium and shape dependence, natural upward/downward tendencies, floating, heaven/earth split, and explicit projectile tension; all observations are covered without a near-pass violation.
 - judge call cost (USD): `$0.0282`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `6`
+- reasoning: The rule set has 6 top-level rules in both Stage 1 and Stage 2, well under the N9 thresholds. Each rule covers a distinct phenomenon (natural place, speed/medium, support/carrying, stored cast, burden/hindrance, heavenly motion) without paraphrastic overlap, satisfying N10. Every rule traces to specific observations (1-12) and uses permitted Aristotelian elaboration (natural place, medium resistance, impressed/stored cast that fades), satisfying N11. Stage 2 contains explicit cross-references such as 'handled by Rule 3', 'assigned to Rule 6', and 'overlaps with Rule 2... and with Rule 4', satisfying N12.
+- judge call cost (USD): `$0.2067`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `12`
+- reasoning: Counting the six top-level Stage 1 rules and six top-level Stage 2 rules gives 12 distinct top-level rules, so N9 passes. The Stage 2 rules largely reformulate the Stage 1 rules operationally rather than creating redundant independent claims, and no pair appears to duplicate the same operational claim within the rule set in a way that triggers N10. Each rule is traceable to the listed observations or to permitted Aristotelian elaborations, including natural-place language, medium resistance, stored-cast explanation for the arrow, and the heaven/earth split. N12 passes because the response contains explicit cross-rule references such as “handled by Rule 6,” “requires Rule 3,” and “overlaps with Rule 2.”
+- judge call cost (USD): `$0.0436`

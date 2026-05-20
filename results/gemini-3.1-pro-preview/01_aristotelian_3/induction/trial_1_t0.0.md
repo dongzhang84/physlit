@@ -132,7 +132,7 @@ The substance an object travels through (such as air, water, or honey) opposes a
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -141,7 +141,7 @@ The substance an object travels through (such as air, water, or honey) opposes a
 - reasoning: The induction does not establish the two-regime distinction required by N1: there is no rule about motion that requires a sustained external cause and ceases when the cause is removed. Observation 2 (cart pushed, then stops) and Observation 6 (loaded cart needs more pull) are not covered by any rule — the 'hindrance' rule only addresses natural falling motion, not forced horizontal motion ceasing when the push stops. Also fails Step 3 coverage for Obs 2, 6, 7 (arrow projectile tension is not acknowledged anywhere).
 - judge call cost (USD): `$0.1270`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -149,3 +149,19 @@ The substance an object travels through (such as air, water, or honey) opposes a
 - evidence: Left to themselves, objects and materials have natural, inherent directions of travel.
 - reasoning: No banned concepts appear at Step 1. At Step 2, the response does not distinguish terrestrial motion that requires a sustained external cause and ceases when the cause is removed from default natural motion/rest; it provides no rule explaining the pushed cart stopping when the push is removed.
 - judge call cost (USD): `$0.0256`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `2`
+- reasoning: The rule set consists of two top-level rules (Inherent Directions and Hindrance by Surroundings), well below the N9 parsimony thresholds. The two rules describe distinct phenomena (natural motion vs. medium hindrance), so N10 is satisfied. Both rules trace clearly to specific observations cited in-text (Obs 1, 3, 4, 5, 8, 9, 10, 11, 12), and the medium-resistance and natural-place language is explicitly permitted under N11. N12 does not apply since rule_count < 5.
+- judge call cost (USD): `$0.1321`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `2`
+- reasoning: The combined Stage 1+2 rule set contains two distinct top-level rules: Inherent Directions and Hindrance by Surroundings. This is parsimonious, the two rules address different phenomena, and both are traceable to the observations cited in the response. Because the rule count is below 5, the hierarchy requirement N12 is exempt.
+- judge call cost (USD): `$0.0272`

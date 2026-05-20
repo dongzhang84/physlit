@@ -132,7 +132,7 @@ An earthly object's actual movement is determined by its natural tendency, or an
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -141,7 +141,7 @@ An earthly object's actual movement is determined by its natural tendency, or an
 - reasoning: The response is truncated mid-sentence and never addresses observation 7 (the arrow continuing after leaving the bow). The projectile tension with the requirement that motion needs a sustained cause is neither acknowledged nor flagged, failing N7. Observation 7 is also uncovered per the coverage map.
 - judge call cost (USD): `$0.1221`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -149,3 +149,20 @@ An earthly object's actual movement is determined by its natural tendency, or an
 - evidence: *   **Vertical Fall:** A heavier object overcomes
 - reasoning: No banned concept appears in the provided response fragment. However, the response is truncated before completing any rule that heavier bodies reach the ground sooner than lighter bodies released from the same height, so N2 is not satisfied.
 - judge call cost (USD): `$0.0253`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- rule_count: `3`
+- evidence: [{'criterion': 'N12', 'explanation': 'The rule set has 3 top-level rules and is therefore exempt from N12 — wait, this is below 5 so N12 does not apply.', 'quote': '### 3. Resolving Earthly Motion (Tendency and Push vs. Hindrance)'}]
+- reasoning: On reconsideration: the rule set consists of 3 top-level rules (Domains and Natural Tendencies; Hindrance of the Surroundings; Resolving Earthly Motion). With rule_count = 3, N9 passes easily, and N12 is exempt (< 5 rules). The three rules cover distinct phenomena (natural tendencies, medium/shape resistance, resolution of pushed motion) without paraphrastic duplication, so N10 passes. Each rule traces to specific observations (Rule 1: obs 1, 3, 4, 5, 8, 10, 12; Rule 2: obs 6, 9, 11, 12; Rule 3: obs 1, 2, 7, 9), with no fabricated mechanisms beyond permitted Aristotelian elaboration, so N11 passes. Verdict should be PASS.
+- judge call cost (USD): `$0.1571`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `3`
+- reasoning: The combined Stage 1 and Stage 2 rule set contains three distinct top-level rules: domains/natural tendencies, hindrance of surroundings, and resolution of earthly motion. This is well below the N9 parsimony thresholds, and the rules are not redundant because each addresses a different operational role. The rules are traceable to the observations, including permitted Aristotelian elaborations for natural tendencies, medium hindrance, celestial circularity, and fading imparted motion. Because the rule count is below 5, the set is exempt from N12 hierarchy failure.
+- judge call cost (USD): `$0.0292`

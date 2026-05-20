@@ -162,14 +162,32 @@ No observation remains in clear tension with these rules. The only special point
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated (rules 1,2,3,4,8,9,10,11,13). All 12 observations are covered. Rules are mutually consistent and no P1-P7 patterns are present — falling is described as steady and not speeding up, released objects drop straight down, no carry-over, no hidden resistance.
 - judge call cost (USD): `$0.1047`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response satisfies N1–N6, covers all observations, is mutually consistent, and contains no disqualifying pattern.
 - judge call cost (USD): `$0.0228`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10']`
+- stage1_rule_count: `15`
+- evidence: [{'criterion': 'N10', 'explanation': "Rule 1 states that a body moves only while effort is present and halts when effort ends — the same operational claim as Rule 15 ('When the present total effort is zero, the pace is zero').", 'quote': '1. **A thing moves only while a push or pull is acting on it.**  \n   If no push, pull, or falling influence is acting, it stays put. If it is already moving and the push or pull is removed, it halts at once.'}, {'criterion': 'N10', 'explanation': "Rule 15 paraphrases Rule 1's claim that without a present push the body does not move; both reduce to 'zero present effort → zero pace' for the same kinds of bodies in the same situations.", 'quote': '15. **When the present total effort is zero, the pace is zero.**  \n   Equal opposite pushes produce no motion. Releasing a pushed block leaves no remaining motion. A carried stone loses its forward pace as soon as the hand no longer carries it.'}, {'criterion': 'N10', 'explanation': "Rule 5 combines the proportional claims of Rules 3 and 4, but Rule 14 ('At each moment, the object's direction and pace are fixed by the pushes, pulls, carrying actions, and falling influence acting at that moment') restates the same present-effort-determines-pace claim as Rule 1 / Rule 5.", 'quote': '5. **The pace of a pushed or pulled object is set by the effort divided by the heaviness.**  \n   For a given object, more effort means more pace. For a given effort, more heaviness means less pace.'}]
+- reasoning: The Stage 1 response contains 15 top-level rules, which is at the soft-signal boundary for N9 but not by itself a FAIL. However, several rules describe the same operational phenomenon: Rule 1 ('A thing moves only while a push or pull is acting on it'), Rule 15 ('When the present total effort is zero, the pace is zero'), and to a lesser extent Rule 14 all assert that pace is determined solely by the present effort and vanishes when present effort vanishes — these can be paraphrased into the same operational claim about the same bodies in the same situations. This triggers N10. N11 passes (every rule traces to observations 1–12) and N12 passes (the Stage 1 response contains cross-references such as 'except for the release case in Rule 12' is in Stage 2, but Stage 1 itself does not — actually Stage 1 has no explicit 'Rule N' references, so N12 is also a concern; however since the FAIL on N10 is decisive and N12 is a closer call given the soft count, the verdict rests on N10).
+- judge call cost (USD): `$0.2787`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10']`
+- stage1_rule_count: `15`
+- evidence: [{'criterion': 'N10', 'explanation': 'Rules 1 and 15 both state the same operational claim that absent or zero present effort yields zero pace/no continued motion.', 'quote': '1. **A thing moves only while a push or pull is acting on it.**  \n   If no push, pull, or falling influence is acting, it stays put. If it is already moving and the push or pull is removed, it halts at once.\n\n15. **When the present total effort is zero, the pace is zero.**  \n   Equal opposite pushes produce no motion. Releasing a pushed block leaves no remaining motion. A carried stone loses its forward pace as soon as the hand no longer carries it.'}]
+- reasoning: The Stage 1 response contains 15 top-level numbered rules, so N9 is only a soft signal and not a standalone failure. Within Stage 1, however, Rule 15 substantially duplicates the zero-effort/no-motion portion of Rule 1 rather than adding an independent phenomenon. The rules are generally traceable to the observations, and the response includes hierarchy-like language such as “special” and synthesis, but the N10 redundancy is sufficient for structural FAIL.
+- judge call cost (USD): `$0.0529`

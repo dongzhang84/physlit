@@ -118,13 +118,13 @@ Observation 6 is not fully covered by these operational rules. The observation e
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates each Stage 1 rule operationally, makes the proportionality quantitative (pace ∝ effort, inversely ∝ heaviness, combinable), states scope for each rule, contains no banned tokens or morphological variants, exhibits no P1–P7 patterns, and explicitly names Observation 6 as not fully covered in the boundary notes.
 - judge call cost (USD): `$0.1496`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No disqualifying pattern P1–P7 (`ideal_induction.md` §5) is present in the operational rules.`

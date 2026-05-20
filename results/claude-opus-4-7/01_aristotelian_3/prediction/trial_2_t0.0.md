@@ -179,7 +179,7 @@ What sustains the arrow's forward motion after it leaves the string is the *impr
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -195,7 +195,7 @@ What sustains the arrow's forward motion after it leaves the string is the *impr
   - reasoning: Impressed push sustains the arrow; it curves down as push wears and natural tendency reasserts. Cites Rules 1, 3, 5 faithfully without standard physics.
 - judge call cost (USD): `$0.1298`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

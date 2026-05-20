@@ -141,14 +141,31 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 all stated: pace set by present push (rule 1), more push more pace (rule 1), heaviness reduces pace (rule 3), no build-up and no carry-over (rule 4), common unchanging fall pace (rule 6), pushes combine (rule 2). All observations covered, no contradictions, no disqualifying patterns.
 - judge call cost (USD): `$0.0980`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear in the response. The rules satisfy N1–N6, cover all observations, are mutually consistent including treating falling as a special built-in downward pull, and contain no disqualifying patterns.
 - judge call cost (USD): `$0.0209`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- stage1_rule_count: `6`
+- evidence: [{'criterion': 'N12', 'explanation': "This is the only mention of 'rule 6' in Stage 1, but it appears in a meta-commentary 'Tension remaining' note rather than within the rule set itself; the six rules are presented as a flat enumeration with no cross-references between them (no 'derived from', 'corollary of', 'see Rule N', etc. within the rules).", 'quote': '**Tension remaining:** None, if the downward pull in rule 6 is taken as a special built-in kind of pull that gives the same fall pace to all released objects, unlike ordinary hand pushes where heaviness changes the pace.'}]
+- reasoning: Stage 1 contains 6 top-level rules, well within the parsimony threshold (N9 passes). The rules are independent — each covers a distinct aspect (push-pace proportionality, combination of efforts, heaviness, no carried-on motion, setting-independence, falling) with no two paraphrasing the same claim (N10 passes). Each rule traces to specific observations (rule 1→obs 1,2,4; rule 2→obs 8,9; rule 3→obs 5; rule 4→obs 3,7,11; rule 5→obs 6,12; rule 6→obs 10,12), so N11 passes. However, N12 is a close call: the only reference to 'rule 6' appears in a post-rule 'Tension remaining' note, not as an inter-rule cross-reference within the rule set, and no rule references another by number or hierarchy marker. Leaning toward FAIL on N12 since the criterion requires a cross-rule reference 'anywhere in the Stage 1 response' — the tension note arguably qualifies, making this genuinely borderline.
+- judge call cost (USD): `$0.2143`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `6`
+- reasoning: The Stage 1 response contains 6 top-level numbered rules, so it passes N9 parsimony. The rules are not duplicates within Stage 1: they separately cover total effort, combination of efforts, heaviness, absence of carried-on motion, setting-independence, and falling. Each rule traces to the observation set, with rule 6 legitimately generalizing the falling observations into a special downward-pull rule. Because the Stage 1 response explicitly refers to “rule 6,” it has a cross-rule reference and passes N12 hierarchy.
+- judge call cost (USD): `$0.0409`

@@ -141,13 +141,13 @@ Observation 1 (a block rests on a level track) and Observation 6 (a block adrift
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally, the two proportionalities are made quantitative and combinable (pace = baseline × push/heaviness), scope is given per rule, no banned §3 tokens appear, no P1–P7 patterns are asserted, and uncovered observations (1 and 6) are explicitly named in boundary notes.
 - judge call cost (USD): `$0.1681`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response

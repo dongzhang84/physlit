@@ -153,14 +153,31 @@ The hardest observation to fit with the fewest rules is the arrow’s continued 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: The induction covers all 12 observations: natural place (3,4,8), medium resistance (9,12), shape/weight ordering (1,11), floating (5), fading imparted motion for cart and arrow (2,7), weight-effort (6), and celestial separation (10). No banned concepts appear; imparted motion is explicitly described as fading, consistent with impetus-style PASS per §5. N1-N8 all satisfied.
 - judge call cost (USD): `$0.1316`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned concepts appear in the induced rules. The response satisfies N1-N8, including heavier-falls-faster, medium and shape dependence, upward/downward natural tendencies, floating, a heaven/earth split, and explicit acknowledgment of the projectile tension; all observations are covered.
 - judge call cost (USD): `$0.0276`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- rule_count: `7`
+- evidence: [{'criterion': 'N12', 'explanation': "This is actually a cross-rule reference in Stage 2 Rule 2, which I initially missed; re-checking, Stage 2 contains explicit 'Rule N' references (e.g., 'as in Rule 1', 'Rule 4', 'requires Rule 5'), so N12 actually passes.", 'quote': 'It also does not by itself explain why an arrow continues forward after leaving the bow; that requires Rule 5.'}]
+- reasoning: On recount, the rule set has 7 top-level rules in both Stage 1 and Stage 2 (parallel structure), well under the N9 threshold. The rules cover distinct phenomena (natural place, medium hindrance, shape/heaviness, water flotation, forced/imparted motion, burden, celestial motion) with no two paraphrasing the same claim, so N10 passes. Each rule traces clearly to observations (Rule 1→Obs 3,4,5,8,12; Rule 2→Obs 9,12; Rule 3→Obs 1,11; Rule 4→Obs 5; Rule 5→Obs 2,7; Rule 6→Obs 6; Rule 7→Obs 10), with impetus-fading and natural-place language being permitted elaborations, so N11 passes. Stage 2 contains explicit cross-rule references such as 'as in Rule 1', 'in Rule 4', and 'that requires Rule 5', satisfying N12. Correcting my verdict: this should be PASS.
+- judge call cost (USD): `$0.2176`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `14`
+- reasoning: I count 14 top-level rules across Stage 1 and Stage 2: seven numbered induction rules and seven numbered formulation rules, with sub-bullets treated as elaboration. This exceeds 12 but is within the N9 soft-signal range and does not by itself fail parsimony. The Stage 2 rules largely restate and operationalize the Stage 1 rules rather than adding unsupported independent propositions, and the rules trace to the observations or permitted Aristotelian elaborations. The response contains explicit cross-rule references such as "requires Rule 5" and "as in Rule 1," satisfying N12 hierarchy.
+- judge call cost (USD): `$0.0413`

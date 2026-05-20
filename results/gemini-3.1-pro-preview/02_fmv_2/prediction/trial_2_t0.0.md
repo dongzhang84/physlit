@@ -146,7 +146,7 @@ Based on the operational rules provided, here are the predictions for the novel 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -162,7 +162,7 @@ Based on the operational rules provided, here are the predictions for the novel 
   - reasoning: Prediction states the block instantly moves at a constant steady pace with no build-up, citing Rule 1's instantaneous achievement of pace. Matches F=mv column.
 - judge call cost (USD): `$0.2351`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

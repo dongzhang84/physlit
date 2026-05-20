@@ -138,13 +138,13 @@ While the rules are logically consistent, they handle Observation 11 (a stone dr
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally; the pace = push/heaviness rule makes the two proportionalities quantitative and combinable; scope is given per rule; no banned tokens appear; no P1–P7 pattern is triggered; and the boundary notes name the observations not fully covered (Obs 10's absolute value, Obs 11's awkward transition).
 - judge call cost (USD): `$0.1548`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response gives operational rules with quantitative combinable proportionality, scopes each rule, covers pushed motion and falling, names boundary observations, and contains no banned tokens or P1–P7 disqualifying operational pattern.

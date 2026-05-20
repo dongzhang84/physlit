@@ -160,7 +160,7 @@ Here are the predictions for the five novel scenarios, derived strictly accordin
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -176,7 +176,7 @@ Here are the predictions for the five novel scenarios, derived strictly accordin
   - reasoning: Prediction states the block immediately moves at a steady constant pace in the remaining pusher's direction, with no build-up — matches the F=mv column. Justification cites Rules 1 and 2. No banned tokens.
 - judge call cost (USD): `$0.2456`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

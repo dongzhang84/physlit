@@ -146,14 +146,30 @@ Observation 11 sits slightly uneasily with the rest. While the stone is in the m
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated: pace set by present push (rule 1), more push more pace and more heaviness less pace (rule 2), no build-up/no carry-over (rule 1), common unchanging fall pace (rule 3), pushes combine (rule 2). All 12 observations are mapped. No P1-P7 patterns present; the downward pull in rule 3 is not a hidden resistance balancing the push but the mechanism for falling.
 - judge call cost (USD): `$0.1028`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The rules satisfy N1–N6, cover all observations, are mutually consistent, and contain no disqualifying patterns.
 - judge call cost (USD): `$0.0215`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `4`
+- reasoning: Stage 1 contains 4 top-level rules, well under the N9 parsimony threshold. The rules are independent — rule 1 covers temporal coupling of push and motion, rule 2 the quantitative pace formula, rule 3 the downward pull, rule 4 setting-invariance. Each rule traces to observations (1-3, 7 for rule 1; 4, 5, 8, 9 for rule 2; 10, 11, 12 for rule 3; 6, 12 for rule 4), with rule 3's downward pull a legitimate generalisation reconciling observations 5 and 10. Rule 3 explicitly cross-references rule 2 ("by rule 2 every released object falls...") and rule 1, satisfying N12 hierarchy.
+- judge call cost (USD): `$0.1618`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `4`
+- reasoning: The Stage 1 response contains four top-level numbered rules, so N9 passes and N12 is exempt because the rule count is below 5. The four rules are not redundant: they separately cover push-duration, effort/heaviness proportionality, downward falling behavior, and setting equivalence. Each rule traces to the observations, with rule 3 legitimately generalizing from the falling observations and rule 4 from the track/open-space/airless-jar comparisons.
+- judge call cost (USD): `$0.0343`

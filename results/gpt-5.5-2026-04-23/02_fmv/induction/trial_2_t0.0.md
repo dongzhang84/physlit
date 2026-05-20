@@ -162,14 +162,31 @@ The main difficulty is joining the falling rule with the push-and-pull rule. Ord
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated (rules 2,3,4 cover present push/no build-up/no carry-over; rule 5 covers more push more pace; rule 6 covers heaviness; rules 12-14 cover falling; rules 9-10 cover combination). All 12 observations are covered. No contradictions and no P1-P7 patterns present.
 - judge call cost (USD): `$0.1061`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response satisfies N1–N6, covers all observations, is mutually consistent, and does not assert any disqualifying pattern.
 - judge call cost (USD): `$0.0230`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `15`
+- reasoning: Stage 1 contains 15 top-level numbered rules, which is a soft signal under N9 but not a FAIL by itself (threshold is >15 for moderate FAIL). The rules are largely independent — rule 2 (steady pace from steady effort), rule 3 (full pace begins at once), and rule 4 (pace ends at once) describe distinct temporal aspects, not the same claim. Each rule traces to specific observations (1–12), with no fabricated mechanism. Hierarchy is satisfied by rule 15's explicit cross-reference ('A forward push... Falling gives downward motion after release') and the closing 'Remaining tension' section explicitly ties the falling rule to the push-and-pull rule; rule 7 also references that 'A block in open space behaves the same way as on the level track,' cross-linking to earlier rules. Borderline on N9 count but lean PASS per §6.
+- judge call cost (USD): `$0.2137`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10']`
+- stage1_rule_count: `15`
+- evidence: [{'criterion': 'N10', 'explanation': 'Rule 8 restates the same operational claim as Rule 4 for carried loads: motion continues only while effort continues and stops rather than carrying onward after effort ceases.', 'quote': '4. **The pace ends at once when the effort ends.**  \n   When the pull or push is released, the object stops immediately at that place. It does not drift, coast, or carry itself onward.\n\n8. **Carrying a load requires effort for the whole trip.**  \n   A carrier must keep pushing or carrying the load all the way from one place to another. Pushing hard only at the start cannot make the load continue by itself.'}]
+- reasoning: The Stage 1 response contains 15 top-level numbered rules, so N9 is only a soft parsimony signal and not an independent failure. Within Stage 1, Rule 4 and Rule 8 duplicate the same stopping/no-coasting claim for pushed or carried motion, triggering N10. The remaining rules appear traceable to observations, and the response includes some cross-rule logical structure in the final tension note, but the N10 failure is sufficient for an overall FAIL.
+- judge call cost (USD): `$0.0480`

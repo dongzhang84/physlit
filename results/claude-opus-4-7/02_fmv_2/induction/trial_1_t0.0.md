@@ -135,14 +135,30 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all met: rule 1 covers N1 and N4; rule 2 covers N2, N3, N6; rule 3 covers N5. All 12 observations are mapped. Rules are mutually consistent and no P1-P7 pattern is triggered (the downward pull in rule 3 is the falling cause, not a hidden resistance balancing horizontal motion).
 - judge call cost (USD): `$0.0989`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear in the response. The rules satisfy N1–N6, cover all observations, are mutually consistent, and do not trigger any disqualifying pattern.
 - judge call cost (USD): `$0.0211`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `4`
+- reasoning: Stage 1 contains 4 top-level numbered rules, well under the N9 threshold. The rules are independent: rule 1 covers start/stop behavior, rule 2 the quantitative pace law, rule 3 the downward pull, rule 4 the inertness of surroundings. Each rule explicitly cites supporting observations (e.g., 'covers observations 2, 3, 6, 7, and 11'), satisfying N11; rule 3 is a legitimate generalisation reconciling obs. 5 and 10. Cross-references appear ('Combined with rule 2', 'By rule 1', 'by rule 3'), satisfying N12.
+- judge call cost (USD): `$0.1527`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `4`
+- reasoning: The Stage 1 response contains four top-level numbered rules, so it is well below the N9 parsimony thresholds and is exempt from N12 because the count is under 5. The rules are independent: one covers motion requiring ongoing effort, one gives the quantitative pace rule, one explains falling via downward effort proportional to heaviness, and one assigns no push or pull to track/open space/air. Each rule traces to cited observations or legitimate generalization across them, with no unsupported fabricated mechanism triggering N11.
+- judge call cost (USD): `$0.0331`

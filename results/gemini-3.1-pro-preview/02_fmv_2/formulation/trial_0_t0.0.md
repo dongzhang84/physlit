@@ -123,7 +123,7 @@ If Stage 1 observations included objects that are thrown through the air (like a
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No disqualifying pattern P1–P7 (`ideal_induction.md` §5) is present in the operational rules.`
@@ -131,7 +131,7 @@ If Stage 1 observations included objects that are thrown through the air (like a
 - reasoning: Rule 4 posits an opposing push from invisible surroundings that subtracts from the driving effort — this is a P3 hidden-resistance rescue, contradicting observations 6 and 12 (motion behaves the same in empty space and falling pace is the same with or without air).
 - judge call cost (USD): `$0.1590`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response

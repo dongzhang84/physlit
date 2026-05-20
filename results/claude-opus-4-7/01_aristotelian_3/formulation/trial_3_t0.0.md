@@ -176,13 +176,13 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is restated operationally with ranking rules and procedures; scope is explicit for each rule; preserved quantities are identified per rule without importing energy/momentum; no banned concepts are newly introduced; and boundary cases including the cart/arrow tension and heavenly motion are explicitly named rather than dropped.
 - judge call cost (USD): `$0.0851`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is restated operationally with scope, rankings or conditionals, and boundary cases. The response does not introduce banned technical concepts relative to Stage 1, and its preserved quantities are consistent with the Aristotelian rules rather than importing energy or momentum.

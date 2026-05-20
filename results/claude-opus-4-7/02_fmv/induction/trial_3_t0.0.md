@@ -142,13 +142,13 @@ Observation 10 (the boulder and the pebble falling together) sits uneasily besid
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 all satisfied: rule 1 (N1), rule 4 (N2), rule 5 (N3), rules 2-3 (N4), rule 8 (N5), rule 7 (N6). All 12 observations covered. Rules are mutually consistent, and no P1-P7 patterns triggered — rule 8 explicitly states fall pace doesn't grow, rule 10 has the stone drop straight down.
 - judge call cost (USD): `$0.1034`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -156,3 +156,20 @@ Observation 10 (the boulder and the pebble falling together) sits uneasily besid
 - evidence: The downward pull does not depend on air.
 - reasoning: At Step 1, the response contains the token "air". Under the provided checklist, any banned token appearing anywhere in the response triggers an automatic FAIL.
 - judge call cost (USD): `$0.0222`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `11`
+- reasoning: Stage 1 contains 11 numbered top-level rules, well within the parsimony threshold (N9 pass). No two rules paraphrase the same claim about the same body in the same situation — rules 1, 2, and 3 are closely related but distinct (pace-tracks-push, no stored motion, instantaneous onset/cessation), so N10 passes. Every rule traces to specific observations (e.g., rule 8 reconciles obs 5 and 10, explicitly acknowledged in the Tension section), so N11 passes as legitimate generalisation. The Tension section and rule 8's explicit reference to rule 5 ("the only way to reconcile them is to insist, as rule 8 does") provide the cross-rule reference required by N12.
+- judge call cost (USD): `$0.1776`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10']`
+- stage1_rule_count: `11`
+- evidence: [{'criterion': 'N10', 'explanation': 'Rules 1 and 2 both state the same operational claim that present push alone determines present motion and that with no push there is no motion.', 'quote': '1. **Pace follows push, not change of push.** At any moment, how fast a thing moves is fixed by the push or pull acting on it at that very moment. When the push is steady, the pace is steady; when the push stops, the pace stops.\n\n2. **No carry-over of motion.** A thing has no tendency of its own to keep going. Nothing it did a moment ago is stored up in it. The present push alone sets the present pace; with no push, there is no motion.'}]
+- reasoning: The Stage 1 response contains 11 top-level numbered rules, so it passes N9. The rules are mostly traceable to the observations, and the Stage 1 response includes cross-rule structure through phrases such as 'as rule 8 does,' so N11 and N12 do not fail. However, Rules 1 and 2 are not independent: both assert that motion has no carry-over and that present push alone sets present pace, including stopping when push is absent.
+- judge call cost (USD): `$0.0415`

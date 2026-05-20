@@ -53,18 +53,19 @@ def _code_block(s: str) -> str:
     return f"{fence}\n{s}\n{fence}"
 
 
-def _load_judge_verdicts(model_dir: Path) -> dict[Path, dict[str, dict[str, Any]]]:
-    """``{trial_path: {judge_family: verdict_record}}`` for one model.
-
-    02_fmv judgments are framework-scoped: ``<model>/02_fmv/judgments/``.
-    """
-    out: dict[Path, dict[str, dict[str, Any]]] = defaultdict(dict)
-    judgments_dir = model_dir / FRAMEWORK_ID / "judgments"
-    if not judgments_dir.exists():
-        return out
-    for vp in judgments_dir.glob("*.json"):
-        d = json.loads(vp.read_text())
-        out[Path(d["trial_path"])][d.get("judge_family") or "unknown"] = d
+def _load_judge_verdicts(model_dir: Path) -> dict[Path, list[dict[str, Any]]]:
+    """{trial_path: [verdict_record, …]} — content judges from ``judgments/``
+    AND structural judges from ``structural/``. Both axes attach by
+    ``trial_path``; structural judges record the Stage 1 trial path so
+    they land on the Stage 1 .md companion."""
+    out: dict[Path, list[dict[str, Any]]] = defaultdict(list)
+    for subdir in ("judgments", "structural"):
+        d = model_dir / FRAMEWORK_ID / subdir
+        if not d.exists():
+            continue
+        for vp in d.glob("*.json"):
+            rec = json.loads(vp.read_text())
+            out[Path(rec["trial_path"])].append(rec)
     return out
 
 
@@ -90,14 +91,16 @@ def _render_metadata_table(trial: dict[str, Any]) -> str:
     return "\n".join(out)
 
 
-def _render_judge_block(judge_family: str, verdict_record: dict[str, Any]) -> str:
+def _render_judge_block(verdict_record: dict[str, Any]) -> str:
     parsed = verdict_record.get("parsed_verdict") or {}
     judge_model = verdict_record.get("judge_model", "?")
     parse_error = verdict_record.get("parse_error")
-    label = {"anthropic": "Claude-as-judge", "openai": "OpenAI-as-judge"}.get(
-        judge_family, f"{judge_family}-as-judge"
-    )
-    lines: list[str] = [f"### {label} (`{judge_model}`)", ""]
+    judge_family = verdict_record.get("judge_family", "?")
+    stage = verdict_record.get("stage", "?")
+    family_label = {"anthropic": "Claude", "openai": "OpenAI"}.get(judge_family, judge_family)
+    axis = "structural" if stage == "structural" else "content"
+    label = f"{family_label}-as-{axis}-judge"
+    lines: list[str] = [f"### {label} (`{judge_model}`, stage: `{stage}`)", ""]
     if parse_error:
         lines.append(f"- parse_error: `{parse_error}`")
     if not parsed and not parse_error:
@@ -122,7 +125,14 @@ def _render_judge_block(judge_family: str, verdict_record: dict[str, Any]) -> st
                 lines.append(f"- {key}: {parsed[key]}")
     else:
         lines.append(f"- verdict: `{parsed.get('verdict', '?')}`")
-        for key in ("first_fail_step", "first_fail_clause", "failed_criterion"):
+        for key in (
+            "first_fail_step",
+            "first_fail_clause",
+            "failed_criterion",
+            "failed_criteria",
+            "rule_count",
+            "stage1_rule_count",
+        ):
             if parsed.get(key) is not None:
                 lines.append(f"- {key}: `{parsed[key]}`")
         for key in ("evidence", "reasoning"):
@@ -135,7 +145,7 @@ def _render_judge_block(judge_family: str, verdict_record: dict[str, Any]) -> st
     return "\n".join(lines)
 
 
-def render_one(trial_path: Path, judge_verdicts: dict[Path, dict[str, dict[str, Any]]]) -> Path:
+def render_one(trial_path: Path, judge_verdicts: dict[Path, list[dict[str, Any]]]) -> Path:
     trial: dict[str, Any] = json.loads(trial_path.read_text())
     model = str(trial.get("model_full_version", "?"))
     stage = str(trial.get("stage", "?"))
@@ -170,12 +180,22 @@ def render_one(trial_path: Path, judge_verdicts: dict[Path, dict[str, dict[str, 
         "",
     ]
 
-    judges_for_trial = judge_verdicts.get(trial_path, {})
+    judges_for_trial = judge_verdicts.get(trial_path, [])
     if judges_for_trial:
+        # Order: content judges (this stage), then structural judges.
+        # Within each axis: anthropic before openai.
+        family_order = {"anthropic": 0, "openai": 1}
+        axis_order = {False: 0, True: 1}  # content axis first, structural after
+
+        def _sort_key(rec: dict[str, Any]) -> tuple[int, int]:
+            return (
+                axis_order[rec.get("stage") == "structural"],
+                family_order.get(rec.get("judge_family", ""), 9),
+            )
+
         parts += ["## Judge verdicts", ""]
-        for jf in ("anthropic", "openai", *sorted(set(judges_for_trial) - {"anthropic", "openai"})):
-            if jf in judges_for_trial:
-                parts += [_render_judge_block(jf, judges_for_trial[jf]), ""]
+        for rec in sorted(judges_for_trial, key=_sort_key):
+            parts += [_render_judge_block(rec), ""]
 
     out_path = trial_path.with_suffix(".md")
     out_path.write_text("\n".join(parts).rstrip() + "\n")

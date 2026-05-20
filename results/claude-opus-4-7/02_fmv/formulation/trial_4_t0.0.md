@@ -182,13 +182,13 @@ The operational rules above do not cover the following:
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally; the proportionalities are combined as pace = effort/heaviness; scope is given per rule; no banned tokens appear; no P1-P7 pattern is asserted (the downward pull gives a constant fall pace, not speeding up); and uncovered cases (non-collinear pushes, instant of release, units, spatial variation of k, held-stone stitch) are explicitly named in Boundary notes.
 - judge call cost (USD): `$0.1810`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response (`ideal_induction.md` §3).`

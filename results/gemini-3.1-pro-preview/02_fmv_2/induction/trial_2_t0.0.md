@@ -132,7 +132,7 @@ Observation 6 remains in tension with these rules. It states that a block set ad
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -141,7 +141,7 @@ Observation 6 remains in tension with these rules. It states that a block set ad
 - reasoning: Rule 2 posits a constant downward pull on all objects, which contradicts N4(b)/observation 11: a released body must drop only because no push acts (and observation 11 says it drops at the release point, not because of a persistent downward pull). More directly, this also triggers P3: a hidden balancing agent (the surface pushing upward to cancel the downward pull) is posited to explain why bodies on a track don't fall, a rescue forbidden by P3.
 - judge call cost (USD): `$0.1008`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -149,3 +149,20 @@ Observation 6 remains in tension with these rules. It states that a block set ad
 - evidence: The pace of any moving object is exactly proportional to the total effort acting on it, and inversely proportional to its heaviness.
 - reasoning: Step 1 requires scanning the whole response for banned tokens or morphological variants. The response contains 'proportional', a morphological variant of the banned token 'proportional' under the lexical test.
 - judge call cost (USD): `$0.0209`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- stage1_rule_count: `3`
+- evidence: [{'criterion': 'N12', 'explanation': 'Three rules, fewer than the 5-rule threshold for N12 — wait, exempt.', 'quote': '1. **The Rule of Effort and Pace:** ... 2. **The Rule of the Downward Pull:** ... 3. **The Rule of Passive Surroundings:**'}]
+- reasoning: The Stage 1 response contains 3 top-level rules, well under N9's parsimony threshold. The rules are independent (effort/pace, downward pull, passive surroundings address distinct phenomena), so N10 passes. Each rule traces to observations (Rule 1 → obs 1-9; Rule 2 → obs 10, plus reconciliation with obs 5; Rule 3 → obs 6, 12), and the downward-pull-proportional-to-heaviness is legitimate generalisation reconciling obs 5 and 10, not fabrication. With only 3 rules, the rule set is exempt from N12. On reconsideration, all four criteria pass — correcting verdict.
+- judge call cost (USD): `$0.1573`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `3`
+- reasoning: The Stage 1 response contains three top-level numbered rules, so it is well below the N9 parsimony thresholds and exempt from N12 hierarchy requirements. The three rules address distinct phenomena: effort/pace relation, downward falling/support, and passive surroundings. Although Rule 2 contains a questionable universal downward-pull mechanism and the model itself notes tension with Observation 6, it is traceable as a generalization from the falling observations rather than a wholly unsupported fabrication under N11.
+- judge call cost (USD): `$0.0309`

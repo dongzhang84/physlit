@@ -316,13 +316,13 @@ The operational rules still leave several cases only partly covered. The arrow r
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is restated operationally with prediction/comparative/conditional forms. Scope is given per rule. Each rule explicitly states no quantitative conservation is asserted, consistent with Stage 1. No banned concepts are newly introduced. Boundary cases are listed per rule and in the final notes, with hard cases (arrow, oak, feather, heavenly irregularities) named rather than dropped.
 - judge call cost (USD): `$0.1226`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is restated operationally with prediction/comparative rules and scoped by body/media/motion type. The response explicitly avoids quantitative conservation laws, introduces no newly banned theoretical concepts, and lists boundary cases and remaining partial/awkward coverage.

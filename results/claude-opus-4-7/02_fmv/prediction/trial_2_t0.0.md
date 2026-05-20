@@ -176,7 +176,7 @@ By Rule 3&4, V = P/H. With the same push P, block A (heaviness 2H) has pace P/(2
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -192,7 +192,7 @@ By Rule 3&4, V = P/H. With the same push P, block A (heaviness 2H) has pace P/(2
   - reasoning: Block immediately moves at full pace V=P/H toward remaining pusher with no gradual pickup, derived from Rules 1, 3&4, 5. Matches F=mv column.
 - judge call cost (USD): `$0.2407`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

@@ -314,13 +314,13 @@ The main boundary case is falling: ordinary pushed motion says pace depends on t
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with explicit formulas. Proportionality to push and inverse proportionality to heaviness are combined in S=kP/H, allowing a third party to compute pace. Scope is specified per rule. No banned tokens appear, no P1–P7 patterns are present, and the falling exception is explicitly named in boundary notes.
 - judge call cost (USD): `$0.1893`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response gives operational rules for all Stage 1 rules, including a combinable quantitative rule S = k P_total/H for ordinary pushed motion and a constant falling pace rule. It states scope and boundary cases explicitly, names uncovered limits, contains no banned tokens, and does not include disqualifying patterns P1–P7.

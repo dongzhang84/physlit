@@ -162,13 +162,13 @@ Several matters are not fully settled by the operational rules above. (i) Heavin
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. Rules are operational (P = E/H, signed addition, k constant). Scope is stated per rule. Proportional relations combine quantitatively. Uncovered/extrapolated cases (angled efforts, time-varying efforts, heaviness measurement, release transition, value of k) are explicitly named in Boundary notes. No P1–P7 patterns present.
 - judge call cost (USD): `$0.1753`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response (`ideal_induction.md` §3).`

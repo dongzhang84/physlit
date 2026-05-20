@@ -149,7 +149,7 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `5`
@@ -158,8 +158,24 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 - reasoning: Rule 4 posits a downward pull whose strength is tuned/matched to the object's heaviness in order to explain why all bodies fall at the same pace. This is a hidden-balancing-agent rescue (P3): an unobserved agent calibrated to heaviness is introduced to make the phenomenology come out right, rather than stating the regularity directly.
 - judge call cost (USD): `$0.1067`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response states the present push sets pace, more push gives more pace, heaviness reduces pace, motion has no build-up or carry-over, falling has one unchanging pace for all bodies, and pushes combine; all observations are covered without contradiction or disqualifying patterns.
 - judge call cost (USD): `$0.0225`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `4`
+- reasoning: Stage 1 contains four clearly numbered top-level rules, well under the N9 threshold. Each rule covers a distinct phenomenon (motion-requires-push, pace=E/H, combination of pushes, world's downward pull) with no within-Stage-1 paraphrase duplication. Every rule traces to specific observations (explicitly mapped in the 'How each observation follows' section), and Rule 4's matching of pull-strength to heaviness is a legitimate generalisation reconciling obs 5 and 10, not a fabrication. The 'How each observation follows' section contains explicit cross-references like 'Rule 1 and Rule 2', satisfying N12.
+- judge call cost (USD): `$0.1632`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `4`
+- reasoning: The Stage 1 response contains four top-level numbered rules, so N9 passes and N12 is exempt because the count is fewer than 5. The rules are independent: they cover motion requiring push, pace scaling with effort/heaviness, combination of simultaneous pushes, and falling as a special downward pull. Each rule traces to observations: Rules 1–3 are directly supported by observations 1–9 and 11, while Rule 4 is a legitimate generalization reconciling observations 10–12 with the effort/heaviness relation.
+- judge call cost (USD): `$0.0357`

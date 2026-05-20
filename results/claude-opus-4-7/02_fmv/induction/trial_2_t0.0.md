@@ -142,14 +142,32 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated (rules 1-2 for N1/N4a, rule 1/7 for N4b, rule 3 for N2, rule 4 for N3, rule 9 for N5, rule 5 for N6). All 12 observations are covered. Rules are consistent and no P1-P7 patterns appear.
 - judge call cost (USD): `$0.1047`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response satisfies N1–N6, covers all observations, is mutually consistent, and contains no disqualifying patterns.
 - judge call cost (USD): `$0.0227`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `10`
+- evidence: [{'criterion': 'N12', 'explanation': "Explicit cross-rule reference ('in keeping with rule 5', also 'In the language of rule 4' in rule 9) satisfies N12 hierarchy.", 'quote': 'When the falling object reaches the ground, the downward pull is opposed and the object stops, in keeping with rule 5.'}]
+- reasoning: Stage 1 contains 10 numbered top-level rules, well under the N9 threshold. The rules are distinct: each covers a different phenomenon (instantaneity, no buildup, proportionality to effort, inverse to heaviness, combination, setting-independence, carrying, held-objects, falling, contact halt), so N10 passes. Each rule traces to observations (1→obs1-3; 2→obs1-2; 3→obs4; 4→obs5; 5→obs8-9; 6→obs6; 7→obs7; 8→obs11; 9→obs10,12; 10→implicit in fall observations), and the heaviness-matched downward pull is a legitimate generalization reconciling obs 5 with obs 10. N12 is satisfied via explicit cross-references ('in keeping with rule 5', 'In the language of rule 4').
+- judge call cost (USD): `$0.1858`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N11']`
+- stage1_rule_count: `10`
+- evidence: [{'criterion': 'N11', 'explanation': 'No observation reports what happens after impact or that the ground opposes the downward pull, so this introduces an unsupported causal/contact claim apparently extrapolated from observation 10.', 'quote': '10. **The fall halts on contact.** When the falling object reaches the ground, the downward pull is opposed and the object stops, in keeping with rule 5.'}]
+- reasoning: The Stage 1 response contains 10 top-level numbered rules, so N9 passes. The rules are not redundant in the N10 sense, and the response contains explicit cross-rule references such as “rule 4,” “rule 5,” and “rule 8,” so N12 passes. Most rules trace to the observations, but rule 10 fabricates post-contact stopping and opposition by the ground, which is not directly supported by the observation set.
+- judge call cost (USD): `$0.0391`

@@ -136,7 +136,7 @@ Additionally, **Observation 6** places a block adrift in open space, touching no
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -145,7 +145,7 @@ Additionally, **Observation 6** places a block adrift in open space, touching no
 - reasoning: The response posits a downward pull whose strength depends on heaviness, then explains equal fall pace by offsetting heaviness. This is a hidden-mechanism rescue rather than the stated regularity that bodies simply fall at one common unchanging pace; moreover the 'Remaining Tensions' section explicitly notes the rules contradict observations (a block in open space should fall), violating mutual consistency and the requirement that observations 1 and 6 are covered without contradiction. The induction fails to cleanly state N5 as a regularity and instead introduces a heaviness-dependent pull, undermining N3/N5 coherence.
 - judge call cost (USD): `$0.1168`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -153,3 +153,20 @@ Additionally, **Observation 6** places a block adrift in open space, touching no
 - evidence: observed physics of this world
 - reasoning: Step 1 scans the whole response for banned tokens or morphological variants. The response contains the banned physicist/physics-related token variant "physics," so it fails immediately.
 - judge call cost (USD): `$0.0223`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- stage1_rule_count: `5`
+- evidence: [{'criterion': 'N12', 'explanation': "The Stage 1 response has 5 top-level rules but contains no cross-rule references (no 'Rule N', no 'derived from', 'corollary of', 'follows from', etc.) anywhere in the Stage 1 rules themselves; the 'Remaining Tensions' section references observations and rule names but uses no cross-rule hierarchy markers like 'Rule 3' or 'derived from'.", 'quote': '1. **The Rule of Active Effort:** ... 2. **The Rule of Proportions:** ... 3. **The Rule of Combined Efforts:** ... 4. **The Rule of Unhindered Surroundings:** ... 5. **The Rule of the Downward Pull:**'}]
+- reasoning: The Stage 1 response has exactly 5 top-level numbered rules, passing N9 (parsimony). The rules are independent — each addresses a distinct phenomenon (active effort, proportionality, combination, surroundings, downward pull) — passing N10. All rules trace to observations (Rule 1→obs 1-3,7; Rule 2→obs 4-5; Rule 3→obs 8-9; Rule 4→obs 6,12; Rule 5→obs 10-11 with a legitimate generalisation reconciling heavy/light falling alike), passing N11. However, with 5 rules and no cross-rule references anywhere in Stage 1 (the rules name themselves but do not reference each other; the 'Remaining Tensions' section refers to observations and rule titles but uses none of the hierarchy markers listed in N12), N12 fails. This is at the threshold (exactly 5 rules) but the criterion is mechanical.
+- judge call cost (USD): `$0.1938`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `5`
+- reasoning: The Stage 1 response contains five top-level numbered rules; the later 'Remaining Tensions' section is not counted as additional rules. The count is within the N9 threshold, and the five rules address distinct phenomena: active effort, proportionality, combined efforts, surroundings, and falling. Each rule is traceable to observations, with Rule 5 representing a permitted generalization to reconcile falling observations with heaviness. Because the Stage 1 response contains explicit cross-rule references such as 'the Rule of the Downward Pull,' it satisfies the hierarchy requirement.
+- judge call cost (USD): `$0.0356`

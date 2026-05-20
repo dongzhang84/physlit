@@ -556,13 +556,13 @@ The operational rules fully cover steady pushing, pulling, carrying, opposed eff
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with explicit formulas. The proportional relations are made quantitative and combinable via S = K·P/H. Scope is stated per rule. No banned tokens appear (checked: velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, physicist names, F=ma). No P1–P7 patterns present. Uncovered cases (combining falling with continuing sideways push; non-collinear pushes) are named explicitly in the boundary notes.
 - judge call cost (USD): `$0.2335`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates the Stage 1 rules operationally, gives combinable quantitative rules for pushed pace as push divided by heaviness, states scopes and boundary cases, names uncovered combinations explicitly, and contains no banned tokens or disqualifying P1–P7 patterns.

@@ -163,13 +163,13 @@ Observation 11 (the thrown or carried stone) is the awkward case: rules 1 and 4 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally; the proportional relations are made quantitative as pace = total effort ÷ heaviness with explicit doubling/halving; scope is stated for each rule; no banned tokens appear; no P1–P7 pattern is present; and the awkward observation 11 plus the resting-on-track case are explicitly named in boundary notes.
 - judge call cost (USD): `$0.1613`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No disqualifying pattern P1–P7 (`ideal_induction.md` §5) is present in the operational rules.`

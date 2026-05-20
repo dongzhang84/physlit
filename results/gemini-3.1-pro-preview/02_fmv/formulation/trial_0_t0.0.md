@@ -139,13 +139,13 @@ Observation 6 is not fully covered by these operational rules without creating a
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with scope. The pace = effort/heaviness relation is made quantitative and combinable. No banned tokens appear. No P1-P7 patterns present. Observation 6's incomplete coverage is explicitly named in the boundary notes.
 - judge call cost (USD): `$0.1634`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response

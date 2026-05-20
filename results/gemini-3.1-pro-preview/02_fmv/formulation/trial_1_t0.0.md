@@ -140,7 +140,7 @@ The operational rules do not cleanly resolve Observation 6 (where a body pushed 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response (`ideal_induction.md` §3).`
@@ -148,7 +148,7 @@ The operational rules do not cleanly resolve Observation 6 (where a body pushed 
 - reasoning: The response contains the banned token 'mathematical' which is a morphological variant... actually checking again, the clearer banned token issue: the response does not contain obvious banned tokens. However, on careful re-read, I should verify. Scanning: no 'velocity', 'acceleration', 'inertia', 'momentum', 'mass', 'gravity', 'friction', 'energy', no physicist names, no F=ma. Reconsidering — I must reverse this verdict.
 - judge call cost (USD): `$0.1723`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response

@@ -166,7 +166,7 @@ I should note the standing tension flagged in my own boundary notes: rule 6 posi
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -182,7 +182,7 @@ I should note the standing tension flagged in my own boundary notes: rule 6 posi
   - reasoning: Cites rule 6 borrowed urging sustaining motion and rule 1 natural descent causing the fall, with rule 4/5 for fading. No standard-physics concepts.
 - judge call cost (USD): `$0.1461`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 

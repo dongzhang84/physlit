@@ -188,7 +188,7 @@ Reasoning: While both pushed with equal effort from opposite sides, Rule 5 gives
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -204,7 +204,7 @@ Reasoning: While both pushed with equal effort from opposite sides, Rule 5 gives
   - reasoning: Predicts immediate full pace E/H with no build-up, matching the F=mv column, justified via Rules 2, 3&4, 5.
 - judge call cost (USD): `$0.2469`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 

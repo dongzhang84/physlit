@@ -138,13 +138,13 @@ No observation remains in tension with these rules.
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1 (rule 1, 2), N2 (rule 2), N3 (rule 3), N4 (rule 1: immediate start and stop), N5 (rule 5: same pace, no gather), and N6 (rule 2: adding/opposing efforts) are all stated. All 12 observations are covered. Rules are mutually consistent and no P1-P7 patterns appear (rule 5 explicitly denies gathering speed; rule 1 denies carry-over).
 - judge call cost (USD): `$0.0997`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -152,3 +152,20 @@ No observation remains in tension with these rules.
 - evidence: surrounding air
 - reasoning: Step 1 scans the whole response for banned tokens. The response contains the banned token 'air' in rule 4.
 - judge call cost (USD): `$0.0207`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- stage1_rule_count: `5`
+- evidence: [{'criterion': 'N12', 'explanation': "The Stage 1 response lists 5 rules but contains no cross-rule references (no 'Rule N', 'corollary of', 'follows from', etc.) anywhere — it is a flat enumeration.", 'quote': 'Falling is produced by a steady downward pull that gives all released objects the same steady downward pace, regardless of their heaviness.'}]
+- reasoning: Stage 1 presents 5 top-level numbered rules. N9 passes (5 ≤ 12). N10 passes: each rule covers a distinct aspect (motion requires push, pace ∝ push, pace inversely ∝ heaviness, medium-independence, falling). N11 passes: each rule traces to observations (1: obs 1-3,7,11; 2: obs 4,8,9; 3: obs 5; 4: obs 6,12; 5: obs 10-12). N12 fails: with 5 rules, the threshold applies, and the Stage 1 response contains no cross-rule references or hierarchy markers — rules are presented as a flat list.
+- judge call cost (USD): `$0.1926`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `5`
+- reasoning: The Stage 1 response contains five top-level numbered rules, so it passes N9. The rules cover distinct phenomena: motion requiring current push, proportionality to net push, heaviness dependence, environmental irrelevance, and falling behavior, so N10 passes. Each rule traces to observations in the provided set, and the falling rule is a legitimate reconciliation of observations 10–12 with the pushed-motion rules. Because the Stage 1 response includes cross-rule language in Rule 5, such as “Since sideways motion requires a continuing sideways push or pull,” the hierarchy requirement is satisfied.
+- judge call cost (USD): `$0.0398`

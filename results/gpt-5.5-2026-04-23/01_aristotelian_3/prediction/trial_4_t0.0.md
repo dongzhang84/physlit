@@ -361,7 +361,7 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -377,7 +377,7 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
   - reasoning: Cites bow's received forward flight that fades, plus downward tendency, per Rules 5, 1, 2. No standard physics concepts like inertia or gravity.
 - judge call cost (USD): `$0.1706`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

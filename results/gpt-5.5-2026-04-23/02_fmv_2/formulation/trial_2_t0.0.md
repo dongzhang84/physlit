@@ -313,13 +313,13 @@ The operational rules above cover the stated observations: pushed blocks on trac
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with quantitative proportional relations (pace ∝ push/heaviness) allowing a third party to compute pace from push and heaviness. Scopes are stated per rule. No banned tokens appear, no P1–P7 patterns present, and boundary notes name the awkward cases (oblique pushes, need for a standard case, falling as special sub-rule).
 - judge call cost (USD): `$0.1926`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates the Stage 1 rules operationally, gives a quantitative combinable pace rule proportional to push divided by heaviness, states scope for pushed motion, falling, combination, settings, and release cases, and names boundary cases not fully specified. No banned token or P1–P7 disqualifying pattern appears.

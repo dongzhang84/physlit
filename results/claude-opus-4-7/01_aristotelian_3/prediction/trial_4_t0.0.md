@@ -171,7 +171,7 @@ What sustains the forward motion is, in the language of rule 3, "the push linger
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -187,7 +187,7 @@ What sustains the forward motion is, in the language of rule 3, "the push linger
   - reasoning: Attributes sustained motion to a lingering push (rule 3) and eventual fall to rule 1; acknowledges the rule-2/3 tension. No standard-physics concepts invoked.
 - judge call cost (USD): `$0.1261`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

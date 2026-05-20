@@ -279,13 +279,13 @@ The operational rules above do not fully cover pushes or pulls acting in directi
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with scope. The proportional relations are made quantitative and combinable via the explicit pace ∝ push/heaviness formula. No banned tokens appear, no P1–P7 patterns are present, and boundary cases (non-collinear pushes, supports) are named explicitly.
 - judge call cost (USD): `$0.1845`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates all Stage 1 rules operationally, gives a combinable quantitative rule with pace proportional to push and inversely proportional to heaviness, states scope for each rule, and explicitly names uncovered boundary cases. No banned token or P1–P7 disqualifying pattern appears in the Stage 2 response.

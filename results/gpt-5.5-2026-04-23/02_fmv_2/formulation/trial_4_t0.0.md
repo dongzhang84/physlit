@@ -284,13 +284,13 @@ The operational rules fully cover the main observations only by treating falling
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with proportionalities (pace ∝ push/heaviness), scope is stated per rule, no banned tokens appear, no P1–P7 patterns are present, and boundary notes address coverage limits (falling treated specially, unit calibration needed).
 - judge call cost (USD): `$0.1817`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates the Stage 1 rules operationally with scopes, gives a combinable quantitative relation pace ∝ net push/heaviness, separately states the falling rule, and names boundary limits. No banned tokens or P1–P7 disqualifying patterns appear.

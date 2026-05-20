@@ -152,7 +152,7 @@ Based on the strict application of the operational rules provided, here are the 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -168,7 +168,7 @@ Based on the strict application of the operational rules provided, here are the 
   - reasoning: Arrow loses horizontal motion immediately and falls straight down — matches Aristotelian prediction. Justified via Rules 1, 2, 3 without modern physics.
 - judge call cost (USD): `$0.1215`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 

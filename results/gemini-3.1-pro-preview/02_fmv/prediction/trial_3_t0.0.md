@@ -150,7 +150,7 @@ Initially, based on Rule 3, the individual identical paces from the two equal pu
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -166,7 +166,7 @@ Initially, based on Rule 3, the individual identical paces from the two equal pu
   - reasoning: Prediction is the block instantly moves at full steady pace toward the remaining pusher, matching F=mv. Justification cites Rules 1, 2, and 3.
 - judge call cost (USD): `$0.2377`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

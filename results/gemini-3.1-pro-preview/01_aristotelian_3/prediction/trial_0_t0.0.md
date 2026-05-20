@@ -144,7 +144,7 @@ Here are the predictions for the five scenarios, derived strictly from the provi
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 
@@ -165,7 +165,7 @@ Here are the predictions for the five scenarios, derived strictly from the provi
   - reasoning: Imparted motion sustains the arrow temporarily and depletes, then natural earthy tendency draws it down — matches Aristotelian prediction, cites Rules 1, 2, 3, no standard-physics terms.
 - judge call cost (USD): `$0.1426`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 

@@ -303,13 +303,13 @@ The operational rules remain qualitative and comparative rather than numerical. 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is restated operationally with conditional predictions and rankings. Scope is explicitly stated per rule. The response notes no quantitative conservation, only identity/kind preservation, consistent with Stage 1. No banned concepts are introduced. Boundary cases and uncovered observations are explicitly named.
 - judge call cost (USD): `$0.1311`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is reformulated with operational conditionals or ranking rules, with scope and boundary cases stated. The response explicitly avoids quantitative conservation principles and does not introduce banned post-Aristotelian concepts beyond Stage 1.

@@ -153,7 +153,7 @@ Here are the predictions based strictly on the operational rules provided:
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -169,7 +169,7 @@ Here are the predictions based strictly on the operational rules provided:
   - reasoning: Block instantly moves at full steady pace toward remaining pusher, matching F=mv column. Derived from Rules 1, 2, 3.
 - judge call cost (USD): `$0.2452`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

@@ -136,14 +136,30 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: The induction covers all 12 observations, satisfies N1 (rule 3: motion needs sustained pusher), N2 (rule 2 implies heavier falls faster via medium resistance, and rule 1 with obs 1), N3 (rule 2 medium resistance), N4 (rule 2 shape/spread), N5 (rule 1 natural regions), N6 (rule 4 heavens separate), N7 (tension explicitly flagged for arrow), N8 (oak floating explained via medium resistance vs heaviness). No banned concepts appear — impetus-style 'air carries the push' explicitly fades, consistent with allowed scholastic elaboration.
 - judge call cost (USD): `$0.1362`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned concepts are used in the prohibited technical sense. The response satisfies N1–N8, including heavier-falls-faster, medium and shape dependence, directional natural regions, floating, heaven/earth split, and explicit acknowledgment of the projectile tension; all observations are covered.
 - judge call cost (USD): `$0.0275`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `4`
+- reasoning: The rule set contains 4 top-level rules in both Stage 1 and Stage 2 (natural motion, medium resistance, forced motion, heavenly motion), well under the N9 threshold. The four rules describe distinct phenomena with no paraphrastic overlap (N10 passes). Each rule traces to specific observations cited explicitly, and the impetus/medium-as-sustainer move for the arrow is a permitted Aristotelian elaboration (N11 passes). Stage 2 contains explicit cross-references ("rule 1", "rule 2", "rule 3 takes over", "None of rules 1–3 apply"), satisfying N12.
+- judge call cost (USD): `$0.1509`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `8`
+- reasoning: The combined Stage 1 and Stage 2 response contains eight top-level rules: four proposed rules and four operational rules. This is below the N9 failure thresholds, and the Stage 2 rules reformulate rather than proliferate unsupported extra mechanisms. The rules are traceable to the listed observations, with the arrow/air and natural-place/heavenly-body treatments falling within permitted Aristotelian elaborations, and the response includes explicit cross-rule references such as “rule 3,” “rule 1,” and “rules 1–3,” satisfying N12.
+- judge call cost (USD): `$0.0320`

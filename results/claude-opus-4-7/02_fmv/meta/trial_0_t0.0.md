@@ -208,13 +208,13 @@ A few concepts crept in that were not in the original observations:
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `meta`)
 
 - over_claim: `no`
 - reasoning: Stage 2 was a judge split (possible failure), and Stage 4 explicitly identifies multiple imported concepts in Q2 (H as scalar with arithmetic, signed addition, k as fixed number, instantaneous time) that map onto the kinds of Stage 2 weaknesses a judge might flag. The model is calibrated about Stage 2 concerns rather than denying them.
 - judge call cost (USD): `$0.0828`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `meta`)
 
 - over_claim: `yes`
 - evidence: **Minor.** The predictions themselves are faithful to the Stage 2 rules

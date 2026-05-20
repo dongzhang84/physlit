@@ -232,13 +232,13 @@ These operational rules fully cover the stated observations only by treating fal
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with scope. The combined push/heaviness rule is given quantitatively (S = S0 · P/P0 · H0/H), allowing a third party to compute pace. No banned tokens appear (checked: velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, Newton, Galileo — none present). No P1–P7 patterns are asserted. Boundary notes explicitly name the falling/pushed split, the need for a comparison case, and non-aligned pushes as uncovered.
 - judge call cost (USD): `$0.2151`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response

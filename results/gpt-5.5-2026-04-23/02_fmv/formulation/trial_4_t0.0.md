@@ -277,13 +277,13 @@ These operational rules do not fully cover pushes or pulls that are neither in t
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with explicit formulas. The pace = push/heaviness relation combines both proportionalities quantitatively. Scope is given for each rule. No banned tokens appear (checked for velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, physicist names, F=ma). No P1–P7 patterns present. Boundary notes explicitly name uncovered cases (non-collinear pushes, need for scale).
 - judge call cost (USD): `$0.2204`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates each Stage 1 rule operationally with scope, gives a combinable quantitative rule pace = push/heaviness including proportional and inverse proportional relations, and explicitly names boundary cases not fully covered. No banned token or disqualifying P1–P7 pattern appears in the Stage 2 response.

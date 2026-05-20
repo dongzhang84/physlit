@@ -150,14 +150,30 @@ The hardest case is the arrow. The rules say ordinary pushed bodies soon lose th
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: The induction distinguishes natural vs forced motion (N1 via rule 4), orders falls by weight (N2 via rule 2 - iron ball before pea), addresses medium dependence (N3 via rule 2 - honey vs air), shape dependence (N4 via rule 2 - ball vs sheet), directional preferences (N5 via rule 1), heaven/earth split (N6 via rule 6), acknowledges the arrow tension (N7 explicitly as 'Remaining tension'), and accounts for floating (N8 via rule 3). No banned concepts appear; impetus-style 'received flight' is described as fading, not conserved. All 12 observations are covered.
 - judge call cost (USD): `$0.1383`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned concepts are used in the prohibited technical sense. The response satisfies N1-N8, including heavier-falls-faster, medium and shape dependence, natural upward/downward tendencies, floating, celestial separation, and explicit acknowledgment of the projectile tension; all observations are covered.
 - judge call cost (USD): `$0.0277`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `6`
+- reasoning: The combined Stage 1 + Stage 2 response presents 6 top-level rules, well within the parsimony threshold (N9 PASS). The rules cover distinct phenomena: natural place, medium/shape hindrance, sinking/floating, forced cart motion, arrow flight, and celestial circular motion — no two paraphrase the same claim (N10 PASS). Each rule traces to specific observations (rule 1→Obs 3,4,8,12; rule 2→Obs 1,9,11,12; rule 3→Obs 4,5; rule 4→Obs 2,6; rule 5→Obs 7; rule 6→Obs 10), and elaborations like natural place and medium hindrance fall under permitted Aristotelian moves (N11 PASS). Cross-rule references are explicit throughout (e.g., 'see rule 6', 'see rule 5', 'a special case of rule 4's idea... combined with rule 1's downward tendency'), satisfying N12.
+- judge call cost (USD): `$0.2028`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `12`
+- reasoning: The combined Stage 1 and Stage 2 response contains 12 top-level numbered rules, counting the six Stage 1 rules and the six Stage 2 operational formulations. This does not exceed the N9 parsimony threshold, and the repeated Stage 2 rules appear to reformulate rather than add independent duplicate operational claims beyond the Stage 1 set. The rules are traceable to the observations, with natural-place, medium-hindrance, arrow fading, and celestial circular-motion language falling within permitted Aristotelian elaborations. The response includes explicit cross-rule references such as “see rule 6,” “requires rule 3,” and “special case of rule 4,” so N12 is satisfied.
+- judge call cost (USD): `$0.0415`

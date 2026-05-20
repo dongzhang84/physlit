@@ -133,7 +133,7 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -142,7 +142,7 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 - reasoning: The response contains multiple banned tokens (§3): 'gravitational', 'inertial', and 'mass'. Per §3, presence anywhere in the response — even when contrasting with real physics — triggers FAIL at Step 1.
 - judge call cost (USD): `$0.0942`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -150,3 +150,21 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 - evidence: In our real physics, this is gravitational vs inertial mass equivalence.
 - reasoning: Step 1 scans the whole response for banned tokens. The response contains banned tokens/morphological variants, including "mass" and "inertial", so it fails immediately.
 - judge call cost (USD): `$0.0203`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N11']`
+- stage1_rule_count: `4`
+- evidence: [{'criterion': 'N11', 'explanation': 'The Stage 1 response is fragmentary — it appears to be a truncated tail of reasoning rather than a clean induced rule set, making traceability difficult to verify, but the visible content shows rules referenced (Rule 1, 2, 3, 4) without their actual statements in Stage 1.', 'quote': 'pace = effort / heaviness. Downward pull effort = k * heaviness. Pace = k * heaviness / heaviness = k.'}]
+- reasoning: The Stage 1 response provided is clearly a fragment — it begins mid-sentence and contains only the tail of the model's reasoning, not a clean enumeration of induced rules. It references Rules 1–4 (visible in Stage 2 as: instant-pace-with-push, air non-interference, pace=effort/heaviness, downward pull proportional to heaviness), so I infer the Stage 1 rule count is 4. N9 passes (4 ≤ 12), N10 passes (the four rules are distinct), and N12 is exempt (fewer than 5 rules). However, on N11, the Stage 1 fragment posits 'Downward pull effort = k * heaviness' as a mechanism — this is a legitimate generalisation reconciling Obs 5 and Obs 10, so it does NOT trigger N11. On reflection, since the visible rules all trace to observations (Rule 1↔Obs 1–3,7; Rule 2↔Obs 12; Rule 3↔Obs 4,5; Rule 4↔Obs 10), N11 is borderline-pass. Leaning PASS per §6 guidance on close calls.
+- judge call cost (USD): `$0.1759`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N11']`
+- stage1_rule_count: `4`
+- evidence: [{'criterion': 'N11', 'explanation': 'Observation 12 shows that falling pace is the same in air and in a vacuum, but no observation supports the broader fabricated claim that air applies no backward pull.', 'quote': 'Air applies no backward pull (Rule 2).'}]
+- reasoning: The Stage 1 excerpt contains four referenced rules: Rule 1, Rule 2, Rule 3, and Rule 4, so N9 passes and N12 is exempt because the count is under 5. The rules are not redundant within Stage 1, and the response includes cross-references such as 'Rule 1' and 'Rule 4'. However, Rule 2's claim that air applies no backward pull is not directly supported by the observations; Observation 12 only establishes equal falling pace in air and vacuum, not a general mechanism of air exerting zero backward pull.
+- judge call cost (USD): `$0.0337`

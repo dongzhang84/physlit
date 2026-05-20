@@ -129,7 +129,7 @@ exactly as on track. (Rule 1 & 4)
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -138,8 +138,25 @@ exactly as on track. (Rule 1 & 4)
 - reasoning: The response is only a fragment — it discusses coverage of observations by referencing 'Rule 1', 'Rule 4', 'Rule 5', etc., but the actual rules themselves are not present in the response. Without stated rules, none of N1–N6 can be verified as satisfied.
 - judge call cost (USD): `$0.0960`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear in the provided response. The response states present push sets pace with no carry-over, more push combines/adds, heaviness effects and common unchanging fall pace are covered by referenced rules and explanations, and no disqualifying pattern is present.
 - judge call cost (USD): `$0.0203`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `5`
+- evidence: [{'criterion': 'N12', 'explanation': "Stage 1 explicitly cross-references rules (e.g., 'Rule 1 & 5', 'Rule 1 & 4'), satisfying hierarchy.", 'quote': 'Obs 10: boulder & pebble fall together at steady unchanging pace, no increasing pace. (Rule 1 & 5)'}]
+- reasoning: The Stage 1 response (visible fragment plus implied numbered rules referenced as Rules 1–5) presents 5 distinct rules, well within parsimony bounds. The rules cover distinct phenomena (continuous push/instant pace, push/heaviness proportionality, superposition, air-irrelevance, downward pull), with no apparent in-Stage-1 duplicate pairs. Each rule traces to specific observations cited in the trace, and the downward-pull rule is a legitimate generalisation reconciling obs 5 and 10 rather than a fabrication. Explicit cross-rule references ('Rule 1 & 5', 'Rule 1 & 4') satisfy N12.
+- judge call cost (USD): `$0.1632`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `5`
+- reasoning: The visible Stage 1 text refers to Rules 1 through 5, so the Stage 1 rule count is 5, which is parsimonious under N9. Within the visible Stage 1 material, the rules are cross-referenced repeatedly, including references such as "Rule 1 & 4" and "Since Rule 1 says," satisfying N12. No Stage 1 rule pair is shown duplicating the same operational claim, and the described rules trace to the observations as generalizations over continuous push, proportional pace, combined pushes, air irrelevance, and falling.
+- judge call cost (USD): `$0.0325`

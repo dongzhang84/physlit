@@ -120,7 +120,7 @@ While these operational rules predict pushed and pulled motion along a line, the
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `Each rule from Stage 1 is restated in operational form — a proportionality, a ranking rule, an explicit conditional, or a procedure a third party could apply.`
@@ -128,7 +128,7 @@ While these operational rules predict pushed and pulled motion along a line, the
 - reasoning: Stage 1 did not include a rule about falling bodies (N5 was missing already), and Stage 2 likewise fails to provide an operational rule covering falling — observations 10 and 12 are not covered. While the boundary notes mention falling, the response does not give an operational rule for it, and the Stage 1 rules being restated omit falling entirely.
 - judge call cost (USD): `$0.1607`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response (`ideal_induction.md` §3).`

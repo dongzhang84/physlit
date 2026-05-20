@@ -134,14 +134,31 @@ Here is a self-consistent set of rules that explains the observations using only
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: The induction distinguishes natural vs. imparted/forced motion (N1), orders fall by heaviness (N2), accounts for medium thickness (N3) and shape (N4), gives natural directions for fire/earth/water (N5), treats celestial circular motion as a separate inherent behavior (N6), addresses the arrow via a fading imparted drive (N7, impetus-style with fading allowed), and gives a substance-based account of floating (N8). No banned concepts appear; 'drive' is invented vocabulary that fades rather than being conserved, so it doesn't trip the momentum near-pass. All 12 observations are covered.
 - judge call cost (USD): `$0.1365`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No §3 banned concept appears in the induced rules. The response satisfies N1-N8, including heavier-falls-faster, medium and shape dependence, natural upward/downward directions, a heaven/earth split, projectile tension via fading imparted drive, and an account of floating; all observations are covered.
 - judge call cost (USD): `$0.0274`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `4`
+- reasoning: The rule set contains 4 top-level rules (Natural Directions, Imparted Drive and Effort, Resistance of Surroundings, Overcoming Resistance), well under the N9 threshold. The rules are independent — each addresses a distinct phenomenon (natural motion, imparted motion, medium resistance, competition between drive and resistance). All rules trace to specific observations (Rule 1 → Obs 3,4,5,8,10; Rule 2 → Obs 2,6,7; Rule 3 → Obs 2,9,11; Rule 4 → Obs 1,2,5,7,9,12) and use permitted Aristotelian elaborations (natural place, medium resistance, impressed motion with fading). With only 4 rules, the set is exempt from N12 hierarchy requirements, though Rule 4 does explicitly combine drives from Rules 1-2 against resistance from Rule 3.
+- judge call cost (USD): `$0.1596`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10']`
+- rule_count: `8`
+- evidence: [{'criterion': 'N10', 'explanation': 'This Stage 1 rule makes the same operational claim as Stage 2 Rule 1 about material composition determining natural upward, downward, or circular motion.', 'quote': '1. **Natural Directions:** Every material possesses a natural direction of motion that it continuously seeks when free to do so. Fire and smoke naturally rise upward toward the sky. Earth, metals, stone, and water naturally move downward toward the ground. The Sun, Moon, and stars inherently travel in continuous circular paths across the sky.'}, {'criterion': 'N10', 'explanation': 'This Stage 2 rule duplicates the same phenomenon and situation already covered by the Stage 1 Natural Directions rule.', 'quote': '**1. Natural Directions**\n*   **Operational form:** An object’s natural path of motion is strictly determined by its material composition. If a terrestrial body is composed of fire or smoke, it moves vertically upward. If composed of earth, metal, stone, or water, it moves vertically downward. If it is a celestial body (Sun, Moon, stars), it moves continuously in a circular path.'}]
+- reasoning: I count eight top-level rules across the concatenated Stage 1 and Stage 2 responses: four initial rules and four operational reformulations. The count is below the N9 failure threshold, and the rules are traceable to the observations with permissible Aristotelian elaborations such as natural place, resistance, and fading imparted drive. However, because Stage 2 restates the same four rules from Stage 1 as operational versions, at least one pair of rules describes the same operational phenomenon, triggering N10. The response also contains hierarchy markers such as “Rule 2” and “Rule 4,” so N12 does not fail.
+- judge call cost (USD): `$0.0372`

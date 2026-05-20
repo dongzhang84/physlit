@@ -138,14 +138,30 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: The induction covers all 12 observations with rules satisfying N1 (rule 4, two-regime), N2 (rule 2, weight ordering), N3 (rule 3, medium), N4 (rule 3, shape), N5 (rule 1, directional preference), N6 (rule 6, heaven/earth split), N7 (rule 5, impressed push that fades — valid impetus-style acknowledgment), and N8 (rule 2, oak/stone via weight comparison). No §3 banned concepts appear; the impressed push is explicitly described as fading, not conserved.
 - judge call cost (USD): `$0.1338`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned concepts are used in the prohibited technical sense. The response satisfies N1–N8, covers all observations, acknowledges the projectile tension with a fading impressed push, and separates heavenly motion from terrestrial rules.
 - judge call cost (USD): `$0.0272`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `6`
+- reasoning: The rule set consists of 6 top-level rules in both Stage 1 and Stage 2 (well within parsimony bounds). Rules are distinct: natural place, weight-ranking, medium resistance, forced motion, impressed push, and celestial motion each address different phenomena. Every rule traces to specific observations cited in the response, and all elaborations (natural place, medium resistance, impressed push with explicit fading) fall within permitted Aristotelian framework moves. The Stage 2 response contains explicit cross-rule references (e.g., 'rule 3 handles that', 'the cart of rule 4', 'combining rules 2 and 3'), satisfying hierarchy.
+- judge call cost (USD): `$0.1579`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `12`
+- reasoning: I count 12 top-level rules across Stage 1 and Stage 2: six proposed rules and six operational rules; boundary notes and tensions are not counted as rules. N9 passes because the count is not greater than 12, and N10 passes because the Stage 2 rules appear to be operational reformulations of the Stage 1 rules rather than independent duplicate claims within a single flat set. N11 passes because each rule is traceable to the observations or to permitted Aristotelian elaborations such as natural place, medium resistance, impressed push, and the heaven/earth split. N12 passes because the response contains explicit cross-rule references such as “rules 1–5,” “rule 3 handles that,” “rule 5,” and “combining rules 2 and 3.”
+- judge call cost (USD): `$0.0344`

@@ -127,13 +127,13 @@ The operational rules presented above leave a few specific observations awkwardl
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is restated operationally with proportionalities and ranking rules. Scope is given for each. The response explicitly states nothing is conserved quantitatively, consistent with Stage 1. No banned concepts are newly introduced. Boundary cases are named explicitly rather than dropped.
 - judge call cost (USD): `$0.0661`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No new forbidden concept is introduced relative to Stage 1.`

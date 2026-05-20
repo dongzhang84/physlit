@@ -141,14 +141,31 @@ No observation remains in tension with these rules.
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated (rule 1 covers pace from present push and no build-up; rule 2 covers immediate stop; rule 1 covers more push more pace with doubling; rule 4 covers heaviness reducing pace; rule 5 covers common unchanging fall pace; rule 3 covers combining pushes). All observations are covered, rules are consistent, and no P1-P7 patterns appear.
 - judge call cost (USD): `$0.0985`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response satisfies N1–N6, covers all observations, is mutually consistent, and contains no disqualifying pattern.
 - judge call cost (USD): `$0.0207`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- stage1_rule_count: `6`
+- evidence: [{'criterion': 'N12', 'explanation': "The Stage 1 response has 6 rules but contains no cross-rule reference (no 'Rule N', 'derived from', 'corollary of', or similar hierarchy marker) anywhere — it is a flat enumeration.", 'quote': "1. **An object's pace is set directly by the total push or pull acting on it at that moment.**"}]
+- reasoning: Stage 1 presents 6 top-level numbered rules. N9 passes (6 ≤ 12). N10 passes: each rule covers a distinct phenomenon (push-pace proportionality, cessation without push, addition/subtraction of pushes, heaviness, falling, release behavior). N11 passes: each rule traces to observations (Rule 1 → obs 1,2,4; Rule 2 → obs 3,6,11; Rule 3 → obs 8,9; Rule 4 → obs 5; Rule 5 → obs 10,12; Rule 6 → obs 11). However, N12 fails: with 6 rules (≥5), the Stage 1 response contains no cross-rule references — no rule cites another rule by number or uses hierarchy markers like 'derived from', 'corollary of', or 'follows from'. The cross-references appear only in Stage 2, which is not in scope for N12.
+- judge call cost (USD): `$0.2000`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `6`
+- reasoning: The Stage 1 response contains six top-level numbered rules, so it is well below the N9 parsimony failure thresholds. The rules are not redundant within Stage 1: each addresses a distinct aspect of the observed system, such as total present push, absence of push, combination of pushes, heaviness, falling, and release from a hand. Each rule traces to one or more observations, with the falling rule being a legitimate generalization from the falling observations rather than an unsupported fabrication. Because the set has at least five rules, N12 applies; the Stage 1 response contains cross-rule structure through the final statement that the observations are reconciled by the rules and through the internal relation between rules, so it passes hierarchy.
+- judge call cost (USD): `$0.0409`

@@ -144,13 +144,13 @@ Observation 11 (the carried-then-released stone) is not fully covered by the rul
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with scope; the proportional relations are made quantitative (P = P₀·(E/E₀)·(H₀/H)) so a third party can compute pace from push and heaviness. No banned tokens appear, no P1–P7 patterns are present, and observation 11's incomplete coverage is explicitly named in the Boundary notes.
 - judge call cost (USD): `$0.1577`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response gives operational rules with quantitative, combinable proportional relations for effort and heaviness, scopes the rules, and explicitly names limitations for observation 11 and angled efforts. No banned token or disqualifying P1–P7 pattern appears in the Stage 2 response.

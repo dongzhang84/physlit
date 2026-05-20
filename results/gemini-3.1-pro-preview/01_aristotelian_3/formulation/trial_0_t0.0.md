@@ -124,13 +124,13 @@ The operational rules do not fully cover several edge cases present in the origi
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each of the three Stage 1 laws is restated with operational forms (categorical rules, ranking rules, proportionalities, conditionals). Scope is given for each. Conservation is addressed: celestial paths preserved, imparted motion explicitly not conserved, no forbidden conservation imported. No banned concepts are introduced. Boundary cases (smoke dispersal, feather vs. stone, breeze dual role, trajectory geometry) are explicitly named.
 - judge call cost (USD): `$0.0685`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response operationalizes each Stage 1 law with conditionals, rankings, or proportionalities, states scope for each, and identifies only non-dynamical preserved features or explicitly says no dynamical quantity is conserved. It does not introduce banned concepts in their forbidden technical senses, and it lists boundary cases and uncovered observations such as smoke dispersal, feather fluttering, trajectory geometry, and wind's dual role.

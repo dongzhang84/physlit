@@ -134,7 +134,7 @@ Objects constantly experience a downward pull, and the strength of this downward
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -143,7 +143,7 @@ Objects constantly experience a downward pull, and the strength of this downward
 - reasoning: The response was cut off and never explicitly states that the falling pace is unchanging during the fall (N5b) nor that fall pace is the same with or without air (observation 12 coverage). Rule 3 explains equal fall pace via cancellation of heaviness, but the unchanging-during-fall claim and observation 12 are absent from the visible text.
 - judge call cost (USD): `$0.0974`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -151,3 +151,19 @@ Objects constantly experience a downward pull, and the strength of this downward
 - evidence: we can define its physics with four general rules
 - reasoning: Step 1 scans the whole response for banned tokens. The response contains the banned physicist/physics-derived token 'physics', so the trial fails before checking necessary conditions.
 - judge call cost (USD): `$0.0202`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `3`
+- reasoning: Stage 1 presents three top-level rules (Effort and Pace, Combination, Downward Pull); the response appears truncated mid-sentence in Rule 3 but no fourth rule appears. With only 3 rules, N9 passes easily and N12 is exempt (fewer than 5 rules). The rules are independent — each covers distinct phenomena (single-effort motion, multi-effort combination, falling) — and each traces to specific observations cited in the rule itself (1,2,3,4,5,7 for Rule 1; 8,9 for Rule 2; 10,11 for Rule 3). Rule 2 explicitly cross-references Rule 1 ('Combining Rule 2 with Rule 1'), showing hierarchy even though N12 doesn't apply.
+- judge call cost (USD): `$0.1517`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `3`
+- reasoning: The Stage 1 response contains three top-level numbered rules: Effort and Pace, Combination, and Downward Pull. This passes N9 because the count is well below the parsimony threshold, and it is exempt from N12 because there are fewer than five rules. The rules are independent within Stage 1, and each traces to observations: Rules 1 and 2 directly cover pushed/pulled motion and combined efforts, while Rule 3 legitimately generalizes falling behavior by linking downward pull to heaviness and applying Rule 1.
+- judge call cost (USD): `$0.0316`

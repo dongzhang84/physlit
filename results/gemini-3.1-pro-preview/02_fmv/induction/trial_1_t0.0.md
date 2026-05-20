@@ -133,7 +133,7 @@ Additionally, Observation 10 is conceptually difficult: it requires the world's 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `5`
@@ -142,7 +142,7 @@ Additionally, Observation 10 is conceptually difficult: it requires the world's 
 - reasoning: Rule 4 posits a hidden balancing agent (a downward pull scaled to heaviness) to rescue the equal-pace falling, which is a hidden-resistance/rescue pattern explaining the phenomenon by an opposing/matching agent not present in the observations.
 - judge call cost (USD): `$0.1050`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -150,3 +150,21 @@ Additionally, Observation 10 is conceptually difficult: it requires the world's 
 - evidence: drifting in open space
 - reasoning: Step 1 requires scanning the whole response for banned tokens or morphological variants. The response contains “drifting,” which is a morphological variant of “drift” in the carry-over vocabulary and triggers the lexical fail.
 - judge call cost (USD): `$0.0222`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- stage1_rule_count: `5`
+- evidence: [{'criterion': 'N12', 'explanation': "The Stage 1 response has 5 top-level rules but contains no cross-rule references (no 'Rule N', 'derived from', 'corollary of', 'follows from', etc.) anywhere within the rule statements or the tension note, which refers only to observation numbers.", 'quote': '1. **The Requirement of Present Effort:** ... 2. **Pace, Effort, and Heaviness:** ... 3. **Combining Efforts:** ... 4. **The Downward Pull:** ... 5. **Irrelevance of Surroundings:**'}]
+- reasoning: Stage 1 presents 5 distinct top-level rules, well under the N9 parsimony thresholds. The rules are independent (N10) — each covers a distinct phenomenon (present-effort requirement, proportionality, combination, falling, surroundings). N11 is satisfied: each rule traces to specific observations, and Rule 4's downward-pull-scaled-to-heaviness is a legitimate generalisation reconciling Obs 10 with Obs 5/2. However, N12 fails: with 5 rules and no cross-rule references anywhere in Stage 1 (the tension note cites observations, not rules), the rule set is a flat enumeration per the mechanical N12 trigger.
+- judge call cost (USD): `$0.1807`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N11']`
+- stage1_rule_count: `5`
+- evidence: [{'criterion': 'N11', 'explanation': 'This introduces an unsupported spatial limitation on the downward pull, apparently to reconcile Observation 6 with Observations 10 and 11, and the response itself notes that the detail is not explicitly provided by the observations.', 'quote': "To resolve this without contradiction, we must assume the world's downward pull only exists near the ground and simply vanishes in open space—a detail the observations do not explicitly provide, but which is required to keep an unsupported block completely still."}]
+- reasoning: The Stage 1 response has five top-level numbered rules, so it passes N9. The rules are not duplicate operational claims, and the response contains cross-rule/hierarchy language such as 'To resolve this' and references to observations, so N12 does not fail. However, the Stage 1 rule set introduces a fabricated mechanism: the downward pull exists only near the ground and vanishes in open space, which is not supported by any observation and is explicitly admitted as an extra assumption.
+- judge call cost (USD): `$0.0370`

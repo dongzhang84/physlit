@@ -135,7 +135,7 @@ Based on the observations provided, here is the smallest set of self-consistent 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -144,8 +144,25 @@ Based on the observations provided, here is the smallest set of self-consistent 
 - reasoning: The response was truncated mid-rule 4 and never states that bodies stop at once when the push ends (N4b is only implicit at best in rule 1's 'halting at once'). More critically, the falling account derives a common pace via proportional cancellation of heaviness, but this same Rule of Proportions, combined with rule 3's claim that heavier objects receive a 'much stronger pull,' would yield a heavier-object pace equal to a lighter one — this is fine for N5(a), but the response never asserts the fall pace is unchanging in a way independent of the proportions argument, and the truncation leaves N6/coverage of obs 8–9 (combined pushes) only partially addressed in rule 1. However, the clearest failure is that the response is cut off ('Invisible surroundings—') and therefore does not present a complete rule set; necessary condition coverage cannot be confirmed.
 - judge call cost (USD): `$0.1128`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear in the response. The stated rules satisfy N1–N6, cover the observations, are mutually consistent, and contain no disqualifying patterns.
 - judge call cost (USD): `$0.0202`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `4`
+- reasoning: Stage 1 contains 4 top-level rules (the fourth is cut off mid-sentence but its title and opening clause are present). Count is well within parsimony bounds (N9 passes). The rules cover distinct domains — combined effort, proportions, downward pull, and surroundings — with no within-Stage-1 duplication (N10 passes). Rule 3's 'downward pull' is a legitimate generalisation reconciling obs 5 (heavier moves slower) with obs 10/12 (all fall alike), not a fabrication (N11 passes). Rule 3 explicitly cross-references 'the Rule of Proportions', satisfying N12.
+- judge call cost (USD): `$0.1492`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N11']`
+- stage1_rule_count: `4`
+- evidence: [{'criterion': 'N11', 'explanation': 'This introduces an unsupported mechanism or entity, since none of the observations support a rule about invisible surroundings affecting motion; observation 12 instead says falling is the same in open air and in a jar emptied of air.', 'quote': '4. **The Rule of Surroundings**\n   Invisible surroundings—'}]
+- reasoning: The Stage 1 response contains four top-level numbered rules, so it passes N9 and is exempt from N12 because the count is below five. The first three rules are traceable to observations about effort, heaviness, combined pushes, instantaneous stopping, and falling. Rule 4 begins to posit 'Invisible surroundings' as a governing rule, but no observation supports such a surroundings mechanism, and the air-removal observation cuts against it, so N11 fails.
+- judge call cost (USD): `$0.0331`

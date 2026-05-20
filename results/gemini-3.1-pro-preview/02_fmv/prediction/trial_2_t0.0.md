@@ -147,7 +147,7 @@ Here are the predictions for the novel scenarios based strictly on the provided 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 
@@ -165,7 +165,7 @@ Here are the predictions for the novel scenarios based strictly on the provided 
   - reasoning: Prediction states the block instantaneously moves at steady pace toward the remaining pusher, matching the F=mv column, derived from Rules 1 and 3.
 - judge call cost (USD): `$0.2445`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 

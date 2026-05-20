@@ -132,13 +132,13 @@ What makes this difficult is reconciling the nature of an object being "heavy." 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all satisfied: Rule 1 covers N1 and N4 (immediate motion, immediate halt); Rule 2 covers N6 (combination); Rule 3 covers N2 and N3 (more effort more pace, heavier less pace); Rule 5 covers N5 (common unchanging fall pace) and N4(b) for release. Coverage of all 12 observations is present. No P1-P7 patterns triggered — the falling rule explicitly states unchanging pace and straight-down drop, and the 'tension' discussion does not refuse the task.
 - judge call cost (USD): `$0.1084`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -146,3 +146,19 @@ What makes this difficult is reconciling the nature of an object being "heavy." 
 - evidence: Because this downward effort increases in exact lockstep with the object's heaviness
 - reasoning: The response contains the banned token morphological variant "increases"? Actually, the first banned-token match is the morphological variant "pull" is not banned; however, no listed banned token such as velocity, acceleration, inertia, momentum, mass, gravity, friction, energy, Newton, Galileo, or F=ma appears. Therefore this would not fail at Step 1 for the quoted evidence.
 - judge call cost (USD): `$0.0232`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `5`
+- reasoning: Stage 1 contains 5 distinct top-level rules, well under the N9 threshold. Each rule covers a distinct phenomenon (effort/pace, combination, proportionality, environment-independence, falling), so no N10 duplication. Every rule traces to specific observations (Rule 1→obs 1,2,3,7; Rule 2→obs 8,9; Rule 3→obs 4,5; Rule 4→obs 6,12; Rule 5→obs 10,11), with the scaled downward pull being a legitimate generalisation reconciling obs 5 and 10 (explicitly permitted under N11). Rule 5 contains an explicit cross-reference ('applying the third rule means all unsupported objects fall at the identical, unchanging downward pace'), satisfying N12.
+- judge call cost (USD): `$0.1661`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `5`
+- reasoning: The Stage 1 response contains five top-level numbered rules, so it passes N9 parsimony. The rules cover distinct phenomena: active effort, combination of efforts, effort/heaviness/pace proportionality, environmental independence, and falling. Each rule is traceable to the observation set, with Rule 5 representing a permitted generalization reconciling falling observations with the effort/heaviness relation. N12 is satisfied because Stage 1 includes explicit cross-rule reference in Rule 5: “applying the third rule.”
+- judge call cost (USD): `$0.0346`

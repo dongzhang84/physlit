@@ -145,13 +145,13 @@ Observation 7 (the arrow) remains the case my rules handle most awkwardly: rule 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is restated operationally with prediction procedures, scope is stated per rule, preserved quantities (kind, weight, vertical direction, circular period) are identified consistent with Stage 1 without importing banned conservation laws, no new banned concepts appear, and boundary cases plus problematic observations (7, 8, 10, shape-vs-weight) are named explicitly.
 - judge call cost (USD): `$0.0932`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is restated operationally with scope, conserved or preserved features are stated without importing energy or momentum, and no newly banned concepts are introduced in a prohibited technical sense. Boundary cases and under-covered observations are explicitly named rather than silently dropped.

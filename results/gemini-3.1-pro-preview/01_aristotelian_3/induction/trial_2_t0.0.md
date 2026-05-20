@@ -124,7 +124,7 @@ Here is a self-consistent set of rules derived directly from the observations, u
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
@@ -133,10 +133,26 @@ Here is a self-consistent set of rules derived directly from the observations, u
 - reasoning: The induction does not establish the two-regime distinction required by N1. There is no rule stating that forced/violent motion requires a sustained external cause and ceases when the cause is removed; observation 2 (cart pushed, then stops) is not covered by any stated rule, and the projectile tension in observation 7 is also not acknowledged (N7), but N1 fails first.
 - judge call cost (USD): `$0.1240`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `2`
 - first_fail_clause: `N7`
 - reasoning: The response gives no acknowledgment that the arrow continuing after leaving the bow is in tension with the rule that ordinary terrestrial motion through resisting media requires a sustained cause or tends to cease. Observation 7 is neither explained nor flagged as problematic.
 - judge call cost (USD): `$0.0251`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `3`
+- reasoning: The rule set consists of 3 top-level rules (Natural Directions, Mediums and Resistance, Weight as Downward Strength), well under N9 thresholds. Each rule covers a distinct domain (no N10 overlap) and traces to specific observations: Rule 1 to obs. 3, 4, 5, 8, 10, 12; Rule 2 to obs. 9, 11, 12; Rule 3 to obs. 1, 5, 6. With fewer than 5 rules, N12 hierarchy is exempt. All four criteria pass.
+- judge call cost (USD): `$0.1372`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `3`
+- reasoning: The combined Stage 1 and Stage 2 rule set has three distinct top-level rules: Natural Directions, Mediums and Resistance, and Weight as Downward Strength. This is well below the N9 parsimony thresholds, and the rules address distinct operational domains rather than duplicating the same phenomenon. Each rule is traceable to the observations: natural directions to observations 3, 4, 5, 8, 10, and 12; medium resistance to observations 9, 11, and 12; and weight/downward strength to observations 1, 5, and 6. Because the rule set has fewer than five rules, it is exempt from the N12 hierarchy requirement.
+- judge call cost (USD): `$0.0295`

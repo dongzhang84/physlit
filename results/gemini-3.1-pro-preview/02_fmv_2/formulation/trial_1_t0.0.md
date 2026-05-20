@@ -124,13 +124,13 @@ While these operational rules successfully predict steady motion from steady pus
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates each Stage 1 rule operationally, makes the push/heaviness relation quantitative and combinable (pace = effort/heaviness with doubling and halving), states scope for each rule, contains no banned tokens or morphological variants, exhibits no P1–P7 patterns, and explicitly names the uncovered cases (non-collinear combination, post-push motion, resting bodies) in the Boundary notes.
 - judge call cost (USD): `$0.1521`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response

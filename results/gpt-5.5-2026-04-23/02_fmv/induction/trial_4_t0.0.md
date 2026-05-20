@@ -160,14 +160,31 @@ No observation remains in serious tension with these rules. The main special rul
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 all satisfied: push sets pace (R1), more push more pace (R3), heavier less pace (R4), no build-up and stops at once (R1, R2), common unchanging fall pace (R10, R11, R13), pushes combine (R8, R9, R14). All 12 observations covered, rules are mutually consistent, and no P1-P7 patterns present (rule 10's matched downward pull is not a hidden resistance balancing a push).
 - judge call cost (USD): `$0.1083`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response satisfies N1–N6, covers all observations, is mutually consistent, and contains no disqualifying pattern.
 - judge call cost (USD): `$0.0224`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `14`
+- reasoning: Stage 1 has 14 top-level numbered rules, which is above the 12-observation count but well below the N9 moderate-FAIL threshold of >15. The rules are largely independent: rule 5 introduces the quantitative form pace=effort/heaviness combining rules 3 and 4 (legitimate generalisation, not duplication); rules 8/9/14 cover same-direction, opposed, and general combination respectively without paraphrasing one another. Rule 10's matched downward pull is a legitimate reconciliation of observations 5 and 10/12, which §3 explicitly permits under N11. Hierarchy is satisfied: rule 14 explicitly references combining pushes, and several rules cross-reference one another implicitly through the unified pace formula; the Stage 2 mirroring confirms internal cross-references exist, and rule 14 functions as a derived consolidation. Lean PASS; the count of 14 is a soft signal but does not combine with an N10 or N11 violation.
+- judge call cost (USD): `$0.2230`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10']`
+- stage1_rule_count: `14`
+- evidence: [{'criterion': 'N10', 'explanation': 'Rule 14 subsumes the same operational claim as Rule 5 for carried or pulled objects, adding only the already-covered combination of pushes while restating that pace is set by effort divided by heaviness.', 'quote': '5. **A useful rule for carried or pulled objects is:**  \n   the pace equals the applied effort divided by the object’s heaviness.  \n   This gives a steady pace immediately, with no gradual change from rest.\n\n14. **All motion is the moment-by-moment result of the current unbalanced push or pull.**  \n   Add all pushes and pulls along a line, counting opposite directions against each other. If something is left over, the object moves that way at a pace set by the leftover effort and by the object’s heaviness. If nothing is left over, it stays put.'}]
+- reasoning: The Stage 1 response has 14 top-level numbered rules, so N9 is only a soft signal and not an automatic fail. However, the rule set contains redundancy within Stage 1: Rule 5 states the quantitative pace-from-effort-and-heaviness rule, while Rule 14 restates the same operational relation for current unbalanced push or pull, overlapping the same pushed/pulled-motion situation. The remaining rules appear traceable to observations, and Stage 1 includes cross-rule/hierarchy language such as 'combined with' in the remaining-tension note, so the structural failure is N10.
+- judge call cost (USD): `$0.0516`

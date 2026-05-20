@@ -145,7 +145,7 @@ Here are the predictions for the five scenarios, derived strictly using the prov
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -161,7 +161,7 @@ Here are the predictions for the five scenarios, derived strictly using the prov
   - reasoning: Attributes forward motion to the imparted push that wears out against air hindrance, leaving natural downward tendency. Faithfully paraphrases Rule 3 with no standard-physics concepts.
 - judge call cost (USD): `$0.1224`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

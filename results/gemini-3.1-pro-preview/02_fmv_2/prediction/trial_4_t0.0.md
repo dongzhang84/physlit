@@ -147,7 +147,7 @@ Based on the operational rules provided, here are the predictions for each scena
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -163,7 +163,7 @@ Based on the operational rules provided, here are the predictions for each scena
   - reasoning: Prediction is instant full steady pace with no build-up, matching F=mv column. Cites Rules 3 and 1. No banned tokens detected in response.
 - judge call cost (USD): `$0.2356`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

@@ -180,7 +180,7 @@ The arrow eventually falls because, by Rule 1, it is a heavy body (an arrow is w
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -196,7 +196,7 @@ The arrow eventually falls because, by Rule 1, it is a heavy body (an arrow is w
   - reasoning: Cites Rule 5 for continuation as a tendency that weakens, and Rule 1 for the heavy nature bending the path earthward. No standard-physics concepts invoked.
 - judge call cost (USD): `$0.1408`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 

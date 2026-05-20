@@ -155,14 +155,30 @@ The main tension is between the cart and the arrow. The cart seems to need conti
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned concepts appear. All N1-N8 are satisfied: two-regime motion (Rule 5), heavier-falls-faster (Rule 2), medium resistance (Rule 3), shape dependence (Rule 2), directional preference (Rule 1), heaven/earth split (Rule 7), projectile tension addressed via fading impressed motion (Rule 6), and floating accounted for (Rule 4). All 12 observations are covered, and no near-pass pattern triggers.
 - judge call cost (USD): `$0.1341`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: The response avoids banned concepts, satisfies N1–N8, and covers all observations. It distinguishes natural and forced motion, includes heavier/compact bodies descending faster, medium and shape effects, upward/downward natural tendencies, floating, a separate celestial rule, and explicitly acknowledges the cart-arrow projectile tension.
 - judge call cost (USD): `$0.0279`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `7`
+- reasoning: The rule set contains 7 top-level rules in both Stage 1 and Stage 2, well under the N9 thresholds. Rules are distinct in phenomenon (natural place, comparative descent, medium hindrance, water flotation, road continuation, carried motion, celestial circles), satisfying N10. Each rule traces to specific observations (Obs 3,4,8,12 for R1; 1,11 for R2; 9,11,12 for R3; 5 for R4; 2,6 for R5; 7 for R6; 10 for R7), satisfying N11. Cross-rule references appear explicitly (e.g., 'see Rule 7', 'Rule 4', 'Rule 6', 'Rule 2'), satisfying N12.
+- judge call cost (USD): `$0.1965`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `14`
+- reasoning: Counting Stage 1 and Stage 2 top-level numbered rules together gives 14 rules: seven induction rules and seven formulation rules. This is above 12 but not over the N9 fail threshold, and the Stage 2 rules largely restate the Stage 1 rules in operational form rather than creating an excessive unstructured set. The rules are traceable to the observations, avoid unsupported fabricated mechanisms, and include cross-rule references such as “see Rule 7,” “refinement of Rule 1,” “handled only by Rule 4,” and overlaps between Rule 5 and Rule 6, satisfying hierarchy. No pair rises to a clear N10 failure because the repeated Stage 1/Stage 2 counterparts function as reformulations across stages rather than independent duplicate claims within a flat rule set.
+- judge call cost (USD): `$0.0419`

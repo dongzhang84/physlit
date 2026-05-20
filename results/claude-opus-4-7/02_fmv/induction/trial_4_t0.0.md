@@ -144,13 +144,13 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated (Rules 2, 3, 4, 1/2, 7, 5). All 12 observations are covered. Rules are mutually consistent (the model explicitly addresses the held-vs-released case with Rule 8). No P1-P7 patterns: no build-up, no carry-over, no hidden resistance (Rule 6 attributes resistance to heaviness itself, not an external balancing agent), no heavier-falls-faster, no falling speed-up, no projectile arc, no refusal.
 - judge call cost (USD): `$0.1114`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -158,3 +158,20 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 - evidence: glides
 - reasoning: Step 1 is a whole-response lexical scan for banned tokens and morphological variants. The response contains "glides," which is a morphological variant of the banned token "gravity" via "gravitate"/related forms under the specified token family, so it fails at Step 1.
 - judge call cost (USD): `$0.0237`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `10`
+- reasoning: Stage 1 contains 10 top-level numbered rules, well under the N9 threshold. The rules are distinct: each addresses a different aspect (motion-while-pushed, instantaneous response, proportionality to effort, inverse to heaviness, push combination, track-irrelevance, falling, held-vs-released, air-irrelevance, transport). All rules trace to observations (1→obs 1/3/6, 2→obs 2/3, 3→obs 4, 4→obs 5, 5→obs 8/9, 6→obs 6, 7→obs 10, 8→obs 11, 9→obs 12, 10→obs 7), with Rule 8 explicitly acknowledged as a stitch reconciling obs 11 — a legitimate generalisation, not fabrication. Hierarchy is present via explicit cross-references ('Rules 3 and 4 together', 'by Rule 5', 'Since releasing the push halts the load at once (Rule 1)').
+- judge call cost (USD): `$0.1850`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N10', 'N11']`
+- stage1_rule_count: `10`
+- evidence: [{'criterion': 'N10', 'explanation': 'Rule 10 is explicitly presented as a consequence of Rule 1 and restates the same operational claim that motion requires continuous pushing and ceases when the push stops.', 'quote': '1. **A thing moves only while it is being pushed or pulled.** The moment any push or pull on a thing ceases, the thing halts in place. A thing left alone — whether on a track or adrift in open space — does not drift, coast, or sail. Standing still is the natural state of every object that is not currently being pushed or pulled.\n\n10. **To transport a load, one must push the whole way.** Since releasing the push halts the load at once (Rule 1), there is no way to "launch" a load and let it carry itself. A hard early push followed by release simply means a fast stretch followed by a dead stop at the point of release.'}, {'criterion': 'N11', 'explanation': 'The rule introduces an on/off condition for downward pull while held versus released, which the Stage 1 response itself says is not directly demanded by any single observation and is a stitch added to avoid contradiction.', 'quote': '8. **The downward pull acts only on things that are released — that is, on things not currently held or carried by something else.** A stone carried in a moving hand is being acted on by the hand, not by the downward pull alone; sideways carrying imparts no lingering sideways push. The instant the hand lets go, only the downward pull remains, so the stone drops straight down from the point of release with no sideways travel.'}]
+- reasoning: The Stage 1 response contains 10 top-level numbered rules, so it passes N9. It includes cross-rule references such as “Rules 3 and 4 together” and “Rule 1,” so it passes N12. However, Rule 10 duplicates Rule 1’s continuous-push/no-coasting claim, triggering N10, and Rule 8 fabricates a special suspension of downward pull while held that the model itself acknowledges is not directly supported by the observations, triggering N11.
+- judge call cost (USD): `$0.0459`

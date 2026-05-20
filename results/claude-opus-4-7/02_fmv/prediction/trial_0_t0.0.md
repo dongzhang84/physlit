@@ -172,7 +172,7 @@ While both push with equal and opposite steady efforts, rule 4 gives E_net = 0, 
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -188,7 +188,7 @@ While both push with equal and opposite steady efforts, rule 4 gives E_net = 0, 
   - reasoning: Predicts immediate full pace toward remaining pusher with no gradual pickup, derived from rules 1, 2, 3, 4. Matches F=mv column.
 - judge call cost (USD): `$0.2424`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

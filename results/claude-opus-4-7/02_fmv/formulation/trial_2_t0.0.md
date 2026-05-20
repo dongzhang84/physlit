@@ -172,13 +172,13 @@ The operational rules do not fully cover: (i) the transition instants themselves
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally; the proportional relations are combined as V = P/H allowing a third party to compute pace; scope is stated per rule; no banned tokens appear; no P1–P7 patterns present; boundary notes name uncovered cases.
 - judge call cost (USD): `$0.1711`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates the Stage 1 rules operationally with quantitative combinable relations V = P / H, states scopes, names boundary/partially covered cases, and contains no banned tokens or disqualifying P1–P7 patterns.

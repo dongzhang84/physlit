@@ -216,13 +216,13 @@ The predictions follow the operational rules quite faithfully. Scenario 3 in par
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `meta`)
 
 - over_claim: `vacuous`
 - reasoning: All Stage 1-3 verdicts are PASS, so over-claiming cannot be tested on this trial.
 - judge call cost (USD): `$0.0748`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `meta`)
 
 - over_claim: `vacuous`
 - reasoning: The pre-computed summary shows Stage 1, Stage 2, and Stage 3 all PASS, so there are no Stage 1–3 failures on which to assess over-claiming.

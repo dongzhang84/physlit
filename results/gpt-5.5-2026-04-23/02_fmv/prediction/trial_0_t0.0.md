@@ -502,7 +502,7 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -518,7 +518,7 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
   - reasoning: Predicts immediate motion at steady pace with no start-up, citing Rules 9, 15, 3, 2, 7. Matches F=mv column.
 - judge call cost (USD): `$0.3124`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

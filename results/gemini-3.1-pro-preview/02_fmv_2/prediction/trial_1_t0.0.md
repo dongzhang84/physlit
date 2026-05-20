@@ -150,7 +150,7 @@ Based strictly on the operational rules provided, here are the predictions for e
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 
@@ -168,7 +168,7 @@ Based strictly on the operational rules provided, here are the predictions for e
   - reasoning: Prediction states the block instantaneously acquires the full steady pace with no build-up, matching the F=mv column. Justification cites Rules 2 and 1 faithfully.
 - judge call cost (USD): `$0.2435`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `FAIL`
 

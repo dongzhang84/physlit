@@ -143,7 +143,7 @@ Here are the predictions for the novel scenarios, derived strictly from the prov
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -159,7 +159,7 @@ Here are the predictions for the novel scenarios, derived strictly from the prov
   - reasoning: Predicts immediate motion at the full steady pace with no build-up, matching the F=mv column, derived from Rule 1's instant change with remaining effort.
 - judge call cost (USD): `$0.2361`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

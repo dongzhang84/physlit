@@ -136,14 +136,30 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned concepts appear. N1 (two-regime) via rule 5, N2 (heavier falls faster) via rule 3, N3 (medium dependence) via rule 4, N4 (shape) via rule 4, N5 (directional preference) via rule 1, N6 (heaven/earth split) via rule 2, N7 (projectile tension acknowledged explicitly in Tensions), N8 (floating) via rule 4. All 12 observations covered; impetus is described as fading, not conserved.
 - judge call cost (USD): `$0.1318`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned concepts appear in the induced rules. The response satisfies N1–N8, covers all observations, explicitly separates celestial motion, and acknowledges the projectile tension without invoking conserved momentum or inertia.
 - judge call cost (USD): `$0.0272`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `6`
+- reasoning: The rule set contains 6 distinct top-level rules in both Stage 1 and Stage 2 (matched numbering), well under the N9 threshold. Each rule addresses a distinct phenomenon (natural place, celestial motion, weight-ranking, medium resistance, forced motion, projectile impetus) with no redundant pairs. All rules trace to specific observations (1-12), and the impetus/fading explanation for the arrow is a permitted Aristotelian elaboration. Cross-rule references are abundant ('combined with rule 4', 'Special application of rule 5', 'see rule 2', etc.), satisfying N12.
+- judge call cost (USD): `$0.1647`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `12`
+- reasoning: Counting the six top-level Proposed Rules in Stage 1 and the six top-level Operational Rules in Stage 2 gives 12 rules, which passes N9. The Stage 2 rules largely restate and operationalize the Stage 1 rules, but under the required counting procedure the total is not excessive, and no pair within the rule set creates an independent duplicate operational claim severe enough to trigger N10. Each rule is traceable to the listed observations or to permitted Aristotelian elaborations such as natural-place language, medium resistance, projectile borrowed urging that fades, and the heaven/earth split. The response contains explicit cross-rule references and hierarchy markers such as “combined with rule 4,” “Special application of rule 5,” and “see rule 2,” so N12 passes.
+- judge call cost (USD): `$0.0361`

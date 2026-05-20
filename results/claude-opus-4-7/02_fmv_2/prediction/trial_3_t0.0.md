@@ -174,7 +174,7 @@ At the instant one person stops and steps away, the set of active pushes changes
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -190,7 +190,7 @@ At the instant one person stops and steps away, the set of active pushes changes
   - reasoning: Block immediately takes pace F/H with no buildup, matching F=mv column. Justification cites Rules 1, 2, 3.
 - judge call cost (USD): `$0.2327`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

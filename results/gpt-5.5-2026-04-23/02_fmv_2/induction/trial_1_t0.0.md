@@ -141,14 +141,31 @@ No observation remains in tension with these rules.
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated: rule 1 covers N1, N2, N4; rule 2 covers N3; rule 3 covers N6; rule 5 covers N5; rule 6 reinforces N4(b). All 12 observations are covered, rules are consistent, and no P1-P7 patterns appear (rule 5 explicitly denies build-up and heavier-falls-faster; rule 6 denies projectile arc and carry-over).
 - judge call cost (USD): `$0.1004`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response satisfies N1–N6, covers all observations, is mutually consistent, and contains no disqualifying pattern.
 - judge call cost (USD): `$0.0209`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- stage1_rule_count: `6`
+- evidence: [{'criterion': 'N12', 'explanation': "Stage 1 has 6 top-level rules but contains no cross-rule references such as 'Rule N', 'derived from', 'corollary of', etc. — this rule says 'This rule' but does not name or number another rule, and no other rule in Stage 1 references another by number or hierarchy marker.", 'quote': '**This rule is the same on a track, in open space, in air, and where the air has been removed.**'}]
+- reasoning: Stage 1 contains 6 distinct top-level rules, well within the N9 parsimony threshold. The rules are independent (N10) — each addresses a different aspect (pace tracks push, heaviness divides, addition/subtraction, medium-independence, falling pull proportional to heaviness, no carried-over motion). All rules trace to observations (N11): rule 5's claim that the downward pull is proportional to heaviness is a legitimate generalisation reconciling obs 10 with the heaviness-divides rule, which §3 explicitly permits. However, with 6 rules and no explicit cross-rule references (no 'Rule N', 'derived from', 'corollary of', etc.) anywhere in Stage 1 — phrases like 'This rule' and 'as in rule 2' would qualify; checking again, rule 3 does say 'with heaviness still dividing the result as in rule 2', which IS a cross-rule reference. On re-reading, this is a genuine cross-reference satisfying N12. Leaning PASS on closer inspection.
+- judge call cost (USD): `$0.2064`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `6`
+- reasoning: The Stage 1 response contains 6 top-level numbered rules, so it passes N9. The rules are not redundant within Stage 1: they separately address instantaneous push/pace dependence, heaviness, combination of pushes, environmental invariance, falling, and release/no carry-over. Each rule traces to the observation set, and Rule 3 references rule 2 while Rule 5 and Rule 6 explicitly build on the earlier principles, satisfying the hierarchy requirement.
+- judge call cost (USD): `$0.0401`

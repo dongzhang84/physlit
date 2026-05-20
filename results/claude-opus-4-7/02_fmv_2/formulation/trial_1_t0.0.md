@@ -128,13 +128,13 @@ The release of the carried stone (observation 11) is covered only by treating th
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally; the quantitative pace = net effort ÷ heaviness rule is combinable and a third party can compute pace from push and heaviness. Scope is stated for each rule, no banned tokens appear, no P1–P7 pattern is present, and boundary notes name the uncovered cases (carried-stone assumption, landing).
 - judge call cost (USD): `$0.1550`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response

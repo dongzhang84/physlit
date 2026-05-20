@@ -150,7 +150,7 @@ According to **Rule 3**, when multiple pushes act on a body in opposite directio
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -166,7 +166,7 @@ According to **Rule 3**, when multiple pushes act on a body in opposite directio
   - reasoning: Prediction states block immediately moves at full constant pace toward remaining pusher, matching F=mv column. Justification cites Rules 1, 2, 3. No banned tokens or build-up language.
 - judge call cost (USD): `$0.2425`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

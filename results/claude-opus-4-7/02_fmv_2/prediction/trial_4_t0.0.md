@@ -190,7 +190,7 @@ By Rule 2, pace = *E/H*. With the same effort *E*, block A (heaviness 2H) has pa
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -206,7 +206,7 @@ By Rule 2, pace = *E/H*. With the same effort *E*, block A (heaviness 2H) has pa
   - reasoning: Predicts immediate full pace E/H with no build-up, citing Rules 1, 2, 3. Matches F=mv column. No banned tokens present.
 - judge call cost (USD): `$0.2356`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

@@ -139,14 +139,30 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: The induction covers all 12 observations, distinguishes natural vs forced motion (N1), includes weight ordering (N2), medium resistance (N3), shape dependence (N4), directional preference (N5), heaven/earth split (N6), acknowledges projectile tension (N7), and accounts for floating via weight-vs-support (N8). No banned concepts appear; 'pushed aside' and 'resistance' are descriptive, not friction/momentum formalizations.
 - judge call cost (USD): `$0.1288`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned concepts are named or used in the prohibited technical sense. The response satisfies N1–N8, including heavier-falls-faster, medium and shape dependence, natural upward/downward tendencies, a heaven/earth split, floating, and explicit acknowledgment of the projectile tension; all observations are covered.
 - judge call cost (USD): `$0.0271`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `5`
+- reasoning: Stage 1 and Stage 2 both present 5 top-level rules covering the same conceptual territory (natural place, weight/support, medium resistance, forced motion, heavenly motion), well within the N9 parsimony threshold. No two rules paraphrase the same claim about the same body in the same situation (N10 pass). Every rule traces to specific observations, and the medium-resistance and impressed-motion language fall within permitted Aristotelian elaboration (N11 pass). Cross-rule references are present throughout Stage 2 (e.g., 'see Rule 5', 'handled by Rule 2's support clause', 'Rule 1 takes over'), satisfying N12.
+- judge call cost (USD): `$0.1590`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `10`
+- reasoning: I count 10 distinct top-level rules across Stage 1 and Stage 2: five proposed rules and five operational rules. This is below the N9 parsimony failure threshold, and the Stage 2 rules largely reformulate rather than proliferate the Stage 1 structure. I find no clear N10 duplicate pair beyond acceptable Stage 1/Stage 2 restatement, and the rules are traceable to the observations or to permitted Aristotelian elaborations such as natural place, medium resistance, fading impressed motion, and the heaven/earth split. N12 passes because the response contains explicit cross-rule references such as “see Rule 5,” “Rule 1,” “Rule 3,” and “Rules 1–4.”
+- judge call cost (USD): `$0.0344`

@@ -138,14 +138,30 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated (rules 1-7 cover present push setting pace, more push more pace, more heaviness less pace, no build-up and no carry-over, common unchanging fall pace, and combining pushes). All 12 observations are covered, rules are mutually consistent, and no P1-P7 patterns appear.
 - judge call cost (USD): `$0.1041`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response satisfies N1–N6, covers all observations, is mutually consistent, and contains no disqualifying pattern.
 - judge call cost (USD): `$0.0224`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `8`
+- reasoning: Stage 1 contains 8 top-level numbered rules, well within the parsimony threshold. No two rules paraphrase the same claim — each addresses a distinct aspect (pace-effort relation, quantitative law, no-effort case, combination, surroundings, falling, medium, carried release). Every rule traces to observations (Rule 6's heaviness-proportional downward pull is a legitimate generalisation reconciling obs 5 and 10, not a fabrication). Hierarchy is satisfied by explicit cross-references like 'By rule 2' in rule 6 and 'rule 6' in rule 8.
+- judge call cost (USD): `$0.1710`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `8`
+- reasoning: The Stage 1 response contains 8 top-level numbered rules, so it passes N9 parsimony. The rules are not redundant within Stage 1: although some overlap conceptually, each adds a distinct scope or phenomenon, such as effort/pace proportionality, effort combination, surroundings, falling, and release from a carrier. Each rule is traceable to one or more observations, with rule 6 being a permitted generalization reconciling heaviness with equal falling pace. N12 passes because Stage 1 contains explicit cross-rule references such as “By rule 2” and “only the downward pull of rule 6 remains.”
+- judge call cost (USD): `$0.0377`

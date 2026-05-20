@@ -188,13 +188,13 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with scope; the two proportionalities are combined into pace = push/heaviness, allowing a third party to compute pace from push and heaviness. No banned tokens appear, no P1–P7 patterns are present, and uncovered matters (rule 5/8 tension, angled pushes, collisions, air as pusher) are explicitly named in the boundary notes.
 - judge call cost (USD): `$0.1790`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response (`ideal_induction.md` §3).`

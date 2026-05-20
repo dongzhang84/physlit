@@ -141,13 +141,13 @@ The operational rules give only rankings and qualitative trajectories, not numer
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each Stage 1 law is restated operationally with rankings and conditionals; scope is given per rule; conservation is addressed per rule (often stating nothing is conserved in quantity); no new banned concepts are introduced (Stage 1 already used 'denser'/'projectile'); boundary cases and unresolved tensions are explicitly named.
 - judge call cost (USD): `$0.0812`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No new forbidden concept is introduced relative to Stage 1.`

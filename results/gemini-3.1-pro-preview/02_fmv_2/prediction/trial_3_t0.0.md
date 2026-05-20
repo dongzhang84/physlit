@@ -147,7 +147,7 @@ The instant the first person stops pushing and steps away, the block will instan
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -163,7 +163,7 @@ The instant the first person stops pushing and steps away, the block will instan
   - reasoning: Prediction is the block 'instantly assume[s] a steady pace' toward the remaining pusher — matches the F=mv column (no build-up). Justification cites Rules 1 and 2. No banned tokens.
 - judge call cost (USD): `$0.2397`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

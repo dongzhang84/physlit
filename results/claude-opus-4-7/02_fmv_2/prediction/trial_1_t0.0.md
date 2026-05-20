@@ -151,7 +151,7 @@ At the instant one person stops pushing, the net effort along the line of pushin
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -167,7 +167,7 @@ At the instant one person stops pushing, the net effort along the line of pushin
   - reasoning: Predicts block immediately moves at fixed pace, no build-up, matching F=mv column. Justification cites rules 1 and 2. No banned tokens.
 - judge call cost (USD): `$0.2306`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

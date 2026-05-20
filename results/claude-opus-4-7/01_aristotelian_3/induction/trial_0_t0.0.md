@@ -136,13 +136,13 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: The induction covers all 12 observations via 6 rules, satisfies N1 (rule 4 two-regime), N2 (rule 2 weight-proportional eagerness), N3 (medium resistance), N4 (surface/shape in rule 3), N5 (natural region in rule 1), N6 (celestial split in rule 6), N7 (projectile tension explicitly flagged), N8 (oak floats explained via weight-vs-resistance). No §3 banned terms appear — 'denser medium' uses 'dense' descriptively of substances, not as a defined quantity, and no near-pass patterns trigger.
 - judge call cost (USD): `$0.1327`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `FAIL`
 - first_fail_step: `1`
@@ -150,3 +150,19 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 - evidence: A denser medium (honey, water) resists more than a thinner one (air)
 - reasoning: Step 1 requires scanning for banned concepts before checking the necessary conditions. The response uses "denser" to characterize the medium, which invokes the banned concept of density.
 - judge call cost (USD): `$0.0271`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `6`
+- reasoning: The rule set contains 6 top-level rules in both Stage 1 and Stage 2, well within the N9 parsimony threshold. Each rule covers a distinct phenomenon (natural place, medium resistance, shape effects, push-continuance, projectiles, celestial motion) with no redundant pairs, satisfying N10. All rules trace to specific observations and use permitted Aristotelian elaborations (natural-place language, medium resistance), satisfying N11. Hierarchy is present via explicit cross-references such as 'combined with rule 3', 'see Rule 6', 'Rules 1–3', and 'Rule 4', satisfying N12.
+- judge call cost (USD): `$0.1552`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `12`
+- reasoning: I count six top-level rules in Stage 1 and six top-level operational rules in Stage 2, for 12 total top-level rules under the concatenated-count instruction. This does not exceed the N9 threshold, and the Stage 2 rules largely restate and operationalize the Stage 1 rules rather than creating unsupported extra mechanisms. The rules are traceable to the observations, with permitted Aristotelian elaborations for natural place, medium resistance, projectile fading, and the heaven/earth split. The response contains explicit cross-rule references such as "see Rule 6," "Rules 2, 3," and "Rules 4 vs. 5," so N12 is satisfied.
+- judge call cost (USD): `$0.0334`

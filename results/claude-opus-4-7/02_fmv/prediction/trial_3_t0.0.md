@@ -194,7 +194,7 @@ While both were pushing with equal and opposite efforts, the running total of pu
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -210,7 +210,7 @@ While both were pushing with equal and opposite efforts, the running total of pu
   - reasoning: Predicts immediate motion at full pace P/H with no build-up, derived from rules 2, 3, 7. Matches F=mv column. No banned tokens.
 - judge call cost (USD): `$0.2498`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

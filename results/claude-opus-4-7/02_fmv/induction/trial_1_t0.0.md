@@ -140,14 +140,30 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all stated (rules 1-2 for N1/N4, rule 3 for N2, rule 4 for N3, rule 7 for N5, rule 6 for N6). All 12 observations are covered, rules are consistent, and no P1-P7 patterns appear (rule 8 explicitly has the released stone drop straight down, no build-up or carry-over).
 - judge call cost (USD): `$0.1036`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear in the response. The rules satisfy N1–N6, cover all observations, are mutually consistent, and do not contain any disqualifying pattern.
 - judge call cost (USD): `$0.0219`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `9`
+- reasoning: Stage 1 contains 9 top-level numbered rules, well within the parsimony threshold. No two rules paraphrase the same claim — each addresses a distinct aspect (motion-requires-push, immediacy, proportionality to effort, inverse to heaviness, surroundings, combination, falling, carriage, transport). Rule 7 legitimately generalizes observations 10 and 12 by reconciling them with rule 4, which is permitted under N11. Cross-references are explicit (e.g., rule 7 cites 'rule 4'), satisfying N12.
+- judge call cost (USD): `$0.1686`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- stage1_rule_count: `9`
+- reasoning: The Stage 1 response contains 9 top-level numbered rules, so it passes N9 parsimony. The rules are not redundant within Stage 1: each covers a distinct aspect such as effort-required motion, immediate pace, proportionality, heaviness, surroundings, combined pushes, falling, carried motion, and continuous transport. Each rule traces to one or more observations, with rule 7 functioning as a permitted generalization reconciling falling observations with the effort/heaviness relation. N12 is satisfied because Stage 1 includes explicit cross-rule references, such as rule 7 referring to rule 4.
+- judge call cost (USD): `$0.0376`

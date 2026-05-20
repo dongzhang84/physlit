@@ -187,7 +187,7 @@ Reasoning: While both people pushed with equal, opposite efforts, the signed sum
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -203,7 +203,7 @@ Reasoning: While both people pushed with equal, opposite efforts, the signed sum
   - reasoning: Predicts immediate motion at full pace E/H with no build-up; cites rules 2, 3, 4, 6, 9. Matches F=mv column.
 - judge call cost (USD): `$0.2424`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 

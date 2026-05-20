@@ -121,13 +121,13 @@ The operational rules do not elegantly resolve the underlying tension in the obs
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally; pace = push/heaviness is quantitatively combinable; scope is given for each rule; no banned tokens appear; no P1–P7 pattern is present (instant start/stop, no build-up, no carry-over, equal fall pace); the open-space tension is named explicitly in Boundary notes.
 - judge call cost (USD): `$0.1561`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response states operational quantitative rules for pace as push divided by heaviness, includes doubling and inverse-doubling behavior, gives scope for pushed motion, falling, open space, and combined pushes, and names the boundary tension involving open space rather than dropping it. No banned tokens or disqualifying P1–P7 patterns appear in the Stage 2 response.

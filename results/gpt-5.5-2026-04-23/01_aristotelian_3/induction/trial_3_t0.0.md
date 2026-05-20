@@ -146,14 +146,30 @@ The most difficult observation is the arrow’s continued forward flight after t
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: All N1-N8 satisfied: natural places (N5, N8), heaver bodies fall faster via medium hindrance (N2), medium dependence (N3), shape (N4), heaven/earth via circular paths of heavenly bodies (N6), projectile addressed via impetus-like fading carried motion (N7), floating explained via stuff supporting body (N8), two-regime motion (N1, rule 4). No banned concepts appear; all 12 observations covered.
 - judge call cost (USD): `$0.1317`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned concepts appear in the induced rules. The response satisfies N1-N8, including heavier-falls-faster ordering, medium and shape dependence, upward/downward natural tendencies, a heaven/earth distinction, projectile tension, and floating; all observations are covered without a near-pass violation.
 - judge call cost (USD): `$0.0274`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `5`
+- reasoning: The rule set has 5 top-level rules in both Stage 1 and Stage 2, well within N9 parsimony bounds. Each rule covers distinct phenomena (natural places, medium resistance, floating/sinking, forced motion, impressed motion), so N10 independence holds. All rules trace to specific observations (Obs 1,3,4,5,8,10,12 for Rule 1; 1,9,11,12 for Rule 2; 5 for Rule 3; 2,6 for Rule 4; 7 for Rule 5), and the impressed-motion account in Rule 5 is a permitted Aristotelian elaboration that explicitly fades. Cross-rule references are abundant (e.g., 'requires Rules 2 and 3', 'that requires Rule 5', 'same general idea as rule 4'), satisfying N12 hierarchy.
+- judge call cost (USD): `$0.1906`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `PASS`
+- failed_criteria: `[]`
+- rule_count: `10`
+- reasoning: I count five top-level rules in Stage 1 and five corresponding top-level rules in Stage 2, for a combined count of 10, below the N9 fail thresholds. The Stage 2 rules largely reformulate the Stage 1 rules rather than adding unsupported additional phenomena, and the rules are traceable to the observations: natural places, medium effects, floating/sinking, forced cart/wagon motion, and the arrow case. The set contains explicit hierarchy and cross-references such as combining Rule 1 with Rule 2 and using Rule 5 as a special treatment of the arrow, so N12 passes.
+- judge call cost (USD): `$0.0392`

@@ -185,13 +185,13 @@ My Stage 3 predictions actively contradicted standard physics in order to mainta
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `meta`)
 
 - over_claim: `no`
 - reasoning: Stage 2 and Stage 3 passed; only Stage 1 had a judge split (possible failure). Stage 4 substantively engages with framework consistency and acknowledges imported concepts in Q2, so this is not a clear over-claim.
 - judge call cost (USD): `$0.0849`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `meta`)
 
 - over_claim: `no`
 - reasoning: The only Stage 1–3 issue is a possible Stage 1 failure due to split judges, while Stage 2 and Stage 3 passed. Stage 4 acknowledges imported concepts in Q2 rather than denying possible Stage 1 induction issues, so conservatively this is not a clear over-claim.

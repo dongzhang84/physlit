@@ -134,7 +134,7 @@ There are a few phenomena from the observations that these operational rules han
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No new forbidden concept is introduced relative to Stage 1.`
@@ -142,7 +142,7 @@ There are a few phenomena from the observations that these operational rules han
 - reasoning: Stage 2 explicitly invokes the banned term 'acceleration', which was not present in Stage 1. Even mentioning it to deny its use counts as introducing a forbidden concept.
 - judge call cost (USD): `$0.0607`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No new forbidden concept is introduced relative to Stage 1.`

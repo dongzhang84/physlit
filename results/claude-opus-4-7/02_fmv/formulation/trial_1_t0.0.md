@@ -174,13 +174,13 @@ The operational rules leave the following observations only partly covered:
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: All Stage 1 rules are restated operationally with explicit scope. The proportionalities are combined into P = E/H, allowing a third party to compute pace from push and heaviness. No banned tokens appear; no P1–P7 patterns are present (no build-up, no carry-over, no heavier-falls-faster, no arc — release drops straight down). Partially-covered observations are explicitly named in the Boundary notes.
 - judge call cost (USD): `$0.1749`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `FAIL`
 - failed_criterion: `No banned token appears anywhere in the response

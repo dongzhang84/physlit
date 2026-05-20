@@ -141,14 +141,32 @@ _Rendered as markdown for readability; the byte-exact text is in the JSON._
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. N1-N6 are all satisfied: rule 1 covers N1 and N4, rule 2 covers N2 and N3, rule 3 covers N6, rule 5 covers N5, rule 6 reinforces N4(b) and covers obs 11. All 12 observations are covered, rules are consistent, and no P1-P7 patterns are present.
 - judge call cost (USD): `$0.0972`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `induction`)
 
 - verdict: `PASS`
 - reasoning: No banned tokens appear. The response satisfies N1–N6, covers all observations, is mutually consistent, and contains none of the disqualifying patterns.
 - judge call cost (USD): `$0.0209`
+
+### Claude-as-structural-judge (`claude-opus-4-7`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- stage1_rule_count: `6`
+- evidence: [{'criterion': 'N12', 'explanation': "The Stage 1 response has 6 top-level rules but contains no cross-rule references (no 'Rule N', 'derived from', 'corollary of', 'follows from', etc.) — it is a flat enumeration.", 'quote': "1. **A body's pace is set directly by the total push or pull on it at that moment.** ... 2. **Pace grows in direct proportion to effort, and shrinks in direct proportion to heaviness.** ... 3. **Pushes and pulls combine by direction.** ... 4. **The same rules hold whether the body is on a track, in open space, or in airless surroundings.** ... 5. **Falling is produced by a steady downward pull that gives all released objects the same steady downward pace, whatever their heaviness.** ... 6. **A body keeps only the motion caused by pushes or pulls that are still acting on it.**"}]
+- reasoning: Stage 1 contains 6 distinct top-level rules, well within the parsimony threshold (N9 passes). The rules are independent — each addresses a different aspect (push/pace, proportionality, combination, setting-invariance, falling, no carried motion) with no paraphrase duplication (N10 passes). Every rule traces to specific observations in the 12-observation set (N11 passes). However, the Stage 1 response is a flat list of 6 rules with no cross-references between them — no mentions of 'Rule N', no 'derived from', 'follows from', 'special case of', or similar hierarchy markers anywhere in Stage 1 — so N12 fails.
+- judge call cost (USD): `$0.2126`
+
+### OpenAI-as-structural-judge (`gpt-5.5-2026-04-23`, stage: `structural`)
+
+- verdict: `FAIL`
+- failed_criteria: `['N12']`
+- stage1_rule_count: `6`
+- evidence: [{'criterion': 'N12', 'explanation': 'The Stage 1 response has 6 top-level rules but contains no explicit cross-rule reference or hierarchy marker anywhere in the Stage 1 rule set.', 'quote': '1. **A body’s pace is set directly by the total push or pull on it at that moment.**'}]
+- reasoning: The Stage 1 response contains 6 distinct top-level numbered rules, so N9 passes. The rules are not duplicates within Stage 1, and each traces to observations or legitimate generalization from them, so N10 and N11 pass. However, because the rule set has 5 or more rules and contains no cross-rule reference or explicit hierarchy marker in Stage 1, it fails N12.
+- judge call cost (USD): `$0.0425`

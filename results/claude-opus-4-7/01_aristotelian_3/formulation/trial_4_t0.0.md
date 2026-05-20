@@ -152,13 +152,13 @@ The heavier the load, the more straining the pusher must do to keep it in forced
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: Each of the four Stage 1 rules is restated operationally with rankings and conditionals, scope is given for each, conservation is addressed (heaviness ranking, direction, period preserved; nothing quantitative else), no banned concepts are newly introduced, and boundary cases including the strained arrow and feather observations are explicitly named rather than dropped.
 - judge call cost (USD): `$0.0766`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `formulation`)
 
 - verdict: `PASS`
 - reasoning: The response restates each Stage 1 law operationally with scope, uses only conserved/preserved notions consistent with Stage 1 rather than importing energy or momentum, and does not newly introduce banned concepts in a forbidden technical sense. It also lists boundary cases and explicitly names the unresolved or strained observations rather than silently dropping them.

@@ -162,7 +162,7 @@ While both push with equal and opposite efforts, rule 4 gives a sum of zero, and
 
 ## Judge verdicts
 
-### Claude-as-judge (`claude-opus-4-7`)
+### Claude-as-content-judge (`claude-opus-4-7`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
@@ -178,7 +178,7 @@ While both push with equal and opposite efforts, rule 4 gives a sum of zero, and
   - reasoning: Block immediately moves at full steady pace toward the remaining pusher, matching F=mv column, derived from rules 2, 3, 4.
 - judge call cost (USD): `$0.2280`
 
-### OpenAI-as-judge (`gpt-5.5-2026-04-23`)
+### OpenAI-as-content-judge (`gpt-5.5-2026-04-23`, stage: `prediction`)
 
 - overall_verdict: `PASS`
 
