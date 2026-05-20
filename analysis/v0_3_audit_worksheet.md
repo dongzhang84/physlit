@@ -31,8 +31,8 @@ Once decided, fill the `HUMAN_CONTENT` / `HUMAN_STRUCTURAL` tables in [`scripts/
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/v0_3/induction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/v0_3/induction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/v0_3/formulation/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/v0_3/prediction/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/v0_3/meta/trial_0_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
 
 ### Stage 1 — induction response (under judgment, 2,843 chars)
 
@@ -89,8 +89,8 @@ _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/v0_3/formulation/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/v0_3/formulation/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/v0_3/induction/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/v0_3/prediction/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/v0_3/meta/trial_0_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
 
 ### Stage 1 — induction response (context, 2,843 chars)
 
@@ -192,8 +192,8 @@ The operational rules give only rankings and qualitative trajectories, not numer
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/v0_3/prediction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/v0_3/prediction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/v0_3/induction/trial_0_t0.0.md) · [Stage 2](../results/claude-opus-4-7/v0_3/formulation/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/v0_3/meta/trial_0_t0.0.md)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) · [Stage 2](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
 
 ### Stage 2 — formulation response (context, 6,902 chars)
 
@@ -327,8 +327,8 @@ The arrow eventually falls because, by Rule 1, it is a heavy body (an arrow is w
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/v0_3/prediction/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/v0_3/prediction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/v0_3/induction/trial_1_t0.0.md) · [Stage 2](../results/claude-opus-4-7/v0_3/formulation/trial_1_t0.0.md) · [meta](../results/claude-opus-4-7/v0_3/meta/trial_1_t0.0.md)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_1_t0.0.md) · [Stage 2](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_1_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_1_t0.0.md)
 
 ### Stage 2 — formulation response (context, 8,656 chars)
 
@@ -448,8 +448,8 @@ I should note the standing tension flagged in my own boundary notes: rule 6 posi
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/v0_3/formulation/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/v0_3/formulation/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/v0_3/induction/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/v0_3/prediction/trial_2_t0.0.md) · [meta](../results/claude-opus-4-7/v0_3/meta/trial_2_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_2_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_2_t0.0.md)
 
 ### Stage 1 — induction response (context, 3,453 chars)
 
@@ -570,8 +570,8 @@ _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/v0_3/prediction/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/v0_3/prediction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/v0_3/induction/trial_1_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/v0_3/formulation/trial_1_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/v0_3/meta/trial_1_t0.0.md)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_1_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_1_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_1_t0.0.md)
 
 ### Stage 2 — formulation response (context, 4,465 chars)
 
@@ -672,8 +672,8 @@ Based strictly on the operational rules provided, here are the predictions for e
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/v0_3/prediction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/v0_3/prediction/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/v0_3/induction/trial_2_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/v0_3/formulation/trial_2_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/v0_3/meta/trial_2_t0.0.md)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_2_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_2_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_2_t0.0.md)
 
 ### Stage 2 — formulation response (context, 5,235 chars)
 
@@ -779,8 +779,8 @@ Based on the strict application of the operational rules provided, here are the 
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/v0_3/formulation/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/v0_3/formulation/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/v0_3/induction/trial_4_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/v0_3/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/v0_3/meta/trial_4_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_4_t0.0.md)
 
 ### Stage 1 — induction response (context, 1,569 chars)
 
@@ -870,8 +870,8 @@ The operational rules presented above leave a few specific observations awkwardl
 
 _Split: Claude structural judge -> `FAIL`, OpenAI structural judge -> `PASS`_
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/v0_3/induction/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/v0_3/induction/trial_1_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/v0_3/formulation/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/v0_3/formulation/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/v0_3/prediction/trial_1_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/v0_3/meta/trial_1_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/induction/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/induction/trial_1_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/formulation/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/formulation/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/01_aristotelian_3/prediction/trial_1_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/01_aristotelian_3/meta/trial_1_t0.0.md)
 
 ### Stage 1 — induction (3,664 chars)
 
@@ -1163,8 +1163,8 @@ The operational rules still handle several cases only incompletely. The continue
 
 _Split: Claude structural judge -> `PASS`, OpenAI structural judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/v0_3/induction/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/v0_3/induction/trial_3_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/v0_3/formulation/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/v0_3/formulation/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/v0_3/prediction/trial_3_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/v0_3/meta/trial_3_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_3_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_3_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_3_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_3_t0.0.md)
 
 ### Stage 1 — induction (3,446 chars)
 
@@ -1267,8 +1267,8 @@ The most glaring boundary case in these operational rules is the contradiction h
 
 _Split: Claude structural judge -> `FAIL`, OpenAI structural judge -> `PASS`_
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/v0_3/induction/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/v0_3/induction/trial_4_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/v0_3/formulation/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/v0_3/formulation/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/v0_3/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/v0_3/meta/trial_4_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_4_t0.0.md)
 
 ### Stage 1 — induction (1,569 chars)
 

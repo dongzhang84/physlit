@@ -19,6 +19,9 @@
 
 ## Case C1 — `claude-opus-4-7` trial 1 · Stage 2 (formulation)
 
+**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/02_fmv_2/formulation/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/02_fmv_2/formulation/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/02_fmv_2/induction/trial_1_t0.0.md) · [Stage 3](../results/claude-opus-4-7/02_fmv_2/prediction/trial_1_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv_2/meta/trial_1_t0.0.md)
+
 **Claude judge — `PASS`** (failed clause: (n/a))
 
 > All Stage 1 rules are restated operationally; the quantitative pace = net effort ÷ heaviness rule is combinable and a third party can compute pace from push and heaviness. Scope is stated for each rule, no banned tokens appear, no P1–P7 pattern is present, and boundary notes name the uncovered cases (carried-stone assumption, landing).
@@ -39,6 +42,9 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv_2/content_resolved/agent1_formul
 
 ## Case C2 — `claude-opus-4-7` trial 2 · Stage 2 (formulation)
 
+**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/02_fmv_2/formulation/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/02_fmv_2/formulation/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/02_fmv_2/induction/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/02_fmv_2/prediction/trial_2_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv_2/meta/trial_2_t0.0.md)
+
 **Claude judge — `PASS`** (failed clause: (n/a))
 
 > All Stage 1 rules are restated operationally; the proportional relations are made quantitative as pace = total effort ÷ heaviness with explicit doubling/halving; scope is stated for each rule; no banned tokens appear; no P1–P7 pattern is present; and the awkward observation 11 plus the resting-on-track case are explicitly named in boundary notes.
@@ -57,6 +63,9 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv_2/content_resolved/agent1_formul
 ---
 
 ## Case C3 — `claude-opus-4-7` trial 3 · Stage 1 (induction)
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/02_fmv_2/induction/trial_3_t0.0.md) [`.json`](../results/claude-opus-4-7/02_fmv_2/induction/trial_3_t0.0.json)
+**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/02_fmv_2/formulation/trial_3_t0.0.md) · [Stage 3](../results/claude-opus-4-7/02_fmv_2/prediction/trial_3_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv_2/meta/trial_3_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -77,6 +86,9 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv_2/content_resolved/agent1_induct
 
 ## Case C4 — `claude-opus-4-7` trial 4 · Stage 1 (induction)
 
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/02_fmv_2/induction/trial_4_t0.0.md) [`.json`](../results/claude-opus-4-7/02_fmv_2/induction/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/02_fmv_2/formulation/trial_4_t0.0.md) · [Stage 3](../results/claude-opus-4-7/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv_2/meta/trial_4_t0.0.md)
+
 **Claude judge — `FAIL`** (failed clause: P3)
 
 > Rule 4 posits a downward pull whose strength is tuned/matched to the object's heaviness in order to explain why all bodies fall at the same pace. This is a hidden-balancing-agent rescue (P3): an unobserved agent calibrated to heaviness is introduced to make the phenomenology come out right, rather than stating the regularity directly.
@@ -95,6 +107,9 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv_2/content_resolved/agent1_induct
 ---
 
 ## Case C5 — `gpt-5.5-2026-04-23` trial 4 · Stage 1 (induction)
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 2](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_4_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_4_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -115,6 +130,9 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv_2/content_resolved/agent1_ind
 
 ## Case C6 — `gemini-3.1-pro-preview` trial 0 · Stage 1 (induction)
 
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 2](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_0_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_0_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_0_t0.0.md)
+
 **Claude judge — `FAIL`** (failed clause: N4(b) / N5)
 
 > The response was truncated mid-rule 4 and never states that bodies stop at once when the push ends (N4b is only implicit at best in rule 1's 'halting at once'). More critically, the falling account derives a common pace via proportional cancellation of heaviness, but this same Rule of Proportions, combined with rule 3's claim that heavier objects receive a 'much stronger pull,' would yield a heavier-object pace equal to a lighter one — this is fine for N5(a), but the response never asserts the fall pace is unchanging in a way independent of the proportions argument, and the truncation leaves N6/coverage of obs 8–9 (combined pushes) only partially addressed in rule 1. However, the clearest failure is that the response is cut off ('Invisible surroundings—') and therefore does not present a complete rule set; necessary condition coverage cannot be confirmed.
@@ -133,6 +151,9 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/content_resolved/agent1
 ---
 
 ## Case C7 — `gemini-3.1-pro-preview` trial 1 · Stage 2 (formulation)
+
+**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_1_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_1_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_1_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -154,6 +175,9 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/content_resolved/agent1
 
 ## Case C8 — `gemini-3.1-pro-preview` trial 2 · Stage 2 (formulation)
 
+**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_2_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_2_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_2_t0.0.md)
+
 **Claude judge — `PASS`** (failed clause: (n/a))
 
 > The response restates each Stage 1 rule operationally, makes the proportionality quantitative (pace ∝ effort, inversely ∝ heaviness, combinable), states scope for each rule, contains no banned tokens or morphological variants, exhibits no P1–P7 patterns, and explicitly names Observation 6 as not fully covered in the boundary notes.
@@ -173,6 +197,9 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/content_resolved/agent1
 
 ## Case C9 — `gemini-3.1-pro-preview` trial 3 · Stage 1 (induction)
 
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_3_t0.0.json)
+**Same trial, other stages:** [Stage 2](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_3_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_3_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_3_t0.0.md)
+
 **Claude judge — `PASS`** (failed clause: (n/a))
 
 > No banned tokens appear. N1-N6 are all stated: pace from present push, more push more pace, more heaviness less pace, instant start/stop with no build-up or coasting, common unchanging fall pace, and combination of pushes. All observations are covered, rules are mutually consistent, and no P1-P7 patterns are triggered (the downward pull explains falling but is matched exactly to heaviness so fall pace is steady and equal for all).
@@ -191,6 +218,9 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/content_resolved/agent1
 ---
 
 ## Case C10 — `gemini-3.1-pro-preview` trial 4 · Stage 2 (formulation)
+
+**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_4_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_4_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -214,6 +244,9 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/content_resolved/agent1
 
 ## Case S1 — `gpt-5.5-2026-04-23` trial 0 · structural axis
 
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_0_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_0_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_0_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_0_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_0_t0.0.md)
+
 **Claude structural judge — `FAIL`** (Stage 1 rule count `6`, failed: N12)
 
 > Stage 1 contains 6 top-level rules, well within the parsimony threshold (N9 passes). The rules are independent — each covers a distinct aspect (push-pace proportionality, combination of efforts, heaviness, no carried-on motion, setting-independence, falling) with no two paraphrasing the same claim (N10 passes). Each rule traces to specific observations (rule 1→obs 1,2,4; rule 2→obs 8,9; rule 3→obs 5; rule 4→obs 3,7,11; rule 5→obs 6,12; rule 6→obs 10,12), so N11 passes. However, N12 is a close call: the only reference to 'rule 6' appears in a post-rule 'Tension remaining' note, not as an inter-rule cross-reference within the rule set, and no rule references another by number or hierarchy marker. Leaning toward FAIL on N12 since the criterion requires a cross-rule reference 'anywhere in the Stage 1 response' — the tension note arguably qualifies, making this genuinely borderline.
@@ -233,6 +266,9 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv_2/structural_resolved/agent2_
 ---
 
 ## Case S2 — `gpt-5.5-2026-04-23` trial 1 · structural axis
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_1_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_1_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_1_t0.0.md)
 
 **Claude structural judge — `FAIL`** (Stage 1 rule count `6`, failed: N12)
 
@@ -254,6 +290,9 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv_2/structural_resolved/agent2_
 
 ## Case S3 — `gpt-5.5-2026-04-23` trial 3 · structural axis
 
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_3_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_3_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_3_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_3_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_3_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_3_t0.0.md)
+
 **Claude structural judge — `FAIL`** (Stage 1 rule count `6`, failed: N12)
 
 > Stage 1 presents 6 top-level numbered rules. N9 passes (6 ≤ 12). N10 passes: each rule covers a distinct phenomenon (push-pace proportionality, cessation without push, addition/subtraction of pushes, heaviness, falling, release behavior). N11 passes: each rule traces to observations (Rule 1 → obs 1,2,4; Rule 2 → obs 3,6,11; Rule 3 → obs 8,9; Rule 4 → obs 5; Rule 5 → obs 10,12; Rule 6 → obs 11). However, N12 fails: with 6 rules (≥5), the Stage 1 response contains no cross-rule references — no rule cites another rule by number or uses hierarchy markers like 'derived from', 'corollary of', or 'follows from'. The cross-references appear only in Stage 2, which is not in scope for N12.
@@ -273,6 +312,9 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv_2/structural_resolved/agent2_
 ---
 
 ## Case S4 — `gpt-5.5-2026-04-23` trial 4 · structural axis
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_4_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_4_t0.0.md)
 
 **Claude structural judge — `FAIL`** (Stage 1 rule count `5`, failed: N12)
 
@@ -294,6 +336,9 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv_2/structural_resolved/agent2_
 
 ## Case S5 — `gemini-3.1-pro-preview` trial 0 · structural axis
 
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_0_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_0_t0.0.md)
+
 **Claude structural judge — `PASS`** (Stage 1 rule count `4`, failed: (none))
 
 > Stage 1 contains 4 top-level rules (the fourth is cut off mid-sentence but its title and opening clause are present). Count is well within parsimony bounds (N9 passes). The rules cover distinct domains — combined effort, proportions, downward pull, and surroundings — with no within-Stage-1 duplication (N10 passes). Rule 3's 'downward pull' is a legitimate generalisation reconciling obs 5 (heavier moves slower) with obs 10/12 (all fall alike), not a fabrication (N11 passes). Rule 3 explicitly cross-references 'the Rule of Proportions', satisfying N12.
@@ -313,6 +358,9 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/structural_resolved/age
 ---
 
 ## Case S6 — `gemini-3.1-pro-preview` trial 2 · structural axis
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_2_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_2_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_2_t0.0.md)
 
 **Claude structural judge — `FAIL`** (Stage 1 rule count `3`, failed: N12)
 

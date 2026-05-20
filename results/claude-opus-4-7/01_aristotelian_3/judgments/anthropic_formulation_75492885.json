@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.08194499999999999,
+  "input_tokens": 4813,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "80aaa6fb-0d3a-4327-8e2a-05d175492885",
+  "judge_timestamp_utc": "2026-05-20T17:16:59Z",
+  "output_tokens": 130,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "All six Stage 1 rules are restated in operational form with explicit scope, preservation statements, and boundary cases. No banned concepts are newly introduced (weight, thickness, push, resistance are descriptive). Observations are addressed in the boundary notes rather than silently dropped.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\"verdict\":\"PASS\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"All six Stage 1 rules are restated in operational form with explicit scope, preservation statements, and boundary cases. No banned concepts are newly introduced (weight, thickness, push, resistance are descriptive). Observations are addressed in the boundary notes rather than silently dropped.\"}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/01_aristotelian_3/formulation/trial_2_t0.0.json"
+}

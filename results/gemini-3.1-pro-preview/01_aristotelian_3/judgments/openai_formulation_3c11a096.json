@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.01329,
+  "input_tokens": 2306,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "80beaa29-4697-4219-b730-13713c11a096",
+  "judge_timestamp_utc": "2026-05-20T17:27:43Z",
+  "output_tokens": 88,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "constant, unchanging speeds",
+    "failed_criterion": "No new forbidden concept is introduced relative to Stage 1.",
+    "reasoning": "Stage 1 said celestial bodies travel in endless, repeating circular paths, but did not specify constant speed. Introducing unchanging speed imports a new substantive concept/rule relative to Stage 1.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"failed_criterion\": \"No new forbidden concept is introduced relative to Stage 1.\",\n  \"evidence\": \"constant, unchanging speeds\",\n  \"reasoning\": \"Stage 1 said celestial bodies travel in endless, repeating circular paths, but did not specify constant speed. Introducing unchanging speed imports a new substantive concept/rule relative to Stage 1.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.json"
+}

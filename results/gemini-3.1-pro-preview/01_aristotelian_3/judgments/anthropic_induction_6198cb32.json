@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.123975,
+  "input_tokens": 7145,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "da24cab9-c7b5-4b9f-bd72-a9e56198cb32",
+  "judge_timestamp_utc": "2026-05-20T17:25:56Z",
+  "output_tokens": 224,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "Motion occurs through surrounding mediums (like air, water, or honey), which actively resist objects passing through them and slow their progress.",
+    "first_fail_clause": "N1",
+    "first_fail_step": 2,
+    "reasoning": "The induction does not establish the two-regime distinction required by N1. There is no rule stating that forced/violent motion requires a sustained external cause and ceases when the cause is removed; observation 2 (cart pushed, then stops) is not covered by any stated rule, and the projectile tension in observation 7 is also not acknowledged (N7), but N1 fails first.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 2,\n  \"first_fail_clause\": \"N1\",\n  \"evidence\": \"Motion occurs through surrounding mediums (like air, water, or honey), which actively resist objects passing through them and slow their progress.\",\n  \"reasoning\": \"The induction does not establish the two-regime distinction required by N1. There is no rule stating that forced/violent motion requires a sustained external cause and ceases when the cause is removed; observation 2 (cart pushed, then stops) is not covered by any stated rule, and the projectile tension in observation 7 is also not acknowledged (N7), but N1 fails first.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_2_t0.0.json"
+}

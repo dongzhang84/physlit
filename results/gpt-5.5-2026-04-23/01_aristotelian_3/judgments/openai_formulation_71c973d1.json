@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.0268,
+  "input_tokens": 5040,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "9c336a43-ec30-4b6d-9490-d15d71c973d1",
+  "judge_timestamp_utc": "2026-05-20T17:20:55Z",
+  "output_tokens": 80,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "Each Stage 1 law is reformulated with operational conditionals or ranking rules, with scope and boundary cases stated. The response explicitly avoids quantitative conservation principles and does not introduce banned post-Aristotelian concepts beyond Stage 1.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"Each Stage 1 law is reformulated with operational conditionals or ranking rules, with scope and boundary cases stated. The response explicitly avoids quantitative conservation principles and does not introduce banned post-Aristotelian concepts beyond Stage 1.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian_3/formulation/trial_2_t0.0.json"
+}

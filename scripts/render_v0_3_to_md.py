@@ -1,7 +1,7 @@
 """Render every v0.3 treatment-arm trial JSON into a companion .md.
 
-Parallel to scripts/render_02_fmv_2_to_md.py: targets the ``v0_3``
-framework subtree under ``results/<model>/v0_3/`` and skips all
+Parallel to scripts/render_02_fmv_2_to_md.py: targets the ``01_aristotelian_3``
+framework subtree under ``results/<model>/01_aristotelian_3/`` and skips all
 non-stage subdirs.
 
 Usage: ``uv run python scripts/render_v0_3_to_md.py``
@@ -17,7 +17,7 @@ from typing import Any
 
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
-FRAMEWORK_ID = "v0_3"
+FRAMEWORK_ID = "01_aristotelian_3"
 STAGE_DIRS = {"induction", "formulation", "prediction", "meta"}
 
 STAGE_TITLES = {

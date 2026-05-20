@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.159045,
+  "input_tokens": 9193,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "7bebbb38-33a0-40b8-873c-e062ed5c0723",
+  "judge_timestamp_utc": "2026-05-20T17:18:13Z",
+  "output_tokens": 282,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "Stage 1 and Stage 2 both present 5 top-level rules covering the same conceptual territory (natural place, weight/support, medium resistance, forced motion, heavenly motion), well within the N9 parsimony threshold. No two rules paraphrase the same claim about the same body in the same situation (N10 pass). Every rule traces to specific observations, and the medium-resistance and impressed-motion language fall within permitted Aristotelian elaboration (N11 pass). Cross-rule references are present throughout Stage 2 (e.g., 'see Rule 5', 'handled by Rule 2's support clause', 'Rule 1 takes over'), satisfying N12.",
+    "rule_count": 5,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 5,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"Stage 1 and Stage 2 both present 5 top-level rules covering the same conceptual territory (natural place, weight/support, medium resistance, forced motion, heavenly motion), well within the N9 parsimony threshold. No two rules paraphrase the same claim about the same body in the same situation (N10 pass). Every rule traces to specific observations, and the medium-resistance and impressed-motion language fall within permitted Aristotelian elaboration (N11 pass). Cross-rule references are present throughout Stage 2 (e.g., 'see Rule 5', 'handled by Rule 2's support clause', 'Rule 1 takes over'), satisfying N12.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/01_aristotelian_3/induction/trial_3_t0.0.json"
+}

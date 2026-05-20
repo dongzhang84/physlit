@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.0413,
+  "input_tokens": 7596,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "0bb8d14b-e8e3-4300-be7c-0a739a680fa4",
+  "judge_timestamp_utc": "2026-05-20T17:20:40Z",
+  "output_tokens": 166,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "I count 14 top-level rules across Stage 1 and Stage 2: seven numbered induction rules and seven numbered formulation rules, with sub-bullets treated as elaboration. This exceeds 12 but is within the N9 soft-signal range and does not by itself fail parsimony. The Stage 2 rules largely restate and operationalize the Stage 1 rules rather than adding unsupported independent propositions, and the rules trace to the observations or permitted Aristotelian elaborations. The response contains explicit cross-rule references such as \"requires Rule 5\" and \"as in Rule 1,\" satisfying N12 hierarchy.",
+    "rule_count": 14,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 14,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"I count 14 top-level rules across Stage 1 and Stage 2: seven numbered induction rules and seven numbered formulation rules, with sub-bullets treated as elaboration. This exceeds 12 but is within the N9 soft-signal range and does not by itself fail parsimony. The Stage 2 rules largely restate and operationalize the Stage 1 rules rather than adding unsupported independent propositions, and the rules trace to the observations or permitted Aristotelian elaborations. The response contains explicit cross-rule references such as \\\"requires Rule 5\\\" and \\\"as in Rule 1,\\\" satisfying N12 hierarchy.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian_3/induction/trial_1_t0.0.json"
+}

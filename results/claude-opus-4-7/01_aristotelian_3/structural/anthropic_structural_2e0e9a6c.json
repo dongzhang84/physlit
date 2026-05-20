@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.15792,
+  "input_tokens": 9118,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "5faef4a5-13d2-4dd1-b6fc-cbee2e0e9a6c",
+  "judge_timestamp_utc": "2026-05-20T17:17:27Z",
+  "output_tokens": 282,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The rule set consists of 6 top-level rules in both Stage 1 and Stage 2 (well within parsimony bounds). Rules are distinct: natural place, weight-ranking, medium resistance, forced motion, impressed push, and celestial motion each address different phenomena. Every rule traces to specific observations cited in the response, and all elaborations (natural place, medium resistance, impressed push with explicit fading) fall within permitted Aristotelian framework moves. The Stage 2 response contains explicit cross-rule references (e.g., 'rule 3 handles that', 'the cart of rule 4', 'combining rules 2 and 3'), satisfying hierarchy.",
+    "rule_count": 6,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 6,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The rule set consists of 6 top-level rules in both Stage 1 and Stage 2 (well within parsimony bounds). Rules are distinct: natural place, weight-ranking, medium resistance, forced motion, impressed push, and celestial motion each address different phenomena. Every rule traces to specific observations cited in the response, and all elaborations (natural place, medium resistance, impressed push with explicit fading) fall within permitted Aristotelian framework moves. The Stage 2 response contains explicit cross-rule references (e.g., 'rule 3 handles that', 'the cart of rule 4', 'combining rules 2 and 3'), satisfying hierarchy.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/01_aristotelian_3/induction/trial_2_t0.0.json"
+}

@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.150945,
+  "input_tokens": 8653,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "b0843f78-b7ca-46f0-a3e8-82cd7f49d8a9",
+  "judge_timestamp_utc": "2026-05-20T17:18:59Z",
+  "output_tokens": 282,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The rule set contains 4 top-level rules in both Stage 1 and Stage 2 (natural motion, medium resistance, forced motion, heavenly motion), well under the N9 threshold. The four rules describe distinct phenomena with no paraphrastic overlap (N10 passes). Each rule traces to specific observations cited explicitly, and the impetus/medium-as-sustainer move for the arrow is a permitted Aristotelian elaboration (N11 passes). Stage 2 contains explicit cross-references (\"rule 1\", \"rule 2\", \"rule 3 takes over\", \"None of rules 1\u20133 apply\"), satisfying N12.",
+    "rule_count": 4,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 4,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The rule set contains 4 top-level rules in both Stage 1 and Stage 2 (natural motion, medium resistance, forced motion, heavenly motion), well under the N9 threshold. The four rules describe distinct phenomena with no paraphrastic overlap (N10 passes). Each rule traces to specific observations cited explicitly, and the impetus/medium-as-sustainer move for the arrow is a permitted Aristotelian elaboration (N11 passes). Stage 2 contains explicit cross-references (\\\"rule 1\\\", \\\"rule 2\\\", \\\"rule 3 takes over\\\", \\\"None of rules 1\u20133 apply\\\"), satisfying N12.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/01_aristotelian_3/induction/trial_4_t0.0.json"
+}

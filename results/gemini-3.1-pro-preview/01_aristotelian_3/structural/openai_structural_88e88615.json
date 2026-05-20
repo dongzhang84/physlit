@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.02725,
+  "input_tokens": 5014,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "7fdfb1be-b8a6-4018-88e6-7e6c88e88615",
+  "judge_timestamp_utc": "2026-05-20T17:25:51Z",
+  "output_tokens": 109,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The combined Stage 1+2 rule set contains two distinct top-level rules: Inherent Directions and Hindrance by Surroundings. This is parsimonious, the two rules address different phenomena, and both are traceable to the observations cited in the response. Because the rule count is below 5, the hierarchy requirement N12 is exempt.",
+    "rule_count": 2,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 2,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The combined Stage 1+2 rule set contains two distinct top-level rules: Inherent Directions and Hindrance by Surroundings. This is parsimonious, the two rules address different phenomena, and both are traceable to the observations cited in the response. Because the rule count is below 5, the hierarchy requirement N12 is exempt.\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_1_t0.0.json"
+}

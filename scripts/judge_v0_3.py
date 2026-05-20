@@ -2,20 +2,20 @@
 
 Judges the **treatment arm** of the v0.3 axiomatisation control
 (``predictions/v0_3_prereg.md``). For every treatment trial under
-``results/<model>/v0_3/``:
+``results/<model>/01_aristotelian_3/``:
 
 - **Content axis** — Stage 1/2/3 responses scored by the two content
   judges (Claude + GPT-5.5) with the v0.1 GLOBAL judge prompts
   (``prompts/judge_stage{1,2,3}.md``) and the v0.1 criteria
   (``frameworks/01_aristotelian/{ideal_induction,pass_fail_criteria,
   prediction_tests}.md``), frozen at ``prereg-v0.1-locked``. Verdicts
-  → ``results/<model>/v0_3/judgments/``. Stage 4 (meta) is **not**
+  → ``results/<model>/01_aristotelian_3/judgments/``. Stage 4 (meta) is **not**
   judged (prereg §1.5).
 - **Structural axis** — the Stage 1 rule set (Stage 2 as context)
   scored by the two structural judges with the v0.2 structural
   criteria (``frameworks/01_aristotelian/structural_criteria.md``) and
   the global structural judge prompt (``prompts/judge_structural.md``),
-  frozen at ``prereg-v0.2-locked``. Verdicts → ``results/<model>/v0_3/
+  frozen at ``prereg-v0.2-locked``. Verdicts → ``results/<model>/01_aristotelian_3/
   structural/``.
 
 Writes a **preliminary** judging section to ``analysis/v0_3_findings.md``;
@@ -24,7 +24,7 @@ verdicts and the treatment-vs-control comparison are computed by
 ``scripts/apply_v0_3.py`` after any audit.
 
 Prompts/criteria are read from the v0.1/v0.2 frozen locations; only
-trial data comes from the ``v0_3/`` tree. No existing code is modified.
+trial data comes from the ``01_aristotelian_3/`` tree. No existing code is modified.
 
 Usage:
     uv run python scripts/judge_v0_3.py [--models <csv>] [--n-trials N]
@@ -49,7 +49,7 @@ from physlit.prompts import PromptTemplate
 from physlit.scenarios import load_scenarios, render_scenarios_block
 
 REPO = Path(__file__).resolve().parent.parent
-TREATMENT_ID = "v0_3"  # results subtree for the v0.3 treatment arm
+TREATMENT_ID = "01_aristotelian_3"  # results subtree for the v0.3 treatment arm
 SOURCE_FRAMEWORK_DIR = REPO / "frameworks" / "01_aristotelian"  # criteria
 GLOBAL_PROMPTS_DIR = REPO / "prompts"  # v0.1 global judge prompts
 RESULTS = REPO / "results"

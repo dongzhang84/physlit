@@ -76,7 +76,7 @@ post-trial-set re-ping disclosures.
 | `gemini-3.1-pro-preview` | 4 | FAIL | DISAGREE | PASS | FAIL | DISAGREE |
 
 ## v0.3 post-audit final results
-- Generated: `2026-05-20T17:47:04Z`
+- Generated: `2026-05-20T18:06:33Z`
 - Prereg lock: `prereg-v0.3-locked`
 - **PRELIMINARY** — 8 treatment trial(s) have an unresolved dual-judge disagreement; fill the `HUMAN_CONTENT` / `HUMAN_STRUCTURAL` tables in `apply_v0_3.py` after the audit and re-run.
 

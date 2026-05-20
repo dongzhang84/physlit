@@ -6,7 +6,7 @@ with its fielded placeholders. Mirrors ``scripts/run_agent1_02_fmv_2.py``
 but adapted to v0.1's prompt shape.
 
 **Not part of the prereg envelope** — the human audit is canonical.
-Verdicts to ``results/<model>/v0_3/content_resolved/``.
+Verdicts to ``results/<model>/01_aristotelian_3/content_resolved/``.
 
 Resolver model: ``gemini-3.1-pro-preview``. Run with the sandbox
 disabled (Bash sandbox blocks the google-genai endpoint).
@@ -31,7 +31,7 @@ from physlit.prompts import PromptTemplate
 from physlit.runners import GeminiRunner
 
 REPO = Path(__file__).resolve().parent.parent
-TREATMENT_ID = "v0_3"
+TREATMENT_ID = "01_aristotelian_3"
 SOURCE_FRAMEWORK_DIR = REPO / "frameworks" / "01_aristotelian"
 GLOBAL_PROMPTS_DIR = REPO / "prompts"
 RESULTS = REPO / "results"
@@ -187,7 +187,7 @@ def main() -> int:
         )
 
     print(f"\n=== done — {len(cases)} cases, resolver cost ~${total_cost:.4f} ===")
-    print("Agent 1 verdicts saved under results/<model>/v0_3/content_resolved/.")
+    print("Agent 1 verdicts saved under results/<model>/01_aristotelian_3/content_resolved/.")
     return 0
 
 

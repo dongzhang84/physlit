@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.034905,
+  "framework_id": "01_aristotelian_3",
+  "judge_a_verdict": "FAIL",
+  "judge_b_verdict": "PASS",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "The combined Stage 1 and Stage 2 response contains exactly 3 top-level rules, which easily passes the N9 parsimony check and exempts the rule set from the N12 hierarchy requirement. The rules are independent of one another (passing N10) and properly trace to the provided observations, utilizing permitted Aristotelian elaborations such as explicitly fading imparted pushes and categorizing medium hindrance (passing N11). Judge A returned a FAIL verdict for N12, but its own reasoning text correctly noted that N12 is exempt for a 3-rule set, indicating a contradictory JSON generation. I agree with Judge B's reasoning and verdict of PASS.",
+    "rule_count": 3,
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_b\",\n  \"rule_count\": 3,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"The combined Stage 1 and Stage 2 response contains exactly 3 top-level rules, which easily passes the N9 parsimony check and exempts the rule set from the N12 hierarchy requirement. The rules are independent of one another (passing N10) and properly trace to the provided observations, utilizing permitted Aristotelian elaborations such as explicitly fading imparted pushes and categorizing medium hindrance (passing N11). Judge A returned a FAIL verdict for N12, but its own reasoning text correctly noted that N12 is exempt for a 3-rule set, indicating a contradictory JSON generation. I agree with Judge B's reasoning and verdict of PASS.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "v0.3",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-20T17:43:49Z",
+  "trial_index": 4
+}

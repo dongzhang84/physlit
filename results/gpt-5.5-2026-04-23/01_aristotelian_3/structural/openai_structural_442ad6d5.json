@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.04362,
+  "input_tokens": 7960,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "f5b298da-936e-43e1-a313-901e442ad6d5",
+  "judge_timestamp_utc": "2026-05-20T17:21:25Z",
+  "output_tokens": 191,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "Counting the six top-level Stage 1 rules and six top-level Stage 2 rules gives 12 distinct top-level rules, so N9 passes. The Stage 2 rules largely reformulate the Stage 1 rules operationally rather than creating redundant independent claims, and no pair appears to duplicate the same operational claim within the rule set in a way that triggers N10. Each rule is traceable to the listed observations or to permitted Aristotelian elaborations, including natural-place language, medium resistance, stored-cast explanation for the arrow, and the heaven/earth split. N12 passes because the response contains explicit cross-rule references such as \u201chandled by Rule 6,\u201d \u201crequires Rule 3,\u201d and \u201coverlaps with Rule 2.\u201d",
+    "rule_count": 12,
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"rule_count\": 12,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"Counting the six top-level Stage 1 rules and six top-level Stage 2 rules gives 12 distinct top-level rules, so N9 passes. The Stage 2 rules largely reformulate the Stage 1 rules operationally rather than creating redundant independent claims, and no pair appears to duplicate the same operational claim within the rule set in a way that triggers N10. Each rule is traceable to the listed observations or to permitted Aristotelian elaborations, including natural-place language, medium resistance, stored-cast explanation for the arrow, and the heaven/earth split. N12 passes because the response contains explicit cross-rule references such as \u201chandled by Rule 6,\u201d \u201crequires Rule 3,\u201d and \u201coverlaps with Rule 2.\u201d\"\n}",
+  "stage": "structural",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian_3/induction/trial_2_t0.0.json"
+}

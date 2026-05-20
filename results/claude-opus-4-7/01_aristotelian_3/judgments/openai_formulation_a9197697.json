@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.017745,
+  "input_tokens": 3193,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "c0c964f5-b85e-43d0-96a3-d65da9197697",
+  "judge_timestamp_utc": "2026-05-20T17:17:49Z",
+  "output_tokens": 89,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "Each Stage 1 law is restated operationally with scope, rankings or conditionals, and boundary cases. The response does not introduce banned technical concepts relative to Stage 1, and its preserved quantities are consistent with the Aristotelian rules rather than importing energy or momentum.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\n  \"verdict\": \"PASS\",\n  \"failed_criterion\": null,\n  \"evidence\": null,\n  \"reasoning\": \"Each Stage 1 law is restated operationally with scope, rankings or conditionals, and boundary cases. The response does not introduce banned technical concepts relative to Stage 1, and its preserved quantities are consistent with the Aristotelian rules rather than importing energy or momentum.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/01_aristotelian_3/formulation/trial_3_t0.0.json"
+}

@@ -16,6 +16,9 @@
 
 ## Case C1 — `claude-opus-4-7` trial 0 · Stage 1 (induction)
 
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
+
 **Claude judge — `PASS`** (failed clause: (n/a))
 
 > The induction covers all 12 observations via 6 rules, satisfies N1 (rule 4 two-regime), N2 (rule 2 weight-proportional eagerness), N3 (medium resistance), N4 (surface/shape in rule 3), N5 (natural region in rule 1), N6 (celestial split in rule 6), N7 (projectile tension explicitly flagged), N8 (oak floats explained via weight-vs-resistance). No §3 banned terms appear — 'denser medium' uses 'dense' descriptively of substances, not as a defined quantity, and no near-pass patterns trigger.
@@ -29,11 +32,14 @@
 - failed clause / criterion: (n/a)
 - reasoning: I agree with Judge B. Section 5 explicitly lists a near-pass example where the phrase 'less dense' triggers a FAIL because it imports the banned concept of 'density'. The model's use of 'denser' is a morphological equivalent that violates this same constraint, even though it pairs it with the permitted word 'thinner'. The instructions require a conservative reading, making this a clear Step 1 FAIL for using a banned concept.
 
-_(verdict JSON: `results/claude-opus-4-7/v0_3/content_resolved/agent1_induction_t0_44750cdd.json`)_
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian_3/content_resolved/agent1_induction_t0_44750cdd.json`)_
 
 ---
 
 ## Case C2 — `claude-opus-4-7` trial 0 · Stage 2 (formulation)
+
+**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -48,11 +54,14 @@ _(verdict JSON: `results/claude-opus-4-7/v0_3/content_resolved/agent1_induction_
 - failed clause / criterion: (n/a)
 - reasoning: Judge A is correct that the response satisfies all Stage 2 criteria. Judge B incorrectly flags 'speeds up' and 'slows down' as direct equivalents to the banned concept of 'acceleration'. Section 3 of the ideal induction criteria explicitly permits 'ordinary descriptive language' such as 'fast' and 'slow' that any non-physicist would use. These terms do not import a measurement scheme or quantitative law. Additionally, the response uses them only to explicitly clarify that its rules do not address how speed changes, thereby successfully avoiding the forbidden concept.
 
-_(verdict JSON: `results/claude-opus-4-7/v0_3/content_resolved/agent1_formulation_t0_c3b44b1f.json`)_
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian_3/content_resolved/agent1_formulation_t0_c3b44b1f.json`)_
 
 ---
 
 ## Case C3 — `claude-opus-4-7` trial 0 · Stage 3 (prediction)
+
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) · [Stage 2](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -67,11 +76,14 @@ _(verdict JSON: `results/claude-opus-4-7/v0_3/content_resolved/agent1_formulatio
 - failed clause / criterion: (n/a)
 - reasoning: The criteria for Stage 3 require that the model's prediction matches the Aristotelian (PASS) column for each scenario. In Scenario 2 (cart on ice), the model explicitly refuses to commit to a prediction, stating the case is 'outside the clean scope' of its rules. While refusing to predict on scope grounds is an explicitly allowed exception for Scenario 4 (the vacuum) via 'PASS mode B', no such exception exists for Scenario 2. The expected Aristotelian prediction is that the cart stops due to the lack of a continuous mover; by refusing to make this prediction, the model fails the first criterion. I agree with Judge B's FAIL verdict over Judge A's overly charitable PASS.
 
-_(verdict JSON: `results/claude-opus-4-7/v0_3/content_resolved/agent1_prediction_t0_b03d0cdb.json`)_
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian_3/content_resolved/agent1_prediction_t0_b03d0cdb.json`)_
 
 ---
 
 ## Case C4 — `claude-opus-4-7` trial 1 · Stage 3 (prediction)
+
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_1_t0.0.md) · [Stage 2](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_1_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_1_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -86,11 +98,14 @@ _(verdict JSON: `results/claude-opus-4-7/v0_3/content_resolved/agent1_prediction
 - failed clause / criterion: (n/a)
 - reasoning: I agree with Judge B that the response is a FAIL. The Scenario 4 specific notes explicitly define only two PASS modes for the vacuum scenario: arguing that a vacuum is impossible (Mode A), or explicitly declining to commit on scope grounds (Mode B). Although the model acknowledges a gap in its rules' scope, it does not explicitly decline to commit; rather, it provides a definite prediction that the feather 'falls straight down along the vertical' based on its Rule 1. Following the instruction to be conservative and rely on a literal reading of the criteria, this near-miss fails because it commits to a prediction instead of refusing.
 
-_(verdict JSON: `results/claude-opus-4-7/v0_3/content_resolved/agent1_prediction_t1_d4b21fbd.json`)_
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian_3/content_resolved/agent1_prediction_t1_d4b21fbd.json`)_
 
 ---
 
 ## Case C5 — `claude-opus-4-7` trial 2 · Stage 2 (formulation)
+
+**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_2_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_2_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -105,11 +120,14 @@ _(verdict JSON: `results/claude-opus-4-7/v0_3/content_resolved/agent1_prediction
 - failed clause / criterion: (n/a)
 - reasoning: Judge B correctly identifies that the phrase 'heavier (per equal volume)' functions as a direct equivalent to density as a defined quantity. According to ideal_induction.md §3, 'density (as a defined quantity)' is a banned concept, and models may not import measurement schemes or quantitative laws. By defining floating and sinking in terms of a weight-to-volume ratio, the response introduces a forbidden concept not permitted by the framework, failing Stage 2 criteria.
 
-_(verdict JSON: `results/claude-opus-4-7/v0_3/content_resolved/agent1_formulation_t2_9bb19b71.json`)_
+_(verdict JSON: `results/claude-opus-4-7/01_aristotelian_3/content_resolved/agent1_formulation_t2_9bb19b71.json`)_
 
 ---
 
 ## Case C6 — `gemini-3.1-pro-preview` trial 1 · Stage 3 (prediction)
+
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_1_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_1_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_1_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -124,11 +142,14 @@ _(verdict JSON: `results/claude-opus-4-7/v0_3/content_resolved/agent1_formulatio
 - failed clause / criterion: (n/a)
 - reasoning: Judge B is correct to FAIL the response. The model's prediction for Scenario 5 asserts that the arrow will immediately drop straight downward without sustaining forward motion. This directly violates Stage 3 bullet 1 because it fails to match the Aristotelian expectation (which accounts for continued projectile motion via the medium or impetus). Additionally, refusing to predict an outcome for Scenario 2 on scope grounds is also a failure, as 'scope refusal' is exclusively permitted as a valid PASS mode for Scenario 4 (the vacuum case).
 
-_(verdict JSON: `results/gemini-3.1-pro-preview/v0_3/content_resolved/agent1_prediction_t1_3e3a55b0.json`)_
+_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian_3/content_resolved/agent1_prediction_t1_3e3a55b0.json`)_
 
 ---
 
 ## Case C7 — `gemini-3.1-pro-preview` trial 2 · Stage 3 (prediction)
+
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_2_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_2_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_2_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -143,11 +164,14 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/v0_3/content_resolved/agent1_pre
 - failed clause / criterion: (n/a)
 - reasoning: The response predicts that the horizontally fired arrow in Scenario 5 instantly stops its forward motion and drops straight down. This completely contradicts the established Aristotelian view of projectile motion (which relies on antiperistasis or impetus to explain why projectiles continue moving) as well as the framework's own baseline Observation 7 ('Arrow continues after release'). Because this prediction fails to match the 'Aristotelian (PASS)' outcome for the scenario, the trial violates Stage 3 bullet 1. I agree with Judge B's FAIL verdict.
 
-_(verdict JSON: `results/gemini-3.1-pro-preview/v0_3/content_resolved/agent1_prediction_t2_2f2ed9f8.json`)_
+_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian_3/content_resolved/agent1_prediction_t2_2f2ed9f8.json`)_
 
 ---
 
 ## Case C8 — `gemini-3.1-pro-preview` trial 4 · Stage 2 (formulation)
+
+**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_4_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -162,13 +186,16 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/v0_3/content_resolved/agent1_pre
 - failed clause / criterion: (n/a)
 - reasoning: I agree with Judge B's FAIL verdict, though for a reason verifiable strictly from the Stage 2 text rather than assuming a cross-stage hallucination. The response explicitly categorizes 'wood' as a material that will 'always travel straight Down'. Under its stated rules, falling speed is merely reduced by a medium's thickness, meaning wood would fall (sink) through water, contradicting Observation 5 (oak floats). Because the response fails to cover floating and does not list this omission in its 'Boundary notes', it silently drops an observation, which is an automatic FAIL under Stage 2 bullet 5.
 
-_(verdict JSON: `results/gemini-3.1-pro-preview/v0_3/content_resolved/agent1_formulation_t4_eb1c1391.json`)_
+_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian_3/content_resolved/agent1_formulation_t4_eb1c1391.json`)_
 
 ---
 
 # Part B — Structural axis (3 cases)
 
 ## Case S1 — `gpt-5.5-2026-04-23` trial 1 · structural axis
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/induction/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/induction/trial_1_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/formulation/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/formulation/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/01_aristotelian_3/prediction/trial_1_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/01_aristotelian_3/meta/trial_1_t0.0.md)
 
 **Claude structural judge — `FAIL`** (rule count `7`, failed: N12)
 
@@ -184,11 +211,14 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/v0_3/content_resolved/agent1_for
 - failed_criteria: `(none)`
 - reasoning: Judge B correctly concluded that the rule set passes all structural criteria. Judge A's reasoning text also concluded that the response should PASS, but it erroneously output a FAIL verdict with N12 as the failed criterion. The response contains explicit cross-rule references (e.g., 'water also serves as a supporting medium in Rule 4' and 'that requires Rule 5'), satisfying N12. N9 passes because the 14 top-level numbered rules (7 in Stage 1, 7 in Stage 2) are below the strict threshold of > 15. N10 and N11 also pass since the 7 core concepts are independent and fully traceable to the provided observations or permitted Aristotelian elaborations.
 
-_(verdict JSON: `results/gpt-5.5-2026-04-23/v0_3/structural_resolved/agent2_structural_t1_6c5e7750.json`)_
+_(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian_3/structural_resolved/agent2_structural_t1_6c5e7750.json`)_
 
 ---
 
 ## Case S2 — `gemini-3.1-pro-preview` trial 3 · structural axis
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_3_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_3_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_3_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_3_t0.0.md)
 
 **Claude structural judge — `PASS`** (rule count `4`, failed: (none))
 
@@ -204,11 +234,14 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/v0_3/structural_resolved/agent2_stru
 - failed_criteria: `(none)`
 - reasoning: Judge B incorrectly applied N10 by penalizing the model for restating its Stage 1 rules in its Stage 2 operational formulation. The criteria specify treating Stage 1 and Stage 2 together as a single rule set, meaning the required operational translations of the same rules do not count as separate, redundant entries. There are 4 distinct top-level rules in this response. These 4 rules are parsimonious (passing N9), describe conceptually distinct phenomena (passing N10), trace directly to the framework observations using permitted Aristotelian elaborations like impetus and natural place (passing N11), and are exempt from the hierarchy requirement due to having fewer than 5 rules (passing N12). I agree with Judge A's assessment.
 
-_(verdict JSON: `results/gemini-3.1-pro-preview/v0_3/structural_resolved/agent2_structural_t3_101f6d13.json`)_
+_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian_3/structural_resolved/agent2_structural_t3_101f6d13.json`)_
 
 ---
 
 ## Case S3 — `gemini-3.1-pro-preview` trial 4 · structural axis
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_4_t0.0.md)
 
 **Claude structural judge — `FAIL`** (rule count `3`, failed: N12)
 
@@ -224,6 +257,6 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/v0_3/structural_resolved/agent2_
 - failed_criteria: `(none)`
 - reasoning: The combined Stage 1 and Stage 2 response contains exactly 3 top-level rules, which easily passes the N9 parsimony check and exempts the rule set from the N12 hierarchy requirement. The rules are independent of one another (passing N10) and properly trace to the provided observations, utilizing permitted Aristotelian elaborations such as explicitly fading imparted pushes and categorizing medium hindrance (passing N11). Judge A returned a FAIL verdict for N12, but its own reasoning text correctly noted that N12 is exempt for a 3-rule set, indicating a contradictory JSON generation. I agree with Judge B's reasoning and verdict of PASS.
 
-_(verdict JSON: `results/gemini-3.1-pro-preview/v0_3/structural_resolved/agent2_structural_t4_b3143a92.json`)_
+_(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian_3/structural_resolved/agent2_structural_t4_b3143a92.json`)_
 
 ---

@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.042635,
+  "framework_id": "01_aristotelian_3",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "It does not say whether a descending body speeds up, slows down, or holds steady as it falls; the observations did not distinguish these.",
+    "failed_clause": null,
+    "reasoning": "Judge A is correct that the response satisfies all Stage 2 criteria. Judge B incorrectly flags 'speeds up' and 'slows down' as direct equivalents to the banned concept of 'acceleration'. Section 3 of the ideal induction criteria explicitly permits 'ordinary descriptive language' such as 'fast' and 'slow' that any non-physicist would use. These terms do not import a measurement scheme or quantitative law. Additionally, the response uses them only to explicitly clarify that its rules do not address how speed changes, thereby successfully avoiding the forbidden concept.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"It does not say whether a descending body speeds up, slows down, or holds steady as it falls; the observations did not distinguish these.\",\n  \"reasoning\": \"Judge A is correct that the response satisfies all Stage 2 criteria. Judge B incorrectly flags 'speeds up' and 'slows down' as direct equivalents to the banned concept of 'acceleration'. Section 3 of the ideal induction criteria explicitly permits 'ordinary descriptive language' such as 'fast' and 'slow' that any non-physicist would use. These terms do not import a measurement scheme or quantitative law. Additionally, the response uses them only to explicitly clarify that its rules do not address how speed changes, thereby successfully avoiding the forbidden concept.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "v0.3",
+  "stage": "formulation",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-20T17:36:14Z",
+  "trial_index": 0
+}

@@ -15,7 +15,7 @@ from typing import Any
 
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
-TREATMENT_ID = "v0_3"
+TREATMENT_ID = "01_aristotelian_3"
 OUTPUT = REPO / "analysis" / "v0_3_agents_review.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
@@ -24,6 +24,30 @@ STAGE_TITLE = {
     "formulation": "Stage 2 (formulation)",
     "prediction": "Stage 3 (prediction)",
 }
+STAGE_LABEL = {"induction": "Stage 1", "formulation": "Stage 2", "prediction": "Stage 3"}
+
+
+def _trial_links(model: str, trial: int, under_judgment: str | tuple[str, ...]) -> list[str]:
+    """Clickable links (relative to ``analysis/``) to the trial's ``.md``
+    companions and ``.json`` sources — same shape as the worksheet."""
+    base = f"../results/{model}/{TREATMENT_ID}"
+    under = (under_judgment,) if isinstance(under_judgment, str) else under_judgment
+    primary_links = " · ".join(
+        f"{STAGE_LABEL.get(s, s)} "
+        f"[`.md`]({base}/{s}/trial_{trial}_t0.0.md) "
+        f"[`.json`]({base}/{s}/trial_{trial}_t0.0.json)"
+        for s in under
+    )
+    others = " · ".join(
+        f"[{STAGE_LABEL.get(s, s)}]({base}/{s}/trial_{trial}_t0.0.md)"
+        for s in (*CONTENT_STAGES, "meta")
+        if s not in under
+    )
+    return [
+        f"**Trial files** (under judgment): {primary_links}",
+        f"**Same trial, other stages:** {others}",
+        "",
+    ]
 
 
 def _load_judgments(model: str, subdir: str) -> dict[tuple[int, str, str], dict[str, Any]]:
@@ -185,6 +209,7 @@ def main() -> None:
 
         lines.append(f"## Case C{k} — `{model}` trial {t} · {STAGE_TITLE[stage]}")
         lines.append("")
+        lines += _trial_links(model, t, stage)
         lines += _content_judge_line("Claude judge", a)
         lines += _content_judge_line("OpenAI judge", b)
         lines.append(
@@ -196,7 +221,7 @@ def main() -> None:
         lines.append(f"- reasoning: {(pv.get('reasoning') or '').strip()}")
         lines.append("")
         lines.append(
-            f"_(verdict JSON: `results/{model}/v0_3/content_resolved/{rec.get('_file', '?')}`)_"
+            f"_(verdict JSON: `results/{model}/01_aristotelian_3/content_resolved/{rec.get('_file', '?')}`)_"
         )
         lines.append("")
         lines.append("---")
@@ -215,6 +240,7 @@ def main() -> None:
 
         lines.append(f"## Case S{k} — `{model}` trial {t} · structural axis")
         lines.append("")
+        lines += _trial_links(model, t, ("induction", "formulation"))
         lines += _structural_judge_line("Claude structural judge", a)
         lines += _structural_judge_line("OpenAI structural judge", b)
         lines.append(
@@ -227,7 +253,7 @@ def main() -> None:
         lines.append(f"- reasoning: {(pv.get('reasoning') or '').strip()}")
         lines.append("")
         lines.append(
-            f"_(verdict JSON: `results/{model}/v0_3/structural_resolved/{rec.get('_file', '?')}`)_"
+            f"_(verdict JSON: `results/{model}/01_aristotelian_3/structural_resolved/{rec.get('_file', '?')}`)_"
         )
         lines.append("")
         lines.append("---")

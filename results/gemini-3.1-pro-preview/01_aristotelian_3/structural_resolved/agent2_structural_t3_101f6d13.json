@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.03789,
+  "framework_id": "01_aristotelian_3",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 re-run after parse error.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence": [],
+    "failed_criteria": [],
+    "reasoning": "Judge B incorrectly applied N10 by penalizing the model for restating its Stage 1 rules in its Stage 2 operational formulation. The criteria specify treating Stage 1 and Stage 2 together as a single rule set, meaning the required operational translations of the same rules do not count as separate, redundant entries. There are 4 distinct top-level rules in this response. These 4 rules are parsimonious (passing N9), describe conceptually distinct phenomena (passing N10), trace directly to the framework observations using permitted Aristotelian elaborations like impetus and natural place (passing N11), and are exempt from the hierarchy requirement due to having fewer than 5 rules (passing N12). I agree with Judge A's assessment.",
+    "rule_count": 4,
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"rule_count\": 4,\n  \"failed_criteria\": [],\n  \"evidence\": [],\n  \"reasoning\": \"Judge B incorrectly applied N10 by penalizing the model for restating its Stage 1 rules in its Stage 2 operational formulation. The criteria specify treating Stage 1 and Stage 2 together as a single rule set, meaning the required operational translations of the same rules do not count as separate, redundant entries. There are 4 distinct top-level rules in this response. These 4 rules are parsimonious (passing N9), describe conceptually distinct phenomena (passing N10), trace directly to the framework observations using permitted Aristotelian elaborations like impetus and natural place (passing N11), and are exempt from the hierarchy requirement due to having fewer than 5 rules (passing N12). I agree with Judge A's assessment.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "v0.3",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-20T17:46:40Z",
+  "trial_index": 3
+}

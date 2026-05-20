@@ -19,8 +19,8 @@ inserted; the paragraph is byte-for-byte identical to
 ``frameworks/02_fmv/prompts/stage1_induction_axiomatised.md``).
 
 Stage 2 / 3 / 4 still use the v0.1 GLOBAL prompts under
-``prompts/``. Output lands under the framework id ``v0_3`` —
-``results/<model-version>/v0_3/<stage>/`` — kept fully separate from
+``prompts/``. Output lands under the framework id ``01_aristotelian_3`` —
+``results/<model-version>/01_aristotelian_3/<stage>/`` — kept fully separate from
 the frozen v0.1 control trials at ``results/<model>/01_aristotelian/``.
 
 This runner does not modify ``run_v0_1.py`` or ``run_02_fmv_2.py``;
@@ -52,11 +52,11 @@ if TYPE_CHECKING:
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
-# Records and result directories carry the treatment-arm id ``v0_3``;
+# Records and result directories carry the treatment-arm id ``01_aristotelian_3``;
 # observations + scenarios + the treatment Stage 1 prompt are sourced
 # from the Aristotelian framework dir; Stage 2/3/4 use the v0.1 GLOBAL
 # prompt dir, unchanged.
-FRAMEWORK_ID = "v0_3"
+FRAMEWORK_ID = "01_aristotelian_3"
 SOURCE_FRAMEWORK_DIR = REPO_ROOT / "frameworks" / "01_aristotelian"
 FRAMEWORK_PROMPTS_DIR = SOURCE_FRAMEWORK_DIR / "prompts"
 GLOBAL_PROMPTS_DIR = REPO_ROOT / "prompts"
@@ -266,7 +266,7 @@ def run_one_trial_set(
 
 def _output_root_for_run(output_mode: str, runner: TestedModelRunner, run_timestamp: str) -> Path:
     """``save_trial`` appends ``/<framework_id>/<stage>/trial_<i>_t<temp>.json``
-    — framework_id is ``v0_3`` for this runner."""
+    — framework_id is ``01_aristotelian_3`` for this runner."""
     if output_mode == "production":
         return RESULTS_ROOT / runner.model_id
     if output_mode == "dryrun":

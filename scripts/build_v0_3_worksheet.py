@@ -18,7 +18,7 @@ from typing import Any
 
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
-TREATMENT_ID = "v0_3"
+TREATMENT_ID = "01_aristotelian_3"
 OUTPUT = REPO / "analysis" / "v0_3_audit_worksheet.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")

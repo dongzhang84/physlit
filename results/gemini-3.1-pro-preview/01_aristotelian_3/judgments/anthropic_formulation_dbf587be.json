@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.06606000000000001,
+  "input_tokens": 3714,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "1a679fa0-a8ff-4f10-9e0e-84cfdbf587be",
+  "judge_timestamp_utc": "2026-05-20T17:27:40Z",
+  "output_tokens": 138,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": null,
+    "failed_criterion": null,
+    "reasoning": "Each Stage 1 law is restated operationally with proportionalities and ranking rules. Scope is given for each. The response explicitly states nothing is conserved quantitatively, consistent with Stage 1. No banned concepts are newly introduced. Boundary cases are named explicitly rather than dropped.",
+    "verdict": "PASS"
+  },
+  "raw_response": "{\"verdict\": \"PASS\", \"failed_criterion\": null, \"evidence\": null, \"reasoning\": \"Each Stage 1 law is restated operationally with proportionalities and ranking rules. Scope is given for each. The response explicitly states nothing is conserved quantitatively, consistent with Stage 1. No banned concepts are newly introduced. Boundary cases are named explicitly rather than dropped.\"}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.json"
+}

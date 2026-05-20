@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.025580000000000002,
+  "input_tokens": 4660,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "e3fe1167-55cc-4feb-9616-52c7ed9c6114",
+  "judge_timestamp_utc": "2026-05-20T17:23:45Z",
+  "output_tokens": 114,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "Imparting this motion to a fully loaded or heavier object requires visibly greater effort than moving an empty or lighter one.",
+    "first_fail_clause": "N2",
+    "first_fail_step": 2,
+    "reasoning": "No banned concepts appear at Step 1. The response fails N2 because it does not state that heavier bodies reach the ground sooner than lighter bodies released from the same height; it only mentions heavier objects requiring greater effort to move.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 2,\n  \"first_fail_clause\": \"N2\",\n  \"evidence\": \"Imparting this motion to a fully loaded or heavier object requires visibly greater effort than moving an empty or lighter one.\",\n  \"reasoning\": \"No banned concepts appear at Step 1. The response fails N2 because it does not state that heavier bodies reach the ground sooner than lighter bodies released from the same height; it only mentions heavier objects requiring greater effort to move.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_0_t0.0.json"
+}
