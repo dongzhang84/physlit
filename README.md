@@ -77,6 +77,31 @@ Two methodology findings:
 
 ---
 
+## 02_fmv.2 result (2026-05-20)
+
+**Single-variable control experiment** on the F=mv framework: same observations, same models, same N=5, same Stage 2-4 prompts, same judges, same criteria — only the **Stage 1 prompt** changes (one natural-language axiomatisation paragraph added). Two predictions locked at tag [`prereg-02_fmv.2-locked`](https://github.com/dongzhang84/physlit/releases/tag/prereg-02_fmv.2-locked):
+
+- **P1 — Axiomatisation raises structural pass rate: STRONGLY CONFIRMED.** Treatment structural PASS **11/15** vs control 5/15 — at the doubling threshold. Per-model: Claude 2/5 → 5/5, GPT 0/5 → 2/5, Gemini 3/5 → 4/5.
+- **P2 — Content competence does not degrade: CONFIRMED.** Treatment content PASS **9/15** vs control 9/15 — exactly flat. No coverage was traded for parsimony.
+
+Composite (content AND structural) jumped from **1/15 → 6/15** — a six-fold increase, driven entirely by the structural axis.
+
+The **`02_fmv.1` self-organisation thesis is causally confirmed**. `02_fmv.1` §2.7 predicted that the structural failure was a *self-organisation gap, not a knowledge gap*: models that know the right rules can axiomatise them when asked but don't by default; models that do not know them cannot. Both halves replicate — Claude/GPT (content-strong) respond to the cue; Gemini (content-weak) barely moves. The descriptive finding from `02_fmv.1` is now a causal/mechanistic one.
+
+One failure mode worth recording: Claude trial 2 lost its content axis under the treatment — Stage 2 fabricated "the track pushes upward to cancel the downward pull" (P3 violation). Parsimony pressure can push a model to invent a balancing mechanism when the observations are silent. A follow-on instruction should explicitly forbid introducing forces not in the observations.
+
+**Scope**: 60 new tested-model trials + 120 judge + 16 resolver calls ≈ **$5.5 USD**.
+
+| Where to look | What's in it |
+| --- | --- |
+| [`analysis/02_fmv_2_report.md`](./analysis/02_fmv_2_report.md) | English narrative report |
+| [`analysis/02_fmv_2_findings.md`](./analysis/02_fmv_2_findings.md) | Judging report + post-audit numerics |
+| [`analysis/02_fmv_2_audit_human_review.md`](./analysis/02_fmv_2_audit_human_review.md) | Human verdicts on all 16 disagreement cases |
+| [`frameworks/02_fmv/prompts/stage1_induction_axiomatised.md`](./frameworks/02_fmv/prompts/stage1_induction_axiomatised.md) | The treatment Stage 1 prompt (the manipulated variable) |
+| [`results/<model-id>/02_fmv_2/`](./results/) | Treatment trials + judge verdicts |
+
+---
+
 ## Why this exists
 
 Existing LLM physics benchmarks count correct answers and report a percentage. Two structural flaws follow:
@@ -186,6 +211,7 @@ CI never runs real API calls — only mocks in `tests/test_runners_with_mock.py`
 | **v0.2** | Structural axis (N9-N12) + LLM disagree-resolvers, additive re-analysis of v0.1 | ✅ Done — 2026-05-13 |
 | **02_fmv** | F=mv counterfactual world, content axis × 3 models × N=5 | ✅ Done — 2026-05-18 |
 | **02_fmv.1** | Structural axis (N9-N12) on the F=mv trials, additive re-analysis | ✅ Done — 2026-05-18 |
+| **02_fmv.2** | Axiomatisation control: single-variable Stage 1 prompt change vs `02_fmv` | ✅ Done — 2026-05-20 |
 | next | Further frameworks judged under a common mechanical-criteria standard; per-axis judge validation | Planned |
 
 Pre-registration is framework-scoped from 02_fmv onward (tag `prereg-<id>-locked`). The original v1.0 ambition of 15 frameworks has been retired in favor of methodology-first iteration.

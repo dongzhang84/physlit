@@ -253,3 +253,45 @@ Pre-registered at `prereg-02_fmv.1-locked`; no new tested-model trials.
   anti-correlated (GPT 5/5 content, 0/5 structural; Gemini 0/5, 3/5).
   Non-canonical Agent 2 resolver agreed with the human audit 6/7.
 - Cost ≈ $4.0 USD. Report: `analysis/02_fmv_1_report.md`.
+
+## [02_fmv.2] — 2026-05-20
+
+### 02_fmv.2 — axiomatisation control experiment on F=mv
+
+Single-variable control experiment over the F=mv framework: same
+observations, same models, same N=5, same Stage 2-4 prompts, same
+judges, same criteria as `02_fmv` — only the Stage 1 prompt changes.
+Pre-registered at `prereg-02_fmv.2-locked` before any treatment trial.
+
+- New frozen artifact: `frameworks/02_fmv/prompts/stage1_induction_axiomatised.md`
+  — the `02_fmv` Stage 1 prompt with one added paragraph asking for
+  the smallest set of rules and explicit cross-rule references.
+  Natural-language guidance, not the N9-N12 rubric.
+- New tooling: `run_02_fmv_2.py`, `judge_02_fmv_2.py`,
+  `apply_02_fmv_2.py`, `build_02_fmv_2_worksheet.py`,
+  `render_02_fmv_2_to_md.py`, `run_agent1_02_fmv_2.py`,
+  `run_agent2_02_fmv_2.py`, `build_02_fmv_2_agents_review.py`.
+- Production: 60 new treatment-arm trials (3 models × N=5 × 4 stages);
+  120 judge verdicts (content + structural); 16 non-canonical resolver
+  verdicts. Content IRR 22.22 %, structural IRR 40.00 % → 16-case
+  human audit.
+- Result, post-audit: **P1 STRONGLY CONFIRMED** — treatment structural
+  PASS **11/15** vs control 5/15, doubled (per-model: Claude 2/5 →
+  5/5, GPT 0/5 → 2/5, Gemini 3/5 → 4/5). **P2 CONFIRMED** — treatment
+  content PASS **9/15** vs control 9/15, exactly flat. Composite
+  jumped **1/15 → 6/15**.
+- Substantive finding: `02_fmv.1` §2.7 self-organisation thesis
+  *causally* confirmed. Models that know the rules (Claude, GPT)
+  respond to the natural-language cue; Gemini (content-weak) barely
+  moves. The structural failure is a default-behaviour gap, not a
+  capability limit, for the models that have the underlying knowledge.
+- Side-effect of the cue: Claude trial 2 lost its content axis —
+  Stage 2 fabricated a "track pushes upward" balancing mechanism. A
+  follow-on instruction should forbid introducing forces not in the
+  observations.
+- Methodology: both LLM judges level-shift to 50 % vs the human audit
+  on both axes (down from the strong asymmetries of `02_fmv` and
+  `02_fmv.1`). Likely the axiomatised treatment responses are harder
+  to judge. Agent 1 dropped to 5/10 (uniform-PASS failure mode);
+  Agent 2 held at 5/6 (83 %).
+- Cost ≈ $5.5 USD. Report: `analysis/02_fmv_2_report.md`.
