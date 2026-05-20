@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-20 19:37 UTC  
+**Generated:** 2026-05-20 19:49 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 56 |
+| Total commits | 57 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **13** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **15** | **14** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -68,6 +68,7 @@
 
 **Wed – Wednesday, May 20**
 
+- `aaaada3` v0.3: structural resolutions (hook-formatted) — _dongzhang84_ `2026-05-20 12:48`
 - `295802a` renderers: hook-formatted — _dongzhang84_ `2026-05-20 12:36`
 - `1e1a01f` v0.3: rename v0_3 -> 01_aristotelian_3 + agents review links (hook-formatted) — _dongzhang84_ `2026-05-20 11:07`
 - `f49d217` v0.3: Agent verdicts + agents review (hook-formatted) — _dongzhang84_ `2026-05-20 10:47`
