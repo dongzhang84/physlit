@@ -74,10 +74,23 @@ FMV_TREATMENT_STRUCTURAL_PASS = 11
 FMV_TREATMENT_COMPOSITE_PASS = 6
 
 # Human-audit overrides for v0.3 dual-judge disagreements (canonical,
-# per prereg §1.4). Empty until an audit is run; a DISAGREE with no
-# entry here is reported as PENDING.
+# per prereg §1.4). Source: analysis/v0_3_audit_human_review.md.
 HUMAN_CONTENT: dict[tuple[str, int, str], str] = {}
-HUMAN_STRUCTURAL: dict[tuple[str, int], str] = {}
+HUMAN_STRUCTURAL: dict[tuple[str, int], str] = {
+    # S1 — gpt t1: Claude verdict-field self-contradiction
+    # ("Correcting my verdict: this should be PASS") + OpenAI PASS.
+    # 02_fmv.1 Case 6 precedent: follow the reasoning.
+    ("gpt-5.5-2026-04-23", 1): "PASS",
+    # S2 — gemini t3: OpenAI N10 FAIL is the Stage 1+2 double-count
+    # bug (counted 4+4=8, called Stage 2 mirror "duplicate"). Under
+    # the established Stage-1-only principle (the v0.2-criteria
+    # defect that 02_fmv.1 fixed): 4 rules, N12 exempt, N10 PASS.
+    ("gemini-3.1-pro-preview", 3): "PASS",
+    # S3 — gemini t4: Claude verdict-field self-contradiction
+    # ("Verdict should be PASS") on 3 rules (N12 exempt). Same
+    # defect class as 02_fmv.1 Case 6 and v0.3 S1. OpenAI also PASS.
+    ("gemini-3.1-pro-preview", 4): "PASS",
+}
 
 
 def _verdict(parsed: dict[str, Any]) -> str | None:
