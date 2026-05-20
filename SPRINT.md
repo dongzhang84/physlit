@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-20 16:32 UTC  
+**Generated:** 2026-05-20 17:13 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 49 |
+| Total commits | 50 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **6** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **15** | **7** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -68,6 +68,7 @@
 
 **Wed – Wednesday, May 20**
 
+- `942370d` v0.3: treatment-arm production trials + .md (hook-formatted) — _dongzhang84_ `2026-05-20 10:13`
 - `ea39ff0` v0.3: judging + apply pipeline (ruff-formatted) — _dongzhang84_ `2026-05-20 09:32`
 - `b79098c` lock: pre-register PhysLit v0.3 predictions — _dongzhang84_ `2026-05-20 09:28`
 - `41c11fe` v0.3: treatment-arm runner — Aristotelian axiomatisation control — _dongzhang84_ `2026-05-20 09:28`
