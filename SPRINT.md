@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-20 20:11 UTC  
+**Generated:** 2026-05-20 21:23 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 59 |
+| Total commits | 60 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **16** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **15** | **17** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -68,6 +68,7 @@
 
 **Wed – Wednesday, May 20**
 
+- `fc77c95` 03_energy_decay: observations.zh.md — Chinese companion for review — _dongzhang84_ `2026-05-20 14:22`
 - `ea030fe` 03_energy_decay: observations.md draft (12 phenomena across 6 domains) — _dongzhang84_ `2026-05-20 13:11`
 - `a382bde` v0.3: final audit + report (hook-formatted) — _dongzhang84_ `2026-05-20 12:58`
 - `aaaada3` v0.3: structural resolutions (hook-formatted) — _dongzhang84_ `2026-05-20 12:48`
