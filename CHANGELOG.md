@@ -295,3 +295,51 @@ Pre-registered at `prereg-02_fmv.2-locked` before any treatment trial.
   to judge. Agent 1 dropped to 5/10 (uniform-PASS failure mode);
   Agent 2 held at 5/6 (83 %).
 - Cost ≈ $5.5 USD. Report: `analysis/02_fmv_2_report.md`.
+
+## [v0.3] — 2026-05-20
+
+### v0.3 — Aristotelian axiomatisation control (cross-framework replication of `02_fmv.2`)
+
+Single-variable control experiment on the Aristotelian framework,
+parallel to `02_fmv.2`. The added Stage 1 instruction is
+**byte-for-byte identical** to `02_fmv.2`'s — verified by diff at
+commit time — so the cross-framework comparison is valid.
+Pre-registered at `prereg-v0.3-locked`.
+
+- New frozen artifact: `frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md`
+  (v0.1 global Stage 1 prompt + the `02_fmv.2` axiomatisation paragraph
+  inserted at the matching anchor).
+- New tooling: `run_v0_3.py`, `judge_v0_3.py`, `apply_v0_3.py`,
+  `build_v0_3_worksheet.py`, `render_v0_3_to_md.py`,
+  `run_agent1_v0_3.py`, `run_agent2_v0_3.py`,
+  `build_v0_3_agents_review.py`.
+- Results subtree renamed `v0_3` → `01_aristotelian_3` (under user
+  feedback that the v0_3 path didn't say which framework). 191 JSON
+  files rewritten (`framework_id` + `trial_path` fields). Prereg
+  tag / analysis filenames keep `v0_3` (prereg is locked).
+- Production: 60 new treatment-arm trials; 120 judge verdicts;
+  13 non-canonical resolver verdicts. Content IRR 17.78 %, structural
+  IRR 20.00 % → 11-case human audit.
+- Result, post-audit: **P1 STRONGLY CONFIRMED** — structural PASS
+  **15/15** vs control 8/15, absolute lift **+7** (saturated; per-
+  model GPT **0/5 → 5/5**, Gemini 3/5 → 5/5, Claude already at 5/5).
+  **P2 CONFIRMED** — content PASS 6/15 vs control 5/15 (+1).
+  Composite jumped **2/15 → 6/15** — same ceiling as `02_fmv.2`.
+- **Cross-framework comparison** (central deliverable): the same
+  one-paragraph cue lifts structural pass rate on both frameworks
+  (F=mv +6, Aristotelian +7), holds content roughly flat on both
+  (F=mv 0, Aristotelian +1), and brings composite to 6/15 on both.
+  The `02_fmv.1` self-organisation thesis is causally confirmed on a
+  second framework. GPT is the dominant mover on both.
+- Side finding: every one of the 8 content disagreements audited FAIL.
+  Parsimony pressure can pull the model toward training-data
+  vocabulary — broader on Aristotelian (Newton-leak vocab) than on
+  F=mv (single P3 fabrication). A future round should add a
+  "don't introduce vocabulary beyond the observations" clause.
+- Methodological: two known judge defects re-emerged — OpenAI
+  Stage 1+2 double-count (S2, third occurrence; v0.3 reuses v0.2
+  criteria per prereg's identical-baseline commitment, so the
+  `02_fmv.1`-fix didn't apply) and Claude verdict-field
+  self-contradiction (S1, S3; same defect class as `02_fmv.1` Case 6).
+  Both documented in `v0_3_audit_human_review.md`.
+- Cost ≈ $6.8 USD. Report: `analysis/v0_3_report.md`.

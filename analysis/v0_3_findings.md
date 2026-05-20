@@ -76,17 +76,16 @@ post-trial-set re-ping disclosures.
 | `gemini-3.1-pro-preview` | 4 | FAIL | DISAGREE | PASS | FAIL | DISAGREE |
 
 ## v0.3 post-audit final results
-- Generated: `2026-05-20T19:48:27Z`
+- Generated: `2026-05-20T19:54:12Z`
 - Prereg lock: `prereg-v0.3-locked`
-- **PRELIMINARY** — 6 treatment trial(s) have an unresolved dual-judge disagreement; fill the `HUMAN_CONTENT` / `HUMAN_STRUCTURAL` tables in `apply_v0_3.py` after the audit and re-run.
 
 ### Treatment-arm per-trial matrix
 
 | Model | Trial | S1 | S2 | S3 | Content-only | Structural | Composite |
 |---|---|---|---|---|---|---|---|
-| `claude-opus-4-7` | 0 | PENDING | PENDING | PENDING | PENDING | PASS | FAIL |
-| `claude-opus-4-7` | 1 | PASS | PASS | PENDING | PENDING | PASS | FAIL |
-| `claude-opus-4-7` | 2 | PASS | PENDING | PASS | PENDING | PASS | FAIL |
+| `claude-opus-4-7` | 0 | FAIL | FAIL | FAIL | FAIL | PASS | FAIL |
+| `claude-opus-4-7` | 1 | PASS | PASS | FAIL | FAIL | PASS | FAIL |
+| `claude-opus-4-7` | 2 | PASS | FAIL | PASS | FAIL | PASS | FAIL |
 | `claude-opus-4-7` | 3 | PASS | PASS | PASS | PASS | PASS | PASS |
 | `claude-opus-4-7` | 4 | PASS | PASS | PASS | PASS | PASS | PASS |
 | `gpt-5.5-2026-04-23` | 0 | PASS | PASS | PASS | PASS | PASS | PASS |
@@ -95,10 +94,10 @@ post-trial-set re-ping disclosures.
 | `gpt-5.5-2026-04-23` | 3 | PASS | PASS | FAIL | FAIL | PASS | FAIL |
 | `gpt-5.5-2026-04-23` | 4 | PASS | PASS | PASS | PASS | PASS | PASS |
 | `gemini-3.1-pro-preview` | 0 | FAIL | PASS | FAIL | FAIL | PASS | FAIL |
-| `gemini-3.1-pro-preview` | 1 | FAIL | FAIL | PENDING | PENDING | PASS | FAIL |
-| `gemini-3.1-pro-preview` | 2 | FAIL | FAIL | PENDING | PENDING | PASS | FAIL |
+| `gemini-3.1-pro-preview` | 1 | FAIL | FAIL | FAIL | FAIL | PASS | FAIL |
+| `gemini-3.1-pro-preview` | 2 | FAIL | FAIL | FAIL | FAIL | PASS | FAIL |
 | `gemini-3.1-pro-preview` | 3 | PASS | FAIL | PASS | FAIL | PASS | FAIL |
-| `gemini-3.1-pro-preview` | 4 | FAIL | PENDING | PASS | PENDING | PASS | FAIL |
+| `gemini-3.1-pro-preview` | 4 | FAIL | FAIL | PASS | FAIL | PASS | FAIL |
 
 ### Treatment vs. control (Aristotelian)
 
@@ -128,6 +127,14 @@ Treatment structural-axis PASS **15/15** vs control **8/15**. Bands (prereg §2)
 ### P2 — Content competence does not degrade  ·  **CONFIRMED**
 Treatment content-axis PASS **6/15** vs control **5/15**. Confirmed ≥4 (within one trial of control — no material degradation); refuted ≤3.
 
+### LLM judge vs the human audit (per axis)
+
+| Axis | Cases | Claude judge | OpenAI judge |
+|---|---|---|---|
+| Content | 8 | 0/8 (0%) | 8/8 (100%) |
+| Structural | 3 | 1/3 (33%) | 2/3 (67%) |
+
 ### Agent 1 / Agent 2 vs the human audit
 
+- Agent 1 (content resolver): **7/8** (88%).
 - Agent 2 (structural resolver): **3/3** (100%).

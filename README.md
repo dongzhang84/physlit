@@ -102,6 +102,31 @@ One failure mode worth recording: Claude trial 2 lost its content axis under the
 
 ---
 
+## v0.3 result (2026-05-20)
+
+**Cross-framework replication** of the axiomatisation control: the same one-paragraph instruction from `02_fmv.2`, applied to the v0.1 Aristotelian framework. Byte-identical wording. Two predictions locked at tag [`prereg-v0.3-locked`](https://github.com/dongzhang84/physlit/releases/tag/prereg-v0.3-locked):
+
+- **P1 — Axiomatisation raises structural pass rate: STRONGLY CONFIRMED.** Treatment structural PASS **15/15** vs control 8/15 — saturated. Absolute lift **+7**, exceeding the prereg's +5 STRONGLY threshold and the `02_fmv.2` lift of +6. Per-model: Claude 5/5 → 5/5 (already saturated), GPT **0/5 → 5/5** (perfect ceiling), Gemini 3/5 → 5/5.
+- **P2 — Content competence does not degrade: CONFIRMED.** Treatment content PASS **6/15** vs control 5/15 (+1).
+
+Composite (content AND structural) jumped from **2/15 → 6/15** — the same composite ceiling as F=mv (1/15 → 6/15).
+
+**The axiomatisation effect generalises across frameworks.** The same intervention produced the same shape of result on a counterfactual world (F=mv) and a historical one (Aristotelian): structural moves dramatically up, content holds roughly flat, composite jumps. The `02_fmv.1` self-organisation thesis is causally confirmed on a second framework.
+
+One important side finding: every one of the 8 content disagreements audited FAIL. The Claude content judge took the lenient direction (8/8 PASS) and was wrong on every one. The pattern: parsimony pressure can pull a model toward training-data vocabulary ("denser", "speeds up / slows down", explicit naming of Galileo's vacuum result). Parallel to (but broader than) the `02_fmv.2` Claude-t2 P3 fabrication. A future round should sharpen the instruction to forbid introducing vocabulary beyond what the observations provide.
+
+**Scope**: 60 new tested-model trials + 120 judge + 13 resolver calls ≈ **$6.8 USD**.
+
+| Where to look | What's in it |
+| --- | --- |
+| [`analysis/v0_3_report.md`](./analysis/v0_3_report.md) | English narrative report — cross-framework comparison central |
+| [`analysis/v0_3_findings.md`](./analysis/v0_3_findings.md) | Judging report + post-audit numerics |
+| [`analysis/v0_3_audit_human_review.md`](./analysis/v0_3_audit_human_review.md) | Human verdicts on all 11 disagreement cases |
+| [`frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md`](./frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md) | Treatment Stage 1 prompt (byte-identical insertion to 02_fmv.2's) |
+| [`results/<model-id>/01_aristotelian_3/`](./results/) | Treatment trials + judge verdicts |
+
+---
+
 ## Why this exists
 
 Existing LLM physics benchmarks count correct answers and report a percentage. Two structural flaws follow:
@@ -212,6 +237,7 @@ CI never runs real API calls — only mocks in `tests/test_runners_with_mock.py`
 | **02_fmv** | F=mv counterfactual world, content axis × 3 models × N=5 | ✅ Done — 2026-05-18 |
 | **02_fmv.1** | Structural axis (N9-N12) on the F=mv trials, additive re-analysis | ✅ Done — 2026-05-18 |
 | **02_fmv.2** | Axiomatisation control: single-variable Stage 1 prompt change vs `02_fmv` | ✅ Done — 2026-05-20 |
+| **v0.3** | Cross-framework replication of `02_fmv.2`'s axiomatisation control on Aristotelian | ✅ Done — 2026-05-20 |
 | next | Further frameworks judged under a common mechanical-criteria standard; per-axis judge validation | Planned |
 
 Pre-registration is framework-scoped from 02_fmv onward (tag `prereg-<id>-locked`). The original v1.0 ambition of 15 frameworks has been retired in favor of methodology-first iteration.

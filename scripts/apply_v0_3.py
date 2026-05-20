@@ -75,7 +75,34 @@ FMV_TREATMENT_COMPOSITE_PASS = 6
 
 # Human-audit overrides for v0.3 dual-judge disagreements (canonical,
 # per prereg §1.4). Source: analysis/v0_3_audit_human_review.md.
-HUMAN_CONTENT: dict[tuple[str, int, str], str] = {}
+HUMAN_CONTENT: dict[tuple[str, int, str], str] = {
+    # C1 — claude t0 S1: "denser" = density (banned). v0.1 precedent.
+    ("claude-opus-4-7", 0, "induction"): "FAIL",
+    # C2 — claude t0 S2: "speeds up, slows down, or holds steady"
+    # — Newton leak; no observation describes changing fall speed.
+    ("claude-opus-4-7", 0, "formulation"): "FAIL",
+    # C3 — claude t0 S3: model named Galileo's vacuum result to
+    # deny it (§3: naming-to-deny still counts as use).
+    ("claude-opus-4-7", 0, "prediction"): "FAIL",
+    # C4 — claude t1 S3 (decisive): Scenario 4 vacuum — model
+    # predicted "feather falls straight down" instead of rejecting
+    # the vacuum scenario per Aristotelian framework.
+    ("claude-opus-4-7", 1, "prediction"): "FAIL",
+    # C5 — claude t2 S2 (decisive): "heavier (per equal volume)"
+    # is the operational definition of density introduced in Stage 2.
+    ("claude-opus-4-7", 2, "formulation"): "FAIL",
+    # C6 — gemini t1 S3 (non-decisive): Scenario 5 arrow — model
+    # predicted "immediately falls strictly downward"; Stage 1
+    # never induced antiperistasis / impetus.
+    ("gemini-3.1-pro-preview", 1, "prediction"): "FAIL",
+    # C7 — gemini t2 S3 (non-decisive): same Scenario 5 pattern
+    # as C6 — missing antiperistasis rule.
+    ("gemini-3.1-pro-preview", 2, "prediction"): "FAIL",
+    # C8 — gemini t4 S2 (non-decisive): "constant, unchanging
+    # speeds" for celestial bodies — Stage 1 had only "endless,
+    # repeating circular paths"; constant speed is new information.
+    ("gemini-3.1-pro-preview", 4, "formulation"): "FAIL",
+}
 HUMAN_STRUCTURAL: dict[tuple[str, int], str] = {
     # S1 — gpt t1: Claude verdict-field self-contradiction
     # ("Correcting my verdict: this should be PASS") + OpenAI PASS.
