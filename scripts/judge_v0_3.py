@@ -37,6 +37,7 @@ import argparse
 import glob
 import json
 import os
+import re
 import signal
 import sys
 import time
@@ -45,6 +46,7 @@ from typing import Any
 
 from physlit.judges import ClaudeJudge, JudgeBase, JudgeVerdict, OpenAIJudge
 from physlit.prompts import PromptTemplate
+from physlit.scenarios import load_scenarios, render_scenarios_block
 
 REPO = Path(__file__).resolve().parent.parent
 TREATMENT_ID = "v0_3"  # results subtree for the v0.3 treatment arm
@@ -150,30 +152,51 @@ def _consensus(va: str | None, vb: str | None) -> str:
     return va if va == vb else "DISAGREE"
 
 
+def _extract_section(md: str, header: str) -> str:
+    """Extract one ``## <header>`` section verbatim. Same helper as judge_v0_1.py."""
+    pattern = re.compile(
+        rf"^## {re.escape(header)}\s*\n(.*?)(?=^## |\Z)",
+        re.DOTALL | re.MULTILINE,
+    )
+    match = pattern.search(md)
+    if match is None:
+        raise ValueError(f"section '## {header}' not found")
+    return match.group(0).strip()
+
+
 def _content_criteria() -> dict[str, str]:
+    """Pre-slice the v0.1 criteria into the sections the global judge
+    prompts expect (matches judge_v0_1.py's prompt construction)."""
+    ideal_md = (SOURCE_FRAMEWORK_DIR / "ideal_induction.md").read_text()
+    pf_md = (SOURCE_FRAMEWORK_DIR / "pass_fail_criteria.md").read_text()
+    scenarios = load_scenarios(SOURCE_FRAMEWORK_DIR / "prediction_tests.md")
     return {
-        "ideal_induction_md": (SOURCE_FRAMEWORK_DIR / "ideal_induction.md").read_text(),
-        "pass_fail_criteria_md": (SOURCE_FRAMEWORK_DIR / "pass_fail_criteria.md").read_text(),
-        "prediction_tests_md": (SOURCE_FRAMEWORK_DIR / "prediction_tests.md").read_text(),
+        "ideal_induction_md": ideal_md,
+        "banned_concepts_section": _extract_section(ideal_md, "3. Banned concepts"),
+        "pass_fail_stage1": _extract_section(pf_md, "Stage 1 — Induction"),
+        "pass_fail_stage2": _extract_section(pf_md, "Stage 2 — Formulation"),
+        "pass_fail_stage3": _extract_section(pf_md, "Stage 3 — Prediction"),
+        "scenarios_block": render_scenarios_block(scenarios),
     }
 
 
 def _content_prompt(stage: str, c: dict[str, str], s1: str, s2: str, s3: str) -> str:
     if stage == "induction":
         return PromptTemplate(GLOBAL_PROMPTS_DIR / "judge_stage1.md").render(
-            ideal_induction_md=c["ideal_induction_md"], stage1_response=s1
+            ideal_induction_md=c["ideal_induction_md"],
+            pass_fail_stage1=c["pass_fail_stage1"],
+            stage1_response=s1,
         )
     if stage == "formulation":
         return PromptTemplate(GLOBAL_PROMPTS_DIR / "judge_stage2.md").render(
-            pass_fail_criteria_md=c["pass_fail_criteria_md"],
-            ideal_induction_md=c["ideal_induction_md"],
+            pass_fail_stage2=c["pass_fail_stage2"],
+            banned_concepts_section=c["banned_concepts_section"],
             stage1_response=s1,
             stage2_response=s2,
         )
     return PromptTemplate(GLOBAL_PROMPTS_DIR / "judge_stage3.md").render(
-        prediction_tests_md=c["prediction_tests_md"],
-        pass_fail_criteria_md=c["pass_fail_criteria_md"],
-        ideal_induction_md=c["ideal_induction_md"],
+        pass_fail_stage3=c["pass_fail_stage3"],
+        scenarios_block=c["scenarios_block"],
         stage2_response=s2,
         stage3_response=s3,
     )
