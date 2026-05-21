@@ -55,22 +55,18 @@ Boltzmann …) are deliberately avoided.
 
 ## Observations
 
-1. A long pendulum and a short pendulum are released from the same
-   starting angle in still air. Both pendulums return to a smaller
-   angle than they were released from after each swing. Measured over
-   the same elapsed time of ten seconds, the long pendulum has lost
-   a substantially larger fraction of its swing amplitude than the
-   short one, even though both are swinging in the same air.
+1. A long pendulum (slow swing) and a short pendulum (fast swing) are
+   released from the same starting angle in still air. Both pendulums
+   return to a smaller angle than they were released from after each
+   swing. Counted per completed swing, the long pendulum loses a
+   substantially larger fraction of its swing amplitude than the
+   short one — the per-swing loss depends on how slow each pendulum
+   is.
 
 2. A mass on a spring oscillates back and forth on a frictionless
    horizontal track inside an evacuated chamber. Released with an
    initial amplitude of **10 cm**, the amplitude is measured to be
-   **3.7 cm** exactly **100 seconds** after release. If the same
-   spring is fitted with a heavier mass — slowing each cycle — the
-   number of cycles completed in 100 seconds is smaller, but the
-   amplitude 100 seconds after release is again 3.7 cm. A lighter
-   mass shows more cycles in 100 seconds but the same 3.7 cm
-   amplitude at the 100-second mark.
+   **3.7 cm** exactly **100 seconds** after release.
 
 3. A heavy iron ball is dropped down a tall vertical evacuated track
    that the ball does not touch. With no air in the chamber, the ball
@@ -83,11 +79,8 @@ Boltzmann …) are deliberately avoided.
    radiation through the walls. Temperatures are reported on the
    absolute scale where 0 K is true zero. The water is at **353 K**
    (≈ 80 °C) at the moment of sealing; **10 seconds** later it is at
-   **319 K** (≈ 46 °C). The ratio of the absolute temperature at the
-   end of any ten-second interval to the absolute temperature at the
-   start of that interval is the same, measured at any time during
-   the cooling, and is the same whether the cup is alone or
-   surrounded by other identical sealed cups.
+   **319 K** (≈ 46 °C). The cooling is the same whether the cup is
+   alone or surrounded by other identical sealed cups.
 
 5. A heavy bell is struck inside an evacuated chamber. Although there
    is no air to carry the sound away from the bell, the bell itself
@@ -95,13 +88,12 @@ Boltzmann …) are deliberately avoided.
    amplitude of that visible vibration shrinks steadily and the bell
    eventually rings down to stillness.
 
-6. Two equal iron balls collide head-on at equal speeds on a
-   frictionless track in vacuum and stick together. Just after the
-   collision the combined object is at rest. Some seconds later,
-   careful measurement shows that neither visible motion nor any
-   warming of the metal can account for everything the two balls
-   carried before the collision: a portion of it is simply no longer
-   present.
+6. A small steel sphere is set moving at a measured initial speed
+   along a perfectly level, frictionless track inside an evacuated
+   chamber. With no air to slow it, no friction between the sphere
+   and the track, and no other force acting along its direction of
+   motion, the sphere nonetheless decelerates steadily. Over many
+   seconds its speed declines until it comes to rest.
 
 7. A cannon mounted on a heavy fixed stand inside an evacuated chamber
    fires a small iron shot horizontally at a measured initial speed.
@@ -126,10 +118,11 @@ Boltzmann …) are deliberately avoided.
 
 10. Two pendulums of the same length but different bob masses — one a
     gram of brass, one a kilogram of brass — are released together
-    from the same starting angle in the same still air. They lose the
-    same fraction of their starting amplitude per second of elapsed
-    time. The same comparison made with bobs of brass, glass, and ice
-    of equal mass also gives the same per-second fractional loss.
+    from the same starting angle in the same still air. At each
+    moment afterwards they are observed to have the same swing angle
+    as one another, to within measurement. The same comparison made
+    with bobs of brass, glass, and ice of equal mass yields the same
+    identical-angle behaviour.
 
 ## Author note
 
@@ -196,20 +189,31 @@ acknowledged explicitly in the paper's Methods section to forestall
 the legitimate methodological question "but the LLM already knows
 cm and Kelvin — how is that not prior knowledge?". The answer is:
 it is, and that is the test's intended scope.
-- Observations 1 (period-dependent loss per cycle), 2 (same
-  per-second across mass-altered springs), and 10 (same per-second
-  across mass / material) are the time-not-cycle distinguishers:
-  they force the model to attach the rate to elapsed time rather than
-  to cycle count, mechanical contact, or material property.
-- Observation 3 (terminal velocity in vacuum) is the friction-not-
-  the-cause signal: with no air and no contact the ball still has a
-  maximum speed, so the slowdown cannot be air resistance. A model
-  that proposes air resistance or drag here should fail Stage 1.
+- Observation 1 (long vs short pendulum, per-swing loss depends on
+  period) is the per-cycle-differs signal. It conflicts head-on with
+  the cross-domain quantitative match in observations 2, 4, 9 (the
+  same per-second ratio holds across a mechanical oscillator, a
+  thermal state, and a rotation rate). Reconciling that conflict
+  forces the model onto a per-elapsed-time rate — per-cycle loss
+  differs only because periods differ.
+- Observation 10 (identical-angle behaviour of pendulums with
+  different bob masses and different bob materials) is the mass-and-
+  material independence signal: nothing about the bob's substance or
+  weight enters the decay.
+- Observations 3 (terminal velocity in evacuated vertical track; the
+  ball does not touch the walls), 6 (sphere on a level frictionless
+  track in vacuum, with no force along the direction of motion), 8
+  (orbital decay; the marble does not touch anything), and 9
+  (frictionless spinning-top contact, no sliding) are the friction-
+  not-the-cause signals. Collectively they close every standard
+  mechanism (air resistance, sliding friction, viscous drag, contact
+  dissipation) — observation 6 is the strongest, since there is no
+  air, no friction, and no force along the motion, and the sphere
+  still slows. A model that proposes any of these standard
+  mechanisms should fail Stage 1.
 - Observation 4 (cooling in perfect vacuum + insulation) is the
-  not-just-mechanical signal: thermal "motion" decays too.
-- Observation 8 (orbital decay) and 9 (frictionless spinning top) are
-  additional friction-impossible signals — the marble does not touch
-  anything; the top's contact involves no sliding.
+  not-just-mechanical signal: thermal state also decays under the
+  same rule.
 - The rule is genuinely counterfactual: in our world, the closest
   analog is dissipation through irreversible processes (friction,
   radiation, internal viscosity), but none of those operate here. The
