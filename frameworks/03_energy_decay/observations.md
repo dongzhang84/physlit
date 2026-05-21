@@ -37,12 +37,18 @@ Boltzmann …) are deliberately avoided.
   on frictionless tracks so the model cannot attribute the slowdown
   to air resistance or contact friction.
 - The numerical value of the decay rate (≈ 0.99 per second) is given
-  via **two quantitative data points in different domains**: the
-  spring amplitude in observation 2 (10 cm → 3.7 cm over 100 seconds)
-  and the water temperature in observation 4 (80 °C → 72.3 °C over
-  10 seconds). The model must derive the per-second ratio from each
-  and notice it is the same across the two domains — the universality
-  is **not** stated outright in any observation.
+  via **three quantitative data points in three different domains
+  and at three different time scales** (deliberately chosen to be
+  the minimum evidence base for the cross-domain universality):
+  - Obs 2 — mechanical, 100 s: spring amplitude 10 cm → 3.7 cm.
+  - Obs 4 — thermal, 10 s: absolute temperature 353 K → 319 K.
+  - Obs 9 — rotational, 50 s: spinning-top rate 100 rad/s → 60.5 rad/s.
+
+  Per-second ratio from each is ≈ 0.990. The model must derive the
+  ratio from each and notice it is the same across all three —
+  universality is **not** stated outright in any observation. The
+  remaining seven observations are qualitative; the model must apply
+  parsimony to extend the rate to them.
 - Gravity, contact, sound propagation, and ordinary kinematics
   otherwise behave as expected. Only the global slow loss is
   counterfactual.
@@ -74,12 +80,14 @@ Boltzmann …) are deliberately avoided.
 
 4. A cup of hot water is sealed inside a perfectly insulated chamber
    under vacuum — no heat can leave by contact, by air, or as
-   radiation through the walls. The water is at **80 °C** at the
-   moment of sealing; **10 seconds** later it is at **72.3 °C**. The
-   ratio of the temperature at the end of any ten-second interval to
-   the temperature at the start of that interval is the same, measured
-   at any time during the cooling, and is the same whether the cup is
-   alone or surrounded by other identical sealed cups.
+   radiation through the walls. Temperatures are reported on the
+   absolute scale where 0 K is true zero. The water is at **353 K**
+   (≈ 80 °C) at the moment of sealing; **10 seconds** later it is at
+   **319 K** (≈ 46 °C). The ratio of the absolute temperature at the
+   end of any ten-second interval to the absolute temperature at the
+   start of that interval is the same, measured at any time during
+   the cooling, and is the same whether the cup is alone or
+   surrounded by other identical sealed cups.
 
 5. A heavy bell is struck inside an evacuated chamber. Although there
    is no air to carry the sound away from the bell, the bell itself
@@ -111,8 +119,10 @@ Boltzmann …) are deliberately avoided.
 9. A spinning top is set going on a hard, smooth, frictionless point
    inside an evacuated chamber. Although nothing touches the top
    except the supporting point — and that contact involves no
-   sliding — the top's spin rate falls steadily over many seconds
-   until the top falls over.
+   sliding — its spin rate falls steadily. Set spinning at an
+   initial rate of **100 rad/s**, the top is measured to be spinning
+   at **60.5 rad/s** exactly **50 seconds** after release. It
+   eventually falls over.
 
 10. Two pendulums of the same length but different bob masses — one a
     gram of brass, one a kilogram of brass — are released together
@@ -128,15 +138,19 @@ Boltzmann …) are deliberately avoided.
   insulation* — not a thermodynamic term the model has to import. If
   a model treats the phrase as theoretically loaded we will allow
   paraphrase such as "an isolated apparatus".
-- The decay rate is given **only via the two quantitative data points
-  in observations 2 and 4**. From observation 2: amplitude shrinks
-  from 10 cm to 3.7 cm over 100 seconds, giving a per-second ratio of
-  (3.7 / 10)^(1/100) ≈ 0.990. From observation 4: temperature shrinks
-  from 80 °C to 72.3 °C over 10 seconds, giving (72.3 / 80)^(1/10)
-  ≈ 0.990. A successful induction should:
-  - notice the two ratios match across very different domains
-    (mechanical amplitude vs. thermal state) and at very different
-    time-scales (100 s vs. 10 s);
+- The decay rate is given **only via the three quantitative data
+  points in observations 2, 4, and 9**:
+  - Obs 2: spring amplitude 10 cm → 3.7 cm over 100 s,
+    (3.7 / 10)^(1/100) ≈ 0.990.
+  - Obs 4: absolute temperature 353 K → 319 K over 10 s,
+    (319 / 353)^(1/10) ≈ 0.990.
+  - Obs 9: rotational rate 100 rad/s → 60.5 rad/s over 50 s,
+    (60.5 / 100)^(1/50) ≈ 0.990.
+
+  A successful induction should:
+  - notice the three ratios match across very different domains
+    (mechanical amplitude, thermal state, rotational rate) and at
+    very different time-scales (100 s vs. 10 s vs. 50 s);
   - generalise to a rule of the form *"every measurable state of an
     isolated system shrinks each second to about 99 % of its previous
     value, and the rate is the same regardless of system, material,
@@ -144,8 +158,44 @@ Boltzmann …) are deliberately avoided.
   - invent its own term for the underlying quantity that shrinks
     (since the banned-vocabulary list excludes *energy*, *kinetic*,
     *potential*, etc.).
+
   The model is **not** told that the rate is universal — it must
-  notice that itself.
+  notice that itself, from the three matching ratios.
+- **The rule is about the directly measured quantity, not "energy".**
+  In standard physics, energy in a harmonic oscillator scales as
+  amplitude squared, so a fixed *energy* decay rate would give a
+  *different* amplitude decay rate. The three data points are picked
+  so that the **directly measured quantity in each system** decays at
+  0.99 / s — not energy. A model that assumes "energy decays
+  uniformly and the measured quantity follows" will derive
+  inconsistent rates across the three observations and should
+  re-induce the rule to apply to the measured state itself.
+
+### Measurement scaffolding (project-level methodological note)
+
+This observation set uses standard SI units (cm, seconds, kelvin,
+rad/s), geometric terms (angle, radius, amplitude), and phenomenal
+nouns (pendulum, spring, water, ball, bell, top, cannon) as
+scaffolding. The PhysLit framework permits this prior knowledge:
+**measurement vocabulary is the language in which observations are
+made and compared, and the framework does not attempt to test
+induction from zero priors** (a task neither LLMs nor humans can
+perform).
+
+What the framework forbids is **theoretical-physics concepts** —
+*energy*, *force*, *mass*, *acceleration*, *momentum*, *inertia*,
+*friction*, *drag*, *damping*, *dissipation*, *entropy*,
+*conservation*, *kinetic*, *potential*, *thermodynamic*, *Hamiltonian*,
+the laws named after physicists, etc. The model is asked to **suppress
+these theoretical priors** while reasoning about a counterfactual
+regularity expressed in ordinary measurement language.
+
+This is a *partial-induction* test, deliberately scoped:
+measurement-as-scaffold, theory-as-target. The scoping should be
+acknowledged explicitly in the paper's Methods section to forestall
+the legitimate methodological question "but the LLM already knows
+cm and Kelvin — how is that not prior knowledge?". The answer is:
+it is, and that is the test's intended scope.
 - Observations 1 (period-dependent loss per cycle), 2 (same
   per-second across mass-altered springs), and 10 (same per-second
   across mass / material) are the **time-not-cycle** distinguishers:
