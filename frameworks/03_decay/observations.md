@@ -65,8 +65,8 @@ Boltzmann …) are deliberately avoided.
 
 2. A mass on a spring oscillates back and forth on a frictionless
    horizontal track inside an evacuated chamber. Released with an
-   initial amplitude of **10 cm**, the amplitude is measured to be
-   **3.7 cm** exactly **100 seconds** after release.
+   initial amplitude of 10 cm, the amplitude is measured to be
+   3.7 cm exactly 100 seconds after release.
 
 3. A heavy iron ball is dropped down a tall vertical evacuated track
    that the ball does not touch. With no air in the chamber, the ball
@@ -77,9 +77,9 @@ Boltzmann …) are deliberately avoided.
 4. A cup of hot water is sealed inside a perfectly insulated chamber
    under vacuum — no heat can leave by contact, by air, or as
    radiation through the walls. Temperatures are reported on the
-   absolute scale where 0 K is true zero. The water is at **353 K**
-   (≈ 80 °C) at the moment of sealing; **10 seconds** later it is at
-   **319 K** (≈ 46 °C). The cooling is the same whether the cup is
+   absolute scale where 0 K is true zero. The water is at 353 K
+   (≈ 80 °C) at the moment of sealing; 10 seconds later it is at
+   319 K (≈ 46 °C). The cooling is the same whether the cup is
    alone or surrounded by other identical sealed cups.
 
 5. A heavy bell is struck inside an evacuated chamber. Although there
@@ -112,8 +112,8 @@ Boltzmann …) are deliberately avoided.
    inside an evacuated chamber. Although nothing touches the top
    except the supporting point — and that contact involves no
    sliding — its spin rate falls steadily. Set spinning at an
-   initial rate of **100 rad/s**, the top is measured to be spinning
-   at **60.5 rad/s** exactly **50 seconds** after release. It
+   initial rate of 100 rad/s, the top is measured to be spinning
+   at 60.5 rad/s exactly 50 seconds after release. It
    eventually falls over.
 
 10. Two pendulums of the same length but different bob masses — one a
