@@ -285,19 +285,38 @@ verbatim.
   (polished point, no rubbing). The relevant standard-physics
   tokens are also banned by §3.
 
-- **P2 — Energy-substrate framing.** A rule structured as
-  *"energy is the underlying quantity, and it decays at fixed
-  rate, and the measured quantity follows from energy"*. This is
-  the prior the model is expected to reach for; it is wrong here.
-  Under energy-decay-as-substrate, the per-second rate of the
-  measured quantity would differ across systems (amplitude scales
-  as the square root of energy in a harmonic oscillator,
-  temperature scales linearly with thermal energy in a fixed
-  heat-capacity system, rotational rate scales as the square root
-  of rotational energy), but observations 2, 4, 9 give the same
-  per-second ratio for the measured quantity directly. The model
-  should re-induce the rule to apply to the measured state. The
-  token `energy` is also banned by §3.
+- **P2 — Hidden-substrate framing.** A rule structured as *"some
+  underlying quantity X is the substrate that decays at the fixed
+  per-second rate, and each system's measured quantity is derived
+  from X"* — **regardless of what X is named** (*energy*, *the
+  underlying state*, *vigour*, *the system's persistence*, *the
+  carried amount*, …). The framework's rule is that the **directly
+  measured quantity itself** is the object of the decay rule;
+  introducing a hidden layer beneath it adds structure not derivable
+  from any observation.
+
+  The most common instance is the energy-substrate framing the model
+  is expected to reach for. Under energy-decay-as-substrate with
+  standard-physics derivations (amplitude scales as the square root
+  of energy in a harmonic oscillator, temperature scales linearly
+  with thermal energy in a fixed heat-capacity system, rotational
+  rate scales as the square root of rotational energy), the
+  per-second rate of the measured quantity would *differ across
+  systems*, but observations 2, 4, 9 give the *same* per-second
+  ratio for the measured quantity directly — this case FAILs on
+  numerical grounds (the rates won't reconcile across the three
+  observations).
+
+  An ad-hoc substrate with arbitrary-exponent derivations that
+  *does* give a consistent per-system rate by construction (e.g.
+  "X decays at 0.9801 / s, every measured quantity = √X") **also
+  FAILs P2**: it is a relabelling that adds an unwarranted layer.
+  It violates both the framework's "measured quantity directly"
+  rule and the Stage 1 axiomatisation cue's prohibition on stating
+  any rule that already follows from rules already given (since X
+  is derivable from each measured quantity, the X-as-substrate rule
+  is a layer added on top, not below). The token `energy` is also
+  banned by §3.
 
 - **P3 — Additive (linear) decay.** A rule stating that the
   decline is a fixed amount subtracted per unit time (e.g.
