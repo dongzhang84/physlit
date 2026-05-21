@@ -63,10 +63,10 @@ Boltzmann …) are deliberately avoided.
    short one — the per-swing loss depends on how slow each pendulum
    is.
 
-2. A mass on a spring oscillates back and forth on a frictionless
-   horizontal track inside an evacuated chamber. Released with an
-   initial amplitude of 10 cm, the amplitude is measured to be
-   3.7 cm exactly 100 seconds after release.
+2. A weight on a spring oscillates back and forth on a perfectly
+   smooth, perfectly level track inside an evacuated chamber.
+   Released with an initial amplitude of 10 cm, the amplitude is
+   measured to be 3.7 cm exactly 100 seconds after release.
 
 3. A heavy iron ball is dropped down a tall vertical evacuated track
    that the ball does not touch. With no air in the chamber, the ball
@@ -89,11 +89,12 @@ Boltzmann …) are deliberately avoided.
    eventually rings down to stillness.
 
 6. A small steel sphere is set moving at a measured initial speed
-   along a perfectly level, frictionless track inside an evacuated
-   chamber. With no air to slow it, no friction between the sphere
-   and the track, and no other force acting along its direction of
-   motion, the sphere nonetheless decelerates steadily. Over many
-   seconds its speed declines until it comes to rest.
+   along a perfectly smooth, perfectly level track inside an
+   evacuated chamber. There is no air in the chamber, no rubbing or
+   scraping between the sphere and the track, and nothing else
+   pushing or pulling along the sphere's direction of motion. The
+   sphere nonetheless slows steadily; over many seconds its speed
+   declines until it comes to rest.
 
 7. A cannon mounted on a heavy fixed stand inside an evacuated chamber
    fires a small iron shot horizontally at a measured initial speed.
@@ -108,21 +109,21 @@ Boltzmann …) are deliberately avoided.
    the marble's path slowly and steadily decreases. Eventually the
    marble strikes the central sphere.
 
-9. A spinning top is set going on a hard, smooth, frictionless point
+9. A spinning top is set going on a hard, smooth, polished point
    inside an evacuated chamber. Although nothing touches the top
    except the supporting point — and that contact involves no
-   sliding — its spin rate falls steadily. Set spinning at an
-   initial rate of 100 rad/s, the top is measured to be spinning
-   at 60.5 rad/s exactly 50 seconds after release. It
+   rubbing or sliding — its spin rate falls steadily. Set spinning
+   at an initial rate of 100 rad/s, the top is measured to be
+   spinning at 60.5 rad/s exactly 50 seconds after release. It
    eventually falls over.
 
-10. Two pendulums of the same length but different bob masses — one a
-    gram of brass, one a kilogram of brass — are released together
-    from the same starting angle in the same still air. At each
-    moment afterwards they are observed to have the same swing angle
-    as one another, to within measurement. The same comparison made
-    with bobs of brass, glass, and ice of equal mass yields the same
-    identical-angle behaviour.
+10. Two pendulums of the same length but different bob weights — one
+    a one-gram bob of brass, one a one-kilogram bob of brass — are
+    released together from the same starting angle in the same still
+    air. At each moment afterwards they are observed to have the
+    same swing angle as one another, to within measurement. The same
+    comparison made with bobs of brass, glass, and ice of equal
+    weight yields the same identical-angle behaviour.
 
 ## Author note
 
