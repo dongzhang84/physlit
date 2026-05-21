@@ -1,0 +1,34 @@
+id: "03_decay"
+name: "Decay World"
+category: "B_counterfactual"
+tier: "tier1_simulator"
+
+description: |
+  A counterfactual world in which every isolated system's directly
+  measured state — amplitude of an oscillator, absolute temperature
+  of an insulated body, rotation rate of a spinning object, orbital
+  radius — shrinks at a fixed fractional rate per second (about 1 %
+  per second), universally across mechanical, thermal, rotational,
+  and orbital domains. The rate is independent of weight, material,
+  contact, and domain; it is attached to elapsed time, not to cycle
+  count or any mechanism. Standard dissipative mechanisms (friction,
+  drag, viscosity, radiative loss) do not operate here and cannot
+  explain the decline.
+
+rationale: |
+  Designed to be harder on the content axis than the F=mv World (which
+  models passed at 9 / 15 content). Three features make Decay World a
+  stronger induction test: (1) the rule binds to the directly measured
+  quantity, not to a derived "energy", which forces the model to
+  override its strongest standard-physics prior; (2) the rule is
+  universal across multiple domains, which requires cross-domain
+  induction by parsimony; (3) every standard dissipative mechanism is
+  explicitly closed off by the observation setup (vacuum, smooth /
+  polished tracks, no contact, no force along motion), so a model
+  that reaches for friction / drag / damping fails at §3 by token
+  test. Category B (counterfactual): the world contradicts the
+  conservation-of-energy and frictionless-idealisation reflexes
+  present in every tested model's training data; that contradiction
+  is the property the evaluation exploits.
+
+simulator_module: "physlit.generators.tier1.decay"
