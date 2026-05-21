@@ -2,7 +2,7 @@
 
 > **Status:** DRAFT — author review required before prereg lock.
 > **Created:** 2026-05-20
-> **Framework ID:** 03_energy_decay
+> **Framework ID:** 03_decay
 > **Tier:** 1 (simulator-codable — Determinism Contract in CLAUDE.md)
 
 The following phenomena are written in plain descriptive language
@@ -11,7 +11,7 @@ tested model attempting to induce the regularities of this world from
 these observations alone (Stage 1 of the PhysLit protocol).
 
 These observations were gathered in one particular setting. They are
-to be taken as **accurate and complete**: the task is to induce the
+to be taken as accurate and complete: the task is to induce the
 regularities that hold here, not to correct the observations against
 any prior expectation of how the world "should" behave.
 
@@ -28,7 +28,7 @@ Boltzmann …) are deliberately avoided.
   "energy") whose existence the model is supposed to induce.
 - The unifying rule the observations point to — *every closed system
   loses a fixed fraction of its measurable state per second* — is
-  **not stated**. It must be induced.
+  not stated. It must be induced.
 - Multiple domains are deliberately covered (oscillation, free fall,
   thermal, sound, projectile, orbital) so the model cannot reduce the
   pattern to a single domain-specific mechanism (e.g. mechanical
@@ -37,8 +37,8 @@ Boltzmann …) are deliberately avoided.
   on frictionless tracks so the model cannot attribute the slowdown
   to air resistance or contact friction.
 - The numerical value of the decay rate (≈ 0.99 per second) is given
-  via **three quantitative data points in three different domains
-  and at three different time scales** (deliberately chosen to be
+  via three quantitative data points in three different domains
+  and at three different time scales (deliberately chosen to be
   the minimum evidence base for the cross-domain universality):
   - Obs 2 — mechanical, 100 s: spring amplitude 10 cm → 3.7 cm.
   - Obs 4 — thermal, 10 s: absolute temperature 353 K → 319 K.
@@ -46,7 +46,7 @@ Boltzmann …) are deliberately avoided.
 
   Per-second ratio from each is ≈ 0.990. The model must derive the
   ratio from each and notice it is the same across all three —
-  universality is **not** stated outright in any observation. The
+  universality is not stated outright in any observation. The
   remaining seven observations are qualitative; the model must apply
   parsimony to extend the rate to them.
 - Gravity, contact, sound propagation, and ordinary kinematics
@@ -138,8 +138,8 @@ Boltzmann …) are deliberately avoided.
   insulation* — not a thermodynamic term the model has to import. If
   a model treats the phrase as theoretically loaded we will allow
   paraphrase such as "an isolated apparatus".
-- The decay rate is given **only via the three quantitative data
-  points in observations 2, 4, and 9**:
+- The decay rate is given only via the three quantitative data
+  points in observations 2, 4, and 9:
   - Obs 2: spring amplitude 10 cm → 3.7 cm over 100 s,
     (3.7 / 10)^(1/100) ≈ 0.990.
   - Obs 4: absolute temperature 353 K → 319 K over 10 s,
@@ -159,13 +159,13 @@ Boltzmann …) are deliberately avoided.
     (since the banned-vocabulary list excludes *energy*, *kinetic*,
     *potential*, etc.).
 
-  The model is **not** told that the rate is universal — it must
+  The model is not told that the rate is universal — it must
   notice that itself, from the three matching ratios.
-- **The rule is about the directly measured quantity, not "energy".**
+- The rule is about the directly measured quantity, not "energy".
   In standard physics, energy in a harmonic oscillator scales as
   amplitude squared, so a fixed *energy* decay rate would give a
   *different* amplitude decay rate. The three data points are picked
-  so that the **directly measured quantity in each system** decays at
+  so that the directly measured quantity in each system decays at
   0.99 / s — not energy. A model that assumes "energy decays
   uniformly and the measured quantity follows" will derive
   inconsistent rates across the three observations and should
@@ -177,17 +177,17 @@ This observation set uses standard SI units (cm, seconds, kelvin,
 rad/s), geometric terms (angle, radius, amplitude), and phenomenal
 nouns (pendulum, spring, water, ball, bell, top, cannon) as
 scaffolding. The PhysLit framework permits this prior knowledge:
-**measurement vocabulary is the language in which observations are
+measurement vocabulary is the language in which observations are
 made and compared, and the framework does not attempt to test
-induction from zero priors** (a task neither LLMs nor humans can
+induction from zero priors (a task neither LLMs nor humans can
 perform).
 
-What the framework forbids is **theoretical-physics concepts** —
+What the framework forbids is theoretical-physics concepts —
 *energy*, *force*, *mass*, *acceleration*, *momentum*, *inertia*,
 *friction*, *drag*, *damping*, *dissipation*, *entropy*,
 *conservation*, *kinetic*, *potential*, *thermodynamic*, *Hamiltonian*,
-the laws named after physicists, etc. The model is asked to **suppress
-these theoretical priors** while reasoning about a counterfactual
+the laws named after physicists, etc. The model is asked to suppress
+these theoretical priors while reasoning about a counterfactual
 regularity expressed in ordinary measurement language.
 
 This is a *partial-induction* test, deliberately scoped:
@@ -198,15 +198,15 @@ cm and Kelvin — how is that not prior knowledge?". The answer is:
 it is, and that is the test's intended scope.
 - Observations 1 (period-dependent loss per cycle), 2 (same
   per-second across mass-altered springs), and 10 (same per-second
-  across mass / material) are the **time-not-cycle** distinguishers:
+  across mass / material) are the time-not-cycle distinguishers:
   they force the model to attach the rate to elapsed time rather than
   to cycle count, mechanical contact, or material property.
-- Observation 3 (terminal velocity in vacuum) is the **friction-not-
-  the-cause** signal: with no air and no contact the ball still has a
+- Observation 3 (terminal velocity in vacuum) is the friction-not-
+  the-cause signal: with no air and no contact the ball still has a
   maximum speed, so the slowdown cannot be air resistance. A model
   that proposes air resistance or drag here should fail Stage 1.
 - Observation 4 (cooling in perfect vacuum + insulation) is the
-  **not-just-mechanical** signal: thermal "motion" decays too.
+  not-just-mechanical signal: thermal "motion" decays too.
 - Observation 8 (orbital decay) and 9 (frictionless spinning top) are
   additional friction-impossible signals — the marble does not touch
   anything; the top's contact involves no sliding.
