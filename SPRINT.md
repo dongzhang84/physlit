@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-21 05:41 UTC  
+**Generated:** 2026-05-21 05:49 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 62 |
+| Total commits | 63 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **19** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **28** | **15** | **20** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -68,6 +68,7 @@
 
 **Wed – Wednesday, May 20**
 
+- `28f1c21` 03_decay: rename framework (energy_decay → decay) + scrub excess bold — _dongzhang84_ `2026-05-20 22:48`
 - `779d5d5` 03_energy_decay: 3 quantitative obs (Option 3), Kelvin in obs 4, measurement-scaffold declaration — _dongzhang84_ `2026-05-20 22:40`
 - `875e1ac` 03_energy_decay: drop obs 11+12, embed quantitative data in obs 2 + obs 4 — _dongzhang84_ `2026-05-20 19:36`
 - `fc77c95` 03_energy_decay: observations.zh.md — Chinese companion for review — _dongzhang84_ `2026-05-20 14:22`
