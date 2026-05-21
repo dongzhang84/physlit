@@ -36,9 +36,13 @@ Boltzmann …) are deliberately avoided.
 - Several observations are specifically set in evacuated chambers or
   on frictionless tracks so the model cannot attribute the slowdown
   to air resistance or contact friction.
-- One observation states the rate is the *same across all systems* —
-  the universality is given. The exact numerical value is given
-  indirectly (≈99/100 retained per second).
+- The numerical value of the decay rate (≈ 0.99 per second) is given
+  via **two quantitative data points in different domains**: the
+  spring amplitude in observation 2 (10 cm → 3.7 cm over 100 seconds)
+  and the water temperature in observation 4 (80 °C → 72.3 °C over
+  10 seconds). The model must derive the per-second ratio from each
+  and notice it is the same across the two domains — the universality
+  is **not** stated outright in any observation.
 - Gravity, contact, sound propagation, and ordinary kinematics
   otherwise behave as expected. Only the global slow loss is
   counterfactual.
@@ -53,11 +57,14 @@ Boltzmann …) are deliberately avoided.
    short one, even though both are swinging in the same air.
 
 2. A mass on a spring oscillates back and forth on a frictionless
-   horizontal track inside an evacuated chamber. The amplitude
-   diminishes each cycle. If the same spring is fitted with a heavier
-   mass — slowing each cycle but leaving the spring unchanged — the
-   amplitude lost per cycle is larger, but the amplitude lost per
-   second of elapsed time is the same.
+   horizontal track inside an evacuated chamber. Released with an
+   initial amplitude of **10 cm**, the amplitude is measured to be
+   **3.7 cm** exactly **100 seconds** after release. If the same
+   spring is fitted with a heavier mass — slowing each cycle — the
+   number of cycles completed in 100 seconds is smaller, but the
+   amplitude 100 seconds after release is again 3.7 cm. A lighter
+   mass shows more cycles in 100 seconds but the same 3.7 cm
+   amplitude at the 100-second mark.
 
 3. A heavy iron ball is dropped down a tall vertical evacuated track
    that the ball does not touch. With no air in the chamber, the ball
@@ -67,10 +74,12 @@ Boltzmann …) are deliberately avoided.
 
 4. A cup of hot water is sealed inside a perfectly insulated chamber
    under vacuum — no heat can leave by contact, by air, or as
-   radiation through the walls. Hours later the water is measurably
-   cooler than when it was sealed. The temperature drop per hour is
-   the same whether the cup is alone or surrounded by other identical
-   sealed cups.
+   radiation through the walls. The water is at **80 °C** at the
+   moment of sealing; **10 seconds** later it is at **72.3 °C**. The
+   ratio of the temperature at the end of any ten-second interval to
+   the temperature at the start of that interval is the same, measured
+   at any time during the cooling, and is the same whether the cup is
+   alone or surrounded by other identical sealed cups.
 
 5. A heavy bell is struck inside an evacuated chamber. Although there
    is no air to carry the sound away from the bell, the bell itself
@@ -112,33 +121,31 @@ Boltzmann …) are deliberately avoided.
     time. The same comparison made with bobs of brass, glass, and ice
     of equal mass also gives the same per-second fractional loss.
 
-11. The fractional rate of decline measured in any of the closed
-    systems above — pendulum amplitude, spring amplitude, falling
-    speed approaching its maximum, hot-water temperature, bell
-    vibration amplitude, projectile speed in flight, orbital radius,
-    spinning-top rate — is the same single number across all of them.
-
-12. From repeated measurement of any one of these systems, the
-    quantity measured one second later is in a constant ratio to the
-    quantity measured now. That ratio is approximately ninety-nine
-    parts to one hundred. The same ratio is found in every closed
-    system listed above.
-
 ## Author note
 
-- "Closed system" in observations 4, 6, 11, 12 means *one isolated
-  from outside push, pull, heat exchange, or radiation by the chamber
-  or insulation* — not a thermodynamic term the model has to import.
-  If a model treats the phrase as theoretically loaded we will allow
+- "Closed system" in observations 4 and 6 means *one isolated from
+  outside push, pull, heat exchange, or radiation by the chamber or
+  insulation* — not a thermodynamic term the model has to import. If
+  a model treats the phrase as theoretically loaded we will allow
   paraphrase such as "an isolated apparatus".
-- The 1 %/second decay rate is given indirectly via observations 11
-  and 12 (universality + the "ninety-nine to one hundred" ratio). A
-  successful induction should yield a rule of the form *"all measured
-  quantities of an isolated system shrink each second to about 99 %
-  of their previous value, and the rate is the same regardless of
-  system, material, or domain."* The model is free to invent its own
-  unifying term for the underlying quantity that shrinks; it is not
-  free to use the banned modern-physics vocabulary listed above.
+- The decay rate is given **only via the two quantitative data points
+  in observations 2 and 4**. From observation 2: amplitude shrinks
+  from 10 cm to 3.7 cm over 100 seconds, giving a per-second ratio of
+  (3.7 / 10)^(1/100) ≈ 0.990. From observation 4: temperature shrinks
+  from 80 °C to 72.3 °C over 10 seconds, giving (72.3 / 80)^(1/10)
+  ≈ 0.990. A successful induction should:
+  - notice the two ratios match across very different domains
+    (mechanical amplitude vs. thermal state) and at very different
+    time-scales (100 s vs. 10 s);
+  - generalise to a rule of the form *"every measurable state of an
+    isolated system shrinks each second to about 99 % of its previous
+    value, and the rate is the same regardless of system, material,
+    or domain"*;
+  - invent its own term for the underlying quantity that shrinks
+    (since the banned-vocabulary list excludes *energy*, *kinetic*,
+    *potential*, etc.).
+  The model is **not** told that the rate is universal — it must
+  notice that itself.
 - Observations 1 (period-dependent loss per cycle), 2 (same
   per-second across mass-altered springs), and 10 (same per-second
   across mass / material) are the **time-not-cycle** distinguishers:
