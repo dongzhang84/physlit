@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-21 18:42 UTC  
+**Generated:** 2026-05-22 07:22 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -9,13 +9,13 @@
 
 | Stat | Value |
 |------|-------|
-| Status | ⚠️ Slow |
-| Active days | 4 / 7 |
-| Total commits | 68 |
+| Status | ✅ Good |
+| Active days | 5 / 7 |
+| Total commits | 69 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **22** | **3** | ⚪ | ⚪ | ⚪ |
+| **28** | **15** | **22** | **3** | **1** | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -96,6 +96,10 @@
 - `0d30d19` 03_decay: widen §5 P2 in ideal_induction.md to "hidden-substrate framing" — _dongzhang84_ `2026-05-21 11:42`
 - `b6653f6` 03_decay: pass_fail_criteria.md + spec.yaml + 4 model prompts + 4 judge prompts — _dongzhang84_ `2026-05-21 01:53`
 - `f4e9d78` 03_decay: observations final fixes + ideal_induction.md + prediction_tests.md — _dongzhang84_ `2026-05-21 00:14`
+
+**Fri – Friday, May 22**
+
+- `d0bb1c5` 03_decay: draft prereg with directional P1-P4 (for review, not locked) — _dongzhang84_ `2026-05-22 00:22`
 
 ---
 
