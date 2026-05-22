@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-22 20:15 UTC  
+**Generated:** 2026-05-22 20:23 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 79 |
+| Total commits | 80 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **22** | **3** | **11** | ⚪ | ⚪ |
+| **28** | **15** | **22** | **3** | **12** | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -99,6 +99,7 @@
 
 **Fri – Friday, May 22**
 
+- `cf30b0e` 03_decay: human audit worksheet + agents review + pre-commit large-file bump — _dongzhang84_ `2026-05-22 13:23`
 - `a868a08` 03_decay: Agent 1 + Agent 2 non-canonical disagree-resolver outputs — _dongzhang84_ `2026-05-22 13:14`
 - `ab5afad` 03_decay: parser fix + reparse + re-aggregate — _dongzhang84_ `2026-05-22 12:40`
 - `e5e5b0c` 03_decay: production trial outputs (3 models × N=5 × 4 stages) — _dongzhang84_ `2026-05-22 11:02`
