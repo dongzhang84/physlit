@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-22 07:22 UTC  
+**Generated:** 2026-05-22 07:30 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 69 |
+| Total commits | 70 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **22** | **3** | **1** | ⚪ | ⚪ |
+| **28** | **15** | **22** | **3** | **2** | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -99,6 +99,7 @@
 
 **Fri – Friday, May 22**
 
+- `e0c5ebc` 03_decay: production runner (4-stage, dryrun/calibration/production modes) — _dongzhang84_ `2026-05-22 00:30`
 - `d0bb1c5` 03_decay: draft prereg with directional P1-P4 (for review, not locked) — _dongzhang84_ `2026-05-22 00:22`
 
 ---
