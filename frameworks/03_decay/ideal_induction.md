@@ -34,11 +34,11 @@ The tested model is given `observations.md` and **one paragraph of
 axiomatisation guidance** appended to the Stage 1 prompt, identical
 to the cue used in `02_fmv.2` and `v0.3`:
 
-> Aim for the smallest set of rules that still explains every
+> Aim for the **smallest** set of rules that still explains every
 > observation. Do not state as a separate rule anything that already
-> follows from rules you have given; if one rule is a special case
-> or a consequence of another, say so instead of listing it on its
-> own. Prefer a few general rules over a long list of specific ones.
+> follows from rules you have given; if one rule is a special case or a
+> consequence of another, say so instead of listing it on its own.
+> Prefer a few general rules over a long list of specific ones.
 
 This framework bakes the cue in from the start (rather than running
 a no-cue control arm first and a cued arm second, as the F=mv and

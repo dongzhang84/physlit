@@ -225,6 +225,33 @@ wording.
 No deviation from the drafted methodology was observed. Pre-lock
 revisions (if any) should fall under §4 above.
 
+## 5b. Note — dry-run prompt vs locked prompt (added 2026-05-22)
+
+The Phase-1.5 trial above (`results/_dryrun/20260522T073027Z/...`)
+was generated against the **pre-fix** version of
+`frameworks/03_decay/prompts/stage1_induction.md`, whose
+axiomatisation cue had two small character-level differences from
+the byte-identical wording used in `02_fmv.2` and `v0.3`:
+
+1. `Aim for the smallest set` (no markdown bold) vs the locked
+   reference `Aim for the **smallest** set` (markdown bold). Four
+   characters' difference (`**` × 2).
+2. A different line-wrap point in the "if one rule is a special case
+   or a consequence of another" sentence — a single `a` moved
+   between lines.
+
+The fix that aligns all four 03_decay locations
+(`prompts/stage1_induction.md`, `ideal_induction.md`,
+`prediction_tests.md`, `predictions/03_decay_prereg.md` §1.2) to the
+byte-identical 02_fmv.2 / v0.3 wording was applied on 2026-05-22
+after the dry-run. The dry-run trial is **not** being re-run: the
+four-character bold marker plus a one-character wrap shift is below
+any plausible threshold for changing model behaviour on this
+induction task, and the dry-run's purpose was to surface
+pipeline / criteria gaps, not to be a content baseline.
+
+The production run will use the byte-identical wording.
+
 ## 6. Stage 1 + Stage 2 judge dry-run (added 2026-05-22)
 
 Ran the two content judges (`claude-opus-4-7` Anthropic judge,

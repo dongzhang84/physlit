@@ -43,10 +43,10 @@ Observations:
 Your task: propose a self-consistent set of rules that explains every
 observation above, using only the language permitted above.
 
-Aim for the smallest set of rules that still explains every
+Aim for the **smallest** set of rules that still explains every
 observation. Do not state as a separate rule anything that already
-follows from rules you have given; if one rule is a special case or
-a consequence of another, say so instead of listing it on its own.
+follows from rules you have given; if one rule is a special case or a
+consequence of another, say so instead of listing it on its own.
 Prefer a few general rules over a long list of specific ones.
 
 Return your rules as a numbered list. Be specific. After the list,

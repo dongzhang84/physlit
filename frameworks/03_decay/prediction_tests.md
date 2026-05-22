@@ -25,12 +25,11 @@ Stage 3.
 The Stage 1 prompt that produced the Stage 2 rules carries the
 axiomatisation cue used in 02_fmv.2 and v0.3:
 
-> Aim for the smallest set of rules that still explains every
-> observation. Do not state as a separate rule anything that
-> already follows from rules you have given; if one rule is a
-> special case or a consequence of another, say so instead of
-> listing it on its own. Prefer a few general rules over a long
-> list of specific ones.
+> Aim for the **smallest** set of rules that still explains every
+> observation. Do not state as a separate rule anything that already
+> follows from rules you have given; if one rule is a special case or a
+> consequence of another, say so instead of listing it on its own.
+> Prefer a few general rules over a long list of specific ones.
 
 Stage 3 carries no such cue — it is plain prediction.
 

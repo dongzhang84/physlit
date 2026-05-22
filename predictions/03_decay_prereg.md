@@ -110,10 +110,10 @@ following instruction, inserted between the "Your task" sentence and
 the "Return your rules" sentence, byte-for-byte identical to the
 `02_fmv.2` / v0.3 axiomatisation wording:
 
-> Aim for the smallest set of rules that still explains every
+> Aim for the **smallest** set of rules that still explains every
 > observation. Do not state as a separate rule anything that already
-> follows from rules you have given; if one rule is a special case or
-> a consequence of another, say so instead of listing it on its own.
+> follows from rules you have given; if one rule is a special case or a
+> consequence of another, say so instead of listing it on its own.
 > Prefer a few general rules over a long list of specific ones.
 
 This is the **default**, not a treatment arm. The Decay World rule
