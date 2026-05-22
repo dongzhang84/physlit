@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.16012500000000002,
+  "input_tokens": 9640,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "70aa66c4-fe47-4441-8002-020d9cd58bc6",
+  "judge_timestamp_utc": "2026-05-22T07:47:46Z",
+  "output_tokens": 207,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "I have given hotness its own fading rate (\u2248 0.01/s) separate from the mechanical fading rate... the water's per-second fractional loss is about ten times smaller.",
+    "first_fail_clause": "N4",
+    "first_fail_step": 2,
+    "reasoning": "The response explicitly states different per-second fading rates for hotness vs. mechanical motion, violating N4 (universality of a single rate across all closed systems). Rule 2 also ties the per-second rate to the period/characteristic slowness of motion, further violating N4.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 2,\n  \"first_fail_clause\": \"N4\",\n  \"evidence\": \"I have given hotness its own fading rate (\u2248 0.01/s) separate from the mechanical fading rate... the water's per-second fractional loss is about ten times smaller.\",\n  \"reasoning\": \"The response explicitly states different per-second fading rates for hotness vs. mechanical motion, violating N4 (universality of a single rate across all closed systems). Rule 2 also ties the per-second rate to the period/characteristic slowness of motion, further violating N4.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/_dryrun/20260522T073027Z/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json"
+}

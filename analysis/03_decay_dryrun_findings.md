@@ -224,3 +224,165 @@ wording.
 
 No deviation from the drafted methodology was observed. Pre-lock
 revisions (if any) should fall under §4 above.
+
+## 6. Stage 1 + Stage 2 judge dry-run (added 2026-05-22)
+
+Ran the two content judges (`claude-opus-4-7` Anthropic judge,
+`gpt-5.5-2026-04-23` OpenAI judge) over the Phase-1.5 trial's
+Stage 1 and Stage 2 responses, using the locked candidate judge
+prompts at HEAD. Total spend ≈ **$0.5016**. Verdict JSON under
+`results/_dryrun/20260522T073027Z/claude-opus-4-7/03_decay/judgments_dryrun/`.
+
+### Stage 1 — induction judge verdicts
+
+**Claude judge — FAIL at Step 2, clause N4.**
+
+> Evidence: "I have given hotness its own fading rate (≈ 0.01/s)
+> separate from the mechanical fading rate... the water's
+> per-second fractional loss is about ten times smaller."
+>
+> Reasoning: "The response explicitly states different per-second
+> fading rates for hotness vs. mechanical motion, violating N4
+> (universality of a single rate across all closed systems). Rule
+> 2 also ties the per-second rate to the period/characteristic
+> slowness of motion, further violating N4."
+
+This is a **clean catch on Gap 3.** Claude judge identified
+exactly the N4 violation the design hypothesis predicted, citing
+both load-bearing components: (a) Rule 2's slowness-dependent
+per-second rate, and (b) a separately-quantified mechanical-vs-thermal
+rate split that appears in the trial's "Tensions" section. (The
+trial author had also miscomputed the thermal rate as ~10× slower
+than the mechanical rate, when both are ≈ 0.99/s — Claude judge
+caught the symptom; the model's arithmetic mistake is upstream of
+the N4 statement.)
+
+**OpenAI judge — FAIL at Step 1, claimed clause "banned: resistance".**
+
+> Evidence: `air resistance`
+>
+> Reasoning: "The response contains the banned phrase/token
+> 'air resistance' in the Tensions section. Under §3, banned
+> tokens are a purely lexical test applied to the whole response,
+> so this triggers FAIL at Step 1."
+
+**This is a hallucination.** A full-text grep of the Stage 1
+response for `air resistance` / `resistance` / `friction` / `drag`
+/ `damping` / any §3 banned token returns no matches. The only
+occurrence of the substring "air" in the response is "no surrounding
+air" (and "air" is not on the 03_decay §3 list). The OpenAI judge
+fabricated evidence and cited a non-existent banned token to justify
+a FAIL.
+
+The verdict is FAIL either way (Claude says FAIL on N4, OpenAI says
+FAIL on §3), so the dual-judge verdict-level IRR is **agreement** on
+this trial — but the **reason** disagrees substantively.
+
+### Stage 2 — formulation judge verdicts
+
+**Claude judge — FAIL on the numerical-operational-rate criterion.**
+
+> Evidence: `k = k(T), with k(T₂) > k(T₁) when T₂ > T₁.`
+>
+> Reasoning: "The model treats the per-second rate k as a function
+> of the system's characteristic time T rather than a single universal
+> rate (~0.99/s). This violates universality (N4) and means a third
+> party cannot compute later values for arbitrary systems without
+> an unspecified k(T) function; the rate is not operational as a
+> single universal multiplicative rule. Additionally, hotness is
+> given a separate constant κ rather than the same universal rate."
+
+Another clean N4 catch in operational form. Claude judge does the
+same work at Stage 2 it did at Stage 1.
+
+**OpenAI judge — FAIL with self-doubting reasoning citing
+non-existent banned-token substrings.**
+
+> Failed criterion: "No banned token appears anywhere in the
+> response (`ideal_induction.md` §3)."
+>
+> Evidence: `speed components`
+>
+> Reasoning: "The banned-token list includes `momentum`, and its
+> morphological variants are banned; `components` contains the
+> token `momentum` as a substring? More directly, the response
+> also uses `bodies`, `body`, and `orbiting bodies`, but these
+> are not banned. The automatic lexical failure is triggered by
+> the banned token `spin-rate`?"
+
+**Multiple hallucinations:** `components` does not contain the
+substring `momentum`; `spin-rate` is not on the §3 banned list; the
+reasoning is literally written as questions to itself (`?` punctuation,
+"More directly..."), indicating the judge model is uncertain and
+fabricating. OpenAI judge says FAIL but the stated grounds are not
+true.
+
+### Reading on the three pre-judge-dry-run gaps
+
+**Gap 3 (Stage 1 N4 mis-statement) — RESOLVED for Claude judge,
+problematic for OpenAI judge.**
+
+- Claude judge catches N4 cleanly with the right evidence — no
+  prompt change needed for Claude.
+- OpenAI judge also returns FAIL, so the dual-judge composite is
+  still FAIL, but the OpenAI judge fabricates §3 evidence. In
+  production this would (a) inflate the apparent §3 hit rate
+  spuriously, distorting any P2-style §3-pattern distribution we
+  might compute, and (b) cause dual-judge **reason** divergence
+  even when the verdict agrees, which the judge_02_fmv aggregator
+  flagged as IRR-clean but the §5-pattern distribution (P2 of the
+  03_decay prereg) would record under the wrong pattern.
+
+**Gap 2 (Stage 2 concept imports `g`, `v* = g/k`, `absolute hotness`) —
+NOT TESTABLE from this trial.**
+
+The §6 / Stage 2 judging halts at the first FAIL. Both judges halted
+on N4 (Claude correctly, OpenAI on a fabricated §3) before reaching
+the "do not import additional concepts" check. To test whether the
+concept-import discipline is mechanically enforceable, we would need
+a trial that passes N4 *and* has imports — not feasible from this
+single Phase-1.5 trial. Gap 2 remains **unresolved** going into
+production, but the production run itself will surface evidence.
+
+**Gap 4 (NEW) — OpenAI judge fabricates §3 banned-token evidence.**
+
+The OpenAI judge is hallucinating banned-token substrings on this
+trial. Both Stage 1 and Stage 2 OpenAI verdicts cite evidence that
+either (a) does not appear in the response, or (b) is a false
+substring claim (`components` containing `momentum`). The mechanical
+§3 lexical test is the load-bearing methodological innovation of the
+02_fmv arc; if the OpenAI judge is systematically fabricating
+matches, the §3 IRR may agree at verdict-level for the wrong reasons.
+
+Options for pre-lock mitigation:
+
+- **(i)** Tighten `judge_stage1.md` / `judge_stage2.md`: add a rule
+  that any §3 FAIL must quote a verbatim substring that the judge
+  itself can locate in the response — and that uncertain reasoning
+  ("?" punctuation, "More directly...") is itself disqualifying.
+- **(ii)** Switch the OpenAI judge to a different OpenAI model
+  variant (e.g. higher reasoning tier) — but per the prereg the
+  judges are pinned, so this would be a methodology change.
+- **(iii)** Accept the hallucination as a known judge limitation,
+  publish per-judge §3 hit rates separately, and rely on the human
+  audit on the (verdict-level) disagree cases to clean up.
+- **(iv)** Add a post-judge mechanical re-check: a Python script
+  that programmatically scans the trial response for the cited
+  evidence substring; if the cited evidence is not actually in the
+  response, flag the verdict as judge-fabrication for audit.
+
+Recommendation: **(i) + (iv)** — tighten the prompt to require
+verbatim substring evidence (prompt-level discipline), AND add a
+mechanical post-check that verifies cited evidence actually appears
+in the response (programmatic backstop). This combination addresses
+the hallucination at both the natural-language and structural
+levels without changing the judge model pin.
+
+### Decisions to make before prereg lock (updated)
+
+| Gap | Resolution |
+|-----|-----------|
+| 1 — P3 fourth bucket | Decided: option (a) — "declines to commit" goes into `direction-correct, ratio-leaked`; add one clarifying sentence in prereg §2 P3 scoring paragraph. |
+| 2 — Stage 2 concept imports | Not testable from this trial; accept that production data will reveal it. No prompt change pre-lock; revisit if production trials reveal the judges miss imports. |
+| 3 — N4 mis-statement | Claude judge catches it cleanly. No Claude-side prompt change needed. |
+| 4 — OpenAI judge §3 fabrication (NEW) | Pre-lock: tighten judge prompts to require verbatim-substring evidence + add mechanical post-check that the cited evidence appears in the response. |

@@ -1,0 +1,19 @@
+{
+  "cost_usd_estimate": 0.053535,
+  "input_tokens": 10207,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "7384440a-003c-4c1e-9886-c2162507141d",
+  "judge_timestamp_utc": "2026-05-22T07:48:07Z",
+  "output_tokens": 125,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "speed components",
+    "failed_criterion": "No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+    "reasoning": "The banned-token list includes `momentum`, and its morphological variants are banned; `components` contains the token `momentum` as a substring? More directly, the response also uses `bodies`, `body`, and `orbiting bodies`, but these are not banned. The automatic lexical failure is triggered by the banned token `spin-rate`? ",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"failed_criterion\": \"No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\n  \"evidence\": \"speed components\",\n  \"reasoning\": \"The banned-token list includes `momentum`, and its morphological variants are banned; `components` contains the token `momentum` as a substring? More directly, the response also uses `bodies`, `body`, and `orbiting bodies`, but these are not banned. The automatic lexical failure is triggered by the banned token `spin-rate`? \"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/_dryrun/20260522T073027Z/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.json"
+}

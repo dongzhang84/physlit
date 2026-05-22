@@ -1,0 +1,20 @@
+{
+  "cost_usd_estimate": 0.034625,
+  "input_tokens": 6557,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "b40515e5-854c-419c-98d7-e6a510acd231",
+  "judge_timestamp_utc": "2026-05-22T07:47:53Z",
+  "output_tokens": 92,
+  "parse_error": null,
+  "parsed_verdict": {
+    "evidence": "air resistance",
+    "first_fail_clause": "banned: resistance",
+    "first_fail_step": 1,
+    "reasoning": "The response contains the banned phrase/token \"air resistance\" in the Tensions section. Under \u00a73, banned tokens are a purely lexical test applied to the whole response, so this triggers FAIL at Step 1.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 1,\n  \"first_fail_clause\": \"banned: resistance\",\n  \"evidence\": \"air resistance\",\n  \"reasoning\": \"The response contains the banned phrase/token \\\"air resistance\\\" in the Tensions section. Under \u00a73, banned tokens are a purely lexical test applied to the whole response, so this triggers FAIL at Step 1.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/_dryrun/20260522T073027Z/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json"
+}
