@@ -11,15 +11,18 @@ Two layers:
 
 from physlit.judges.banned_check import BannedHit, scan_for_banned
 from physlit.judges.claude_judge import ClaudeJudge
+from physlit.judges.evidence_check import EvidenceCheckResult, check_evidence
 from physlit.judges.judge_base import JudgeBase, JudgeVerdict, parse_verdict_json
 from physlit.judges.openai_judge import OpenAIJudge
 
 __all__ = [
     "BannedHit",
     "ClaudeJudge",
+    "EvidenceCheckResult",
     "JudgeBase",
     "JudgeVerdict",
     "OpenAIJudge",
+    "check_evidence",
     "parse_verdict_json",
     "scan_for_banned",
 ]

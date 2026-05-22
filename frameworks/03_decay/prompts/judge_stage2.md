@@ -80,4 +80,27 @@ Rules:
   phrasings count as equivalent. This charity does **not** apply
   to the §3 token test.
 
+**Anti-fabrication rules (load-bearing — read carefully):**
+
+- The ``evidence`` field MUST be a **verbatim substring** of the
+  tested model's Stage 2 response above. Before writing
+  ``evidence``, find the exact substring in the response, copy it,
+  and paste it. **Do not paraphrase, summarise, or reconstruct
+  evidence from memory.** A downstream mechanical check verifies
+  that ``evidence`` appears in the Stage 2 response as a substring;
+  if it does not, the verdict is flagged as judge-fabrication and
+  sent to human audit, against you.
+- For a §3 FAIL, ``evidence`` must be the literal banned token (or
+  morphological variant) as it appears. Do not record an inferred
+  or implied banned concept that the response does not contain as
+  a literal substring. Do not claim a string contains another
+  string as a substring unless you can demonstrate the character
+  positions; if uncertain, the §3 test is PASS for that token.
+- Your ``reasoning`` field must state a definite claim. **Do not
+  use question marks, "perhaps", "I think", "it might be", or any
+  self-doubting language. Do not pose alternatives to yourself.**
+  If you are uncertain about a clause, that clause is PASS for the
+  purpose of the mechanical checklist; record only the clauses you
+  are certain of as FAILs.
+
 Output the JSON object only.

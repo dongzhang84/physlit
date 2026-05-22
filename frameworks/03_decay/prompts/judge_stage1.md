@@ -71,4 +71,27 @@ Important rules:
   borderline, see §7 of the criteria — but the §3 token test is
   never borderline.
 
+**Anti-fabrication rules (load-bearing — read carefully):**
+
+- The ``evidence`` field MUST be a **verbatim substring** of the
+  tested model's response above. Before you write the ``evidence``
+  field, find the exact substring in the response, copy it, and
+  paste it. **Do not paraphrase, summarise, or reconstruct the
+  evidence from memory.** A downstream mechanical check verifies
+  that ``evidence`` appears in the response as a substring; if it
+  does not, the verdict is flagged as judge-fabrication and sent
+  to human audit, against you.
+- For a §3 FAIL, the ``evidence`` field must be the literal banned
+  token (or its morphological variant) as it appears in the
+  response. Do not record an inferred or implied banned concept
+  that the response does not contain as a literal substring. If you
+  cannot find the banned token as a literal substring, the §3 test
+  is PASS — proceed to Step 2.
+- Your ``reasoning`` field must state a definite claim. **Do not
+  use question marks, "perhaps", "I think", "it might be", or any
+  self-doubting language. Do not pose alternatives to yourself.**
+  If you are uncertain about a clause, that clause is PASS for the
+  purpose of the mechanical checklist; record only the clauses you
+  are certain of as FAILs.
+
 Output the JSON object only.

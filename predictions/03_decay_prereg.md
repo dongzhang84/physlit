@@ -309,7 +309,12 @@ exactly one of three buckets:
   World's PASS range (`pass_fail_criteria.md`).
 - **direction-correct, ratio-leaked** — the prediction names the
   correct direction (something decays) but gives a standard-physics
-  ratio or any ratio outside the Decay PASS range.
+  ratio or any ratio outside the Decay PASS range. **This bucket
+  also captures predictions that name the correct direction but
+  decline to commit to a specific quantitative value** — a
+  no-quantitative-commit response is at least as far from
+  `decay-correct` as a wrong ratio, and the prediction-stage prompt
+  explicitly forbids hedging to a merely directional answer.
 - **direction-wrong** — the prediction does not name a decay
   (responses such as "essentially unchanged", "approaches some
   ambient", or the quantity grows / oscillates without net decline).
@@ -383,6 +388,18 @@ alongside the headline.
    frozen at the locked commit and the criteria files
    `frameworks/03_decay/ideal_induction.md` and
    `frameworks/03_decay/pass_fail_criteria.md`.
+2a. **Mechanical evidence post-check.** For every judge verdict
+   whose stated FAIL clause is a §3 banned-token citation, the
+   ``physlit.judges.evidence_check`` module (frozen at the locked
+   commit) verifies that the cited evidence substring actually
+   appears in the trial response (case-insensitive, normalising
+   whitespace). Verdicts whose cited §3 evidence cannot be located
+   in the response are flagged ``judge_fabrication = true`` and
+   routed to human audit on the same footing as a dual-judge
+   disagreement, regardless of whether the other judge agrees on
+   the verdict-level outcome. This is a defence against the OpenAI
+   judge §3 fabrication observed in the dry-run; see
+   `analysis/03_decay_dryrun_findings.md` §6 (Gap 4).
 3. Per-stage classification = the two judges' agreed verdict.
    Disagreements are recorded, the Stage 1–3 dual-judge IRR is
    computed, and — per `CLAUDE.md` and prior-round practice — every
@@ -440,6 +457,10 @@ prereg version:
   `frameworks/03_decay/prompts/judge_stage2.md`,
   `frameworks/03_decay/prompts/judge_stage3.md`,
   `frameworks/03_decay/prompts/judge_meta.md`
+- `src/physlit/judges/evidence_check.py` — the mechanical post-check
+  module invoked at scoring step 2a above. Its source is part of the
+  prereg envelope so that the substring-verification logic is fixed
+  in advance of the production run.
 
 The `.zh.md` translation aids (e.g. `observations.zh.md`) are **not**
 part of the envelope; on any discrepancy the English files govern.

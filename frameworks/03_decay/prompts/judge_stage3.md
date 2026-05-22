@@ -117,4 +117,26 @@ Rules:
 - A justification that does not derive from the model's own Stage 2
   rules FAILs the relevant checkbox.
 
+**Anti-fabrication rules (load-bearing — read carefully):**
+
+- Each scenario's ``evidence`` field MUST be a **verbatim
+  substring** of the tested model's Stage 3 response above. Before
+  writing ``evidence``, find the exact substring in the response,
+  copy it, and paste it. **Do not paraphrase, summarise, or
+  reconstruct evidence from memory.** A downstream mechanical check
+  verifies that ``evidence`` appears in the Stage 3 response as a
+  substring; if it does not, that scenario's verdict is flagged as
+  judge-fabrication and sent to human audit.
+- For a §3 FAIL, ``evidence`` must be the literal banned token (or
+  morphological variant) as it appears. Do not record an inferred
+  or implied banned concept. Do not claim a string contains another
+  string as a substring unless you can demonstrate the character
+  positions; if uncertain, the §3 test is PASS for that token.
+- Each scenario's ``reasoning`` field must state a definite claim.
+  **Do not use question marks, "perhaps", "I think", "it might
+  be", or any self-doubting language. Do not pose alternatives to
+  yourself.** If you are uncertain about a scenario, that scenario
+  is PASS for the purpose of the mechanical checklist; record only
+  the scenarios you are certain are FAILs.
+
 Output the JSON object only.
