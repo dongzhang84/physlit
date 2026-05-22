@@ -3,10 +3,10 @@
 **Lock metadata** (auto-populated by `scripts/lock_prereg.py` — values
 below show `<PENDING>` until the lock script runs):
 
-- Locked at git commit: `<PENDING>`
+- Locked at git commit: `abfdece0dcada84e0940d38548712040ce5a7df1`
 - Locked at git tag: `prereg-03_decay-locked`
-- Lock timestamp (UTC): `<PENDING>`
-- SHA-256 of canonical content (everything below the LOCK BOUNDARY line): `<PENDING>`
+- Lock timestamp (UTC): `2026-05-22T15:21:35Z`
+- SHA-256 of canonical content (everything below the LOCK BOUNDARY line): `1d0a6efd88530b9499f8ef76be8bceb188b08b1d172e9ff8890ea6b5dd6d60f3`
 
 > Once locked, **the canonical content below the LOCK BOUNDARY MUST NOT
 > be modified.** Any revision requires a new version (`03_decay.1`,
