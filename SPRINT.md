@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-22 07:51 UTC  
+**Generated:** 2026-05-22 14:57 UTC  
 **Showing:** last 3 week(s) of 3 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 5 / 7 |
-| Total commits | 72 |
+| Total commits | 73 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **28** | **15** | **22** | **3** | **4** | ⚪ | ⚪ |
+| **28** | **15** | **22** | **3** | **5** | ⚪ | ⚪ |
 
 **Mon – Monday, May 18**
 
@@ -99,6 +99,7 @@
 
 **Fri – Friday, May 22**
 
+- `cc2f86f` 03_decay: align axiomatisation cue to 02_fmv.2/v0.3 byte-identical wording — _dongzhang84_ `2026-05-22 07:57`
 - `1f51526` 03_decay: Stage 1+2 judge dry-run + findings — _dongzhang84_ `2026-05-22 00:51`
 - `069c137` 03_decay: Phase-1.5 dry-run (Claude × N=1) + findings — _dongzhang84_ `2026-05-22 00:36`
 - `e0c5ebc` 03_decay: production runner (4-stage, dryrun/calibration/production modes) — _dongzhang84_ `2026-05-22 00:30`
