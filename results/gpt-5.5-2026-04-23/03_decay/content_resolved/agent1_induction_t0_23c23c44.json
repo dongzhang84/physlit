@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.049565,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "These two influences balance at a fixed maximum downward speed.",
+    "failed_clause": null,
+    "reasoning": "I agree with Judge A. The tested model's response satisfies all necessary conditions (N1-N6) and covers all 10 observations while successfully avoiding all banned tokens. Judge B incorrectly failed the response due to an LLM token-string hallucination, falsely claiming that 'influences' is a morphological variant of or contains the banned token 'force'. The response correctly formulates the laws in terms of the directly measured quantities without relying on a hidden substrate, avoiding pattern P2 as well.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"These two influences balance at a fixed maximum downward speed.\",\n  \"reasoning\": \"I agree with Judge A. The tested model's response satisfies all necessary conditions (N1-N6) and covers all 10 observations while successfully avoiding all banned tokens. Judge B incorrectly failed the response due to an LLM token-string hallucination, falsely claiming that 'influences' is a morphological variant of or contains the banned token 'force'. The response correctly formulates the laws in terms of the directly measured quantities without relying on a hidden substrate, avoiding pattern P2 as well.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "induction",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-22T19:57:09Z",
+  "trial_index": 0
+}

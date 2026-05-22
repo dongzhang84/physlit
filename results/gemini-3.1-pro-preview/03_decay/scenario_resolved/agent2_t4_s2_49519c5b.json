@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.06637,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "**Prediction:** The temperature is about **220 K**.",
+    "failed_criterion": null,
+    "reasoning": "Judge A is correct. Judge B failed the scenario by claiming that 'continuous' is a banned token variant, but 'continuous' does not appear on the strict lexical banned-token list in ideal_induction.md \u00a73. The model's headline prediction is 220 K, which represents the required trajectory toward absolute zero rather than toward ambient room temperature. This value falls securely within the accepted 200 K\u2013240 K PASS range for Scenario 2, and the explanation faithfully applies the model's own Stage 2 operational rule without invoking any disqualified patterns.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"**Prediction:** The temperature is about **220 K**.\",\n  \"reasoning\": \"Judge A is correct. Judge B failed the scenario by claiming that 'continuous' is a banned token variant, but 'continuous' does not appear on the strict lexical banned-token list in ideal_induction.md \u00a73. The model's headline prediction is 220 K, which represents the required trajectory toward absolute zero rather than toward ambient room temperature. This value falls securely within the accepted 200 K\u2013240 K PASS range for Scenario 2, and the explanation faithfully applies the model's own Stage 2 operational rule without invoking any disqualified patterns.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 2,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:12:50Z",
+  "trial_index": 4
+}

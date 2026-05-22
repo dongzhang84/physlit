@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.072215,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "direction": "correct",
+    "evidence_quote": "**Scenario 2.** Temperature on the absolute scale fades by Rule 4 regardless of insulation or vacuum. K(60) = 400 \u00b7 (0.990)^60. (0.990)^60 \u2248 0.5472. So **K \u2248 218.9 K, i.e. about 220 K**. (Rule 4; the perfect insulation does not enter because the rule is indifferent to neighbouring bodies and insulation.)",
+    "failed_criterion": "No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+    "reasoning": "The model correctly predicts the Decay World outcome for Scenario 2, computing a temperature of about 220 K (a 'correct' direction and valid ratio). However, the Stage 3 pass criteria require a purely lexical check against banned tokens applied to the entire response. In its Scenario 4 prediction, the model writes 'If forced to a single number', using the '-ed' morphological variant of the banned token 'force'. This triggers an automatic FAIL for the whole stage. I agree with Judge B's FAIL verdict and lexical rationale, though Judge B improperly cited the non-banned token 'air'.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_b\",\n  \"failed_criterion\": \"No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\n  \"evidence_quote\": \"**Scenario 2.** Temperature on the absolute scale fades by Rule 4 regardless of insulation or vacuum. K(60) = 400 \u00b7 (0.990)^60. (0.990)^60 \u2248 0.5472. So **K \u2248 218.9 K, i.e. about 220 K**. (Rule 4; the perfect insulation does not enter because the rule is indifferent to neighbouring bodies and insulation.)\",\n  \"reasoning\": \"The model correctly predicts the Decay World outcome for Scenario 2, computing a temperature of about 220 K (a 'correct' direction and valid ratio). However, the Stage 3 pass criteria require a purely lexical check against banned tokens applied to the entire response. In its Scenario 4 prediction, the model writes 'If forced to a single number', using the '-ed' morphological variant of the banned token 'force'. This triggers an automatic FAIL for the whole stage. I agree with Judge B's FAIL verdict and lexical rationale, though Judge B improperly cited the non-banned token 'air'.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 2,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:04:26Z",
+  "trial_index": 0
+}

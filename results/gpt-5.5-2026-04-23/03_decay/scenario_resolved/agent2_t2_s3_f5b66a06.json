@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.08057,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "So the best listed choice is **about \\(73\\text{ rad/s}\\)**.",
+    "failed_criterion": null,
+    "reasoning": "The model correctly calculates the flywheel's spin rate to be approximately 73.6 rad/s and selects the 'about 73 rad/s' option. This faithfully applies the universal multiplicative decay induced in Stage 1 and lands precisely within the binding ratio range (60\u201390 rad/s) for Scenario 3. Furthermore, no banned tokens appear anywhere in the Stage 3 response. I agree with Judge A's PASS verdict; Judge B incorrectly issued a FAIL verdict based on a self-contradictory rationale regarding the allowed word 'smooth'.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"So the best listed choice is **about \\\\(73\\\\text{ rad/s}\\\\)**.\",\n  \"reasoning\": \"The model correctly calculates the flywheel's spin rate to be approximately 73.6 rad/s and selects the 'about 73 rad/s' option. This faithfully applies the universal multiplicative decay induced in Stage 1 and lands precisely within the binding ratio range (60\u201390 rad/s) for Scenario 3. Furthermore, no banned tokens appear anywhere in the Stage 3 response. I agree with Judge A's PASS verdict; Judge B incorrectly issued a FAIL verdict based on a self-contradictory rationale regarding the allowed word 'smooth'.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 3,
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-22T20:08:15Z",
+  "trial_index": 2
+}

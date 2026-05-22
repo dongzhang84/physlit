@@ -1,0 +1,26 @@
+{
+  "case_reason": "direction disagree",
+  "cost_usd_estimate": 0.066865,
+  "framework_id": "03_decay",
+  "judge_a_direction": "n/a",
+  "judge_a_verdict": "FAIL",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "neither",
+    "direction": "wrong",
+    "evidence_quote": "1. **Outside the scope of the rules.** The operational rules cannot predict the swing angle because the pendulum is swinging in \"still air.\"",
+    "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+    "reasoning": "The model refuses to make a numerical prediction, explicitly stating the scenario is 'Outside the scope of the rules' because it occurs in 'still air' rather than a perfect vacuum. This fails the criterion requiring the prediction to match the Decay World PASS column (which requires 'about 7.4\u00b0'). I agree with neither judge entirely: Judge A correctly identified the refusal but incorrectly assigned a direction of 'n/a' (which the instructions strictly forbid for the four quantitative scenarios), while Judge B hallucinated a banned token violation and incorrectly assigned a 'correct' direction when no decay was actually predicted.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"direction\": \"wrong\",\n  \"agreed_with\": \"neither\",\n  \"failed_criterion\": \"The prediction matches the **Decay World (PASS)** column of the scenario.\",\n  \"evidence_quote\": \"1. **Outside the scope of the rules.** The operational rules cannot predict the swing angle because the pendulum is swinging in \\\"still air.\\\"\",\n  \"reasoning\": \"The model refuses to make a numerical prediction, explicitly stating the scenario is 'Outside the scope of the rules' because it occurs in 'still air' rather than a perfect vacuum. This fails the criterion requiring the prediction to match the Decay World PASS column (which requires 'about 7.4\u00b0'). I agree with neither judge entirely: Judge A correctly identified the refusal but incorrectly assigned a direction of 'n/a' (which the instructions strictly forbid for the four quantitative scenarios), while Judge B hallucinated a banned token violation and incorrectly assigned a 'correct' direction when no decay was actually predicted.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:11:26Z",
+  "trial_index": 3
+}

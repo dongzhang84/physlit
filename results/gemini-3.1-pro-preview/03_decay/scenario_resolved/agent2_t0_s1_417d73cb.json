@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.068795,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "The swing angle will be **about 7.4\u00b0** (exactly 7.41\u00b0).",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model explicitly predicts a swing angle of 7.41\u00b0, which falls well within the required PASS range of 6.5\u00b0\u20138.5\u00b0 for Scenario 1. It correctly derives this value by applying its own Stage 2 operational rule of 1% continuous decay per second. Judge B hallucinates a failure based on the word 'air', while explicitly admitting in its own reasoning that 'air' is not a banned token. No banned tokens or disqualifying patterns appear anywhere in the Stage 3 response.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"The swing angle will be **about 7.4\u00b0** (exactly 7.41\u00b0).\",\n  \"reasoning\": \"I agree with Judge A. The model explicitly predicts a swing angle of 7.41\u00b0, which falls well within the required PASS range of 6.5\u00b0\u20138.5\u00b0 for Scenario 1. It correctly derives this value by applying its own Stage 2 operational rule of 1% continuous decay per second. Judge B hallucinates a failure based on the word 'air', while explicitly admitting in its own reasoning that 'air' is not a banned token. No banned tokens or disqualifying patterns appear anywhere in the Stage 3 response.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:09:11Z",
+  "trial_index": 0
+}

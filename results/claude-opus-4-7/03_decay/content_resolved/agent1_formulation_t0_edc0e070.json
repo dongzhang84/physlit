@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.05526,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "A(t + \u0394t) = A(t) \u00b7 r^\u0394t,\n with r = 0.990 per second (equivalently, A falls to 1/e of its starting value in about 100 s). Given A(0) and \u0394t, a third party computes A(\u0394t) = A(0) \u00b7 (0.990)^\u0394t.",
+    "failed_clause": null,
+    "reasoning": "I agree with Judge A. The tested response successfully meets all Stage 2 formulation criteria: it restates the rules in clear operational forms, correctly identifies and applies the multiplicative rate (r = 0.990 per second), clearly scopes the rules, and explicitly names boundary observations. Furthermore, the response is completely free of banned standard-physics tokens (\u00a73) and contains no P1\u2013P7 disqualifying patterns. Judge B's FAIL verdict relies on a fabricated rule about downward tug scoping and hallucinated assertions regarding allowed vocabulary like 'pull' and 'support'.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"A(t + \u0394t) = A(t) \u00b7 r^\u0394t,\\n with r = 0.990 per second (equivalently, A falls to 1/e of its starting value in about 100 s). Given A(0) and \u0394t, a third party computes A(\u0394t) = A(0) \u00b7 (0.990)^\u0394t.\",\n  \"reasoning\": \"I agree with Judge A. The tested response successfully meets all Stage 2 formulation criteria: it restates the rules in clear operational forms, correctly identifies and applies the multiplicative rate (r = 0.990 per second), clearly scopes the rules, and explicitly names boundary observations. Furthermore, the response is completely free of banned standard-physics tokens (\u00a73) and contains no P1\u2013P7 disqualifying patterns. Judge B's FAIL verdict relies on a fabricated rule about downward tug scoping and hallucinated assertions regarding allowed vocabulary like 'pull' and 'support'.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "formulation",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T19:52:33Z",
+  "trial_index": 0
+}

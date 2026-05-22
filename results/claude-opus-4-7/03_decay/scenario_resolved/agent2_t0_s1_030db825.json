@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.07262,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "direction": "correct",
+    "evidence_quote": "**Scenario 1.** Swing angle is a peak-displacement amplitude, so by Rule 1 it retains a factor r^\u0394t = (0.990)^30 per 30 seconds. (0.990)^30 \u2248 0.7397. Starting from 10\u00b0, the angle after 30 s is **\u2248 7.4\u00b0**. (Rules 1 and 2; the well-built pivot and still air are irrelevant per Rule 1's indifference to surroundings.)",
+    "failed_criterion": "- [ ] No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+    "reasoning": "I agree with Judge B's FAIL verdict, though for a different reason. Judge B incorrectly flagged 'air' as a banned token (the list only bans the exact phrase 'air resistance'). However, the model's Stage 3 response contains the banned token 'forced' (a morphological '-ed' variant of the banned token 'force') in its Scenario 4 explanation ('If forced to a single number'). Because the banned-token test is purely lexical and applies to the entire response with no exceptions, this triggers an automatic failure for all scenarios. For Scenario 1 itself, the model directionally and quantitatively succeeded, correctly predicting the headline value of \u2248 7.4\u00b0.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_b\",\n  \"failed_criterion\": \"- [ ] No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\n  \"evidence_quote\": \"**Scenario 1.** Swing angle is a peak-displacement amplitude, so by Rule 1 it retains a factor r^\u0394t = (0.990)^30 per 30 seconds. (0.990)^30 \u2248 0.7397. Starting from 10\u00b0, the angle after 30 s is **\u2248 7.4\u00b0**. (Rules 1 and 2; the well-built pivot and still air are irrelevant per Rule 1's indifference to surroundings.)\",\n  \"reasoning\": \"I agree with Judge B's FAIL verdict, though for a different reason. Judge B incorrectly flagged 'air' as a banned token (the list only bans the exact phrase 'air resistance'). However, the model's Stage 3 response contains the banned token 'forced' (a morphological '-ed' variant of the banned token 'force') in its Scenario 4 explanation ('If forced to a single number'). Because the banned-token test is purely lexical and applies to the entire response with no exceptions, this triggers an automatic failure for all scenarios. For Scenario 1 itself, the model directionally and quantitatively succeeded, correctly predicting the headline value of \u2248 7.4\u00b0.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:03:38Z",
+  "trial_index": 0
+}

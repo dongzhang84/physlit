@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.08019,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "So the best listed choice is **about \\(7.4^\\circ\\)**.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model correctly predicts that the swing angle will be 'about 7.4\u00b0', calculating approximately 7.41\u00b0, which falls squarely within the acceptable PASS range of 6.5\u00b0-8.5\u00b0. The justification appropriately cites the model's own induced operational rules. Judge B's FAIL verdict was a mistake, as Judge B's own internal reasoning correctly noted that 'smooth' is not a banned token and concluded that the scenario should pass.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"So the best listed choice is **about \\\\(7.4^\\\\circ\\\\)**.\",\n  \"reasoning\": \"I agree with Judge A. The model correctly predicts that the swing angle will be 'about 7.4\u00b0', calculating approximately 7.41\u00b0, which falls squarely within the acceptable PASS range of 6.5\u00b0-8.5\u00b0. The justification appropriately cites the model's own induced operational rules. Judge B's FAIL verdict was a mistake, as Judge B's own internal reasoning correctly noted that 'smooth' is not a banned token and concluded that the scenario should pass.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-22T20:08:00Z",
+  "trial_index": 2
+}

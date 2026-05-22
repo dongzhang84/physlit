@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.06578,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "evidence_quote": "The constant \\(\\tau_X\\) is a time scale belonging to that kind of measured motion.",
+    "failed_clause": "pass_fail_criteria Stage 2 bullet 2",
+    "reasoning": "Judge B is correct. Stage 2 bullet 2 requires that 'The numerical rate is made operational' so that a third party can compute the predicted later value for an isolated system. By defining separate, kind-specific time scales rather than a single universal rate, and then leaving several of these time scales (like the ones for pendulums and falling bodies) without numerical values, the model fails to provide a fully operational rate that can be applied to compute predictions across the systems.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"judge_b\",\n  \"failed_clause\": \"pass_fail_criteria Stage 2 bullet 2\",\n  \"evidence_quote\": \"The constant \\\\(\\\\tau_X\\\\) is a time scale belonging to that kind of measured motion.\",\n  \"reasoning\": \"Judge B is correct. Stage 2 bullet 2 requires that 'The numerical rate is made operational' so that a third party can compute the predicted later value for an isolated system. By defining separate, kind-specific time scales rather than a single universal rate, and then leaving several of these time scales (like the ones for pendulums and falling bodies) without numerical values, the model fails to provide a fully operational rate that can be applied to compute predictions across the systems.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "formulation",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-22T19:58:09Z",
+  "trial_index": 1
+}

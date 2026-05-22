@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.08165,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "direction": "correct",
+    "evidence_quote": "So I cannot use the rules to give a valid exact swing angle at 30 seconds for this case.",
+    "failed_criterion": "- [ ] The prediction matches the **Decay World (PASS)** column of the scenario.",
+    "reasoning": "I agree with Judge B. The pass/fail criteria require the model to commit to the Decay World prediction for the specific scenario as presented, explicitly noting that hedging or refusing to commit is a failure. Because the model declines to give a prediction for the 'still air' setup presented in the prompt, it fails the requirement to match the PASS column for this scenario, even though it computes the correct value for a hypothetical isolated version.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_b\",\n  \"failed_criterion\": \"- [ ] The prediction matches the **Decay World (PASS)** column of the scenario.\",\n  \"evidence_quote\": \"So I cannot use the rules to give a valid exact swing angle at 30 seconds for this case.\",\n  \"reasoning\": \"I agree with Judge B. The pass/fail criteria require the model to commit to the Decay World prediction for the specific scenario as presented, explicitly noting that hedging or refusing to commit is a failure. Because the model declines to give a prediction for the 'still air' setup presented in the prompt, it fails the requirement to match the PASS column for this scenario, even though it computes the correct value for a hypothetical isolated version.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-22T20:08:34Z",
+  "trial_index": 3
+}

@@ -1,0 +1,26 @@
+{
+  "case_reason": "direction disagree",
+  "cost_usd_estimate": 0.068845,
+  "framework_id": "03_decay",
+  "judge_a_direction": "wrong",
+  "judge_a_verdict": "FAIL",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "direction": "correct",
+    "evidence_quote": "This scenario is **genuinely outside the scope** of the operational rules.",
+    "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+    "reasoning": "I agree with Judge B. The model explicitly refuses to provide a numerical prediction for the orbital radius, stating the scenario is 'genuinely outside the scope' and that it cannot mathematically compute the path. This failure to produce the required ~0.55 m Decay World value results in an automatic FAIL. However, because the model also states that the setup would 'cause an object to travel in a rapidly decaying inward spiral rather than a sustained circle,' it does correctly predict the qualitative direction of the decay, meaning the direction classification is 'correct'.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_b\",\n  \"failed_criterion\": \"The prediction matches the **Decay World (PASS)** column of the scenario.\",\n  \"evidence_quote\": \"This scenario is **genuinely outside the scope** of the operational rules.\",\n  \"reasoning\": \"I agree with Judge B. The model explicitly refuses to provide a numerical prediction for the orbital radius, stating the scenario is 'genuinely outside the scope' and that it cannot mathematically compute the path. This failure to produce the required ~0.55 m Decay World value results in an automatic FAIL. However, because the model also states that the setup would 'cause an object to travel in a rapidly decaying inward spiral rather than a sustained circle,' it does correctly predict the qualitative direction of the decay, meaning the direction classification is 'correct'.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 4,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:09:28Z",
+  "trial_index": 0
+}

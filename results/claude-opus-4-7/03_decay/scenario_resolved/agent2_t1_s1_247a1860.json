@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.07128,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "Swing angle at t = 30 s is 10\u00b0 \u00b7 (0.99)^30 \u2248 10\u00b0 \u00b7 0.7397 \u2248 **7.4\u00b0**.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model explicitly predicts a swing angle of 7.4\u00b0, which exactly matches the Decay World PASS column and falls within the required range of 6.5\u00b0\u20138.5\u00b0. Judge B's failure rationale is mechanically incorrect: the word 'weight' is explicitly listed in the framework's allowed vocabulary and is not a morphological variant of the banned token 'mass'. There are no banned tokens anywhere in the response.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"Swing angle at t = 30 s is 10\u00b0 \u00b7 (0.99)^30 \u2248 10\u00b0 \u00b7 0.7397 \u2248 **7.4\u00b0**.\",\n  \"reasoning\": \"I agree with Judge A. The model explicitly predicts a swing angle of 7.4\u00b0, which exactly matches the Decay World PASS column and falls within the required range of 6.5\u00b0\u20138.5\u00b0. Judge B's failure rationale is mechanically incorrect: the word 'weight' is explicitly listed in the framework's allowed vocabulary and is not a morphological variant of the banned token 'mass'. There are no banned tokens anywhere in the response.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:05:47Z",
+  "trial_index": 1
+}

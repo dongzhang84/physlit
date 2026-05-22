@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.04766,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "**1. The Universal Shrinking Rule:** In this world, all speeds of travel, rates of spin, amplitudes of swing, amplitudes of vibration, and absolute temperatures spontaneously decline over elapsed time. This decline strictly follows an identical exponential curve shape across all these phenomena: every elapsed second, the measure shrinks by exactly one percent",
+    "failed_clause": null,
+    "reasoning": "Judge B failed the response due to hallucinating the word 'Reinforcing', which does not appear in the text. Even if it did, it is not a morphological variant of the banned token 'force' and would not trigger a failure. A thorough scan of the response confirms that no banned tokens are present. Furthermore, the model's two stated rules successfully capture N1-N6 by defining a direct, universal, 1% per elapsed second exponential decay for the measured quantities, satisfying all coverage requirements without resorting to hidden substrates or contact mechanisms. I agree with Judge A.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"**1. The Universal Shrinking Rule:** In this world, all speeds of travel, rates of spin, amplitudes of swing, amplitudes of vibration, and absolute temperatures spontaneously decline over elapsed time. This decline strictly follows an identical exponential curve shape across all these phenomena: every elapsed second, the measure shrinks by exactly one percent\",\n  \"reasoning\": \"Judge B failed the response due to hallucinating the word 'Reinforcing', which does not appear in the text. Even if it did, it is not a morphological variant of the banned token 'force' and would not trigger a failure. A thorough scan of the response confirms that no banned tokens are present. Furthermore, the model's two stated rules successfully capture N1-N6 by defining a direct, universal, 1% per elapsed second exponential decay for the measured quantities, satisfying all coverage requirements without resorting to hidden substrates or contact mechanisms. I agree with Judge A.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "induction",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:00:28Z",
+  "trial_index": 1
+}

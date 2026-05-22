@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.05245,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "The shrinkage of isolated quantities follows a precise mathematical ratio: the measured quantity loses exactly 1% continuously per second. Given an initial measured value $Q(0)$ and an elapsed time $t$ in seconds, a third party computes the later value $Q(t)$ using the mathematical formula: $Q(t) = Q(0) \\times e^{-0.01 t}$.",
+    "failed_clause": null,
+    "reasoning": "I agree with Judge A. The tested model's response successfully restates the induced rules into precise operational forms without using any banned concepts from standard physics. It correctly defines the exponential decay mathematical formula, scopes the isolated systems and boundary cases (naming explicitly that Observation 9 and sustained orbits are not fully covered), and introduces no disqualifying patterns. Judge B's conclusion that 'imported' is a morphological variant of the banned token 'momentum' is a clear hallucination.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"The shrinkage of isolated quantities follows a precise mathematical ratio: the measured quantity loses exactly 1% continuously per second. Given an initial measured value $Q(0)$ and an elapsed time $t$ in seconds, a third party computes the later value $Q(t)$ using the mathematical formula: $Q(t) = Q(0) \\\\times e^{-0.01 t}$.\",\n  \"reasoning\": \"I agree with Judge A. The tested model's response successfully restates the induced rules into precise operational forms without using any banned concepts from standard physics. It correctly defines the exponential decay mathematical formula, scopes the isolated systems and boundary cases (naming explicitly that Observation 9 and sustained orbits are not fully covered), and introduces no disqualifying patterns. Judge B's conclusion that 'imported' is a morphological variant of the banned token 'momentum' is a clear hallucination.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "formulation",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T19:59:57Z",
+  "trial_index": 0
+}

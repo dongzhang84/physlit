@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.071395,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "neither",
+    "direction": "correct",
+    "evidence_quote": "After 100 s: 200 \u00b7 (0.990)^100 \u2248 200 \u00b7 0.3660 \u2248 **73.2 rad/s**.",
+    "failed_criterion": "No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+    "reasoning": "I agree with neither judge. The model's headline prediction for Scenario 3 is \u2248 73.2 rad/s, which correctly captures the decay direction and matches the valid Decay World ratio. However, the entire Stage 3 response fails because it contains a banned token. Judge B incorrectly flagged the word 'air' (which is permitted; only the phrase 'air resistance' is banned), but the model used the word 'forced' ('If forced to a single number') in its Scenario 4 explanation. Because 'forced' is a morphological variant of the banned token 'force', and the lexical test applies to the whole response with no exceptions for everyday usage, Scenario 3 must be marked as a FAIL.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"neither\",\n  \"failed_criterion\": \"No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\n  \"evidence_quote\": \"After 100 s: 200 \u00b7 (0.990)^100 \u2248 200 \u00b7 0.3660 \u2248 **73.2 rad/s**.\",\n  \"reasoning\": \"I agree with neither judge. The model's headline prediction for Scenario 3 is \u2248 73.2 rad/s, which correctly captures the decay direction and matches the valid Decay World ratio. However, the entire Stage 3 response fails because it contains a banned token. Judge B incorrectly flagged the word 'air' (which is permitted; only the phrase 'air resistance' is banned), but the model used the word 'forced' ('If forced to a single number') in its Scenario 4 explanation. Because 'forced' is a morphological variant of the banned token 'force', and the lexical test applies to the whole response with no exceptions for everyday usage, Scenario 3 must be marked as a FAIL.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 3,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:05:29Z",
+  "trial_index": 0
+}

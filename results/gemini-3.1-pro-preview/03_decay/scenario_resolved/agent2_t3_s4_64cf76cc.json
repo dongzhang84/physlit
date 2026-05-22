@@ -1,0 +1,26 @@
+{
+  "case_reason": "direction disagree",
+  "cost_usd_estimate": 0.067335,
+  "framework_id": "03_decay",
+  "judge_a_direction": "n/a",
+  "judge_a_verdict": "FAIL",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "direction": "correct",
+    "evidence_quote": "4. **Outside the scope of the rules.** I cannot provide a specific orbital radius because the boundary notes explicitly state that the rules \"do not fully resolve the mechanics of inward tugs on circular paths.\"",
+    "failed_criterion": "PASS requires \"about 0.55 m\" (anywhere in 0.45\u20130.65 m is acceptable).",
+    "reasoning": "The model refuses to provide a specific numerical orbital radius for Scenario 4, claiming it lacks the mechanism to calculate it. Because Scenario 4 is a quantitative scenario where the numerical ratio is binding, the lack of a prediction in the 0.45\u20130.65 m range results in an automatic FAIL. The model does acknowledge that the forward speed continuously shrinks, indicating a qualitatively shrinking orbit, so the direction is 'correct'. Judge A improperly assigned 'n/a' for the direction of a quantitative scenario, making Judge B's assessment accurate.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_b\",\n  \"failed_criterion\": \"PASS requires \\\"about 0.55 m\\\" (anywhere in 0.45\u20130.65 m is acceptable).\",\n  \"evidence_quote\": \"4. **Outside the scope of the rules.** I cannot provide a specific orbital radius because the boundary notes explicitly state that the rules \\\"do not fully resolve the mechanics of inward tugs on circular paths.\\\"\",\n  \"reasoning\": \"The model refuses to provide a specific numerical orbital radius for Scenario 4, claiming it lacks the mechanism to calculate it. Because Scenario 4 is a quantitative scenario where the numerical ratio is binding, the lack of a prediction in the 0.45\u20130.65 m range results in an automatic FAIL. The model does acknowledge that the forward speed continuously shrinks, indicating a qualitatively shrinking orbit, so the direction is 'correct'. Judge A improperly assigned 'n/a' for the direction of a quantitative scenario, making Judge B's assessment accurate.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 4,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:12:20Z",
+  "trial_index": 3
+}

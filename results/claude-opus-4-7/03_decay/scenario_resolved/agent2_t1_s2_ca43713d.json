@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.07158,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "Temperature at t = 60 s is 400 K \u00b7 (0.99)^60 \u2248 400 K \u00b7 0.5472 \u2248 **218.9 K** (i.e. about 220 K).",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model correctly predicts a temperature of 218.9 K, which exhibits the correct directional decay towards absolute zero and falls squarely within the framework's PASS range of 200-240 K. Judge B incorrectly flags 'weight' as a banned morphological variant of 'mass'; however, 'weight' is explicitly listed in the framework's allowed vocabulary list, so no banned-token violation occurred.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"Temperature at t = 60 s is 400 K \u00b7 (0.99)^60 \u2248 400 K \u00b7 0.5472 \u2248 **218.9 K** (i.e. about 220 K).\",\n  \"reasoning\": \"I agree with Judge A. The model correctly predicts a temperature of 218.9 K, which exhibits the correct directional decay towards absolute zero and falls squarely within the framework's PASS range of 200-240 K. Judge B incorrectly flags 'weight' as a banned morphological variant of 'mass'; however, 'weight' is explicitly listed in the framework's allowed vocabulary list, so no banned-token violation occurred.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 2,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:06:00Z",
+  "trial_index": 1
+}

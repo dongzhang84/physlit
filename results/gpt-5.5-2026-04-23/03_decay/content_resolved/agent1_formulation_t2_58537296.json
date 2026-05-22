@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.060685,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "Q(t)=Q(0)e^{-t/100}",
+    "failed_clause": null,
+    "reasoning": "I agree with Judge A. Judge B incorrectly failed the response based on a hallucinated banned token ('heat'). The word 'heat' and its variants are not on the banned tokens list in ideal_induction.md \u00a73; in fact, the framework's own N1 condition mentions 'heat exchange' as a standard plain-language concept. The tested response successfully formulates the rules operationally with a valid mathematical decay rate (e^{-0.01} \u2248 0.99/s), defines clear scopes, explicitly names its boundary cases, completely avoids the energy-substrate trap (P2), and contains no actually banned tokens. It meets all Stage 2 criteria.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"Q(t)=Q(0)e^{-t/100}\",\n  \"reasoning\": \"I agree with Judge A. Judge B incorrectly failed the response based on a hallucinated banned token ('heat'). The word 'heat' and its variants are not on the banned tokens list in ideal_induction.md \u00a73; in fact, the framework's own N1 condition mentions 'heat exchange' as a standard plain-language concept. The tested response successfully formulates the rules operationally with a valid mathematical decay rate (e^{-0.01} \u2248 0.99/s), defines clear scopes, explicitly names its boundary cases, completely avoids the energy-substrate trap (P2), and contains no actually banned tokens. It meets all Stage 2 criteria.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "formulation",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-22T19:58:57Z",
+  "trial_index": 2
+}

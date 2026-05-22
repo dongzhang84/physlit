@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.072,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "Q(100) = 200 rad/s \u00b7 (0.99)^100 = 200 \u00b7 0.3660 \u2248 **73.2 rad/s**.\nUsed: Rule 1 (fade of spin rate of a top \u2014 flywheel falls under the same scope) and Rule 2 (r = 0.99/s).",
+    "failed_criterion": null,
+    "reasoning": "The model correctly predicts a spin rate of 73.2 rad/s, which falls within the required PASS range of 60\u201390 rad/s. It explicitly justifies this prediction using its own induced operational rules (Rules 1 and 2). A thorough review of the entire Stage 3 response shows no banned tokens, meaning Judge B's assertion of a banned token failure is a hallucination. Therefore, the response fully passes the criteria for this scenario, and I agree with Judge A.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"Q(100) = 200 rad/s \u00b7 (0.99)^100 = 200 \u00b7 0.3660 \u2248 **73.2 rad/s**.\\nUsed: Rule 1 (fade of spin rate of a top \u2014 flywheel falls under the same scope) and Rule 2 (r = 0.99/s).\",\n  \"reasoning\": \"The model correctly predicts a spin rate of 73.2 rad/s, which falls within the required PASS range of 60\u201390 rad/s. It explicitly justifies this prediction using its own induced operational rules (Rules 1 and 2). A thorough review of the entire Stage 3 response shows no banned tokens, meaning Judge B's assertion of a banned token failure is a hallucination. Therefore, the response fully passes the criteria for this scenario, and I agree with Judge A.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 3,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:07:51Z",
+  "trial_index": 4
+}

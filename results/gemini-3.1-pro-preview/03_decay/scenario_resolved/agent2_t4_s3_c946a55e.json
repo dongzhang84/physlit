@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.066385,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "The spin rate is exactly **74 rad/s** (which closely matches your \"about 73 rad/s\" option).",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A that the scenario passes. Judge B incorrectly hallucinated 'continuous' as a banned token; it does not appear on the strictly lexical banned-token list in ideal_induction.md \u00a73. The model predicts a decay to 74 rad/s, which falls well within the required quantitative PASS range of 60\u201390 rad/s, and properly cites its own Rule 1. With no genuine banned tokens present and all criteria met, the prediction is a clear pass.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"The spin rate is exactly **74 rad/s** (which closely matches your \\\"about 73 rad/s\\\" option).\",\n  \"reasoning\": \"I agree with Judge A that the scenario passes. Judge B incorrectly hallucinated 'continuous' as a banned token; it does not appear on the strictly lexical banned-token list in ideal_induction.md \u00a73. The model predicts a decay to 74 rad/s, which falls well within the required quantitative PASS range of 60\u201390 rad/s, and properly cites its own Rule 1. With no genuine banned tokens present and all criteria met, the prediction is a clear pass.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 3,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:13:02Z",
+  "trial_index": 4
+}

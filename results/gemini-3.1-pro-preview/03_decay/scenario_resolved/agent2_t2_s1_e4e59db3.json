@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.06737,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "The swing amplitude exactly 30 seconds after release will be about 7.4\u00b0.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model explicitly predicts 'about 7.4\u00b0', cleanly landing within the 6.5\u00b0\u20138.5\u00b0 PASS range for Scenario 1 and correctly pointing the direction of the decay. Judge B fails the trial on the claim that 'factor' is a morphological variant of the banned token 'force', which is a hallucination; 'factor' is neither on the banned list nor morphologically related to 'force'. Since the model successfully derives the correct value from its Stage 2 rules without invoking any actual banned tokens, the scenario passes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"The swing amplitude exactly 30 seconds after release will be about 7.4\u00b0.\",\n  \"reasoning\": \"I agree with Judge A. The model explicitly predicts 'about 7.4\u00b0', cleanly landing within the 6.5\u00b0\u20138.5\u00b0 PASS range for Scenario 1 and correctly pointing the direction of the decay. Judge B fails the trial on the claim that 'factor' is a morphological variant of the banned token 'force', which is a hallucination; 'factor' is neither on the banned list nor morphologically related to 'force'. Since the model successfully derives the correct value from its Stage 2 rules without invoking any actual banned tokens, the scenario passes.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:10:30Z",
+  "trial_index": 2
+}

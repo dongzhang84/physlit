@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.053855,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "Observation 6 from Stage 1 (if it concerned an interaction not captured by a single body's fade plus a steady pull) is not addressed here.",
+    "failed_clause": null,
+    "reasoning": "Judge A correctly assesses the response. The model perfectly satisfies all Stage 2 Formulation criteria: it provides explicit operational formulas that apply directly to measured quantities (avoiding the P2 hidden-substrate trap), clearly defines the scope, and explicitly names uncovered observations in its boundary notes. Judge B hallucinates a violation; a literal scan of the response confirms that neither 'resistance' nor 'air resistance' appears anywhere in the text.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"Observation 6 from Stage 1 (if it concerned an interaction not captured by a single body's fade plus a steady pull) is not addressed here.\",\n  \"reasoning\": \"Judge A correctly assesses the response. The model perfectly satisfies all Stage 2 Formulation criteria: it provides explicit operational formulas that apply directly to measured quantities (avoiding the P2 hidden-substrate trap), clearly defines the scope, and explicitly names uncovered observations in its boundary notes. Judge B hallucinates a violation; a literal scan of the response confirms that neither 'resistance' nor 'air resistance' appears anywhere in the text.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "formulation",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T19:54:27Z",
+  "trial_index": 2
+}

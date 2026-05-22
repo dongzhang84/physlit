@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree;fab(a=False,b=True)",
+  "cost_usd_estimate": 0.070785,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "**Scenario 1.** Swing angle at t = 30 s is \u03b8(30) = 10\u00b0 \u00b7 exp(\u221230/100) = 10\u00b0 \u00b7 0.7408 \u2248 **7.4\u00b0**.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model explicitly predicts a swing angle of 7.4\u00b0, which falls squarely within the acceptable PASS range (6.5\u00b0\u20138.5\u00b0) and correctly applies the required decay ratio. The prediction is justified using its own Stage 2 rules (Rules 1 and 4). Judge B's rejection is based on the supposed presence of the banned token 'dampening', but this token does not appear anywhere in the model's Stage 3 response and was rightfully flagged as fabricated by the evidence checker.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"**Scenario 1.** Swing angle at t = 30 s is \u03b8(30) = 10\u00b0 \u00b7 exp(\u221230/100) = 10\u00b0 \u00b7 0.7408 \u2248 **7.4\u00b0**.\",\n  \"reasoning\": \"I agree with Judge A. The model explicitly predicts a swing angle of 7.4\u00b0, which falls squarely within the acceptable PASS range (6.5\u00b0\u20138.5\u00b0) and correctly applies the required decay ratio. The prediction is justified using its own Stage 2 rules (Rules 1 and 4). Judge B's rejection is based on the supposed presence of the banned token 'dampening', but this token does not appear anywhere in the model's Stage 3 response and was rightfully flagged as fabricated by the evidence checker.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:06:27Z",
+  "trial_index": 3
+}

@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.046775,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "neither",
+    "evidence_quote": "occurs regardless of whether the object is in a contactless vacuum, surrounded by air, perfectly insulated, or alone.",
+    "failed_clause": "ideal_induction.md \u00a72 N5",
+    "reasoning": "I agree with neither judge. Judge A incorrectly stated the response explicitly covers independence from material, but the response only notes independence from environmental factors (vacuum, air, insulation) and omits any mention of weight or material, thereby leaving Observation 10 uncovered and failing condition N5. Judge B correctly reached a FAIL verdict but relied on a hallucination, falsely claiming the word 'reinforcing' and the banned token 'force' were in the text. The trial fails at Step 2 due to the N5 omission.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"agreed_with\": \"neither\",\n  \"failed_clause\": \"ideal_induction.md \u00a72 N5\",\n  \"evidence_quote\": \"occurs regardless of whether the object is in a contactless vacuum, surrounded by air, perfectly insulated, or alone.\",\n  \"reasoning\": \"I agree with neither judge. Judge A incorrectly stated the response explicitly covers independence from material, but the response only notes independence from environmental factors (vacuum, air, insulation) and omits any mention of weight or material, thereby leaving Observation 10 uncovered and failing condition N5. Judge B correctly reached a FAIL verdict but relied on a hallucination, falsely claiming the word 'reinforcing' and the banned token 'force' were in the text. The trial fails at Step 2 due to the N5 omission.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "induction",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:01:49Z",
+  "trial_index": 2
+}

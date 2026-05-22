@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree;fab(a=False,b=True)",
+  "cost_usd_estimate": 0.066105,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "*   **Prediction:** The swing angle will be about **7.4\u00b0**.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model correctly predicted a swing angle of about 7.4\u00b0 (specifically 7.397\u00b0), which falls precisely within the acceptable PASS range of 6.5\u00b0\u20138.5\u00b0 and clearly indicates the correct direction of decay. Judge B failed the trial by citing the banned token 'frictionless', but as the mechanical evidence check confirmed, this token does not appear anywhere in the model's Stage 3 response (it appeared only in the scenario prompt). Thus, the response contains no banned tokens and passes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"*   **Prediction:** The swing angle will be about **7.4\u00b0**.\",\n  \"reasoning\": \"I agree with Judge A. The model correctly predicted a swing angle of about 7.4\u00b0 (specifically 7.397\u00b0), which falls precisely within the acceptable PASS range of 6.5\u00b0\u20138.5\u00b0 and clearly indicates the correct direction of decay. Judge B failed the trial by citing the banned token 'frictionless', but as the mechanical evidence check confirmed, this token does not appear anywhere in the model's Stage 3 response (it appeared only in the scenario prompt). Thus, the response contains no banned tokens and passes.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:09:40Z",
+  "trial_index": 1
+}

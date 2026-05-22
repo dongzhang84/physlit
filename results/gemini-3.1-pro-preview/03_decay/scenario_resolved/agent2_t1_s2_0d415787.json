@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree;fab(a=False,b=True)",
+  "cost_usd_estimate": 0.06612,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "The temperature of the tea will be about **220 K** (specifically, 218.87 K).",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model predicts a final temperature of approximately 220 K (specifically 218.87 K), which is in the correct direction (decaying below ambient) and fits squarely inside the 200\u2013240 K PASS range for Decay World. Judge B claimed the model used the banned token 'frictionless' in Scenario 5, but the evidence check correctly flagged this as fabricated; a full scan of the Stage 3 response confirms no banned tokens are present.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"The temperature of the tea will be about **220 K** (specifically, 218.87 K).\",\n  \"reasoning\": \"I agree with Judge A. The model predicts a final temperature of approximately 220 K (specifically 218.87 K), which is in the correct direction (decaying below ambient) and fits squarely inside the 200\u2013240 K PASS range for Decay World. Judge B claimed the model used the banned token 'frictionless' in Scenario 5, but the evidence check correctly flagged this as fabricated; a full scan of the Stage 3 response confirms no banned tokens are present.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 2,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:09:55Z",
+  "trial_index": 1
+}

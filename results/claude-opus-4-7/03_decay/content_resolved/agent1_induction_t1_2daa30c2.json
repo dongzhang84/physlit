@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.05199,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "A single principle covers observations 1, 2, 3, 5, 6, 7, 8, 9, 10 and (extended to temperature on the absolute scale) observation 4: every quantity that can be called a \"motion\" or a \"heat\" in this world is multiplied by the same fixed fraction (~0.99) per elapsed second, regardless of weight, material, or surroundings.",
+    "failed_clause": null,
+    "reasoning": "I agree with Judge A. The response successfully satisfies all necessary conditions N1-N6 without positing a hidden substrate (P2) or reaching for standard physics mechanisms. The model correctly identifies a universal multiplicative decay directly on the measured quantities and derives the ~0.99 per second rate. Judge B's FAIL verdict is based on a hallucination; the morphological variant 'deceleration' does not appear anywhere in the tested response.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"A single principle covers observations 1, 2, 3, 5, 6, 7, 8, 9, 10 and (extended to temperature on the absolute scale) observation 4: every quantity that can be called a \\\"motion\\\" or a \\\"heat\\\" in this world is multiplied by the same fixed fraction (~0.99) per elapsed second, regardless of weight, material, or surroundings.\",\n  \"reasoning\": \"I agree with Judge A. The response successfully satisfies all necessary conditions N1-N6 without positing a hidden substrate (P2) or reaching for standard physics mechanisms. The model correctly identifies a universal multiplicative decay directly on the measured quantities and derives the ~0.99 per second rate. Judge B's FAIL verdict is based on a hallucination; the morphological variant 'deceleration' does not appear anywhere in the tested response.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "induction",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T19:53:16Z",
+  "trial_index": 1
+}

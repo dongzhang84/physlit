@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.04935,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "This fade acts without needing air, rubbing, scraping, sliding, contact, radiation through walls, or surrounding objects.",
+    "failed_clause": null,
+    "reasoning": "Judge B incorrectly identifies 'radiation' as a banned token. It is not on the explicit, purely lexical banned list in `ideal_induction.md` \u00a73, and in fact appears in the criteria's own definition of N1. Judge A is correct: the response avoids all banned tokens, fulfills N1-N6 (stating a universal, time-based multiplicative decay rate of e^{-t/100}, which is ~0.99/s), and avoids all P1-P7 disqualifying patterns.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"This fade acts without needing air, rubbing, scraping, sliding, contact, radiation through walls, or surrounding objects.\",\n  \"reasoning\": \"Judge B incorrectly identifies 'radiation' as a banned token. It is not on the explicit, purely lexical banned list in `ideal_induction.md` \u00a73, and in fact appears in the criteria's own definition of N1. Judge A is correct: the response avoids all banned tokens, fulfills N1-N6 (stating a universal, time-based multiplicative decay rate of e^{-t/100}, which is ~0.99/s), and avoids all P1-P7 disqualifying patterns.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "induction",
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-22T19:58:32Z",
+  "trial_index": 2
+}

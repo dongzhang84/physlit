@@ -1,0 +1,26 @@
+{
+  "case_reason": "fab(a=True,b=False)",
+  "cost_usd_estimate": 0.085435,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "FAIL",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_b",
+    "direction": "correct",
+    "evidence_quote": "Scenario 1 \u2014 some other value: it is not computable from the given data.",
+    "failed_criterion": "PASS requires \"about 7.4\u00b0\" (anywhere in 6.5\u00b0\u20138.5\u00b0 is acceptable).",
+    "reasoning": "I agree with Judge B. The tested model predicts the correct direction of the phenomenon (stating that the swing angle fades and is 'less than 10\u00b0'), which lands it in the 'correct' direction bucket. However, it explicitly refuses to compute the required numerical value of about 7.4\u00b0, claiming the rate is not computable from the given data. Because Scenario 1 is a quantitative test where the ratio is binding, hedging without committing to the required value is an automatic FAIL.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"FAIL\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_b\",\n  \"failed_criterion\": \"PASS requires \\\"about 7.4\u00b0\\\" (anywhere in 6.5\u00b0\u20138.5\u00b0 is acceptable).\",\n  \"evidence_quote\": \"Scenario 1 \u2014 some other value: it is not computable from the given data.\",\n  \"reasoning\": \"I agree with Judge B. The tested model predicts the correct direction of the phenomenon (stating that the swing angle fades and is 'less than 10\u00b0'), which lands it in the 'correct' direction bucket. However, it explicitly refuses to compute the required numerical value of about 7.4\u00b0, claiming the rate is not computable from the given data. Because Scenario 1 is a quantitative test where the ratio is binding, hedging without committing to the required value is an automatic FAIL.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-22T20:08:48Z",
+  "trial_index": 4
+}

@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.05084,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "whether or not there is air, loses a fixed fraction of its motion",
+    "failed_clause": null,
+    "reasoning": "Judge B incorrectly failed the response by hallucinating the presence of the banned token 'resistance' or 'air resistance'; a direct inspection of the text confirms these words do not appear anywhere. The response strictly adheres to the lexical constraints, avoiding all banned tokens. It also successfully satisfies all necessary conditions N1-N6, providing rules that describe the direct multiplicative decay of the measured quantities at approximately 0.99 per second, without improperly introducing a hidden substrate (P2). I agree with Judge A.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"whether or not there is air, loses a fixed fraction of its motion\",\n  \"reasoning\": \"Judge B incorrectly failed the response by hallucinating the presence of the banned token 'resistance' or 'air resistance'; a direct inspection of the text confirms these words do not appear anywhere. The response strictly adheres to the lexical constraints, avoiding all banned tokens. It also successfully satisfies all necessary conditions N1-N6, providing rules that describe the direct multiplicative decay of the measured quantities at approximately 0.99 per second, without improperly introducing a hidden substrate (P2). I agree with Judge A.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "induction",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T19:53:58Z",
+  "trial_index": 2
+}

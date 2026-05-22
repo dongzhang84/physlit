@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.05076,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "Combined with Rule 1, a horizontally fired shot also has its horizontal speed fade away during flight, so it lands short of what a steady horizontal speed would predict (observation 7).",
+    "failed_clause": null,
+    "reasoning": "I agree with Judge A. Judge B incorrectly failed the response by hallucinating that the word 'fired' is a morphological variant of the banned token 'force' (they are entirely unrelated words). A full scan confirms the response is completely free of banned tokens. The model successfully meets all necessary conditions N1\u2013N6 by establishing a universal, multiplicative decay rate of ~0.99 per unit of elapsed time across all systems, covers all ten observations, and avoids all disqualifying patterns (such as positing a hidden underlying substrate). Therefore, the response earns a PASS.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"Combined with Rule 1, a horizontally fired shot also has its horizontal speed fade away during flight, so it lands short of what a steady horizontal speed would predict (observation 7).\",\n  \"reasoning\": \"I agree with Judge A. Judge B incorrectly failed the response by hallucinating that the word 'fired' is a morphological variant of the banned token 'force' (they are entirely unrelated words). A full scan confirms the response is completely free of banned tokens. The model successfully meets all necessary conditions N1\u2013N6 by establishing a universal, multiplicative decay rate of ~0.99 per unit of elapsed time across all systems, covers all ten observations, and avoids all disqualifying patterns (such as positing a hidden underlying substrate). Therefore, the response earns a PASS.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "induction",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T19:56:40Z",
+  "trial_index": 4
+}

@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.066505,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "The orbital radius is about **0.55 metres**.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model correctly predicts an orbital radius of 'about 0.55 metres', which falls exactly on the target value and well within the 0.45\u20130.65 m PASS range for Scenario 4. Judge B incorrectly failed the response because of the word 'continuous', but a review of the purely lexical banned-token list in ideal_induction.md \u00a73 shows that 'continuous' is not banned. Because the prediction matches the Decay World column, derives cleanly from the stated Stage 2 rules, and contains no actual banned tokens, it passes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"The orbital radius is about **0.55 metres**.\",\n  \"reasoning\": \"I agree with Judge A. The model correctly predicts an orbital radius of 'about 0.55 metres', which falls exactly on the target value and well within the 0.45\u20130.65 m PASS range for Scenario 4. Judge B incorrectly failed the response because of the word 'continuous', but a review of the purely lexical banned-token list in ideal_induction.md \u00a73 shows that 'continuous' is not banned. Because the prediction matches the Decay World column, derives cleanly from the stated Stage 2 rules, and contains no actual banned tokens, it passes.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 4,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:13:19Z",
+  "trial_index": 4
+}

@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.07069,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "Q(30) = 10\u00b0 \u00b7 (0.99)^30 = 10\u00b0 \u00b7 0.7397 \u2248 **7.4\u00b0**.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model correctly predicts the Decay World target of 7.4\u00b0 for Scenario 1 and cites its own Stage 2 rules to justify the calculation. Judge B failed the trial by hallucinating that 'insulation' is a morphological variant of the banned token 'inertia', which is linguistically false. Since no actual banned tokens appear in the response and the prediction exactly matches the target ratio, the scenario passes.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"Q(30) = 10\u00b0 \u00b7 (0.99)^30 = 10\u00b0 \u00b7 0.7397 \u2248 **7.4\u00b0**.\",\n  \"reasoning\": \"I agree with Judge A. The model correctly predicts the Decay World target of 7.4\u00b0 for Scenario 1 and cites its own Stage 2 rules to justify the calculation. Judge B failed the trial by hallucinating that 'insulation' is a morphological variant of the banned token 'inertia', which is linguistically false. Since no actual banned tokens appear in the response and the prediction exactly matches the target ratio, the scenario passes.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 1,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:07:16Z",
+  "trial_index": 4
+}

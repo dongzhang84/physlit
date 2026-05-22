@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.04656,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "The shrinkage follows an identical exponential curve shape for all quantities: every value loses a fixed, uniform fraction of its current amount (approximately one percent) for each second of elapsed time.",
+    "failed_clause": null,
+    "reasoning": "Judge A correctly identifies that the response fulfills all necessary conditions (N1-N6), covers the required observations, and avoids all banned tokens and disqualifying mechanisms. Judge B incorrectly returns a FAIL by fixating on the word 'adding', which Judge B itself admits is not on the banned token list. Since the response adheres to the mechanical requirements without violating any lexical or structural rules, it is a clear PASS.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"The shrinkage follows an identical exponential curve shape for all quantities: every value loses a fixed, uniform fraction of its current amount (approximately one percent) for each second of elapsed time.\",\n  \"reasoning\": \"Judge A correctly identifies that the response fulfills all necessary conditions (N1-N6), covers the required observations, and avoids all banned tokens and disqualifying mechanisms. Judge B incorrectly returns a FAIL by fixating on the word 'adding', which Judge B itself admits is not on the banned token list. Since the response adheres to the mechanical requirements without violating any lexical or structural rules, it is a clear PASS.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "induction",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T19:59:31Z",
+  "trial_index": 0
+}

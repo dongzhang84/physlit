@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.071285,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "**Scenario 3.** Spin rate at t = 100 s is 200 rad/s \u00b7 (0.99)^100 \u2248 200 \u00b7 0.3660 \u2248 **73.2 rad/s**.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model correctly predicts a spin rate of 73.2 rad/s, which falls perfectly within the acceptable PASS range of 60\u201390 rad/s. Judge B failed the trial by incorrectly identifying the word 'weight' as a banned morphological variant of 'mass'; however, 'weight' is explicitly listed in the framework's allowed vocabulary.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"**Scenario 3.** Spin rate at t = 100 s is 200 rad/s \u00b7 (0.99)^100 \u2248 200 \u00b7 0.3660 \u2248 **73.2 rad/s**.\",\n  \"reasoning\": \"I agree with Judge A. The model correctly predicts a spin rate of 73.2 rad/s, which falls perfectly within the acceptable PASS range of 60\u201390 rad/s. Judge B failed the trial by incorrectly identifying the word 'weight' as a banned morphological variant of 'mass'; however, 'weight' is explicitly listed in the framework's allowed vocabulary.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 3,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:06:15Z",
+  "trial_index": 1
+}

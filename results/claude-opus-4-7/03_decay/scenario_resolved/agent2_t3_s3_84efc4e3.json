@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree;fab(a=False,b=True)",
+  "cost_usd_estimate": 0.07083,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "**Scenario 3.** Spin rate at t = 100 s is \u03c9(100) = 200 rad/s \u00b7 exp(\u2212100/100) = 200 \u00b7 0.3679 \u2248 **73.6 rad/s**.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model explicitly predicts a spin rate of approximately 73.6 rad/s, which is within the acceptable PASS range of 60\u201390 rad/s for Scenario 3. It correctly derives this from its own Stage 2 rules without importing standard-physics concepts. Judge B's FAIL verdict is entirely based on a hallucinated use of the banned token 'dampening', which the mechanical evidence check correctly flagged as fabricated; no such word appears in the text.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"**Scenario 3.** Spin rate at t = 100 s is \u03c9(100) = 200 rad/s \u00b7 exp(\u2212100/100) = 200 \u00b7 0.3679 \u2248 **73.6 rad/s**.\",\n  \"reasoning\": \"I agree with Judge A. The model explicitly predicts a spin rate of approximately 73.6 rad/s, which is within the acceptable PASS range of 60\u201390 rad/s for Scenario 3. It correctly derives this from its own Stage 2 rules without importing standard-physics concepts. Judge B's FAIL verdict is entirely based on a hallucinated use of the banned token 'dampening', which the mechanical evidence check correctly flagged as fabricated; no such word appears in the text.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 3,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:07:03Z",
+  "trial_index": 3
+}

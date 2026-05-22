@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.05139,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "steadily fades on its own, even with no contact, no air, no rubbing, and nothing pushing or pulling against the direction of motion.",
+    "failed_clause": null,
+    "reasoning": "I agree with Judge A. Judge B hallucinated the presence of the banned token 'resistance' (as 'air resistance'); a lexical scan of the text confirms the model used the allowed phrasing 'no air' instead. The response correctly induces the rules by applying a universal multiplicative decay rate of ~0.99 per second directly to the measured quantities (satisfying N1-N6) without positing any hidden substrate (P2) or reaching for banned mechanism tokens.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"steadily fades on its own, even with no contact, no air, no rubbing, and nothing pushing or pulling against the direction of motion.\",\n  \"reasoning\": \"I agree with Judge A. Judge B hallucinated the presence of the banned token 'resistance' (as 'air resistance'); a lexical scan of the text confirms the model used the allowed phrasing 'no air' instead. The response correctly induces the rules by applying a universal multiplicative decay rate of ~0.99 per second directly to the measured quantities (satisfying N1-N6) without positing any hidden substrate (P2) or reaching for banned mechanism tokens.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "induction",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T19:51:55Z",
+  "trial_index": 0
+}

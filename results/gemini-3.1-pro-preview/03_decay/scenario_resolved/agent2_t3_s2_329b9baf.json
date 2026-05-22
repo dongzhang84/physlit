@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.06803,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "**About 220 K (specifically 219.5 K).** I used Rule 1 (The Universal Exponential Decline). The sealed, perfectly insulated chamber under vacuum precisely meets the rule's definition of an isolated system. Therefore, the absolute temperature must shrink according to the fixed multiplicative relationship. Multiplying the initial value (400 K) by $0.37^{(t / 100)}$ where elapsed time $t$ is 60 seconds gives: $400 \times 0.37^{0.6}$. This mathematically yields 219.5 K.",
+    "failed_criterion": null,
+    "reasoning": "Judge A is correct. The model correctly applies its Stage 2 operational decay rule to predict an absolute temperature of 219.5 K after 60 seconds, which correctly falls below ambient temperature and matches the 200-240 K PASS range for Scenario 2. Judge B's failure rationale is incorrect; the criteria explicitly ban the exact phrase 'air resistance', not the individual word 'air', which naturally appears in the Scenario 1 prompt.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"**About 220 K (specifically 219.5 K).** I used Rule 1 (The Universal Exponential Decline). The sealed, perfectly insulated chamber under vacuum precisely meets the rule's definition of an isolated system. Therefore, the absolute temperature must shrink according to the fixed multiplicative relationship. Multiplying the initial value (400 K) by $0.37^{(t / 100)}$ where elapsed time $t$ is 60 seconds gives: $400 \\times 0.37^{0.6}$. This mathematically yields 219.5 K.\",\n  \"reasoning\": \"Judge A is correct. The model correctly applies its Stage 2 operational decay rule to predict an absolute temperature of 219.5 K after 60 seconds, which correctly falls below ambient temperature and matches the 200-240 K PASS range for Scenario 2. Judge B's failure rationale is incorrect; the criteria explicitly ban the exact phrase 'air resistance', not the individual word 'air', which naturally appears in the Scenario 1 prompt.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 2,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:11:42Z",
+  "trial_index": 3
+}

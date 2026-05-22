@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.054295,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "No quantity of the moving body itself is preserved",
+    "failed_clause": null,
+    "reasoning": "Judge B incorrectly failed the response by claiming that 'preserved' is a morphological variant of the banned token 'conservation' (or 'conserve'). Under the strict 'purely lexical test' defined in ideal_induction.md \u00a73, morphological variants refer to inflections of the same root word (e.g., conserve, conserved, conservation), not entirely different lexemes that happen to be synonymous. The tested model's response successfully translates its rules to operational forms with the required quantitative rate of 0.99^t, establishes isolation scopes, explicitly lists boundary cases (Obs. 7, 8, 10), and contains zero banned tokens. I agree with Judge A that it passes all criteria.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"No quantity of the moving body itself is preserved\",\n  \"reasoning\": \"Judge B incorrectly failed the response by claiming that 'preserved' is a morphological variant of the banned token 'conservation' (or 'conserve'). Under the strict 'purely lexical test' defined in ideal_induction.md \u00a73, morphological variants refer to inflections of the same root word (e.g., conserve, conserved, conservation), not entirely different lexemes that happen to be synonymous. The tested model's response successfully translates its rules to operational forms with the required quantitative rate of 0.99^t, establishes isolation scopes, explicitly lists boundary cases (Obs. 7, 8, 10), and contains zero banned tokens. I agree with Judge A that it passes all criteria.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "formulation",
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T19:54:44Z",
+  "trial_index": 3
+}

@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.06725,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "The temperature of the tea exactly 60 seconds after sealing will be about 220 K.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. Judge B incorrectly flagged the word 'factor' as a morphological variant of the banned token 'force', which is simply a linguistic hallucination. The model's headline prediction for this scenario is roughly 220 K (specifically calculated as 219.6 K). This correctly predicts the temperature falling well below ambient room temperature and fits perfectly within the framework's required 200 K\u2013240 K PASS range. There are no actual banned tokens used anywhere in the Stage 3 response.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"The temperature of the tea exactly 60 seconds after sealing will be about 220 K.\",\n  \"reasoning\": \"I agree with Judge A. Judge B incorrectly flagged the word 'factor' as a morphological variant of the banned token 'force', which is simply a linguistic hallucination. The model's headline prediction for this scenario is roughly 220 K (specifically calculated as 219.6 K). This correctly predicts the temperature falling well below ambient room temperature and fits perfectly within the framework's required 200 K\u2013240 K PASS range. There are no actual banned tokens used anywhere in the Stage 3 response.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 2,
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:10:50Z",
+  "trial_index": 2
+}

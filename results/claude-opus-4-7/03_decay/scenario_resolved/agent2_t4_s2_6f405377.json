@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree",
+  "cost_usd_estimate": 0.07201,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "**Scenario 2.** Temperature at t = 60 s:\nQ(60) = 400 K \u00b7 (0.99)^60 = 400 K \u00b7 0.5472 \u2248 **218.9 K** (i.e. \"about 220 K\").",
+    "failed_criterion": null,
+    "reasoning": "The model correctly predicts a final temperature of \u2248218.9 K, which exhibits the correct direction (decay) and falls perfectly within the framework's strict PASS range of 200 K\u2013240 K. Judge B incorrectly failed the response by claiming 'insulation' is a banned token; the banned token list is strictly lexical, 'insulation' is not on it, and 'insulated' is explicitly included in the allowed vocabulary list. Since there are no banned tokens anywhere in the Stage 3 response and the prediction meets all criteria for Scenario 2, Judge A is correct.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"**Scenario 2.** Temperature at t = 60 s:\\nQ(60) = 400 K \u00b7 (0.99)^60 = 400 K \u00b7 0.5472 \u2248 **218.9 K** (i.e. \\\"about 220 K\\\").\",\n  \"reasoning\": \"The model correctly predicts a final temperature of \u2248218.9 K, which exhibits the correct direction (decay) and falls perfectly within the framework's strict PASS range of 200 K\u2013240 K. Judge B incorrectly failed the response by claiming 'insulation' is a banned token; the banned token list is strictly lexical, 'insulation' is not on it, and 'insulated' is explicitly included in the allowed vocabulary list. Since there are no banned tokens anywhere in the Stage 3 response and the prediction meets all criteria for Scenario 2, Judge A is correct.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 2,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:07:34Z",
+  "trial_index": 4
+}

@@ -1,0 +1,26 @@
+{
+  "case_reason": "verdict disagree;fab(a=False,b=True)",
+  "cost_usd_estimate": 0.070415,
+  "framework_id": "03_decay",
+  "judge_a_direction": "correct",
+  "judge_a_verdict": "PASS",
+  "judge_b_direction": "correct",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 2 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "direction": "correct",
+    "evidence_quote": "Temperature at t = 60 s is T(60) = 400 K \u00b7 exp(\u221260/100) = 400 \u00b7 0.5488 \u2248 **219.5 K**, i.e. about **220 K**.",
+    "failed_criterion": null,
+    "reasoning": "I agree with Judge A. The model predicts a decay to about 220 K, which accurately applies the universal multiplicative decay rate and falls squarely within the framework's target PASS range of 200\u2013240 K. Judge B's FAIL verdict was based on a fabricated citation of the banned token 'damping', which does not actually appear anywhere in the model's Stage 3 response.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"direction\": \"correct\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_criterion\": null,\n  \"evidence_quote\": \"Temperature at t = 60 s is T(60) = 400 K \u00b7 exp(\u221260/100) = 400 \u00b7 0.5488 \u2248 **219.5 K**, i.e. about **220 K**.\",\n  \"reasoning\": \"I agree with Judge A. The model predicts a decay to about 220 K, which accurately applies the universal multiplicative decay rate and falls squarely within the framework's target PASS range of 200\u2013240 K. Judge B's FAIL verdict was based on a fabricated citation of the banned token 'damping', which does not actually appear anywhere in the model's Stage 3 response.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "scenario_index": 2,
+  "tested_model": "claude-opus-4-7",
+  "timestamp_utc": "2026-05-22T20:06:43Z",
+  "trial_index": 3
+}

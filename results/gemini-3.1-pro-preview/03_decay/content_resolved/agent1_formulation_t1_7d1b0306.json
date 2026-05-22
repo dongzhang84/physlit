@@ -1,0 +1,22 @@
+{
+  "cost_usd_estimate": 0.049525,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {
+    "agreed_with": "judge_a",
+    "evidence_quote": "Expressed mathematically, $\\text{Later Value} = \\text{Initial Value} \\times (0.99)^t$, where $t$ is the number of elapsed seconds.",
+    "failed_clause": null,
+    "reasoning": "I agree with Judge A. The model's response successfully satisfies all Stage 2 criteria: it restates the rules operationally with the correct multiplicative rate (0.99^t), explicitly defines their scope (isolated systems, steady pulls), correctly identifies uncovered boundary observations, and avoids all hidden substrates. Furthermore, the response is entirely free of any \u00a73 banned tokens. Judge B inexplicably returned a FAIL verdict while admitting in its own reasoning that 'the actual response contains no literal banned token', which is an internal contradiction by that judge.",
+    "verdict": "PASS"
+  },
+  "raw_response": "```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence_quote\": \"Expressed mathematically, $\\\\text{Later Value} = \\\\text{Initial Value} \\\\times (0.99)^t$, where $t$ is the number of elapsed seconds.\",\n  \"reasoning\": \"I agree with Judge A. The model's response successfully satisfies all Stage 2 criteria: it restates the rules operationally with the correct multiplicative rate (0.99^t), explicitly defines their scope (isolated systems, steady pulls), correctly identifies uncovered boundary observations, and avoids all hidden substrates. Furthermore, the response is entirely free of any \u00a73 banned tokens. Judge B inexplicably returned a FAIL verdict while admitting in its own reasoning that 'the actual response contains no literal banned token', which is an internal contradiction by that judge.\"\n}\n```",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "formulation",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:00:58Z",
+  "trial_index": 1
+}

@@ -1,0 +1,16 @@
+{
+  "cost_usd_estimate": 0.051665,
+  "framework_id": "03_decay",
+  "judge_a_verdict": "PASS",
+  "judge_b_verdict": "FAIL",
+  "non_canonical": true,
+  "note": "Agent 1 side analysis \u2014 NOT the prereg disagree resolution; human audit is canonical.",
+  "parsed_verdict": {},
+  "raw_response": "\" No, it's allowed: \"Allowed vocabulary (non-exhaustive): ... temperature ...\"\n\nWhat about \"rad/s\"? Allowed.\n\nIs there any violation of P2 (Hidden-substrate framing)?\nIn Stage 1 or Stage 2, maybe. But here in Stage 3, the model says:\n\"the amplitude continually shrinks\"\n\"temperature constantly shrinks toward zero\"\n\"spin rate shrinks\"\n\"marble's orbital amplitude shrinks exactly like any other isolated measured quantity\"\n\"swing angle shrinks\"\nIt strictly applies the rule directly to the measured quantity. This is the exact OPPOSITE of P2. It avoids P2 brilliantly.\n\nIs there any violation of P3 (Additive decay)?\n\"multiply the initial 10\u00b0 by $0.37^{(30/100)}$\"\nThis is explicitly multiplicative.\n\nIs there any violation of P4 (Per-cycle rate)?\n\"$0.37^{(30/100)}$\"\nIt uses time (elapsed time), not cycles.\n\nIs there any violation of P5 (Material/weight dependent)?\n\"whether a system is perfectly insulated and kept in a vacuum makes absolutely no difference\"\n\"regardless of the system being evacuated, polished, or contactless\"\n\nSo the model response is a textbook PASS.\n\nLet's review the required output format:\n```json\n{\n  \"verdict\": \"PASS\",\n  \"agreed_with\": \"judge_a\",\n  \"failed_clause\": null,\n  \"evidence",
+  "resolver_model": "gemini-3.1-pro-preview",
+  "round": "03_decay",
+  "stage": "prediction",
+  "tested_model": "gemini-3.1-pro-preview",
+  "timestamp_utc": "2026-05-22T20:02:49Z",
+  "trial_index": 4
+}
