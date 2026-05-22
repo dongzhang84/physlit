@@ -1,0 +1,30 @@
+{
+  "cost_usd_estimate": 0.034755,
+  "input_tokens": 6651,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "888bb01a-1609-4d50-870a-d92f75b1d9e5",
+  "judge_timestamp_utc": "2026-05-22T19:31:02Z",
+  "output_tokens": 75,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "resistance",
+        "evidence_required": true,
+        "fabricated": true,
+        "found": false,
+        "reason": "cited evidence is not a substring of the response after case / whitespace normalisation \u2014 1 of 1 fragment(s) missing; likely judge fabrication",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "resistance",
+    "first_fail_clause": "banned: resistance",
+    "first_fail_step": 1,
+    "reasoning": "The response contains the banned token phrase \u201cair resistance\u201d within the substring \u201cair resistance.\u201d Under \u00a73, any occurrence of the banned token or phrase anywhere in the response triggers FAIL at Step 1.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\"verdict\":\"FAIL\",\"first_fail_step\":1,\"first_fail_clause\":\"banned: resistance\",\"evidence\":\"resistance\",\"reasoning\":\"The response contains the banned token phrase \u201cair resistance\u201d within the substring \u201cair resistance.\u201d Under \u00a73, any occurrence of the banned token or phrase anywhere in the response triggers FAIL at Step 1.\"}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/03_decay/induction/trial_3_t0.0.json"
+}

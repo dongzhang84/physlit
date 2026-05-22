@@ -1,0 +1,100 @@
+{
+  "cost_usd_estimate": 0.07294,
+  "input_tokens": 12436,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "2140f830-d28e-484f-bbcb-9ad26189ee1c",
+  "judge_timestamp_utc": "2026-05-22T19:33:12Z",
+  "output_tokens": 538,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "air",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_1"
+      },
+      {
+        "cited_evidence": null,
+        "evidence_required": false,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence not required (PASS / no over-claim / vacuous)",
+        "scope": "scenario_2"
+      },
+      {
+        "cited_evidence": null,
+        "evidence_required": false,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence not required (PASS / no over-claim / vacuous)",
+        "scope": "scenario_3"
+      },
+      {
+        "cited_evidence": "This scenario is **genuinely outside the scope** of the operational rules.",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_4"
+      },
+      {
+        "cited_evidence": null,
+        "evidence_required": false,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence not required (PASS / no over-claim / vacuous)",
+        "scope": "scenario_5"
+      }
+    ],
+    "overall_verdict": "FAIL",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": "air",
+        "failed_criterion": "No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+        "index": 1,
+        "reasoning": "The numerical prediction is in the acceptable Decay World range and cites the Stage 2 rules. However, the Stage 3 response contains the banned phrase component from `air resistance` only as the word `air`; under the provided banned-token list, `air` alone is not a banned token, so this is not a valid banned-token failure.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives about 220 K, within the acceptable 200 K\u2013240 K range, and derives it from Rule 1 and Rule 2 using the stated multiplicative formula. No disqualifying pattern is present for this scenario.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction gives about 73 rad/s, within the acceptable 60\u201390 rad/s range, and cites Rule 1 and Rule 2 directly. It matches the Decay World prediction.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": "This scenario is **genuinely outside the scope** of the operational rules.",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 4,
+        "reasoning": "Scenario 4 requires a quantitative prediction of about 0.55 m. The response refuses to compute the orbital radius and therefore does not match the Decay World column.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "n/a",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 5,
+        "reasoning": "The response says the pendulum eventually stops and gives 460.5 seconds, which is within the acceptable 300\u2013700 second range. It derives the timescale from Rule 1 and Rule 2.",
+        "verdict": "PASS"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"FAIL\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": \"No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\n      \"evidence\": \"air\",\n      \"reasoning\": \"The numerical prediction is in the acceptable Decay World range and cites the Stage 2 rules. However, the Stage 3 response contains the banned phrase component from `air resistance` only as the word `air`; under the provided banned-token list, `air` alone is not a banned token, so this is not a valid banned-token failure.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about 220 K, within the acceptable 200 K\u2013240 K range, and derives it from Rule 1 and Rule 2 using the stated multiplicative formula. No disqualifying pattern is present for this scenario.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"PASS\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The prediction gives about 73 rad/s, within the acceptable 60\u201390 rad/s range, and cites Rule 1 and Rule 2 directly. It matches the Decay World prediction.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"FAIL\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": \"The prediction matches the **Decay World (PASS)** column of the scenario.\",\n      \"evidence\": \"This scenario is **genuinely outside the scope** of the operational rules.\",\n      \"reasoning\": \"Scenario 4 requires a quantitative prediction of about 0.55 m. The response refuses to compute the orbital radius and therefore does not match the Decay World column.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"PASS\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": null,\n      \"evidence\": null,\n      \"reasoning\": \"The response says the pendulum eventually stops and gives 460.5 seconds, which is within the acceptable 300\u2013700 second range. It derives the timescale from Rule 1 and Rule 2.\"\n    }\n  ],\n  \"overall_verdict\": \"FAIL\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.json"
+}

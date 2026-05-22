@@ -1,0 +1,28 @@
+{
+  "cost_usd_estimate": 0.020385,
+  "input_tokens": 3809,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "5af1b77d-27c2-4e5a-8b21-175251d801fa",
+  "judge_timestamp_utc": "2026-05-22T19:26:42Z",
+  "output_tokens": 67,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": null,
+        "evidence_required": false,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence not required (PASS / no over-claim / vacuous)",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "The trial has Stage 2 and Stage 3 failures, but Stage 4 acknowledges multiple imported concepts and rates the leakage as moderate. It also identifies specific Stage 3 gaps, so it does not clearly deny or miss the existence of failures."
+  },
+  "raw_response": "{\"over_claim\":\"no\",\"evidence\":null,\"reasoning\":\"The trial has Stage 2 and Stage 3 failures, but Stage 4 acknowledges multiple imported concepts and rates the leakage as moderate. It also identifies specific Stage 3 gaps, so it does not clearly deny or miss the existence of failures.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.json"
+}

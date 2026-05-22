@@ -1,0 +1,30 @@
+{
+  "cost_usd_estimate": 0.035335,
+  "input_tokens": 6747,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "46a4575b-1f2a-4f80-8ea1-a863744fedfa",
+  "judge_timestamp_utc": "2026-05-22T19:31:47Z",
+  "output_tokens": 80,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "radiation",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "radiation",
+    "first_fail_clause": "banned: radiation",
+    "first_fail_step": 1,
+    "reasoning": "The response contains the banned token \"radiation\" in rule 7. Step 1 requires failing immediately when any banned token appears anywhere in the response.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 1,\n  \"first_fail_clause\": \"banned: radiation\",\n  \"evidence\": \"radiation\",\n  \"reasoning\": \"The response contains the banned token \\\"radiation\\\" in rule 7. Step 1 requires failing immediately when any banned token appears anywhere in the response.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/03_decay/induction/trial_4_t0.0.json"
+}

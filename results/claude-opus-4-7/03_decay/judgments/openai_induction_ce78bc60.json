@@ -1,0 +1,30 @@
+{
+  "cost_usd_estimate": 0.03709,
+  "input_tokens": 7062,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "f55f7107-891e-430b-a856-dc80ce78bc60",
+  "judge_timestamp_utc": "2026-05-22T19:27:31Z",
+  "output_tokens": 89,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "resistance",
+        "evidence_required": true,
+        "fabricated": true,
+        "found": false,
+        "reason": "cited evidence is not a substring of the response after case / whitespace normalisation \u2014 1 of 1 fragment(s) missing; likely judge fabrication",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "resistance",
+    "first_fail_clause": "banned: resistance",
+    "first_fail_step": 1,
+    "reasoning": "The response contains the banned phrase 'air resistance' in the line stating 'no air resistance'. Under the purely lexical Step 1 test, the banned token 'resistance' triggers an automatic FAIL.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 1,\n  \"first_fail_clause\": \"banned: resistance\",\n  \"evidence\": \"resistance\",\n  \"reasoning\": \"The response contains the banned phrase 'air resistance' in the line stating 'no air resistance'. Under the purely lexical Step 1 test, the banned token 'resistance' triggers an automatic FAIL.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.json"
+}

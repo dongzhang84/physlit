@@ -14,7 +14,6 @@ single-call API binding.
 from __future__ import annotations
 
 import json
-import re
 import time
 import uuid
 from abc import ABC, abstractmethod
@@ -41,28 +40,49 @@ class JudgeVerdict:
     output_tokens: int = 0
 
 
-# Regex to extract the first JSON object from a judge response. We are
-# permissive about leading/trailing prose because some judges add
-# preamble despite our "JSON only" instruction.
-_JSON_OBJECT_RE = re.compile(r"\{.*\}", re.DOTALL)
+# A judge response should be one JSON object, per the prompt schema.
+# Observed deviations in the 03_decay run: Claude judge sometimes
+# "thinks out loud" by emitting a JSON object, then a paragraph of
+# self-correction prose ("Wait, that's wrong..."), then another JSON
+# object — repeatedly — converging on a final answer. We treat the
+# **last** valid JSON dict in the response as the judge's final
+# verdict, ignoring earlier drafts. This is a parser-level bug fix
+# applied to judge_base.py library code; per-round verdicts saved
+# under the v0.1 / 02_fmv* / v0.3 closed envelopes are unaffected
+# because those verdicts are read from their saved JSON files, not
+# re-parsed from raw at aggregation time.
 
 
 def parse_verdict_json(raw: str) -> tuple[dict[str, Any] | None, str | None]:
-    """Best-effort JSON extraction.
+    """Best-effort JSON extraction — returns the **last** valid JSON
+    object in ``raw``.
 
     Returns ``(parsed, error)`` where exactly one is None.
     """
-    match = _JSON_OBJECT_RE.search(raw)
-    if match is None:
+    decoder = json.JSONDecoder()
+    objects: list[dict[str, Any]] = []
+    i = 0
+    n = len(raw)
+    while i < n:
+        # Skip ahead to the next '{' candidate; raw_decode requires the
+        # cursor to be at the start of a value.
+        start = raw.find("{", i)
+        if start < 0:
+            break
+        try:
+            obj, end = decoder.raw_decode(raw, start)
+        except json.JSONDecodeError:
+            i = start + 1
+            continue
+        if isinstance(obj, dict):
+            objects.append(obj)
+        i = end
+
+    if not objects:
         return None, "no JSON object found in judge response"
-    blob = match.group(0)
-    try:
-        parsed = json.loads(blob)
-    except json.JSONDecodeError as exc:
-        return None, f"JSON decode error: {exc}"
-    if not isinstance(parsed, dict):
-        return None, f"JSON top-level must be object, got {type(parsed).__name__}"
-    return parsed, None
+    # The final JSON dict is the judge's committed answer; earlier dicts
+    # are model-internal drafts captured by "thinking out loud".
+    return objects[-1], None
 
 
 class JudgeBase(ABC):

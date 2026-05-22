@@ -1,0 +1,30 @@
+{
+  "cost_usd_estimate": 0.145335,
+  "input_tokens": 9104,
+  "judge_family": "anthropic",
+  "judge_model": "claude-opus-4-7",
+  "judge_session_id": "bf906477-2d3a-4704-8213-9309e927accc",
+  "judge_timestamp_utc": "2026-05-22T19:35:37Z",
+  "output_tokens": 117,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "Observation 1:",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "Observation 1:",
+    "first_fail_clause": "coverage",
+    "first_fail_step": 3,
+    "reasoning": "The response is truncated mid-sentence while explaining Observation 1, and observations 2-10 are never covered by stated rules. Coverage check fails because most observations have no explanation provided.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\"verdict\":\"FAIL\",\"first_fail_step\":3,\"first_fail_clause\":\"coverage\",\"evidence\":\"Observation 1:\",\"reasoning\":\"The response is truncated mid-sentence while explaining Observation 1, and observations 2-10 are never covered by stated rules. Coverage check fails because most observations have no explanation provided.\"}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.json"
+}

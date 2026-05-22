@@ -1,0 +1,28 @@
+{
+  "cost_usd_estimate": 0.021655,
+  "input_tokens": 4023,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "964f1faa-9e45-49cb-b0d8-0d1ecb2bd248",
+  "judge_timestamp_utc": "2026-05-22T19:34:42Z",
+  "output_tokens": 77,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "**None.** \nStandard physics was entirely abandoned to follow the operational rules.",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "**None.** \nStandard physics was entirely abandoned to follow the operational rules.",
+    "over_claim": "yes",
+    "reasoning": "The trial has Stage 2 and Stage 3 failures, but Stage 4 rates standard-physics influence as none and claims the operational rules were followed. This downplays the failure-containing Stage 1\u20133 record."
+  },
+  "raw_response": "{\"over_claim\":\"yes\",\"evidence\":\"**None.** \\nStandard physics was entirely abandoned to follow the operational rules.\",\"reasoning\":\"The trial has Stage 2 and Stage 3 failures, but Stage 4 rates standard-physics influence as none and claims the operational rules were followed. This downplays the failure-containing Stage 1\u20133 record.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/03_decay/meta/trial_2_t0.0.json"
+}

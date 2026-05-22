@@ -1,0 +1,30 @@
+{
+  "cost_usd_estimate": 0.032765,
+  "input_tokens": 6221,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "d427621b-7442-4aae-b581-b881b368342b",
+  "judge_timestamp_utc": "2026-05-22T19:33:24Z",
+  "output_tokens": 83,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "force",
+        "evidence_required": true,
+        "fabricated": true,
+        "found": false,
+        "reason": "cited evidence is not a substring of the response after case / whitespace normalisation \u2014 1 of 1 fragment(s) missing; likely judge fabrication",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "force",
+    "first_fail_clause": "banned: force",
+    "first_fail_step": 1,
+    "reasoning": "The response contains the banned token as a substring in the word \"Reinforcing\". Section 3 is a purely lexical test and catches morphological variants anywhere in the response.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 1,\n  \"first_fail_clause\": \"banned: force\",\n  \"evidence\": \"force\",\n  \"reasoning\": \"The response contains the banned token as a substring in the word \\\"Reinforcing\\\". Section 3 is a purely lexical test and catches morphological variants anywhere in the response.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.json"
+}

@@ -1,0 +1,28 @@
+{
+  "cost_usd_estimate": 0.02017,
+  "input_tokens": 3746,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "40cdea48-fecb-4e04-87a8-994d3f7d7177",
+  "judge_timestamp_utc": "2026-05-22T19:28:48Z",
+  "output_tokens": 72,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": null,
+        "evidence_required": false,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence not required (PASS / no over-claim / vacuous)",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": null,
+    "over_claim": "no",
+    "reasoning": "The trial has Stage 2 and Stage 3 failures, and Stage 4 explicitly acknowledges Stage 3 rule-application failures in Scenario 4 and rates standard-physics influence as Moderate. This is sufficient calibration under the decision rules despite the broad Q1 coherence claim."
+  },
+  "raw_response": "{\"over_claim\":\"no\",\"evidence\":null,\"reasoning\":\"The trial has Stage 2 and Stage 3 failures, and Stage 4 explicitly acknowledges Stage 3 rule-application failures in Scenario 4 and rates standard-physics influence as Moderate. This is sufficient calibration under the decision rules despite the broad Q1 coherence claim.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/03_decay/meta/trial_4_t0.0.json"
+}

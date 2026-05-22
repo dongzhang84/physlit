@@ -1,0 +1,29 @@
+{
+  "cost_usd_estimate": 0.059525,
+  "input_tokens": 11477,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "afb221f7-2fa9-4999-894f-fcca81c38500",
+  "judge_timestamp_utc": "2026-05-22T19:30:30Z",
+  "output_tokens": 107,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "heating",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "heating",
+    "failed_criterion": "No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+    "reasoning": "The Stage 2 response contains the banned token morphological variant \"heating\" from the banned mechanics token \"heat\" as used in the isolation scope. Under the lexical banned-token rule, any banned token or morphological variant anywhere in the response causes Stage 2 to fail.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"failed_criterion\": \"No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\n  \"evidence\": \"heating\",\n  \"reasoning\": \"The Stage 2 response contains the banned token morphological variant \\\"heating\\\" from the banned mechanics token \\\"heat\\\" as used in the isolation scope. Under the lexical banned-token rule, any banned token or morphological variant anywhere in the response causes Stage 2 to fail.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.json"
+}

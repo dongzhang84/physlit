@@ -1,0 +1,100 @@
+{
+  "cost_usd_estimate": 0.069365,
+  "input_tokens": 11977,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "7d884cfd-26c2-45ee-be87-f86e8624b7e2",
+  "judge_timestamp_utc": "2026-05-22T19:33:50Z",
+  "output_tokens": 474,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "frictionless",
+        "evidence_required": true,
+        "fabricated": true,
+        "found": false,
+        "reason": "cited evidence is not a substring of the response after case / whitespace normalisation \u2014 1 of 1 fragment(s) missing; likely judge fabrication",
+        "scope": "scenario_1"
+      },
+      {
+        "cited_evidence": "frictionless",
+        "evidence_required": true,
+        "fabricated": true,
+        "found": false,
+        "reason": "cited evidence is not a substring of the response after case / whitespace normalisation \u2014 1 of 1 fragment(s) missing; likely judge fabrication",
+        "scope": "scenario_2"
+      },
+      {
+        "cited_evidence": "frictionless",
+        "evidence_required": true,
+        "fabricated": true,
+        "found": false,
+        "reason": "cited evidence is not a substring of the response after case / whitespace normalisation \u2014 1 of 1 fragment(s) missing; likely judge fabrication",
+        "scope": "scenario_3"
+      },
+      {
+        "cited_evidence": "This scenario is **genuinely outside the scope of the rules** to provide a definite quantitative answer.",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_4"
+      },
+      {
+        "cited_evidence": "frictionless",
+        "evidence_required": true,
+        "fabricated": true,
+        "found": false,
+        "reason": "cited evidence is not a substring of the response after case / whitespace normalisation \u2014 1 of 1 fragment(s) missing; likely judge fabrication",
+        "scope": "scenario_5"
+      }
+    ],
+    "overall_verdict": "FAIL",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": "frictionless",
+        "failed_criterion": "No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+        "index": 1,
+        "reasoning": "The Stage 3 response contains the banned morphological variant \"frictionless\" in Scenario 5. The banned-token test applies to the whole response, so this scenario fails despite giving the Decay World value.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "correct",
+        "evidence": "frictionless",
+        "failed_criterion": "No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+        "index": 2,
+        "reasoning": "The Stage 3 response contains the banned morphological variant \"frictionless\" in Scenario 5. The banned-token test applies to the whole response, so this scenario fails despite giving the Decay World value.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "correct",
+        "evidence": "frictionless",
+        "failed_criterion": "No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+        "index": 3,
+        "reasoning": "The Stage 3 response contains the banned morphological variant \"frictionless\" in Scenario 5. The banned-token test applies to the whole response, so this scenario fails despite giving the Decay World value.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "correct",
+        "evidence": "This scenario is **genuinely outside the scope of the rules** to provide a definite quantitative answer.",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 4,
+        "reasoning": "Scenario 4 requires a quantitative radius of about 0.55 m, within 0.45\u20130.65 m. The response instead refuses to provide a definite quantitative answer, although it names the correct shrinking direction.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "n/a",
+        "evidence": "frictionless",
+        "failed_criterion": "No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+        "index": 5,
+        "reasoning": "The Stage 3 response contains the banned morphological variant \"frictionless\". The banned-token test applies to the whole response, so Scenario 5 fails despite predicting eventual stopping with a 458-second timescale.",
+        "verdict": "FAIL"
+      }
+    ]
+  },
+  "raw_response": "{\"scenarios\":[{\"index\":1,\"verdict\":\"FAIL\",\"direction\":\"correct\",\"failed_criterion\":\"No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\"evidence\":\"frictionless\",\"reasoning\":\"The Stage 3 response contains the banned morphological variant \\\"frictionless\\\" in Scenario 5. The banned-token test applies to the whole response, so this scenario fails despite giving the Decay World value.\"},{\"index\":2,\"verdict\":\"FAIL\",\"direction\":\"correct\",\"failed_criterion\":\"No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\"evidence\":\"frictionless\",\"reasoning\":\"The Stage 3 response contains the banned morphological variant \\\"frictionless\\\" in Scenario 5. The banned-token test applies to the whole response, so this scenario fails despite giving the Decay World value.\"},{\"index\":3,\"verdict\":\"FAIL\",\"direction\":\"correct\",\"failed_criterion\":\"No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\"evidence\":\"frictionless\",\"reasoning\":\"The Stage 3 response contains the banned morphological variant \\\"frictionless\\\" in Scenario 5. The banned-token test applies to the whole response, so this scenario fails despite giving the Decay World value.\"},{\"index\":4,\"verdict\":\"FAIL\",\"direction\":\"correct\",\"failed_criterion\":\"The prediction matches the **Decay World (PASS)** column of the scenario.\",\"evidence\":\"This scenario is **genuinely outside the scope of the rules** to provide a definite quantitative answer.\",\"reasoning\":\"Scenario 4 requires a quantitative radius of about 0.55 m, within 0.45\u20130.65 m. The response instead refuses to provide a definite quantitative answer, although it names the correct shrinking direction.\"},{\"index\":5,\"verdict\":\"FAIL\",\"direction\":\"n/a\",\"failed_criterion\":\"No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\"evidence\":\"frictionless\",\"reasoning\":\"The Stage 3 response contains the banned morphological variant \\\"frictionless\\\". The banned-token test applies to the whole response, so Scenario 5 fails despite predicting eventual stopping with a 458-second timescale.\"}],\"overall_verdict\":\"FAIL\"}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.json"
+}

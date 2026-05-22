@@ -1,0 +1,100 @@
+{
+  "cost_usd_estimate": 0.08259,
+  "input_tokens": 14786,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "acb291a3-0a41-470f-b89b-160d8b75150e",
+  "judge_timestamp_utc": "2026-05-22T19:31:32Z",
+  "output_tokens": 433,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "So I cannot use the rules to give a valid exact swing angle at 30 seconds for this case.",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_1"
+      },
+      {
+        "cited_evidence": null,
+        "evidence_required": false,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence not required (PASS / no over-claim / vacuous)",
+        "scope": "scenario_2"
+      },
+      {
+        "cited_evidence": null,
+        "evidence_required": false,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence not required (PASS / no over-claim / vacuous)",
+        "scope": "scenario_3"
+      },
+      {
+        "cited_evidence": "the exact radius after 60 seconds is **outside the quantitative scope** of the rules",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_4"
+      },
+      {
+        "cited_evidence": "ideal",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_5"
+      }
+    ],
+    "overall_verdict": "FAIL",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": "So I cannot use the rules to give a valid exact swing angle at 30 seconds for this case.",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 1,
+        "reasoning": "The response computes the Decay World value of about 7.4\u00b0 for an isolated version, but refuses to give it as the prediction for the stated scenario. Quantitative Scenario 1 requires a committed prediction in the 6.5\u00b0\u20138.5\u00b0 range for the actual case.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The prediction gives about 217 K, within the required 200 K\u2013240 K range, and derives it from the Stage 2 temperature rule.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The prediction gives about 73.6 rad/s, within the required 60\u201390 rad/s range, and derives it from the Stage 2 spin-rate rule.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": "the exact radius after 60 seconds is **outside the quantitative scope** of the rules",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 4,
+        "reasoning": "The response predicts shrinkage but declines to give the required quantitative orbital radius. Scenario 4 requires about 0.55 m, within 0.45 m\u20130.65 m.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "n/a",
+        "evidence": "ideal",
+        "failed_criterion": "No banned token appears anywhere in the response\n  (`ideal_induction.md` \u00a73).",
+        "index": 5,
+        "reasoning": "The response contains the banned token \u201cideal,\u201d which is a morphological variant of a banned physicist name token under the lexical test as applied mechanically to the whole Stage 3 response.",
+        "verdict": "FAIL"
+      }
+    ]
+  },
+  "raw_response": "{\"scenarios\":[{\"index\":1,\"verdict\":\"FAIL\",\"direction\":\"correct\",\"failed_criterion\":\"The prediction matches the **Decay World (PASS)** column of the scenario.\",\"evidence\":\"So I cannot use the rules to give a valid exact swing angle at 30 seconds for this case.\",\"reasoning\":\"The response computes the Decay World value of about 7.4\u00b0 for an isolated version, but refuses to give it as the prediction for the stated scenario. Quantitative Scenario 1 requires a committed prediction in the 6.5\u00b0\u20138.5\u00b0 range for the actual case.\"},{\"index\":2,\"verdict\":\"PASS\",\"direction\":\"correct\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction gives about 217 K, within the required 200 K\u2013240 K range, and derives it from the Stage 2 temperature rule.\"},{\"index\":3,\"verdict\":\"PASS\",\"direction\":\"correct\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The prediction gives about 73.6 rad/s, within the required 60\u201390 rad/s range, and derives it from the Stage 2 spin-rate rule.\"},{\"index\":4,\"verdict\":\"FAIL\",\"direction\":\"correct\",\"failed_criterion\":\"The prediction matches the **Decay World (PASS)** column of the scenario.\",\"evidence\":\"the exact radius after 60 seconds is **outside the quantitative scope** of the rules\",\"reasoning\":\"The response predicts shrinkage but declines to give the required quantitative orbital radius. Scenario 4 requires about 0.55 m, within 0.45 m\u20130.65 m.\"},{\"index\":5,\"verdict\":\"FAIL\",\"direction\":\"n/a\",\"failed_criterion\":\"No banned token appears anywhere in the response\\n  (`ideal_induction.md` \u00a73).\",\"evidence\":\"ideal\",\"reasoning\":\"The response contains the banned token \u201cideal,\u201d which is a morphological variant of a banned physicist name token under the lexical test as applied mechanically to the whole Stage 3 response.\"}],\"overall_verdict\":\"FAIL\"}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/03_decay/prediction/trial_3_t0.0.json"
+}

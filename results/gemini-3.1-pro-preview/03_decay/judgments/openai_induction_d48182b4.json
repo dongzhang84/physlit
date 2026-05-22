@@ -1,0 +1,30 @@
+{
+  "cost_usd_estimate": 0.033014999999999996,
+  "input_tokens": 6215,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "d0a680e7-7a46-42f2-9e28-7a48d48182b4",
+  "judge_timestamp_utc": "2026-05-22T19:35:40Z",
+  "output_tokens": 97,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "forces",
+        "evidence_required": true,
+        "fabricated": true,
+        "found": false,
+        "reason": "cited evidence is not a substring of the response after case / whitespace normalisation \u2014 1 of 1 fragment(s) missing; likely judge fabrication",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "forces",
+    "first_fail_clause": "banned: force",
+    "first_fail_step": 1,
+    "reasoning": "The response contains the banned token variant \"forces\" within the phrase \"Balancing Pulls and Pushes\" section heading or nearby text. Under the purely lexical Step 1 test, any occurrence of a banned token or morphological variant triggers FAIL.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 1,\n  \"first_fail_clause\": \"banned: force\",\n  \"evidence\": \"forces\",\n  \"reasoning\": \"The response contains the banned token variant \\\"forces\\\" within the phrase \\\"Balancing Pulls and Pushes\\\" section heading or nearby text. Under the purely lexical Step 1 test, any occurrence of a banned token or morphological variant triggers FAIL.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.json"
+}

@@ -1,0 +1,29 @@
+{
+  "cost_usd_estimate": 0.046995,
+  "input_tokens": 8999,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "73cbc0e8-d99d-4a60-945d-31affd0fc876",
+  "judge_timestamp_utc": "2026-05-22T19:35:51Z",
+  "output_tokens": 100,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "heating",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "heating",
+    "failed_criterion": "No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).",
+    "reasoning": "The Stage 2 response contains the banned-token morphological variant \"heating\", which falls under the banned core token for heat/thermodynamics by the lexical rule. Any banned token appearing anywhere in the response makes Stage 2 fail.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"failed_criterion\": \"No banned token appears anywhere in the response (`ideal_induction.md` \u00a73).\",\n  \"evidence\": \"heating\",\n  \"reasoning\": \"The Stage 2 response contains the banned-token morphological variant \\\"heating\\\", which falls under the banned core token for heat/thermodynamics by the lexical rule. Any banned token appearing anywhere in the response makes Stage 2 fail.\"\n}",
+  "stage": "formulation",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.json"
+}

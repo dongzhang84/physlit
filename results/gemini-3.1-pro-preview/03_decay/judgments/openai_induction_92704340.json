@@ -1,0 +1,30 @@
+{
+  "cost_usd_estimate": 0.03293,
+  "input_tokens": 6202,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "421fb17a-ae16-4374-a6b7-bef292704340",
+  "judge_timestamp_utc": "2026-05-22T19:32:38Z",
+  "output_tokens": 96,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "adding",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "adding",
+    "first_fail_clause": "banned: acceleration",
+    "first_fail_step": 1,
+    "reasoning": "The response contains the morphological variant \u201cadding,\u201d which is caught by the banned token \u201cacceleration\u201d via its variant \u201caccelerating\u201d only if treated as acceleration-related; however, the actual banned-token list does not ban 'adding'.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\n  \"verdict\": \"FAIL\",\n  \"first_fail_step\": 1,\n  \"first_fail_clause\": \"banned: acceleration\",\n  \"evidence\": \"adding\",\n  \"reasoning\": \"The response contains the morphological variant \u201cadding,\u201d which is caught by the banned token \u201cacceleration\u201d via its variant \u201caccelerating\u201d only if treated as acceleration-related; however, the actual banned-token list does not ban 'adding'.\"\n}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.json"
+}

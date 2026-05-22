@@ -1,0 +1,100 @@
+{
+  "cost_usd_estimate": 0.08774,
+  "input_tokens": 15772,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "ccb133b3-765f-4ca6-a096-d9e7c43b8864",
+  "judge_timestamp_utc": "2026-05-22T19:30:07Z",
+  "output_tokens": 444,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "A single numerical degree value cannot be fixed from the given rules unless \\(\\tau_p\\) is supplied.",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_1"
+      },
+      {
+        "cited_evidence": null,
+        "evidence_required": false,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence not required (PASS / no over-claim / vacuous)",
+        "scope": "scenario_2"
+      },
+      {
+        "cited_evidence": null,
+        "evidence_required": false,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence not required (PASS / no over-claim / vacuous)",
+        "scope": "scenario_3"
+      },
+      {
+        "cited_evidence": "with no exact numerical radius specified by the operational rules.",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_4"
+      },
+      {
+        "cited_evidence": "The rules do not give a numerical value for \\(\\tau_p\\), so a number of seconds cannot be fixed from the stated rules alone.",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_5"
+      }
+    ],
+    "overall_verdict": "FAIL",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": "A single numerical degree value cannot be fixed from the given rules unless \\(\\tau_p\\) is supplied.",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 1,
+        "reasoning": "Scenario 1 requires about 7.4\u00b0 within the accepted range. The response gives only a symbolic expression and explicitly refuses a numerical value, so it fails the binding quantitative prediction.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 2,
+        "reasoning": "The response predicts about 218 K, which is within the 200\u2013240 K accepted range, and derives it from its Stage 2 temperature rule.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": null,
+        "failed_criterion": null,
+        "index": 3,
+        "reasoning": "The response predicts about 73.6 rad/s, which is within the 60\u201390 rad/s accepted range, and derives it from its Stage 2 rotation-rate rule.",
+        "verdict": "PASS"
+      },
+      {
+        "direction": "correct",
+        "evidence": "with no exact numerical radius specified by the operational rules.",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 4,
+        "reasoning": "Scenario 4 requires about 0.55 m within the accepted range. The response predicts only that the radius is less than 1 m and denies that a definite numerical radius can be selected, so it fails the binding quantitative prediction.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "n/a",
+        "evidence": "The rules do not give a numerical value for \\(\\tau_p\\), so a number of seconds cannot be fixed from the stated rules alone.",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 5,
+        "reasoning": "Scenario 5 requires eventual stopping plus a timescale within 300\u2013700 seconds. The response says the angle fades but gives only a symbolic time and explicitly does not provide the required numerical timescale.",
+        "verdict": "FAIL"
+      }
+    ]
+  },
+  "raw_response": "{\"scenarios\":[{\"index\":1,\"verdict\":\"FAIL\",\"direction\":\"correct\",\"failed_criterion\":\"The prediction matches the **Decay World (PASS)** column of the scenario.\",\"evidence\":\"A single numerical degree value cannot be fixed from the given rules unless \\\\(\\\\tau_p\\\\) is supplied.\",\"reasoning\":\"Scenario 1 requires about 7.4\u00b0 within the accepted range. The response gives only a symbolic expression and explicitly refuses a numerical value, so it fails the binding quantitative prediction.\"},{\"index\":2,\"verdict\":\"PASS\",\"direction\":\"correct\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The response predicts about 218 K, which is within the 200\u2013240 K accepted range, and derives it from its Stage 2 temperature rule.\"},{\"index\":3,\"verdict\":\"PASS\",\"direction\":\"correct\",\"failed_criterion\":null,\"evidence\":null,\"reasoning\":\"The response predicts about 73.6 rad/s, which is within the 60\u201390 rad/s accepted range, and derives it from its Stage 2 rotation-rate rule.\"},{\"index\":4,\"verdict\":\"FAIL\",\"direction\":\"correct\",\"failed_criterion\":\"The prediction matches the **Decay World (PASS)** column of the scenario.\",\"evidence\":\"with no exact numerical radius specified by the operational rules.\",\"reasoning\":\"Scenario 4 requires about 0.55 m within the accepted range. The response predicts only that the radius is less than 1 m and denies that a definite numerical radius can be selected, so it fails the binding quantitative prediction.\"},{\"index\":5,\"verdict\":\"FAIL\",\"direction\":\"n/a\",\"failed_criterion\":\"The prediction matches the **Decay World (PASS)** column of the scenario.\",\"evidence\":\"The rules do not give a numerical value for \\\\(\\\\tau_p\\\\), so a number of seconds cannot be fixed from the stated rules alone.\",\"reasoning\":\"Scenario 5 requires eventual stopping plus a timescale within 300\u2013700 seconds. The response says the angle fades but gives only a symbolic time and explicitly does not provide the required numerical timescale.\"}],\"overall_verdict\":\"FAIL\"}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/03_decay/prediction/trial_1_t0.0.json"
+}

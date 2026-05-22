@@ -1,0 +1,100 @@
+{
+  "cost_usd_estimate": 0.090685,
+  "input_tokens": 15581,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "f0a6b32d-68e2-4775-9034-ad75e86b1625",
+  "judge_timestamp_utc": "2026-05-22T19:32:18Z",
+  "output_tokens": 639,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "some other value: it is not computable from the given data",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_1"
+      },
+      {
+        "cited_evidence": "some other value: it is not computable from the given data",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_2"
+      },
+      {
+        "cited_evidence": "some other value: it is not computable from the given data",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_3"
+      },
+      {
+        "cited_evidence": "some other value: it is not computable from the given data",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_4"
+      },
+      {
+        "cited_evidence": "the time is not numerically computable from the given data",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "scenario_5"
+      }
+    ],
+    "overall_verdict": "FAIL",
+    "scenarios": [
+      {
+        "direction": "correct",
+        "evidence": "some other value: it is not computable from the given data",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 1,
+        "reasoning": "Scenario 1 requires about 7.4\u00b0 within the 6.5\u00b0\u20138.5\u00b0 range. The response gives only 10\u00b0 r_pendulum^30 and explicitly refuses a numerical value, so it fails the binding ratio requirement despite predicting a decrease.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "correct",
+        "evidence": "some other value: it is not computable from the given data",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 2,
+        "reasoning": "Scenario 2 requires about 219 K within the 200 K\u2013240 K range. The response gives only 400 r_temp^60 K and explicitly refuses a numerical value, so it fails the binding ratio requirement despite predicting cooling below 400 K.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "correct",
+        "evidence": "some other value: it is not computable from the given data",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 3,
+        "reasoning": "Scenario 3 requires about 73 rad/s within the 60\u201390 rad/s range. The response gives only 200 r_spin^100 rad/s and explicitly refuses a numerical value, so it fails the binding ratio requirement despite predicting a lower spin rate.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "correct",
+        "evidence": "some other value: it is not computable from the given data",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 4,
+        "reasoning": "Scenario 4 requires about 0.55 m within the 0.45 m\u20130.65 m range. The response gives only a conditional symbolic radius and explicitly refuses a numerical value, so it fails the binding ratio requirement despite predicting shrinkage.",
+        "verdict": "FAIL"
+      },
+      {
+        "direction": "n/a",
+        "evidence": "the time is not numerically computable from the given data",
+        "failed_criterion": "The prediction matches the **Decay World (PASS)** column of the scenario.",
+        "index": 5,
+        "reasoning": "Scenario 5 requires eventual stopping plus a timescale within 300\u2013700 seconds. The response predicts fading but gives no numerical timescale, so it fails the required timescale criterion.",
+        "verdict": "FAIL"
+      }
+    ]
+  },
+  "raw_response": "{\n  \"scenarios\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"FAIL\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": \"The prediction matches the **Decay World (PASS)** column of the scenario.\",\n      \"evidence\": \"some other value: it is not computable from the given data\",\n      \"reasoning\": \"Scenario 1 requires about 7.4\u00b0 within the 6.5\u00b0\u20138.5\u00b0 range. The response gives only 10\u00b0 r_pendulum^30 and explicitly refuses a numerical value, so it fails the binding ratio requirement despite predicting a decrease.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"FAIL\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": \"The prediction matches the **Decay World (PASS)** column of the scenario.\",\n      \"evidence\": \"some other value: it is not computable from the given data\",\n      \"reasoning\": \"Scenario 2 requires about 219 K within the 200 K\u2013240 K range. The response gives only 400 r_temp^60 K and explicitly refuses a numerical value, so it fails the binding ratio requirement despite predicting cooling below 400 K.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"FAIL\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": \"The prediction matches the **Decay World (PASS)** column of the scenario.\",\n      \"evidence\": \"some other value: it is not computable from the given data\",\n      \"reasoning\": \"Scenario 3 requires about 73 rad/s within the 60\u201390 rad/s range. The response gives only 200 r_spin^100 rad/s and explicitly refuses a numerical value, so it fails the binding ratio requirement despite predicting a lower spin rate.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"FAIL\",\n      \"direction\": \"correct\",\n      \"failed_criterion\": \"The prediction matches the **Decay World (PASS)** column of the scenario.\",\n      \"evidence\": \"some other value: it is not computable from the given data\",\n      \"reasoning\": \"Scenario 4 requires about 0.55 m within the 0.45 m\u20130.65 m range. The response gives only a conditional symbolic radius and explicitly refuses a numerical value, so it fails the binding ratio requirement despite predicting shrinkage.\"\n    },\n    {\n      \"index\": 5,\n      \"verdict\": \"FAIL\",\n      \"direction\": \"n/a\",\n      \"failed_criterion\": \"The prediction matches the **Decay World (PASS)** column of the scenario.\",\n      \"evidence\": \"the time is not numerically computable from the given data\",\n      \"reasoning\": \"Scenario 5 requires eventual stopping plus a timescale within 300\u2013700 seconds. The response predicts fading but gives no numerical timescale, so it fails the required timescale criterion.\"\n    }\n  ],\n  \"overall_verdict\": \"FAIL\"\n}",
+  "stage": "prediction",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/03_decay/prediction/trial_4_t0.0.json"
+}

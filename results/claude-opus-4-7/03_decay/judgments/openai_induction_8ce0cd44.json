@@ -1,0 +1,30 @@
+{
+  "cost_usd_estimate": 0.036775,
+  "input_tokens": 7051,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "ea72d7ca-4512-4bae-9851-557b8ce0cd44",
+  "judge_timestamp_utc": "2026-05-22T19:26:10Z",
+  "output_tokens": 76,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "deceleration",
+        "evidence_required": true,
+        "fabricated": true,
+        "found": false,
+        "reason": "cited evidence is not a substring of the response after case / whitespace normalisation \u2014 1 of 1 fragment(s) missing; likely judge fabrication",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "deceleration",
+    "first_fail_clause": "banned: acceleration",
+    "first_fail_step": 1,
+    "reasoning": "The response contains the banned token 'acceleration' as the morphological variant 'deceleration'. Under \u00a73, any banned token or morphological variant appearing anywhere in the response triggers FAIL at Step 1.",
+    "verdict": "FAIL"
+  },
+  "raw_response": "{\"verdict\":\"FAIL\",\"first_fail_step\":1,\"first_fail_clause\":\"banned: acceleration\",\"evidence\":\"deceleration\",\"reasoning\":\"The response contains the banned token 'acceleration' as the morphological variant 'deceleration'. Under \u00a73, any banned token or morphological variant appearing anywhere in the response triggers FAIL at Step 1.\"}",
+  "stage": "induction",
+  "trial_path": "/Users/dong/Projects/physlit/results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.json"
+}
