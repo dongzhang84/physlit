@@ -13,7 +13,11 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
-        args: ["--maxkb=500"]
+        # Bumped 500 -> 1000 to fit 03_decay audit worksheet (54 cases x
+        # large context per case). Prior worksheets ran ~150 KB; 03_decay
+        # is ~670 KB. Cap is still tight enough to catch accidental binary
+        # commits.
+        args: ["--maxkb=1000"]
 
   - repo: local
     hooks:
