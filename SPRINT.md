@@ -1,11 +1,29 @@
 # Sprint Report
 
-**Generated:** 2026-05-22 20:23 UTC  
-**Showing:** last 3 week(s) of 3 total  
+**Generated:** 2026-05-26 07:36 UTC  
+**Showing:** last 4 week(s) of 4 total  
 
 ---
 
-## Week 3 _(current)_ · 2026-05-18 to 2026-05-24
+## Week 4 _(current)_ · 2026-05-25 to 2026-05-31
+
+| Stat | Value |
+|------|-------|
+| Status | ❌ Stalled |
+| Active days | 1 / 7 |
+| Total commits | 1 |
+
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|
+| ⚪ | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+
+**Tue – Tuesday, May 26**
+
+- `eb0b93d` 03_decay: render trial JSONs to .md companions + link from audit worksheet — _dongzhang84_ `2026-05-26 00:35`
+
+---
+
+## Week 3 · 2026-05-18 to 2026-05-24
 
 | Stat | Value |
 |------|-------|
