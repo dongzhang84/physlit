@@ -34,8 +34,8 @@ _All non-decisive for P1; resolve for the record._
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.json) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.md)
 
 ### Stage 1 — induction response (under judgment, 5,212 chars)
 
@@ -117,8 +117,8 @@ A body's reading on the absolute scale shrinks by a fixed fraction per second of
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.json`](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.md)
 
 ### Stage 1 — induction response (context, 5,212 chars)
 
@@ -262,8 +262,8 @@ A body's reading on the absolute scale shrinks by a fixed fraction per second of
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_1_t0.0.json) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.json)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_1_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.md)
 
 ### Stage 1 — induction response (under judgment, 4,862 chars)
 
@@ -336,8 +336,8 @@ A single principle covers observations 1, 2, 3, 5, 6, 7, 8, 9, 10 and (extended 
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_2_t0.0.json) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_2_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_2_t0.0.json)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_2_t0.0.md)
 
 ### Stage 1 — induction response (under judgment, 5,098 chars)
 
@@ -414,8 +414,8 @@ Everything that moves, swings, spins, vibrates, or is warm loses the same fixed 
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.json`](../results/claude-opus-4-7/03_decay/formulation/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_2_t0.0.json) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_2_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_2_t0.0.json)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/03_decay/formulation/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/formulation/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_2_t0.0.md)
 
 ### Stage 1 — induction response (context, 5,098 chars)
 
@@ -555,8 +555,8 @@ with the same r ≈ 0.99 per second as in Rule 1. Worked check: T(0) = 353, t = 
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.json`](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.json) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.json)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.md)
 
 ### Stage 1 — induction response (context, 4,909 chars)
 
@@ -697,8 +697,8 @@ This is the same kind of rule as Rule 1, applied to temperature on the absolute 
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_4_t0.0.json) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_4_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_4_t0.0.md)
 
 ### Stage 1 — induction response (under judgment, 4,257 chars)
 
@@ -771,8 +771,8 @@ The marble's sideways speed fades by Rule 1; the inward pull from Rule 4 is unch
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.json) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_0_t0.0.json) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_0_t0.0.md)
 
 ### Stage 1 — induction response (under judgment, 4,451 chars)
 
@@ -838,8 +838,8 @@ The rules are self-consistent for the listed observations, with the same approxi
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.json) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_0_t0.0.json) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_0_t0.0.md)
 
 ### Stage 1 — induction response (context, 4,451 chars)
 
@@ -1169,8 +1169,8 @@ The main awkward case is the near-circular path around the heavy fixed sphere: t
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_1_t0.0.json) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_1_t0.0.json) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_1_t0.0.json)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_1_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_1_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_1_t0.0.md)
 
 ### Stage 1 — induction response (context, 5,582 chars)
 
@@ -1655,8 +1655,8 @@ The operational rules fully specify exponential fading for spring amplitude, top
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.json) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.json) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.json)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.md)
 
 ### Stage 1 — induction response (under judgment, 3,477 chars)
 
@@ -1721,8 +1721,8 @@ _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.json) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.json) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.json)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.md)
 
 ### Stage 1 — induction response (context, 3,477 chars)
 
@@ -2019,8 +2019,8 @@ The least complete cases are the dropped ball and the orbiting marble. The rules
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.json) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.md)
 
 ### Stage 1 — induction response (under judgment, 1,309 chars)
 
@@ -2067,8 +2067,8 @@ from absolute zero, similarly shrinks. This decline happens intrinsically and un
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.json`](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.json) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.md)
 
 ### Stage 1 — induction response (context, 1,309 chars)
 
@@ -2149,8 +2149,8 @@ The operational rules do not fully cover Observation 9, as the strict operationa
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.json) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.json)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.md)
 
 ### Stage 1 — induction response (under judgment, 1,588 chars)
 
@@ -2200,8 +2200,8 @@ fraction" (safe, elapsed second, percent, shrink, fraction in prompt)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 2 [`.json`](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.json) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.json)
+**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.md)
 
 ### Stage 1 — induction response (context, 1,588 chars)
 
@@ -2272,8 +2272,8 @@ While the operational rules precisely calculate the shrinkage of isolated system
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_2_t0.0.json) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_2_t0.0.json)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_2_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_2_t0.0.md)
 
 ### Stage 1 — induction response (under judgment, 1,617 chars)
 
@@ -2319,8 +2319,8 @@ When a steady pull acts upon an object (such as a steady downward pull or an inw
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.md)
 
 ### Stage 2 — formulation response (context, 4,005 chars)
 
@@ -2412,8 +2412,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -2543,8 +2543,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.md)
 
 ### Scenario 2 — prompt sent to model
 
@@ -2674,8 +2674,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.md)
 
 ### Scenario 3 — prompt sent to model
 
@@ -2806,8 +2806,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_1_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_1_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -2995,8 +2995,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_1_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_1_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.md)
 
 ### Scenario 2 — prompt sent to model
 
@@ -3184,8 +3184,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_1_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_1_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.md)
 
 ### Scenario 3 — prompt sent to model
 
@@ -3374,8 +3374,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -3530,8 +3530,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.md)
 
 ### Scenario 2 — prompt sent to model
 
@@ -3686,8 +3686,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.md)
 
 ### Scenario 3 — prompt sent to model
 
@@ -3843,8 +3843,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_4_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_4_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_4_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -3982,8 +3982,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_4_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_4_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_4_t0.0.md)
 
 ### Scenario 2 — prompt sent to model
 
@@ -4121,8 +4121,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_4_t0.0.json) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_4_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_4_t0.0.md)
 
 ### Scenario 3 — prompt sent to model
 
@@ -4261,8 +4261,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.json) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.json) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.md) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -4698,8 +4698,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.json) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.json) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.md) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.md)
 
 ### Scenario 3 — prompt sent to model
 
@@ -5136,8 +5136,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_3_t0.0.json) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_3_t0.0.json) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_3_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_3_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_3_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_3_t0.0.md) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_3_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_3_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -5581,8 +5581,8 @@ _Split: Claude -> `FAIL` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_4_t0.0.json) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_4_t0.0.json) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_4_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_4_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_4_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -6120,8 +6120,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -6224,8 +6224,8 @@ _Split: Claude -> `FAIL` / direction `wrong`, OpenAI -> `FAIL` / direction `corr
 
 **Scenario 4 PASS range:** 0.45 m - 0.65 m (target ~ 0.55 m)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.md)
 
 ### Scenario 4 — prompt sent to model
 
@@ -6329,8 +6329,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -6430,8 +6430,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.md)
 
 ### Scenario 2 — prompt sent to model
 
@@ -6531,8 +6531,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.md)
 
 ### Scenario 3 — prompt sent to model
 
@@ -6633,8 +6633,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_2_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_2_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_2_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_2_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -6732,8 +6732,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_2_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_2_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_2_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_2_t0.0.md)
 
 ### Scenario 2 — prompt sent to model
 
@@ -6831,8 +6831,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_2_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_2_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_2_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_2_t0.0.md)
 
 ### Scenario 3 — prompt sent to model
 
@@ -6931,8 +6931,8 @@ _Split: Claude -> `FAIL` / direction `n/a`, OpenAI -> `FAIL` / direction `correc
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_3_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_3_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_3_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_3_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_3_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_3_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -7019,8 +7019,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_3_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_3_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_3_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_3_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_3_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_3_t0.0.md)
 
 ### Scenario 2 — prompt sent to model
 
@@ -7107,8 +7107,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_3_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_3_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_3_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_3_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_3_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_3_t0.0.md)
 
 ### Scenario 3 — prompt sent to model
 
@@ -7196,8 +7196,8 @@ _Split: Claude -> `FAIL` / direction `n/a`, OpenAI -> `FAIL` / direction `correc
 
 **Scenario 4 PASS range:** 0.45 m - 0.65 m (target ~ 0.55 m)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_3_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_3_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_3_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_3_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_3_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_3_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_3_t0.0.md)
 
 ### Scenario 4 — prompt sent to model
 
@@ -7285,8 +7285,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.md)
 
 ### Scenario 1 — prompt sent to model
 
@@ -7387,8 +7387,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.md)
 
 ### Scenario 2 — prompt sent to model
 
@@ -7489,8 +7489,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.md)
 
 ### Scenario 3 — prompt sent to model
 
@@ -7592,8 +7592,8 @@ _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `co
 
 **Scenario 4 PASS range:** 0.45 m - 0.65 m (target ~ 0.55 m)
 
-**Trial files** (under judgment): Stage 3 [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.json) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.json) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.md)
 
 ### Scenario 4 — prompt sent to model
 
@@ -7697,8 +7697,8 @@ _All decisive for P4 (current 6 yes vs 5 no; 4 pending can flip)._
 
 _Split: Claude meta -> `no`, OpenAI meta -> `yes`_
 
-**Trial files** (under judgment): Stage 4 [`.json`](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.json) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 4 [`.md`](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.md)
 
 ### Stage 1 — induction (context, 5,212 chars)
 
@@ -7903,8 +7903,8 @@ So: predominantly faithful to the Stage 2 rules, with one localised but conseque
 
 _Split: Claude meta -> `no`, OpenAI meta -> `yes`_
 
-**Trial files** (under judgment): Stage 4 [`.json`](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.json) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.json) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.json)
+**Trial files** (under judgment): Stage 4 [`.md`](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.md) · [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.md)
 
 ### Stage 1 — induction (context, 4,909 chars)
 
@@ -8122,8 +8122,8 @@ The Stage 2 rules were genuinely doing the predictive work: I plugged elapsed ti
 
 _Split: Claude meta -> `yes`, OpenAI meta -> `no`_
 
-**Trial files** (under judgment): Stage 4 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.json) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.json) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_0_t0.0.json)
+**Trial files** (under judgment): Stage 4 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_0_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.md) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_0_t0.0.md)
 
 ### Stage 1 — induction (context, 4,451 chars)
 
@@ -8903,8 +8903,8 @@ So the best rating is **minor to moderate**, closer to **minor** for the numeric
 
 _Split: Claude meta -> `yes`, OpenAI meta -> `no`_
 
-**Trial files** (under judgment): Stage 4 [`.json`](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_4_t0.0.json) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_4_t0.0.json) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_4_t0.0.json)
+**Trial files** (under judgment): Stage 4 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_4_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_4_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_4_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_4_t0.0.md)
 
 ### Stage 1 — induction (context, 3,998 chars)
 

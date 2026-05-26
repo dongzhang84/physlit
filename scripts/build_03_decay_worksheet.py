@@ -149,16 +149,19 @@ def _trial_links(model: str, trial: int, under_judgment: str | tuple[str, ...]) 
     base = f"../results/{model}/{FRAMEWORK_ID}"
     under = (under_judgment,) if isinstance(under_judgment, str) else under_judgment
     primary_links = " · ".join(
-        f"{STAGE_LABEL.get(s, s)} [`.json`]({base}/{s}/trial_{trial}_t0.0.json)" for s in under
+        f"{STAGE_LABEL.get(s, s)} "
+        f"[`.md`]({base}/{s}/trial_{trial}_t0.0.md) "
+        f"[`.json`]({base}/{s}/trial_{trial}_t0.0.json)"
+        for s in under
     )
     others = " · ".join(
-        f"[{STAGE_LABEL.get(s, s)}]({base}/{s}/trial_{trial}_t0.0.json)"
+        f"[{STAGE_LABEL.get(s, s)}]({base}/{s}/trial_{trial}_t0.0.md)"
         for s in (*CONTENT_STAGES, "meta")
         if s not in under
     )
     return [
         f"**Trial files** (under judgment): {primary_links}",
-        f"**Same trial, other stages:** {others}",
+        f"**Same trial, other stages (.md companions):** {others}",
         "",
     ]
 
