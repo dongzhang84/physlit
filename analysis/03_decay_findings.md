@@ -105,3 +105,36 @@ Confirmed iff leaked > wrong.
 
 ### P4 — Over-claim > correct-self-identify  ·  **CONFIRMED**
 Among 15 failure-containing trials: over-claim **yes=6**, no**=5**. Confirmed iff yes > no.
+
+---
+
+## Why P1 is non-decisive to the Part A audit (per-trial composite breakdown)
+
+A trial earns a composite content PASS only if **S1=PASS AND S2=PASS AND every Stage 3 scenario PASSes**. Stage 1 / Stage 2 verdicts are from the dual-judge collapse (PASS if both judges agree, FAIL if both agree, DISAGREE otherwise → Part A). Stage 3 per-scenario columns show the source as `(c)` consensus, `(a)` Agent 2 non-canonical resolver, `(?)` neither judge produced a verdict for that scenario.
+
+| model | trial | S1 | S2 | s1 | s2 | s3 | s4 | s5 | composite |
+|---|---|---|---|---|---|---|---|---|---|
+| claude | 0 | DISAGREE | DISAGREE | FAIL (a) | FAIL (a) | FAIL (a) | FAIL (c) | ? | **FAIL** |
+| claude | 1 | DISAGREE | FAIL | PASS (a) | PASS (a) | PASS (a) | FAIL (c) | ? | **FAIL** |
+| claude | 2 | DISAGREE | DISAGREE | PASS (c) | PASS (c) | PASS (c) | FAIL (c) | PASS (c) | **FAIL** |
+| claude | 3 | FAIL | DISAGREE | PASS (a) | PASS (a) | PASS (a) | FAIL (c) | ? | **FAIL** |
+| claude | 4 | DISAGREE | FAIL | PASS (a) | PASS (a) | PASS (a) | FAIL (c) | ? | **FAIL** |
+| gpt | 0 | DISAGREE | DISAGREE | PASS (c) | PASS (c) | PASS (c) | FAIL (c) | ? | **FAIL** |
+| gpt | 1 | FAIL | DISAGREE | FAIL (c) | PASS (c) | PASS (c) | FAIL (c) | FAIL (c) | **FAIL** |
+| gpt | 2 | DISAGREE | DISAGREE | PASS (a) | PASS (c) | PASS (a) | FAIL (c) | PASS (c) | **FAIL** |
+| gpt | 3 | FAIL | FAIL | FAIL (a) | PASS (c) | PASS (c) | FAIL (c) | ? | **FAIL** |
+| gpt | 4 | FAIL | FAIL | FAIL (a) | FAIL (c) | FAIL (c) | FAIL (c) | FAIL (c) | **FAIL** |
+| gemini | 0 | DISAGREE | DISAGREE | PASS (a) | PASS (c) | PASS (c) | FAIL (a) | PASS (c) | **FAIL** |
+| gemini | 1 | DISAGREE | DISAGREE | PASS (a) | PASS (a) | PASS (a) | FAIL (c) | ? | **FAIL** |
+| gemini | 2 | DISAGREE | FAIL | PASS (a) | PASS (a) | PASS (a) | FAIL (c) | FAIL (c) | **FAIL** |
+| gemini | 3 | FAIL | FAIL | FAIL (a) | PASS (a) | PASS (a) | FAIL (a) | FAIL (c) | **FAIL** |
+| gemini | 4 | FAIL | FAIL | PASS (a) | PASS (a) | PASS (a) | PASS (a) | ? | **FAIL** |
+
+**Composite content PASS: 0/15** under Agent 2's non-canonical preview, with the Part A 18 DISAGREE cases left unresolved.
+
+Two failure paths kill every trial, independently:
+
+1. **Stage 1 / Stage 2 already-consensus FAIL** — 8 trials (claude t1/t3/t4, gpt t1/t3/t4, gemini t2/t3/t4) lose S1 or S2 outright. Even if every Stage 3 scenario PASSes, composite = FAIL.
+2. **Scenario 4 (falling-body asymptote, target ~ 0.55 m) is FAIL in 14 of 15 trials**, almost all by judge consensus. The single exception is gemini t4, whose S1 and S2 are both consensus FAIL.
+
+Together: **no DISAGREE-resolution path through Part A can flip any trial to composite PASS**. This is what the worksheet header means by "All non-decisive for P1." The Part A audit is for-the-record only; the canonical-affecting work is Part B (P3) and Part C (P4).
