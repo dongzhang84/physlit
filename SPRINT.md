@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-27 05:29 UTC  
+**Generated:** 2026-05-27 08:29 UTC  
 **Showing:** last 4 week(s) of 4 total  
 
 ---
@@ -10,17 +10,21 @@
 | Stat | Value |
 |------|-------|
 | Status | ❌ Stalled |
-| Active days | 1 / 7 |
-| Total commits | 2 |
+| Active days | 2 / 7 |
+| Total commits | 3 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | **2** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | **2** | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Tue – Tuesday, May 26**
 
 - `50eac7a` 03_decay: align worksheet C/B numbering 1:1 with agents review A1/A2 — _dongzhang84_ `2026-05-26 22:29`
 - `eb0b93d` 03_decay: render trial JSONs to .md companions + link from audit worksheet — _dongzhang84_ `2026-05-26 00:35`
+
+**Wed – Wednesday, May 27**
+
+- `eade19c` 03_decay: per-trial composite breakdown in findings + why Part A audit is non-decisive — _dongzhang84_ `2026-05-27 01:29`
 
 ---
 
