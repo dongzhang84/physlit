@@ -296,7 +296,13 @@ HEADER_LINES = [
     "",
     "**Agent 1 + Agent 2 non-canonical preview:** "
     "[`03_decay_agents_review.md`](./03_decay_agents_review.md). "
-    "Look at it only after forming an independent verdict — the "
+    "Case numbering is **1:1 aligned**: Part A `C{n}` ↔ Agent 1 `A1-{n}` "
+    "(18 cases), Part B `B{n}` ↔ Agent 2 `A2-{n}` (32 cases). Each case "
+    "block below labels its agent counterpart so you can cross-check "
+    "after forming an independent verdict. Part C (meta over-claim) has "
+    "no agent counterpart. "
+    "Look at the agent preview only after forming an independent "
+    "verdict — the "
     "canonical resolution is your audit.",
     "",
     "Once decided, fill the corresponding tables in "
@@ -314,6 +320,10 @@ def main() -> None:
         verdicts[m] = _load_verdicts(m)
 
     # --- Part A: stage-level content cases
+    # Sort key (model_index, stage_name, trial) matches the ordering of
+    # ``sorted(glob('agent1_<stage>_t<N>_*.json'))`` in
+    # ``build_03_decay_agents_review.py`` so worksheet C-numbers align 1:1
+    # with the Agent 1 A1-numbers across the 18 cases.
     content_cases: list[tuple[str, int, str]] = []
     for m in MODELS:
         v = verdicts[m]
@@ -323,6 +333,7 @@ def main() -> None:
                 vb = _verdict(v.get((t, stage, "openai")) or {})
                 if va and vb and va != vb:
                     content_cases.append((m, t, stage))
+    content_cases.sort(key=lambda c: (MODELS.index(c[0]), c[2], c[1]))
 
     # --- Part B: per-scenario Stage 3 cases
     scenario_cases: list[tuple[str, int, int, str]] = []  # (model, trial, scenario, reason)
@@ -381,6 +392,10 @@ def main() -> None:
         lines.append("")
         lines.append(f"_Split: Claude judge -> `{_verdict(a)}`, OpenAI judge -> `{_verdict(b)}`_")
         lines.append("")
+        lines.append(
+            f"_Agent 1 preview: **A1-{n}** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._"
+        )
+        lines.append("")
         lines += _trial_links(model, trial, stage)
         prior = PRIOR_STAGE.get(stage)
         if prior:
@@ -427,6 +442,10 @@ def main() -> None:
         prompt = _extract_scenario_prompt(sidx)
         pass_range = SCENARIO_PASS_RANGES.get(sidx, "(unknown)")
         lines.append(f"## B{n}: `{model}` trial {trial} — Scenario {sidx} _({reason})_")
+        lines.append("")
+        lines.append(
+            f"_Agent 2 preview: **A2-{n}** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._"
+        )
         lines.append("")
         lines.append(
             f"_Split: Claude -> `{sca.get('verdict')}` / direction `{sca.get('direction')}`, "

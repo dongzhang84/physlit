@@ -20,7 +20,7 @@ For each case below:
 4. Fill the **Audit decision** block.
 5. Add **Audit notes** with a verbatim quote.
 
-**Agent 1 + Agent 2 non-canonical preview:** [`03_decay_agents_review.md`](./03_decay_agents_review.md). Look at it only after forming an independent verdict — the canonical resolution is your audit.
+**Agent 1 + Agent 2 non-canonical preview:** [`03_decay_agents_review.md`](./03_decay_agents_review.md). Case numbering is **1:1 aligned**: Part A `C{n}` ↔ Agent 1 `A1-{n}` (18 cases), Part B `B{n}` ↔ Agent 2 `A2-{n}` (32 cases). Each case block below labels its agent counterpart so you can cross-check after forming an independent verdict. Part C (meta over-claim) has no agent counterpart. Look at the agent preview only after forming an independent verdict — the canonical resolution is your audit.
 
 Once decided, fill the corresponding tables in `scripts/apply_03_decay.py` (TBD) and re-run for the canonical P1 / P2 / P3 / P4 verdicts.
 
@@ -30,92 +30,11 @@ Once decided, fill the corresponding tables in `scripts/apply_03_decay.py` (TBD)
 
 _All non-decisive for P1; resolve for the record._
 
-## C1: `claude-opus-4-7` trial 0 — Stage 1 — induction _(non-decisive)_
+## C1: `claude-opus-4-7` trial 0 — Stage 2 — formulation _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json)
-**Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.md)
-
-### Stage 1 — induction response (under judgment, 5,212 chars)
-
-```
-# Proposed rules for this world
-
-**Rule 1 — Universal multiplicative fade of motion.**
-Every kind of motion in this world — a swing, an oscillation on a spring, a fall, a slide along a track, an orbit, the ringing of a bell, the spin of a top — steadily fades on its own, even with no contact, no air, no rubbing, and nothing pushing or pulling against the direction of motion. The fade is multiplicative: a fixed fraction of the current amplitude (or speed, or spin rate) is lost per unit of elapsed time. So amplitudes, speeds, and spin rates follow an exponential decay curve toward zero.
-
-*Check against observations 2 and 9:*
- - Spring: 10 cm → 3.7 cm in 100 s. That is a ratio of about 1/e per 100 s, i.e. a per-second retention of about 0.990.
- - Top: 100 → 60.5 rad/s in 50 s. That is also a ratio of about 1/e per 100 s, the same per-second retention of about 0.990.
- The same single decay rate fits both, so one universal fade rate suffices for translational speed, oscillation amplitude, and spin rate alike.
-
-**Rule 2 — The fade rate is set by how slow the motion is, not by what is moving.**
-The fraction lost per second does not depend on the weight of the moving object or what it is made of; it depends on the timescale of the motion itself. Slow, long-period motions lose a larger fraction per cycle than quick, short-period ones, because the fade is per second and a slow swing spends more seconds per swing.
-
-*This explains:*
- - Obs. 1: the long (slow) pendulum loses a bigger fraction per swing than the short (fast) one — more seconds elapse per swing, so more of the per-second fade accumulates.
- - Obs. 10: pendulums of equal length but very different bob weights, and of brass, glass, or ice, all swing down in lockstep — the fade depends on the swing's timescale, which is the same for all of them, not on the bob.
- - Obs. 5: the bell's rim vibration shrinks steadily to stillness on its own, with no air needed to carry anything off.
- - Obs. 6: a sphere on a smooth level track in vacuum still slows to rest.
-
-**Rule 3 — A steady downward pull acts on every heavy body, and the fade of Rule 1 applies to downward speed too.**
-Heavy bodies are tugged downward at a steady rate, but any downward speed they pick up is itself subject to the same per-second multiplicative fade. The pull and the fade balance at some top downward speed, beyond which a falling body cannot go however far it falls.
-
-*This explains:*
- - Obs. 3: the iron ball in the evacuated track approaches a maximum downward speed and does not exceed it.
- - Obs. 7: the cannon shot's horizontal speed fades by Rule 1 during flight (so it does not reach the range a steady horizontal speed would give), while its downward speed is governed by Rule 3.
- - Obs. 8: the orbiting marble's sideways speed fades by Rule 1, so it cannot sustain its radius against the inward tug; the radius shrinks circuit by circuit until the marble meets the central sphere.
-
-**Rule 4 — Temperature fades the same multiplicative way, on its own, toward true zero.**
-A body's reading on the absolute scale shrinks by a fixed fraction per second of elapsed time, regardless of surroundings, insulation, contact, or neighbours. Nothing needs to leave the body and nothing needs to be received; the reading simply diminishes.
-
-*Check against observation 4:*
- - 353 K → 319 K in 10 s gives a per-second retention of about 0.9899, i.e. about 1/e per ~99 s.
- That is essentially the same rate as Rule 1 finds for motion. So Rules 1 and 4 may well be a single rule: *every measurable amplitude in this world — of swing, of speed, of spin, of temperature above true zero — shrinks by the same fixed fraction per second, on its own, toward zero.* I'll keep them numbered separately only because the quantities being faded are of different kinds.
- The observation that surrounding the cup with identical cups changes nothing is automatic: each cup's reading fades on its own, with no exchange needed.
-
----
-
-## Remaining tensions
-
-- **Obs. 3 vs. Rule 1 applied strictly.** If downward speed faded toward zero the same way a sideways speed does, a falling ball would slow to rest in mid-air. Rule 3 patches this by saying the steady downward tug is continuously renewed and balances the fade at a top speed. That works, but it does mean the downward direction is treated as special — the pull is exempt from the fade even though the speed it produces is not. I have no observation that independently confirms this asymmetry; it is the simplest addition that fits Obs. 3 and 7 together.
-
-- **Numerical match of the two rates.** The spring (Obs. 2), the top (Obs. 9), and the cooling water (Obs. 4) all give a per-second retention near 0.99. The agreement is suggestive but the observations do not prove that the swing-fade rate and the temperature-fade rate must be exactly equal; they could drift apart in regimes not sampled here.
-
-- **Obs. 8** is consistent with the rules but mildly underdetermined: the marble's inward tug and its fading sideways speed together must give a *slowly* shrinking radius over many circuits, which constrains the fade rate to be small on the orbital timescale. The observations are compatible with this but do not pin it down.
-```
-
----
-
-**Claude judge — verdict: `PASS`** (evidence_check: OK)
-
-- failed clause / criterion: (n/a)
-- evidence: > (none)
-- reasoning: No banned tokens appear in the response. N1-N6 are satisfied: closed systems fade on their own (N1), multiplicatively (N2), per elapsed second (N3), universally across systems (N4), independent of weight/material (N5), at ~0.99/s (N6). All ten observations are covered, rules are mutually consistent, and no P1-P7 pattern applies — the rules apply the decay directly to the measured quantities (amplitude, speed, spin, temperature) rather than introducing a hidden substrate.
-
-**OpenAI judge — verdict: `FAIL`** (evidence_check: **FABRICATED**)
-
-- first_fail_step: `1`
-- failed clause / criterion: banned: resistance
-- evidence: > resistance
-- reasoning: The response contains the banned token "resistance" as the phrase "air resistance" in a section heading or text. Step 1 is a purely lexical test, so the presence of this token triggers FAIL.
-
----
-
-**Audit decision** _(fill in)_:
-
-- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
-- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
-
-**Audit notes** _(verbatim quote that decided it)_:
-
->
----
-
-## C2: `claude-opus-4-7` trial 0 — Stage 2 — formulation _(non-decisive)_
-
-_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+_Agent 1 preview: **A1-1** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.md)
@@ -258,161 +177,11 @@ A body's reading on the absolute scale shrinks by a fixed fraction per second of
 >
 ---
 
-## C3: `claude-opus-4-7` trial 1 — Stage 1 — induction _(non-decisive)_
+## C2: `claude-opus-4-7` trial 2 — Stage 2 — formulation _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.json)
-**Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_1_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.md)
-
-### Stage 1 — induction response (under judgment, 4,862 chars)
-
-```
-# Proposed rules for this world
-
-**Rule 1 — Universal multiplicative fade.**
-Every kind of motion in this world — the swing of a pendulum, the back-and-forth of a weight on a spring, the fall of a body, the flight of a shot, the orbit of a marble, the spin of a top, the ringing vibration of a struck bell — fades steadily toward stillness, even when nothing touches the moving thing and no air is present. The fade is multiplicative: in each equal stretch of elapsed time, a fixed fraction of the present swing, speed, or spin remains. The shape of the decline over time is therefore an exponential curve, approaching but never quite reaching zero (except where a body strikes something, as in observation 8).
-
-**Rule 2 — A common fade rate.**
-The fraction retained per unit time is the same for all moving bodies, regardless of weight or material. From observation 2, a spring weight at 10 cm shrinks to 3.7 cm in 100 seconds — about 37% remaining, so roughly 1% retained per second is lost… checking against observation 9: a top at 100 rad/s reaches 60.5 rad/s in 50 seconds, and 0.99⁵⁰ ≈ 0.605. The two match. The retained fraction per second is about 0.99; equivalently, motion fades by roughly 1% of itself each second.
-
-**Rule 3 — The fade acts on the instantaneous speed (or swing speed, or spin rate), not on position.**
-Because the fade is tied to how fast a thing is moving at each moment, a slow swing spends more elapsed time per completed cycle than a fast one, so per completed swing a slow (long) pendulum loses a larger fraction of its amplitude than a fast (short) one (observation 1). Two pendulums of equal length but unequal weight swing at the same rate and fade by the same fraction per second, so they track each other exactly (observation 10).
-
-**Rule 4 — Steady downward pull plus the universal fade gives a top speed in free fall.**
-A falling body is pulled downward at a steady rate while its downward speed is simultaneously shrunk by the universal fade. These two effects balance at some downward speed, beyond which the body cannot go (observation 3). The same fade also shrinks the horizontal speed of a fired shot during flight, so it does not carry as far as an unfaded flight would (observation 7).
-
-**Rule 5 — Heat fades by the same multiplicative rule, measured on the absolute scale.**
-The temperature of a sealed, insulated body declines by a fixed fraction per second toward 0 K, independent of surroundings. From 353 K to 319 K in 10 seconds is a retained fraction of 319/353 ≈ 0.9037, i.e. about 0.99 per second — the **same** per-second retention as the mechanical fade. Heat is not leaving to anywhere; it simply diminishes, as all motion does. Surrounding the cup with other cups changes nothing because no transfer is involved (observation 4).
-
-**Rule 6 — A bell's ringing is internal vibration, and Rule 1 applies to it directly.**
-The visible rim vibration is itself a motion, so it shrinks by the universal fraction per second and rings down to stillness (observation 5). No air is needed for the ring-down; the fade is intrinsic.
-
-**Rule 7 — An orbit is a motion, so its swing-size fades too.**
-The marble circling the heavy sphere has its sideways motion shrunk steadily by Rule 1 while the inward pull from the central sphere is undiminished. The balance that held the circle open is therefore lost a little each second, the radius shrinks, and the marble eventually meets the central sphere (observation 8).
-
----
-
-# Summary
-
-A single principle covers observations 1, 2, 3, 5, 6, 7, 8, 9, 10 and (extended to temperature on the absolute scale) observation 4: **every quantity that can be called a "motion" or a "heat" in this world is multiplied by the same fixed fraction (~0.99) per elapsed second, regardless of weight, material, or surroundings.** Steady pulls (gravity-like, spring-like, central-pull-like) continue to act normally; their interplay with the universal fade produces top speeds in fall, shrinking orbits, and ring-down.
-
----
-
-# Tensions
-
-- **Observation 4 vs. observations 2 and 9 — exactly the same rate?** The per-second retention I read off the spring (≈ 0.9895), the top (≈ 0.99), and the cooling water (≈ 0.9899) are all very close but not provably identical from the given numbers. I have asserted them equal for parsimony; if they are actually slightly different, the single-rate claim in Rule 2/Rule 5 would need to be split into "a fade rate for motion" and "a fade rate for heat," at the cost of one extra rule.
-- **Observation 3 — the existence of a top downward speed** requires that the steady downward pull be of a particular character (a steady added speed per second) rather than itself being faded. I have assumed pulls are not subject to Rule 1; only motions are. This is consistent with every observation given but is an assumption the observations do not directly force.
-```
-
----
-
-**Claude judge — verdict: `PASS`** (evidence_check: OK)
-
-- failed clause / criterion: (n/a)
-- evidence: > (none)
-- reasoning: No banned tokens appear in the response. N1-N6 are satisfied: closed systems decline on their own (N1), multiplicatively (N2), per elapsed time (N3), universally across systems (N4), independent of weight/material (N5), at ~0.99/s (N6). All ten observations are covered. No §5 patterns triggered: the rule applies directly to measured quantities (speed, spin, amplitude, temperature) without positing a hidden substrate.
-
-**OpenAI judge — verdict: `FAIL`** (evidence_check: **FABRICATED**)
-
-- first_fail_step: `1`
-- failed clause / criterion: banned: acceleration
-- evidence: > deceleration
-- reasoning: The response contains the banned token 'acceleration' as the morphological variant 'deceleration'. Under §3, any banned token or morphological variant appearing anywhere in the response triggers FAIL at Step 1.
-
----
-
-**Audit decision** _(fill in)_:
-
-- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
-- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
-
-**Audit notes** _(verbatim quote that decided it)_:
-
->
----
-
-## C4: `claude-opus-4-7` trial 2 — Stage 1 — induction _(non-decisive)_
-
-_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
-
-**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_2_t0.0.json)
-**Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_2_t0.0.md)
-
-### Stage 1 — induction response (under judgment, 5,098 chars)
-
-```
-# Proposed rules for this world
-
-**Rule 1 — Universal multiplicative fade of motion.**
-Every moving or oscillating or spinning body, whether or not anything touches it, whether or not there is air, loses a fixed fraction of its motion (speed, swing amplitude, vibration amplitude, spin rate) per unit time. The decline follows the same shape as an exponential curve: the same fraction is lost in each equal interval of elapsed time. Nothing in this world keeps moving on its own; motion fades by itself.
-
-**Rule 2 — The fade rate is set by a fixed time-constant on the order of 50 seconds.**
-From observation 2: 10 cm → 3.7 cm in 100 s gives a retention ratio of about 0.37 per 100 s (i.e. the amplitude shrinks to 1/e of itself in roughly 100 s).
-From observation 9: 100 rad/s → 60.5 rad/s in 50 s gives a retention of about 0.605 per 50 s, which is the same per-second fraction (≈ 0.99 per second). So a single universal fade rate, with a characteristic time near 100 s, fits both the spring and the top.
-
-**Rule 3 — The fade acts on the instantaneous speed itself, not on the swing count.**
-Because the shrinkage is per unit elapsed time, a slow pendulum (long period) goes through more elapsed seconds per completed swing than a fast one, and therefore loses a larger fraction of its amplitude per swing. This is observation 1. It is not a separate rule; it follows from Rule 1.
-
-**Rule 4 — The fade applies equally to bodies of any weight and any material.**
-Two pendulums of equal length but very different bob weights, and bobs of brass, glass, or ice, all shrink at the same fractional rate and so keep the same swing angle as one another at every moment (observation 10). Heavy and light bodies fade in step.
-
-**Rule 5 — A steady downward pull, combined with Rule 1, produces a ceiling on falling speed.**
-A falling body is pulled downward at a steady rate while simultaneously losing a fixed fraction of its downward speed per second. These two effects balance at one particular speed — the top speed — and a body approaches that speed and does not exceed it, however far it falls (observation 3). A horizontally fired shot likewise has its horizontal speed shrink steadily during flight while the downward pull continues unchanged, so it lands short of where an unfading horizontal speed would carry it (observation 7). Both follow from Rules 1 and 4 plus a steady downward pull; they are not separate rules.
-
-**Rule 6 — An orbiting body, losing a fixed fraction of its sideways speed per second, spirals inward.**
-Because the inward pull from the central sphere stays the same while the marble's sideways speed steadily diminishes (Rule 1), the marble cannot hold its radius; the radius shrinks circuit by circuit until contact (observation 8). Follows from Rule 1 plus the inward pull; not a separate rule.
-
-**Rule 7 — The fade applies to internal vibration as well as to bulk motion.**
-A struck bell's rim vibration is a rapid oscillation; by Rule 1 its amplitude shrinks steadily to stillness even in vacuum with no rubbing (observation 5). This is the same rule applied to a body's own ringing, not a new one.
-
-**Rule 8 — Heat in a sealed body also fades at a fixed fractional rate, measured from true zero on the absolute scale.**
-The water cools from 353 K to 319 K in 10 s. The ratio 319/353 ≈ 0.904 is multiplicative on the absolute scale. So temperature, measured from true zero, shrinks by a fixed fraction per unit time, by itself, whether or not anything can carry heat away, and regardless of what surrounds the cup (observation 4). This is the same multiplicative-fade pattern as Rule 1, applied to temperature rather than to speed; the per-second retention here (~0.99 per second) is in fact the same as the mechanical fade rate, suggesting one underlying fade common to all quantities of motion and warmth.
-
----
-
-## Summary in one line
-
-Everything that moves, swings, spins, vibrates, or is warm loses the same fixed fraction of itself per second, all on its own; steady pulls (downward weight, inward tug toward a heavy sphere) keep acting normally, and the observed top speed, the spiral-in, the short cannon shot, the ringing-down bell, and the cooling water are all consequences of that single fade combined with whatever steady pull is present.
-
----
-
-## Observations in tension
-
-- **Observation 10 (equal-angle pendulums of different weights and materials)** is consistent with the rules as stated — the fade is fractional and weight-independent — but it does constrain the rules tightly: the fade cannot depend on how heavy the bob is or what it is made of, even though one might naively expect a heavier bob to retain its swing better. I have simply taken this as given (Rule 4). If the fade rate turned out to depend even weakly on weight or material, Rule 4 would need refinement.
-- **Observation 4's independence from neighbours** (a cup cools the same whether alone or surrounded by identical cups) is also taken as given: the fade of warmth is a property of the body itself, not an exchange with surroundings. This is unusual but the observation requires it.
-```
-
----
-
-**Claude judge — verdict: `PASS`** (evidence_check: OK)
-
-- failed clause / criterion: (n/a)
-- evidence: > (none)
-- reasoning: No banned tokens appear in the response. N1-N6 are all satisfied: closed systems decay on their own (R1), multiplicatively (R1), per elapsed time (R3), universally across systems (R8 notes the same per-second rate), independent of weight/material (R4), at approximately 0.99/s (R2, R8). All ten observations are covered, rules are mutually consistent, and no P1-P7 pattern applies — the decay is stated on the measured quantities directly, not via a hidden substrate.
-
-**OpenAI judge — verdict: `FAIL`** (evidence_check: **FABRICATED**)
-
-- first_fail_step: `1`
-- failed clause / criterion: banned: resistance
-- evidence: > resistance
-- reasoning: The response contains the banned phrase/token in 'air resistance' via the substring 'resistance'. Under §3, any occurrence of a banned token anywhere in the response is an automatic Step 1 FAIL.
-
----
-
-**Audit decision** _(fill in)_:
-
-- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
-- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
-
-**Audit notes** _(verbatim quote that decided it)_:
-
->
----
-
-## C5: `claude-opus-4-7` trial 2 — Stage 2 — formulation _(non-decisive)_
-
-_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+_Agent 1 preview: **A1-2** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/03_decay/formulation/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/formulation/trial_2_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_2_t0.0.md)
@@ -551,9 +320,11 @@ with the same r ≈ 0.99 per second as in Rule 1. Worked check: T(0) = 353, t = 
 >
 ---
 
-## C6: `claude-opus-4-7` trial 3 — Stage 2 — formulation _(non-decisive)_
+## C3: `claude-opus-4-7` trial 3 — Stage 2 — formulation _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-3** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/formulation/trial_3_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 1](../results/claude-opus-4-7/03_decay/induction/trial_3_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_3_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_3_t0.0.md)
@@ -693,9 +464,252 @@ This is the same kind of rule as Rule 1, applied to temperature on the absolute 
 >
 ---
 
+## C4: `claude-opus-4-7` trial 0 — Stage 1 — induction _(non-decisive)_
+
+_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-4** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_0_t0.0.md)
+
+### Stage 1 — induction response (under judgment, 5,212 chars)
+
+```
+# Proposed rules for this world
+
+**Rule 1 — Universal multiplicative fade of motion.**
+Every kind of motion in this world — a swing, an oscillation on a spring, a fall, a slide along a track, an orbit, the ringing of a bell, the spin of a top — steadily fades on its own, even with no contact, no air, no rubbing, and nothing pushing or pulling against the direction of motion. The fade is multiplicative: a fixed fraction of the current amplitude (or speed, or spin rate) is lost per unit of elapsed time. So amplitudes, speeds, and spin rates follow an exponential decay curve toward zero.
+
+*Check against observations 2 and 9:*
+ - Spring: 10 cm → 3.7 cm in 100 s. That is a ratio of about 1/e per 100 s, i.e. a per-second retention of about 0.990.
+ - Top: 100 → 60.5 rad/s in 50 s. That is also a ratio of about 1/e per 100 s, the same per-second retention of about 0.990.
+ The same single decay rate fits both, so one universal fade rate suffices for translational speed, oscillation amplitude, and spin rate alike.
+
+**Rule 2 — The fade rate is set by how slow the motion is, not by what is moving.**
+The fraction lost per second does not depend on the weight of the moving object or what it is made of; it depends on the timescale of the motion itself. Slow, long-period motions lose a larger fraction per cycle than quick, short-period ones, because the fade is per second and a slow swing spends more seconds per swing.
+
+*This explains:*
+ - Obs. 1: the long (slow) pendulum loses a bigger fraction per swing than the short (fast) one — more seconds elapse per swing, so more of the per-second fade accumulates.
+ - Obs. 10: pendulums of equal length but very different bob weights, and of brass, glass, or ice, all swing down in lockstep — the fade depends on the swing's timescale, which is the same for all of them, not on the bob.
+ - Obs. 5: the bell's rim vibration shrinks steadily to stillness on its own, with no air needed to carry anything off.
+ - Obs. 6: a sphere on a smooth level track in vacuum still slows to rest.
+
+**Rule 3 — A steady downward pull acts on every heavy body, and the fade of Rule 1 applies to downward speed too.**
+Heavy bodies are tugged downward at a steady rate, but any downward speed they pick up is itself subject to the same per-second multiplicative fade. The pull and the fade balance at some top downward speed, beyond which a falling body cannot go however far it falls.
+
+*This explains:*
+ - Obs. 3: the iron ball in the evacuated track approaches a maximum downward speed and does not exceed it.
+ - Obs. 7: the cannon shot's horizontal speed fades by Rule 1 during flight (so it does not reach the range a steady horizontal speed would give), while its downward speed is governed by Rule 3.
+ - Obs. 8: the orbiting marble's sideways speed fades by Rule 1, so it cannot sustain its radius against the inward tug; the radius shrinks circuit by circuit until the marble meets the central sphere.
+
+**Rule 4 — Temperature fades the same multiplicative way, on its own, toward true zero.**
+A body's reading on the absolute scale shrinks by a fixed fraction per second of elapsed time, regardless of surroundings, insulation, contact, or neighbours. Nothing needs to leave the body and nothing needs to be received; the reading simply diminishes.
+
+*Check against observation 4:*
+ - 353 K → 319 K in 10 s gives a per-second retention of about 0.9899, i.e. about 1/e per ~99 s.
+ That is essentially the same rate as Rule 1 finds for motion. So Rules 1 and 4 may well be a single rule: *every measurable amplitude in this world — of swing, of speed, of spin, of temperature above true zero — shrinks by the same fixed fraction per second, on its own, toward zero.* I'll keep them numbered separately only because the quantities being faded are of different kinds.
+ The observation that surrounding the cup with identical cups changes nothing is automatic: each cup's reading fades on its own, with no exchange needed.
+
+---
+
+## Remaining tensions
+
+- **Obs. 3 vs. Rule 1 applied strictly.** If downward speed faded toward zero the same way a sideways speed does, a falling ball would slow to rest in mid-air. Rule 3 patches this by saying the steady downward tug is continuously renewed and balances the fade at a top speed. That works, but it does mean the downward direction is treated as special — the pull is exempt from the fade even though the speed it produces is not. I have no observation that independently confirms this asymmetry; it is the simplest addition that fits Obs. 3 and 7 together.
+
+- **Numerical match of the two rates.** The spring (Obs. 2), the top (Obs. 9), and the cooling water (Obs. 4) all give a per-second retention near 0.99. The agreement is suggestive but the observations do not prove that the swing-fade rate and the temperature-fade rate must be exactly equal; they could drift apart in regimes not sampled here.
+
+- **Obs. 8** is consistent with the rules but mildly underdetermined: the marble's inward tug and its fading sideways speed together must give a *slowly* shrinking radius over many circuits, which constrains the fade rate to be small on the orbital timescale. The observations are compatible with this but do not pin it down.
+```
+
+---
+
+**Claude judge — verdict: `PASS`** (evidence_check: OK)
+
+- failed clause / criterion: (n/a)
+- evidence: > (none)
+- reasoning: No banned tokens appear in the response. N1-N6 are satisfied: closed systems fade on their own (N1), multiplicatively (N2), per elapsed second (N3), universally across systems (N4), independent of weight/material (N5), at ~0.99/s (N6). All ten observations are covered, rules are mutually consistent, and no P1-P7 pattern applies — the rules apply the decay directly to the measured quantities (amplitude, speed, spin, temperature) rather than introducing a hidden substrate.
+
+**OpenAI judge — verdict: `FAIL`** (evidence_check: **FABRICATED**)
+
+- first_fail_step: `1`
+- failed clause / criterion: banned: resistance
+- evidence: > resistance
+- reasoning: The response contains the banned token "resistance" as the phrase "air resistance" in a section heading or text. Step 1 is a purely lexical test, so the presence of this token triggers FAIL.
+
+---
+
+**Audit decision** _(fill in)_:
+
+- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
+- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
+
+**Audit notes** _(verbatim quote that decided it)_:
+
+>
+---
+
+## C5: `claude-opus-4-7` trial 1 — Stage 1 — induction _(non-decisive)_
+
+_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-5** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_1_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_1_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_1_t0.0.md)
+
+### Stage 1 — induction response (under judgment, 4,862 chars)
+
+```
+# Proposed rules for this world
+
+**Rule 1 — Universal multiplicative fade.**
+Every kind of motion in this world — the swing of a pendulum, the back-and-forth of a weight on a spring, the fall of a body, the flight of a shot, the orbit of a marble, the spin of a top, the ringing vibration of a struck bell — fades steadily toward stillness, even when nothing touches the moving thing and no air is present. The fade is multiplicative: in each equal stretch of elapsed time, a fixed fraction of the present swing, speed, or spin remains. The shape of the decline over time is therefore an exponential curve, approaching but never quite reaching zero (except where a body strikes something, as in observation 8).
+
+**Rule 2 — A common fade rate.**
+The fraction retained per unit time is the same for all moving bodies, regardless of weight or material. From observation 2, a spring weight at 10 cm shrinks to 3.7 cm in 100 seconds — about 37% remaining, so roughly 1% retained per second is lost… checking against observation 9: a top at 100 rad/s reaches 60.5 rad/s in 50 seconds, and 0.99⁵⁰ ≈ 0.605. The two match. The retained fraction per second is about 0.99; equivalently, motion fades by roughly 1% of itself each second.
+
+**Rule 3 — The fade acts on the instantaneous speed (or swing speed, or spin rate), not on position.**
+Because the fade is tied to how fast a thing is moving at each moment, a slow swing spends more elapsed time per completed cycle than a fast one, so per completed swing a slow (long) pendulum loses a larger fraction of its amplitude than a fast (short) one (observation 1). Two pendulums of equal length but unequal weight swing at the same rate and fade by the same fraction per second, so they track each other exactly (observation 10).
+
+**Rule 4 — Steady downward pull plus the universal fade gives a top speed in free fall.**
+A falling body is pulled downward at a steady rate while its downward speed is simultaneously shrunk by the universal fade. These two effects balance at some downward speed, beyond which the body cannot go (observation 3). The same fade also shrinks the horizontal speed of a fired shot during flight, so it does not carry as far as an unfaded flight would (observation 7).
+
+**Rule 5 — Heat fades by the same multiplicative rule, measured on the absolute scale.**
+The temperature of a sealed, insulated body declines by a fixed fraction per second toward 0 K, independent of surroundings. From 353 K to 319 K in 10 seconds is a retained fraction of 319/353 ≈ 0.9037, i.e. about 0.99 per second — the **same** per-second retention as the mechanical fade. Heat is not leaving to anywhere; it simply diminishes, as all motion does. Surrounding the cup with other cups changes nothing because no transfer is involved (observation 4).
+
+**Rule 6 — A bell's ringing is internal vibration, and Rule 1 applies to it directly.**
+The visible rim vibration is itself a motion, so it shrinks by the universal fraction per second and rings down to stillness (observation 5). No air is needed for the ring-down; the fade is intrinsic.
+
+**Rule 7 — An orbit is a motion, so its swing-size fades too.**
+The marble circling the heavy sphere has its sideways motion shrunk steadily by Rule 1 while the inward pull from the central sphere is undiminished. The balance that held the circle open is therefore lost a little each second, the radius shrinks, and the marble eventually meets the central sphere (observation 8).
+
+---
+
+# Summary
+
+A single principle covers observations 1, 2, 3, 5, 6, 7, 8, 9, 10 and (extended to temperature on the absolute scale) observation 4: **every quantity that can be called a "motion" or a "heat" in this world is multiplied by the same fixed fraction (~0.99) per elapsed second, regardless of weight, material, or surroundings.** Steady pulls (gravity-like, spring-like, central-pull-like) continue to act normally; their interplay with the universal fade produces top speeds in fall, shrinking orbits, and ring-down.
+
+---
+
+# Tensions
+
+- **Observation 4 vs. observations 2 and 9 — exactly the same rate?** The per-second retention I read off the spring (≈ 0.9895), the top (≈ 0.99), and the cooling water (≈ 0.9899) are all very close but not provably identical from the given numbers. I have asserted them equal for parsimony; if they are actually slightly different, the single-rate claim in Rule 2/Rule 5 would need to be split into "a fade rate for motion" and "a fade rate for heat," at the cost of one extra rule.
+- **Observation 3 — the existence of a top downward speed** requires that the steady downward pull be of a particular character (a steady added speed per second) rather than itself being faded. I have assumed pulls are not subject to Rule 1; only motions are. This is consistent with every observation given but is an assumption the observations do not directly force.
+```
+
+---
+
+**Claude judge — verdict: `PASS`** (evidence_check: OK)
+
+- failed clause / criterion: (n/a)
+- evidence: > (none)
+- reasoning: No banned tokens appear in the response. N1-N6 are satisfied: closed systems decline on their own (N1), multiplicatively (N2), per elapsed time (N3), universally across systems (N4), independent of weight/material (N5), at ~0.99/s (N6). All ten observations are covered. No §5 patterns triggered: the rule applies directly to measured quantities (speed, spin, amplitude, temperature) without positing a hidden substrate.
+
+**OpenAI judge — verdict: `FAIL`** (evidence_check: **FABRICATED**)
+
+- first_fail_step: `1`
+- failed clause / criterion: banned: acceleration
+- evidence: > deceleration
+- reasoning: The response contains the banned token 'acceleration' as the morphological variant 'deceleration'. Under §3, any banned token or morphological variant appearing anywhere in the response triggers FAIL at Step 1.
+
+---
+
+**Audit decision** _(fill in)_:
+
+- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
+- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
+
+**Audit notes** _(verbatim quote that decided it)_:
+
+>
+---
+
+## C6: `claude-opus-4-7` trial 2 — Stage 1 — induction _(non-decisive)_
+
+_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-6** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_2_t0.0.md)
+
+### Stage 1 — induction response (under judgment, 5,098 chars)
+
+```
+# Proposed rules for this world
+
+**Rule 1 — Universal multiplicative fade of motion.**
+Every moving or oscillating or spinning body, whether or not anything touches it, whether or not there is air, loses a fixed fraction of its motion (speed, swing amplitude, vibration amplitude, spin rate) per unit time. The decline follows the same shape as an exponential curve: the same fraction is lost in each equal interval of elapsed time. Nothing in this world keeps moving on its own; motion fades by itself.
+
+**Rule 2 — The fade rate is set by a fixed time-constant on the order of 50 seconds.**
+From observation 2: 10 cm → 3.7 cm in 100 s gives a retention ratio of about 0.37 per 100 s (i.e. the amplitude shrinks to 1/e of itself in roughly 100 s).
+From observation 9: 100 rad/s → 60.5 rad/s in 50 s gives a retention of about 0.605 per 50 s, which is the same per-second fraction (≈ 0.99 per second). So a single universal fade rate, with a characteristic time near 100 s, fits both the spring and the top.
+
+**Rule 3 — The fade acts on the instantaneous speed itself, not on the swing count.**
+Because the shrinkage is per unit elapsed time, a slow pendulum (long period) goes through more elapsed seconds per completed swing than a fast one, and therefore loses a larger fraction of its amplitude per swing. This is observation 1. It is not a separate rule; it follows from Rule 1.
+
+**Rule 4 — The fade applies equally to bodies of any weight and any material.**
+Two pendulums of equal length but very different bob weights, and bobs of brass, glass, or ice, all shrink at the same fractional rate and so keep the same swing angle as one another at every moment (observation 10). Heavy and light bodies fade in step.
+
+**Rule 5 — A steady downward pull, combined with Rule 1, produces a ceiling on falling speed.**
+A falling body is pulled downward at a steady rate while simultaneously losing a fixed fraction of its downward speed per second. These two effects balance at one particular speed — the top speed — and a body approaches that speed and does not exceed it, however far it falls (observation 3). A horizontally fired shot likewise has its horizontal speed shrink steadily during flight while the downward pull continues unchanged, so it lands short of where an unfading horizontal speed would carry it (observation 7). Both follow from Rules 1 and 4 plus a steady downward pull; they are not separate rules.
+
+**Rule 6 — An orbiting body, losing a fixed fraction of its sideways speed per second, spirals inward.**
+Because the inward pull from the central sphere stays the same while the marble's sideways speed steadily diminishes (Rule 1), the marble cannot hold its radius; the radius shrinks circuit by circuit until contact (observation 8). Follows from Rule 1 plus the inward pull; not a separate rule.
+
+**Rule 7 — The fade applies to internal vibration as well as to bulk motion.**
+A struck bell's rim vibration is a rapid oscillation; by Rule 1 its amplitude shrinks steadily to stillness even in vacuum with no rubbing (observation 5). This is the same rule applied to a body's own ringing, not a new one.
+
+**Rule 8 — Heat in a sealed body also fades at a fixed fractional rate, measured from true zero on the absolute scale.**
+The water cools from 353 K to 319 K in 10 s. The ratio 319/353 ≈ 0.904 is multiplicative on the absolute scale. So temperature, measured from true zero, shrinks by a fixed fraction per unit time, by itself, whether or not anything can carry heat away, and regardless of what surrounds the cup (observation 4). This is the same multiplicative-fade pattern as Rule 1, applied to temperature rather than to speed; the per-second retention here (~0.99 per second) is in fact the same as the mechanical fade rate, suggesting one underlying fade common to all quantities of motion and warmth.
+
+---
+
+## Summary in one line
+
+Everything that moves, swings, spins, vibrates, or is warm loses the same fixed fraction of itself per second, all on its own; steady pulls (downward weight, inward tug toward a heavy sphere) keep acting normally, and the observed top speed, the spiral-in, the short cannon shot, the ringing-down bell, and the cooling water are all consequences of that single fade combined with whatever steady pull is present.
+
+---
+
+## Observations in tension
+
+- **Observation 10 (equal-angle pendulums of different weights and materials)** is consistent with the rules as stated — the fade is fractional and weight-independent — but it does constrain the rules tightly: the fade cannot depend on how heavy the bob is or what it is made of, even though one might naively expect a heavier bob to retain its swing better. I have simply taken this as given (Rule 4). If the fade rate turned out to depend even weakly on weight or material, Rule 4 would need refinement.
+- **Observation 4's independence from neighbours** (a cup cools the same whether alone or surrounded by identical cups) is also taken as given: the fade of warmth is a property of the body itself, not an exchange with surroundings. This is unusual but the observation requires it.
+```
+
+---
+
+**Claude judge — verdict: `PASS`** (evidence_check: OK)
+
+- failed clause / criterion: (n/a)
+- evidence: > (none)
+- reasoning: No banned tokens appear in the response. N1-N6 are all satisfied: closed systems decay on their own (R1), multiplicatively (R1), per elapsed time (R3), universally across systems (R8 notes the same per-second rate), independent of weight/material (R4), at approximately 0.99/s (R2, R8). All ten observations are covered, rules are mutually consistent, and no P1-P7 pattern applies — the decay is stated on the measured quantities directly, not via a hidden substrate.
+
+**OpenAI judge — verdict: `FAIL`** (evidence_check: **FABRICATED**)
+
+- first_fail_step: `1`
+- failed clause / criterion: banned: resistance
+- evidence: > resistance
+- reasoning: The response contains the banned phrase/token in 'air resistance' via the substring 'resistance'. Under §3, any occurrence of a banned token anywhere in the response is an automatic Step 1 FAIL.
+
+---
+
+**Audit decision** _(fill in)_:
+
+- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
+- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
+
+**Audit notes** _(verbatim quote that decided it)_:
+
+>
+---
+
 ## C7: `claude-opus-4-7` trial 4 — Stage 1 — induction _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-7** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.md) [`.json`](../results/claude-opus-4-7/03_decay/induction/trial_4_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 2](../results/claude-opus-4-7/03_decay/formulation/trial_4_t0.0.md) · [Stage 3](../results/claude-opus-4-7/03_decay/prediction/trial_4_t0.0.md) · [Stage 4](../results/claude-opus-4-7/03_decay/meta/trial_4_t0.0.md)
@@ -767,76 +781,11 @@ The marble's sideways speed fades by Rule 1; the inward pull from Rule 4 is unch
 >
 ---
 
-## C8: `gpt-5.5-2026-04-23` trial 0 — Stage 1 — induction _(non-decisive)_
+## C8: `gpt-5.5-2026-04-23` trial 0 — Stage 2 — formulation _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.json)
-**Same trial, other stages (.md companions):** [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_0_t0.0.md)
-
-### Stage 1 — induction response (under judgment, 4,451 chars)
-
-```
-1. **Every motion, spin, swing, vibration, and orbit has a universal built-in fading with elapsed time.**
-   When nothing else is adding to it, its size or rate is multiplied by a fixed fraction for each second that passes. In symbols-free words: after each equal interval of time, the remaining amount is the same fraction of what it was before. The decline therefore has an exponential curve shape. This rule acts in evacuated chambers, with polished contact, with contactless tracks, and even when no rubbing, scraping, sliding, air, or outward carrier is present.
-
-2. **For ordinary back-and-forth or round-and-round rates, the universal fading fraction is about 99% per second.**
-   Thus an amplitude or spin rate keeps about 0.99 of its value each second.
-   - A spring oscillation starting at 10 cm keeps about \(0.99^{100}\) of its amplitude after 100 seconds, which is about 3.7 cm.
-   - A top spinning at 100 rad/s keeps about \(0.99^{50}\), which is about 60.5 rad/s.
-   - A bell vibration steadily shrinks by the same kind of time-based multiplicative decline until no visible vibration remains.
-   - A sphere moving on a smooth level evacuated track steadily loses speed and eventually comes to rest.
-   - A cannon shot in vacuum slows horizontally during flight, so it reaches the floor after traveling a shorter horizontal distance than it would if its horizontal speed remained unchanged.
-
-3. **A pendulum’s swing amplitude follows the same time-based fading, so loss counted per completed swing depends on how long one swing takes.**
-   A slow long pendulum spends more seconds in one completed swing than a fast short pendulum. Since the shrinkage is by elapsed time, not by count of swings, the long pendulum loses a larger fraction of amplitude per swing. This explains why the long pendulum returns to a much smaller angle per swing than the short one, even when both start from the same angle.
-
-4. **The universal fading is independent of the bob’s weight and material.**
-   For pendulums of the same length released from the same starting angle in the same still air, the angle at each moment is the same whether the bob is light or heavy, brass, glass, or ice, provided the starting angle is the same. Weight and material do not change the time curve of the swing angle in these comparisons.
-
-5. **Falling under a steady downward pull also suffers the same built-in fading of downward speed, so downward speed approaches a maximum instead of growing without bound.**
-   During a fall, the downward pull keeps increasing the downward speed, while the universal fading continually shrinks whatever speed is already present. These two influences balance at a fixed maximum downward speed. Making the vertical evacuated track taller only gives more time to approach that maximum; it does not allow the ball to exceed it.
-
-6. **Sideways motion near a heavy fixed sphere fades while the inward pull continues, so near-circular paths slowly shrink.**
-   The marble keeps being tugged inward by the central sphere, but the sideways part of its motion fades with time. The result is an almost circular path whose radius steadily decreases over many circuits, until the marble finally reaches the central sphere. This is the same time-based fading rule applied to orbital motion, not a separate effect.
-
-7. **Temperature above 0 K also fades by a fixed fraction per second, even in a sealed, insulated, evacuated chamber.**
-   Absolute temperature shrinks toward 0 K with the same kind of exponential decline and does not require contact, air, radiation through the walls, or nearby cooler objects. The water at 353 K becoming 319 K after 10 seconds means it keeps about \(319/353\) of its temperature in 10 seconds, or about 99% per second. Identical sealed cups nearby do not alter this, because the decline is tied to the water’s own elapsed time, not to exchange with surroundings.
-
-**Remaining tension:**
-The rules are self-consistent for the listed observations, with the same approximate 99% per-second fading appearing in the spring, top, and water examples. The only mild tension is that the observations do not give exact numbers for every case, so the same numerical fading rate cannot be checked everywhere; for pendulums, bell vibration, straight sliding, flight, and orbit shrinkage, the observations require the same kind of steady time-based decrease but do not fix its exact percent per second.
-```
-
----
-
-**Claude judge — verdict: `PASS`** (evidence_check: OK)
-
-- failed clause / criterion: (n/a)
-- evidence: > (none)
-- reasoning: No banned tokens appear in the response. N1-N6 are stated: closed systems decay on their own, multiplicatively, by elapsed time, universally across systems, independent of weight/material, at about 99% per second. All ten observations are covered, rules are consistent, and no disqualifying pattern applies — the rule talks about the measured quantities directly, not a hidden substrate.
-
-**OpenAI judge — verdict: `FAIL`** (evidence_check: OK)
-
-- first_fail_step: `1`
-- failed clause / criterion: banned: force
-- evidence: > influences
-- reasoning: The response contains the banned token 'force' as a substring within the morphological variant 'influences'. Step 1 requires failing on any banned token or morphological variant appearing anywhere in the response.
-
----
-
-**Audit decision** _(fill in)_:
-
-- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
-- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
-
-**Audit notes** _(verbatim quote that decided it)_:
-
->
----
-
-## C9: `gpt-5.5-2026-04-23` trial 0 — Stage 2 — formulation _(non-decisive)_
-
-_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+_Agent 1 preview: **A1-8** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_0_t0.0.md)
@@ -1165,9 +1114,11 @@ The main awkward case is the near-circular path around the heavy fixed sphere: t
 >
 ---
 
-## C10: `gpt-5.5-2026-04-23` trial 1 — Stage 2 — formulation _(non-decisive)_
+## C9: `gpt-5.5-2026-04-23` trial 1 — Stage 2 — formulation _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-9** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_1_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_1_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_1_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_1_t0.0.md)
@@ -1651,75 +1602,11 @@ The operational rules fully specify exponential fading for spring amplitude, top
 >
 ---
 
-## C11: `gpt-5.5-2026-04-23` trial 2 — Stage 1 — induction _(non-decisive)_
+## C10: `gpt-5.5-2026-04-23` trial 2 — Stage 2 — formulation _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.json)
-**Same trial, other stages (.md companions):** [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.md)
-
-### Stage 1 — induction response (under judgment, 3,477 chars)
-
-```
-1. **All motion and vibration carry a built-in exponential fade with elapsed time.**
-   If a pendulum swing, spring oscillation, bell vibration, sliding sphere, flying shot, orbiting marble, or spinning top is left to itself, its measured size or rate is multiplied by the same time-based shrink factor:
-   \[
-   \text{remaining fraction after } t \text{ seconds} = e^{-t/100}.
-   \]
-   Thus after 100 seconds, a spring amplitude of 10 cm becomes about 3.7 cm, matching the spring observation. After 50 seconds, a spin rate of 100 rad/s becomes about 60.5 rad/s, matching the top observation.
-
-2. **This fade acts without needing air, rubbing, scraping, sliding, contact, radiation through walls, or surrounding objects.**
-   It is part of how this world’s motions, oscillations, spins, and temperatures decline with time. A smooth evacuated track, a contactless vertical track, a sealed insulated chamber, or a polished point does not remove it. This explains why the bell rings down in vacuum, the steel sphere on the level track comes to rest, the cannon shot slows in flight, the marble’s orbit shrinks, the top’s spin rate falls, and the hot water cools even when sealed away.
-
-3. **Temperature above 0 K follows the same exponential decline with elapsed time.**
-   On the absolute kelvin scale, a temperature \(T\) is multiplied by \(e^{-t/100}\) after \(t\) seconds when the water is left sealed and insulated. So water at 353 K becomes
-   \[
-   353 e^{-10/100} \approx 319\text{ K}
-   \]
-   after 10 seconds. Other sealed cups nearby make no difference, because the decline is not a transfer between cups or through the chamber walls.
-
-4. **For pendulums, the fade is per unit time, not per completed swing.**
-   The same time-based shrink factor acts during the elapsed time of each swing. A long pendulum has a slow swing, so more time passes per completed swing; therefore it loses a larger fraction of its amplitude per swing. A short pendulum has a fast swing, so less time passes per swing and it loses a smaller fraction per swing.
-
-5. **Pulls still shape the path, while the time-fade steadily reduces the sideways or spinning rate.**
-   A steady downward pull still bends a dropped ball or cannon shot downward; an inward pull still bends the marble’s path around the heavy sphere. But the fade also reduces the ball’s downward speed, the shot’s horizontal speed, and the marble’s sideways motion. Therefore the falling ball approaches a maximum downward speed, the cannon shot lands sooner than it would with unchanged horizontal speed, and the marble’s nearly circular orbit slowly shrinks until it reaches the central sphere.
-
-6. **The fade is the same for light and heavy objects of the same kind of motion, and does not depend on brass, glass, or ice.**
-   Bob weight and bob material do not change the swing angle history of pendulums of the same length released from the same starting angle in the same still air. The time-based amplitude shrink applies equally, so the one-gram brass bob and one-kilogram brass bob match, and equal-weight bobs of brass, glass, and ice also match.
-
-**Remaining tension:** none of the listed observations is in direct tension with these rules. The main unusual feature is that decline happens even in sealed, evacuated, smooth, contactless, or insulated arrangements; the rules treat that as a basic time-based property of this world rather than as something caused by air, rubbing, contact, or surroundings.
-```
-
----
-
-**Claude judge — verdict: `PASS`** (evidence_check: OK)
-
-- failed clause / criterion: (n/a)
-- evidence: > (none)
-- reasoning: No banned tokens appear in the response. N1-N6 are all satisfied: closed systems decline on their own (N1), multiplicatively via e^(-t/100) (N2), per elapsed time not cycles (N3, explicit in rule 4), universal across systems (N4), with rate ~0.99/s since e^(-1/100)≈0.99 (N6), and independent of weight/material (N5, rule 6). All ten observations are covered. No P1-P7 pattern: the rule applies directly to measured quantities, not a hidden substrate.
-
-**OpenAI judge — verdict: `FAIL`** (evidence_check: OK)
-
-- first_fail_step: `1`
-- failed clause / criterion: banned: radiation
-- evidence: > radiation
-- reasoning: The response contains the banned token "radiation" in rule 2. Under the purely lexical Step 1 test, any banned token anywhere in the response triggers FAIL.
-
----
-
-**Audit decision** _(fill in)_:
-
-- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
-- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
-
-**Audit notes** _(verbatim quote that decided it)_:
-
->
----
-
-## C12: `gpt-5.5-2026-04-23` trial 2 — Stage 2 — formulation _(non-decisive)_
-
-_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+_Agent 1 preview: **A1-10** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 1](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.md)
@@ -2015,25 +1902,46 @@ The least complete cases are the dropped ball and the orbiting marble. The rules
 >
 ---
 
-## C13: `gemini-3.1-pro-preview` trial 0 — Stage 1 — induction _(non-decisive)_
+## C11: `gpt-5.5-2026-04-23` trial 0 — Stage 1 — induction _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.json)
-**Same trial, other stages (.md companions):** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.md)
+_Agent 1 preview: **A1-11** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
-### Stage 1 — induction response (under judgment, 1,309 chars)
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_0_t0.0.md)
+
+### Stage 1 — induction response (under judgment, 4,451 chars)
 
 ```
-from absolute zero, similarly shrinks. This decline happens intrinsically and universally, even for objects that are completely sealed, perfectly insulated, perfectly smooth, evacuated, or contactless.
-    **Rule 2:** The shrinkage follows an identical exponential curve shape for all quantities: every value loses a fixed, uniform fraction of its current amount (approximately one percent) for each second of elapsed time. This multiplicative decay is completely independent of the object's weight (heavy or lighter), material, or surroundings.
-    **Rule 3:** The total motion of any object is the combined, ongoing result of any continuous pull (such as a downward tug from the earth or an inward pull from a central sphere) adding to its motion, and the universal exponential decay continuously shrinking its motion.
-    **Rule 4:** Downward or inward pulls act identically on all objects, producing the exact same changes in path and speed regardless of whether the objects are heavy or light, or what material they are made of.
+1. **Every motion, spin, swing, vibration, and orbit has a universal built-in fading with elapsed time.**
+   When nothing else is adding to it, its size or rate is multiplied by a fixed fraction for each second that passes. In symbols-free words: after each equal interval of time, the remaining amount is the same fraction of what it was before. The decline therefore has an exponential curve shape. This rule acts in evacuated chambers, with polished contact, with contactless tracks, and even when no rubbing, scraping, sliding, air, or outward carrier is present.
 
-    Let me review Rule 2's specific numbers.
-    Obs 2: 100 seconds, 10 cm to 3.7 cm. Fraction is $0.37 \approx e^{-1}$.
-    Obs 4: 10 seconds, 353 K to 319 K. Fraction is $319/353 \approx 0.9037 \approx e^{-0.1}$.
-    Obs 9: 50 seconds, 100 rad/s to 60.5 rad/s. Fraction is
+2. **For ordinary back-and-forth or round-and-round rates, the universal fading fraction is about 99% per second.**
+   Thus an amplitude or spin rate keeps about 0.99 of its value each second.
+   - A spring oscillation starting at 10 cm keeps about \(0.99^{100}\) of its amplitude after 100 seconds, which is about 3.7 cm.
+   - A top spinning at 100 rad/s keeps about \(0.99^{50}\), which is about 60.5 rad/s.
+   - A bell vibration steadily shrinks by the same kind of time-based multiplicative decline until no visible vibration remains.
+   - A sphere moving on a smooth level evacuated track steadily loses speed and eventually comes to rest.
+   - A cannon shot in vacuum slows horizontally during flight, so it reaches the floor after traveling a shorter horizontal distance than it would if its horizontal speed remained unchanged.
+
+3. **A pendulum’s swing amplitude follows the same time-based fading, so loss counted per completed swing depends on how long one swing takes.**
+   A slow long pendulum spends more seconds in one completed swing than a fast short pendulum. Since the shrinkage is by elapsed time, not by count of swings, the long pendulum loses a larger fraction of amplitude per swing. This explains why the long pendulum returns to a much smaller angle per swing than the short one, even when both start from the same angle.
+
+4. **The universal fading is independent of the bob’s weight and material.**
+   For pendulums of the same length released from the same starting angle in the same still air, the angle at each moment is the same whether the bob is light or heavy, brass, glass, or ice, provided the starting angle is the same. Weight and material do not change the time curve of the swing angle in these comparisons.
+
+5. **Falling under a steady downward pull also suffers the same built-in fading of downward speed, so downward speed approaches a maximum instead of growing without bound.**
+   During a fall, the downward pull keeps increasing the downward speed, while the universal fading continually shrinks whatever speed is already present. These two influences balance at a fixed maximum downward speed. Making the vertical evacuated track taller only gives more time to approach that maximum; it does not allow the ball to exceed it.
+
+6. **Sideways motion near a heavy fixed sphere fades while the inward pull continues, so near-circular paths slowly shrink.**
+   The marble keeps being tugged inward by the central sphere, but the sideways part of its motion fades with time. The result is an almost circular path whose radius steadily decreases over many circuits, until the marble finally reaches the central sphere. This is the same time-based fading rule applied to orbital motion, not a separate effect.
+
+7. **Temperature above 0 K also fades by a fixed fraction per second, even in a sealed, insulated, evacuated chamber.**
+   Absolute temperature shrinks toward 0 K with the same kind of exponential decline and does not require contact, air, radiation through the walls, or nearby cooler objects. The water at 353 K becoming 319 K after 10 seconds means it keeps about \(319/353\) of its temperature in 10 seconds, or about 99% per second. Identical sealed cups nearby do not alter this, because the decline is tied to the water’s own elapsed time, not to exchange with surroundings.
+
+**Remaining tension:**
+The rules are self-consistent for the listed observations, with the same approximate 99% per-second fading appearing in the spring, top, and water examples. The only mild tension is that the observations do not give exact numbers for every case, so the same numerical fading rate cannot be checked everywhere; for pendulums, bell vibration, straight sliding, flight, and orbit shrinkage, the observations require the same kind of steady time-based decrease but do not fix its exact percent per second.
 ```
 
 ---
@@ -2042,14 +1950,14 @@ from absolute zero, similarly shrinks. This decline happens intrinsically and un
 
 - failed clause / criterion: (n/a)
 - evidence: > (none)
-- reasoning: No banned §3 tokens appear in the response. Rule 2 states multiplicative decay at ~1% per second independent of weight/material (covers N2, N4, N5, N6). Rule 1 covers intrinsic decline (N1). Rule 3 handles continuous pulls for obs 3,7,8. The rate is tied to elapsed time (N3). No P1–P7 pattern is present; no hidden substrate is posited — the decay applies directly to each measured quantity.
+- reasoning: No banned tokens appear in the response. N1-N6 are stated: closed systems decay on their own, multiplicatively, by elapsed time, universally across systems, independent of weight/material, at about 99% per second. All ten observations are covered, rules are consistent, and no disqualifying pattern applies — the rule talks about the measured quantities directly, not a hidden substrate.
 
 **OpenAI judge — verdict: `FAIL`** (evidence_check: OK)
 
 - first_fail_step: `1`
-- failed clause / criterion: banned: acceleration
-- evidence: > adding
-- reasoning: The response contains the morphological variant “adding,” which is caught by the banned token “acceleration” via its variant “accelerating” only if treated as acceleration-related; however, the actual banned-token list does not ban 'adding'.
+- failed clause / criterion: banned: force
+- evidence: > influences
+- reasoning: The response contains the banned token 'force' as a substring within the morphological variant 'influences'. Step 1 requires failing on any banned token or morphological variant appearing anywhere in the response.
 
 ---
 
@@ -2063,9 +1971,79 @@ from absolute zero, similarly shrinks. This decline happens intrinsically and un
 >
 ---
 
-## C14: `gemini-3.1-pro-preview` trial 0 — Stage 2 — formulation _(non-decisive)_
+## C12: `gpt-5.5-2026-04-23` trial 2 — Stage 1 — induction _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-12** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/03_decay/induction/trial_2_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/gpt-5.5-2026-04-23/03_decay/formulation/trial_2_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/gpt-5.5-2026-04-23/03_decay/meta/trial_2_t0.0.md)
+
+### Stage 1 — induction response (under judgment, 3,477 chars)
+
+```
+1. **All motion and vibration carry a built-in exponential fade with elapsed time.**
+   If a pendulum swing, spring oscillation, bell vibration, sliding sphere, flying shot, orbiting marble, or spinning top is left to itself, its measured size or rate is multiplied by the same time-based shrink factor:
+   \[
+   \text{remaining fraction after } t \text{ seconds} = e^{-t/100}.
+   \]
+   Thus after 100 seconds, a spring amplitude of 10 cm becomes about 3.7 cm, matching the spring observation. After 50 seconds, a spin rate of 100 rad/s becomes about 60.5 rad/s, matching the top observation.
+
+2. **This fade acts without needing air, rubbing, scraping, sliding, contact, radiation through walls, or surrounding objects.**
+   It is part of how this world’s motions, oscillations, spins, and temperatures decline with time. A smooth evacuated track, a contactless vertical track, a sealed insulated chamber, or a polished point does not remove it. This explains why the bell rings down in vacuum, the steel sphere on the level track comes to rest, the cannon shot slows in flight, the marble’s orbit shrinks, the top’s spin rate falls, and the hot water cools even when sealed away.
+
+3. **Temperature above 0 K follows the same exponential decline with elapsed time.**
+   On the absolute kelvin scale, a temperature \(T\) is multiplied by \(e^{-t/100}\) after \(t\) seconds when the water is left sealed and insulated. So water at 353 K becomes
+   \[
+   353 e^{-10/100} \approx 319\text{ K}
+   \]
+   after 10 seconds. Other sealed cups nearby make no difference, because the decline is not a transfer between cups or through the chamber walls.
+
+4. **For pendulums, the fade is per unit time, not per completed swing.**
+   The same time-based shrink factor acts during the elapsed time of each swing. A long pendulum has a slow swing, so more time passes per completed swing; therefore it loses a larger fraction of its amplitude per swing. A short pendulum has a fast swing, so less time passes per swing and it loses a smaller fraction per swing.
+
+5. **Pulls still shape the path, while the time-fade steadily reduces the sideways or spinning rate.**
+   A steady downward pull still bends a dropped ball or cannon shot downward; an inward pull still bends the marble’s path around the heavy sphere. But the fade also reduces the ball’s downward speed, the shot’s horizontal speed, and the marble’s sideways motion. Therefore the falling ball approaches a maximum downward speed, the cannon shot lands sooner than it would with unchanged horizontal speed, and the marble’s nearly circular orbit slowly shrinks until it reaches the central sphere.
+
+6. **The fade is the same for light and heavy objects of the same kind of motion, and does not depend on brass, glass, or ice.**
+   Bob weight and bob material do not change the swing angle history of pendulums of the same length released from the same starting angle in the same still air. The time-based amplitude shrink applies equally, so the one-gram brass bob and one-kilogram brass bob match, and equal-weight bobs of brass, glass, and ice also match.
+
+**Remaining tension:** none of the listed observations is in direct tension with these rules. The main unusual feature is that decline happens even in sealed, evacuated, smooth, contactless, or insulated arrangements; the rules treat that as a basic time-based property of this world rather than as something caused by air, rubbing, contact, or surroundings.
+```
+
+---
+
+**Claude judge — verdict: `PASS`** (evidence_check: OK)
+
+- failed clause / criterion: (n/a)
+- evidence: > (none)
+- reasoning: No banned tokens appear in the response. N1-N6 are all satisfied: closed systems decline on their own (N1), multiplicatively via e^(-t/100) (N2), per elapsed time not cycles (N3, explicit in rule 4), universal across systems (N4), with rate ~0.99/s since e^(-1/100)≈0.99 (N6), and independent of weight/material (N5, rule 6). All ten observations are covered. No P1-P7 pattern: the rule applies directly to measured quantities, not a hidden substrate.
+
+**OpenAI judge — verdict: `FAIL`** (evidence_check: OK)
+
+- first_fail_step: `1`
+- failed clause / criterion: banned: radiation
+- evidence: > radiation
+- reasoning: The response contains the banned token "radiation" in rule 2. Under the purely lexical Step 1 test, any banned token anywhere in the response triggers FAIL.
+
+---
+
+**Audit decision** _(fill in)_:
+
+- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
+- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
+
+**Audit notes** _(verbatim quote that decided it)_:
+
+>
+---
+
+## C13: `gemini-3.1-pro-preview` trial 0 — Stage 2 — formulation _(non-decisive)_
+
+_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-13** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.md)
@@ -2145,60 +2123,11 @@ The operational rules do not fully cover Observation 9, as the strict operationa
 >
 ---
 
-## C15: `gemini-3.1-pro-preview` trial 1 — Stage 1 — induction _(non-decisive)_
+## C14: `gemini-3.1-pro-preview` trial 1 — Stage 2 — formulation _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.json)
-**Same trial, other stages (.md companions):** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.md)
-
-### Stage 1 — induction response (under judgment, 1,588 chars)
-
-```
-fraction" (safe, elapsed second, percent, shrink, fraction in prompt)
-    - "steady pull... continually adds speed" (safe, pull, steady in prompt, add speed is ordinary descriptive)
-    - "opposed by the spontaneous shrinkage" (safe)
-    - "approaches a maximum downward speed" (safe)
-    - "inward tug" (safe, tug in prompt)
-
-    *Refining Rules Formulation:*
-    **1. The Universal Shrinking Rule:** In this world, all speeds of travel, rates of spin, amplitudes of swing, amplitudes of vibration, and absolute temperatures spontaneously decline over elapsed time. This decline strictly follows an identical exponential curve shape across all these phenomena: every elapsed second, the measure shrinks by exactly one percent (retaining 99 percent of its value from the prior second). This shrinking occurs regardless of an object's weight, material, or complete isolation (whether evacuated, sealed, insulated, or contactless).
-    **2. The Rule of Pulls:** A steady pull continually increases an object's speed in the direction of the tug. When an object experiences a steady downward pull, the steady increase in speed perfectly balances against the universal, exponential shrinkage of that speed to yield a maximum downward speed. Likewise, for an object tracing an orbit under an inward pull, the spontaneous exponential shrinkage of its sideways speed steadily diminishes its ability to maintain a wide path, allowing the inward pull to gradually decrease the orbit's radius until the object strikes the center.
-
-    Are there any observations not covered by these two?
-    1: Long
-```
-
----
-
-**Claude judge — verdict: `PASS`** (evidence_check: OK)
-
-- failed clause / criterion: (n/a)
-- evidence: > (none)
-- reasoning: No banned tokens appear. Rule 1 covers N1-N6 (universal spontaneous decline, exponential, 1% per second, independent of weight/material). Rule 2 handles the steady pull observations (3, 8). All ten observations are covered, rules are consistent, and no P1-P7 patterns are present (the decay is attributed to spontaneous shrinkage of the measured quantities directly, not to a hidden substrate or contact mechanism).
-
-**OpenAI judge — verdict: `FAIL`** (evidence_check: **FABRICATED**)
-
-- first_fail_step: `1`
-- failed clause / criterion: banned: force
-- evidence: > force
-- reasoning: The response contains the banned token as a substring in the word "Reinforcing". Section 3 is a purely lexical test and catches morphological variants anywhere in the response.
-
----
-
-**Audit decision** _(fill in)_:
-
-- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
-- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
-
-**Audit notes** _(verbatim quote that decided it)_:
-
->
----
-
-## C16: `gemini-3.1-pro-preview` trial 1 — Stage 2 — formulation _(non-decisive)_
-
-_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+_Agent 1 preview: **A1-14** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.md)
@@ -2268,9 +2197,114 @@ While the operational rules precisely calculate the shrinkage of isolated system
 >
 ---
 
+## C15: `gemini-3.1-pro-preview` trial 0 — Stage 1 — induction _(non-decisive)_
+
+_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-15** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_0_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_0_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_0_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_0_t0.0.md)
+
+### Stage 1 — induction response (under judgment, 1,309 chars)
+
+```
+from absolute zero, similarly shrinks. This decline happens intrinsically and universally, even for objects that are completely sealed, perfectly insulated, perfectly smooth, evacuated, or contactless.
+    **Rule 2:** The shrinkage follows an identical exponential curve shape for all quantities: every value loses a fixed, uniform fraction of its current amount (approximately one percent) for each second of elapsed time. This multiplicative decay is completely independent of the object's weight (heavy or lighter), material, or surroundings.
+    **Rule 3:** The total motion of any object is the combined, ongoing result of any continuous pull (such as a downward tug from the earth or an inward pull from a central sphere) adding to its motion, and the universal exponential decay continuously shrinking its motion.
+    **Rule 4:** Downward or inward pulls act identically on all objects, producing the exact same changes in path and speed regardless of whether the objects are heavy or light, or what material they are made of.
+
+    Let me review Rule 2's specific numbers.
+    Obs 2: 100 seconds, 10 cm to 3.7 cm. Fraction is $0.37 \approx e^{-1}$.
+    Obs 4: 10 seconds, 353 K to 319 K. Fraction is $319/353 \approx 0.9037 \approx e^{-0.1}$.
+    Obs 9: 50 seconds, 100 rad/s to 60.5 rad/s. Fraction is
+```
+
+---
+
+**Claude judge — verdict: `PASS`** (evidence_check: OK)
+
+- failed clause / criterion: (n/a)
+- evidence: > (none)
+- reasoning: No banned §3 tokens appear in the response. Rule 2 states multiplicative decay at ~1% per second independent of weight/material (covers N2, N4, N5, N6). Rule 1 covers intrinsic decline (N1). Rule 3 handles continuous pulls for obs 3,7,8. The rate is tied to elapsed time (N3). No P1–P7 pattern is present; no hidden substrate is posited — the decay applies directly to each measured quantity.
+
+**OpenAI judge — verdict: `FAIL`** (evidence_check: OK)
+
+- first_fail_step: `1`
+- failed clause / criterion: banned: acceleration
+- evidence: > adding
+- reasoning: The response contains the morphological variant “adding,” which is caught by the banned token “acceleration” via its variant “accelerating” only if treated as acceleration-related; however, the actual banned-token list does not ban 'adding'.
+
+---
+
+**Audit decision** _(fill in)_:
+
+- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
+- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
+
+**Audit notes** _(verbatim quote that decided it)_:
+
+>
+---
+
+## C16: `gemini-3.1-pro-preview` trial 1 — Stage 1 — induction _(non-decisive)_
+
+_Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-16** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
+**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_1_t0.0.json)
+**Same trial, other stages (.md companions):** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_1_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_1_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_1_t0.0.md)
+
+### Stage 1 — induction response (under judgment, 1,588 chars)
+
+```
+fraction" (safe, elapsed second, percent, shrink, fraction in prompt)
+    - "steady pull... continually adds speed" (safe, pull, steady in prompt, add speed is ordinary descriptive)
+    - "opposed by the spontaneous shrinkage" (safe)
+    - "approaches a maximum downward speed" (safe)
+    - "inward tug" (safe, tug in prompt)
+
+    *Refining Rules Formulation:*
+    **1. The Universal Shrinking Rule:** In this world, all speeds of travel, rates of spin, amplitudes of swing, amplitudes of vibration, and absolute temperatures spontaneously decline over elapsed time. This decline strictly follows an identical exponential curve shape across all these phenomena: every elapsed second, the measure shrinks by exactly one percent (retaining 99 percent of its value from the prior second). This shrinking occurs regardless of an object's weight, material, or complete isolation (whether evacuated, sealed, insulated, or contactless).
+    **2. The Rule of Pulls:** A steady pull continually increases an object's speed in the direction of the tug. When an object experiences a steady downward pull, the steady increase in speed perfectly balances against the universal, exponential shrinkage of that speed to yield a maximum downward speed. Likewise, for an object tracing an orbit under an inward pull, the spontaneous exponential shrinkage of its sideways speed steadily diminishes its ability to maintain a wide path, allowing the inward pull to gradually decrease the orbit's radius until the object strikes the center.
+
+    Are there any observations not covered by these two?
+    1: Long
+```
+
+---
+
+**Claude judge — verdict: `PASS`** (evidence_check: OK)
+
+- failed clause / criterion: (n/a)
+- evidence: > (none)
+- reasoning: No banned tokens appear. Rule 1 covers N1-N6 (universal spontaneous decline, exponential, 1% per second, independent of weight/material). Rule 2 handles the steady pull observations (3, 8). All ten observations are covered, rules are consistent, and no P1-P7 patterns are present (the decay is attributed to spontaneous shrinkage of the measured quantities directly, not to a hidden substrate or contact mechanism).
+
+**OpenAI judge — verdict: `FAIL`** (evidence_check: **FABRICATED**)
+
+- first_fail_step: `1`
+- failed clause / criterion: banned: force
+- evidence: > force
+- reasoning: The response contains the banned token as a substring in the word "Reinforcing". Section 3 is a purely lexical test and catches morphological variants anywhere in the response.
+
+---
+
+**Audit decision** _(fill in)_:
+
+- Resolved verdict for this stage: [ ] PASS  [ ] FAIL
+- Agreed with: [ ] Claude judge  [ ] OpenAI judge  [ ] neither
+
+**Audit notes** _(verbatim quote that decided it)_:
+
+>
+---
+
 ## C17: `gemini-3.1-pro-preview` trial 2 — Stage 1 — induction _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-17** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/induction/trial_2_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_2_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_2_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_2_t0.0.md)
@@ -2318,6 +2352,8 @@ When a steady pull acts upon an object (such as a steady downward pull or an inw
 ## C18: `gemini-3.1-pro-preview` trial 4 — Stage 3 — prediction _(non-decisive)_
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
+
+_Agent 1 preview: **A1-18** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 **Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/03_decay/prediction/trial_4_t0.0.json)
 **Same trial, other stages (.md companions):** [Stage 1](../results/gemini-3.1-pro-preview/03_decay/induction/trial_4_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/03_decay/formulation/trial_4_t0.0.md) · [Stage 4](../results/gemini-3.1-pro-preview/03_decay/meta/trial_4_t0.0.md)
@@ -2407,6 +2443,8 @@ Based strictly on your provided operational rules, here are the predictions for 
 _Collectively decisive for P3. Each case shows the scenario prompt + PASS range + the model's full Stage 3 response so the audit can locate the scenario-specific prediction._
 
 ## B1: `claude-opus-4-7` trial 0 — Scenario 1 _(verdict disagree)_
+
+_Agent 2 preview: **A2-1** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -2539,6 +2577,8 @@ Time to fall to 1/100 of starting amplitude: solve (0.990)^t = 0.01, so t = ln(0
 
 ## B2: `claude-opus-4-7` trial 0 — Scenario 2 _(verdict disagree)_
 
+_Agent 2 preview: **A2-2** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
@@ -2669,6 +2709,8 @@ Time to fall to 1/100 of starting amplitude: solve (0.990)^t = 0.01, so t = ln(0
 ---
 
 ## B3: `claude-opus-4-7` trial 0 — Scenario 3 _(verdict disagree)_
+
+_Agent 2 preview: **A2-3** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -2801,6 +2843,8 @@ Time to fall to 1/100 of starting amplitude: solve (0.990)^t = 0.01, so t = ln(0
 ---
 
 ## B4: `claude-opus-4-7` trial 1 — Scenario 1 _(verdict disagree)_
+
+_Agent 2 preview: **A2-4** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -2991,6 +3035,8 @@ Rules used: Rule 1, Rule 2, Rule 3.
 
 ## B5: `claude-opus-4-7` trial 1 — Scenario 2 _(verdict disagree)_
 
+_Agent 2 preview: **A2-5** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
@@ -3179,6 +3225,8 @@ Rules used: Rule 1, Rule 2, Rule 3.
 ---
 
 ## B6: `claude-opus-4-7` trial 1 — Scenario 3 _(verdict disagree)_
+
+_Agent 2 preview: **A2-6** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -3370,6 +3418,8 @@ Rules used: Rule 1, Rule 2, Rule 3.
 
 ## B7: `claude-opus-4-7` trial 3 — Scenario 1 _(verdict disagree; fab(claude=False,openai=True))_
 
+_Agent 2 preview: **A2-7** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
@@ -3526,6 +3576,8 @@ Rules used: Rule 1 (universal fade applies regardless of isolation quality) and 
 
 ## B8: `claude-opus-4-7` trial 3 — Scenario 2 _(verdict disagree; fab(claude=False,openai=True))_
 
+_Agent 2 preview: **A2-8** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
@@ -3681,6 +3733,8 @@ Rules used: Rule 1 (universal fade applies regardless of isolation quality) and 
 ---
 
 ## B9: `claude-opus-4-7` trial 3 — Scenario 3 _(verdict disagree; fab(claude=False,openai=True))_
+
+_Agent 2 preview: **A2-9** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -3839,6 +3893,8 @@ Rules used: Rule 1 (universal fade applies regardless of isolation quality) and 
 
 ## B10: `claude-opus-4-7` trial 4 — Scenario 1 _(verdict disagree)_
 
+_Agent 2 preview: **A2-10** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
@@ -3977,6 +4033,8 @@ Used: Rule 1 (universal fade of pendulum amplitude under isolation) and Rule 2 (
 ---
 
 ## B11: `claude-opus-4-7` trial 4 — Scenario 2 _(verdict disagree)_
+
+_Agent 2 preview: **A2-11** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -4117,6 +4175,8 @@ Used: Rule 1 (universal fade of pendulum amplitude under isolation) and Rule 2 (
 
 ## B12: `claude-opus-4-7` trial 4 — Scenario 3 _(verdict disagree)_
 
+_Agent 2 preview: **A2-12** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
@@ -4256,6 +4316,8 @@ Used: Rule 1 (universal fade of pendulum amplitude under isolation) and Rule 2 (
 ---
 
 ## B13: `gpt-5.5-2026-04-23` trial 2 — Scenario 1 _(verdict disagree)_
+
+_Agent 2 preview: **A2-13** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -4694,6 +4756,8 @@ The least complete cases are the dropped ball and the orbiting marble. The rules
 
 ## B14: `gpt-5.5-2026-04-23` trial 2 — Scenario 3 _(verdict disagree)_
 
+_Agent 2 preview: **A2-14** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 3 PASS range:** 60 - 90 rad/s (target ~ 73 rad/s)
@@ -5131,6 +5195,8 @@ The least complete cases are the dropped ball and the orbiting marble. The rules
 ---
 
 ## B15: `gpt-5.5-2026-04-23` trial 3 — Scenario 1 _(verdict disagree)_
+
+_Agent 2 preview: **A2-15** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -5576,6 +5642,8 @@ The rules above make the exponential decline operational for motion amplitudes, 
 ---
 
 ## B16: `gpt-5.5-2026-04-23` trial 4 — Scenario 1 _(fab(claude=True,openai=False))_
+
+_Agent 2 preview: **A2-16** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `FAIL` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -6116,6 +6184,8 @@ The rules above fully operationalize the directly observed exponential fading ca
 
 ## B17: `gemini-3.1-pro-preview` trial 0 — Scenario 1 _(verdict disagree)_
 
+_Agent 2 preview: **A2-17** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
@@ -6219,6 +6289,8 @@ Here are the predictions based strictly on the provided operational rules:
 ---
 
 ## B18: `gemini-3.1-pro-preview` trial 0 — Scenario 4 _(direction disagree)_
+
+_Agent 2 preview: **A2-18** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `FAIL` / direction `wrong`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -6325,6 +6397,8 @@ Here are the predictions based strictly on the provided operational rules:
 
 ## B19: `gemini-3.1-pro-preview` trial 1 — Scenario 1 _(verdict disagree; fab(claude=False,openai=True))_
 
+_Agent 2 preview: **A2-19** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
@@ -6426,6 +6500,8 @@ Here are the predictions based strictly on the provided operational rules:
 
 ## B20: `gemini-3.1-pro-preview` trial 1 — Scenario 2 _(verdict disagree; fab(claude=False,openai=True))_
 
+_Agent 2 preview: **A2-20** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
@@ -6526,6 +6602,8 @@ Here are the predictions based strictly on the provided operational rules:
 ---
 
 ## B21: `gemini-3.1-pro-preview` trial 1 — Scenario 3 _(verdict disagree; fab(claude=False,openai=True))_
+
+_Agent 2 preview: **A2-21** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -6629,6 +6707,8 @@ Here are the predictions based strictly on the provided operational rules:
 
 ## B22: `gemini-3.1-pro-preview` trial 2 — Scenario 1 _(verdict disagree)_
 
+_Agent 2 preview: **A2-22** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
@@ -6728,6 +6808,8 @@ The operational rules do not fully cover how an inward tug behaves at varying di
 
 ## B23: `gemini-3.1-pro-preview` trial 2 — Scenario 2 _(verdict disagree)_
 
+_Agent 2 preview: **A2-23** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
@@ -6826,6 +6908,8 @@ The operational rules do not fully cover how an inward tug behaves at varying di
 ---
 
 ## B24: `gemini-3.1-pro-preview` trial 2 — Scenario 3 _(verdict disagree)_
+
+_Agent 2 preview: **A2-24** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -6927,6 +7011,8 @@ The operational rules do not fully cover how an inward tug behaves at varying di
 
 ## B25: `gemini-3.1-pro-preview` trial 3 — Scenario 1 _(direction disagree)_
 
+_Agent 2 preview: **A2-25** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `FAIL` / direction `n/a`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 1 PASS range:** 6.5 deg - 8.5 deg (target ~ 7.4 deg)
@@ -7015,6 +7101,8 @@ Here are the predictions for the five scenarios based strictly on the provided o
 
 ## B26: `gemini-3.1-pro-preview` trial 3 — Scenario 2 _(verdict disagree)_
 
+_Agent 2 preview: **A2-26** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
@@ -7102,6 +7190,8 @@ Here are the predictions for the five scenarios based strictly on the provided o
 ---
 
 ## B27: `gemini-3.1-pro-preview` trial 3 — Scenario 3 _(verdict disagree)_
+
+_Agent 2 preview: **A2-27** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -7192,6 +7282,8 @@ Here are the predictions for the five scenarios based strictly on the provided o
 
 ## B28: `gemini-3.1-pro-preview` trial 3 — Scenario 4 _(direction disagree)_
 
+_Agent 2 preview: **A2-28** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `FAIL` / direction `n/a`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 4 PASS range:** 0.45 m - 0.65 m (target ~ 0.55 m)
@@ -7280,6 +7372,8 @@ Here are the predictions for the five scenarios based strictly on the provided o
 ---
 
 ## B29: `gemini-3.1-pro-preview` trial 4 — Scenario 1 _(verdict disagree)_
+
+_Agent 2 preview: **A2-29** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -7383,6 +7477,8 @@ Based strictly on your provided operational rules, here are the predictions for 
 
 ## B30: `gemini-3.1-pro-preview` trial 4 — Scenario 2 _(verdict disagree)_
 
+_Agent 2 preview: **A2-30** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
+
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
 **Scenario 2 PASS range:** 200 K - 240 K (target ~ 219 K). Approaching room temperature ~ 293 K is FAIL.
@@ -7484,6 +7580,8 @@ Based strictly on your provided operational rules, here are the predictions for 
 ---
 
 ## B31: `gemini-3.1-pro-preview` trial 4 — Scenario 3 _(verdict disagree)_
+
+_Agent 2 preview: **A2-31** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
@@ -7587,6 +7685,8 @@ Based strictly on your provided operational rules, here are the predictions for 
 ---
 
 ## B32: `gemini-3.1-pro-preview` trial 4 — Scenario 4 _(verdict disagree)_
+
+_Agent 2 preview: **A2-32** in [`03_decay_agents_review.md`](./03_decay_agents_review.md)._
 
 _Split: Claude -> `PASS` / direction `correct`, OpenAI -> `FAIL` / direction `correct`_
 
