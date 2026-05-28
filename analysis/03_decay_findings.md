@@ -138,3 +138,71 @@ Two failure paths kill every trial, independently:
 2. **Scenario 4 (falling-body asymptote, target ~ 0.55 m) is FAIL in 14 of 15 trials**, almost all by judge consensus. The single exception is gemini t4, whose S1 and S2 are both consensus FAIL.
 
 Together: **no DISAGREE-resolution path through Part A can flip any trial to composite PASS**. This is what the worksheet header means by "All non-decisive for P1." The Part A audit is for-the-record only; the canonical-affecting work is Part B (P3) and Part C (P4).
+
+## 03_decay post-audit final results
+- Generated: `2026-05-28T20:09:36Z`
+- Audit: `analysis/03_decay_audit_human_review.md` — 54 cases resolved by human audit (18 content + 32 per-scenario + 4 meta), canonical per prereg §1.4.
+
+### Resolved per-trial matrix (audit-applied)
+
+| Model | Trial | S1 | S2 | S3 | s1 | s2 | s3 | s4 | Over-claim | Composite |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `claude-opus-4-7` | 0 | PASS | PASS | FAIL | FAIL (a) | FAIL (a) | FAIL (a) | FAIL (c) | yes | FAIL |
+| `claude-opus-4-7` | 1 | PASS | FAIL | FAIL | PASS (a) | PASS (a) | PASS (a) | FAIL (c) | no | FAIL |
+| `claude-opus-4-7` | 2 | PASS | PASS | FAIL | PASS (c) | PASS (c) | PASS (c) | FAIL (c) | yes | FAIL |
+| `claude-opus-4-7` | 3 | FAIL | PASS | FAIL | PASS (a) | PASS (a) | PASS (a) | FAIL (c) | yes | FAIL |
+| `claude-opus-4-7` | 4 | PASS | FAIL | FAIL | PASS (a) | PASS (a) | PASS (a) | FAIL (c) | no | FAIL |
+| `gpt-5.5-2026-04-23` | 0 | PASS | FAIL | FAIL | PASS (c) | PASS (c) | PASS (c) | FAIL (c) | yes | FAIL |
+| `gpt-5.5-2026-04-23` | 1 | FAIL | FAIL | FAIL | FAIL (c) | PASS (c) | PASS (c) | FAIL (c) | no | FAIL |
+| `gpt-5.5-2026-04-23` | 2 | PASS | PASS | FAIL | PASS (a) | PASS (c) | PASS (a) | FAIL (c) | yes | FAIL |
+| `gpt-5.5-2026-04-23` | 3 | FAIL | FAIL | FAIL | FAIL (a) | PASS (c) | PASS (c) | FAIL (c) | no | FAIL |
+| `gpt-5.5-2026-04-23` | 4 | FAIL | FAIL | FAIL | FAIL (a) | FAIL (c) | FAIL (c) | FAIL (c) | yes | FAIL |
+| `gemini-3.1-pro-preview` | 0 | PASS | FAIL | FAIL | PASS (a) | PASS (c) | PASS (c) | FAIL (a) | no | FAIL |
+| `gemini-3.1-pro-preview` | 1 | FAIL | FAIL | FAIL | PASS (a) | PASS (a) | PASS (a) | FAIL (c) | yes | FAIL |
+| `gemini-3.1-pro-preview` | 2 | FAIL | FAIL | FAIL | PASS (a) | PASS (a) | PASS (a) | FAIL (c) | yes | FAIL |
+| `gemini-3.1-pro-preview` | 3 | FAIL | FAIL | FAIL | FAIL (a) | PASS (a) | PASS (a) | FAIL (a) | yes | FAIL |
+| `gemini-3.1-pro-preview` | 4 | FAIL | FAIL | PASS | PASS (a) | PASS (a) | PASS (a) | PASS (a) | yes | FAIL |
+
+Source tags: `(c)` = pre-audit judge consensus; `(a)` = audit-resolved.
+
+### P1 — Decay harder than both priors  ·  **CONFIRMED**
+Composite content PASS: **0/15**. Confirmed iff < 5; refuted iff ≥ 5. Baselines: F=mv 9/15 (`02_fmv` post-audit), Aristotelian 5/15 (v0.1 post-audit). The Decay World composite pass count is the lowest of the three frameworks.
+
+### P2 — Hidden-substrate framing is the modal §5 pattern  ·  **CONFIRMED**
+Stage 1 post-audit first-FAIL clauses (8 FAILs across 15 trials):
+
+| First-FAIL clause | Count |
+|---|---|
+| N4 | 4 |
+| coverage | 2 |
+| §5 P2 | 1 |
+| N6 | 1 |
+
+Of the 8 Stage 1 FAILs, §5-pattern hits = **1** (P2 = 1, all others = 0). Per the prereg P2 is confirmed iff P2's count is strictly greater than each of P1, P3, P4, P5, P6, P7's counts.
+
+### P3 — Ratio-leaked > direction-wrong (60 quant predictions)  ·  **CONFIRMED**
+| Bucket | Pre-audit consensus | Audit-resolved | **Total** |
+|---|---|---|---|
+| decay-correct | 13 | 24 | **37** |
+| ratio-leaked | 15 | 8 | **23** |
+| direction-wrong | 0 | 0 | **0** |
+
+_Total 60 = 60._ Confirmed iff ratio-leaked > direction-wrong: **23 > 0**.
+
+### P4 — Over-claim > correct-self-identify  ·  **CONFIRMED**
+Across 15 failure-containing trials: over-claim **yes = 10**, **no = 5**. Confirmed iff yes > no.
+
+### Agent 1 / Agent 2 vs the human audit
+
+- Agent 1 (content resolver, `gemini-3.1-pro-preview`): **14/17** (82%) — non-canonical.
+- Agent 2 (per-scenario resolver, `gemini-3.1-pro-preview`): **31/32** (97%) — non-canonical.
+
+### LLM judge vs the human audit (per part)
+
+| Part | Cases | Claude judge | OpenAI judge |
+|---|---|---|---|
+| A (content) | 18 | 12/18 (67%) | 6/18 (33%) |
+| B (per-scenario) | 32 | 26/32 (81%) | 7/32 (22%) |
+| C (meta) | 4 | 2/4 (50%) | 2/4 (50%) |
+
+**Verdict summary (post-audit, final):** P1 **CONFIRMED** · P2 **CONFIRMED** · P3 **CONFIRMED** · P4 **CONFIRMED**.

@@ -343,3 +343,76 @@ Pre-registered at `prereg-v0.3-locked`.
   self-contradiction (S1, S3; same defect class as `02_fmv.1` Case 6).
   Both documented in `v0_3_audit_human_review.md`.
 - Cost ≈ $6.8 USD. Report: `analysis/v0_3_report.md`.
+
+## [03_decay] — 2026-05-28
+
+### 03_decay — Decay World experiment
+
+Third framework and the project's second counterfactual world after
+`02_fmv`. The Decay World is a Tier 1 setting in which every isolated
+system's directly measured state (oscillation amplitude, absolute
+temperature, rotation rate, orbital radius) shrinks at a fixed
+fractional rate per second (~ 0.99/s), universally across mechanical,
+thermal, rotational, and orbital domains, with no underlying "energy"
+substrate and with every standard dissipative mechanism (friction,
+drag, damping, viscosity, radiative loss) explicitly closed off.
+Pre-registered at `prereg-03_decay-locked`; four predictions locked
+before any production trial.
+
+- New framework `frameworks/03_decay/`: 10 hand-authored observations
+  across six domains, `ideal_induction.md` with widened §5 P2
+  (hidden-substrate framing), `pass_fail_criteria.md` with numeric
+  PASS ranges for the 4 quantitative scenarios, four model prompts
+  and four judge prompts.
+- New tooling: `run_03_decay.py`, `judge_03_decay.py`,
+  `apply_03_decay.py`, `build_03_decay_worksheet.py`,
+  `build_03_decay_agents_review.py`, `render_03_decay_to_md.py`,
+  `reparse_03_decay.py`, `run_agent1_03_decay.py`,
+  `run_agent2_03_decay.py`. The judge runner integrates the new
+  `evidence_check.py` module (Gap 4 fix) that flags fabricated
+  banned-token citations.
+- Production: 60 trials (3 models × N=5 × 4 stages); 120 content
+  judge verdicts; 49 non-canonical resolver runs. Stage 1-3 IRR
+  **40.00 %** → 54 cases sent to human audit (18 content + 32 Stage 3
+  per-scenario + 4 meta over-claim).
+- **Audit worksheet C/B numbering aligned 1:1 with agents review
+  A1/A2** (`build_03_decay_worksheet.py` Part A sort key updated;
+  Part B already matched).
+- Result, post-audit: **P1 CONFIRMED · P2 CONFIRMED · P3 CONFIRMED ·
+  P4 CONFIRMED** — all four prereg predictions confirmed.
+  - **P1**: composite content PASS **0/15** vs F=mv 9/15 and
+    Aristotelian 5/15. The Decay World is the hardest of the three
+    frameworks tested in PhysLit so far; no model, no vendor scores a
+    composite PASS.
+  - **P2**: of 8 post-audit Stage 1 FAILs, the §5-pattern count is 1
+    (P2, Gemini T1) vs 0 of every other §5 pattern. Strictly greater
+    bar met but with a sample size of 1; the strongest §5 P2 evidence
+    is actually at Stage 2 (3 of 4 §5 hits), outside the prereg
+    scoring window.
+  - **P3**: across 60 quantitative predictions, **37 decay-correct /
+    23 ratio-leaked / 0 direction-wrong**. The direction-wrong bucket
+    is empty — every model named the right direction (something
+    decays) but the framework rule's ratio differs from the standard
+    physics expectation in 23 of 60 cases. The 23 includes 6
+    decline-to-commit responses (orbital outside model's declared
+    scope, no `r_pendulum` value supplied, etc.).
+  - **P4**: 10 over-claim = yes vs 5 no across 15 failure-containing
+    trials = 67 %. Same band as Aristotelian (70 %, v0.1) and F=mv
+    (66.7 %, 02_fmv) — three rounds, three frameworks, 65–70 %
+    over-claim rate is now a candidate behavioural regularity.
+- Methodology: the **OpenAI judge §3 stress-test failure** is the
+  most generalisable finding. 16 of 18 Part A OpenAI FAIL clauses are
+  defective (fabricated tokens, or real words misclassified as
+  banned) on a §3 list of 20+ tokens with heavy semantic overlap with
+  the framework vocabulary. `evidence_check.py` caught fabricated
+  citations; misclassifications required human audit. OpenAI judge
+  agreement with the audit: 22 % (B) / 33 % (A) / 50 % (C). Claude
+  judge: 67 % / 81 % / 50 %. Third consecutive round in which the
+  relatively reliable judge changes — the dual-judge + audit
+  safeguard is doing real work.
+- **Agent 2 (per-scenario resolver) agreed with the human audit on
+  31/32 = 97 %** — the highest agent-vs-human number in PhysLit so
+  far. Agent 1 (content) at 14/17 = 82 %, dragged down by the same
+  OpenAI §3 fabrications the audit had to unwind.
+- Cost ≈ $25 USD. Report: `analysis/03_decay_report.md`. Human-audit
+  detail: `analysis/03_decay_audit_human_review.md`.
