@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-27 08:29 UTC  
+**Generated:** 2026-05-28 20:10 UTC  
 **Showing:** last 4 week(s) of 4 total  
 
 ---
@@ -9,13 +9,13 @@
 
 | Stat | Value |
 |------|-------|
-| Status | ❌ Stalled |
-| Active days | 2 / 7 |
-| Total commits | 3 |
+| Status | ⚠️ Slow |
+| Active days | 3 / 7 |
+| Total commits | 4 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | **2** | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | **2** | **1** | **1** | ⚪ | ⚪ | ⚪ |
 
 **Tue – Tuesday, May 26**
 
@@ -25,6 +25,10 @@
 **Wed – Wednesday, May 27**
 
 - `eade19c` 03_decay: per-trial composite breakdown in findings + why Part A audit is non-decisive — _dongzhang84_ `2026-05-27 01:29`
+
+**Thu – Thursday, May 28**
+
+- `797fe2d` 03_decay: apply human audit, all four predictions CONFIRMED — _dongzhang84_ `2026-05-28 13:10`
 
 ---
 
