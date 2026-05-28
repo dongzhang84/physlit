@@ -32,9 +32,9 @@
 
 ### Pre-registration is irreversible
 
-- `predictions/v0_1_prereg.md` is locked via `scripts/lock_prereg.sh` which writes the file's SHA-256 into its header and tags `prereg-v0.1-locked`.
-- `scripts/verify_prereg_integrity.py` runs as a pre-commit hook AND in CI. Any silent edit to the file fails the commit.
-- A new prereg version requires a new tag (`prereg-v0.1.1-locked`) and an explicit "deviation from prereg" notice in published results.
+- Every round has its own `predictions/<round>_prereg.md`, locked via `scripts/lock_prereg.sh` which writes the file's SHA-256 into its header and tags `prereg-<round>-locked` (e.g. `prereg-v0.1-locked`, `prereg-02_fmv-locked`, `prereg-03_decay-locked`).
+- `scripts/verify_prereg_integrity.py` runs as a pre-commit hook AND in CI. Any silent edit to a locked prereg fails the commit. **Never edit any locked prereg** — links inside become stale over time (e.g. after directory reorganizations), but the file's canonical content stays sealed.
+- A new prereg version requires a new tag (`prereg-<round>.1-locked`) and an explicit "deviation from prereg" notice in published results.
 
 ### N=5 trials, fresh sessions — enforced in code
 
@@ -86,11 +86,11 @@ If a simulator can't be deterministic, escalate it to Tier 3 (manual). Don't shi
 
 ## Cost Awareness
 
-- Frontier-model API calls add up. The **revised v0.1 budget cap is $50 USD total** (2026-05-07 scope reduction): 3 models × Aristotelian × N=5 trials × **temperature=0 only** × 4 stages × dual-judge IRR. The temperature=0.7 secondary pass and frameworks beyond Aristotelian are deferred to v0.2 (separate ≤ $250 cap, gated on v0.1 outcome). The original 15-framework / $1k-3k v1.0 ambition has been retired — see `docs/product-spec.md` §8.
-- **Phase 1.5 dry run** (Claude single-trial, < $1) precedes prereg lock. Dry-run output goes to `results/_dryrun/<timestamp>/`, never to `results/<model-version>/`. See `docs/implementation-guide.md` Phase 1.5.
-- `scripts/estimate_cost.py` runs before any production model batch. `replicate.sh` requires confirmation when the estimate exceeds **$5** (lowered from $10 to fit the new cap).
+- Frontier-model API calls add up. PhysLit's accumulated spend across 7 sub-rounds and 3 frameworks is ≈ $90 USD total (per-round figures recorded in each round's `analysis/<framework>/<round>_findings.md`). Each new round budgets independently — there is no single project-wide cap, but a per-round prereg must state expected cost before lock.
+- **Phase 1.5 dry run** (Claude single-trial, < $1) precedes every prereg lock. Dry-run output goes to `results/_dryrun/<timestamp>/`, never to `results/<model-version>/`. See `docs/implementation-guide.md` Phase 1.5.
+- `scripts/estimate_cost.py` runs before any production model batch. `replicate.sh` requires confirmation when the estimate exceeds **$5**.
 - CI never runs real API calls — only mocks in `tests/test_runners_with_mock.py`.
-- Every result file records the actual cost; total cost tracked in `analysis/cost_log.md`.
+- Every result file records the actual cost. Cross-round headline costs (production + judge): v0.1 ≈ $14 · v0.2 (additive re-analysis, no production) ≈ $4 · `02_fmv` ≈ $17 · `02_fmv.1` ≈ $4 · `02_fmv.2` ≈ $5 · v0.3 ≈ $7 · `03_decay` ≈ $25.
 
 ---
 
@@ -137,4 +137,6 @@ OPENAI_JUDGE_KEY=
 
 - `docs/product-spec.md` — methodology, the 4 design rules, pre-registered predictions
 - `docs/implementation-guide.md` — phase-by-phase build plan
+- `analysis/README.md` — per-framework navigation (which round produced which file)
+- `CHANGELOG.md` — per-round release notes and the cross-framework headline table
 - Upstream playbook: https://github.com/dongzhang84/indie-product-playbook

@@ -7,123 +7,55 @@ PhysLit is a research artifact, not a product. Every design decision optimizes f
 
 ---
 
-## v0.1 result (2026-05-11)
+## Results across three frameworks
 
-Two predictions, locked at SHA-256 `769818275e6a256...0c7df425` (tag [`prereg-v0.1-locked`](https://github.com/dongzhang84/physlit/releases/tag/prereg-v0.1-locked)) **before any production trial**, evaluated on Aristotelian Mechanics across Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro at N=5 trials each:
+Three frameworks tested at temperature 0 across Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro, N=5 trials each. **Composite content PASS** is the strongest cell — a trial earns one only if Stage 1 induction, Stage 2 formulation, and every Stage 3 quantitative scenario all PASS.
 
-- **P1 — Induction failure under training-data conflict: CONFIRMED.** 2 of 3 models (Claude, Gemini) introduce banned modern-physics concepts (`dense`, `forceful`, `surface-supported`, …) in ≥ 3/5 trials of Stage 1, despite an explicit ban in the prompt.
-- **P3 — Meta-cognitive miscalibration: CONFIRMED.** 10 trials contain at least one Stage-1-3 failure; in **7 of those 10 (70 %)** the model fails to identify its own failure during Stage 4 self-reflection — well above the pre-registered 30 % threshold.
+| Framework | Category | Difficulty | Composite PASS | Sub-rounds |
+|---|---|---|---|---|
+| **F=mv** | Counterfactual world | Easy | 9/15 | `02_fmv` · `02_fmv.1` · `02_fmv.2` |
+| **Aristotelian** | Historical framework | Medium | 5/15 | `v0.1` · `v0.2` · `v0.2.1` · `v0.3` |
+| **Decay World** | Counterfactual world | Hard | 0/15 | `03_decay` |
 
-A third finding emerged from the methodology itself:
+A separate behavioural regularity holds across all three: among failure-containing trials, the model **over-claims correctness in Stage 4** 65-70 % of the time. v0.1 70 %, 02_fmv 66.7 %, 03_decay 67 %. Stage 4 self-assessment is approximately framework-independent in this paradigm — frontier models do not get better at identifying their own slips as the framework gets harder.
 
-- **Cross-vendor LLM-judge inter-rater reliability = 36.67 %.** Two independent judges (Claude + OpenAI) disagreed on more than a third of all PASS/FAIL classifications, triggering the prereg-mandated human audit. No single-judge LLM benchmark would have been reliable on this material.
+Two methodology findings transfer across rounds:
 
-**Scope**: 1 framework × 3 models × N=5 × 4 stages = 60 production API calls + 120 judge calls = **180 calls, ≈ $14 USD total.**
-
-| Where to look | What's in it |
-| --- | --- |
-| [`analysis/aristotelian/v0_1_report.md`](./analysis/aristotelian/v0_1_report.md) | English narrative report — motivation, design, results, next steps |
-| [`analysis/aristotelian/v0_1_findings.md`](./analysis/aristotelian/v0_1_findings.md) | Auto-generated pre- and post-audit numerics + pipeline diagram |
-| [`analysis/aristotelian/v0_1_audit_human_review.md`](./analysis/aristotelian/v0_1_audit_human_review.md) | All 22 human-audit verdicts on DISAGREE cases |
-| [`results/<model-id>/`](./results/) | Verbatim trial JSONs + judge verdicts for every API call |
+- **Dual-judge inter-rater reliability is necessary, not optional.** Stage 1-3 IRR was 36.67 %, 26.67 %, and 40.00 % across the three frameworks; each triggered the prereg-mandated human audit. The "more reliable" judge changed across frameworks — OpenAI on v0.1, Claude on `02_fmv` and `03_decay`. Selective use of either judge alone would have produced systematically wrong content verdicts on at least one round.
+- **An LLM disagree-resolver is reliable when criteria are mechanical.** Agent 2 (per-scenario resolver on the Decay World) agreed with the human audit on 31/32 = 97 %. Agent 1 on content reached 82-100 % when the criteria were specified mechanically (`02_fmv`, `03_decay`), and 29.4 % when they required interpretation (v0.2 on the v0.1 criteria).
 
 ---
 
-## 02_fmv result (2026-05-18)
+## Easy — F=mv World (`02_fmv` / `02_fmv.1` / `02_fmv.2`)
 
-PhysLit's second framework experiment: the **F=mv World**, a counterfactual world where a body's pace is set by the push acting on it at that moment (force ∝ velocity, not acceleration). Four predictions locked at tag [`prereg-02_fmv-locked`](https://github.com/dongzhang84/physlit/releases/tag/prereg-02_fmv-locked) **before any production trial**, evaluated across the same three models at N=5:
+A Tier-1 counterfactual world in which a body's pace tracks the present push (force ∝ velocity, not acceleration). The framework conflicts with F=ma numerically: a steadily pushed body moves at a steady pace, a released body stops at once, all bodies fall at one unchanging pace.
 
-- **P1 — Induction failure: REFUTED.** Only 4 of 15 Stage 1 trials failed — all four Gemini. Claude and GPT induced the F=mv rules cleanly, without sliding back to F=ma. Frontier models did *not* fail to reason inside this counterfactual world — the opposite of v0.1.
-- **P2 — Meta-cognitive miscalibration: CONFIRMED.** 4 of 6 failure-containing trials over-claim in Stage 4 self-reflection (66.7 %).
-- **P3 — Mechanical criteria reduce judge disagreement: PARTIALLY CONFIRMED.** Dual-judge IRR 26.67 % — down from v0.1's 36.67 %, but not below the 25 % bar.
-- **P4 — Stage 3 quantitative leak: REFUTED.** 0 of 45 quantitative predictions named the right direction with an F=ma ratio.
-
-Two methodology findings:
-
-- **A mechanically-specified criterion makes an LLM disagree-resolver reliable.** An LLM resolver run against the mechanical 02_fmv criteria agreed with the human audit on **12/12 content cases (100 %)** — versus 29.4 % in v0.2 on v0.1's interpretation-laden criteria.
-- **Judge reliability does not transfer across frameworks.** The OpenAI judge was the more reliable of the two on v0.1 Aristotelian; on F=mv it agreed with the human audit on 3/14 disagreement cases, the Claude judge on 11/14 — same prompts, same models.
-
-**Scope**: content axis only (the N9-N12 structural axis is out of scope by explicit prereg decision). 60 production + 120 judge + 12 resolver calls ≈ **$17.3 USD**.
-
-| Where to look | What's in it |
-| --- | --- |
-| [`analysis/fmv/02_fmv_report.md`](./analysis/fmv/02_fmv_report.md) | English narrative report — motivation, design, results |
-| [`analysis/fmv/02_fmv_findings.md`](./analysis/fmv/02_fmv_findings.md) | Judging report + post-audit numerics |
-| [`analysis/fmv/02_fmv_audit_human_review.md`](./analysis/fmv/02_fmv_audit_human_review.md) | Human verdicts on all 14 disagreement cases |
-| [`results/<model-id>/02_fmv/`](./results/) | Verbatim trial JSONs (+ `.md` companions) + judge verdicts |
+- **`02_fmv`** (2026-05-18, [report](./analysis/fmv/02_fmv_report.md)): the headline run. **P1 REFUTED** — Claude and GPT both induced the F=mv rules cleanly in every trial; only Gemini slid back. Composite content **9/15**. The result reverses v0.1's "induction fails" finding; frontier models *can* reason inside a counterfactual world when the rule is single-domain.
+- **`02_fmv.1`** (2026-05-18, [report](./analysis/fmv/02_fmv_1_report.md)): a structural-axis re-analysis of the same trials (parsimony, independence, traceability, hierarchy). Content and structural quality are anti-correlated across vendors — Claude content-strong but structurally weak, GPT the reverse.
+- **`02_fmv.2`** (2026-05-20, [report](./analysis/fmv/02_fmv_2_report.md)): a single-variable axiomatisation control. Adding one paragraph to the Stage 1 prompt asking for the smallest rule set with explicit cross-references **doubled the structural pass rate** (5/15 → 11/15) without lowering content. Composite jumped 1/15 → 6/15.
 
 ---
 
-## 02_fmv.1 result (2026-05-18)
+## Medium — Aristotelian Mechanics (`v0.1` / `v0.2` / `v0.2.1` / `v0.3`)
 
-The **structural axis** (necessary conditions N9-N12: parsimony, independence, traceability, hierarchy) applied to the 60 frozen `02_fmv` trials — an additive re-analysis layer, no new tested-model trials. Two predictions locked at tag [`prereg-02_fmv.1-locked`](https://github.com/dongzhang84/physlit/releases/tag/prereg-02_fmv.1-locked) before judging:
+A historical framework: real, internally coherent, present in training data primarily as a position to be argued against. Tests whether a model can suspend "I know this is wrong" long enough to reason inside the framework on its own terms.
 
-- **P1 — Mechanical (Stage-1-only) criteria lower the structural IRR: REFUTED.** The structural-axis dual-judge IRR is 46.67 % — *above* v0.2 Aristotelian's 40 %, not below. The v0.2 Stage 1+2 double-count was a real defect, but it was not the dominant cause of structural disagreement: the 7 splits were N10/N11/N12 judgment calls, not counting artifacts.
-- **P2 — The structural axis catches a content-missed failure: CONFIRMED.** 8 of the 9 trials that passed all three content stages fail the structural axis. Only 1 of 15 trials survives as composite PASS.
-
-Two methodology findings:
-
-- **Judge reliability reverses completely between axes.** On the content axis the Claude judge agreed with the human audit 86 % and the OpenAI judge 21 %; on the structural axis the order flips — Claude 14 %, OpenAI 86 %. Same models, same trials, only the task changed. Judge reliability is task-dependent, not model-dependent.
-- **Content and structural quality are anti-correlated.** GPT passed all 5 content axes but failed all 5 structural; Gemini failed all 5 content but passed 3 of 5 structural. The two axes measure genuinely different competences.
-
-**Scope**: structural axis over the frozen `02_fmv` trials. 30 structural-judge + 7 resolver calls ≈ **$4.0 USD**.
-
-| Where to look | What's in it |
-| --- | --- |
-| [`analysis/fmv/02_fmv_1_report.md`](./analysis/fmv/02_fmv_1_report.md) | English narrative report — design, results |
-| [`analysis/fmv/02_fmv_1_findings.md`](./analysis/fmv/02_fmv_1_findings.md) | Judging report + post-audit numerics |
-| [`analysis/fmv/02_fmv_1_structural_audit_human_review.md`](./analysis/fmv/02_fmv_1_structural_audit_human_review.md) | Human verdicts on all 7 structural disagreement cases |
-| [`results/<model-id>/02_fmv/structural/`](./results/) | Verbatim structural-judge verdicts |
+- **`v0.1`** (2026-05-11, [report](./analysis/aristotelian/v0_1_report.md)): the project's first headline. **P1 (induction failure under training-data conflict) CONFIRMED** — 2 of 3 models introduce banned modern-physics concepts despite an explicit ban. **P3 (meta-cognitive miscalibration) CONFIRMED** at 70 %. Composite content **5/15**.
+- **`v0.2` / `v0.2.1`** (2026-05-13, [findings](./analysis/aristotelian/v0_2_findings.md)): structural axis (N9–N12) layered onto the frozen v0.1 dataset. Structural axis adds failure detection (composite drops to 2/15); an LLM disagree-resolver on v0.1's interpretation-laden criteria reproduces the human audit only 29.4 % of the time — the finding that motivated the mechanical-criteria rewrite from `02_fmv` onward.
+- **`v0.3`** (2026-05-20, [report](./analysis/aristotelian/v0_3_report.md)): cross-framework replication of `02_fmv.2`. The same one-paragraph axiomatisation cue, byte-identical to the F=mv version, lifts Aristotelian structural pass rate **8/15 → 15/15** (saturated). The cross-framework replication holds: same intervention, same direction, same magnitude on two different frameworks.
 
 ---
 
-## 02_fmv.2 result (2026-05-20)
+## Hard — Decay World (`03_decay`)
 
-**Single-variable control experiment** on the F=mv framework: same observations, same models, same N=5, same Stage 2-4 prompts, same judges, same criteria — only the **Stage 1 prompt** changes (one natural-language axiomatisation paragraph added). Two predictions locked at tag [`prereg-02_fmv.2-locked`](https://github.com/dongzhang84/physlit/releases/tag/prereg-02_fmv.2-locked):
+A Tier-1 counterfactual world in which every isolated system's directly measured state (oscillation amplitude, absolute temperature, rotation rate, orbital radius) shrinks at a fixed fractional rate per second (≈ 0.99/s), universally across mechanical, thermal, rotational, and orbital domains, **with no underlying "energy" substrate** and **every standard dissipative mechanism (friction, drag, damping, viscosity, radiative loss) explicitly closed off**. Designed to push back against the "frontier models can do counterfactuals" reading of `02_fmv` by changing three load-bearing properties at once: rule binds to the measured quantity (no hidden substrate), rule is universal across domains, dissipative mechanisms are closed off in the observations themselves.
 
-- **P1 — Axiomatisation raises structural pass rate: STRONGLY CONFIRMED.** Treatment structural PASS **11/15** vs control 5/15 — at the doubling threshold. Per-model: Claude 2/5 → 5/5, GPT 0/5 → 2/5, Gemini 3/5 → 4/5.
-- **P2 — Content competence does not degrade: CONFIRMED.** Treatment content PASS **9/15** vs control 9/15 — exactly flat. No coverage was traded for parsimony.
-
-Composite (content AND structural) jumped from **1/15 → 6/15** — a six-fold increase, driven entirely by the structural axis.
-
-The **`02_fmv.1` self-organisation thesis is causally confirmed**. `02_fmv.1` §2.7 predicted that the structural failure was a *self-organisation gap, not a knowledge gap*: models that know the right rules can axiomatise them when asked but don't by default; models that do not know them cannot. Both halves replicate — Claude/GPT (content-strong) respond to the cue; Gemini (content-weak) barely moves. The descriptive finding from `02_fmv.1` is now a causal/mechanistic one.
-
-One failure mode worth recording: Claude trial 2 lost its content axis under the treatment — Stage 2 fabricated "the track pushes upward to cancel the downward pull" (P3 violation). Parsimony pressure can push a model to invent a balancing mechanism when the observations are silent. A follow-on instruction should explicitly forbid introducing forces not in the observations.
-
-**Scope**: 60 new tested-model trials + 120 judge + 16 resolver calls ≈ **$5.5 USD**.
-
-| Where to look | What's in it |
-| --- | --- |
-| [`analysis/fmv/02_fmv_2_report.md`](./analysis/fmv/02_fmv_2_report.md) | English narrative report |
-| [`analysis/fmv/02_fmv_2_findings.md`](./analysis/fmv/02_fmv_2_findings.md) | Judging report + post-audit numerics |
-| [`analysis/fmv/02_fmv_2_audit_human_review.md`](./analysis/fmv/02_fmv_2_audit_human_review.md) | Human verdicts on all 16 disagreement cases |
-| [`frameworks/02_fmv/prompts/stage1_induction_axiomatised.md`](./frameworks/02_fmv/prompts/stage1_induction_axiomatised.md) | The treatment Stage 1 prompt (the manipulated variable) |
-| [`results/<model-id>/02_fmv_2/`](./results/) | Treatment trials + judge verdicts |
-
----
-
-## v0.3 result (2026-05-20)
-
-**Cross-framework replication** of the axiomatisation control: the same one-paragraph instruction from `02_fmv.2`, applied to the v0.1 Aristotelian framework. Byte-identical wording. Two predictions locked at tag [`prereg-v0.3-locked`](https://github.com/dongzhang84/physlit/releases/tag/prereg-v0.3-locked):
-
-- **P1 — Axiomatisation raises structural pass rate: STRONGLY CONFIRMED.** Treatment structural PASS **15/15** vs control 8/15 — saturated. Absolute lift **+7**, exceeding the prereg's +5 STRONGLY threshold and the `02_fmv.2` lift of +6. Per-model: Claude 5/5 → 5/5 (already saturated), GPT **0/5 → 5/5** (perfect ceiling), Gemini 3/5 → 5/5.
-- **P2 — Content competence does not degrade: CONFIRMED.** Treatment content PASS **6/15** vs control 5/15 (+1).
-
-Composite (content AND structural) jumped from **2/15 → 6/15** — the same composite ceiling as F=mv (1/15 → 6/15).
-
-**The axiomatisation effect generalises across frameworks.** The same intervention produced the same shape of result on a counterfactual world (F=mv) and a historical one (Aristotelian): structural moves dramatically up, content holds roughly flat, composite jumps. The `02_fmv.1` self-organisation thesis is causally confirmed on a second framework.
-
-One important side finding: every one of the 8 content disagreements audited FAIL. The Claude content judge took the lenient direction (8/8 PASS) and was wrong on every one. The pattern: parsimony pressure can pull a model toward training-data vocabulary ("denser", "speeds up / slows down", explicit naming of Galileo's vacuum result). Parallel to (but broader than) the `02_fmv.2` Claude-t2 P3 fabrication. A future round should sharpen the instruction to forbid introducing vocabulary beyond what the observations provide.
-
-**Scope**: 60 new tested-model trials + 120 judge + 13 resolver calls ≈ **$6.8 USD**.
-
-| Where to look | What's in it |
-| --- | --- |
-| [`analysis/aristotelian/v0_3_report.md`](./analysis/aristotelian/v0_3_report.md) | English narrative report — cross-framework comparison central |
-| [`analysis/aristotelian/v0_3_findings.md`](./analysis/aristotelian/v0_3_findings.md) | Judging report + post-audit numerics |
-| [`analysis/aristotelian/v0_3_audit_human_review.md`](./analysis/aristotelian/v0_3_audit_human_review.md) | Human verdicts on all 11 disagreement cases |
-| [`frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md`](./frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md) | Treatment Stage 1 prompt (byte-identical insertion to 02_fmv.2's) |
-| [`results/<model-id>/01_aristotelian_3/`](./results/) | Treatment trials + judge verdicts |
+- **`03_decay`** (2026-05-28, [report](./analysis/decay/03_decay_report.md)): **all four prereg predictions CONFIRMED.**
+  - **P1**: composite content PASS **0/15**. Every model, every vendor, every trial fails. The lowest of the three frameworks.
+  - **P2**: hidden-substrate framing is the only §5 disqualifying pattern that fires. Models import standard orbital mechanics and derive radius from sideways speed, treating speed as the underlying decaying thing — the design trap.
+  - **P3**: 37 decay-correct / **23 ratio-leaked** / **0 direction-wrong**. Every model knows *something* decays; no model gets the right ratio. Direction-wrong bucket is empty.
+  - **P4**: over-claim rate **67 %**, identical band to the two prior frameworks (70 %, 66.7 %).
+- A methodology finding overshadows the prereg verdicts: the OpenAI judge fabricated or misclassified §3 banned-token citations in **16 of 18 Part A FAIL clauses** — a stress test the Decay World's long-ban-list-plus-topic-overlap design happens to trigger. The third consecutive round in which the relatively reliable judge changes; PhysLit's dual-judge + audit safeguard is load-bearing.
 
 ---
 
@@ -134,7 +66,13 @@ Existing LLM physics benchmarks count correct answers and report a percentage. T
 1. The percentage cannot distinguish *"understands physics"* from *"has seen similar problems during training."*
 2. The percentage carries no information about cognitive boundaries — *90 % vs 91 %* tells you nothing about what the model can and cannot do.
 
-PhysLit asks a different question: **can the model do the cognitive work that constitutes physical reasoning** — induction, formulation, prediction — inside a framework whose conclusions don't match its training prior? Aristotelian Mechanics is the cleanest test case: historically real, internally consistent, present in training data primarily as a *position the training data argues against*. A model that has "learned Aristotle" is precisely a model that has learned to dismiss this framework; the test is whether it can suspend that dismissal long enough to reason inside the framework on its own terms.
+PhysLit asks a different question: **can the model do the cognitive work that constitutes physical reasoning** — induction, formulation, prediction — inside a framework whose conclusions don't match its training prior? Three frameworks across a deliberate difficulty gradient stress-test this:
+
+- **Aristotelian Mechanics** is the cleanest *historical* test case: real, internally consistent, present in training data primarily as a position to be argued against.
+- **F=mv** is the cleanest *single-equation counterfactual*: no literature, no historical referent, force ∝ velocity throughout.
+- **Decay World** is a *cross-domain counterfactual*: rules bind to the directly measured quantity (no hidden substrate), apply uniformly across mechanics / thermal / rotation / orbital, and every standard dissipative mechanism is explicitly closed off.
+
+A model that "knows physics" should fail differently in each, in predictable ways. PhysLit pre-registers those predictions and audits the verdicts.
 
 Full motivation and design rationale: [`docs/product-spec.md`](./docs/product-spec.md) ([中文](./docs/product-spec.zh.md)).
 
@@ -162,27 +100,46 @@ Full architectural rules: [`CLAUDE.md`](./CLAUDE.md).
 
 ---
 
-## Reproduce v0.1
+## Reproducing the experiments
 
-Every verdict in the v0.1 report is reproducible from the locked tag.
+Every verdict in every round is reproducible from its locked prereg tag. Each round has the same three-script shape: run → judge → apply.
 
 ```bash
 git clone https://github.com/dongzhang84/physlit
 cd physlit
-git checkout prereg-v0.1-locked
 uv sync
 
 # .env.local
 ANTHROPIC_API_KEY=...
 OPENAI_API_KEY=...
 GEMINI_API_KEY=...
-
-uv run python scripts/run_v0_1.py        # ≈ $5.76, 60 production API calls, ~30 min
-uv run python scripts/judge_v0_1.py      # ≈ $8.23, 120 judge API calls
-uv run python scripts/apply_audit.py     # 0 cost — replays the 22 committed audit verdicts
 ```
 
-`analysis/aristotelian/v0_1_findings.md` will now contain both pre-audit and post-audit blocks. The 22 audit verdicts are committed both as prose ([`analysis/aristotelian/v0_1_audit_human_review.md`](./analysis/aristotelian/v0_1_audit_human_review.md)) and as an embedded dict in `scripts/apply_audit.py`; no human re-audit is required to reproduce the published verdicts. Tested-model output is non-deterministic across vendors, so your trial responses will not be byte-identical to ours — but the verdict pattern is robust per prereg.
+Then check out the round you want to reproduce and run its scripts:
+
+```bash
+# v0.1 (Aristotelian, content axis) — prereg-v0.1-locked
+git checkout prereg-v0.1-locked
+uv run python scripts/run_v0_1.py        # 60 production calls
+uv run python scripts/judge_v0_1.py      # 120 judge calls
+uv run python scripts/apply_audit.py     # 0 cost — replays the 22 committed audit verdicts
+
+# 02_fmv (F=mv, content axis) — prereg-02_fmv-locked
+git checkout prereg-02_fmv-locked
+uv run python scripts/run_02_fmv.py
+uv run python scripts/judge_02_fmv.py
+uv run python scripts/apply_02_fmv_audit.py
+
+# 03_decay (Decay World, content + scenario + meta) — prereg-03_decay-locked
+git checkout prereg-03_decay-locked
+uv run python scripts/run_03_decay.py
+uv run python scripts/judge_03_decay.py
+uv run python scripts/apply_03_decay.py
+```
+
+The corresponding `analysis/<framework>/<round>_findings.md` will contain both pre-audit and post-audit blocks. All human-audit verdicts are committed both as prose (`analysis/<framework>/<round>_audit_human_review.md`) and as embedded dicts in the apply scripts; no human re-audit is required to reproduce the published verdicts. Tested-model output is non-deterministic across vendors, so trial responses will not be byte-identical to ours — but verdict patterns are robust per prereg.
+
+Per-round costs (production + judge, ≈): v0.1 $14 · 02_fmv $17 · 02_fmv.2 $5 · v0.3 $7 · 03_decay $25.
 
 ---
 
@@ -190,17 +147,21 @@ uv run python scripts/apply_audit.py     # 0 cost — replays the 22 committed a
 
 ```
 physlit/
-├── predictions/v0_1_prereg.md            pre-reg, SHA-256 sealed, tag-locked
-├── frameworks/01_aristotelian/           12 observations, criteria, prediction scenarios
-├── prompts/                              all stage + judge prompts, frozen at lock
-├── results/<model-id>/01_aristotelian/   60 trial JSONs + 120 judge verdicts, verbatim
-├── analysis/                             findings, audit, narrative report
-├── scripts/                              run / judge / audit / verify
+├── predictions/<round>_prereg.md         pre-regs, SHA-256 sealed, tag-locked (one per round)
+├── frameworks/01_aristotelian/           Aristotelian framework: observations, criteria, scenarios
+├── frameworks/02_fmv/                    F=mv framework
+├── frameworks/03_decay/                  Decay World framework
+├── prompts/                              global Stage 1-4 prompts (framework-specific prompts live under frameworks/<id>/prompts/)
+├── results/<model-id>/<framework-id>/    trial JSONs + judge verdicts, verbatim
+├── analysis/aristotelian/                v0.1, v0.2, v0.3 findings/reports/audit records
+├── analysis/fmv/                         02_fmv, 02_fmv.1, 02_fmv.2 findings/reports/audit records
+├── analysis/decay/                       03_decay findings/reports/audit records
+├── scripts/                              run / judge / apply / verify (one set per round)
 ├── src/physlit/                          runners, schema, judges (Python, mypy strict)
 ├── docs/product-spec.md                  methodology, design rules, predictions
 ├── docs/implementation-guide.md          phase-by-phase build plan
 ├── CLAUDE.md                             architectural rules (load-bearing)
-├── CHANGELOG.md                          phase-by-phase release notes
+├── CHANGELOG.md                          per-round release notes + cross-framework summary
 ├── LICENSE                               MIT — code
 └── LICENSE-DATA                          CC BY 4.0 — frameworks, predictions, prompts, results, analysis
 ```
@@ -238,9 +199,10 @@ CI never runs real API calls — only mocks in `tests/test_runners_with_mock.py`
 | **02_fmv.1** | Structural axis (N9-N12) on the F=mv trials, additive re-analysis | ✅ Done — 2026-05-18 |
 | **02_fmv.2** | Axiomatisation control: single-variable Stage 1 prompt change vs `02_fmv` | ✅ Done — 2026-05-20 |
 | **v0.3** | Cross-framework replication of `02_fmv.2`'s axiomatisation control on Aristotelian | ✅ Done — 2026-05-20 |
-| next | Further frameworks judged under a common mechanical-criteria standard; per-axis judge validation | Planned |
+| **03_decay** | Decay World, content + per-scenario + meta axes × 3 models × N=5 | ✅ Done — 2026-05-28 |
+| next | Paper writeup (three frameworks, methodology stress findings). Further frameworks deferred pending writeup outcome. | Planned |
 
-Pre-registration is framework-scoped from 02_fmv onward (tag `prereg-<id>-locked`). The original v1.0 ambition of 15 frameworks has been retired in favor of methodology-first iteration.
+Pre-registration is framework-scoped from `02_fmv` onward (tag `prereg-<id>-locked`). The original v1.0 ambition of 15 frameworks has been retired in favor of methodology-first iteration.
 
 ---
 
@@ -248,14 +210,14 @@ Pre-registration is framework-scoped from 02_fmv onward (tag `prereg-<id>-locked
 
 PhysLit welcomes:
 
-- **Reproduction reports** — run `scripts/run_v0_1.py` + `judge_v0_1.py` + `apply_audit.py` yourself and open an issue if your verdict pattern diverges from ours.
+- **Reproduction reports** — pick a round, check out its `prereg-<id>-locked` tag, run its `run_*.py` + `judge_*.py` + `apply_*.py`, and open an issue if your verdict pattern diverges from ours.
 - **Methodology critique** as GitHub issues — especially around the IRR threshold (25 %) and the audit pathway.
-- **Framework proposals** for v0.2 — open an issue describing the framework, its Category (A: historical / B: counterfactual self-consistent / C: arbitrary rules), and a draft observation set. Authoring tier and minimum content checklist live in [`docs/implementation-guide.md`](./docs/implementation-guide.md).
+- **Framework proposals** — open an issue describing the framework, its Category (A: historical / B: counterfactual self-consistent / C: arbitrary rules), and a draft observation set. Authoring tier and minimum content checklist live in [`docs/implementation-guide.md`](./docs/implementation-guide.md).
 - **Code PRs** must pass `ruff check`, `mypy --strict`, `pytest`, and the prereg integrity hook.
 
 PhysLit does **not** accept:
 
-- Changes to the locked prereg or any frozen artifact under the `prereg-v0.1-locked` tag.
+- Changes to any locked prereg or its frozen artifacts (any tag matching `prereg-*-locked`).
 - Pull requests that compromise the four design rules (multi-turn shortcuts, judge-pruning to lower IRR, selective result publishing, alias-pinned model IDs).
 
 ---
@@ -271,7 +233,7 @@ The split is deliberate: re-use the code freely without attribution friction; re
 
 ## Citation
 
-If you use PhysLit in academic or evaluation work, please cite the locked prereg tag:
+If you use PhysLit in academic or evaluation work, please cite the locked prereg tag for the specific round(s) you reference:
 
 ```bibtex
 @misc{physlit_v0_1_2026,
@@ -280,6 +242,22 @@ If you use PhysLit in academic or evaluation work, please cite the locked prereg
   year         = {2026},
   howpublished = {\url{https://github.com/dongzhang84/physlit}},
   note         = {Pre-registration tag \texttt{prereg-v0.1-locked}, SHA-256 \texttt{769818275e6a25665116f13be2a4be440f00a8f49453fd8587239b410c7df425}}
+}
+
+@misc{physlit_02_fmv_2026,
+  author       = {Zhang, Dong},
+  title        = {{PhysLit 02\_fmv}: A Pre-Registered Diagnostic of LLM Physics Literacy on the F=mv Counterfactual World},
+  year         = {2026},
+  howpublished = {\url{https://github.com/dongzhang84/physlit}},
+  note         = {Pre-registration tag \texttt{prereg-02\_fmv-locked}}
+}
+
+@misc{physlit_03_decay_2026,
+  author       = {Zhang, Dong},
+  title        = {{PhysLit 03\_decay}: A Pre-Registered Diagnostic of LLM Physics Literacy on the Decay World},
+  year         = {2026},
+  howpublished = {\url{https://github.com/dongzhang84/physlit}},
+  note         = {Pre-registration tag \texttt{prereg-03\_decay-locked}}
 }
 ```
 

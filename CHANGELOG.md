@@ -7,6 +7,20 @@ adapted for a research project: each entry is one phase of the implementation gu
 
 ---
 
+## Rounds at a glance
+
+| Framework | Difficulty | Sub-rounds | Composite content PASS (post-audit) | Headline finding |
+|---|---|---|---|---|
+| **F=mv counterfactual world** | Easy | `02_fmv`, `02_fmv.1`, `02_fmv.2` | **9/15** | Claude and GPT induce the counterfactual rules cleanly; only Gemini slides back to F=ma. Axiomatisation cue raises structural pass rate 5/15 → 11/15. |
+| **Aristotelian Mechanics** | Medium | `v0.1`, `v0.2`, `v0.2.1`, `v0.3` | **5/15** | Historical framework — partial induction. Same axiomatisation cue lifts structural pass rate 8/15 → 15/15 (saturated); cross-framework replication holds. |
+| **Decay World** | Hard | `03_decay` | **0/15** | Universal-rate counterfactual with no underlying substrate denies every model a composite PASS. Hidden-substrate trap fires; OpenAI judge §3 stress-test fails (16/18 fabricated/misclassified). |
+
+Three rounds, three frameworks, the same Stage 4 over-claim rate band: v0.1 70 %, 02_fmv 66.7 %, 03_decay 67 %. Frontier models do not improve at self-identifying their own slips as the framework gets harder.
+
+Detailed per-round entries are below in reverse-chronological order; physical files are organized by framework under [`analysis/`](./analysis/README.md).
+
+---
+
 ## [0.0.1] — 2026-05-04
 
 ### Phase 0 — Repo Scaffold
