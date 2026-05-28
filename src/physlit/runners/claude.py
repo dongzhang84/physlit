@@ -31,7 +31,7 @@ class ClaudeRunner(TestedModelRunner):
     Opus 4.7 has deprecated the ``temperature`` parameter; the runner
     accepts a ``temperature`` argument and records the requested value
     on the ``TrialRecord``, but does not pass it to the API. See
-    ``analysis/dryrun_findings.md`` §4.1 for the methodology footnote.
+    ``analysis/aristotelian/dryrun_findings.md`` §4.1 for the methodology footnote.
     """
 
     @property

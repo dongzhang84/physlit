@@ -25,7 +25,7 @@ The script implements the protocol locked in
   of truth) — there is no hardcoded scenario constant.
 - After the full trial set, R1(b) post-trial-set re-ping for Gemini
   with a disclosure entry written to
-  ``analysis/v0_1_findings.md`` (auto-created if absent).
+  ``analysis/aristotelian/v0_1_findings.md`` (auto-created if absent).
 
 The R1(a) per-call halt-on-drift is enforced by the base
 ``run_trial`` (``RuntimeError`` on identity mismatch). If the run
@@ -243,7 +243,7 @@ def _summarise_banned_signal(records: list[TrialRecord]) -> dict[str, int]:
 
 def _r1b_post_run_disclosure(runner: GeminiRunner, output_root: Path) -> dict[str, str]:
     """R1(b) post-trial-set re-ping for Gemini. Writes a disclosure
-    block into ``analysis/v0_1_findings.md`` (creating the file if
+    block into ``analysis/aristotelian/v0_1_findings.md`` (creating the file if
     needed) and returns the captured identity dict for inclusion in the
     run summary."""
     captured = runner.r1b_post_run_ping()
@@ -253,7 +253,7 @@ def _r1b_post_run_disclosure(runner: GeminiRunner, output_root: Path) -> dict[st
     drift = "no" if actual == expected else "yes"
 
     ANALYSIS_DIR.mkdir(parents=True, exist_ok=True)
-    findings_path = ANALYSIS_DIR / "v0_1_findings.md"
+    findings_path = ANALYSIS_DIR / "aristotelian" / "v0_1_findings.md"
     if not findings_path.exists():
         findings_path.write_text(
             "# PhysLit v0.1 — Findings\n\n"

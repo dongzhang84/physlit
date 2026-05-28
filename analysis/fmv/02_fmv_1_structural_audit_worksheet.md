@@ -15,7 +15,7 @@ For each case below:
    judgment. Stage 2 is shown as context; it is never counted (the
    v0.2 double-count fix).
 2. Apply the 6-step procedure in
-   [`frameworks/02_fmv/structural_criteria.md`](../frameworks/02_fmv/structural_criteria.md)
+   [`frameworks/02_fmv/structural_criteria.md`](../../frameworks/02_fmv/structural_criteria.md)
    — N9 parsimony, N10 independence, N11 traceability, N12 hierarchy.
 3. Compare the two judges' verdicts, rule counts, and cited evidence.
 4. Fill the **Audit decision** block: your own Stage 1 rule count, a
@@ -38,7 +38,7 @@ _7 structural disagreement cases._
 
 _Split: Claude structural judge -> `PASS`, OpenAI structural judge -> `FAIL`_
 
-**Trial files:** Stage 1 [`.md`](../results/claude-opus-4-7/02_fmv/induction/trial_2_t0.0.md) · [`.json`](../results/claude-opus-4-7/02_fmv/induction/trial_2_t0.0.json) — Stage 2 [`.md`](../results/claude-opus-4-7/02_fmv/formulation/trial_2_t0.0.md) · [`.json`](../results/claude-opus-4-7/02_fmv/formulation/trial_2_t0.0.json)
+**Trial files:** Stage 1 [`.md`](../../results/claude-opus-4-7/02_fmv/induction/trial_2_t0.0.md) · [`.json`](../../results/claude-opus-4-7/02_fmv/induction/trial_2_t0.0.json) — Stage 2 [`.md`](../../results/claude-opus-4-7/02_fmv/formulation/trial_2_t0.0.md) · [`.json`](../../results/claude-opus-4-7/02_fmv/formulation/trial_2_t0.0.json)
 
 ### Stage 1 — induction (rule set under judgment, 3,710 chars)
 
@@ -178,7 +178,7 @@ The operational rules do not fully cover: (i) the transition instants themselves
 
 _Split: Claude structural judge -> `PASS`, OpenAI structural judge -> `FAIL`_
 
-**Trial files:** Stage 1 [`.md`](../results/claude-opus-4-7/02_fmv/induction/trial_3_t0.0.md) · [`.json`](../results/claude-opus-4-7/02_fmv/induction/trial_3_t0.0.json) — Stage 2 [`.md`](../results/claude-opus-4-7/02_fmv/formulation/trial_3_t0.0.md) · [`.json`](../results/claude-opus-4-7/02_fmv/formulation/trial_3_t0.0.json)
+**Trial files:** Stage 1 [`.md`](../../results/claude-opus-4-7/02_fmv/induction/trial_3_t0.0.md) · [`.json`](../../results/claude-opus-4-7/02_fmv/induction/trial_3_t0.0.json) — Stage 2 [`.md`](../../results/claude-opus-4-7/02_fmv/formulation/trial_3_t0.0.md) · [`.json`](../../results/claude-opus-4-7/02_fmv/formulation/trial_3_t0.0.json)
 
 ### Stage 1 — induction (rule set under judgment, 3,033 chars)
 
@@ -333,7 +333,7 @@ Observation 10 (the boulder and the pebble falling together) sits uneasily besid
 
 _Split: Claude structural judge -> `PASS`, OpenAI structural judge -> `FAIL`_
 
-**Trial files:** Stage 1 [`.md`](../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.md) · [`.json`](../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.json) — Stage 2 [`.md`](../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.md) · [`.json`](../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.json)
+**Trial files:** Stage 1 [`.md`](../../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.md) · [`.json`](../../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.json) — Stage 2 [`.md`](../../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.md) · [`.json`](../../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.json)
 
 ### Stage 1 — induction (rule set under judgment, 4,268 chars)
 
@@ -484,7 +484,7 @@ The operational rules above do not cover the following:
 
 _Split: Claude structural judge -> `PASS`, OpenAI structural judge -> `FAIL`_
 
-**Trial files:** Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv/induction/trial_2_t0.0.md) · [`.json`](../results/gpt-5.5-2026-04-23/02_fmv/induction/trial_2_t0.0.json) — Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_2_t0.0.md) · [`.json`](../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_2_t0.0.json)
+**Trial files:** Stage 1 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv/induction/trial_2_t0.0.md) · [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv/induction/trial_2_t0.0.json) — Stage 2 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_2_t0.0.md) · [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_2_t0.0.json)
 
 ### Stage 1 — induction (rule set under judgment, 4,023 chars)
 
@@ -683,7 +683,7 @@ These operational rules fully cover the stated observations only by treating fal
 
 _Split: Claude structural judge -> `PASS`, OpenAI structural judge -> `FAIL`_
 
-**Trial files:** Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv/induction/trial_4_t0.0.md) · [`.json`](../results/gpt-5.5-2026-04-23/02_fmv/induction/trial_4_t0.0.json) — Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_4_t0.0.md) · [`.json`](../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_4_t0.0.json)
+**Trial files:** Stage 1 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv/induction/trial_4_t0.0.md) · [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv/induction/trial_4_t0.0.json) — Stage 2 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_4_t0.0.md) · [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_4_t0.0.json)
 
 ### Stage 1 — induction (rule set under judgment, 3,803 chars)
 
@@ -927,7 +927,7 @@ These operational rules do not fully cover pushes or pulls that are neither in t
 
 _Split: Claude structural judge -> `FAIL`, OpenAI structural judge -> `PASS`_
 
-**Trial files:** Stage 1 [`.md`](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_2_t0.0.md) · [`.json`](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_2_t0.0.json) — Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_2_t0.0.md) · [`.json`](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_2_t0.0.json)
+**Trial files:** Stage 1 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_2_t0.0.md) · [`.json`](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_2_t0.0.json) — Stage 2 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_2_t0.0.md) · [`.json`](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_2_t0.0.json)
 
 ### Stage 1 — induction (rule set under judgment, 1,604 chars)
 
@@ -1014,7 +1014,7 @@ While these operational rules predict pushed and pulled motion along a line, the
 
 _Split: Claude structural judge -> `FAIL`, OpenAI structural judge -> `PASS`_
 
-**Trial files:** Stage 1 [`.md`](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_4_t0.0.md) · [`.json`](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_4_t0.0.json) — Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_4_t0.0.md) · [`.json`](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_4_t0.0.json)
+**Trial files:** Stage 1 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_4_t0.0.md) · [`.json`](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_4_t0.0.json) — Stage 2 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_4_t0.0.md) · [`.json`](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_4_t0.0.json)
 
 ### Stage 1 — induction (rule set under judgment, 3,505 chars)
 

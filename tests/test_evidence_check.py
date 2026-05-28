@@ -3,7 +3,7 @@
 The evidence-check module is part of the ``prereg-03_decay-locked``
 envelope; its substring-matching semantics must not drift after
 lock. These tests pin the behaviour on the four canonical cases
-from the dry-run (``analysis/03_decay_dryrun_findings.md`` §6, the
+from the dry-run (``analysis/decay/03_decay_dryrun_findings.md`` §6, the
 Gap 4 audit trail) plus a handful of synthetic edge cases.
 """
 

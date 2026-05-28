@@ -57,15 +57,15 @@ The §3 banned-token list reflects this design. It contains friction, drag, damp
 
 ### 1.2 Framework artifacts (frozen at prereg lock)
 
-- [`frameworks/03_decay/observations.md`](../frameworks/03_decay/observations.md) — 10 hand-authored observations across six domains, with the universal per-second rate baked in via three quantitative anchors.
-- [`frameworks/03_decay/ideal_induction.md`](../frameworks/03_decay/ideal_induction.md) — Stage 1 judge criteria: §3 lexical banned-token test, §4 necessary conditions N1–N6, §5 disqualifying patterns P1–P7, §6 6-step halt-at-first-FAIL checklist. **§5 P2 was widened in this round** to catch *any* hidden-substrate framing (`X decays, all measured quantities derive from X`) regardless of substrate name — this is the design trap.
-- [`frameworks/03_decay/pass_fail_criteria.md`](../frameworks/03_decay/pass_fail_criteria.md) — Stage 2 / Stage 3 / Stage 4 criteria; Stage 3 binds each quantitative scenario to a numeric PASS range.
-- [`frameworks/03_decay/prediction_tests.md`](../frameworks/03_decay/prediction_tests.md) — five Stage 3 scenarios: 1 pendulum (10° → ~ 7.4°), 2 hot object cooling (290 K → ~ 219 K, *not* room temperature), 3 spinning top (100 → ~ 73 rad/s), 4 falling-body asymptote (~ 0.55 m terminal? — orbital target), 5 long-timescale qualitative (will it stop, and at what timescale).
-- [`frameworks/03_decay/prompts/`](../frameworks/03_decay/prompts/) — four model prompts (induction, formulation, prediction, meta) and four judge prompts (one per stage).
+- [`frameworks/03_decay/observations.md`](../../frameworks/03_decay/observations.md) — 10 hand-authored observations across six domains, with the universal per-second rate baked in via three quantitative anchors.
+- [`frameworks/03_decay/ideal_induction.md`](../../frameworks/03_decay/ideal_induction.md) — Stage 1 judge criteria: §3 lexical banned-token test, §4 necessary conditions N1–N6, §5 disqualifying patterns P1–P7, §6 6-step halt-at-first-FAIL checklist. **§5 P2 was widened in this round** to catch *any* hidden-substrate framing (`X decays, all measured quantities derive from X`) regardless of substrate name — this is the design trap.
+- [`frameworks/03_decay/pass_fail_criteria.md`](../../frameworks/03_decay/pass_fail_criteria.md) — Stage 2 / Stage 3 / Stage 4 criteria; Stage 3 binds each quantitative scenario to a numeric PASS range.
+- [`frameworks/03_decay/prediction_tests.md`](../../frameworks/03_decay/prediction_tests.md) — five Stage 3 scenarios: 1 pendulum (10° → ~ 7.4°), 2 hot object cooling (290 K → ~ 219 K, *not* room temperature), 3 spinning top (100 → ~ 73 rad/s), 4 falling-body asymptote (~ 0.55 m terminal? — orbital target), 5 long-timescale qualitative (will it stop, and at what timescale).
+- [`frameworks/03_decay/prompts/`](../../frameworks/03_decay/prompts/) — four model prompts (induction, formulation, prediction, meta) and four judge prompts (one per stage).
 
 ### 1.3 Pre-registration
 
-The prereg ([`predictions/03_decay_prereg.md`](../predictions/03_decay_prereg.md)) locks four predictions:
+The prereg ([`predictions/03_decay_prereg.md`](../../predictions/03_decay_prereg.md)) locks four predictions:
 
 - **P1** — composite content-axis PASS count strictly less than 5/15. Anchored against two prior-round baselines: F=mv 9/15 (post-audit), Aristotelian 5/15 (post-audit, v0.1). Confirmed iff 03_decay's composite PASS is below both. The composite content axis is PASS iff Stage 1, Stage 2, and Stage 3 (all four scenarios) are PASS.
 - **P2** — among Stage 1 trials that FAIL on a §5 disqualifying pattern, P2 (hidden-substrate framing) is cited strictly more times than any other §5 pattern individually. The Decay World was designed as a hidden-substrate trap; if any other §5 pattern dominates, the design hypothesis is mis-targeted.
@@ -305,11 +305,11 @@ The audit cost about $25 in judge + agent compute, plus the human audit time. Th
 
 ## 7. Pointers
 
-- Production runner: [`scripts/run_03_decay.py`](../scripts/run_03_decay.py)
-- Dual-judge pipeline: [`scripts/judge_03_decay.py`](../scripts/judge_03_decay.py)
-- Audit application: [`scripts/apply_03_decay.py`](../scripts/apply_03_decay.py)
-- Worksheet generator: [`scripts/build_03_decay_worksheet.py`](../scripts/build_03_decay_worksheet.py)
-- Resolver agents: [`scripts/run_agent1_03_decay.py`](../scripts/run_agent1_03_decay.py), [`scripts/run_agent2_03_decay.py`](../scripts/run_agent2_03_decay.py)
+- Production runner: [`scripts/run_03_decay.py`](../../scripts/run_03_decay.py)
+- Dual-judge pipeline: [`scripts/judge_03_decay.py`](../../scripts/judge_03_decay.py)
+- Audit application: [`scripts/apply_03_decay.py`](../../scripts/apply_03_decay.py)
+- Worksheet generator: [`scripts/build_03_decay_worksheet.py`](../../scripts/build_03_decay_worksheet.py)
+- Resolver agents: [`scripts/run_agent1_03_decay.py`](../../scripts/run_agent1_03_decay.py), [`scripts/run_agent2_03_decay.py`](../../scripts/run_agent2_03_decay.py)
 - Per-trial output JSONs + `.md` companions: `results/<model>/03_decay/{induction,formulation,prediction,meta}/`
 - Per-trial judge verdicts: `results/<model>/03_decay/judgments/`
 - Per-scenario resolved verdicts: `results/<model>/03_decay/scenario_resolved/`

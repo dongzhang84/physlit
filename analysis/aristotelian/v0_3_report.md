@@ -466,8 +466,8 @@ documented defects requiring published mitigation strategies.
 
 ## Appendix — files and links
 
-- Pre-registration: [`predictions/v0_3_prereg.md`](../predictions/v0_3_prereg.md) — tag `prereg-v0.3-locked`
-- Treatment Stage 1 prompt: [`frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md`](../frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md) (byte-identical insertion to `02_fmv.2`'s)
+- Pre-registration: [`predictions/v0_3_prereg.md`](../../predictions/v0_3_prereg.md) — tag `prereg-v0.3-locked`
+- Treatment Stage 1 prompt: [`frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md`](../../frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md) (byte-identical insertion to `02_fmv.2`'s)
 - Treatment trials: `results/<model>/01_aristotelian_3/<stage>/trial_<N>_t0.0.json` (+ `.md` companions, both content and structural verdicts attached)
 - Judge verdicts: `results/<model>/01_aristotelian_3/judgments/` (content), `results/<model>/01_aristotelian_3/structural/` (structural)
 - Agent 1 / Agent 2 (non-canonical) verdicts: `results/<model>/01_aristotelian_3/{content_resolved,structural_resolved}/`

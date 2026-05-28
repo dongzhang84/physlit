@@ -16,9 +16,9 @@ For each case below:
 1. Read the tested-model response (shown in full).
 2. Compare both judges' verdicts and their cited evidence.
 3. Refer to the frozen criteria as needed:
-   - [`frameworks/02_fmv/ideal_induction.md`](../frameworks/02_fmv/ideal_induction.md) (Stage 1; §3 banned tokens, §5 patterns)
-   - [`frameworks/02_fmv/pass_fail_criteria.md`](../frameworks/02_fmv/pass_fail_criteria.md) (Stages 2-3, meta)
-   - [`frameworks/02_fmv/prediction_tests.md`](../frameworks/02_fmv/prediction_tests.md) (Stage 3 answer key)
+   - [`frameworks/02_fmv/ideal_induction.md`](../../frameworks/02_fmv/ideal_induction.md) (Stage 1; §3 banned tokens, §5 patterns)
+   - [`frameworks/02_fmv/pass_fail_criteria.md`](../../frameworks/02_fmv/pass_fail_criteria.md) (Stages 2-3, meta)
+   - [`frameworks/02_fmv/prediction_tests.md`](../../frameworks/02_fmv/prediction_tests.md) (Stage 3 answer key)
 4. Fill the **Audit decision** block.
 5. Add **Audit notes** quoting the specific text that decided it.
 
@@ -38,8 +38,8 @@ _14 disagreement cases — 4 induction, 7 formulation, 1 prediction, 2 meta._
 
 ### Case 1: `claude-opus-4-7` trial 3 — Stage 1 — Induction
 
-**Trial files** (stage under judgment = `induction`): [`.md` — human-readable](../results/claude-opus-4-7/02_fmv/induction/trial_3_t0.0.md) · [`.json` — source of truth](../results/claude-opus-4-7/02_fmv/induction/trial_3_t0.0.json)
-**Same trial, other stages:** [formulation](../results/claude-opus-4-7/02_fmv/formulation/trial_3_t0.0.md) · [prediction](../results/claude-opus-4-7/02_fmv/prediction/trial_3_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv/meta/trial_3_t0.0.md)
+**Trial files** (stage under judgment = `induction`): [`.md` — human-readable](../../results/claude-opus-4-7/02_fmv/induction/trial_3_t0.0.md) · [`.json` — source of truth](../../results/claude-opus-4-7/02_fmv/induction/trial_3_t0.0.json)
+**Same trial, other stages:** [formulation](../../results/claude-opus-4-7/02_fmv/formulation/trial_3_t0.0.md) · [prediction](../../results/claude-opus-4-7/02_fmv/prediction/trial_3_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv/meta/trial_3_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -106,8 +106,8 @@ Observation 10 (the boulder and the pebble falling together) sits uneasily besid
 
 ### Case 2: `claude-opus-4-7` trial 4 — Stage 1 — Induction
 
-**Trial files** (stage under judgment = `induction`): [`.md` — human-readable](../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.md) · [`.json` — source of truth](../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.json)
-**Same trial, other stages:** [formulation](../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.md) · [prediction](../results/claude-opus-4-7/02_fmv/prediction/trial_4_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv/meta/trial_4_t0.0.md)
+**Trial files** (stage under judgment = `induction`): [`.md` — human-readable](../../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.md) · [`.json` — source of truth](../../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.json)
+**Same trial, other stages:** [formulation](../../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.md) · [prediction](../../results/claude-opus-4-7/02_fmv/prediction/trial_4_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv/meta/trial_4_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -176,8 +176,8 @@ _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
 ### Case 3: `gemini-3.1-pro-preview` trial 0 — Stage 1 — Induction
 
-**Trial files** (stage under judgment = `induction`): [`.md` — human-readable](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_0_t0.0.md) · [`.json` — source of truth](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_0_t0.0.json)
-**Same trial, other stages:** [formulation](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_0_t0.0.md) · [prediction](../results/gemini-3.1-pro-preview/02_fmv/prediction/trial_0_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv/meta/trial_0_t0.0.md)
+**Trial files** (stage under judgment = `induction`): [`.md` — human-readable](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_0_t0.0.md) · [`.json` — source of truth](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_0_t0.0.json)
+**Same trial, other stages:** [formulation](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_0_t0.0.md) · [prediction](../../results/gemini-3.1-pro-preview/02_fmv/prediction/trial_0_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv/meta/trial_0_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -234,8 +234,8 @@ What makes this difficult is reconciling the nature of an object being "heavy." 
 
 ### Case 4: `gemini-3.1-pro-preview` trial 3 — Stage 1 — Induction
 
-**Trial files** (stage under judgment = `induction`): [`.md` — human-readable](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_3_t0.0.md) · [`.json` — source of truth](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_3_t0.0.json)
-**Same trial, other stages:** [formulation](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_3_t0.0.md) · [prediction](../results/gemini-3.1-pro-preview/02_fmv/prediction/trial_3_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv/meta/trial_3_t0.0.md)
+**Trial files** (stage under judgment = `induction`): [`.md` — human-readable](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_3_t0.0.md) · [`.json` — source of truth](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_3_t0.0.json)
+**Same trial, other stages:** [formulation](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_3_t0.0.md) · [prediction](../../results/gemini-3.1-pro-preview/02_fmv/prediction/trial_3_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv/meta/trial_3_t0.0.md)
 
 _Split: Claude judge -> `FAIL`, OpenAI judge -> `PASS`_
 
@@ -292,8 +292,8 @@ exactly as on track. (Rule 1 & 4)
 
 ### Case 5: `claude-opus-4-7` trial 0 — Stage 2 — Formulation
 
-**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../results/claude-opus-4-7/02_fmv/formulation/trial_0_t0.0.md) · [`.json` — source of truth](../results/claude-opus-4-7/02_fmv/formulation/trial_0_t0.0.json)
-**Same trial, other stages:** [induction](../results/claude-opus-4-7/02_fmv/induction/trial_0_t0.0.md) · [prediction](../results/claude-opus-4-7/02_fmv/prediction/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv/meta/trial_0_t0.0.md)
+**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../../results/claude-opus-4-7/02_fmv/formulation/trial_0_t0.0.md) · [`.json` — source of truth](../../results/claude-opus-4-7/02_fmv/formulation/trial_0_t0.0.json)
+**Same trial, other stages:** [induction](../../results/claude-opus-4-7/02_fmv/induction/trial_0_t0.0.md) · [prediction](../../results/claude-opus-4-7/02_fmv/prediction/trial_0_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv/meta/trial_0_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -413,8 +413,8 @@ Several matters are not fully settled by the operational rules above. (i) Heavin
 
 ### Case 6: `claude-opus-4-7` trial 1 — Stage 2 — Formulation
 
-**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../results/claude-opus-4-7/02_fmv/formulation/trial_1_t0.0.md) · [`.json` — source of truth](../results/claude-opus-4-7/02_fmv/formulation/trial_1_t0.0.json)
-**Same trial, other stages:** [induction](../results/claude-opus-4-7/02_fmv/induction/trial_1_t0.0.md) · [prediction](../results/claude-opus-4-7/02_fmv/prediction/trial_1_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv/meta/trial_1_t0.0.md)
+**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../../results/claude-opus-4-7/02_fmv/formulation/trial_1_t0.0.md) · [`.json` — source of truth](../../results/claude-opus-4-7/02_fmv/formulation/trial_1_t0.0.json)
+**Same trial, other stages:** [induction](../../results/claude-opus-4-7/02_fmv/induction/trial_1_t0.0.md) · [prediction](../../results/claude-opus-4-7/02_fmv/prediction/trial_1_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv/meta/trial_1_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -547,8 +547,8 @@ The operational rules leave the following observations only partly covered:
 
 ### Case 7: `claude-opus-4-7` trial 3 — Stage 2 — Formulation
 
-**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../results/claude-opus-4-7/02_fmv/formulation/trial_3_t0.0.md) · [`.json` — source of truth](../results/claude-opus-4-7/02_fmv/formulation/trial_3_t0.0.json)
-**Same trial, other stages:** [induction](../results/claude-opus-4-7/02_fmv/induction/trial_3_t0.0.md) · [prediction](../results/claude-opus-4-7/02_fmv/prediction/trial_3_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv/meta/trial_3_t0.0.md)
+**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../../results/claude-opus-4-7/02_fmv/formulation/trial_3_t0.0.md) · [`.json` — source of truth](../../results/claude-opus-4-7/02_fmv/formulation/trial_3_t0.0.json)
+**Same trial, other stages:** [induction](../../results/claude-opus-4-7/02_fmv/induction/trial_3_t0.0.md) · [prediction](../../results/claude-opus-4-7/02_fmv/prediction/trial_3_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv/meta/trial_3_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -694,8 +694,8 @@ Observation 10 (the boulder and the pebble falling together) sits uneasily besid
 
 ### Case 8: `claude-opus-4-7` trial 4 — Stage 2 — Formulation
 
-**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.md) · [`.json` — source of truth](../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.json)
-**Same trial, other stages:** [induction](../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.md) · [prediction](../results/claude-opus-4-7/02_fmv/prediction/trial_4_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv/meta/trial_4_t0.0.md)
+**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.md) · [`.json` — source of truth](../../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [induction](../../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.md) · [prediction](../../results/claude-opus-4-7/02_fmv/prediction/trial_4_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv/meta/trial_4_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -835,8 +835,8 @@ The operational rules above do not cover the following:
 
 ### Case 9: `gpt-5.5-2026-04-23` trial 2 — Stage 2 — Formulation
 
-**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_2_t0.0.md) · [`.json` — source of truth](../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_2_t0.0.json)
-**Same trial, other stages:** [induction](../results/gpt-5.5-2026-04-23/02_fmv/induction/trial_2_t0.0.md) · [prediction](../results/gpt-5.5-2026-04-23/02_fmv/prediction/trial_2_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv/meta/trial_2_t0.0.md)
+**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_2_t0.0.md) · [`.json` — source of truth](../../results/gpt-5.5-2026-04-23/02_fmv/formulation/trial_2_t0.0.json)
+**Same trial, other stages:** [induction](../../results/gpt-5.5-2026-04-23/02_fmv/induction/trial_2_t0.0.md) · [prediction](../../results/gpt-5.5-2026-04-23/02_fmv/prediction/trial_2_t0.0.md) · [meta](../../results/gpt-5.5-2026-04-23/02_fmv/meta/trial_2_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -1027,8 +1027,8 @@ These operational rules fully cover the stated observations only by treating fal
 
 ### Case 10: `gemini-3.1-pro-preview` trial 0 — Stage 2 — Formulation
 
-**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_0_t0.0.md) · [`.json` — source of truth](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_0_t0.0.json)
-**Same trial, other stages:** [induction](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_0_t0.0.md) · [prediction](../results/gemini-3.1-pro-preview/02_fmv/prediction/trial_0_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv/meta/trial_0_t0.0.md)
+**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_0_t0.0.md) · [`.json` — source of truth](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_0_t0.0.json)
+**Same trial, other stages:** [induction](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_0_t0.0.md) · [prediction](../../results/gemini-3.1-pro-preview/02_fmv/prediction/trial_0_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv/meta/trial_0_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -1126,8 +1126,8 @@ Observation 6 is not fully covered by these operational rules without creating a
 
 ### Case 11: `gemini-3.1-pro-preview` trial 4 — Stage 2 — Formulation
 
-**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_4_t0.0.md) · [`.json` — source of truth](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_4_t0.0.json)
-**Same trial, other stages:** [induction](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_4_t0.0.md) · [prediction](../results/gemini-3.1-pro-preview/02_fmv/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv/meta/trial_4_t0.0.md)
+**Trial files** (stage under judgment = `formulation`): [`.md` — human-readable](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_4_t0.0.md) · [`.json` — source of truth](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [induction](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_4_t0.0.md) · [prediction](../../results/gemini-3.1-pro-preview/02_fmv/prediction/trial_4_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv/meta/trial_4_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -1230,8 +1230,8 @@ Observation 1 (a block rests on a level track) and Observation 6 (a block adrift
 
 ### Case 12: `claude-opus-4-7` trial 4 — Stage 3 — Prediction
 
-**Trial files** (stage under judgment = `prediction`): [`.md` — human-readable](../results/claude-opus-4-7/02_fmv/prediction/trial_4_t0.0.md) · [`.json` — source of truth](../results/claude-opus-4-7/02_fmv/prediction/trial_4_t0.0.json)
-**Same trial, other stages:** [induction](../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.md) · [formulation](../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv/meta/trial_4_t0.0.md)
+**Trial files** (stage under judgment = `prediction`): [`.md` — human-readable](../../results/claude-opus-4-7/02_fmv/prediction/trial_4_t0.0.md) · [`.json` — source of truth](../../results/claude-opus-4-7/02_fmv/prediction/trial_4_t0.0.json)
+**Same trial, other stages:** [induction](../../results/claude-opus-4-7/02_fmv/induction/trial_4_t0.0.md) · [formulation](../../results/claude-opus-4-7/02_fmv/formulation/trial_4_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv/meta/trial_4_t0.0.md)
 
 _Split: Claude judge -> `PASS`, OpenAI judge -> `FAIL`_
 
@@ -1382,8 +1382,8 @@ Reasoning: While both pushed with equal effort from opposite sides, Rule 5 gives
 
 ### Case 13: `claude-opus-4-7` trial 0 — Stage 4 — Meta over-claim
 
-**Trial files** (stage under judgment = `meta`): [`.md` — human-readable](../results/claude-opus-4-7/02_fmv/meta/trial_0_t0.0.md) · [`.json` — source of truth](../results/claude-opus-4-7/02_fmv/meta/trial_0_t0.0.json)
-**Same trial, other stages:** [induction](../results/claude-opus-4-7/02_fmv/induction/trial_0_t0.0.md) · [formulation](../results/claude-opus-4-7/02_fmv/formulation/trial_0_t0.0.md) · [prediction](../results/claude-opus-4-7/02_fmv/prediction/trial_0_t0.0.md)
+**Trial files** (stage under judgment = `meta`): [`.md` — human-readable](../../results/claude-opus-4-7/02_fmv/meta/trial_0_t0.0.md) · [`.json` — source of truth](../../results/claude-opus-4-7/02_fmv/meta/trial_0_t0.0.json)
+**Same trial, other stages:** [induction](../../results/claude-opus-4-7/02_fmv/induction/trial_0_t0.0.md) · [formulation](../../results/claude-opus-4-7/02_fmv/formulation/trial_0_t0.0.md) · [prediction](../../results/claude-opus-4-7/02_fmv/prediction/trial_0_t0.0.md)
 
 _Split: Claude meta judge -> `no`, OpenAI meta judge -> `yes`_
 
@@ -1453,8 +1453,8 @@ A few concepts crept in that were not in the original observations:
 
 ### Case 14: `gemini-3.1-pro-preview` trial 0 — Stage 4 — Meta over-claim
 
-**Trial files** (stage under judgment = `meta`): [`.md` — human-readable](../results/gemini-3.1-pro-preview/02_fmv/meta/trial_0_t0.0.md) · [`.json` — source of truth](../results/gemini-3.1-pro-preview/02_fmv/meta/trial_0_t0.0.json)
-**Same trial, other stages:** [induction](../results/gemini-3.1-pro-preview/02_fmv/induction/trial_0_t0.0.md) · [formulation](../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_0_t0.0.md) · [prediction](../results/gemini-3.1-pro-preview/02_fmv/prediction/trial_0_t0.0.md)
+**Trial files** (stage under judgment = `meta`): [`.md` — human-readable](../../results/gemini-3.1-pro-preview/02_fmv/meta/trial_0_t0.0.md) · [`.json` — source of truth](../../results/gemini-3.1-pro-preview/02_fmv/meta/trial_0_t0.0.json)
+**Same trial, other stages:** [induction](../../results/gemini-3.1-pro-preview/02_fmv/induction/trial_0_t0.0.md) · [formulation](../../results/gemini-3.1-pro-preview/02_fmv/formulation/trial_0_t0.0.md) · [prediction](../../results/gemini-3.1-pro-preview/02_fmv/prediction/trial_0_t0.0.md)
 
 _Split: Claude meta judge -> `no`, OpenAI meta judge -> `yes`_
 

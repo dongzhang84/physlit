@@ -58,7 +58,7 @@ FRAMEWORK_DIR = REPO_ROOT / "frameworks" / FRAMEWORK_ID
 JUDGE_PROMPTS_DIR = FRAMEWORK_DIR / "prompts"
 RESULTS_ROOT = REPO_ROOT / "results"
 ANALYSIS_DIR = REPO_ROOT / "analysis"
-FINDINGS_PATH = ANALYSIS_DIR / "02_fmv_findings.md"
+FINDINGS_PATH = ANALYSIS_DIR / "fmv" / "02_fmv_findings.md"
 
 DEFAULT_MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")

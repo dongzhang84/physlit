@@ -7,7 +7,7 @@ fabricated banned-token evidence: it cited "air resistance" as
 appearing in a Stage 1 response that did not in fact contain the
 substring "air resistance", and claimed "components" contained
 "momentum" as a substring (which it does not). See
-``analysis/03_decay_dryrun_findings.md`` §6 (Gap 4) for the audit
+``analysis/decay/03_decay_dryrun_findings.md`` §6 (Gap 4) for the audit
 trail.
 
 This module provides a single function, :func:`check_evidence`, that

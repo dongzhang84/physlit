@@ -1,4 +1,4 @@
-"""Build ``analysis/03_decay_audit_worksheet.md`` — the 03_decay human
+"""Build ``analysis/decay/03_decay_audit_worksheet.md`` — the 03_decay human
 audit worksheet for the dual-judge disagreements + fabrication-flagged
 cases produced by the production judging run.
 
@@ -27,7 +27,7 @@ prior-stage context for Stage 2/3 cases, scenario answer-key
 extraction for Part B, empty audit-decision blocks.
 
 The Agent 1 + Agent 2 non-canonical preview lives in
-``analysis/03_decay_agents_review.md`` (a separate file) so the
+``analysis/decay/03_decay_agents_review.md`` (a separate file) so the
 auditor can form an independent verdict first.
 
 Usage: ``uv run python scripts/build_03_decay_worksheet.py``
@@ -45,7 +45,7 @@ REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 FRAMEWORK_ID = "03_decay"
 FRAMEWORK_DIR = REPO / "frameworks" / FRAMEWORK_ID
-OUTPUT = REPO / "analysis" / "03_decay_audit_worksheet.md"
+OUTPUT = REPO / "analysis" / "decay" / "03_decay_audit_worksheet.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
 PRIOR_STAGE = {"formulation": "induction", "prediction": "formulation"}
@@ -283,7 +283,7 @@ HEADER_LINES = [
     "`evidence_check` status — `FABRICATED` means the judge's cited "
     "evidence is not a substring of the response (the OpenAI judge "
     "exhibited this on a number of Stage 1 / Stage 3 §3 citations; see "
-    "`analysis/03_decay_dryrun_findings.md` §6 Gap 4).",
+    "`analysis/decay/03_decay_dryrun_findings.md` §6 Gap 4).",
     "3. Refer to the frozen criteria as needed: "
     "[`ideal_induction.md`](../frameworks/03_decay/ideal_induction.md) "
     "(Stage 1; §3 banned tokens, §5 patterns, §6 6-step checklist) · "

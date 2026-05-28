@@ -1,4 +1,4 @@
-"""Build ``analysis/v0_3_agents_review.md`` — case-by-case review of
+"""Build ``analysis/aristotelian/v0_3_agents_review.md`` — case-by-case review of
 how Agent 1 (content) and Agent 2 (structural) resolved each v0.3
 treatment-arm dual-judge disagreement. Mirrors
 ``scripts/build_02_fmv_2_agents_review.py``.
@@ -16,7 +16,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 TREATMENT_ID = "01_aristotelian_3"
-OUTPUT = REPO / "analysis" / "v0_3_agents_review.md"
+OUTPUT = REPO / "analysis" / "aristotelian" / "v0_3_agents_review.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
 STAGE_TITLE = {

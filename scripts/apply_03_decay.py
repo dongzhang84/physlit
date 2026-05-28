@@ -2,7 +2,7 @@
 
 The 54 dual-judge disagreement cases (18 content stage-verdict + 32
 Stage 3 per-scenario + 4 meta over-claim) were resolved by human audit
-(``analysis/03_decay_audit_human_review.md``). Per
+(``analysis/decay/03_decay_audit_human_review.md``). Per
 ``prereg-03_decay-locked`` §1.4 those human verdicts are the canonical
 resolution. This script loads the dual-judge verdicts, substitutes the
 human verdict for every DISAGREE row, recomputes P1 / P2 / P3 / P4, and
@@ -15,7 +15,7 @@ additionally:
   resolvers' agreement with the human audit.
 
 It rewrites the "## 03_decay post-audit final results" block of
-``analysis/03_decay_findings.md`` (idempotent). No API calls.
+``analysis/decay/03_decay_findings.md`` (idempotent). No API calls.
 
 Usage: ``uv run python scripts/apply_03_decay.py``
 """
@@ -32,12 +32,12 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 FRAMEWORK_ID = "03_decay"
-FINDINGS = REPO / "analysis" / "03_decay_findings.md"
+FINDINGS = REPO / "analysis" / "decay" / "03_decay_findings.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
 
 # --- Human-audit overrides (canonical, per prereg §1.4) --------------
-# Source: analysis/03_decay_audit_human_review.md.
+# Source: analysis/decay/03_decay_audit_human_review.md.
 
 # Part A — 18 stage-level content cases. C{n} ↔ A1-{n}.
 HUMAN_CONTENT: dict[tuple[str, int, str], str] = {
@@ -417,7 +417,7 @@ def main() -> int:
     o.append("\n## 03_decay post-audit final results\n")
     o.append(f"- Generated: `{ts}`\n")
     o.append(
-        "- Audit: `analysis/03_decay_audit_human_review.md` — "
+        "- Audit: `analysis/decay/03_decay_audit_human_review.md` — "
         "54 cases resolved by human audit (18 content + 32 per-scenario + "
         "4 meta), canonical per prereg §1.4.\n\n"
     )

@@ -17,7 +17,7 @@ Then it aggregates:
 DISAGREE cases are flagged for human audit, not auto-resolved; P1's
 IRR is audit-invariant, P2 is a lower bound while a disagreement on a
 content-PASS trial is unresolved. Report appended to
-`analysis/02_fmv_1_findings.md`.
+`analysis/fmv/02_fmv_1_findings.md`.
 
 The structural judges are Claude + OpenAI — both reachable from the
 sandboxed environment; no sandbox override needed. No existing code is
@@ -45,14 +45,14 @@ REPO = Path(__file__).resolve().parent.parent
 FRAMEWORK_ID = "02_fmv"
 FRAMEWORK_DIR = REPO / "frameworks" / FRAMEWORK_ID
 RESULTS = REPO / "results"
-FINDINGS = REPO / "analysis" / "02_fmv_1_findings.md"
+FINDINGS = REPO / "analysis" / "fmv" / "02_fmv_1_findings.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 JUDGE_MAX_TOKENS = 8192
 CALL_TIMEOUT_SECONDS = 300
 
 # Frozen — 02_fmv post-audit content-axis verdicts. A trial's content
 # axis is PASS iff its Stage 1, 2, and 3 are all PASS. Source: the
-# post-audit matrix in analysis/02_fmv_findings.md (9 PASS, 6 FAIL).
+# post-audit matrix in analysis/fmv/02_fmv_findings.md (9 PASS, 6 FAIL).
 CONTENT_ALL_PASS: frozenset[tuple[str, int]] = frozenset(
     {
         ("claude-opus-4-7", 0),

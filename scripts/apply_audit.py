@@ -5,7 +5,7 @@ overall judge-disagreement rate of 36.67 %, which exceeds the 25 %
 threshold that triggers a prereg-mandated human audit (see
 ``predictions/v0_1_prereg.md`` and ``CLAUDE.md`` "Inter-rater
 reliability"). The human auditor reviewed all 22 DISAGREE cases and
-recorded verdicts in ``analysis/v0_1_audit_human_review.md``.
+recorded verdicts in ``analysis/aristotelian/v0_1_audit_human_review.md``.
 
 This script:
 
@@ -16,7 +16,7 @@ This script:
    verdicts are visible in the canonical audit file).
 3. Recomputes P1 and P3 from the audit-resolved classifications.
 4. Appends a "## Post-audit findings" block to
-   ``analysis/v0_1_findings.md`` (does NOT overwrite the pre-audit
+   ``analysis/aristotelian/v0_1_findings.md`` (does NOT overwrite the pre-audit
    block — both stay on the record).
 
 Does NOT modify:
@@ -46,12 +46,12 @@ from physlit.judges.aggregate import (
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 ANALYSIS = REPO / "analysis"
-FINDINGS_PATH = ANALYSIS / "v0_1_findings.md"
+FINDINGS_PATH = ANALYSIS / "aristotelian" / "v0_1_findings.md"
 
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 N_TRIALS = 5
 
-# All 22 audit verdicts from analysis/v0_1_audit_human_review.md, keyed
+# All 22 audit verdicts from analysis/aristotelian/v0_1_audit_human_review.md, keyed
 # by (model_id, trial_index, stage). Values:
 #   - Stage 1-3:  "PASS" | "FAIL"
 #   - Stage 4:    "yes" | "no" | "vacuous"

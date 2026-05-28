@@ -14,7 +14,7 @@ human-audit override tables below (canonical, per
 - the per-model treatment-vs-control comparison.
 
 It rewrites the "## 02_fmv.2 post-audit final results" block of
-`analysis/02_fmv_2_findings.md` (idempotent). No API calls.
+`analysis/fmv/02_fmv_2_findings.md` (idempotent). No API calls.
 
 Before any human audit the override tables are empty; a DISAGREE with
 no override is reported as PENDING and the verdicts are marked
@@ -34,7 +34,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 TREATMENT_ID = "02_fmv_2"
-FINDINGS = REPO / "analysis" / "02_fmv_2_findings.md"
+FINDINGS = REPO / "analysis" / "fmv" / "02_fmv_2_findings.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
 
@@ -62,7 +62,7 @@ CONTROL_CONTENT_PASS = sum(1 for v in CONTROL.values() if v["content"] == "PASS"
 CONTROL_STRUCTURAL_PASS = sum(1 for v in CONTROL.values() if v["structural"] == "PASS")  # 5
 
 # Human-audit overrides for treatment-arm dual-judge disagreements
-# (canonical, per prereg §1.3). Source: analysis/02_fmv_2_audit_human_review.md.
+# (canonical, per prereg §1.3). Source: analysis/fmv/02_fmv_2_audit_human_review.md.
 HUMAN_CONTENT: dict[tuple[str, int, str], str] = {
     ("claude-opus-4-7", 1, "formulation"): "FAIL",  # C1 — "inert" lexical
     ("claude-opus-4-7", 2, "formulation"): "FAIL",  # C2 — P3 ground push

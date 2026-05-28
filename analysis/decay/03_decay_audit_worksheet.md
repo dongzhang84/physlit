@@ -15,7 +15,7 @@ Three parts:
 For each case below:
 
 1. Open the trial JSON files (links per case).
-2. Compare both judges' verdicts and cited evidence. Note the `evidence_check` status — `FABRICATED` means the judge's cited evidence is not a substring of the response (the OpenAI judge exhibited this on a number of Stage 1 / Stage 3 §3 citations; see `analysis/03_decay_dryrun_findings.md` §6 Gap 4).
+2. Compare both judges' verdicts and cited evidence. Note the `evidence_check` status — `FABRICATED` means the judge's cited evidence is not a substring of the response (the OpenAI judge exhibited this on a number of Stage 1 / Stage 3 §3 citations; see `analysis/decay/03_decay_dryrun_findings.md` §6 Gap 4).
 3. Refer to the frozen criteria as needed: [`ideal_induction.md`](../frameworks/03_decay/ideal_induction.md) (Stage 1; §3 banned tokens, §5 patterns, §6 6-step checklist) · [`pass_fail_criteria.md`](../frameworks/03_decay/pass_fail_criteria.md) (Stages 2-3) · [`prediction_tests.md`](../frameworks/03_decay/prediction_tests.md) (Stage 3 answer key with PASS ranges per scenario).
 4. Fill the **Audit decision** block.
 5. Add **Audit notes** with a verbatim quote.

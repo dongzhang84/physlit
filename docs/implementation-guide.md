@@ -370,7 +370,7 @@ GPT / Gemini runner 不在 Phase 1.5 范围内——v0.1 正式跑时再加。
 跑完后：
 
 - 4 个 JSON trial 文件在 `results/_dryrun/<ts>/01_aristotelian/`
-- `analysis/dryrun_findings.md`：发现的问题清单 + 拟修订
+- `analysis/aristotelian/dryrun_findings.md`：发现的问题清单 + 拟修订
 - 上述修订在 v0.1 prereg lock（Phase 5）之前**全部完成**
 
 ### 1.5.7 与 prereg lock 的边界

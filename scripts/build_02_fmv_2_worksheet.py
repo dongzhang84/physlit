@@ -1,4 +1,4 @@
-"""Build ``analysis/02_fmv_2_audit_worksheet.md`` — the 02_fmv.2
+"""Build ``analysis/fmv/02_fmv_2_audit_worksheet.md`` — the 02_fmv.2
 human-audit worksheet for the treatment-arm dual-judge disagreements.
 
 Mirrors the layout of the prior worksheets
@@ -36,7 +36,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 TREATMENT_ID = "02_fmv_2"
-OUTPUT = REPO / "analysis" / "02_fmv_2_audit_worksheet.md"
+OUTPUT = REPO / "analysis" / "fmv" / "02_fmv_2_audit_worksheet.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
 PRIOR_STAGE = {"formulation": "induction", "prediction": "formulation"}

@@ -1,4 +1,4 @@
-"""Build ``analysis/v0_1_audit_worksheet.md`` from production trials + judge verdicts.
+"""Build ``analysis/aristotelian/v0_1_audit_worksheet.md`` from production trials + judge verdicts.
 
 For every (model, trial, stage) where the two judges disagreed, emit
 one numbered case with:
@@ -30,7 +30,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 ANALYSIS = REPO / "analysis"
-OUTPUT = ANALYSIS / "v0_1_audit_worksheet.md"
+OUTPUT = ANALYSIS / "aristotelian" / "v0_1_audit_worksheet.md"
 FRAMEWORK_ID = "01_aristotelian"
 
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
@@ -265,7 +265,7 @@ def main() -> int:
         "When all 22 cases are decided, the verdicts replay through the\n"
         "aggregator's P1 / P3 logic with audit-derived classifications\n"
         "substituting for `DISAGREE` rows. The publication-ready findings\n"
-        "block goes back into `analysis/v0_1_findings.md` along with this\n"
+        "block goes back into `analysis/aristotelian/v0_1_findings.md` along with this\n"
         "audit's deviation rationale, signed by author + external\n"
         "physics-trained reader.\n"
     )

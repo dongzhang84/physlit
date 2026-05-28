@@ -12,7 +12,7 @@ updated verdict back. No new API calls are made.
 
 After re-parsing, the script re-aggregates the full P1-P4 verdicts
 by invoking ``aggregate`` from ``judge_03_decay``. The original
-judging report stays in ``analysis/03_decay_findings.md`` (a
+judging report stays in ``analysis/decay/03_decay_findings.md`` (a
 historical record of the parse-error state); the new report is
 appended below it.
 

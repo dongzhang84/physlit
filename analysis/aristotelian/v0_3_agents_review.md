@@ -16,8 +16,8 @@
 
 ## Case C1 — `claude-opus-4-7` trial 0 · Stage 1 (induction)
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) [`.json`](../../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 2](../../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) · [Stage 3](../../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) · [meta](../../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -38,8 +38,8 @@ _(verdict JSON: `results/claude-opus-4-7/01_aristotelian_3/content_resolved/agen
 
 ## Case C2 — `claude-opus-4-7` trial 0 · Stage 2 (formulation)
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) · [Stage 3](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) [`.json`](../../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) · [Stage 3](../../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) · [meta](../../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -60,8 +60,8 @@ _(verdict JSON: `results/claude-opus-4-7/01_aristotelian_3/content_resolved/agen
 
 ## Case C3 — `claude-opus-4-7` trial 0 · Stage 3 (prediction)
 
-**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) · [Stage 2](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
+**Trial files** (under judgment): Stage 3 [`.md`](../../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.md) [`.json`](../../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/claude-opus-4-7/01_aristotelian_3/induction/trial_0_t0.0.md) · [Stage 2](../../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_0_t0.0.md) · [meta](../../results/claude-opus-4-7/01_aristotelian_3/meta/trial_0_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -82,8 +82,8 @@ _(verdict JSON: `results/claude-opus-4-7/01_aristotelian_3/content_resolved/agen
 
 ## Case C4 — `claude-opus-4-7` trial 1 · Stage 3 (prediction)
 
-**Trial files** (under judgment): Stage 3 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_1_t0.0.md) · [Stage 2](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_1_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_1_t0.0.md)
+**Trial files** (under judgment): Stage 3 [`.md`](../../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_1_t0.0.md) [`.json`](../../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/claude-opus-4-7/01_aristotelian_3/induction/trial_1_t0.0.md) · [Stage 2](../../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_1_t0.0.md) · [meta](../../results/claude-opus-4-7/01_aristotelian_3/meta/trial_1_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -104,8 +104,8 @@ _(verdict JSON: `results/claude-opus-4-7/01_aristotelian_3/content_resolved/agen
 
 ## Case C5 — `claude-opus-4-7` trial 2 · Stage 2 (formulation)
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/01_aristotelian_3/induction/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_2_t0.0.md) · [meta](../results/claude-opus-4-7/01_aristotelian_3/meta/trial_2_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_2_t0.0.md) [`.json`](../../results/claude-opus-4-7/01_aristotelian_3/formulation/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/claude-opus-4-7/01_aristotelian_3/induction/trial_2_t0.0.md) · [Stage 3](../../results/claude-opus-4-7/01_aristotelian_3/prediction/trial_2_t0.0.md) · [meta](../../results/claude-opus-4-7/01_aristotelian_3/meta/trial_2_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -126,8 +126,8 @@ _(verdict JSON: `results/claude-opus-4-7/01_aristotelian_3/content_resolved/agen
 
 ## Case C6 — `gemini-3.1-pro-preview` trial 1 · Stage 3 (prediction)
 
-**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_1_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_1_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_1_t0.0.md)
+**Trial files** (under judgment): Stage 3 [`.md`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_1_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_1_t0.0.md) · [Stage 2](../../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_1_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_1_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -148,8 +148,8 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian_3/content_resolv
 
 ## Case C7 — `gemini-3.1-pro-preview` trial 2 · Stage 3 (prediction)
 
-**Trial files** (under judgment): Stage 3 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_2_t0.0.md) · [Stage 2](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_2_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_2_t0.0.md)
+**Trial files** (under judgment): Stage 3 [`.md`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_2_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_2_t0.0.md) · [Stage 2](../../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_2_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_2_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -170,8 +170,8 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian_3/content_resolv
 
 ## Case C8 — `gemini-3.1-pro-preview` trial 4 · Stage 2 (formulation)
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_4_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.md) · [Stage 3](../../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_4_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_4_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -194,8 +194,8 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian_3/content_resolv
 
 ## Case S1 — `gpt-5.5-2026-04-23` trial 1 · structural axis
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/induction/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/induction/trial_1_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/formulation/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/01_aristotelian_3/formulation/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/01_aristotelian_3/prediction/trial_1_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/01_aristotelian_3/meta/trial_1_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gpt-5.5-2026-04-23/01_aristotelian_3/induction/trial_1_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/01_aristotelian_3/induction/trial_1_t0.0.json) · Stage 2 [`.md`](../../results/gpt-5.5-2026-04-23/01_aristotelian_3/formulation/trial_1_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/01_aristotelian_3/formulation/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 3](../../results/gpt-5.5-2026-04-23/01_aristotelian_3/prediction/trial_1_t0.0.md) · [meta](../../results/gpt-5.5-2026-04-23/01_aristotelian_3/meta/trial_1_t0.0.md)
 
 **Claude structural judge — `FAIL`** (rule count `7`, failed: N12)
 
@@ -217,8 +217,8 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/01_aristotelian_3/structural_resolve
 
 ## Case S2 — `gemini-3.1-pro-preview` trial 3 · structural axis
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_3_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_3_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_3_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_3_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_3_t0.0.json) · Stage 2 [`.md`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_3_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_3_t0.0.json)
+**Same trial, other stages:** [Stage 3](../../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_3_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_3_t0.0.md)
 
 **Claude structural judge — `PASS`** (rule count `4`, failed: (none))
 
@@ -240,8 +240,8 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/01_aristotelian_3/structural_res
 
 ## Case S3 — `gemini-3.1-pro-preview` trial 4 · structural axis
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_4_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/induction/trial_4_t0.0.json) · Stage 2 [`.md`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/01_aristotelian_3/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 3](../../results/gemini-3.1-pro-preview/01_aristotelian_3/prediction/trial_4_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/01_aristotelian_3/meta/trial_4_t0.0.md)
 
 **Claude structural judge — `FAIL`** (rule count `3`, failed: N12)
 

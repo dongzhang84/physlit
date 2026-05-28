@@ -420,9 +420,9 @@ publishable independent of the physics-literacy result, and extend the
 
 ## Appendix — files and links
 
-- Pre-registration: [`predictions/02_fmv_1_prereg.md`](../predictions/02_fmv_1_prereg.md) — tag `prereg-02_fmv.1-locked`
-- Structural criteria: [`frameworks/02_fmv/structural_criteria.md`](../frameworks/02_fmv/structural_criteria.md)
-- Structural judge prompt: [`frameworks/02_fmv/prompts/judge_structural.md`](../frameworks/02_fmv/prompts/judge_structural.md)
+- Pre-registration: [`predictions/02_fmv_1_prereg.md`](../../predictions/02_fmv_1_prereg.md) — tag `prereg-02_fmv.1-locked`
+- Structural criteria: [`frameworks/02_fmv/structural_criteria.md`](../../frameworks/02_fmv/structural_criteria.md)
+- Structural judge prompt: [`frameworks/02_fmv/prompts/judge_structural.md`](../../frameworks/02_fmv/prompts/judge_structural.md)
 - Structural judge verdicts: `results/<model>/02_fmv/structural/`
 - Agent 2 (non-canonical) verdicts: `results/<model>/02_fmv/structural_resolved/`
 - Numerical findings: [`02_fmv_1_findings.md`](./02_fmv_1_findings.md)

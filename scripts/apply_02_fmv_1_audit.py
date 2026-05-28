@@ -1,7 +1,7 @@
 """Apply the 02_fmv.1 structural human audit and recompute P1 / P2 (final).
 
 The 7 structural-axis dual-judge disagreement cases were resolved by
-human audit (``analysis/02_fmv_1_structural_audit_human_review.md``).
+human audit (``analysis/fmv/02_fmv_1_structural_audit_human_review.md``).
 Per ``prereg-02_fmv.1-locked`` §1 those human verdicts are the
 canonical resolution (no LLM disagree-resolver). This script:
 
@@ -13,7 +13,7 @@ canonical resolution (no LLM disagree-resolver). This script:
 - compares Agent 2 (non-canonical resolver) against the human audit.
 
 It appends a "post-audit final results" block to
-``analysis/02_fmv_1_findings.md``. No API calls; deterministic.
+``analysis/fmv/02_fmv_1_findings.md``. No API calls; deterministic.
 
 Usage: ``uv run python scripts/apply_02_fmv_1_audit.py``
 """
@@ -29,11 +29,11 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 FRAMEWORK_ID = "02_fmv"
-FINDINGS = REPO / "analysis" / "02_fmv_1_findings.md"
+FINDINGS = REPO / "analysis" / "fmv" / "02_fmv_1_findings.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 
 # Per-stage content verdicts (S1, S2, S3), inherited verbatim from the
-# 02_fmv post-audit final results (analysis/02_fmv_findings.md →
+# 02_fmv post-audit final results (analysis/fmv/02_fmv_findings.md →
 # "Resolved per-trial matrix (audit-applied)"). A trial's content axis
 # is PASS iff its Stage 1, 2 and 3 are all PASS.
 STAGE_VERDICTS = {
@@ -55,7 +55,7 @@ STAGE_VERDICTS = {
 }
 
 # Human-audit verdicts on the 7 structural dual-judge disagreement
-# cases (analysis/02_fmv_1_structural_audit_human_review.md).
+# cases (analysis/fmv/02_fmv_1_structural_audit_human_review.md).
 HUMAN_STRUCTURAL = {
     ("claude-opus-4-7", 2): "FAIL",  # Case 1 — N11
     ("claude-opus-4-7", 3): "FAIL",  # Case 2 — N10
@@ -155,7 +155,7 @@ def main() -> int:
     o.append("\n## 02_fmv.1 post-audit final results\n")
     o.append(f"- Generated: `{ts}`\n")
     o.append(
-        "- Audit: `analysis/02_fmv_1_structural_audit_human_review.md` — 7 "
+        "- Audit: `analysis/fmv/02_fmv_1_structural_audit_human_review.md` — 7 "
         "structural disagree cases resolved by human audit (canonical, per "
         "`prereg-02_fmv.1-locked` §1).\n\n"
     )
@@ -163,7 +163,7 @@ def main() -> int:
     o.append(
         "> `S1`/`S2`/`S3` — the 02_fmv post-audit content verdicts per "
         "stage (induction / formulation / prediction), inherited verbatim "
-        "from `analysis/02_fmv_findings.md`. `Content-only` = S1 ∧ S2 ∧ S3 "
+        "from `analysis/fmv/02_fmv_findings.md`. `Content-only` = S1 ∧ S2 ∧ S3 "
         "— the per-trial verdict if there were no structural axis. "
         "`Structural` uses the human-audit verdict for the 7 dual-judge "
         "disagree trials and the dual-judge agreed verdict for the other 8 "

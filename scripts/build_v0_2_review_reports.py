@@ -4,8 +4,8 @@ Reads existing verdict JSONs and the human-audit markdown; emits two
 analysis files under ``analysis/``. No API calls; entirely deterministic.
 
 Outputs:
-- ``analysis/v0_2_agent1_vs_human_audit.md``
-- ``analysis/v0_2_agent2_review.md``
+- ``analysis/aristotelian/v0_2_agent1_vs_human_audit.md``
+- ``analysis/aristotelian/v0_2_agent2_review.md``
 """
 
 from __future__ import annotations
@@ -20,7 +20,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 RESULTS_ROOT = REPO_ROOT / "results"
 ANALYSIS_DIR = REPO_ROOT / "analysis"
-AUDIT_MD = ANALYSIS_DIR / "v0_1_audit_human_review.md"
+AUDIT_MD = ANALYSIS_DIR / "aristotelian" / "v0_1_audit_human_review.md"
 FRAMEWORK_ID = "01_aristotelian"
 
 MODEL_BY_LABEL = {
@@ -541,11 +541,15 @@ def main() -> int:
     agent1_report = render_agent1_report(human, agent1)
     agent2_report = render_agent2_report(structural, agent2)
 
-    (ANALYSIS_DIR / "v0_2_agent1_vs_human_audit.md").write_text(agent1_report)
-    (ANALYSIS_DIR / "v0_2_agent2_review.md").write_text(agent2_report)
+    (ANALYSIS_DIR / "aristotelian" / "v0_2_agent1_vs_human_audit.md").write_text(agent1_report)
+    (ANALYSIS_DIR / "aristotelian" / "v0_2_agent2_review.md").write_text(agent2_report)
 
-    print(f"Wrote analysis/v0_2_agent1_vs_human_audit.md ({len(agent1_report.splitlines())} lines)")
-    print(f"Wrote analysis/v0_2_agent2_review.md ({len(agent2_report.splitlines())} lines)")
+    print(
+        f"Wrote analysis/aristotelian/v0_2_agent1_vs_human_audit.md ({len(agent1_report.splitlines())} lines)"
+    )
+    print(
+        f"Wrote analysis/aristotelian/v0_2_agent2_review.md ({len(agent2_report.splitlines())} lines)"
+    )
     return 0
 
 

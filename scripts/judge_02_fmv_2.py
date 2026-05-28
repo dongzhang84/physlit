@@ -15,7 +15,7 @@ Judges the **treatment arm** of the axiomatisation control experiment
   Verdicts → `results/<model>/02_fmv_2/structural/`.
 
 It then writes a **preliminary** judging section to
-`analysis/02_fmv_2_findings.md`: per-trial content and structural
+`analysis/fmv/02_fmv_2_findings.md`: per-trial content and structural
 verdicts and both IRRs. DISAGREE cases are flagged for human audit,
 not auto-resolved. The canonical P1 / P2 verdicts and the
 treatment-vs-control comparison are computed by
@@ -50,7 +50,7 @@ TREATMENT_ID = "02_fmv_2"  # results subtree for the treatment arm
 SOURCE_DIR = REPO / "frameworks" / "02_fmv"  # frozen prompts + criteria
 JUDGE_PROMPTS_DIR = SOURCE_DIR / "prompts"
 RESULTS = REPO / "results"
-FINDINGS = REPO / "analysis" / "02_fmv_2_findings.md"
+FINDINGS = REPO / "analysis" / "fmv" / "02_fmv_2_findings.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
 JUDGE_MAX_TOKENS = 8192

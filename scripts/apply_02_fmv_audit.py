@@ -1,7 +1,7 @@
 """Apply the 02_fmv human audit and recompute P1-P4 (post-audit, final).
 
 The 14 dual-judge disagreement cases were resolved by human audit
-(``analysis/02_fmv_audit_human_review.md``). Per ``prereg-02_fmv-locked``
+(``analysis/fmv/02_fmv_audit_human_review.md``). Per ``prereg-02_fmv-locked``
 those human verdicts are the canonical resolution. This script loads
 the dual-judge verdicts, substitutes the human verdict for every
 DISAGREE row, recomputes P1 / P2 / P3 / P4, and additionally:
@@ -11,7 +11,7 @@ DISAGREE row, recomputes P1 / P2 / P3 / P4, and additionally:
 - tabulates each LLM judge's agreement with the human audit.
 
 It appends a "post-audit final results" block to
-``analysis/02_fmv_findings.md``. No API calls; deterministic.
+``analysis/fmv/02_fmv_findings.md``. No API calls; deterministic.
 
 Usage: ``uv run python scripts/apply_02_fmv_audit.py``
 """
@@ -27,12 +27,12 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 FRAMEWORK_ID = "02_fmv"
-FINDINGS = REPO / "analysis" / "02_fmv_findings.md"
+FINDINGS = REPO / "analysis" / "fmv" / "02_fmv_findings.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
 
 # Human-audit verdicts on the 14 dual-judge disagreement cases
-# (analysis/02_fmv_audit_human_review.md). Content stages -> PASS/FAIL;
+# (analysis/fmv/02_fmv_audit_human_review.md). Content stages -> PASS/FAIL;
 # meta -> over_claim value.
 HUMAN_CONTENT = {
     ("claude-opus-4-7", 3, "induction"): "PASS",  # Case 1
@@ -161,7 +161,7 @@ def main() -> int:
     o.append("\n## 02_fmv post-audit final results\n")
     o.append(f"- Generated: `{ts}`\n")
     o.append(
-        "- Audit: `analysis/02_fmv_audit_human_review.md` — 14 disagree "
+        "- Audit: `analysis/fmv/02_fmv_audit_human_review.md` — 14 disagree "
         "cases resolved by human audit (canonical, per prereg).\n\n"
     )
     o.append("### Resolved per-trial matrix (audit-applied)\n\n")
@@ -214,7 +214,7 @@ def main() -> int:
     o.append(f"- OpenAI judge: **{openai_agree}/14** ({openai_agree / 14:.0%})\n\n")
     o.append(
         "This reverses v0.1 Aristotelian (OpenAI was the more reliable "
-        "judge there). See `analysis/02_fmv_audit_human_review.md` — "
+        "judge there). See `analysis/fmv/02_fmv_audit_human_review.md` — "
         '"Judge reliability does not transfer across frameworks" and the '
         "OpenAI verdict-field self-contradiction defect (5/14 cases).\n\n"
     )

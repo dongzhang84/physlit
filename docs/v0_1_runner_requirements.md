@@ -46,7 +46,7 @@ If any captured identity field on any call mid-run differs from the
 lock-time identifier `"gemini-3.1-pro-preview"`, the runner MUST
 halt before issuing the next call. Resumption requires an explicit
 operator decision recorded in
-[`analysis/v0_1_findings.md`](../analysis/v0_1_findings.md) along
+[`analysis/aristotelian/v0_1_findings.md`](../analysis/aristotelian/v0_1_findings.md) along
 with the drift evidence (timestamp, trial index, captured identity
 field values).
 
@@ -65,7 +65,7 @@ The returned `response.model_version` MUST be compared against the
 lock-time value (also `"gemini-3.1-pro-preview"`). The result of
 this comparison — match or mismatch, with the exact post-run value
 — MUST be disclosed in
-[`analysis/v0_1_findings.md`](../analysis/v0_1_findings.md), with:
+[`analysis/aristotelian/v0_1_findings.md`](../analysis/aristotelian/v0_1_findings.md), with:
 
 - the lock-time identifier
 - the post-run identifier

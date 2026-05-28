@@ -1,7 +1,7 @@
-"""Build ``analysis/02_fmv_1_agent2_review.md`` — a case-by-case review
+"""Build ``analysis/fmv/02_fmv_1_agent2_review.md`` — a case-by-case review
 of Agent 2's (non-canonical) structural-axis resolutions.
 
-Mirrors v0.2's `analysis/v0_2_agent2_review.md`. For each of the 7
+Mirrors v0.2's `analysis/aristotelian/v0_2_agent2_review.md`. For each of the 7
 structural-axis dual-judge disagreement cases (labelled Case 1-7) it
 shows: both structural judges' verdicts + reasoning, and how Agent 2
 (`gemini-3.1-pro-preview`, non-canonical resolver) ruled — its
@@ -26,7 +26,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 FRAMEWORK_ID = "02_fmv"
-OUTPUT = REPO / "analysis" / "02_fmv_1_agent2_review.md"
+OUTPUT = REPO / "analysis" / "fmv" / "02_fmv_1_agent2_review.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 
 

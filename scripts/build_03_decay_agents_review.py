@@ -1,8 +1,8 @@
-"""Build ``analysis/03_decay_agents_review.md`` — the non-canonical
+"""Build ``analysis/decay/03_decay_agents_review.md`` — the non-canonical
 Agent 1 + Agent 2 verdicts in one file, paired with each judge's
 verdict and the case meta-data, for **after-audit** reference.
 
-The human audit in ``analysis/03_decay_audit_worksheet.md`` is the
+The human audit in ``analysis/decay/03_decay_audit_worksheet.md`` is the
 canonical resolution per the prereg. This file is published as a
 side analysis: a record of how the two LLM resolvers
 (``gemini-3.1-pro-preview``) classified each pending case, against
@@ -21,7 +21,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 FRAMEWORK_ID = "03_decay"
-OUTPUT = REPO / "analysis" / "03_decay_agents_review.md"
+OUTPUT = REPO / "analysis" / "decay" / "03_decay_agents_review.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 
 

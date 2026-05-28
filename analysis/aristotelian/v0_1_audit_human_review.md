@@ -3,7 +3,7 @@
 > **Status:** All 22 disagree cases reviewed (Stage 1-3: Cases 1-17; Stage 4: Cases 18-22).
 > **Date:** Stage 1-3 audit 2026-05-09; Stage 4 audit 2026-05-09; merged 2026-05-11.
 > **Source worksheet:** [`v0_1_audit_worksheet.md`](./v0_1_audit_worksheet.md).
-> **Replay:** verdicts in this file are loaded by [`scripts/apply_audit.py`](../scripts/apply_audit.py) which appends the audited P1 / P3 / per-trial matrix into [`v0_1_findings.md`](./v0_1_findings.md). The prereg-locked `predictions/v0_1_prereg.md` is unchanged; the audit lives entirely in the analysis layer per CLAUDE.md "Inter-rater reliability".
+> **Replay:** verdicts in this file are loaded by [`scripts/apply_audit.py`](../../scripts/apply_audit.py) which appends the audited P1 / P3 / per-trial matrix into [`v0_1_findings.md`](./v0_1_findings.md). The prereg-locked `predictions/v0_1_prereg.md` is unchanged; the audit lives entirely in the analysis layer per CLAUDE.md "Inter-rater reliability".
 
 > **Editor note (integrated to repo 2026-05-11):** the Per-Trial Summary for Claude trial 4 below states *"Stage 1 dual-PASS"*. Production dual-judge data shows Claude trial 4 Stage 1 was `claude=FAIL | openai=FAIL` (both agreed FAIL; the trial therefore was never in the DISAGREE worksheet). The audit verdicts on Cases 1-17 and 18-22 are unaffected. The downstream count: Claude post-audit has **3/5** Stage 1 FAILs (trials 2, 3, 4), not 2/5. `apply_audit.py` computes from the original dual-judge consensus + the per-case audit overrides, so it uses the correct 3/5.
 

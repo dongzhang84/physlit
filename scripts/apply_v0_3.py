@@ -16,7 +16,7 @@ and computes:
   axiomatisation instruction on F=mv).
 
 Rewrites the "## v0.3 post-audit final results" block of
-``analysis/v0_3_findings.md`` (idempotent). No API calls.
+``analysis/aristotelian/v0_3_findings.md`` (idempotent). No API calls.
 
 Before any human audit the override tables are empty; a DISAGREE with
 no override is reported as PENDING and verdicts are marked preliminary.
@@ -35,13 +35,13 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 TREATMENT_ID = "01_aristotelian_3"
-FINDINGS = REPO / "analysis" / "v0_3_findings.md"
+FINDINGS = REPO / "analysis" / "aristotelian" / "v0_3_findings.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
 
 # Aristotelian control arm — v0.1 audit-resolved content + v0.2
 # audit-resolved structural verdicts. Source:
-# analysis/v0_1_findings.md + analysis/v0_2_findings.md.
+# analysis/aristotelian/v0_1_findings.md + analysis/aristotelian/v0_2_findings.md.
 CONTROL: dict[tuple[str, int], dict[str, str]] = {
     ("claude-opus-4-7", 0): {"content": "FAIL", "structural": "PASS"},
     ("claude-opus-4-7", 1): {"content": "PASS", "structural": "PASS"},
@@ -64,7 +64,7 @@ CONTROL_STRUCTURAL_PASS = sum(1 for v in CONTROL.values() if v["structural"] == 
 
 # 02_fmv pair (control + 02_fmv.2 treatment), for the cross-framework
 # row in the comparison table. Hardcoded from the post-audit final
-# results of analysis/02_fmv_findings.md, 02_fmv_1_findings.md,
+# results of analysis/fmv/02_fmv_findings.md, 02_fmv_1_findings.md,
 # 02_fmv_2_findings.md.
 FMV_CONTROL_CONTENT_PASS = 9
 FMV_CONTROL_STRUCTURAL_PASS = 5
@@ -74,7 +74,7 @@ FMV_TREATMENT_STRUCTURAL_PASS = 11
 FMV_TREATMENT_COMPOSITE_PASS = 6
 
 # Human-audit overrides for v0.3 dual-judge disagreements (canonical,
-# per prereg §1.4). Source: analysis/v0_3_audit_human_review.md.
+# per prereg §1.4). Source: analysis/aristotelian/v0_3_audit_human_review.md.
 HUMAN_CONTENT: dict[tuple[str, int, str], str] = {
     # C1 — claude t0 S1: "denser" = density (banned). v0.1 precedent.
     ("claude-opus-4-7", 0, "induction"): "FAIL",

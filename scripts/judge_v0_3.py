@@ -18,7 +18,7 @@ Judges the **treatment arm** of the v0.3 axiomatisation control
   frozen at ``prereg-v0.2-locked``. Verdicts → ``results/<model>/01_aristotelian_3/
   structural/``.
 
-Writes a **preliminary** judging section to ``analysis/v0_3_findings.md``;
+Writes a **preliminary** judging section to ``analysis/aristotelian/v0_3_findings.md``;
 DISAGREE cases are flagged for human audit. The canonical P1 / P2
 verdicts and the treatment-vs-control comparison are computed by
 ``scripts/apply_v0_3.py`` after any audit.
@@ -53,7 +53,7 @@ TREATMENT_ID = "01_aristotelian_3"  # results subtree for the v0.3 treatment arm
 SOURCE_FRAMEWORK_DIR = REPO / "frameworks" / "01_aristotelian"  # criteria
 GLOBAL_PROMPTS_DIR = REPO / "prompts"  # v0.1 global judge prompts
 RESULTS = REPO / "results"
-FINDINGS = REPO / "analysis" / "v0_3_findings.md"
+FINDINGS = REPO / "analysis" / "aristotelian" / "v0_3_findings.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
 JUDGE_MAX_TOKENS = 8192

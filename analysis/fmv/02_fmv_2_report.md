@@ -104,7 +104,7 @@ This is deliberately **natural-language induction guidance**, not the
 N9-N12 judge rubric. It names no criterion, no rule-count threshold,
 no scoring scheme; it does not tell the model it will be graded on
 structure. It is the cue a physics teacher would give. The frozen file
-is [`frameworks/02_fmv/prompts/stage1_induction_axiomatised.md`](../frameworks/02_fmv/prompts/stage1_induction_axiomatised.md).
+is [`frameworks/02_fmv/prompts/stage1_induction_axiomatised.md`](../../frameworks/02_fmv/prompts/stage1_induction_axiomatised.md).
 
 ### 1.3 Judging
 
@@ -376,8 +376,8 @@ help resolvers; judge reliability is task- and content-dependent).
 
 ## Appendix — files and links
 
-- Pre-registration: [`predictions/02_fmv_2_prereg.md`](../predictions/02_fmv_2_prereg.md) — tag `prereg-02_fmv.2-locked`
-- Treatment Stage 1 prompt: [`frameworks/02_fmv/prompts/stage1_induction_axiomatised.md`](../frameworks/02_fmv/prompts/stage1_induction_axiomatised.md)
+- Pre-registration: [`predictions/02_fmv_2_prereg.md`](../../predictions/02_fmv_2_prereg.md) — tag `prereg-02_fmv.2-locked`
+- Treatment Stage 1 prompt: [`frameworks/02_fmv/prompts/stage1_induction_axiomatised.md`](../../frameworks/02_fmv/prompts/stage1_induction_axiomatised.md)
 - Treatment trials: `results/<model>/02_fmv_2/<stage>/trial_<N>_t0.0.json` (+ `.md` companions)
 - Judge verdicts: `results/<model>/02_fmv_2/judgments/` (content), `results/<model>/02_fmv_2/structural/` (structural)
 - Agent 1 / Agent 2 (non-canonical) verdicts: `results/<model>/02_fmv_2/{content_resolved,structural_resolved}/`

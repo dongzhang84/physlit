@@ -19,8 +19,8 @@
 
 ## Case C1 — `claude-opus-4-7` trial 1 · Stage 2 (formulation)
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/02_fmv_2/formulation/trial_1_t0.0.md) [`.json`](../results/claude-opus-4-7/02_fmv_2/formulation/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/02_fmv_2/induction/trial_1_t0.0.md) · [Stage 3](../results/claude-opus-4-7/02_fmv_2/prediction/trial_1_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv_2/meta/trial_1_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../../results/claude-opus-4-7/02_fmv_2/formulation/trial_1_t0.0.md) [`.json`](../../results/claude-opus-4-7/02_fmv_2/formulation/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/claude-opus-4-7/02_fmv_2/induction/trial_1_t0.0.md) · [Stage 3](../../results/claude-opus-4-7/02_fmv_2/prediction/trial_1_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv_2/meta/trial_1_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -42,8 +42,8 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv_2/content_resolved/agent1_formul
 
 ## Case C2 — `claude-opus-4-7` trial 2 · Stage 2 (formulation)
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/claude-opus-4-7/02_fmv_2/formulation/trial_2_t0.0.md) [`.json`](../results/claude-opus-4-7/02_fmv_2/formulation/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/claude-opus-4-7/02_fmv_2/induction/trial_2_t0.0.md) · [Stage 3](../results/claude-opus-4-7/02_fmv_2/prediction/trial_2_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv_2/meta/trial_2_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../../results/claude-opus-4-7/02_fmv_2/formulation/trial_2_t0.0.md) [`.json`](../../results/claude-opus-4-7/02_fmv_2/formulation/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/claude-opus-4-7/02_fmv_2/induction/trial_2_t0.0.md) · [Stage 3](../../results/claude-opus-4-7/02_fmv_2/prediction/trial_2_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv_2/meta/trial_2_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -64,8 +64,8 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv_2/content_resolved/agent1_formul
 
 ## Case C3 — `claude-opus-4-7` trial 3 · Stage 1 (induction)
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/02_fmv_2/induction/trial_3_t0.0.md) [`.json`](../results/claude-opus-4-7/02_fmv_2/induction/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/02_fmv_2/formulation/trial_3_t0.0.md) · [Stage 3](../results/claude-opus-4-7/02_fmv_2/prediction/trial_3_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv_2/meta/trial_3_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/claude-opus-4-7/02_fmv_2/induction/trial_3_t0.0.md) [`.json`](../../results/claude-opus-4-7/02_fmv_2/induction/trial_3_t0.0.json)
+**Same trial, other stages:** [Stage 2](../../results/claude-opus-4-7/02_fmv_2/formulation/trial_3_t0.0.md) · [Stage 3](../../results/claude-opus-4-7/02_fmv_2/prediction/trial_3_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv_2/meta/trial_3_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -86,8 +86,8 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv_2/content_resolved/agent1_induct
 
 ## Case C4 — `claude-opus-4-7` trial 4 · Stage 1 (induction)
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/claude-opus-4-7/02_fmv_2/induction/trial_4_t0.0.md) [`.json`](../results/claude-opus-4-7/02_fmv_2/induction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/claude-opus-4-7/02_fmv_2/formulation/trial_4_t0.0.md) · [Stage 3](../results/claude-opus-4-7/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../results/claude-opus-4-7/02_fmv_2/meta/trial_4_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/claude-opus-4-7/02_fmv_2/induction/trial_4_t0.0.md) [`.json`](../../results/claude-opus-4-7/02_fmv_2/induction/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 2](../../results/claude-opus-4-7/02_fmv_2/formulation/trial_4_t0.0.md) · [Stage 3](../../results/claude-opus-4-7/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../../results/claude-opus-4-7/02_fmv_2/meta/trial_4_t0.0.md)
 
 **Claude judge — `FAIL`** (failed clause: P3)
 
@@ -108,8 +108,8 @@ _(verdict JSON: `results/claude-opus-4-7/02_fmv_2/content_resolved/agent1_induct
 
 ## Case C5 — `gpt-5.5-2026-04-23` trial 4 · Stage 1 (induction)
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_4_t0.0.md) · [Stage 3](../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_4_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 2](../../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_4_t0.0.md) · [Stage 3](../../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_4_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -130,8 +130,8 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv_2/content_resolved/agent1_ind
 
 ## Case C6 — `gemini-3.1-pro-preview` trial 0 · Stage 1 (induction)
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_0_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_0_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_0_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 2](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_0_t0.0.md) · [Stage 3](../../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_0_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_0_t0.0.md)
 
 **Claude judge — `FAIL`** (failed clause: N4(b) / N5)
 
@@ -152,8 +152,8 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/content_resolved/agent1
 
 ## Case C7 — `gemini-3.1-pro-preview` trial 1 · Stage 2 (formulation)
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_1_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_1_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_1_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_1_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_1_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_1_t0.0.md) · [Stage 3](../../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_1_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_1_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -175,8 +175,8 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/content_resolved/agent1
 
 ## Case C8 — `gemini-3.1-pro-preview` trial 2 · Stage 2 (formulation)
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_2_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_2_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_2_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_2_t0.0.md) · [Stage 3](../../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_2_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_2_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -197,8 +197,8 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/content_resolved/agent1
 
 ## Case C9 — `gemini-3.1-pro-preview` trial 3 · Stage 1 (induction)
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_3_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 2](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_3_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_3_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_3_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_3_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_3_t0.0.json)
+**Same trial, other stages:** [Stage 2](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_3_t0.0.md) · [Stage 3](../../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_3_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_3_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -219,8 +219,8 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/content_resolved/agent1
 
 ## Case C10 — `gemini-3.1-pro-preview` trial 4 · Stage 2 (formulation)
 
-**Trial files** (under judgment): Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_4_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 1](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_4_t0.0.md) · [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_4_t0.0.md)
+**Trial files** (under judgment): Stage 2 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_4_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 1](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_4_t0.0.md) · [Stage 3](../../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_4_t0.0.md)
 
 **Claude judge — `PASS`** (failed clause: (n/a))
 
@@ -244,8 +244,8 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/content_resolved/agent1
 
 ## Case S1 — `gpt-5.5-2026-04-23` trial 0 · structural axis
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_0_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_0_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_0_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_0_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_0_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_0_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_0_t0.0.json) · Stage 2 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_0_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 3](../../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_0_t0.0.md) · [meta](../../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_0_t0.0.md)
 
 **Claude structural judge — `FAIL`** (Stage 1 rule count `6`, failed: N12)
 
@@ -267,8 +267,8 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv_2/structural_resolved/agent2_
 
 ## Case S2 — `gpt-5.5-2026-04-23` trial 1 · structural axis
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_1_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_1_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_1_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_1_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_1_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_1_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_1_t0.0.json) · Stage 2 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_1_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_1_t0.0.json)
+**Same trial, other stages:** [Stage 3](../../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_1_t0.0.md) · [meta](../../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_1_t0.0.md)
 
 **Claude structural judge — `FAIL`** (Stage 1 rule count `6`, failed: N12)
 
@@ -290,8 +290,8 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv_2/structural_resolved/agent2_
 
 ## Case S3 — `gpt-5.5-2026-04-23` trial 3 · structural axis
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_3_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_3_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_3_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_3_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_3_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_3_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_3_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_3_t0.0.json) · Stage 2 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_3_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_3_t0.0.json)
+**Same trial, other stages:** [Stage 3](../../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_3_t0.0.md) · [meta](../../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_3_t0.0.md)
 
 **Claude structural judge — `FAIL`** (Stage 1 rule count `6`, failed: N12)
 
@@ -313,8 +313,8 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv_2/structural_resolved/agent2_
 
 ## Case S4 — `gpt-5.5-2026-04-23` trial 4 · structural axis
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.json) · Stage 2 [`.md`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_4_t0.0.md) [`.json`](../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_4_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_4_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv_2/induction/trial_4_t0.0.json) · Stage 2 [`.md`](../../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_4_t0.0.md) [`.json`](../../results/gpt-5.5-2026-04-23/02_fmv_2/formulation/trial_4_t0.0.json)
+**Same trial, other stages:** [Stage 3](../../results/gpt-5.5-2026-04-23/02_fmv_2/prediction/trial_4_t0.0.md) · [meta](../../results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_4_t0.0.md)
 
 **Claude structural judge — `FAIL`** (Stage 1 rule count `5`, failed: N12)
 
@@ -336,8 +336,8 @@ _(verdict JSON: `results/gpt-5.5-2026-04-23/02_fmv_2/structural_resolved/agent2_
 
 ## Case S5 — `gemini-3.1-pro-preview` trial 0 · structural axis
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_0_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_0_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_0_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_0_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_0_t0.0.json) · Stage 2 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_0_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_0_t0.0.json)
+**Same trial, other stages:** [Stage 3](../../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_0_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_0_t0.0.md)
 
 **Claude structural judge — `PASS`** (Stage 1 rule count `4`, failed: (none))
 
@@ -359,8 +359,8 @@ _(verdict JSON: `results/gemini-3.1-pro-preview/02_fmv_2/structural_resolved/age
 
 ## Case S6 — `gemini-3.1-pro-preview` trial 2 · structural axis
 
-**Trial files** (under judgment): Stage 1 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_2_t0.0.json) · Stage 2 [`.md`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.md) [`.json`](../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.json)
-**Same trial, other stages:** [Stage 3](../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_2_t0.0.md) · [meta](../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_2_t0.0.md)
+**Trial files** (under judgment): Stage 1 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_2_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/02_fmv_2/induction/trial_2_t0.0.json) · Stage 2 [`.md`](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.md) [`.json`](../../results/gemini-3.1-pro-preview/02_fmv_2/formulation/trial_2_t0.0.json)
+**Same trial, other stages:** [Stage 3](../../results/gemini-3.1-pro-preview/02_fmv_2/prediction/trial_2_t0.0.md) · [meta](../../results/gemini-3.1-pro-preview/02_fmv_2/meta/trial_2_t0.0.md)
 
 **Claude structural judge — `FAIL`** (Stage 1 rule count `3`, failed: N12)
 

@@ -110,7 +110,7 @@ The single most informative output of v0.2 is **how often Agent 1 agrees
 with the existing 22 v0.1 human-audit verdicts on the same cases**. That
 is the direct measure of whether the agent-as-resolver design works.
 
-Published in `analysis/v0_2_findings.md`:
+Published in `analysis/aristotelian/v0_2_findings.md`:
 
 - **Agent 1 vs human audit:** per-stage agreement rate; cases where they
   diverge listed verbatim
@@ -181,7 +181,7 @@ Existing v0.1 files are not modified.
 - `scripts/run_agent2.py` — load structural-judge disagreements,
   dispatch Agent 2, save resolver verdicts
 - `scripts/v0_2_aggregate.py` — combine content + structural verdicts
-  into the composite v0.2 verdict; emit `analysis/v0_2_findings.md`
+  into the composite v0.2 verdict; emit `analysis/aristotelian/v0_2_findings.md`
 
 **Python module:**
 
@@ -194,7 +194,7 @@ Existing v0.1 files are not modified.
 - `results/<model-id>/01_aristotelian/structural/judge_*.json`
 - `results/<model-id>/01_aristotelian/structural/agent2_*.json`
 - `results/<model-id>/01_aristotelian/content_resolved/agent1_*.json`
-- `analysis/v0_2_findings.md` — the new verdicts file
+- `analysis/aristotelian/v0_2_findings.md` — the new verdicts file
 
 ---
 
@@ -241,4 +241,4 @@ Existing v0.1 files are not modified.
 5. Lock `prereg-v0.2-locked` tag
 6. Implement runner scripts
 7. Run (~$7-9, ~30-60 minutes wall time)
-8. Aggregate + write `analysis/v0_2_findings.md`
+8. Aggregate + write `analysis/aristotelian/v0_2_findings.md`

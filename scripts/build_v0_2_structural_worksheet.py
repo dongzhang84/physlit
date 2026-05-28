@@ -1,4 +1,4 @@
-"""Build ``analysis/v0_2_structural_audit_worksheet.md`` — the v0.2
+"""Build ``analysis/aristotelian/v0_2_structural_audit_worksheet.md`` — the v0.2
 structural-axis (N9-N12) human-audit worksheet.
 
 Modelled on ``scripts/build_audit_worksheet.py`` (the v0.1 content-axis
@@ -34,7 +34,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 ANALYSIS = REPO / "analysis"
-OUTPUT = ANALYSIS / "v0_2_structural_audit_worksheet.md"
+OUTPUT = ANALYSIS / "aristotelian" / "v0_2_structural_audit_worksheet.md"
 FRAMEWORK_ID = "01_aristotelian"
 
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
@@ -170,7 +170,7 @@ For each case below:
 > label, and note the inconsistency in your audit notes if you see it.
 
 When all 6 cases are decided, the audit verdicts feed back into
-`analysis/v0_2_findings.md` with a deviation rationale, signed by
+`analysis/aristotelian/v0_2_findings.md` with a deviation rationale, signed by
 author + external physics-trained reader.
 
 ---

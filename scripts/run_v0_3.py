@@ -62,7 +62,7 @@ FRAMEWORK_PROMPTS_DIR = SOURCE_FRAMEWORK_DIR / "prompts"
 GLOBAL_PROMPTS_DIR = REPO_ROOT / "prompts"
 RESULTS_ROOT = REPO_ROOT / "results"
 ANALYSIS_DIR = REPO_ROOT / "analysis"
-FINDINGS_PATH = ANALYSIS_DIR / "v0_3_findings.md"
+FINDINGS_PATH = ANALYSIS_DIR / "aristotelian" / "v0_3_findings.md"
 
 # The single manipulated variable: the Stage 1 prompt.
 STAGE1_PROMPT_FILE = "stage1_induction_axiomatised.md"

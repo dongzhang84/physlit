@@ -1,10 +1,10 @@
-"""Build ``analysis/02_fmv_2_agents_review.md`` — case-by-case review
+"""Build ``analysis/fmv/02_fmv_2_agents_review.md`` — case-by-case review
 of how Agent 1 (content) and Agent 2 (structural) resolved each
 treatment-arm dual-judge disagreement.
 
-Mirrors ``analysis/02_fmv_1_agent2_review.md`` (structural only) but
+Mirrors ``analysis/fmv/02_fmv_1_agent2_review.md`` (structural only) but
 covers both axes. Companion to the audit worksheet
-``analysis/02_fmv_2_audit_worksheet.md``: same case labels (``C1``…
+``analysis/fmv/02_fmv_2_audit_worksheet.md``: same case labels (``C1``…
 ``C10`` for content, ``S1``…``S6`` for structural). The agents are
 ``gemini-3.1-pro-preview``, non-canonical resolvers; their verdicts do
 NOT feed P1 / P2 — the human audit (the worksheet) is canonical. This
@@ -24,7 +24,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 TREATMENT_ID = "02_fmv_2"
-OUTPUT = REPO / "analysis" / "02_fmv_2_agents_review.md"
+OUTPUT = REPO / "analysis" / "fmv" / "02_fmv_2_agents_review.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
 STAGE_TITLE = {

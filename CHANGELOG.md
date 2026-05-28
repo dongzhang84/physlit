@@ -149,7 +149,7 @@ Smoke-test the v0.1 pipeline at < $1 cost before prereg lock:
 - `scripts/dryrun_aristotelian.py` — orchestrate 4 stages, single trial,
   Claude only, output to `results/_dryrun/<ts>/01_aristotelian/`
 - `tests/test_runners_with_mock.py` — mock-based, CI-safe
-- `analysis/dryrun_findings.md` — exploratory write-up after the run
+- `analysis/aristotelian/dryrun_findings.md` — exploratory write-up after the run
 
 ---
 
@@ -169,7 +169,7 @@ per-round reports under `analysis/`.
 - Dual-judge content IRR 36.67 % → prereg-mandated human audit of 22
   disagreement cases.
 - Result: P1 (induction failure) and P3 (meta miscalibration) both
-  CONFIRMED post-audit. Report: `analysis/v0_1_report.md`.
+  CONFIRMED post-audit. Report: `analysis/aristotelian/v0_1_report.md`.
 
 ---
 
@@ -222,7 +222,7 @@ framework-scoped pre-registration (`prereg-02_fmv-locked`).
   finding was substantially a criteria-ambiguity artifact. Judge
   reliability reversed across frameworks (OpenAI reliable on v0.1,
   Claude on F=mv).
-- Cost ≈ $17.3 USD. Report: `analysis/02_fmv_report.md`.
+- Cost ≈ $17.3 USD. Report: `analysis/fmv/02_fmv_report.md`.
 
 ## [02_fmv.1] — 2026-05-18
 
@@ -252,7 +252,7 @@ Pre-registered at `prereg-02_fmv.1-locked`; no new tested-model trials.
   models, same trials). Content and structural quality are
   anti-correlated (GPT 5/5 content, 0/5 structural; Gemini 0/5, 3/5).
   Non-canonical Agent 2 resolver agreed with the human audit 6/7.
-- Cost ≈ $4.0 USD. Report: `analysis/02_fmv_1_report.md`.
+- Cost ≈ $4.0 USD. Report: `analysis/fmv/02_fmv_1_report.md`.
 
 ## [02_fmv.2] — 2026-05-20
 
@@ -294,7 +294,7 @@ Pre-registered at `prereg-02_fmv.2-locked` before any treatment trial.
   `02_fmv.1`). Likely the axiomatised treatment responses are harder
   to judge. Agent 1 dropped to 5/10 (uniform-PASS failure mode);
   Agent 2 held at 5/6 (83 %).
-- Cost ≈ $5.5 USD. Report: `analysis/02_fmv_2_report.md`.
+- Cost ≈ $5.5 USD. Report: `analysis/fmv/02_fmv_2_report.md`.
 
 ## [v0.3] — 2026-05-20
 
@@ -342,7 +342,7 @@ Pre-registered at `prereg-v0.3-locked`.
   `02_fmv.1`-fix didn't apply) and Claude verdict-field
   self-contradiction (S1, S3; same defect class as `02_fmv.1` Case 6).
   Both documented in `v0_3_audit_human_review.md`.
-- Cost ≈ $6.8 USD. Report: `analysis/v0_3_report.md`.
+- Cost ≈ $6.8 USD. Report: `analysis/aristotelian/v0_3_report.md`.
 
 ## [03_decay] — 2026-05-28
 
@@ -414,5 +414,5 @@ before any production trial.
   31/32 = 97 %** — the highest agent-vs-human number in PhysLit so
   far. Agent 1 (content) at 14/17 = 82 %, dragged down by the same
   OpenAI §3 fabrications the audit had to unwind.
-- Cost ≈ $25 USD. Report: `analysis/03_decay_report.md`. Human-audit
-  detail: `analysis/03_decay_audit_human_review.md`.
+- Cost ≈ $25 USD. Report: `analysis/decay/03_decay_report.md`. Human-audit
+  detail: `analysis/decay/03_decay_audit_human_review.md`.

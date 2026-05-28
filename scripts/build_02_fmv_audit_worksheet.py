@@ -1,4 +1,4 @@
-"""Build ``analysis/02_fmv_audit_worksheet.md`` — the 02_fmv human-audit
+"""Build ``analysis/fmv/02_fmv_audit_worksheet.md`` — the 02_fmv human-audit
 worksheet for the dual-judge disagreement cases.
 
 The 02_fmv Stage 1-3 dual-judge IRR is 26.67 % (12 of 45 judged
@@ -32,7 +32,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 FRAMEWORK_ID = "02_fmv"
-OUTPUT = REPO / "analysis" / "02_fmv_audit_worksheet.md"
+OUTPUT = REPO / "analysis" / "fmv" / "02_fmv_audit_worksheet.md"
 
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 CONTENT_STAGES = ("induction", "formulation", "prediction")
@@ -147,7 +147,7 @@ For each case below:
 When all cases are decided, the resolved verdicts replace the
 DISAGREE rows in the P1 / P2 / P4 aggregation. P3 (the IRR itself) is
 not changed by the audit. The audited verdicts and the deviation
-rationale go into `analysis/02_fmv_findings.md`.
+rationale go into `analysis/fmv/02_fmv_findings.md`.
 
 ---
 """

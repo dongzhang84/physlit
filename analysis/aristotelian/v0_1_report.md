@@ -379,7 +379,7 @@ The natural form of write-up is a short preprint (8-12 pages) or a long blog/X p
 - [`v0_1_findings.md`](./v0_1_findings.md) — auto-generated pre-audit + post-audit blocks, with pipeline diagram
 - [`v0_1_audit_worksheet.md`](./v0_1_audit_worksheet.md) — the 22 DISAGREE cases as audit input
 - [`v0_1_audit_human_review.md`](./v0_1_audit_human_review.md) — the human auditor's verdicts on all 22 cases
-- [`scripts/apply_audit.py`](../scripts/apply_audit.py) — embeds the 22 verdicts, recomputes P1/P3
+- [`scripts/apply_audit.py`](../../scripts/apply_audit.py) — embeds the 22 verdicts, recomputes P1/P3
 
 **Production data:**
 
@@ -389,8 +389,8 @@ The natural form of write-up is a short preprint (8-12 pages) or a long blog/X p
 
 **Methodology references:**
 
-- [`docs/product-spec.md`](../docs/product-spec.md) — what PhysLit is, why, what's locked
-- [`docs/implementation-guide.md`](../docs/implementation-guide.md) — phase-by-phase build plan
-- [`CLAUDE.md`](../CLAUDE.md) — architectural rules, IRR policy, fresh-session enforcement
+- [`docs/product-spec.md`](../../docs/product-spec.md) — what PhysLit is, why, what's locked
+- [`docs/implementation-guide.md`](../../docs/implementation-guide.md) — phase-by-phase build plan
+- [`CLAUDE.md`](../../CLAUDE.md) — architectural rules, IRR policy, fresh-session enforcement
 
-**Reproducibility entry point:** [`README.md`](../README.md).
+**Reproducibility entry point:** [`README.md`](../../README.md).

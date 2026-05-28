@@ -19,7 +19,7 @@ namely
 This script does **not** count toward the production judgments. Its
 output is saved under
 ``results/_dryrun/<ts>/<model-id>/03_decay/judgments_dryrun/``.
-Findings go to ``analysis/03_decay_dryrun_findings.md``.
+Findings go to ``analysis/decay/03_decay_dryrun_findings.md``.
 
 Usage:
     uv run python scripts/judge_03_decay_dryrun.py

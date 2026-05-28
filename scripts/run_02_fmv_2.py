@@ -69,7 +69,7 @@ SOURCE_FRAMEWORK_DIR = REPO_ROOT / "frameworks" / "02_fmv"
 PROMPTS_DIR = SOURCE_FRAMEWORK_DIR / "prompts"
 RESULTS_ROOT = REPO_ROOT / "results"
 ANALYSIS_DIR = REPO_ROOT / "analysis"
-FINDINGS_PATH = ANALYSIS_DIR / "02_fmv_2_findings.md"
+FINDINGS_PATH = ANALYSIS_DIR / "fmv" / "02_fmv_2_findings.md"
 
 # The single manipulated variable: the Stage 1 prompt. Everything else
 # matches run_02_fmv.py.
@@ -301,7 +301,7 @@ def _r1b_post_run_disclosure(
 ) -> dict[str, str]:
     """R1(b) post-trial-set re-ping for Gemini. Returns the captured
     identity dict. On production runs a disclosure block is appended to
-    ``analysis/02_fmv_2_findings.md`` (created if absent)."""
+    ``analysis/fmv/02_fmv_2_findings.md`` (created if absent)."""
     captured = runner.r1b_post_run_ping()
     expected = GEMINI_MODEL_ID
     actual = captured.get("response_model_version", "<missing>")

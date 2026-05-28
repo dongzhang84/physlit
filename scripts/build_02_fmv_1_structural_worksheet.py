@@ -1,4 +1,4 @@
-"""Build ``analysis/02_fmv_1_structural_audit_worksheet.md`` — the
+"""Build ``analysis/fmv/02_fmv_1_structural_audit_worksheet.md`` — the
 02_fmv.1 human-audit worksheet for the structural-axis disagreements.
 
 The 02_fmv.1 structural-axis dual-judge IRR is 46.67 % (7 of 15
@@ -29,7 +29,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parent.parent
 RESULTS = REPO / "results"
 FRAMEWORK_ID = "02_fmv"
-OUTPUT = REPO / "analysis" / "02_fmv_1_structural_audit_worksheet.md"
+OUTPUT = REPO / "analysis" / "fmv" / "02_fmv_1_structural_audit_worksheet.md"
 MODELS = ("claude-opus-4-7", "gpt-5.5-2026-04-23", "gemini-3.1-pro-preview")
 
 

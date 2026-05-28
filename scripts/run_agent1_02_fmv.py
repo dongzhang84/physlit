@@ -228,7 +228,9 @@ def main() -> int:
 
     print(f"\n=== done — {len(cases)} cases, resolver cost ~${total_cost:.4f} ===")
     print("Agent 1 verdicts saved under results/<model>/02_fmv/content_resolved/.")
-    print("Compare against the human audit once analysis/02_fmv_audit_worksheet.md is filled in.")
+    print(
+        "Compare against the human audit once analysis/fmv/02_fmv_audit_worksheet.md is filled in."
+    )
     return 0
 
 

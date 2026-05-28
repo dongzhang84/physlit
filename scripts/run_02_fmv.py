@@ -65,7 +65,7 @@ FRAMEWORK_DIR = REPO_ROOT / "frameworks" / FRAMEWORK_ID
 PROMPTS_DIR = FRAMEWORK_DIR / "prompts"
 RESULTS_ROOT = REPO_ROOT / "results"
 ANALYSIS_DIR = REPO_ROOT / "analysis"
-FINDINGS_PATH = ANALYSIS_DIR / "02_fmv_findings.md"
+FINDINGS_PATH = ANALYSIS_DIR / "fmv" / "02_fmv_findings.md"
 
 MODEL_REGISTRY: dict[str, type[TestedModelRunner]] = {
     "claude": ClaudeRunner,
@@ -324,7 +324,7 @@ def _r1b_post_run_disclosure(
 ) -> dict[str, str]:
     """R1(b) post-trial-set re-ping for Gemini. Returns the captured
     identity dict. When ``write_findings`` is true (production runs), a
-    disclosure block is appended to ``analysis/02_fmv_findings.md``
+    disclosure block is appended to ``analysis/fmv/02_fmv_findings.md``
     (created if absent)."""
     captured = runner.r1b_post_run_ping()
     expected = GEMINI_MODEL_ID

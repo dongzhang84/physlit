@@ -19,7 +19,7 @@ For each case below:
    set** (that is the structural judge's input scope; Stage 3 is out
    of scope).
 2. Apply the 6-step procedure in the frozen criteria:
-   [`frameworks/01_aristotelian/structural_criteria.md`](../frameworks/01_aristotelian/structural_criteria.md).
+   [`frameworks/01_aristotelian/structural_criteria.md`](../../frameworks/01_aristotelian/structural_criteria.md).
 3. Compare the two judges' verdicts, rule counts, and cited evidence,
    then Agent 2's resolution.
 4. Fill the **Audit decision** block: your own rule count, a PASS/FAIL
@@ -48,9 +48,9 @@ _6 disagree cases. Resolver agent: `gemini-2.5-pro` (per `prereg-v0.2.1-locked`)
 
 _Verdict split: Claude structural judge -> `PASS`, OpenAI structural judge -> `FAIL`_
 
-**Stage 1 (induction):** [`trial_3_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/induction/trial_3_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_3_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_3_t0.0.md)
+**Stage 1 (induction):** [`trial_3_t0.0.md`](../../results/claude-opus-4-7/01_aristotelian/induction/trial_3_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_3_t0.0.md`](../../results/claude-opus-4-7/01_aristotelian/formulation/trial_3_t0.0.md)
 
-**Frozen criteria:** [`structural_criteria.md`](../frameworks/01_aristotelian/structural_criteria.md)
+**Frozen criteria:** [`structural_criteria.md`](../../frameworks/01_aristotelian/structural_criteria.md)
 
 ### Tested-model Stage 1 — Induction (3,602 chars)
 
@@ -197,9 +197,9 @@ Several observations remain awkward under these operational rules. **Obs. 7 (the
 
 _Verdict split: Claude structural judge -> `PASS`, OpenAI structural judge -> `FAIL`_
 
-**Stage 1 (induction):** [`trial_4_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/induction/trial_4_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_4_t0.0.md`](../results/claude-opus-4-7/01_aristotelian/formulation/trial_4_t0.0.md)
+**Stage 1 (induction):** [`trial_4_t0.0.md`](../../results/claude-opus-4-7/01_aristotelian/induction/trial_4_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_4_t0.0.md`](../../results/claude-opus-4-7/01_aristotelian/formulation/trial_4_t0.0.md)
 
-**Frozen criteria:** [`structural_criteria.md`](../frameworks/01_aristotelian/structural_criteria.md)
+**Frozen criteria:** [`structural_criteria.md`](../../frameworks/01_aristotelian/structural_criteria.md)
 
 ### Tested-model Stage 1 — Induction (3,770 chars)
 
@@ -371,9 +371,9 @@ The operational rules leave several observations imperfectly covered. **Observat
 
 _Verdict split: Claude structural judge -> `FAIL`, OpenAI structural judge -> `PASS`_
 
-**Stage 1 (induction):** [`trial_0_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_0_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_0_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_0_t0.0.md)
+**Stage 1 (induction):** [`trial_0_t0.0.md`](../../results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_0_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_0_t0.0.md`](../../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_0_t0.0.md)
 
-**Frozen criteria:** [`structural_criteria.md`](../frameworks/01_aristotelian/structural_criteria.md)
+**Frozen criteria:** [`structural_criteria.md`](../../frameworks/01_aristotelian/structural_criteria.md)
 
 ### Tested-model Stage 1 — Induction (3,556 chars)
 
@@ -513,9 +513,9 @@ The most significant boundary cases these rules struggle to cleanly cover involv
 
 _Verdict split: Claude structural judge -> `FAIL`, OpenAI structural judge -> `PASS`_
 
-**Stage 1 (induction):** [`trial_1_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_1_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_1_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_1_t0.0.md)
+**Stage 1 (induction):** [`trial_1_t0.0.md`](../../results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_1_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_1_t0.0.md`](../../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_1_t0.0.md)
 
-**Frozen criteria:** [`structural_criteria.md`](../frameworks/01_aristotelian/structural_criteria.md)
+**Frozen criteria:** [`structural_criteria.md`](../../frameworks/01_aristotelian/structural_criteria.md)
 
 ### Tested-model Stage 1 — Induction (3,397 chars)
 
@@ -646,9 +646,9 @@ The most glaring limitation of these operational rules is their inability to ele
 
 _Verdict split: Claude structural judge -> `PASS`, OpenAI structural judge -> `FAIL`_
 
-**Stage 1 (induction):** [`trial_2_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_2_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_2_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_2_t0.0.md)
+**Stage 1 (induction):** [`trial_2_t0.0.md`](../../results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_2_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_2_t0.0.md`](../../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_2_t0.0.md)
 
-**Frozen criteria:** [`structural_criteria.md`](../frameworks/01_aristotelian/structural_criteria.md)
+**Frozen criteria:** [`structural_criteria.md`](../../frameworks/01_aristotelian/structural_criteria.md)
 
 ### Tested-model Stage 1 — Induction (3,369 chars)
 
@@ -784,9 +784,9 @@ The operational rules struggle with intermediate interactions and transitions. T
 
 _Verdict split: Claude structural judge -> `FAIL`, OpenAI structural judge -> `PASS`_
 
-**Stage 1 (induction):** [`trial_4_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_4_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_4_t0.0.md`](../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_4_t0.0.md)
+**Stage 1 (induction):** [`trial_4_t0.0.md`](../../results/gemini-3.1-pro-preview/01_aristotelian/induction/trial_4_t0.0.md) &nbsp;·&nbsp; **Stage 2 (formulation):** [`trial_4_t0.0.md`](../../results/gemini-3.1-pro-preview/01_aristotelian/formulation/trial_4_t0.0.md)
 
-**Frozen criteria:** [`structural_criteria.md`](../frameworks/01_aristotelian/structural_criteria.md)
+**Frozen criteria:** [`structural_criteria.md`](../../frameworks/01_aristotelian/structural_criteria.md)
 
 ### Tested-model Stage 1 — Induction (3,739 chars)
 

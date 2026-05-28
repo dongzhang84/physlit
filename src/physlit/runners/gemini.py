@@ -6,7 +6,7 @@ lock at 2026-05-09. The alias was rejected because at ping time on
 2026-05-09 it was found to auto-resolve to ``gemini-3.1-pro-preview``
 — pinning the alias would have hidden underlying-model drift behind
 a strict-equality check that always passes; see
-``analysis/dryrun_findings.md`` §8 for the paper trail.
+``analysis/aristotelian/dryrun_findings.md`` §8 for the paper trail.
 
 R1(a) per-call identity capture (per
 ``docs/v0_1_runner_requirements.md``) is implemented by recording
@@ -166,7 +166,7 @@ class GeminiRunner(TestedModelRunner):
         """R1(b) post-trial-set re-ping. Sends one minimal request and
         captures the same identity fields as a regular call would. The
         orchestrator compares the result to the lock-time identifier
-        and writes the disclosure into ``analysis/v0_1_findings.md``.
+        and writes the disclosure into ``analysis/aristotelian/v0_1_findings.md``.
 
         Mirrors the parameters of ``scripts/discover_model_versions.py``
         (``"hi"``, ``max_output_tokens=16``).

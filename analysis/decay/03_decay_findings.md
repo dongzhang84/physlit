@@ -140,8 +140,8 @@ Two failure paths kill every trial, independently:
 Together: **no DISAGREE-resolution path through Part A can flip any trial to composite PASS**. This is what the worksheet header means by "All non-decisive for P1." The Part A audit is for-the-record only; the canonical-affecting work is Part B (P3) and Part C (P4).
 
 ## 03_decay post-audit final results
-- Generated: `2026-05-28T20:09:36Z`
-- Audit: `analysis/03_decay_audit_human_review.md` — 54 cases resolved by human audit (18 content + 32 per-scenario + 4 meta), canonical per prereg §1.4.
+- Generated: `2026-05-28T21:49:44Z`
+- Audit: `analysis/decay/03_decay_audit_human_review.md` — 54 cases resolved by human audit (18 content + 32 per-scenario + 4 meta), canonical per prereg §1.4.
 
 ### Resolved per-trial matrix (audit-applied)
 

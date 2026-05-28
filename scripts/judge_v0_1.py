@@ -3,7 +3,7 @@
 Loads every Stage 1-3 trial JSON under ``results/<model-id>/`` for the
 production run, dispatches each (trial, stage) to two judges (Claude +
 GPT), saves their structured verdicts, and writes a final aggregate
-report into ``analysis/v0_1_findings.md``.
+report into ``analysis/aristotelian/v0_1_findings.md``.
 
 Per ``predictions/v0_1_prereg.md`` Scoring procedure:
 
@@ -23,7 +23,7 @@ Options:
 
 Output:
     results/<model-id>/judgments/  — one JSON per (judge, stage, trial)
-    analysis/v0_1_findings.md      — appended report block
+    analysis/aristotelian/v0_1_findings.md      — appended report block
 
 Cost:
     ~$15-20 estimated for the full 60-trial x 3-stage x 2-judge sweep
@@ -361,7 +361,7 @@ def main() -> int:
             f"{c.overclaim} | {'yes' if c.has_any_stage_failure else 'no'} |\n"
         )
 
-    findings_path = ANALYSIS_DIR / "v0_1_findings.md"
+    findings_path = ANALYSIS_DIR / "aristotelian" / "v0_1_findings.md"
     findings_path.parent.mkdir(parents=True, exist_ok=True)
     if not findings_path.exists():
         findings_path.write_text("# PhysLit v0.1 — Findings\n\n")

@@ -69,7 +69,7 @@ calls ≈ $17.3 USD. Reproducible from the `prereg-02_fmv-locked` tag.
 ### 1.1 The benchmark gap (recap)
 
 The case for PhysLit is made in full in
-[`v0_1_report.md`](./v0_1_report.md) §1. In brief: standard physics
+[`v0_1_report.md`](../aristotelian/v0_1_report.md) §1. In brief: standard physics
 benchmarks count correct answers, which measures coverage of the
 training distribution, not physical reasoning. PhysLit instead tests
 the *cognitive work* of physics — induction, formulation, prediction —
@@ -362,8 +362,8 @@ v0.2 V1 result, form a coherent thread on LLM-as-judge methodology.
 
 ## Appendix — files and links
 
-- Pre-registration: [`predictions/02_fmv_prereg.md`](../predictions/02_fmv_prereg.md) — tag `prereg-02_fmv-locked`
-- Framework: [`frameworks/02_fmv/`](../frameworks/02_fmv/) — `spec.yaml`, `observations.md`, `ideal_induction.md`, `pass_fail_criteria.md`, `prediction_tests.md`, `prompts/`
+- Pre-registration: [`predictions/02_fmv_prereg.md`](../../predictions/02_fmv_prereg.md) — tag `prereg-02_fmv-locked`
+- Framework: [`frameworks/02_fmv/`](../../frameworks/02_fmv/) — `spec.yaml`, `observations.md`, `ideal_induction.md`, `pass_fail_criteria.md`, `prediction_tests.md`, `prompts/`
 - Production trials: `results/<model>/02_fmv/<stage>/trial_<N>_t0.0.json` (+ `.md` companions)
 - Judge verdicts: `results/<model>/02_fmv/judgments/`
 - Agent 1 (non-canonical) verdicts: `results/<model>/02_fmv/content_resolved/`

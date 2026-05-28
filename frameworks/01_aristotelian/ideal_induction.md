@@ -12,7 +12,7 @@
 > N1-N8. To reproduce v0.1 verdicts byte-for-byte, run from the
 > locked tag: `git checkout prereg-v0.1-locked`. N9-N12 will be
 > operationalized as flags by the v0.2 Structural Auditor agent
-> (see `analysis/v0_1_report.md` §3.5 and §4).
+> (see `analysis/aristotelian/v0_1_report.md` §3.5 and §4).
 
 ## 1. Purpose
 
@@ -215,8 +215,8 @@ at Step 2: condition N6 unmet — heaven/earth distinction not made").
 ## 8. Structural criteria (post-v0.1 documentation)
 
 > **Documentation only.** These criteria were surfaced during the v0.1
-> human audit (see [`analysis/v0_1_audit_human_review.md`](../../analysis/v0_1_audit_human_review.md)
-> and [`analysis/v0_1_report.md`](../../analysis/v0_1_report.md) §3.5).
+> human audit (see [`analysis/aristotelian/v0_1_audit_human_review.md`](../../analysis/aristotelian/v0_1_audit_human_review.md)
+> and [`analysis/aristotelian/v0_1_report.md`](../../analysis/aristotelian/v0_1_report.md) §3.5).
 > They are **not** part of the v0.1 judge checklist in §6 and were
 > **not** applied to any v0.1 verdict. In v0.2 they will be
 > operationalized as **flags** emitted by the Structural Auditor agent

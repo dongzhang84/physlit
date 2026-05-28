@@ -22,9 +22,9 @@ A third finding emerged from the methodology itself:
 
 | Where to look | What's in it |
 | --- | --- |
-| [`analysis/v0_1_report.md`](./analysis/v0_1_report.md) | English narrative report — motivation, design, results, next steps |
-| [`analysis/v0_1_findings.md`](./analysis/v0_1_findings.md) | Auto-generated pre- and post-audit numerics + pipeline diagram |
-| [`analysis/v0_1_audit_human_review.md`](./analysis/v0_1_audit_human_review.md) | All 22 human-audit verdicts on DISAGREE cases |
+| [`analysis/aristotelian/v0_1_report.md`](./analysis/aristotelian/v0_1_report.md) | English narrative report — motivation, design, results, next steps |
+| [`analysis/aristotelian/v0_1_findings.md`](./analysis/aristotelian/v0_1_findings.md) | Auto-generated pre- and post-audit numerics + pipeline diagram |
+| [`analysis/aristotelian/v0_1_audit_human_review.md`](./analysis/aristotelian/v0_1_audit_human_review.md) | All 22 human-audit verdicts on DISAGREE cases |
 | [`results/<model-id>/`](./results/) | Verbatim trial JSONs + judge verdicts for every API call |
 
 ---
@@ -47,9 +47,9 @@ Two methodology findings:
 
 | Where to look | What's in it |
 | --- | --- |
-| [`analysis/02_fmv_report.md`](./analysis/02_fmv_report.md) | English narrative report — motivation, design, results |
-| [`analysis/02_fmv_findings.md`](./analysis/02_fmv_findings.md) | Judging report + post-audit numerics |
-| [`analysis/02_fmv_audit_human_review.md`](./analysis/02_fmv_audit_human_review.md) | Human verdicts on all 14 disagreement cases |
+| [`analysis/fmv/02_fmv_report.md`](./analysis/fmv/02_fmv_report.md) | English narrative report — motivation, design, results |
+| [`analysis/fmv/02_fmv_findings.md`](./analysis/fmv/02_fmv_findings.md) | Judging report + post-audit numerics |
+| [`analysis/fmv/02_fmv_audit_human_review.md`](./analysis/fmv/02_fmv_audit_human_review.md) | Human verdicts on all 14 disagreement cases |
 | [`results/<model-id>/02_fmv/`](./results/) | Verbatim trial JSONs (+ `.md` companions) + judge verdicts |
 
 ---
@@ -70,9 +70,9 @@ Two methodology findings:
 
 | Where to look | What's in it |
 | --- | --- |
-| [`analysis/02_fmv_1_report.md`](./analysis/02_fmv_1_report.md) | English narrative report — design, results |
-| [`analysis/02_fmv_1_findings.md`](./analysis/02_fmv_1_findings.md) | Judging report + post-audit numerics |
-| [`analysis/02_fmv_1_structural_audit_human_review.md`](./analysis/02_fmv_1_structural_audit_human_review.md) | Human verdicts on all 7 structural disagreement cases |
+| [`analysis/fmv/02_fmv_1_report.md`](./analysis/fmv/02_fmv_1_report.md) | English narrative report — design, results |
+| [`analysis/fmv/02_fmv_1_findings.md`](./analysis/fmv/02_fmv_1_findings.md) | Judging report + post-audit numerics |
+| [`analysis/fmv/02_fmv_1_structural_audit_human_review.md`](./analysis/fmv/02_fmv_1_structural_audit_human_review.md) | Human verdicts on all 7 structural disagreement cases |
 | [`results/<model-id>/02_fmv/structural/`](./results/) | Verbatim structural-judge verdicts |
 
 ---
@@ -94,9 +94,9 @@ One failure mode worth recording: Claude trial 2 lost its content axis under the
 
 | Where to look | What's in it |
 | --- | --- |
-| [`analysis/02_fmv_2_report.md`](./analysis/02_fmv_2_report.md) | English narrative report |
-| [`analysis/02_fmv_2_findings.md`](./analysis/02_fmv_2_findings.md) | Judging report + post-audit numerics |
-| [`analysis/02_fmv_2_audit_human_review.md`](./analysis/02_fmv_2_audit_human_review.md) | Human verdicts on all 16 disagreement cases |
+| [`analysis/fmv/02_fmv_2_report.md`](./analysis/fmv/02_fmv_2_report.md) | English narrative report |
+| [`analysis/fmv/02_fmv_2_findings.md`](./analysis/fmv/02_fmv_2_findings.md) | Judging report + post-audit numerics |
+| [`analysis/fmv/02_fmv_2_audit_human_review.md`](./analysis/fmv/02_fmv_2_audit_human_review.md) | Human verdicts on all 16 disagreement cases |
 | [`frameworks/02_fmv/prompts/stage1_induction_axiomatised.md`](./frameworks/02_fmv/prompts/stage1_induction_axiomatised.md) | The treatment Stage 1 prompt (the manipulated variable) |
 | [`results/<model-id>/02_fmv_2/`](./results/) | Treatment trials + judge verdicts |
 
@@ -119,9 +119,9 @@ One important side finding: every one of the 8 content disagreements audited FAI
 
 | Where to look | What's in it |
 | --- | --- |
-| [`analysis/v0_3_report.md`](./analysis/v0_3_report.md) | English narrative report — cross-framework comparison central |
-| [`analysis/v0_3_findings.md`](./analysis/v0_3_findings.md) | Judging report + post-audit numerics |
-| [`analysis/v0_3_audit_human_review.md`](./analysis/v0_3_audit_human_review.md) | Human verdicts on all 11 disagreement cases |
+| [`analysis/aristotelian/v0_3_report.md`](./analysis/aristotelian/v0_3_report.md) | English narrative report — cross-framework comparison central |
+| [`analysis/aristotelian/v0_3_findings.md`](./analysis/aristotelian/v0_3_findings.md) | Judging report + post-audit numerics |
+| [`analysis/aristotelian/v0_3_audit_human_review.md`](./analysis/aristotelian/v0_3_audit_human_review.md) | Human verdicts on all 11 disagreement cases |
 | [`frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md`](./frameworks/01_aristotelian/prompts/stage1_induction_axiomatised.md) | Treatment Stage 1 prompt (byte-identical insertion to 02_fmv.2's) |
 | [`results/<model-id>/01_aristotelian_3/`](./results/) | Treatment trials + judge verdicts |
 
@@ -182,7 +182,7 @@ uv run python scripts/judge_v0_1.py      # ≈ $8.23, 120 judge API calls
 uv run python scripts/apply_audit.py     # 0 cost — replays the 22 committed audit verdicts
 ```
 
-`analysis/v0_1_findings.md` will now contain both pre-audit and post-audit blocks. The 22 audit verdicts are committed both as prose ([`analysis/v0_1_audit_human_review.md`](./analysis/v0_1_audit_human_review.md)) and as an embedded dict in `scripts/apply_audit.py`; no human re-audit is required to reproduce the published verdicts. Tested-model output is non-deterministic across vendors, so your trial responses will not be byte-identical to ours — but the verdict pattern is robust per prereg.
+`analysis/aristotelian/v0_1_findings.md` will now contain both pre-audit and post-audit blocks. The 22 audit verdicts are committed both as prose ([`analysis/aristotelian/v0_1_audit_human_review.md`](./analysis/aristotelian/v0_1_audit_human_review.md)) and as an embedded dict in `scripts/apply_audit.py`; no human re-audit is required to reproduce the published verdicts. Tested-model output is non-deterministic across vendors, so your trial responses will not be byte-identical to ours — but the verdict pattern is robust per prereg.
 
 ---
 

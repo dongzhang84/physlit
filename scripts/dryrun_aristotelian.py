@@ -8,7 +8,7 @@ Output goes to ``results/_dryrun/<UTC-timestamp>/01_aristotelian/<stage>/``.
 This is exploratory data and is **not** counted as v0.1 evaluation
 results — the underscore prefix on ``_dryrun/`` is the marker.
 
-Findings should be hand-recorded to ``analysis/dryrun_findings.md``
+Findings should be hand-recorded to ``analysis/aristotelian/dryrun_findings.md``
 after running.
 """
 

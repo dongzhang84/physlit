@@ -209,10 +209,10 @@ and revise the cap if needed.
 
 ## 6. Verbatim links to the four trial JSONs
 
-- [Stage 1 — induction](../results/_dryrun/20260508T083204Z/01_aristotelian/induction/trial_0_t0.0.json)
-- [Stage 2 — formulation](../results/_dryrun/20260508T083204Z/01_aristotelian/formulation/trial_0_t0.0.json)
-- [Stage 3 — prediction](../results/_dryrun/20260508T083204Z/01_aristotelian/prediction/trial_0_t0.0.json)
-- [Stage 4 — meta](../results/_dryrun/20260508T083204Z/01_aristotelian/meta/trial_0_t0.0.json)
+- [Stage 1 — induction](../../results/_dryrun/20260508T083204Z/01_aristotelian/induction/trial_0_t0.0.json)
+- [Stage 2 — formulation](../../results/_dryrun/20260508T083204Z/01_aristotelian/formulation/trial_0_t0.0.json)
+- [Stage 3 — prediction](../../results/_dryrun/20260508T083204Z/01_aristotelian/prediction/trial_0_t0.0.json)
+- [Stage 4 — meta](../../results/_dryrun/20260508T083204Z/01_aristotelian/meta/trial_0_t0.0.json)
 
 Each file contains the verbatim prompt, the verbatim response,
 the model version returned by the API, the per-trial UUID, the
@@ -266,9 +266,9 @@ This is structurally a worse failure mode than preview-weight drift
 *pass* (because the alias-vs-resolved comparison is silent on the
 SDK side). The v0.1 prereg therefore pins the **specific ID**
 `gemini-3.1-pro-preview`, not the alias. See
-[`predictions/v0_1_prereg.md`](../predictions/v0_1_prereg.md)
+[`predictions/v0_1_prereg.md`](../../predictions/v0_1_prereg.md)
 "Preview-status caveat" for the locked methodology, and
-[`docs/v0_1_runner_requirements.md`](../docs/v0_1_runner_requirements.md)
+[`docs/v0_1_runner_requirements.md`](../../docs/v0_1_runner_requirements.md)
 R1 for the runner's monitoring obligations.
 
 The discovery ping itself is **not** v0.1 production data — it was

@@ -57,5 +57,5 @@ coverage/
 # Local-only analysis drafts (zh blog + X post). Marked .zh.md / .zh.txt
 # and kept uncommitted per author preference; promote to repo if/when
 # published.
-analysis/*.zh.md
-analysis/*.zh.txt
+analysis/**/*.zh.md
+analysis/**/*.zh.txt

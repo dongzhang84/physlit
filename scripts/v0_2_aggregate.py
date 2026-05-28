@@ -9,7 +9,7 @@ Run LAST, after `run_agent1.py`, `run_structural_judging.py`, and
   * Structural-judge verdicts (`results/<model>/01_aristotelian/structural/`)
   * Agent 2 verdicts (`results/<model>/01_aristotelian/structural_resolved/`)
   * The v0.1 post-audit human-resolved DISAGREE table (from
-    `analysis/v0_1_findings.md`, indirectly via `scripts/apply_audit.py`'s
+    `analysis/aristotelian/v0_1_findings.md`, indirectly via `scripts/apply_audit.py`'s
     dict — re-imported here for the V1 cross-check)
 
 And emits:
@@ -18,7 +18,7 @@ And emits:
   * V1 verdict (Agent 1 vs human audit agreement on 17 content disagrees)
   * V2 verdict (#{v0.1 content-PASS trials that flip to composite FAIL})
   * Structural-axis IRR
-  * `analysis/v0_2_findings.md` (appended block)
+  * `analysis/aristotelian/v0_2_findings.md` (appended block)
 
 No API calls. Deterministic.
 
@@ -45,7 +45,7 @@ from physlit.v0_2 import (  # noqa: E402
 FRAMEWORK_ID = "01_aristotelian"
 RESULTS_ROOT = REPO_ROOT / "results"
 ANALYSIS_DIR = REPO_ROOT / "analysis"
-FINDINGS_FILE = ANALYSIS_DIR / "v0_2_findings.md"
+FINDINGS_FILE = ANALYSIS_DIR / "aristotelian" / "v0_2_findings.md"
 DEFAULT_MODELS = (
     "claude-opus-4-7",
     "gpt-5.5-2026-04-23",
@@ -100,7 +100,7 @@ def _classify_content_axis() -> dict[tuple[str, int, str], str]:
     - If they disagree: use the v0.1 post-audit human verdict from
       ``HUMAN_AUDIT_CONTENT_VERDICTS``. The v0.1 human audit is the
       canonical, frozen resolution of those 17 disagree cases (see
-      ``analysis/v0_1_findings.md`` "Per-trial classification matrix
+      ``analysis/aristotelian/v0_1_findings.md`` "Per-trial classification matrix
       (audit-resolved)"); the v0.2 composite content axis is layered
       strictly on top of it.
     - Agent 1's verdict is deliberately NOT used here. V1 found Agent 1
