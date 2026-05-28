@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-05-28 20:10 UTC  
+**Generated:** 2026-05-28 21:51 UTC  
 **Showing:** last 4 week(s) of 4 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 4 |
+| Total commits | 5 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | **2** | **1** | **1** | ⚪ | ⚪ | ⚪ |
+| ⚪ | **2** | **1** | **2** | ⚪ | ⚪ | ⚪ |
 
 **Tue – Tuesday, May 26**
 
@@ -28,6 +28,7 @@
 
 **Thu – Thursday, May 28**
 
+- `2886064` analysis/: reorganize into per-framework subdirectories — _dongzhang84_ `2026-05-28 14:51`
 - `797fe2d` 03_decay: apply human audit, all four predictions CONFIRMED — _dongzhang84_ `2026-05-28 13:10`
 
 ---
