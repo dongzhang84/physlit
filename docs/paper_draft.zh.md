@@ -19,7 +19,15 @@
 
 ## 1. 引言
 
-近三年里，大语言模型（LLM）能否进行结构化推理是AI研究的中心争议之一。Wei等[1]通过Chain-of-Thought提示让模型在多步算术与符号推理上的表现明显提升，Kojima等[2]进一步表明"Let's think step by step"这类简单提示就能激发零样本推理能力，Huang与Chang[3]在综述中梳理了围绕"LLM是否真在做推理还是在记忆模板"的多种争论。
+近年来，大语言模型（LLM）能否进行多步推理是AI研究的中心争议之一。这里的"推理"在文献内通常被操作化为这样一类任务：给模型一个不能在单步直接生成答案的问题（如"23 × 17 = ?"、几何证明、长程规划），它需要在响应中产生若干中间步骤，每一步在该问题的逻辑或符号体系内都可独立检查，再合成最终答案。多步算术、定理证明、常识链构建、规划任务都属于这一族。"模型能否推理"这一问被进一步细分为"它能否输出形式上正确的中间步骤"与"这些步骤是否构成真实的因果推导"两个子问题，后文文献的争论主要围绕后者。
+
+Wei等[1]在2022年提出**Chain-of-Thought（CoT，思维链）**提示：在prompt里给模型一两个"问题、中间步骤、答案"的范例，模型在新问题上就会自然产出类似的中间步骤再给答案。在多步算术基准GSM8K[11] 上，CoT把PaLM-540B的解题率从17.9%拉到56.9%，跃迁明显。Kojima等[2]进一步发现连范例都不需要，只要在prompt末尾加一句"Let's think step by step"，零样本下InstructGPT-175B的GSM8K正确率就能从10.4%拉到40.7%。这两条结果给"LLM有推理能力，只是默认时不调用"提供了主要证据。
+
+这一线索的更早源头是Brown等[17] 2020年发表的GPT-3论文：随模型规模上升，few-shot学习能力出现非线性的快速提升。Wei等[18] 2022年在《Emergent Abilities of Large Language Models》里把这一现象命名为**涌现**：CoT等推理能力只有在模型参数规模超过某个阈值（论文里多数任务的阈值在10^22到10^24 FLOPs之间）后才会出现，之前看不到任何信号。"规模加提示等于推理涌现"这一乐观叙事在2022到2023年成为主流。
+
+但这一叙事并非学界共识。Schaeffer等[19] 在NeurIPS 2023论证"涌现"现象的很大一部分是评估指标的产物：当指标是非连续的（如精确匹配），性能曲线看上去是阶跃式的。换用连续指标（如部分正确分），曲线就成了平滑的对数关系，并无真正的阈值跃迁。Mirzadeh等[20] 2024年的GSM-Symbolic给出更直接的反例：把GSM8K题面里的人名、数字、附带条件做仅改外形不改数学结构的扰动，前沿模型的正确率普遍下降3到9个百分点。而在加入一句与解题无关但形式相关的附带条件（论文里的GSM-NoOp变种，如多写一句"这片果园里五分之一的果子比平均小"）后，部分前沿模型的正确率可以掉超过60个百分点。这意味着模型对题面的符号匹配贡献远大于真正的多步推导。Huang与Chang[3] 在综述里梳理了这场争论的两端：从"CoT是真推理"到"CoT只是检索训练数据里的模板"。
+
+到2024年这一争论未有定论。学界基本达成两条共识：现有LLM在某些多步任务上明显优于随机基线，这种能力同时对题目的表述方式高度敏感，与人类推理体现的稳健泛化不同。本文不试图解决"LLM是否真在推理"这一元问题。我们提一个更具体的子问题：在物理推理这一特定领域里，模型能否完成物理学家训练里要求的认知动作。
 
 更激进的提法是LLM能否直接做科学。Boiko等[4]在Nature上发表的Coscientist让LLM自主调度实验设备完成有机合成，Romera-Paredes等[5]的FunSearch通过LLM加程序搜索发现了一个新的组合数学结果（同样发表于Nature），Trinh等[6]的AlphaGeometry在国际数学奥林匹克几何题上达到金牌选手平均水平，Sakana AI的The AI Scientist（Lu等[7]）尝试自动化从想法生成到论文草稿产出的整条流水线。这些工作在受控边界内呈现了LLM执行某些科学任务具体步骤的能力。
 
@@ -367,6 +375,14 @@ PhysLit不是一个"打分基准"，它是一套关于**如何认真测试一个
 [15] D. Arora, H. G. Singh, Mausam. Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark for Large Language Models (JEEBench). *EMNLP* 2023. arXiv: 2305.15074.
 
 [16] C. He, R. Luo, Y. Bai, S. Hu, Z. L. Thai, J. Shen, J. Hu, X. Han, Y. Huang, Y. Zhang, J. Liu, L. Qi, Z. Liu, M. Sun. OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems. *ACL* 2024. arXiv: 2402.14008.
+
+[17] T. B. Brown, B. Mann, N. Ryder, M. Subbiah, J. Kaplan, P. Dhariwal, et al. Language Models are Few-Shot Learners. *NeurIPS* 2020. arXiv: 2005.14165.
+
+[18] J. Wei, Y. Tay, R. Bommasani, C. Raffel, B. Zoph, S. Borgeaud, D. Yogatama, M. Bosma, D. Zhou, D. Metzler, E. H. Chi, T. Hashimoto, O. Vinyals, P. Liang, J. Dean, W. Fedus. Emergent Abilities of Large Language Models. *Transactions on Machine Learning Research (TMLR)* 2022. arXiv: 2206.07682.
+
+[19] R. Schaeffer, B. Miranda, S. Koyejo. Are Emergent Abilities of Large Language Models a Mirage? *NeurIPS* 2023. arXiv: 2304.15004.
+
+[20] I. Mirzadeh, K. Alizadeh, H. Shahrokhi, O. Tuzel, S. Bengio, M. Farajtabar. GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models. arXiv: 2410.05229, 2024.
 
 ---
 
