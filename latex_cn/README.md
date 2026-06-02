@@ -10,12 +10,18 @@
 
 ## 编译
 
-中文支持依赖 `ctex` 包，必须用 **XeLaTeX**（或 LuaLaTeX）编译。`pdflatex` 不支持 UTF-8 中文。
+中文支持依赖 `ctex` 包，必须用 **XeLaTeX**（或 LuaLaTeX）编译。`pdflatex` 不支持中文字体加载。
 
-标准编译流程（含 bib）：
+一键编译：
 
 ```bash
 cd latex_cn
+./build.sh
+```
+
+或手动跑四遍标准流程：
+
+```bash
 xelatex main.tex
 bibtex main
 xelatex main.tex
@@ -32,12 +38,22 @@ latexmk -xelatex main.tex
 
 ## 字体说明
 
-`ctex` 用 `scheme=plain` 选项，不挂任何特定中文字体——在 macOS / Linux / Windows 上使用各自系统的默认中文字体（macOS 上一般是宋体或苹方）。若需指定字体（如全文用 PingFang SC），改 preamble：
+当前用的是 **Fandol 字体**（`fontset=fandol`）。Fandol 是 TeX Live 自带的免费中文字体集，不依赖任何系统字体，跨 macOS / Linux / Windows 都能稳定编译。这是最不容易踩坑的选择。
+
+如果想换成系统字体（视觉上更接近 macOS / Windows 原生中文），改 preamble 里 `\usepackage` 那一行：
 
 ```latex
-\usepackage[UTF8, fontset=mac]{ctex}   % macOS 上自动用 PingFang SC + Heiti SC
-\usepackage[UTF8, fontset=windows]{ctex}  % Windows 上自动用 SimSun + SimHei
+% macOS：自动用 PingFang SC + Heiti SC（需要 macOS 13 以下的旧系统才稳）
+\usepackage[UTF8, scheme=plain, fontset=mac]{ctex}
+
+% Windows：自动用 SimSun + SimHei
+\usepackage[UTF8, scheme=plain, fontset=windows]{ctex}
+
+% Linux：用 Noto Sans CJK SC（需要先在系统装 noto-cjk）
+\usepackage[UTF8, scheme=plain, fontset=ubuntu]{ctex}
 ```
+
+**已知坑**：macOS 13 及以上版本 Apple 移除了部分老中文字体（Heiti SC、STSong 等），`fontset=mac` 在新系统上可能直接报 `CTeX fontset 'mac' is unavailable in current mode`。如果遇到这条错误，退回 `fontset=fandol` 即可。
 
 ## 中文引号
 

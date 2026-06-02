@@ -5,7 +5,10 @@
 \documentclass[11pt]{article}
 
 % --- 中文支持 -------------------------------------------------------------
-\usepackage[UTF8, scheme=plain]{ctex}
+% fontset=fandol 用 TeX Live 自带的 Fandol 字体（不依赖任何系统字体），
+% 跨平台稳定。如果想用系统字体（macOS 的 PingFang / Heiti，Windows 的
+% SimSun），改成 fontset=mac 或 fontset=windows。
+\usepackage[UTF8, scheme=plain, fontset=fandol]{ctex}
 
 % --- 数学 / 字体 ---------------------------------------------------------
 \usepackage{amsmath, amssymb, amsfonts, amsthm}
