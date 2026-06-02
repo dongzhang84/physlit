@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-02 05:55 UTC  
+**Generated:** 2026-06-02 06:05 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 4 |
+| Total commits | 5 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **4** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **5** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
+- `ce57f56` latex_cn: add TeXShop magic comments to main.tex — _dongzhang84_ `2026-06-01 23:04`
 - `3988a21` latex_cn: switch ctex fontset to fandol + add build.sh — _dongzhang84_ `2026-06-01 22:55`
 - `706ed43` latex_cn/: scaffold + Chinese introduction in LaTeX — _dongzhang84_ `2026-06-01 22:51`
 - `0df78a6` paper draft: §1 as flowing prose (drop 1.1/1.2/1.3/1.4) + add §11 References — _dongzhang84_ `2026-06-01 22:39`
