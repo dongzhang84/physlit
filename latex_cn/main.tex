@@ -1,0 +1,83 @@
+% PhysLit 论文中文版
+% 编译方式：xelatex main.tex; bibtex main; xelatex main.tex; xelatex main.tex
+% 中文支持依赖 ctex 包（TeX Live 或 MacTeX 默认携带）。
+
+\documentclass[11pt]{article}
+
+% --- 中文支持 -------------------------------------------------------------
+\usepackage[UTF8, scheme=plain]{ctex}
+
+% --- 数学 / 字体 ---------------------------------------------------------
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{mathrsfs}
+
+% --- 引用 / 参考文献 -----------------------------------------------------
+\usepackage[numbers, sort&compress]{natbib}
+
+% --- 表格 / 图 -----------------------------------------------------------
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+
+% --- 排版 ----------------------------------------------------------------
+\usepackage[margin=0.9in]{geometry}
+\usepackage{verbatim}
+
+% --- 超链接（最后载入）---------------------------------------------------
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue,
+            hypertexnames=false]{hyperref}
+
+% --- 定理环境 ------------------------------------------------------------
+\newtheorem{Theorem}{定理}[section]
+\newtheorem{Definition}[Theorem]{定义}
+\newtheorem{Proposition}[Theorem]{命题}
+\newtheorem{Lemma}[Theorem]{引理}
+\newtheorem{Remark}[Theorem]{备注}
+
+% --- 元数据 --------------------------------------------------------------
+\title{在三个物理世界里测试前沿大语言模型的物理素养}
+\author{张栋\thanks{电子邮件：dongzhanghz@gmail.com}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% 摘要将在论文整体定稿后补全。
+\noindent 本文用三个难度递增的“平行物理世界”测试前沿大语言模型（Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro）能否在结论不符合训练先验的物理框架内完成归纳、系统化、应用、反思四个底层认知动作。三个框架按难度递增分别为 $F=mv$（单方程反事实）、亚里士多德力学（历史框架）和 Decay World（跨四领域反事实，无底层物质）。综合内容通过率分别为 9/15、5/15、0/15。本文公开方法论、原始 prompt、模型响应、双裁判判定与人工 audit 记录。
+\end{abstract}
+
+% \tableofcontents
+
+% ========================================================================
+\section{引言}\label{sec:intro}
+% ========================================================================
+
+近三年里，大语言模型（LLM）能否进行结构化推理是 AI 研究的中心争议之一。Wei 等\citep{wei2022chain} 通过 Chain-of-Thought 提示让模型在多步算术与符号推理上的表现明显提升，Kojima 等\citep{kojima2022zero} 进一步表明 ``Let's think step by step'' 这类简单提示就能激发零样本推理能力，Huang 与 Chang\citep{huang2023reasoning} 在综述中梳理了围绕“LLM 是否真在做推理还是在记忆模板”的多种争论。
+
+更激进的提法是 LLM 能否直接做科学。Boiko 等\citep{boiko2023autonomous} 在 \emph{Nature} 上发表的 Coscientist 让 LLM 自主调度实验设备完成有机合成，Romera-Paredes 等\citep{romera2024mathematical} 的 FunSearch 通过 LLM 加程序搜索发现了一个新的组合数学结果（同样发表于 \emph{Nature}），Trinh 等\citep{trinh2024solving} 的 AlphaGeometry 在国际数学奥林匹克几何题上达到金牌选手平均水平，Sakana AI 的 The AI Scientist（Lu 等\citep{lu2024ai}）尝试自动化从想法生成到论文草稿产出的整条流水线。这些工作在受控边界内呈现了 LLM 执行某些科学任务具体步骤的能力。
+
+两条线问的是不同问题。“会推理”问模型能否在给定逻辑或符号体系内推到下一步。“会科学”问模型能否从一组现象出发，归纳规律、对新情境做预测、回看自己的推理是否站得住。物理学家的训练正是后者。本文聚焦后者，特别是“模型能否在一个结论不符合训练先验的物理框架内完成全套认知动作”这一具体子问题。
+
+与“能否做科学”邻接的另一研究方向是世界模型。Ha 与 Schmidhuber\citep{ha2018world} 把世界模型定义为智能体在内部维护的、用以预测环境演化的生成模型。LeCun\citep{lecun2022path} 在《通往自主机器智能》立场文中把世界模型作为通用智能架构的核心组件。Li 等\citep{li2023emergent} 发现 GPT 模型在 Othello 任务上自发涌现出了棋盘状态的内部表示，把“模型是否有世界模型”这一问的可证伪性又推进了一步。世界模型在文献里有多种定义，围绕它的工作共享一个目标：让模型对其所处的物理世界形成可外部观察、可被用以做预测的内部结构。本文的“物理素养”测试与这一方向高度相关，区别在于我们采用直接观察的路径，让模型在一个明确给定的、与训练先验冲突的物理框架内执行从归纳到反思的完整动作序列，每一步的输出都可被独立判定。
+
+学界目前判断 LLM 会不会物理，主流方式是做题。GSM8K\citep{cobbe2021training} 用小学数学应用题作为基准，MATH\citep{hendrycks2021measuring} 扩展到高中竞赛题，SciBench\citep{wang2024scibench} 覆盖大学物理化学教材题（869 道开放式题，最佳模型当时得分 43.22\%），TheoremQA\citep{chen2023theoremqa} 测定理应用（800 题，覆盖 350 个定理），JEEBench\citep{arora2023llms} 用印度 IIT 入学考试的 515 道理工科难题，OlympiadBench\citep{he2024olympiadbench} 走奥林匹克路线（8476 题，物理子集 GPT-4V 当时得分 10.74\%）。这些基准的共同输出指标是答对率。
+
+把“答对几道题”作为“会物理”的判据有两个结构性问题。其一，答对率分不清“懂物理”和“训练数据里见过同类题”。基准覆盖越广、模型见过的相似题越多，分数自然越高，这种增长并不意味着模型获得了归纳新现象、规则化新经验、对新情境做预测的能力。其二，答对率不传达关于认知边界的任何信息。模型 A 得 90\%、模型 B 得 91\%，告诉读者的全部是“B 比 A 多对了一道”，而非“B 能做但 A 做不了的是哪一类认知工作”。当读者关心的是“模型能不能处理训练数据里没有的物理场景”时，答对率不提供外推线索。
+
+我们提出的判别方式是把物理推理拆成四个底层认知动作，分别测试：归纳（induction，从一组现象里抽出能解释所有现象的规律）、系统化（formulation，把规律写成可被第三方应用的操作性形式）、应用（prediction，用规则对新情境做量化预测）、反思（reflection，回看自己的推理识别可能错的一步）。给定一个明确的物理框架（含一组现象、一套判据、一组应用场景），让模型逐一执行这四个动作，对每个动作的输出独立判定，最后看综合是否通过。这一拆分依据的是物理学训练的实际过程：物理学家的能力来自这四步组成的序列，任一动作缺失，物理推理都不完整。
+
+为避免结论被某个框架的特殊性质所限定，我们选了三个在认知压力上有明显差距的物理框架构成难度梯度：$F=mv$ 世界（反事实、单方程、单一物理领域），亚里士多德力学（历史框架、训练数据里以“被反驳的立场”形式存在），Decay World（反事实、跨四个物理领域、规则绑在直接可测的量上、无底层物质、所有标准耗散机制被关闭）。每个框架上做 3 个模型 $\times$ $N=5$ 次实验 $\times$ 4 个阶段。本文的预测以 SHA-256 加 git tag 锁定（\texttt{prereg-<round>-locked}），所有原始 prompt、模型响应、双 LLM 裁判判定、人工 audit 结论开放可复现。
+
+本文的贡献分三层。\textbf{方法论层}：一套可复现、可审计的 LLM 物理素养评估流程，从预注册到双 LLM 裁判到 IRR 阈值触发人工 audit 的全部环节。\textbf{实验结论层}：三组实验综合内容通过率（composite content PASS）分别为 9/15、5/15、0/15，与难度梯度方向一致。三家前沿模型在定性方向上能力强（Decay World 上 60 道定量题里 0 题方向错），在定量比例上系统性套用训练数据里的标准物理公式（23 题方向对但比例错）。\textbf{跨框架方法论发现}：Stage 4 over-claim 比率在三个框架上稳定落在 65 到 70 之间，亚里士多德 70\%、$F=mv$ 66.7\%、Decay World 67\%，与具体物理内容解耦。不同 LLM 裁判的可靠性不跨框架可迁移，OpenAI 裁判在 Decay World 上出现机制清晰的系统性失效（18 个判断里 16 个引用虚构或误分类的禁词），为 LLM-as-judge 文献增加了一个可复现的 failure mode 数据点。
+
+% ========================================================================
+% 参考文献
+% ========================================================================
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
