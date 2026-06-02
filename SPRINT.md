@@ -1,11 +1,29 @@
 # Sprint Report
 
-**Generated:** 2026-05-28 22:51 UTC  
-**Showing:** last 4 week(s) of 4 total  
+**Generated:** 2026-06-02 05:26 UTC  
+**Showing:** last 5 week(s) of 5 total  
 
 ---
 
-## Week 4 _(current)_ · 2026-05-25 to 2026-05-31
+## Week 5 _(current)_ · 2026-06-01 to 2026-06-07
+
+| Stat | Value |
+|------|-------|
+| Status | ❌ Stalled |
+| Active days | 1 / 7 |
+| Total commits | 1 |
+
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|
+| **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+
+**Mon – Monday, Jun 1**
+
+- `99d3fe0` paper draft: rewrite §1 introduction with citations and structured subsections — _dongzhang84_ `2026-06-01 22:26`
+
+---
+
+## Week 4 · 2026-05-25 to 2026-05-31
 
 | Stat | Value |
 |------|-------|
