@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-02 06:05 UTC  
+**Generated:** 2026-06-02 06:23 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 5 |
+| Total commits | 6 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **5** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **6** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
+- `25e49cf` paper §1 first paragraph: expand into LLM reasoning landscape — _dongzhang84_ `2026-06-01 23:23`
 - `ce57f56` latex_cn: add TeXShop magic comments to main.tex — _dongzhang84_ `2026-06-01 23:04`
 - `3988a21` latex_cn: switch ctex fontset to fandol + add build.sh — _dongzhang84_ `2026-06-01 22:55`
 - `706ed43` latex_cn/: scaffold + Chinese introduction in LaTeX — _dongzhang84_ `2026-06-01 22:51`
