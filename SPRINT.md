@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-02 05:26 UTC  
+**Generated:** 2026-06-02 05:39 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 1 |
+| Total commits | 2 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **2** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
+- `0df78a6` paper draft: §1 as flowing prose (drop 1.1/1.2/1.3/1.4) + add §11 References — _dongzhang84_ `2026-06-01 22:39`
 - `99d3fe0` paper draft: rewrite §1 introduction with citations and structured subsections — _dongzhang84_ `2026-06-01 22:26`
 
 ---
