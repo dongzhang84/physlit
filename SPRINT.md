@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-02 06:28 UTC  
+**Generated:** 2026-06-02 06:33 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 7 |
+| Total commits | 8 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **7** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **8** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
+- `9ecd9f1` paper §1 add formal definition of reasoning + untrack latex_cn/ — _dongzhang84_ `2026-06-01 23:33`
 - `bf9d5e0` paper §1 first paragraph: collapse to one paragraph (~450 chars) — _dongzhang84_ `2026-06-01 23:28`
 - `25e49cf` paper §1 first paragraph: expand into LLM reasoning landscape — _dongzhang84_ `2026-06-01 23:23`
 - `ce57f56` latex_cn: add TeXShop magic comments to main.tex — _dongzhang84_ `2026-06-01 23:04`
