@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-02 05:51 UTC  
+**Generated:** 2026-06-02 05:55 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 3 |
+| Total commits | 4 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **4** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
+- `3988a21` latex_cn: switch ctex fontset to fandol + add build.sh — _dongzhang84_ `2026-06-01 22:55`
 - `706ed43` latex_cn/: scaffold + Chinese introduction in LaTeX — _dongzhang84_ `2026-06-01 22:51`
 - `0df78a6` paper draft: §1 as flowing prose (drop 1.1/1.2/1.3/1.4) + add §11 References — _dongzhang84_ `2026-06-01 22:39`
 - `99d3fe0` paper draft: rewrite §1 introduction with citations and structured subsections — _dongzhang84_ `2026-06-01 22:26`
