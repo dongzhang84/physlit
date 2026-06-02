@@ -12,6 +12,29 @@
 
 中文支持依赖 `ctex` 包，必须用 **XeLaTeX**（或 LuaLaTeX）编译。`pdflatex` 不支持中文字体加载。
 
+### TeXShop / TeXworks
+
+`main.tex` 顶部已加 magic comment：
+
+```latex
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !BIB TS-program = bibtex
+```
+
+TeXShop 打开文件后 Typeset 按钮会自动用 XeLaTeX，无需手动改引擎。
+
+完整出参考文献的流程（菜单按四次）：
+
+1. **Typeset**（XeLaTeX，生成 `.aux`）
+2. **BibTeX**（解析 `.bib` 生成 `.bbl`）
+3. **Typeset**（写入引用编号）
+4. **Typeset**（解析交叉引用 + 目录）
+
+或者把 TeXShop 的"Typesetting → Engine"设成 `Latexmk` 一次搞定（前提是装了 latexmk 并在 `~/.latexmkrc` 里把默认引擎设成 xelatex）。
+
+### 命令行（推荐）
+
 一键编译：
 
 ```bash
