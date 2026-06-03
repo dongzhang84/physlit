@@ -19,15 +19,15 @@
 
 ## 1. 引言
 
-近年来大语言模型（LLM）能否进行推理是AI研究的中心争议之一。本文取认知科学与形式逻辑共享的最小定义：**推理**（reasoning）是从一组前提出发，按可被外部独立检查的有效推导步骤，得到一个新结论的过程。其中"有效"指每一步在该问题的逻辑或符号体系内成立，"独立检查"指推导过程的正确性不依赖于结论本身、也不依赖于对训练分布的记忆。在LLM评估文献里这一定义被操作化为这样一类任务：模型对一个无法单步生成答案的问题（多步算术、几何证明、长程规划），需要在响应中产生若干中间步骤再合成最终答案，每一步都可被独立检查。Wei等[1]2022年提出Chain-of-Thought（CoT，思维链）提示：在prompt里给模型一两个"问题、中间步骤、答案"的范例，PaLM-540B在GSM8K[11]上的解题率从17.9%跃到56.9%。Kojima等[2]发现连范例都不需要，一句"Let's think step by step"就能把InstructGPT-175B的零样本正确率从10.4%拉到40.7%。这一线索叠加Brown等[17]观察到的GPT-3规模效应、Wei等[18]的涌现假说，构成了"规模加提示等于推理涌现"的乐观叙事。但Schaeffer等[19]论证涌现的很大一部分是评估指标产物，Mirzadeh等[20]的GSM-Symbolic显示前沿模型对题面符号扰动高度敏感（GSM-NoOp变种下正确率可掉超过60个百分点），意味着模型对题面的符号匹配贡献远大于真正的多步推导。Huang与Chang[3]的综述把这场争论从"CoT是真推理"一端梳理到"CoT只是检索训练数据里的模板"的另一端。围绕"LLM是否真在做推理"这一问题，学界目前尚无定论。
+近年来大语言模型（LLM）能否进行推理是AI研究的中心争议之一。本文取认知科学与形式逻辑共享的最小定义：**推理**（reasoning）是从一组前提出发，按可被外部独立检查的有效推导步骤，得到一个新结论的过程。其中"有效"指每一步在该问题的逻辑或符号体系内成立，"独立检查"指推导过程的正确性不依赖于结论本身、也不依赖于对训练分布的记忆。在LLM评估文献里这一定义被操作化为这样一类任务：模型对一个无法单步生成答案的问题（多步算术、几何证明、长程规划），需要在响应中产生若干中间步骤再合成最终答案，每一步都可被独立检查。Wei等[1]2022年提出Chain-of-Thought（CoT，思维链）提示：在prompt里给模型一两个"问题、中间步骤、答案"的范例，PaLM-540B在GSM8K[2]上的解题率从17.9%跃到56.9%。Kojima等[3]发现连范例都不需要，一句"Let's think step by step"就能把InstructGPT-175B的零样本正确率从10.4%拉到40.7%。这一线索叠加Brown等[4]观察到的GPT-3规模效应、Wei等[5]的涌现假说，构成了"规模加提示等于推理涌现"的乐观叙事。但Schaeffer等[6]论证涌现的很大一部分是评估指标产物，Mirzadeh等[7]的GSM-Symbolic显示前沿模型对题面符号扰动高度敏感（GSM-NoOp变种下正确率可掉超过60个百分点），意味着模型对题面的符号匹配贡献远大于真正的多步推导。Huang与Chang[8]的综述把这场争论从"CoT是真推理"一端梳理到"CoT只是检索训练数据里的模板"的另一端。围绕"LLM是否真在做推理"这一问题，学界目前尚无定论。
 
-更激进的提法是LLM能否直接做科学。Boiko等[4]在Nature上发表的Coscientist让LLM自主调度实验设备完成有机合成，Romera-Paredes等[5]的FunSearch通过LLM加程序搜索发现了一个新的组合数学结果（同样发表于Nature），Trinh等[6]的AlphaGeometry在国际数学奥林匹克几何题上达到金牌选手平均水平，Sakana AI的The AI Scientist（Lu等[7]）尝试自动化从想法生成到论文草稿产出的整条流水线。这些工作在受控边界内呈现了LLM执行某些科学任务具体步骤的能力。
+比起推理，另一个更激进的问题是LLM能否直接做科学研究。这一线索经过两波展开。早期工作多是LLM加工具的小规模演示：Boiko等[9]2023年的Coscientist让LLM自主调度有机合成实验，Romera-Paredes等[10]的FunSearch通过LLM加程序搜索得到一个新的组合数学结果，Trinh等[11]的AlphaGeometry在国际数学奥林匹克几何题上达到金牌水平，Lu等[12]的The AI Scientist试图自动化从想法到论文草稿的整条流水线。2026年5月这条线出现明显跃迁。Google DeepMind的Co-Scientist[13]发表于Nature，用五智能体架构（生成、反思、排名、进化、元评审）对急性髓性白血病做药物重定位，给出可被湿实验验证的新组合方案。FutureHouse的Robin[14]同日在Nature上用三智能体（Crow文献综述、Falcon假设评估、Finch在Jupyter里跑数据分析）端到端跑通了干性年龄相关性黄斑变性的新候选药物发现。几乎同期OpenAI[15]宣布其内部推理模型给出了Erdős 1946年单位距离猜想的反例构造，并联同九位外部数学家完成验证（Tim Gowers公开表态会推荐到Annals of Mathematics）。但这些工作落在两条曲线上。Coscientist、FunSearch、Robin、Co-Scientist的"科学输出"主体是多智能体系统加工具链（外部搜索、代码执行、湿实验设备、tournament排名），LLM在其中是一个组件。AlphaGeometry与OpenAI Erdős反例更接近模型本身直接产出研究结论。本文测的是后一类的更纯粹版本：单个LLM在一个新物理框架内、无工具、无agent编排，能否独立完成物理学家训练里要求的全套认知动作。
 
 两条线问的是不同问题。"会推理"问模型能否在给定逻辑或符号体系内推到下一步。"会科学"问模型能否从一组现象出发，归纳规律、对新情境做预测、回看自己的推理是否站得住。物理学家的训练正是后者。本文聚焦后者，特别是"模型能否在一个结论不符合训练先验的物理框架内完成全套认知动作"这一具体子问题。
 
-与"能否做科学"邻接的另一研究方向是世界模型。Ha与Schmidhuber[8]把世界模型定义为智能体在内部维护的、用以预测环境演化的生成模型。LeCun[9]在《通往自主机器智能》立场文中把世界模型作为通用智能架构的核心组件。Li等[10]发现GPT模型在Othello任务上自发涌现出了棋盘状态的内部表示，把"模型是否有世界模型"这一问的可证伪性又推进了一步。世界模型在文献里有多种定义，围绕它的工作共享一个目标：让模型对其所处的物理世界形成可外部观察、可被用以做预测的内部结构。本文的"物理素养"测试与这一方向高度相关，区别在于我们采用直接观察的路径，让模型在一个明确给定的、与训练先验冲突的物理框架内执行从归纳到反思的完整动作序列，每一步的输出都可被独立判定。
+与"能否做科学"邻接的另一研究方向是世界模型。Ha与Schmidhuber[16]把世界模型定义为智能体在内部维护的、用以预测环境演化的生成模型。LeCun[17]在《通往自主机器智能》立场文中把世界模型作为通用智能架构的核心组件。Li等[18]发现GPT模型在Othello任务上自发涌现出了棋盘状态的内部表示，把"模型是否有世界模型"这一问的可证伪性又推进了一步。世界模型在文献里有多种定义，围绕它的工作共享一个目标：让模型对其所处的物理世界形成可外部观察、可被用以做预测的内部结构。本文的"物理素养"测试与这一方向高度相关，区别在于我们采用直接观察的路径，让模型在一个明确给定的、与训练先验冲突的物理框架内执行从归纳到反思的完整动作序列，每一步的输出都可被独立判定。
 
-学界目前判断LLM会不会物理，主流方式是做题。GSM8K[11]用小学数学应用题作为基准，MATH[12]扩展到高中竞赛题，SciBench[13]覆盖大学物理化学教材题（869道开放式题，最佳模型当时得分43.22%），TheoremQA[14]测定理应用（800题，覆盖350个定理），JEEBench[15]用印度IIT入学考试的515道理工科难题，OlympiadBench[16]走奥林匹克路线（8476题，物理子集GPT-4V当时得分10.74%）。这些基准的共同输出指标是答对率。
+学界目前判断LLM会不会物理，主流方式是做题。GSM8K[2]用小学数学应用题作为基准，MATH[19]扩展到高中竞赛题，SciBench[20]覆盖大学物理化学教材题（869道开放式题，最佳模型当时得分43.22%），TheoremQA[21]测定理应用（800题，覆盖350个定理），JEEBench[22]用印度IIT入学考试的515道理工科难题，OlympiadBench[23]走奥林匹克路线（8476题，物理子集GPT-4V当时得分10.74%）。这些基准的共同输出指标是答对率。
 
 把"答对几道题"作为"会物理"的判据有两个结构性问题。其一，答对率分不清"懂物理"和"训练数据里见过同类题"。基准覆盖越广、模型见过的相似题越多，分数自然越高，这种增长并不意味着模型获得了归纳新现象、规则化新经验、对新情境做预测的能力。其二，答对率不传达关于认知边界的任何信息。模型A得90%、模型B得91%，告诉读者的全部是"B比A多对了一道"，而非"B能做但A做不了的是哪一类认知工作"。当读者关心的是"模型能不能处理训练数据里没有的物理场景"时，答对率不提供外推线索。
 
@@ -338,43 +338,49 @@ PhysLit不是一个"打分基准"，它是一套关于**如何认真测试一个
 
 [1] J. Wei, X. Wang, D. Schuurmans, M. Bosma, B. Ichter, F. Xia, E. Chi, Q. Le, D. Zhou. Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. *NeurIPS* 2022. arXiv: 2201.11903.
 
-[2] T. Kojima, S. S. Gu, M. Reid, Y. Matsuo, Y. Iwasawa. Large Language Models are Zero-Shot Reasoners. *NeurIPS* 2022. arXiv: 2205.11916.
+[2] K. Cobbe, V. Kosaraju, M. Bavarian, M. Chen, H. Jun, L. Kaiser, M. Plappert, J. Tworek, J. Hilton, R. Nakano, C. Hesse, J. Schulman. Training Verifiers to Solve Math Word Problems (GSM8K). arXiv: 2110.14168, 2021.
 
-[3] J. Huang, K. C.-C. Chang. Towards Reasoning in Large Language Models: A Survey. arXiv: 2212.10403, 2023.
+[3] T. Kojima, S. S. Gu, M. Reid, Y. Matsuo, Y. Iwasawa. Large Language Models are Zero-Shot Reasoners. *NeurIPS* 2022. arXiv: 2205.11916.
 
-[4] D. A. Boiko, R. MacKnight, B. Kline, G. Gomes. Autonomous Chemical Research with Large Language Models. *Nature* 624, 570–578 (2023). DOI: 10.1038/s41586-023-06792-0.
+[4] T. B. Brown, B. Mann, N. Ryder, M. Subbiah, J. Kaplan, P. Dhariwal, et al. Language Models are Few-Shot Learners. *NeurIPS* 2020. arXiv: 2005.14165.
 
-[5] B. Romera-Paredes, M. Barekatain, A. Novikov, M. Balog, M. P. Kumar, E. Dupont, F. J. R. Ruiz, J. S. Ellenberg, P. Wang, O. Fawzi, P. Kohli, A. Fawzi. Mathematical Discoveries from Program Search with Large Language Models (FunSearch). *Nature* 625, 468–475 (2024). DOI: 10.1038/s41586-023-06924-6.
+[5] J. Wei, Y. Tay, R. Bommasani, C. Raffel, B. Zoph, S. Borgeaud, D. Yogatama, M. Bosma, D. Zhou, D. Metzler, E. H. Chi, T. Hashimoto, O. Vinyals, P. Liang, J. Dean, W. Fedus. Emergent Abilities of Large Language Models. *Transactions on Machine Learning Research (TMLR)* 2022. arXiv: 2206.07682.
 
-[6] T. H. Trinh, Y. Wu, Q. V. Le, H. He, T. Luong. Solving Olympiad Geometry without Human Demonstrations (AlphaGeometry). *Nature* 625, 476–482 (2024). DOI: 10.1038/s41586-023-06747-5.
+[6] R. Schaeffer, B. Miranda, S. Koyejo. Are Emergent Abilities of Large Language Models a Mirage? *NeurIPS* 2023. arXiv: 2304.15004.
 
-[7] C. Lu, C. Lu, R. T. Lange, J. Foerster, J. Clune, D. Ha. The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery. arXiv: 2408.06292, 2024.
+[7] I. Mirzadeh, K. Alizadeh, H. Shahrokhi, O. Tuzel, S. Bengio, M. Farajtabar. GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models. arXiv: 2410.05229, 2024.
 
-[8] D. Ha, J. Schmidhuber. World Models. *NeurIPS* 2018. arXiv: 1803.10122.
+[8] J. Huang, K. C.-C. Chang. Towards Reasoning in Large Language Models: A Survey. arXiv: 2212.10403, 2023.
 
-[9] Y. LeCun. A Path Towards Autonomous Machine Intelligence (Position Paper, version 0.9). OpenReview, June 2022.
+[9] D. A. Boiko, R. MacKnight, B. Kline, G. Gomes. Autonomous Chemical Research with Large Language Models. *Nature* 624, 570–578 (2023). DOI: 10.1038/s41586-023-06792-0.
 
-[10] K. Li, A. K. Hopkins, D. Bau, F. Viégas, H. Pfister, M. Wattenberg. Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task. *ICLR* 2023. arXiv: 2210.13382.
+[10] B. Romera-Paredes, M. Barekatain, A. Novikov, M. Balog, M. P. Kumar, E. Dupont, F. J. R. Ruiz, J. S. Ellenberg, P. Wang, O. Fawzi, P. Kohli, A. Fawzi. Mathematical Discoveries from Program Search with Large Language Models (FunSearch). *Nature* 625, 468–475 (2024). DOI: 10.1038/s41586-023-06924-6.
 
-[11] K. Cobbe, V. Kosaraju, M. Bavarian, M. Chen, H. Jun, L. Kaiser, M. Plappert, J. Tworek, J. Hilton, R. Nakano, C. Hesse, J. Schulman. Training Verifiers to Solve Math Word Problems (GSM8K). arXiv: 2110.14168, 2021.
+[11] T. H. Trinh, Y. Wu, Q. V. Le, H. He, T. Luong. Solving Olympiad Geometry without Human Demonstrations (AlphaGeometry). *Nature* 625, 476–482 (2024). DOI: 10.1038/s41586-023-06747-5.
 
-[12] D. Hendrycks, C. Burns, S. Kadavath, A. Arora, S. Basart, E. Tang, D. Song, J. Steinhardt. Measuring Mathematical Problem Solving with the MATH Dataset. *NeurIPS Datasets and Benchmarks* 2021. arXiv: 2103.03874.
+[12] C. Lu, C. Lu, R. T. Lange, J. Foerster, J. Clune, D. Ha. The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery. arXiv: 2408.06292, 2024.
 
-[13] X. Wang, Z. Hu, P. Lu, Y. Zhu, J. Zhang, S. Subramaniam, A. R. Loomba, S. Zhang, Y. Sun, W. Wang. SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models. *ICML* 2024. arXiv: 2307.10635.
+[13] J. Gottweis, V. Natarajan, et al. Towards an AI Co-Scientist: A Multi-Agent System for Hypothesis Generation. *Nature*, 2026 (published online 19 May 2026).
 
-[14] W. Chen, M. Yin, M. Ku, P. Lu, Y. Wan, X. Ma, J. Xu, X. Wang, T. Xia. TheoremQA: A Theorem-driven Question Answering Dataset. *EMNLP* 2023. arXiv: 2305.12524.
+[14] A. E. Ghareeb, et al. Robin: A Multi-Agent System for Automating Scientific Discovery. *Nature*, 2026. DOI: 10.1038/s41586-026-10652-y.
 
-[15] D. Arora, H. G. Singh, Mausam. Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark for Large Language Models (JEEBench). *EMNLP* 2023. arXiv: 2305.15074.
+[15] OpenAI. Disproof of the Erdős Unit Distance Conjecture. arXiv: 2605.20695, 2026. External verification co-authored by nine mathematicians.
 
-[16] C. He, R. Luo, Y. Bai, S. Hu, Z. L. Thai, J. Shen, J. Hu, X. Han, Y. Huang, Y. Zhang, J. Liu, L. Qi, Z. Liu, M. Sun. OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems. *ACL* 2024. arXiv: 2402.14008.
+[16] D. Ha, J. Schmidhuber. World Models. *NeurIPS* 2018. arXiv: 1803.10122.
 
-[17] T. B. Brown, B. Mann, N. Ryder, M. Subbiah, J. Kaplan, P. Dhariwal, et al. Language Models are Few-Shot Learners. *NeurIPS* 2020. arXiv: 2005.14165.
+[17] Y. LeCun. A Path Towards Autonomous Machine Intelligence (Position Paper, version 0.9). OpenReview, June 2022.
 
-[18] J. Wei, Y. Tay, R. Bommasani, C. Raffel, B. Zoph, S. Borgeaud, D. Yogatama, M. Bosma, D. Zhou, D. Metzler, E. H. Chi, T. Hashimoto, O. Vinyals, P. Liang, J. Dean, W. Fedus. Emergent Abilities of Large Language Models. *Transactions on Machine Learning Research (TMLR)* 2022. arXiv: 2206.07682.
+[18] K. Li, A. K. Hopkins, D. Bau, F. Viégas, H. Pfister, M. Wattenberg. Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task. *ICLR* 2023. arXiv: 2210.13382.
 
-[19] R. Schaeffer, B. Miranda, S. Koyejo. Are Emergent Abilities of Large Language Models a Mirage? *NeurIPS* 2023. arXiv: 2304.15004.
+[19] D. Hendrycks, C. Burns, S. Kadavath, A. Arora, S. Basart, E. Tang, D. Song, J. Steinhardt. Measuring Mathematical Problem Solving with the MATH Dataset. *NeurIPS Datasets and Benchmarks* 2021. arXiv: 2103.03874.
 
-[20] I. Mirzadeh, K. Alizadeh, H. Shahrokhi, O. Tuzel, S. Bengio, M. Farajtabar. GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models. arXiv: 2410.05229, 2024.
+[20] X. Wang, Z. Hu, P. Lu, Y. Zhu, J. Zhang, S. Subramaniam, A. R. Loomba, S. Zhang, Y. Sun, W. Wang. SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models. *ICML* 2024. arXiv: 2307.10635.
+
+[21] W. Chen, M. Yin, M. Ku, P. Lu, Y. Wan, X. Ma, J. Xu, X. Wang, T. Xia. TheoremQA: A Theorem-driven Question Answering Dataset. *EMNLP* 2023. arXiv: 2305.12524.
+
+[22] D. Arora, H. G. Singh, Mausam. Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark for Large Language Models (JEEBench). *EMNLP* 2023. arXiv: 2305.15074.
+
+[23] C. He, R. Luo, Y. Bai, S. Hu, Z. L. Thai, J. Shen, J. Hu, X. Han, Y. Huang, Y. Zhang, J. Liu, L. Qi, Z. Liu, M. Sun. OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems. *ACL* 2024. arXiv: 2402.14008.
 
 ---
 
