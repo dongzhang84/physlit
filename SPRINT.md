@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-03 20:32 UTC  
+**Generated:** 2026-06-03 21:20 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 16 |
+| Total commits | 17 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **6** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **7** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -35,6 +35,7 @@
 
 **Wed – Wednesday, Jun 3**
 
+- `1c8e545` paper §1 ¶4: expand to include 2025 wave of LLM physics benchmarks — _dongzhang84_ `2026-06-03 14:20`
 - `eb13bf0` paper §1 ¶3 closing: replace meta-question with physics-perspective claim — _dongzhang84_ `2026-06-03 13:32`
 - `5e1fac6` paper §1 ¶3: add disciplinary-background observation + Battaglia 2013 cite — _dongzhang84_ `2026-06-03 10:56`
 - `24b8bdd` paper §1 ¶3 polish: drop article title in body, move Sora EoL to footnote — _dongzhang84_ `2026-06-03 00:43`
