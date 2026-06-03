@@ -31,11 +31,11 @@
 
 综上所述，前面四段所讨论的现象指向同一个结构性缺口。推理一侧的扰动测试表明benchmark上的"答对"很大程度上来自符号匹配（Mirzadeh等[7]）。做科学一侧的现有工作都把问题放在一个被人类先验确立的理论框架内，对框架本身的归纳没有独立完成。世界模型一侧评测的"物理"停留在感知与下一步预测，与物理学意义上的形式理论不在同一层面[32]。LLM物理一侧的做题范式，即便引入EED评分（PHYBench[29]）或动态变体（ABench-Physics[31]）等近期改进，仍从原理上分不清"懂物理"与"见过同类题"，也不传达任何关于模型认知边界的信息。要让一个评测真正逼近"建立完整科学理论"这一缺位，需要在做题之外，直接观察模型能否从一组陌生现象起步、独立产出一套可被第三方检验的理论体系。
 
-物理学的方法论历史上有一条可被复制的认知链。Kepler从Tycho Brahe二十年的行星位置数据归纳出三定律（椭圆轨道、面积速度、$T^2 \propto a^3$），这是纯几何与运动学，没有"力"这个概念。Newton从Kepler的几何定律加上Galileo的落体观察出发，归纳出有一种叫引力的作用贯穿天地之间，强度与两质量乘积成正比、与距离平方成反比，并据此预测潮汐、彗星轨道、月球运动（万有引力的现代代数形式由后人整理，Newton本人在《Principia》里用的是几何与比例语言）。两百年后Maxwell走过同样的链路：从Faraday的电磁感应、Ampere的环路定律、Gauss的电与磁、Coulomb的静电四组独立现象出发，归纳出Ampere律为保一致性缺一项（位移电流），把四组现象统一为四方程一组，并从方程预测了电磁波以速度$c$传播，这一速度恰等于已测得的光速，意味着光本身就是电磁波。1915年Einstein走过第三次：从光速不变（Michelson-Morley实验）、等效原理（自由落体的局部惯性观察）、Newton引力对水星近日点进动每世纪43角秒的微小偏差这三组事实出发，归纳出"时空本身被质能弯曲"这一更深的底层结构，系统化为Einstein场方程，并据此预测光线在引力场中弯曲（1919年日食观测证实）。这是物理学"建立完整理论体系"在历史上反复出现的同一条认知链：观察现象、归纳规律、系统化为操作性形式、用以预测新情境、回看推导识别错处。物理学之所以为物理学，正是因为它经常需要走完这整条链。
+物理学的方法论历史上有一条可被复制的认知链。Kepler[33]从Tycho Brahe二十年的行星位置数据归纳出三定律（椭圆轨道、面积速度、$T^2 \propto a^3$），这是纯几何与运动学，没有"力"这个概念。Newton[34]从Kepler的几何定律加上Galileo的落体观察出发，归纳出有一种叫引力的作用贯穿天地之间，强度与两质量乘积成正比、与距离平方成反比，并据此预测潮汐、彗星轨道、月球运动（万有引力的现代代数形式由后人整理，Newton本人在《Principia》里用的是几何与比例语言）。两百年后Maxwell[35]走过同样的链路：从Faraday的电磁感应、Ampere的环路定律、Gauss的电与磁、Coulomb的静电四组独立现象出发，归纳出Ampere律为保一致性缺一项（位移电流），把四组现象统一为四方程一组，并从方程预测了电磁波以速度$c$传播，这一速度恰等于已测得的光速，意味着光本身就是电磁波。1915年Einstein[36]走过第三次：从光速不变（Michelson-Morley实验）、等效原理（自由落体的局部惯性观察）、Newton引力对水星近日点进动每世纪43角秒的微小偏差这三组事实出发，归纳出"时空本身被质能弯曲"这一更深的底层结构，系统化为Einstein场方程，并据此预测光线在引力场中弯曲（1919年日食观测证实）。这是物理学"建立完整理论体系"在历史上反复出现的同一条认知链：观察现象、归纳规律、系统化为操作性形式、用以预测新情境、回看推导识别错处。物理学之所以为物理学，正是因为它经常需要走完这整条链。DeepMind CEO Hassabis[37] 2026年初提出过一个AGI测试：把所有1911年之前的知识喂给一个AI系统，看它能否独立做出Einstein 1915年的广义相对论。这一测试的合适性本身值得讨论，本文不在此展开，但其前提清晰：一个AI真要做成这件事，必须完整走过观察、归纳、系统化、预测、反思这整条链。
 
-这一历史背景在AGI讨论里也并非孤例。DeepMind CEO Hassabis[33] 2026年初提出过一个AGI测试：把所有1911年之前的知识喂给一个AI系统，看它能否独立做出Einstein 1915年的广义相对论。这一测试的合适性本身值得讨论，本文不在此展开，但其前提清晰：一个AI真要做成这件事，必须完整走过观察、归纳、系统化、预测、反思这整条链。我们提出的判别方式正是把这条链拆成四个底层认知动作，分别测试：归纳（induction，从一组现象里抽出能解释所有现象的规律）、系统化（formulation，把规律写成可被第三方应用的操作性形式）、应用（prediction，用规则对新情境做量化预测）、反思（reflection，回看自己的推导识别可能错的一步）。给定一个明确的物理框架（含一组现象、一套判据、一组应用场景），让模型逐一执行这四个动作，对每个动作的输出独立判定，最后看是否综合通过。这四个动作不是任意挑出的：归纳对应Kepler从行星数据抽规律、Maxwell从四组实验抽方程、Einstein从光速与等效原理抽时空弯曲的环节。系统化对应Newton、Maxwell、Einstein分别把这些规律写成可被第三方复用的操作性形式。应用对应Newton算潮汐、Maxwell算波速、Einstein算光线偏折的环节。反思对应Maxwell意识到"光就是电磁波"、Einstein意识到狭义相对论不能涵盖加速参考系这种跨域识别。现有所有LLM物理评测只测应用一步，而把物理学最难、最定义身份的归纳与系统化两步排除在外。本文是据我们所知第一次把这四步全部纳入测试的工作，意义在于它为"AI能否做物理学家做的事"这一问题第一次提供了可操作的、与物理学史本身对齐的判据。
+鉴于此，我们提出的对于LLM是否理解物理的判别方式，正是把这条链拆成四个底层认知动作，分别测试：归纳（induction，从一组现象里抽出能解释所有现象的规律）、系统化（formulation，把规律写成可被第三方应用的操作性形式）、应用（prediction，用规则对新情境做量化预测）、反思（reflection，回看自己的推导识别可能错的一步）。给定一个明确的物理框架（含一组现象、一套判据、一组应用场景），让模型逐一执行这四个动作，对每个动作的输出独立判定，最后看是否综合通过。具体到操作层面，"现象"是一组用日常语言写成的观察记录（约10条），刻意不使用任何现代物理学的专有名词。"判据"是针对每一阶段的机械化标准，包括禁词列表、必要条件N1-N6、可疑失败模式P1-P7、以及一套halt-at-first-FAIL的判定流程。"应用场景"是若干量化预测情境，每个情境配有显式PASS数值区间。四个认知动作对应四个独立的API会话（Stage 1归纳、Stage 2系统化、Stage 3应用、Stage 4反思），跨阶段不允许上下文复用：Stage k+1只能读到Stage k的最终响应文本作为输入，看不到模型在Stage k之内的中间状态。这个隔离设计是为了让每一阶段的输出真实反映该阶段的独立能力。
 
-为避免结论被某个框架的特殊性质所限定，我们选了三个在认知压力上有明显差距的物理框架构成难度梯度：F=mv世界（反事实、单方程、单一物理领域），亚里士多德力学（历史框架、训练数据里以"被反驳的立场"形式存在），Decay World（反事实、跨四个物理领域、规则绑在直接可测的量上、无底层物质、所有标准耗散机制被关闭）。每个框架上做3个模型 × N=5次实验 × 4个阶段。本文的预测以SHA-256加git tag锁定（`prereg-<round>-locked`），所有原始prompt、模型响应、双LLM裁判判定、人工audit结论开放可复现。
+本文按此方式做了三组实验。三组实验对应三个在认知压力上构成难度梯度的物理框架，每组都让3个前沿模型（Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro）各跑N=5次独立实验，每次实验由4个独立阶段构成。三个框架的具体设计、现象集、判据细节留到第二章详述。判定层面采用预注册加双LLM裁判加阈值触发人工audit的方式。所有P1-P4预测在产生任何数据前以SHA-256加git tag锁定（`prereg-<round>-locked`）。Stage 1-3的双裁判分歧率（IRR）超过25%时强制触发人工audit作为该轮的canonical判据。所有原始prompt、模型响应、裁判输出与人工audit记录在公开仓库中可独立复现。
 
 本文的贡献分三层。方法论层：一套可复现、可审计的LLM物理素养评估流程，从预注册到双LLM裁判到IRR阈值触发人工audit的全部环节。实验结论层：三组实验综合内容通过率（composite content PASS）分别为9/15、5/15、0/15，与难度梯度方向一致。三家前沿模型（Claude Opus 4.7、GPT-5.5、Gemini 3.1 Pro）在定性方向上能力强（Decay World上60道定量题里0题方向错），在定量比例上系统性套用训练数据里的标准物理公式（23题方向对但比例错）。跨框架方法论发现：Stage 4 over-claim比率在三个框架上稳定落在65到70之间，亚里士多德70%、F=mv 66.7%、Decay World 67%，与具体物理内容解耦。不同LLM裁判的可靠性不跨框架可迁移，OpenAI裁判在Decay World上出现机制清晰的系统性失效（18个判断里16个引用虚构或误分类的禁词），为LLM-as-judge文献增加了一个可复现的failure mode数据点。
 
@@ -402,7 +402,15 @@ PhysLit不是一个"打分基准"，它是一套关于**如何认真测试一个
 
 [32] J. Zhang. Sora and V-JEPA Have Not Learned The Complete Real World Model — A Philosophical Analysis of Video AIs Through the Theory of Productive Imagination. arXiv: 2407.10311, 2024.
 
-[33] D. Hassabis. Remarks on an 'Einstein Test' for AGI. India AI Impact Summit, February 17, 2026.
+[33] J. Kepler. Astronomia Nova. 1609. (Three laws of planetary motion; geometric / proportional formulation, no force concept.)
+
+[34] I. Newton. Philosophiæ Naturalis Principia Mathematica. 1687. (Universal gravitation as inverse-square attraction; modern algebraic form F = G m_1 m_2 / r^2 assembled by later writers, with G first measured by Cavendish 1798.)
+
+[35] J. C. Maxwell. A Dynamical Theory of the Electromagnetic Field. *Philosophical Transactions of the Royal Society of London* 155, 459–512 (1865). (Four-equation unification of electromagnetism; predicts EM waves propagating at the speed of light.)
+
+[36] A. Einstein. Die Grundlage der allgemeinen Relativitätstheorie. *Annalen der Physik* 49, 769–822 (1916). (General Relativity field equations; predicts light-bending in a gravitational field.)
+
+[37] D. Hassabis. Remarks on an 'Einstein Test' for AGI. India AI Impact Summit, February 17, 2026.
 
 ---
 
