@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-03 21:57 UTC  
+**Generated:** 2026-06-03 22:08 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 19 |
+| Total commits | 20 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **9** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **10** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -35,6 +35,7 @@
 
 **Wed – Wednesday, Jun 3**
 
+- `7ffa430` paper §1: move accuracy-as-judgment critique into ¶4; rewrite ¶5 as synthesis with "综上所述" opening — _dongzhang84_ `2026-06-03 15:07`
 - `7b2f4e2` paper §1 ¶5: smooth synthesis-to-critique transition with a bridge sentence — _dongzhang84_ `2026-06-03 14:57`
 - `4b388de` paper §1 ¶5: synthesize the four prior threads into one structural gap — _dongzhang84_ `2026-06-03 14:44`
 - `1c8e545` paper §1 ¶4: expand to include 2025 wave of LLM physics benchmarks — _dongzhang84_ `2026-06-03 14:20`
