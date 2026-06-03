@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-03 22:08 UTC  
+**Generated:** 2026-06-03 22:31 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 20 |
+| Total commits | 21 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **10** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **11** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -35,6 +35,7 @@
 
 **Wed – Wednesday, Jun 3**
 
+- `7083c28` paper §1 ¶5: cite Zhang 2024 (Kantian Sora critique) + PHYBench/ABench re-cites for credibility — _dongzhang84_ `2026-06-03 15:31`
 - `7ffa430` paper §1: move accuracy-as-judgment critique into ¶4; rewrite ¶5 as synthesis with "综上所述" opening — _dongzhang84_ `2026-06-03 15:07`
 - `7b2f4e2` paper §1 ¶5: smooth synthesis-to-critique transition with a bridge sentence — _dongzhang84_ `2026-06-03 14:57`
 - `4b388de` paper §1 ¶5: synthesize the four prior threads into one structural gap — _dongzhang84_ `2026-06-03 14:44`
