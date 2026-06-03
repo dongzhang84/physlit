@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-03 07:43 UTC  
+**Generated:** 2026-06-03 17:57 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 14 |
+| Total commits | 15 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **4** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **5** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -35,6 +35,7 @@
 
 **Wed – Wednesday, Jun 3**
 
+- `5e1fac6` paper §1 ¶3: add disciplinary-background observation + Battaglia 2013 cite — _dongzhang84_ `2026-06-03 10:56`
 - `24b8bdd` paper §1 ¶3 polish: drop article title in body, move Sora EoL to footnote — _dongzhang84_ `2026-06-03 00:43`
 - `52266c6` paper §1 ¶3 world models: definition / physics-knowledge / evaluation debate — _dongzhang84_ `2026-06-03 00:39`
 - `0e3e4ac` paper §1 paragraph 2: sharpen closing (fragments vs complete theory) + drop ¶3 — _dongzhang84_ `2026-06-03 00:17`
