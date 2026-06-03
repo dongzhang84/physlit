@@ -27,7 +27,7 @@
 
 [^sora-eol]: OpenAI已于2026年4月停服Sora应用端，API计划同年9月关闭。
 
-学界目前判断LLM会不会物理，主流方式是做题。GSM8K[2]用小学数学应用题作为基准，MATH[23]扩展到高中竞赛题，SciBench[24]覆盖大学物理化学教材题（869道开放式题，最佳模型当时得分43.22%），TheoremQA[25]测定理应用（800题，覆盖350个定理），JEEBench[26]用印度IIT入学考试的515道理工科难题，OlympiadBench[27]走奥林匹克路线（8476题，物理子集GPT-4V当时得分10.74%）。这些基准的共同输出指标是答对率。
+让我们首先来看看学界目前是如何考察LLM对物理的理解力的。主流方式是做题。早期工作以学科考试题为载体：GSM8K[2]用小学数学应用题作为基准，MATH[23]扩展到高中竞赛题，SciBench[24]覆盖大学物理化学教材题（869道开放式题，最佳模型当时得分43.22%），TheoremQA[25]测定理应用（800题，覆盖350个定理），JEEBench[26]用印度IIT入学考试的515道理工科难题，OlympiadBench[27]走奥林匹克路线（8476题，物理子集GPT-4V当时得分10.74%）。2025年起这一线快速扩张。Rein等[28]的GPQA Diamond用198道博士级三学科选择题压上难度（PhD专家65%、Claude 3.5 Sonnet 59.4%）。Qiu等[29]的PHYBench用500道原创物理题加上Expression Edit Distance评分以捕捉过程正确但答案错的情形（Gemini 2.5 Pro 36.9%、人类专家61.9%）。Shen等[30]的PhyX把题做成3K多模态形式覆盖六大物理领域。Zhang等[31]的ABench-Physics把同一题改写成动态变体序列，要求模型对所有变体都答对，这一设计与前文Mirzadeh等[7]的GSM-Symbolic属于同一思路：用扰动测脆弱性。这些基准的共同输出指标都是答对率（部分配合更精细的评分规则）。
 
 把"答对几道题"作为"会物理"的判据有两个结构性问题。其一，答对率分不清"懂物理"和"训练数据里见过同类题"。基准覆盖越广、模型见过的相似题越多，分数自然越高，这种增长并不意味着模型获得了归纳新现象、规则化新经验、对新情境做预测的能力。其二，答对率不传达关于认知边界的任何信息。模型A得90%、模型B得91%，告诉读者的全部是"B比A多对了一道"，而非"B能做但A做不了的是哪一类认知工作"。当读者关心的是"模型能不能处理训练数据里没有的物理场景"时，答对率不提供外推线索。
 
@@ -389,6 +389,14 @@ PhysLit不是一个"打分基准"，它是一套关于**如何认真测试一个
 [26] D. Arora, H. G. Singh, Mausam. Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark for Large Language Models (JEEBench). *EMNLP* 2023. arXiv: 2305.15074.
 
 [27] C. He, R. Luo, Y. Bai, S. Hu, Z. L. Thai, J. Shen, J. Hu, X. Han, Y. Huang, Y. Zhang, J. Liu, L. Qi, Z. Liu, M. Sun. OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems. *ACL* 2024. arXiv: 2402.14008.
+
+[28] D. Rein, B. L. Hou, A. C. Stickland, J. Petty, R. Y. Pang, J. Dirani, J. Michael, S. R. Bowman. GPQA: A Graduate-Level Google-Proof Q&A Benchmark. *Conference on Language Modeling (COLM)* 2024. arXiv: 2311.12022.
+
+[29] S. Qiu, et al. PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models. arXiv: 2504.16074, 2025.
+
+[30] H. Shen, T. Wu, et al. PhyX: Does Your Model Have the "Wits" for Physical Reasoning? arXiv: 2505.15929, 2025.
+
+[31] Y. Zhang, et al. ABench-Physics: Benchmarking Physical Reasoning in LLMs via High-Difficulty and Dynamic Physics Problems. arXiv: 2507.04766, 2025.
 
 ---
 
