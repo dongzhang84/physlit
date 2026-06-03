@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-03 22:56 UTC  
+**Generated:** 2026-06-03 23:11 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 23 |
+| Total commits | 24 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **13** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **14** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -35,6 +35,7 @@
 
 **Wed – Wednesday, Jun 3**
 
+- `d33a038` paper §1 ¶6/¶7/¶8: add historical citations, operationalize four moves, remove framework spoilers from experiments paragraph — _dongzhang84_ `2026-06-03 16:11`
 - `58a0a19` paper §1 ¶6: add Einstein-GR example + Hassabis AGI test reference; drop F=Gm1m2/r^2 from the Newton paragraph (historical accuracy) — _dongzhang84_ `2026-06-03 15:55`
 - `5a088d0` paper §1 ¶6: ground the four-cognitive-move proposal in physics history — _dongzhang84_ `2026-06-03 15:42`
 - `7083c28` paper §1 ¶5: cite Zhang 2024 (Kantian Sora critique) + PHYBench/ABench re-cites for credibility — _dongzhang84_ `2026-06-03 15:31`
