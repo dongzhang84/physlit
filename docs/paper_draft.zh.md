@@ -21,11 +21,11 @@
 
 近年来大语言模型（LLM）能否进行推理是AI研究的中心争议之一。本文取认知科学与形式逻辑共享的最小定义：**推理**（reasoning）是从一组前提出发，按可被外部独立检查的有效推导步骤，得到一个新结论的过程。其中"有效"指每一步在该问题的逻辑或符号体系内成立，"独立检查"指推导过程的正确性不依赖于结论本身、也不依赖于对训练分布的记忆。在LLM评估文献里这一定义被操作化为这样一类任务：模型对一个无法单步生成答案的问题（多步算术、几何证明、长程规划），需要在响应中产生若干中间步骤再合成最终答案，每一步都可被独立检查。Wei等[1]2022年提出Chain-of-Thought（CoT，思维链）提示：在prompt里给模型一两个"问题、中间步骤、答案"的范例，PaLM-540B在GSM8K[2]上的解题率从17.9%跃到56.9%。Kojima等[3]发现连范例都不需要，一句"Let's think step by step"就能把InstructGPT-175B的零样本正确率从10.4%拉到40.7%。这一线索叠加Brown等[4]观察到的GPT-3规模效应、Wei等[5]的涌现假说，构成了"规模加提示等于推理涌现"的乐观叙事。但Schaeffer等[6]论证涌现的很大一部分是评估指标产物，Mirzadeh等[7]的GSM-Symbolic显示前沿模型对题面符号扰动高度敏感（GSM-NoOp变种下正确率可掉超过60个百分点），意味着模型对题面的符号匹配贡献远大于真正的多步推导。Huang与Chang[8]的综述把这场争论从"CoT是真推理"一端梳理到"CoT只是检索训练数据里的模板"的另一端。围绕"LLM是否真在做推理"这一问题，学界目前尚无定论。
 
-比起推理，另外一个更宏大的问题是，AI能做科学研究吗？把现有"AI做科学"工作放在一个自主度光谱上看，可以分为三个层次。**低自主**：AI作为在已知理论框架内的执行工具，做优化、自动化与参数搜索。Boiko等[9]2023年的Coscientist让LLM自主调度有机合成实验、Robin系统里Finch子模块对实验数据做统计分析都在这一层次。**中自主**：AI作为假设生成器与候选筛选系统，在已有文献的大空间里做信息综合与候选排序，输出列表交由人工验证。Romera-Paredes等[10]的FunSearch在人写的评估函数下搜索程序、Gottweis等[13]的Co-Scientist跨文献做药物重定位假设、Ghareeb等[14]的Robin在干性年龄相关性黄斑变性上跑端到端闭环（Crow文献综述、Falcon假设评估、Finch数据分析）、Lu等[12]的The AI Scientist在人写的ML模板里跑超参变体都属此类。**高自主**：AI端到端解决一个被精确陈述的科学问题，问题陈述、成功判据与外部验证均由人提供，AI在被严格定义的搜索空间内产出一个可被独立检验的对象。Trinh等[11]的AlphaGeometry在IMO几何题上给出形式化证明、OpenAI[15] 2026年5月报告其内部推理模型给出Erdős 1946年单位距离猜想的反例构造（联同九位外部数学家完成验证），均落在这一层次。这三个层次共享一个结构特征：被求解的问题处在一个已被人类先验地确立的理论框架内，AI的任务是在框架内做搜索、组合、推理或证明，框架本身在求解过程中不动。换个角度看，三个层次对应的是AI在科学研究链条上独立完成的不同片段：低自主对应已有框架内的实验执行与数据处理，中自主对应在已有规律基础上生成候选假设，高自主对应在被给定的问题陈述下完成求解或构造。这些都是建立一个科学理论过程中的某一环节，不是建立完整的科学理论本身。建立完整的科学理论需要从一组未经理论解释的观察起步，独立归纳出一套可被第三方检验的理论体系，再用该体系对新情境做可量化预测。这一完整过程在物理学训练里居于核心位置，但在所有已知AI工作里都没有被独立完成过。
+比起推理，另外一个更宏大的问题是，AI能做科学研究吗？把现有"AI做科学"工作放在一个自主度光谱上看，可以分为三个层次。**低自主**：AI作为在已知理论框架内的执行工具，做优化、自动化与参数搜索。Boiko等[9]2023年的Coscientist让LLM自主调度有机合成实验、Robin系统里Finch子模块对实验数据做统计分析都在这一层次。**中自主**：AI作为假设生成器与候选筛选系统，在已有文献的大空间里做信息综合与候选排序，输出列表交由人工验证。Romera-Paredes等[10]的FunSearch在人写的评估函数下搜索程序、Gottweis等[11]的Co-Scientist跨文献做药物重定位假设、Ghareeb等[12]的Robin在干性年龄相关性黄斑变性上跑端到端闭环（Crow文献综述、Falcon假设评估、Finch数据分析）、Lu等[13]的The AI Scientist在人写的ML模板里跑超参变体都属此类。**高自主**：AI端到端解决一个被精确陈述的科学问题，问题陈述、成功判据与外部验证均由人提供，AI在被严格定义的搜索空间内产出一个可被独立检验的对象。Trinh等[14]的AlphaGeometry在IMO几何题上给出形式化证明、OpenAI[15] 2026年5月报告其内部推理模型给出Erdős 1946年单位距离猜想的反例构造（联同九位外部数学家完成验证），均落在这一层次。这三个层次共享一个结构特征：被求解的问题处在一个已被人类先验地确立的理论框架内，AI的任务是在框架内做搜索、组合、推理或证明，框架本身在求解过程中不动。换个角度看，三个层次对应的是AI在科学研究链条上独立完成的不同片段：低自主对应已有框架内的实验执行与数据处理，中自主对应在已有规律基础上生成候选假设，高自主对应在被给定的问题陈述下完成求解或构造。这些都是建立一个科学理论过程中的某一环节，不是建立完整的科学理论本身。建立完整的科学理论需要从一组未经理论解释的观察起步，独立归纳出一套可被第三方检验的理论体系，再用该体系对新情境做可量化预测。这一完整过程在物理学训练里居于核心位置，但在所有已知AI工作里都没有被独立完成过。
 
-与"能否做科学"邻接的另一研究方向是世界模型。Ha与Schmidhuber[16]把世界模型定义为智能体在内部维护的、用以预测环境演化的生成模型。LeCun[17]在《通往自主机器智能》立场文中把世界模型作为通用智能架构的核心组件。Li等[18]发现GPT模型在Othello任务上自发涌现出了棋盘状态的内部表示，把"模型是否有世界模型"这一问的可证伪性又推进了一步。世界模型在文献里有多种定义，围绕它的工作共享一个目标：让模型对其所处的物理世界形成可外部观察、可被用以做预测的内部结构。本文的"物理素养"测试与这一方向高度相关，区别在于我们采用直接观察的路径，让模型在一个明确给定的、与训练先验冲突的物理框架内执行从归纳到反思的完整动作序列，每一步的输出都可被独立判定。
+与"建立完整科学理论"最近的相邻研究方向是世界模型。Ha与Schmidhuber[16]把世界模型定义为智能体在内部维护的、用以预测环境演化的生成模型。LeCun[17]在《通往自主机器智能》立场文中把它列为通用智能架构的核心组件。"世界模型"这一概念本身在文献内并无统一定义。Ding等[18] 2024年的综述把现有工作大致分成"理解世界"与"预测未来"两派，并指出像OpenAI Sora这类视频生成模型是否算世界模型至今未达共识。Sora团队曾将其定位为隐含的物理模拟器（OpenAI已于2026年4月停服Sora应用端，API计划同年9月关闭），LeCun[17]则反驳像素级生成与对世界的因果模型是两件事。评测一侧的标准同样未确立。Li等[19] 2023年的Othello-GPT通过probing抓出了模型内部的棋盘状态表征，作为"世界模型存在"的可证伪性证据。但Vafa等[20] 2024年用Myhill-Nerode启发的更严格判据测发现，现有生成模型在常规探针上看似都有世界模型、在新判据下却普遍表现为不连贯。物理这一维度上Bear等[21] 2021年的Physion基准测的是从视觉输入预测物体如何滚动、滑落、碰撞，属于对物理现象的下一步预测，并不要求模型把规律外显为可被独立检验的形式。综合看，世界模型这条线提供的是一个必要不充分的前置：模型若没有某种关于世界的内部表征，不可能产出可被独立检验的形式理论。但内部表征的存在不蕴含模型能把它产出为这样的理论。后一更严格的输出形态如何被实际测试，是接下来需要回答的问题。
 
-学界目前判断LLM会不会物理，主流方式是做题。GSM8K[2]用小学数学应用题作为基准，MATH[19]扩展到高中竞赛题，SciBench[20]覆盖大学物理化学教材题（869道开放式题，最佳模型当时得分43.22%），TheoremQA[21]测定理应用（800题，覆盖350个定理），JEEBench[22]用印度IIT入学考试的515道理工科难题，OlympiadBench[23]走奥林匹克路线（8476题，物理子集GPT-4V当时得分10.74%）。这些基准的共同输出指标是答对率。
+学界目前判断LLM会不会物理，主流方式是做题。GSM8K[2]用小学数学应用题作为基准，MATH[22]扩展到高中竞赛题，SciBench[23]覆盖大学物理化学教材题（869道开放式题，最佳模型当时得分43.22%），TheoremQA[24]测定理应用（800题，覆盖350个定理），JEEBench[25]用印度IIT入学考试的515道理工科难题，OlympiadBench[26]走奥林匹克路线（8476题，物理子集GPT-4V当时得分10.74%）。这些基准的共同输出指标是答对率。
 
 把"答对几道题"作为"会物理"的判据有两个结构性问题。其一，答对率分不清"懂物理"和"训练数据里见过同类题"。基准覆盖越广、模型见过的相似题越多，分数自然越高，这种增长并不意味着模型获得了归纳新现象、规则化新经验、对新情境做预测的能力。其二，答对率不传达关于认知边界的任何信息。模型A得90%、模型B得91%，告诉读者的全部是"B比A多对了一道"，而非"B能做但A做不了的是哪一类认知工作"。当读者关心的是"模型能不能处理训练数据里没有的物理场景"时，答对率不提供外推线索。
 
@@ -354,13 +354,13 @@ PhysLit不是一个"打分基准"，它是一套关于**如何认真测试一个
 
 [10] B. Romera-Paredes, M. Barekatain, A. Novikov, M. Balog, M. P. Kumar, E. Dupont, F. J. R. Ruiz, J. S. Ellenberg, P. Wang, O. Fawzi, P. Kohli, A. Fawzi. Mathematical Discoveries from Program Search with Large Language Models (FunSearch). *Nature* 625, 468–475 (2024). DOI: 10.1038/s41586-023-06924-6.
 
-[11] T. H. Trinh, Y. Wu, Q. V. Le, H. He, T. Luong. Solving Olympiad Geometry without Human Demonstrations (AlphaGeometry). *Nature* 625, 476–482 (2024). DOI: 10.1038/s41586-023-06747-5.
+[11] J. Gottweis, V. Natarajan, et al. Towards an AI Co-Scientist: A Multi-Agent System for Hypothesis Generation. *Nature*, 2026 (published online 19 May 2026).
 
-[12] C. Lu, C. Lu, R. T. Lange, J. Foerster, J. Clune, D. Ha. The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery. arXiv: 2408.06292, 2024.
+[12] A. E. Ghareeb, et al. Robin: A Multi-Agent System for Automating Scientific Discovery. *Nature*, 2026. DOI: 10.1038/s41586-026-10652-y.
 
-[13] J. Gottweis, V. Natarajan, et al. Towards an AI Co-Scientist: A Multi-Agent System for Hypothesis Generation. *Nature*, 2026 (published online 19 May 2026).
+[13] C. Lu, C. Lu, R. T. Lange, J. Foerster, J. Clune, D. Ha. The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery. arXiv: 2408.06292, 2024.
 
-[14] A. E. Ghareeb, et al. Robin: A Multi-Agent System for Automating Scientific Discovery. *Nature*, 2026. DOI: 10.1038/s41586-026-10652-y.
+[14] T. H. Trinh, Y. Wu, Q. V. Le, H. He, T. Luong. Solving Olympiad Geometry without Human Demonstrations (AlphaGeometry). *Nature* 625, 476–482 (2024). DOI: 10.1038/s41586-023-06747-5.
 
 [15] OpenAI. Disproof of the Erdős Unit Distance Conjecture. arXiv: 2605.20695, 2026. External verification co-authored by nine mathematicians.
 
@@ -368,17 +368,23 @@ PhysLit不是一个"打分基准"，它是一套关于**如何认真测试一个
 
 [17] Y. LeCun. A Path Towards Autonomous Machine Intelligence (Position Paper, version 0.9). OpenReview, June 2022.
 
-[18] K. Li, A. K. Hopkins, D. Bau, F. Viégas, H. Pfister, M. Wattenberg. Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task. *ICLR* 2023. arXiv: 2210.13382.
+[18] J. Ding, et al. Understanding World or Predicting Future? A Comprehensive Survey of World Models. *ACM Computing Surveys*, 2025. arXiv: 2411.14499, 2024.
 
-[19] D. Hendrycks, C. Burns, S. Kadavath, A. Arora, S. Basart, E. Tang, D. Song, J. Steinhardt. Measuring Mathematical Problem Solving with the MATH Dataset. *NeurIPS Datasets and Benchmarks* 2021. arXiv: 2103.03874.
+[19] K. Li, A. K. Hopkins, D. Bau, F. Viégas, H. Pfister, M. Wattenberg. Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task. *ICLR* 2023. arXiv: 2210.13382.
 
-[20] X. Wang, Z. Hu, P. Lu, Y. Zhu, J. Zhang, S. Subramaniam, A. R. Loomba, S. Zhang, Y. Sun, W. Wang. SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models. *ICML* 2024. arXiv: 2307.10635.
+[20] K. Vafa, J. Y. Chen, A. Rambachan, J. Kleinberg, S. Mullainathan. Evaluating the World Model Implicit in a Generative Model. *NeurIPS* 2024. arXiv: 2406.03689.
 
-[21] W. Chen, M. Yin, M. Ku, P. Lu, Y. Wan, X. Ma, J. Xu, X. Wang, T. Xia. TheoremQA: A Theorem-driven Question Answering Dataset. *EMNLP* 2023. arXiv: 2305.12524.
+[21] D. M. Bear, E. Wang, D. Mrowca, F. J. Binder, H.-Y. F. Tung, R. T. Pramod, C. Holdaway, S. Tao, K. Smith, F.-Y. Sun, L. Fei-Fei, N. Kanwisher, J. B. Tenenbaum, D. L. K. Yamins, J. E. Fan. Physion: Evaluating Physical Prediction from Vision in Humans and Machines. *NeurIPS Datasets and Benchmarks* 2021. arXiv: 2106.08261.
 
-[22] D. Arora, H. G. Singh, Mausam. Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark for Large Language Models (JEEBench). *EMNLP* 2023. arXiv: 2305.15074.
+[22] D. Hendrycks, C. Burns, S. Kadavath, A. Arora, S. Basart, E. Tang, D. Song, J. Steinhardt. Measuring Mathematical Problem Solving with the MATH Dataset. *NeurIPS Datasets and Benchmarks* 2021. arXiv: 2103.03874.
 
-[23] C. He, R. Luo, Y. Bai, S. Hu, Z. L. Thai, J. Shen, J. Hu, X. Han, Y. Huang, Y. Zhang, J. Liu, L. Qi, Z. Liu, M. Sun. OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems. *ACL* 2024. arXiv: 2402.14008.
+[23] X. Wang, Z. Hu, P. Lu, Y. Zhu, J. Zhang, S. Subramaniam, A. R. Loomba, S. Zhang, Y. Sun, W. Wang. SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models. *ICML* 2024. arXiv: 2307.10635.
+
+[24] W. Chen, M. Yin, M. Ku, P. Lu, Y. Wan, X. Ma, J. Xu, X. Wang, T. Xia. TheoremQA: A Theorem-driven Question Answering Dataset. *EMNLP* 2023. arXiv: 2305.12524.
+
+[25] D. Arora, H. G. Singh, Mausam. Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark for Large Language Models (JEEBench). *EMNLP* 2023. arXiv: 2305.15074.
+
+[26] C. He, R. Luo, Y. Bai, S. Hu, Z. L. Thai, J. Shen, J. Hu, X. Han, Y. Huang, Y. Zhang, J. Liu, L. Qi, Z. Liu, M. Sun. OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems. *ACL* 2024. arXiv: 2402.14008.
 
 ---
 
