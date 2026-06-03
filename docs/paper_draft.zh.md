@@ -23,11 +23,11 @@
 
 比起推理，另外一个更宏大的问题是，AI能做科学研究吗？把现有"AI做科学"工作放在一个自主度光谱上看，可以分为三个层次。**低自主**：AI作为在已知理论框架内的执行工具，做优化、自动化与参数搜索。Boiko等[9]2023年的Coscientist让LLM自主调度有机合成实验、Robin系统里Finch子模块对实验数据做统计分析都在这一层次。**中自主**：AI作为假设生成器与候选筛选系统，在已有文献的大空间里做信息综合与候选排序，输出列表交由人工验证。Romera-Paredes等[10]的FunSearch在人写的评估函数下搜索程序、Gottweis等[11]的Co-Scientist跨文献做药物重定位假设、Ghareeb等[12]的Robin在干性年龄相关性黄斑变性上跑端到端闭环（Crow文献综述、Falcon假设评估、Finch数据分析）、Lu等[13]的The AI Scientist在人写的ML模板里跑超参变体都属此类。**高自主**：AI端到端解决一个被精确陈述的科学问题，问题陈述、成功判据与外部验证均由人提供，AI在被严格定义的搜索空间内产出一个可被独立检验的对象。Trinh等[14]的AlphaGeometry在IMO几何题上给出形式化证明、OpenAI[15] 2026年5月报告其内部推理模型给出Erdős 1946年单位距离猜想的反例构造（联同九位外部数学家完成验证），均落在这一层次。这三个层次共享一个结构特征：被求解的问题处在一个已被人类先验地确立的理论框架内，AI的任务是在框架内做搜索、组合、推理或证明，框架本身在求解过程中不动。换个角度看，三个层次对应的是AI在科学研究链条上独立完成的不同片段：低自主对应已有框架内的实验执行与数据处理，中自主对应在已有规律基础上生成候选假设，高自主对应在被给定的问题陈述下完成求解或构造。这些都是建立一个科学理论过程中的某一环节，不是建立完整的科学理论本身。建立完整的科学理论需要从一组未经理论解释的观察起步，独立归纳出一套可被第三方检验的理论体系，再用该体系对新情境做可量化预测。这一完整过程在物理学训练里居于核心位置，但在所有已知AI工作里都没有被独立完成过。
 
-与"建立完整科学理论"最近的相邻研究方向是世界模型。Ha与Schmidhuber[16]把世界模型定义为智能体在内部维护的、用以预测环境演化的生成模型。LeCun[17]把世界模型列为通用智能架构的核心组件。"世界模型"这一概念本身在文献内并无统一定义。Ding等[18] 2024年的综述把现有工作大致分成"理解世界"与"预测未来"两派，并指出像OpenAI Sora这类视频生成模型是否算世界模型至今未达共识。Sora团队曾将其定位为隐含的物理模拟器[^sora-eol]，LeCun[17]则反驳像素级生成与对世界的因果模型是两件事。评测一侧的标准同样未确立。Li等[19] 2023年的Othello-GPT通过probing抓出了模型内部的棋盘状态表征，作为"世界模型存在"的可证伪性证据。但Vafa等[20] 2024年用Myhill-Nerode启发的更严格判据测发现，现有生成模型在常规探针上看似都有世界模型、在新判据下却普遍表现为不连贯。物理这一维度上Bear等[21] 2021年的Physion基准测的是从视觉输入预测物体如何滚动、滑落、碰撞，属于对物理现象的下一步预测，并不要求模型把规律外显为可被独立检验的形式。综合看，世界模型这条线提供的是一个必要不充分的前置：模型若没有某种关于世界的内部表征，不可能产出可被独立检验的形式理论。但内部表征的存在不蕴含模型能把它产出为这样的理论。后一更严格的输出形态如何被实际测试，是接下来需要回答的问题。
+与"建立完整科学理论"最近的相邻研究方向是世界模型。Ha与Schmidhuber[16]把世界模型定义为智能体在内部维护的、用以预测环境演化的生成模型。LeCun[17]把世界模型列为通用智能架构的核心组件。"世界模型"这一概念本身在文献内并无统一定义。Ding等[18] 2024年的综述把现有工作大致分成"理解世界"与"预测未来"两派，并指出像OpenAI Sora这类视频生成模型是否算世界模型至今未达共识。Sora团队曾将其定位为隐含的物理模拟器[^sora-eol]，LeCun[17]则反驳像素级生成与对世界的因果模型是两件事。评测一侧的标准同样未确立。Li等[19] 2023年的Othello-GPT通过probing抓出了模型内部的棋盘状态表征，作为"世界模型存在"的可证伪性证据。但Vafa等[20] 2024年用Myhill-Nerode启发的更严格判据测发现，现有生成模型在常规探针上看似都有世界模型、在新判据下却普遍表现为不连贯。物理这一维度上Bear等[21] 2021年的Physion基准测的是从视觉输入预测物体如何滚动、滑落、碰撞，属于对物理现象的下一步预测，并不要求模型把规律外显为可被独立检验的形式。一个学科背景层面的观察是：世界模型研究者绝大多数出自机器学习或计算机背景，少数与认知科学合作的工作（如Battaglia、Hamrick与Tenenbaum[22]提出的intuitive physics engine方向）所讨论的"物理"也停留在感知与直觉层面，与物理学意义上"从观察归纳形式理论"不在同一维度。综合看，世界模型这条线提供的是一个必要不充分的前置：模型若没有某种关于世界的内部表征，不可能产出可被独立检验的形式理论。但内部表征的存在不蕴含模型能把它产出为这样的理论。后一更严格的输出形态如何被实际测试，是接下来需要回答的问题。
 
 [^sora-eol]: OpenAI已于2026年4月停服Sora应用端，API计划同年9月关闭。
 
-学界目前判断LLM会不会物理，主流方式是做题。GSM8K[2]用小学数学应用题作为基准，MATH[22]扩展到高中竞赛题，SciBench[23]覆盖大学物理化学教材题（869道开放式题，最佳模型当时得分43.22%），TheoremQA[24]测定理应用（800题，覆盖350个定理），JEEBench[25]用印度IIT入学考试的515道理工科难题，OlympiadBench[26]走奥林匹克路线（8476题，物理子集GPT-4V当时得分10.74%）。这些基准的共同输出指标是答对率。
+学界目前判断LLM会不会物理，主流方式是做题。GSM8K[2]用小学数学应用题作为基准，MATH[23]扩展到高中竞赛题，SciBench[24]覆盖大学物理化学教材题（869道开放式题，最佳模型当时得分43.22%），TheoremQA[25]测定理应用（800题，覆盖350个定理），JEEBench[26]用印度IIT入学考试的515道理工科难题，OlympiadBench[27]走奥林匹克路线（8476题，物理子集GPT-4V当时得分10.74%）。这些基准的共同输出指标是答对率。
 
 把"答对几道题"作为"会物理"的判据有两个结构性问题。其一，答对率分不清"懂物理"和"训练数据里见过同类题"。基准覆盖越广、模型见过的相似题越多，分数自然越高，这种增长并不意味着模型获得了归纳新现象、规则化新经验、对新情境做预测的能力。其二，答对率不传达关于认知边界的任何信息。模型A得90%、模型B得91%，告诉读者的全部是"B比A多对了一道"，而非"B能做但A做不了的是哪一类认知工作"。当读者关心的是"模型能不能处理训练数据里没有的物理场景"时，答对率不提供外推线索。
 
@@ -378,15 +378,17 @@ PhysLit不是一个"打分基准"，它是一套关于**如何认真测试一个
 
 [21] D. M. Bear, E. Wang, D. Mrowca, F. J. Binder, H.-Y. F. Tung, R. T. Pramod, C. Holdaway, S. Tao, K. Smith, F.-Y. Sun, L. Fei-Fei, N. Kanwisher, J. B. Tenenbaum, D. L. K. Yamins, J. E. Fan. Physion: Evaluating Physical Prediction from Vision in Humans and Machines. *NeurIPS Datasets and Benchmarks* 2021. arXiv: 2106.08261.
 
-[22] D. Hendrycks, C. Burns, S. Kadavath, A. Arora, S. Basart, E. Tang, D. Song, J. Steinhardt. Measuring Mathematical Problem Solving with the MATH Dataset. *NeurIPS Datasets and Benchmarks* 2021. arXiv: 2103.03874.
+[22] P. W. Battaglia, J. B. Hamrick, J. B. Tenenbaum. Simulation as an engine of physical scene understanding. *Proceedings of the National Academy of Sciences (PNAS)* 110(45), 18327–18332 (2013). DOI: 10.1073/pnas.1306572110.
 
-[23] X. Wang, Z. Hu, P. Lu, Y. Zhu, J. Zhang, S. Subramaniam, A. R. Loomba, S. Zhang, Y. Sun, W. Wang. SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models. *ICML* 2024. arXiv: 2307.10635.
+[23] D. Hendrycks, C. Burns, S. Kadavath, A. Arora, S. Basart, E. Tang, D. Song, J. Steinhardt. Measuring Mathematical Problem Solving with the MATH Dataset. *NeurIPS Datasets and Benchmarks* 2021. arXiv: 2103.03874.
 
-[24] W. Chen, M. Yin, M. Ku, P. Lu, Y. Wan, X. Ma, J. Xu, X. Wang, T. Xia. TheoremQA: A Theorem-driven Question Answering Dataset. *EMNLP* 2023. arXiv: 2305.12524.
+[24] X. Wang, Z. Hu, P. Lu, Y. Zhu, J. Zhang, S. Subramaniam, A. R. Loomba, S. Zhang, Y. Sun, W. Wang. SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models. *ICML* 2024. arXiv: 2307.10635.
 
-[25] D. Arora, H. G. Singh, Mausam. Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark for Large Language Models (JEEBench). *EMNLP* 2023. arXiv: 2305.15074.
+[25] W. Chen, M. Yin, M. Ku, P. Lu, Y. Wan, X. Ma, J. Xu, X. Wang, T. Xia. TheoremQA: A Theorem-driven Question Answering Dataset. *EMNLP* 2023. arXiv: 2305.12524.
 
-[26] C. He, R. Luo, Y. Bai, S. Hu, Z. L. Thai, J. Shen, J. Hu, X. Han, Y. Huang, Y. Zhang, J. Liu, L. Qi, Z. Liu, M. Sun. OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems. *ACL* 2024. arXiv: 2402.14008.
+[26] D. Arora, H. G. Singh, Mausam. Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark for Large Language Models (JEEBench). *EMNLP* 2023. arXiv: 2305.15074.
+
+[27] C. He, R. Luo, Y. Bai, S. Hu, Z. L. Thai, J. Shen, J. Hu, X. Han, Y. Huang, Y. Zhang, J. Liu, L. Qi, Z. Liu, M. Sun. OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems. *ACL* 2024. arXiv: 2402.14008.
 
 ---
 
