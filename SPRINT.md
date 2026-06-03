@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-03 04:31 UTC  
+**Generated:** 2026-06-03 07:02 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -9,13 +9,13 @@
 
 | Stat | Value |
 |------|-------|
-| Status | ❌ Stalled |
-| Active days | 2 / 7 |
-| Total commits | 10 |
+| Status | ⚠️ Slow |
+| Active days | 3 / 7 |
+| Total commits | 11 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -32,6 +32,10 @@
 **Tue – Tuesday, Jun 2**
 
 - `5ed09f3` paper §1 paragraph 2: 2026-May AI-doing-science wave + agentic-vs-model split — _dongzhang84_ `2026-06-02 21:31`
+
+**Wed – Wednesday, Jun 3**
+
+- `dfce414` paper §1 paragraph 2: three-tier autonomy taxonomy + missing-cognitive-task gap — _dongzhang84_ `2026-06-03 00:01`
 
 ---
 
