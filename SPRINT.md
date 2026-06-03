@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-02 06:35 UTC  
+**Generated:** 2026-06-03 04:31 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ❌ Stalled |
-| Active days | 1 / 7 |
-| Total commits | 9 |
+| Active days | 2 / 7 |
+| Total commits | 10 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -28,6 +28,10 @@
 - `706ed43` latex_cn/: scaffold + Chinese introduction in LaTeX — _dongzhang84_ `2026-06-01 22:51`
 - `0df78a6` paper draft: §1 as flowing prose (drop 1.1/1.2/1.3/1.4) + add §11 References — _dongzhang84_ `2026-06-01 22:39`
 - `99d3fe0` paper draft: rewrite §1 introduction with citations and structured subsections — _dongzhang84_ `2026-06-01 22:26`
+
+**Tue – Tuesday, Jun 2**
+
+- `5ed09f3` paper §1 paragraph 2: 2026-May AI-doing-science wave + agentic-vs-model split — _dongzhang84_ `2026-06-02 21:31`
 
 ---
 
