@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-04 04:55 UTC  
+**Generated:** 2026-06-04 05:07 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 26 |
+| Total commits | 27 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **16** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **17** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -35,6 +35,7 @@
 
 **Wed – Wednesday, Jun 3**
 
+- `154cbe9` docs: trim §1 four-move bullets to one example each — _dongzhang84_ `2026-06-03 22:07`
 - `d738596` docs: bullet-list the four cognitive moves in §1 — _dongzhang84_ `2026-06-03 21:55`
 - `0f24c01` docs: slim §1 ¶7-¶8 to high-level proposal register — _dongzhang84_ `2026-06-03 16:27`
 - `d33a038` paper §1 ¶6/¶7/¶8: add historical citations, operationalize four moves, remove framework spoilers from experiments paragraph — _dongzhang84_ `2026-06-03 16:11`
