@@ -60,6 +60,7 @@ coverage/
 analysis/**/*.zh.md
 analysis/**/*.zh.txt
 
-# LaTeX paper draft — local only, do not push to GitHub.
+# LaTeX paper drafts — local only, do not push to GitHub.
 # Markdown source of truth stays at docs/paper_draft.zh.md.
 latex_cn/
+latex_en/
