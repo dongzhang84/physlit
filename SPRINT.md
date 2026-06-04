@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-04 05:57 UTC  
+**Generated:** 2026-06-04 07:23 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ⚠️ Slow |
-| Active days | 3 / 7 |
-| Total commits | 33 |
+| Active days | 4 / 7 |
+| Total commits | 34 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **23** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **23** | **1** | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -58,6 +58,10 @@
 - `52266c6` paper §1 ¶3 world models: definition / physics-knowledge / evaluation debate — _dongzhang84_ `2026-06-03 00:39`
 - `0e3e4ac` paper §1 paragraph 2: sharpen closing (fragments vs complete theory) + drop ¶3 — _dongzhang84_ `2026-06-03 00:17`
 - `dfce414` paper §1 paragraph 2: three-tier autonomy taxonomy + missing-cognitive-task gap — _dongzhang84_ `2026-06-03 00:01`
+
+**Thu – Thursday, Jun 4**
+
+- `1fb5538` docs: §2.5 — three parallel physics worlds overview with table — _dongzhang84_ `2026-06-04 00:22`
 
 ---
 
