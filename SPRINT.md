@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-04 07:23 UTC  
+**Generated:** 2026-06-04 17:26 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 4 / 7 |
-| Total commits | 34 |
+| Total commits | 35 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **23** | **1** | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **23** | **2** | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -61,6 +61,7 @@
 
 **Thu – Thursday, Jun 4**
 
+- `81d9974` chore: gitignore latex_en/ alongside latex_cn/ — _dongzhang84_ `2026-06-04 10:26`
 - `1fb5538` docs: §2.5 — three parallel physics worlds overview with table — _dongzhang84_ `2026-06-04 00:22`
 
 ---
