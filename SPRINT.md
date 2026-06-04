@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-03 23:27 UTC  
+**Generated:** 2026-06-04 04:55 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 25 |
+| Total commits | 26 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **15** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **16** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -35,6 +35,7 @@
 
 **Wed – Wednesday, Jun 3**
 
+- `d738596` docs: bullet-list the four cognitive moves in §1 — _dongzhang84_ `2026-06-03 21:55`
 - `0f24c01` docs: slim §1 ¶7-¶8 to high-level proposal register — _dongzhang84_ `2026-06-03 16:27`
 - `d33a038` paper §1 ¶6/¶7/¶8: add historical citations, operationalize four moves, remove framework spoilers from experiments paragraph — _dongzhang84_ `2026-06-03 16:11`
 - `58a0a19` paper §1 ¶6: add Einstein-GR example + Hassabis AGI test reference; drop F=Gm1m2/r^2 from the Newton paragraph (historical accuracy) — _dongzhang84_ `2026-06-03 15:55`
