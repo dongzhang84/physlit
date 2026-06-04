@@ -40,7 +40,7 @@
 - **预测**（prediction）：用构思出的操作性形式对新情境做可定量检验的预测。从 Maxwell 方程组可以直接演绎出电磁波，并算出其传播速度恰等于已测光速 $c$，预言光本身即电磁波（Hertz 1888 年实验证实）。
 - **复审**（review）：回看自己搭好的理论，识别哪一步可能错、哪一处边界尚未涵盖、哪一处机制尚未解释。对 Maxwell 方程组本身做复审会发现：方程要求电磁波速度 $c$ 在所有惯性参考系下都相同（光速不变性），而 Galileo 变换无法保持方程的协变性。要使整个体系自洽，必须用 Lorentz 变换取代 Galileo 变换。Maxwell 体系自身已经埋下了狭义相对论的种子。
 
-这四个认知动作并非借自科学哲学中以科学革命为视角的框架。Popper 的"证伪"与 Kuhn 的"范式转移"关注的是理论何时被推翻、范式何时被替换，是关于科学如何变革的描述。本文取的是一个更中规中矩的角度：物理学家在常规工作中建立模型与理论体系所走的过程。这条由观察、归纳、构思、预测、复审组成的认知链，是物理学训练里反复出现的工作路径，而非革命性时刻的描述。
+这四个认知动作并非借自科学哲学中以"科学革命"为主轴的框架。Popper 在《科学发现的逻辑》[38] 中主张科学性的标准在于可证伪性，理论靠大胆猜想加严肃反驳而推进。Kuhn 在《科学革命的结构》[39] 中把科学描述为常规科学与范式转移的交替，焦点落在旧范式何时被不可通约的新范式所取代。两者关心的都是理论何时被推翻、范式何时被替换。本文取的是更中规中矩的角度，更接近 Whewell《归纳科学的哲学》[40] 与 Hempel《自然科学的哲学》[41] 所代表的假设演绎传统：物理学家在常规工作中建立模型与理论体系所实际走的过程。这条由归纳、构思、预测、复审组成的四步认知链，是物理学训练里反复出现的工作路径，而非革命性时刻的描述。
 
 给定一个明确的物理框架（含一组现象、一套判据、一组应用场景），让模型逐一执行这四个动作，对每个动作的输出独立判定，最后看是否综合通过。
 
@@ -420,6 +420,14 @@ PhysLit不是一个"打分基准"，它是一套关于**如何认真测试一个
 [36] A. Einstein. Die Grundlage der allgemeinen Relativitätstheorie. *Annalen der Physik* 49, 769–822 (1916). (General Relativity field equations; predicts light-bending in a gravitational field.)
 
 [37] D. Hassabis. Remarks on an 'Einstein Test' for AGI. India AI Impact Summit, February 17, 2026.
+
+[38] K. R. Popper. The Logic of Scientific Discovery. Hutchinson, London, 1959. (Original German edition: *Logik der Forschung*, Springer, Vienna, 1934.)
+
+[39] T. S. Kuhn. The Structure of Scientific Revolutions. University of Chicago Press, Chicago, 1962. (2nd ed. with Postscript, 1970.)
+
+[40] W. Whewell. The Philosophy of the Inductive Sciences, Founded Upon Their History. John W. Parker, London, 1840. (2 volumes.)
+
+[41] C. G. Hempel. Philosophy of Natural Science. Prentice-Hall, Englewood Cliffs, NJ, 1966.
 
 ---
 
