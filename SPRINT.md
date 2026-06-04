@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-04 05:40 UTC  
+**Generated:** 2026-06-04 05:53 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 31 |
+| Total commits | 32 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **21** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **22** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -35,6 +35,7 @@
 
 **Wed – Wednesday, Jun 3**
 
+- `050b05f` docs: §1 ¶8 rewrite — motivate the counterfactual physics setup — _dongzhang84_ `2026-06-03 22:53`
 - `5663d09` docs: drop book titles from §1 positioning paragraph body — _dongzhang84_ `2026-06-03 22:40`
 - `c99d37c` docs: cite Popper, Kuhn, Whewell, Hempel in §1 positioning paragraph — _dongzhang84_ `2026-06-03 22:31`
 - `765134c` docs: drop em-dashes in §1 ¶7 + add Popper/Kuhn positioning — _dongzhang84_ `2026-06-03 22:25`
