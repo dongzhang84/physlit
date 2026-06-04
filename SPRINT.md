@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-04 05:07 UTC  
+**Generated:** 2026-06-04 05:17 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 27 |
+| Total commits | 28 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **17** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **18** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -35,6 +35,7 @@
 
 **Wed – Wednesday, Jun 3**
 
+- `e59b148` docs: thread Maxwell example through all four §1 bullets — _dongzhang84_ `2026-06-03 22:16`
 - `154cbe9` docs: trim §1 four-move bullets to one example each — _dongzhang84_ `2026-06-03 22:07`
 - `d738596` docs: bullet-list the four cognitive moves in §1 — _dongzhang84_ `2026-06-03 21:55`
 - `0f24c01` docs: slim §1 ¶7-¶8 to high-level proposal register — _dongzhang84_ `2026-06-03 16:27`
