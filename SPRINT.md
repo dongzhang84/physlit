@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-04 05:17 UTC  
+**Generated:** 2026-06-04 05:25 UTC  
 **Showing:** last 5 week(s) of 5 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 28 |
+| Total commits | 29 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **9** | **1** | **18** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | **1** | **19** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 1**
 
@@ -35,6 +35,7 @@
 
 **Wed – Wednesday, Jun 3**
 
+- `765134c` docs: drop em-dashes in §1 ¶7 + add Popper/Kuhn positioning — _dongzhang84_ `2026-06-03 22:25`
 - `e59b148` docs: thread Maxwell example through all four §1 bullets — _dongzhang84_ `2026-06-03 22:16`
 - `154cbe9` docs: trim §1 four-move bullets to one example each — _dongzhang84_ `2026-06-03 22:07`
 - `d738596` docs: bullet-list the four cognitive moves in §1 — _dongzhang84_ `2026-06-03 21:55`
