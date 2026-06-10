@@ -1,11 +1,29 @@
 # Sprint Report
 
-**Generated:** 2026-06-04 17:26 UTC  
-**Showing:** last 5 week(s) of 5 total  
+**Generated:** 2026-06-10 23:14 UTC  
+**Showing:** last 6 week(s) of 6 total  
 
 ---
 
-## Week 5 _(current)_ · 2026-06-01 to 2026-06-07
+## Week 6 _(current)_ · 2026-06-08 to 2026-06-14
+
+| Stat | Value |
+|------|-------|
+| Status | ❌ Stalled |
+| Active days | 1 / 7 |
+| Total commits | 1 |
+
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|
+| ⚪ | ⚪ | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
+
+**Wed – Wednesday, Jun 10**
+
+- `8bed96e` docs: rewrite analysis/README.md as a per-sub-round log — _dongzhang84_ `2026-06-10 16:13`
+
+---
+
+## Week 5 · 2026-06-01 to 2026-06-07
 
 | Stat | Value |
 |------|-------|
