@@ -9,12 +9,12 @@ PhysLit is a research artifact, not a product. Every design decision optimizes f
 
 ## Results across three frameworks
 
-Three frameworks tested at temperature 0 across Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro, N=5 trials each. **Composite content PASS** is the strongest cell — a trial earns one only if Stage 1 induction, Stage 2 formulation, and every Stage 3 quantitative scenario all PASS.
+Three frameworks tested at temperature 0 across Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro, N=5 trials each. **Composite PASS** requires PASS on every content stage (Stage 1 induction, Stage 2 formulation, every Stage 3 scenario) and on the structural axis (N9-N12) where it was applied. F=mv and Aristotelian numbers below come from the axiomatization-prompt arm (`02_fmv.2`, `v0.3`), the canonical headline reported in the paper. Decay World is content-axis only, because its prereg scopes the structural axis out.
 
 | Framework | Category | Difficulty | Composite PASS | Sub-rounds |
 |---|---|---|---|---|
-| **F=mv** | Counterfactual world | Easy | 9/15 | `02_fmv` · `02_fmv.1` · `02_fmv.2` |
-| **Aristotelian** | Historical framework | Medium | 5/15 | `v0.1` · `v0.2` · `v0.2.1` · `v0.3` |
+| **F=mv** | Counterfactual world | Easy | 6/15 | `02_fmv` · `02_fmv.1` · `02_fmv.2` |
+| **Aristotelian** | Historical framework | Medium | 6/15 | `v0.1` · `v0.2` · `v0.2.1` · `v0.3` |
 | **Decay World** | Counterfactual world | Hard | 0/15 | `03_decay` |
 
 A separate behavioural regularity holds across all three: among failure-containing trials, the model **over-claims correctness in Stage 4** 65-70 % of the time. v0.1 70 %, 02_fmv 66.7 %, 03_decay 67 %. Stage 4 self-assessment is approximately framework-independent in this paradigm — frontier models do not get better at identifying their own slips as the framework gets harder.
@@ -31,7 +31,7 @@ Two methodology findings transfer across rounds:
 A Tier-1 counterfactual world in which a body's pace tracks the present push (force ∝ velocity, not acceleration). The framework conflicts with F=ma numerically: a steadily pushed body moves at a steady pace, a released body stops at once, all bodies fall at one unchanging pace.
 
 - **`02_fmv`** (2026-05-18, [report](./analysis/fmv/02_fmv_report.md)): the headline run. **P1 REFUTED** — Claude and GPT both induced the F=mv rules cleanly in every trial; only Gemini slid back. Composite content **9/15**. The result reverses v0.1's "induction fails" finding; frontier models *can* reason inside a counterfactual world when the rule is single-domain.
-- **`02_fmv.1`** (2026-05-18, [report](./analysis/fmv/02_fmv_1_report.md)): a structural-axis re-analysis of the same trials (parsimony, independence, traceability, hierarchy). Content and structural quality are anti-correlated across vendors — Claude content-strong but structurally weak, GPT the reverse.
+- **`02_fmv.1`** (2026-05-18, [report](./analysis/fmv/02_fmv_1_report.md)): a structural-axis re-analysis of the same trials (parsimony, independence, traceability, hierarchy). Claude and GPT pass content cleanly but fail the structural axis (Claude 2/5 structural PASS, GPT 0/5). Gemini is the reverse: 0/5 content but 3/5 structural. Composite drops to 1/15.
 - **`02_fmv.2`** (2026-05-20, [report](./analysis/fmv/02_fmv_2_report.md)): a single-variable axiomatisation control. Adding one paragraph to the Stage 1 prompt asking for the smallest rule set with explicit cross-references **doubled the structural pass rate** (5/15 → 11/15) without lowering content. Composite jumped 1/15 → 6/15.
 
 ---
