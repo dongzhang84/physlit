@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-11 05:12 UTC  
+**Generated:** 2026-06-11 05:23 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 8 |
+| Total commits | 9 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **8** | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **9** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
+- `bd8a593` docs: strip sub-round identifiers and script names from the paper body — _dongzhang84_ `2026-06-10 22:22`
 - `c900d8d` docs: write §6.1–§6.4 cross-framework findings + appendix table renumbering — _dongzhang84_ `2026-06-10 22:12`
 - `394743a` docs: reorder §6 subsections and simplify the judge-reliability table to three rows — _dongzhang84_ `2026-06-10 21:53`
 - `0011a31` docs: collapse §6–§10 into the tightened 8-section structure — _dongzhang84_ `2026-06-10 21:04`
