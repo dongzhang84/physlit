@@ -306,21 +306,21 @@ Decay World sits at the floor of the three-framework difficulty gradient. The th
 
 Aligning the experimental results across the three frameworks surfaces a set of findings decoupled from the specific physics content of any one framework. They fall into two kinds. The first kind is empirical regularities that recur across the three frameworks: how often models over-claim under self-review, and which LLM judge is more reliable on which task. The second kind is a methodology contribution: a specific, reproducible LLM-as-judge failure mode surfaced by the Decay World banned-token test, and a retrospective on whether the difficulty-gradient design separated the cognitive moves as intended.
 
-### 6.1 Stage 4 Over-Claim Stability Across Frameworks
+### 6.1 Difficulty Gradient in Retrospect
 
-*(To be written: across the three frameworks, the Stage 4 review over-claim rate of failed experiments stays in a narrow 65–70% band, independent of framework nature and failure-mode specifics.)*
+*(To be written: whether the three frameworks separated the four cognitive moves cleanly. The headline composite PASS drop (6/15, 6/15, 0/15) does not by itself describe the gradient — the gradient shows in where the cognitive bottleneck shifts. At F=mv each model fails on a different move; at Aristotelian all three share a Stage 1 induction bottleneck against the training-prior; at Decay every trial collapses on Stage 3 quantitative computation with direction-wrong at 0/60. The axiomatization prompt lifts composite at F=mv / Aristotelian but does not rescue Decay, indicating a regime where prompt-engineering reaches its ceiling.)*
 
-### 6.2 Judge Reliability Does Not Transfer Across Tasks
+### 6.2 Judge Reliability Does Not Transfer Across Frameworks
 
-*(To be written: the "more reliable LLM judge" flips across the three rounds and across content / structural / per-scenario tasks within a single framework, demonstrating that single-judge evaluation is unsafe.)*
+*(To be written: across the three baseline rounds, the "more reliable LLM judge" against the human audit is OpenAI for Aristotelian (14/17 = 82%), Claude for F=mv (11/14 = 79%), and Claude for Decay (12/18 = 67%). Aristotelian → F=mv is a complete reversal; F=mv → Decay is the same direction with a smaller margin. Single-judge evaluation is therefore unsafe — the "better judge" is framework-dependent and cannot be picked ahead of time. Direct support for the dual-judge + IRR + audit architecture of §2.3.)*
 
 ### 6.3 A Reproducible LLM-Judge Failure Mode
 
-*(To be written: long banned-word list + high topical semantic overlap → OpenAI slides from literal substring matching into semantic association. Two failure forms: fabricated citations and misclassifications. Identifiable conditions; engineering capture (`evidence_check.py`); mechanism transferability; how dual judges + IRR threshold + human-audit backstop guards against this class of failure.)*
+*(To be written: long banned-word list + high topical semantic overlap → OpenAI slides from literal substring matching into semantic association. Two failure forms: fabricated citations and misclassifications. 16 of 18 Part A FAIL clauses in 03_decay were evidence_check-flagged for fabrication. Identifiable conditions; engineering capture (`evidence_check.py`); mechanism transferability across frontier models; how dual judges + IRR threshold + human-audit backstop guards against this class of failure.)*
 
-### 6.4 Difficulty Gradient in Retrospect
+### 6.4 Stage 4 Over-Claim Stability Across Frameworks
 
-*(To be written: how the three frameworks linearly introduce cognitive pressure; whether the gradient separated the four cognitive moves cleanly; the headline composite PASS drop across the three frameworks, and where the cognitive bottleneck shifts as the framework gets harder.)*
+*(To be written: across the three baseline rounds, Stage 4 review over-claim sits in a narrow 67–70% band — Aristotelian v0.1 7/10 (70%), F=mv 02_fmv 4/6 (67%), Decay 03_decay 10/15 (67%). Stable across framework difficulty, framework nature (counterfactual vs historical), and failure-mode specifics. Frontier models do not get better at identifying their own slips as the framework gets harder; they miss them at roughly the same rate. Inverse of the usual "models know what they don't know" calibration framing.)*
 
 ---
 
