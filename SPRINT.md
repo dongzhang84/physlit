@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-11 04:53 UTC  
+**Generated:** 2026-06-11 05:12 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 7 |
+| Total commits | 8 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **7** | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **8** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
+- `c900d8d` docs: write §6.1–§6.4 cross-framework findings + appendix table renumbering — _dongzhang84_ `2026-06-10 22:12`
 - `394743a` docs: reorder §6 subsections and simplify the judge-reliability table to three rows — _dongzhang84_ `2026-06-10 21:53`
 - `0011a31` docs: collapse §6–§10 into the tightened 8-section structure — _dongzhang84_ `2026-06-10 21:04`
 - `e5f3fc4` docs: surface the 60-scenario derivation up front in §5.2 — _dongzhang84_ `2026-06-10 20:57`
