@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 2 |
+| Total commits | 3 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **2** | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **3** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
+- `dcca5d5` docs: add English paper draft as a Markdown port — _dongzhang84_ `2026-06-10 17:54`
 - `56b0759` docs: refresh project README to match the paper's treatment-arm composites — _dongzhang84_ `2026-06-10 17:53`
 - `8bed96e` docs: rewrite analysis/README.md as a per-sub-round log — _dongzhang84_ `2026-06-10 16:13`
 
