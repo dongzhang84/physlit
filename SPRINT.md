@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-11 23:53 UTC  
+**Generated:** 2026-06-11 23:57 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 16 |
+| Total commits | 17 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **10** | **6** | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **10** | **7** | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
@@ -32,6 +32,7 @@
 
 **Thu – Thursday, Jun 11**
 
+- `403d855` docs: align Figure 1 caption with the v2/v3 composite-verdict terminology — _dongzhang84_ `2026-06-11 16:56`
 - `0ed0f16` docs: apply v3 reviewer fixes (terminology unify, TODO cleanup, rule-out soften) — _dongzhang84_ `2026-06-11 16:53`
 - `a8a86d4` docs: apply v2 reviewer fixes (composite term, three->two, register, arm reminder, gradient soften) — _dongzhang84_ `2026-06-11 15:31`
 - `126290b` docs: apply reviewer fixes #5-#7 (gradient framing, line 61 typo, novelty hedge) — _dongzhang84_ `2026-06-11 14:02`
