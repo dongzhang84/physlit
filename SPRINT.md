@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-11 03:57 UTC  
+**Generated:** 2026-06-11 04:04 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 5 |
+| Total commits | 6 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **5** | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **6** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
+- `0011a31` docs: collapse §6–§10 into the tightened 8-section structure — _dongzhang84_ `2026-06-10 21:04`
 - `e5f3fc4` docs: surface the 60-scenario derivation up front in §5.2 — _dongzhang84_ `2026-06-10 20:57`
 - `0a865de` docs: tighten §5.1 opening and unbold the cross-framework prompt-secrecy line — _dongzhang84_ `2026-06-10 20:37`
 - `dcca5d5` docs: add English paper draft as a Markdown port — _dongzhang84_ `2026-06-10 17:54`
