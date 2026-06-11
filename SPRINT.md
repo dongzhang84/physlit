@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-11 14:35 UTC  
+**Generated:** 2026-06-11 17:45 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 11 |
+| Total commits | 12 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **10** | **1** | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **10** | **2** | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
@@ -32,6 +32,7 @@
 
 **Thu – Thursday, Jun 11**
 
+- `3e3107b` docs: delete Appendix E + F, add Code and Data Availability section — _dongzhang84_ `2026-06-11 10:45`
 - `9df5e6f` docs: write §8 Conclusion — _dongzhang84_ `2026-06-11 07:34`
 
 ---
