@@ -420,6 +420,12 @@ The design principle that emerges, restated in different terms from §7.3: a phy
 
 ---
 
+## Code and Data Availability
+
+All pre-registration files, raw prompts, model responses, dual-judge verdicts, human-audit records, framework artifacts, and reproducibility scripts are at the project repository: <https://github.com/dongzhang84/physlit>. The canonical reproducibility recipe is maintained at the head of `README.md` under the section "Reproducing the experiments", kept in sync with the latest pre-registration tags. The three pre-registration tags listed in Appendix A (`prereg-02_fmv.2-locked`, `prereg-v0.3-locked`, `prereg-03_decay-locked`) are the canonical sources for the headline composite content PASS rates reported in §3, §4, and §5. Tested-model output is non-deterministic across vendors at temperature 0, so trial responses are not byte-identical to ours, but the post-audit verdict patterns are robust under the audit-replay scripts committed to the repository.
+
+---
+
 ## Appendix A: Pre-Registration Tags and SHA-256 for the Three Frameworks
 
 Each framework's evaluation specification is locked under a git tag whose commit points to a single pre-registration file. The file's SHA-256 hash is written into the file's own header. A pre-commit hook plus a CI check (`verify_prereg_integrity.py`) recomputes the SHA-256 on every commit and pull request and compares it to the value in the header. Table 7 lists the tag, the file path, and the 12-character commit prefix for each of the three frameworks.
@@ -642,18 +648,6 @@ Five scenarios are evaluated at Stage 3. Four are quantitative. One is qualitati
 - **Scenario 3. Spinning flywheel after one hundred seconds.** A flywheel is set spinning at 200 rad/s on a polished point in vacuum. After 100 seconds its rate is approximately $200 \times 0.99^{100} \approx 74$ rad/s.
 - **Scenario 4. Orbital radius shrinkage over sixty seconds.** A marble orbits a heavy fixed sphere at radius 1.0 m in vacuum. After 60 seconds the radius is approximately $1.0 \times 0.99^{60} \approx 0.55$ m.
 - **Scenario 5. Will an ideal pendulum ever stop?** A pendulum in still air. The Decay World prediction is that the amplitude shrinks toward zero with no lower bound: $0.99^t \to 0$ as $t \to \infty$. The standard-physics PASS reference is the same qualitative answer, and the framework discriminates on the trajectory rather than the asymptote.
-
----
-
-## Appendix E: Total Cost of the Three Sets of Experiments
-
-*(To be written: per-round production and judge costs, cross-round headline table.)*
-
----
-
-## Appendix F: Full Reproducibility Entry Point
-
-*(To be written: commands to reproduce one set of experiments, dependencies, `uv sync` and `replicate.sh` entry points.)*
 
 ---
 
