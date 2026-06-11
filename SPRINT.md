@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-11 00:54 UTC  
+**Generated:** 2026-06-11 03:38 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 3 |
+| Total commits | 4 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **3** | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **4** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
+- `0a865de` docs: tighten §5.1 opening and unbold the cross-framework prompt-secrecy line — _dongzhang84_ `2026-06-10 20:37`
 - `dcca5d5` docs: add English paper draft as a Markdown port — _dongzhang84_ `2026-06-10 17:54`
 - `56b0759` docs: refresh project README to match the paper's treatment-arm composites — _dongzhang84_ `2026-06-10 17:53`
 - `8bed96e` docs: rewrite analysis/README.md as a per-sub-round log — _dongzhang84_ `2026-06-10 16:13`
