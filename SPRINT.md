@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-11 17:45 UTC  
+**Generated:** 2026-06-11 18:53 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 12 |
+| Total commits | 13 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **10** | **2** | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **10** | **3** | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
@@ -32,6 +32,7 @@
 
 **Thu – Thursday, Jun 11**
 
+- `da1281d` docs: apply reviewer fixes #1-#4 (canonical headline, parallel, formulation, soften) — _dongzhang84_ `2026-06-11 11:53`
 - `3e3107b` docs: delete Appendix E + F, add Code and Data Availability section — _dongzhang84_ `2026-06-11 10:45`
 - `9df5e6f` docs: write §8 Conclusion — _dongzhang84_ `2026-06-11 07:34`
 
