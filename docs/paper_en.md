@@ -284,7 +284,7 @@ The composite PASS rate is 0 of 15. No trial passes on any model. The headline i
 
 First, **the failure profile differs by model on the content axis, but every trial fails at Stage 3**. Claude PASSes Stage 1 on 4 of 5 trials, the strongest induction performance of the three models on this framework, then loses 3 of 5 at Stage 2 and every trial at Stage 3. GPT PASSes Stage 1 on only 2 of 5, well below its $F=mv$ and Aristotelian performance, and Stage 2 on 1 of 5. Gemini PASSes Stage 1 on 1 of 5, and Stage 2 on 0 of 5. Of the 8 Stage 1 FAILs across the three models, the most common first-FAIL clause is N4 (universality across domains, 4 of 8 FAILs). Two failures are coverage gaps. One is the hidden-substrate pattern P2 the prereg flagged as the modal trap. One is N6 (no rate stated). The point that matters: *the rule that the same rate ties four very different domains together* is the hardest condition to induce. Models can describe each domain's decay separately and still fail.
 
-Second, the headline finding is the **ratio leak on Stage 3 quantitative scenarios**. Across 60 quantitative-scenario predictions (15 trials, four quantitative scenarios per trial), the three-bucket breakdown is:
+Second, the headline finding is the **ratio leak on Stage 3 quantitative scenarios**. Stage 3 evaluates four quantitative scenarios plus one qualitative scenario per trial. Across 15 trials that gives 60 quantitative-scenario predictions, and the three-bucket breakdown is:
 
 - Decay-correct (right direction, right ratio): **37 of 60** (62%).
 - Direction-correct but ratio-leaked (right direction, wrong ratio): **23 of 60** (38%).
