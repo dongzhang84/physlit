@@ -302,63 +302,47 @@ Decay World sits at the floor of the three-framework difficulty gradient. The th
 
 ---
 
-## 6. Cross-Framework Methodology Findings
+## 6. Cross-Framework Findings
 
-Aligning the experimental results across the three frameworks surfaces two methodology findings decoupled from the specific physics content.
+Aligning the experimental results across the three frameworks surfaces a set of findings decoupled from the specific physics content of any one framework. They fall into two kinds. The first kind is empirical regularities that recur across the three frameworks: how often models over-claim under self-review, and which LLM judge is more reliable on which task. The second kind is a methodology contribution: a specific, reproducible LLM-as-judge failure mode surfaced by the Decay World banned-token test, and a retrospective on whether the difficulty-gradient design separated the cognitive moves as intended.
 
-### 6.1 Cross-Framework Stability of Stage 4 Review Over-Claim Rate
+### 6.1 Stage 4 Over-Claim Stability Across Frameworks
 
 *(To be written: across the three frameworks, the Stage 4 review over-claim rate of failed experiments stays in a narrow 65–70% band, independent of framework nature and failure-mode specifics.)*
 
-### 6.2 LLM Judge Reliability Does Not Transfer Across Frameworks
+### 6.2 Judge Reliability Does Not Transfer Across Tasks
 
-*(To be written: the "more reliable LLM judge" flips across the three rounds, demonstrating that single-judge evaluation is unsafe.)*
+*(To be written: the "more reliable LLM judge" flips across the three rounds and across content / structural / per-scenario tasks within a single framework, demonstrating that single-judge evaluation is unsafe.)*
 
----
+### 6.3 A Reproducible LLM-Judge Failure Mode
 
-## 7. A Mechanizable Reproducible LLM-Judge Failure
+*(To be written: long banned-word list + high topical semantic overlap → OpenAI slides from literal substring matching into semantic association. Two failure forms: fabricated citations and misclassifications. Identifiable conditions; engineering capture (`evidence_check.py`); mechanism transferability; how dual judges + IRR threshold + human-audit backstop guards against this class of failure.)*
 
-The 03_decay Stage 1 banned-word test triggered a systematic failure mode in the OpenAI judge. The failure has identifiable conditions, can be captured by engineering, and the mechanism itself likely transfers to similar setups on any frontier model.
+### 6.4 Difficulty Gradient in Retrospect
 
-### 7.1 Failure Mechanism
-
-*(To be written: long banned-word list + high topical semantic overlap → OpenAI slides from literal substring matching into semantic association. Two failure forms: fabricated citations and misclassifications.)*
-
-### 7.2 Contribution to the LLM-as-Judge Literature
-
-*(To be written: identifiable conditions; engineering capture (`evidence_check.py`); mechanism transferability; how dual judges + IRR threshold + human-audit backstop guards against this class of failure.)*
+*(To be written: how the three frameworks linearly introduce cognitive pressure; whether the gradient separated the four cognitive moves cleanly; the headline composite PASS drop across the three frameworks, and where the cognitive bottleneck shifts as the framework gets harder.)*
 
 ---
 
-## 8. Discussion
+## 7. Discussion
 
-### 8.1 The "Model Physics Literacy" Portrait from the Three Experiments Combined
+### 7.1 Portrait of Model Physics Literacy from the Three Experiments Combined
 
 *(To be written: expand along the four dimensions of induction / formation / prediction / review; give the integrated portrait "strong qualitative, structure needs triggering, quantitative leakage, low and framework-independent review calibration.")*
 
-### 8.2 Difficulty Gradient Design in Retrospect
+### 7.2 Limitations
 
-*(To be written: how the three frameworks linearly introduce cognitive pressure; the effectiveness of the experimental design as the composite PASS drops 9/15 → 5/15 → 0/15.)*
+*(To be written: $N=5$ is descriptive rather than statistical inference; three frameworks rather than a larger set; three frontier models rather than exhaustive; dual judges are the floor not the ceiling.)*
 
-### 8.3 Limitations
-
-*(To be written: $N=5$ is descriptive rather than statistical inference; three frameworks rather than fifteen; three frontier models rather than exhaustive; dual judges are the floor not the ceiling.)*
-
-### 8.4 Methodological Implications for Benchmark Design
+### 7.3 Implications for Benchmark Design
 
 *(To be written: per-question PASS rate is not cognitive evaluation; pre-registration plus audit is the floor not the ceiling; LLM-as-judge has framework-specific failure modes.)*
 
 ---
 
-## 9. Related Work
+## 8. Conclusion
 
-*(To be written. Four branches: LLM physics benchmarks, counterfactual evaluation, LLM-as-judge reliability, metacognition / self-evaluation.)*
-
----
-
-## 10. Conclusion
-
-*(To be written. Three cross-framework-robust findings: qualitatively strong but quantitatively weak; review calibration low and framework-independent; judge reliability does not transfer across frameworks.)*
+*(To be written. Three cross-framework-robust findings: qualitatively strong but quantitatively weak; review calibration low and framework-independent; judge reliability does not transfer across frameworks. Brief recap of the framework-by-framework story (6/15, 6/15, 0/15) and what the next step would test.)*
 
 ---
 
