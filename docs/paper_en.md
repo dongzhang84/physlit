@@ -308,19 +308,65 @@ Aligning the experimental results across the three frameworks surfaces a set of 
 
 ### 6.1 Difficulty Gradient in Retrospect
 
-*(To be written: whether the three frameworks separated the four cognitive moves cleanly. The headline composite PASS drop (6/15, 6/15, 0/15) does not by itself describe the gradient — the gradient shows in where the cognitive bottleneck shifts. At F=mv each model fails on a different move; at Aristotelian all three share a Stage 1 induction bottleneck against the training-prior; at Decay every trial collapses on Stage 3 quantitative computation with direction-wrong at 0/60. The axiomatization prompt lifts composite at F=mv / Aristotelian but does not rescue Decay, indicating a regime where prompt-engineering reaches its ceiling.)*
+The three frameworks were ordered by difficulty before any experiment ran (§2.5). The post-audit composite PASS rates 6/15, 6/15, 0/15 give a coarse confirmation that the ordering was approximately right: the hardest framework collapsed entirely, and the easier two stayed above zero. But the two easier frameworks scored identically, and a reader who looked only at the composite count would conclude that $F=mv$ and Aristotelian are equally difficult. The data say they are not. The gradient shows up not in the composite count but in **where the cognitive bottleneck sits**. Each framework's failures concentrate in a different cognitive move.
+
+**$F=mv$ (Easy).** Failures spread across all three judged moves, with each model failing on a different one. Claude loses 2 of 5 trials at Stage 2 formulation. GPT loses 3 of 5 at the structural axis, induction-clean but with a disorganized rule set. Gemini fails Stage 1 induction in 4 of 5 trials by reimporting $F=ma$. The framework is shallow enough that the per-model capability gap is visible as three different bottlenecks at once.
+
+**Aristotelian (Medium).** Per-model differentiation collapses into a single shared bottleneck: Stage 1 induction in the face of a strong training-data prior. All three models' failures concentrate at Stage 1 or its Stage 2 inheritance, and the model ordering on composite is driven by their ability to suppress the "Aristotle was wrong" rebuttal sentence that training data overwhelmingly endorses. The structural axis, which was a major differentiator at $F=mv$, is uniformly PASSed under the axiomatization prompt and contributes nothing to the variance.
+
+**Decay (Hard).** The bottleneck shifts again, this time to a different stage. Every Decay trial fails at Stage 3. The qualitative direction column is unanimous across 60 quantitative predictions (0 direction-wrong), but the ratio column is wrong on 23 of 60. The Stage 1 failures that do occur (8 of 15) concentrate on N4 (universality across domains), not on the hidden-substrate trap P2 the prereg flagged as the modal danger.
+
+**Table 5.** Cross-framework comparison of composite PASS and primary failure mode. Composite count alone (6/15, 6/15, 0/15) understates the gradient: each framework's failures concentrate in a different cognitive move, and the move shifts as difficulty rises.
+
+| Framework | Composite PASS | Primary failure stage | Failure mode |
+|---|---|---|---|
+| $F=mv$ | 6/15 | Different per model | Per-model bottleneck heterogeneity |
+| Aristotelian | 6/15 | Stage 1 (all three models) | Training-prior leak |
+| Decay World | 0/15 | Stage 3 (15 of 15 trials) | Quantitative ratio leak |
+
+The pattern across the three frameworks reads as a **bottleneck migration**: from per-model heterogeneity at $F=mv$, to a shared Stage 1 training-prior bottleneck at Aristotelian, to a Stage 3 quantitative-computation bottleneck at Decay. A composite count alone would not show this migration. The decomposition into Stage 1 / Stage 2 / Stage 3 / structural (§2.1) is the instrument that surfaces it.
+
+The axiomatization Stage 1 prompt added at the treatment rounds of $F=mv$ and Aristotelian lifted composite PASS at both frameworks and reduced structural-axis failures at both. At Decay the same prompt was baked in from the start, and it did not rescue the content axis: composite stayed at 0/15. Prompt engineering of this kind clearly helps when the bottleneck is rule-set organization or Stage 1 induction itself, and clearly does not help when the bottleneck is quantitative Stage 3 computation. The implication for benchmark design is narrow but pointed: a framework hard enough to expose a quantitative-computation bottleneck cannot be rescued by Stage 1 prompt engineering, regardless of how well the cue performs on easier frameworks.
+
+The retrospective verdict on the design is that the three frameworks did separate the cognitive moves the four-stage protocol was meant to test. $F=mv$ mostly exercised induction and rule-set organization. Aristotelian put nearly all the pressure on induction under training-prior. Decay shifted the pressure to quantitative computation. The composite count alone would have hidden this. The per-stage and per-axis breakdown made it readable.
 
 ### 6.2 Judge Reliability Does Not Transfer Across Frameworks
 
-*(To be written: across the three baseline rounds, the "more reliable LLM judge" against the human audit is OpenAI for Aristotelian (14/17 = 82%), Claude for F=mv (11/14 = 79%), and Claude for Decay (12/18 = 67%). Aristotelian → F=mv is a complete reversal; F=mv → Decay is the same direction with a smaller margin. Single-judge evaluation is therefore unsafe — the "better judge" is framework-dependent and cannot be picked ahead of time. Direct support for the dual-judge + IRR + audit architecture of §2.3.)*
+Each of the three frameworks triggered the prereg's 25% IRR threshold and went through human audit (§2.3). The disagreement cases give a controlled head-to-head: on every case where the two LLM judges disagreed, the human audit produced a canonical verdict, and we can measure how often each judge matched it. Table 6 reports this comparison for the content-axis disagreement cases of the three baseline rounds.
+
+**Table 6.** LLM judge agreement with the human audit on the dual-judge content-axis disagreement cases for each framework's baseline round. The "more reliable" judge (bolded per row) reverses between Aristotelian and $F=mv$ and shifts again at Decay.
+
+| Framework | Round | Disagree cases | Claude judge | OpenAI judge |
+|---|---|---|---|---|
+| Aristotelian | `v0.1` | 17 | 3/17 (18%) | 14/17 (**82%**) |
+| $F=mv$ | `02_fmv` | 14 | 11/14 (**79%**) | 3/14 (21%) |
+| Decay World | `03_decay` | 18 | 12/18 (**67%**) | 6/18 (33%) |
+
+The pattern is a reversal. On Aristotelian's content axis the OpenAI judge agreed with the human audit on 14 of 17 disagree cases (82%), and Claude on only 3 of 17. The very next framework, $F=mv$, reverses this completely: Claude matched the audit on 11 of 14 (79%), and OpenAI on only 3 of 14. Decay shifts the picture again, with Claude leading but at a smaller margin (12 of 18, or 67%). The two judges are the same models across the three rounds with the same dual-judge architecture. The criteria and prompts differ per framework (each framework has its own Stage 1 prompt and banned-word list), but the architecture is unchanged.
+
+The implication is that the "more reliable" LLM judge is framework-dependent and cannot be predicted from prior rounds. A reader who saw only the $F=mv$ judging results would conclude that Claude is the better content judge. A reader who saw only Aristotelian would conclude the opposite. Both readings would be wrong on the next framework. Single-judge LLM evaluation in this paradigm is unsafe in a specific way: not "judges are sometimes wrong", which is true and uninteresting, but "no judge is reliably more reliable across frameworks". This is direct support for the dual-judge + IRR + audit architecture (§2.3). The two judges are needed not as one good and one redundant but as two whose disagreements need a tie-breaker we can trust.
 
 ### 6.3 A Reproducible LLM-Judge Failure Mode
 
-*(To be written: long banned-word list + high topical semantic overlap → OpenAI slides from literal substring matching into semantic association. Two failure forms: fabricated citations and misclassifications. 16 of 18 Part A FAIL clauses in 03_decay were evidence_check-flagged for fabrication. Identifiable conditions; engineering capture (`evidence_check.py`); mechanism transferability across frontier models; how dual judges + IRR threshold + human-audit backstop guards against this class of failure.)*
+The 03_decay banned-token test on Stage 1 responses triggered a specific failure mode in the OpenAI judge that did not appear at comparable magnitude in the prior two frameworks. The failure has identifiable conditions and is captured by a post-hoc engineering check, and the mechanism likely transfers to similar setups on other frontier models.
+
+**The failure.** The OpenAI judge, asked to identify whether a banned token appears in a model's response, slid from literal substring matching into semantic association. The slide produced two failure forms. First, *fabricated citation*: the judge stated that a banned token appears in a specific rule when that token does not appear anywhere in the response. The judge had associated the rule's content with the banned concept semantically and reified the association as a literal citation. Second, *misclassification*: the judge applied FAIL to text that contained no banned token, citing a token that did appear in the text but was not on the ban list. The judge had broadened the explicit lexical test into an implicit semantic test of its own design. In 16 of the 18 Part A FAIL clauses on the content axis (the audited disagreement cases), the OpenAI judge's verdict was caught by `evidence_check.py`, a post-hoc check that compares each claimed banned-token citation against the verbatim response text.
+
+**Triggering conditions.** The failure surfaced at 03_decay but not at comparable magnitude at 02_fmv or v0.1. Three conditions distinguish 03_decay. First, a long banned-word list (30+ tokens across four layers) versus 8 banned tokens at 02_fmv and 11 at v0.1. Second, high topical semantic overlap: the banned tokens are vocabulary directly relevant to the observation set's subject matter (decay, dissipation, energy), so a semantic association from any rule content to a banned token is one step away at most. Third, a lexical-test instruction asking for verbatim token matching. The slide is from this explicit lexical task to an implicit semantic one, and it is more likely when the long list and the topical overlap together make every semantic association look like a plausible literal hit.
+
+**Engineering capture.** `evidence_check.py` runs after each round's judging and verifies that every claimed banned-token citation appears verbatim in the cited response. It caught all 16 fabricated-citation cases at 03_decay. Fabricated citation is mechanically catchable when the judging interface requires a verbatim quote. Misclassification, where the judge cites a token that does appear but is not on the ban list, is harder to catch automatically because the cited token is real. Human audit is the backstop for that form. The PhysLit architecture (dual judges + IRR threshold + human audit, §2.3) catches both forms: fabricated citations and misclassifications both show up as judge-judge disagreement, trigger the audit pathway, and are resolved against the audit canonical.
+
+**Contribution.** The LLM-as-judge literature generally treats judge failures as a generic noise term. The failure mode named here is specific. It has identifiable conditions (long ban list plus topical overlap plus lexical-test instruction), an engineering catch for one of its two forms (`evidence_check.py`), an architectural catch for both forms (dual judges plus IRR threshold plus audit), and a plausible mechanism that should transfer to any frontier judge under the same three conditions. We did not observe the failure on Claude at 03_decay, but the conditions affecting OpenAI are not Claude-specific, and we cannot conclude that Claude would resist a similarly heavy ban list on a framework whose topical overlap with the ban list is comparable. A framework designed to stress this failure mode on Claude rather than OpenAI is an open methodology question.
 
 ### 6.4 Stage 4 Over-Claim Stability Across Frameworks
 
-*(To be written: across the three baseline rounds, Stage 4 review over-claim sits in a narrow 67–70% band — Aristotelian v0.1 7/10 (70%), F=mv 02_fmv 4/6 (67%), Decay 03_decay 10/15 (67%). Stable across framework difficulty, framework nature (counterfactual vs historical), and failure-mode specifics. Frontier models do not get better at identifying their own slips as the framework gets harder; they miss them at roughly the same rate. Inverse of the usual "models know what they don't know" calibration framing.)*
+Across the three baseline rounds, the Stage 4 over-claim rate on failure-containing trials sits in a narrow 67–70% band. Aristotelian v0.1 records 7 of 10 failure-containing trials with over-claim (70%). $F=mv$ 02_fmv records 4 of 6 (67%). Decay 03_decay records 10 of 15 (67%). The three rates are within one trial of each other on widely different denominators.
+
+What varies across these three rounds is extensive. Framework difficulty varies from Easy to Hard, with composite PASS rates dropping from 6/15 to 0/15. Framework nature varies between counterfactual ($F=mv$, Decay) and historically real (Aristotelian). The failure modes that the Stage 4 review has to identify vary by framework: training-prior leak at Aristotelian, formulation slips and structural disorganization at $F=mv$, and quantitative ratio leaks at Decay. None of this moves the over-claim rate outside the 67–70% band.
+
+The implication is that Stage 4 self-review is approximately a model-level invariant in this paradigm, not a framework-level signal. Frontier models do not get better at identifying their own slips as the framework gets harder. They miss them at roughly the same rate, regardless of whether the slip is a Stage 1 induction error against a strong training prior or a Stage 3 quantitative computation in a novel domain. This is the inverse of the common "models know what they don't know" calibration framing. The data here say models miss what they have just done wrong at a stable rate, and the rate does not depend meaningfully on how hard the rest of the task was.
+
+This pattern, a model-level meta-cognitive ceiling that does not respond to framework difficulty, is one component of the integrated portrait §7.1 develops from the three experiments combined.
 
 ---
 
@@ -348,9 +394,9 @@ Aligning the experimental results across the three frameworks surfaces a set of 
 
 ## Appendix A: Pre-Registration Tags and SHA-256 for the Three Frameworks
 
-Each framework's evaluation specification is locked under a git tag whose commit points to a single pre-registration file. The file's SHA-256 hash is written into the file's own header. A pre-commit hook plus a CI check (`verify_prereg_integrity.py`) recomputes the SHA-256 on every commit and pull request and compares it to the value in the header. Table 5 lists the tag, the file path, and the 12-character commit prefix for each of the three frameworks.
+Each framework's evaluation specification is locked under a git tag whose commit points to a single pre-registration file. The file's SHA-256 hash is written into the file's own header. A pre-commit hook plus a CI check (`verify_prereg_integrity.py`) recomputes the SHA-256 on every commit and pull request and compares it to the value in the header. Table 7 lists the tag, the file path, and the 12-character commit prefix for each of the three frameworks.
 
-**Table 5.** Pre-registration locks for the three frameworks. The git tag string and commit point to the lock state in the public repository. The pre-registration file at the listed path is the canonical evaluation specification under that lock.
+**Table 7.** Pre-registration locks for the three frameworks. The git tag string and commit point to the lock state in the public repository. The pre-registration file at the listed path is the canonical evaluation specification under that lock.
 
 | Framework | Git Tag | Commit | Pre-Reg File |
 |---|---|---|---|
