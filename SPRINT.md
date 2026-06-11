@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-11 03:38 UTC  
+**Generated:** 2026-06-11 03:57 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 4 |
+| Total commits | 5 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **4** | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **5** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
+- `e5f3fc4` docs: surface the 60-scenario derivation up front in §5.2 — _dongzhang84_ `2026-06-10 20:57`
 - `0a865de` docs: tighten §5.1 opening and unbold the cross-framework prompt-secrecy line — _dongzhang84_ `2026-06-10 20:37`
 - `dcca5d5` docs: add English paper draft as a Markdown port — _dongzhang84_ `2026-06-10 17:54`
 - `56b0759` docs: refresh project README to match the paper's treatment-arm composites — _dongzhang84_ `2026-06-10 17:53`
