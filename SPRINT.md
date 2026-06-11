@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-10 23:14 UTC  
+**Generated:** 2026-06-11 00:54 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 1 |
+| Total commits | 2 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **2** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
+- `56b0759` docs: refresh project README to match the paper's treatment-arm composites — _dongzhang84_ `2026-06-10 17:53`
 - `8bed96e` docs: rewrite analysis/README.md as a per-sub-round log — _dongzhang84_ `2026-06-10 16:13`
 
 ---
