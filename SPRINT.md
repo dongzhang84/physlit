@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-12 03:41 UTC  
+**Generated:** 2026-06-12 05:46 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 19 |
+| Total commits | 20 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **10** | **9** | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **10** | **10** | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
@@ -32,6 +32,7 @@
 
 **Thu – Thursday, Jun 11**
 
+- `49e7982` docs: rewrite Abstract to lead with evaluation gap, then method, then results — _dongzhang84_ `2026-06-11 22:45`
 - `05792dc` chore: gitignore latex_tmlr/ for the TMLR submission draft — _dongzhang84_ `2026-06-11 20:41`
 - `dda2164` chore: gitignore docs/outreach_*.md for local-only promotion notes — _dongzhang84_ `2026-06-11 19:25`
 - `403d855` docs: align Figure 1 caption with the v2/v3 composite-verdict terminology — _dongzhang84_ `2026-06-11 16:56`
