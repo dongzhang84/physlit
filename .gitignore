@@ -64,6 +64,7 @@ analysis/**/*.zh.txt
 # Markdown source of truth stays at docs/paper_draft.zh.md.
 latex_cn/
 latex_en/
+latex_tmlr/
 
 # Related-work summary notes — local only, not for publication.
 docs/related_*.md
