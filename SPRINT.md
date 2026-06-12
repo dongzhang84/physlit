@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-12 05:46 UTC  
+**Generated:** 2026-06-12 05:56 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 20 |
+| Total commits | 21 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **10** | **10** | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **10** | **11** | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
@@ -32,6 +32,7 @@
 
 **Thu – Thursday, Jun 11**
 
+- `8112131` docs/paper_en.md: drop keywords line and trim reproducibility tail — _dongzhang84_ `2026-06-11 22:55`
 - `49e7982` docs: rewrite Abstract to lead with evaluation gap, then method, then results — _dongzhang84_ `2026-06-11 22:45`
 - `05792dc` chore: gitignore latex_tmlr/ for the TMLR submission draft — _dongzhang84_ `2026-06-11 20:41`
 - `dda2164` chore: gitignore docs/outreach_*.md for local-only promotion notes — _dongzhang84_ `2026-06-11 19:25`
