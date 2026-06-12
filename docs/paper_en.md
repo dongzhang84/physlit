@@ -10,7 +10,6 @@
 
 > Current large-language-model (LLM) physics benchmarks are usually scored by answer accuracy, which cannot distinguish genuine reasoning from recall of familiar problem patterns and reveals little about where a model's reasoning breaks down. We introduce an auditable four-stage diagnostic that evaluates whether an LLM can reason inside an unfamiliar physics framework through induction, formulation, prediction, and review. The diagnostic combines locked pre-registrations, fresh sessions between stages, dual-LLM judging, and a human-audit pathway, and we apply it to three parallel physics worlds: a single-equation counterfactual world ($F=mv$), a historical framework (Aristotelian mechanics), and a four-domain counterfactual world (Decay World). Across Claude Opus 4.7, GPT-5.5, and Gemini 3.1 Pro, headline composite PASS rates are 6/15, 6/15, and 0/15 respectively (content ∧ structural for $F=mv$ and Aristotelian, content axis only for Decay World where the structural axis is out of scope). The most pointed empirical pattern is a qualitative-versus-quantitative asymmetry: in Decay World, models almost never predict the wrong direction of change, but frequently compute the wrong ratio by slipping back to standard-physics relations. The protocol also surfaces two methodology findings: LLM-judge reliability does not transfer across frameworks, and Stage 4 self-review remains approximately stable across the three tested settings. We release the full prompts, responses, verdicts, and audit records.
 
-**Keywords:** physics reasoning, large language models, counterfactual evaluation, hypothetico-deductive model, LLM-as-judge.
 
 ---
 
@@ -94,7 +93,7 @@ Every stage output is judged independently by two frontier LLM judges from diffe
 
 For each round, we measure the inter-judge disagreement rate (IRR) across all dual-judged outputs. If the IRR for any framework exceeds 25%, a human audit is triggered before the round's results are released. The audit reviews every case where the two LLM judges disagreed, produces a canonical verdict, and the canonical verdict replaces the LLM verdicts for those cases in the final reported composite PASS. The 25% threshold itself is pre-registered. We chose 25% as a value high enough to absorb the random disagreements that two LLM judges produce on borderline cases, and low enough that any systematic semantic gap between the two judges forces the case to a human.
 
-All raw judge outputs, including the per-case agreement breakdown and the human-audit log when triggered, are published in the repository alongside the model responses. A third party can recompute the IRR, inspect the audit log, and verify that each canonical verdict matches what we report.
+All raw judge outputs and the human-audit log when triggered are committed to the repository alongside the model responses (see the Code and Data Availability statement at the end of the paper).
 
 ### 2.4 Defining the Composite Verdict
 
