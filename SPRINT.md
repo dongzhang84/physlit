@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-12 05:56 UTC  
+**Generated:** 2026-06-13 04:36 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -9,13 +9,13 @@
 
 | Stat | Value |
 |------|-------|
-| Status | ❌ Stalled |
-| Active days | 2 / 7 |
-| Total commits | 21 |
+| Status | ⚠️ Slow |
+| Active days | 3 / 7 |
+| Total commits | 22 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **10** | **11** | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **10** | **11** | **1** | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
@@ -43,6 +43,10 @@
 - `da1281d` docs: apply reviewer fixes #1-#4 (canonical headline, parallel, formulation, soften) — _dongzhang84_ `2026-06-11 11:53`
 - `3e3107b` docs: delete Appendix E + F, add Code and Data Availability section — _dongzhang84_ `2026-06-11 10:45`
 - `9df5e6f` docs: write §8 Conclusion — _dongzhang84_ `2026-06-11 07:34`
+
+**Fri – Friday, Jun 12**
+
+- `1af76c7` docs: document write-up + TMLR submission phase in CHANGELOG and CLAUDE.md — _dongzhang84_ `2026-06-12 21:35`
 
 ---
 
