@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-13 06:52 UTC  
+**Generated:** 2026-06-13 07:16 UTC  
 **Showing:** last 6 week(s) of 6 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ⚠️ Slow |
-| Active days | 3 / 7 |
-| Total commits | 25 |
+| Active days | 4 / 7 |
+| Total commits | 26 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **10** | **11** | **4** | ⚪ | ⚪ |
+| ⚪ | ⚪ | **10** | **11** | **4** | **1** | ⚪ |
 
 **Wed – Wednesday, Jun 10**
 
@@ -50,6 +50,10 @@
 - `a44b6e6` docs(paper_en): align run-config wording with runner code (GPT v3 review) — _dongzhang84_ `2026-06-12 23:46`
 - `c64dc88` docs(paper_en): mirror GPT v2 review edits into the Markdown port — _dongzhang84_ `2026-06-12 22:08`
 - `1af76c7` docs: document write-up + TMLR submission phase in CHANGELOG and CLAUDE.md — _dongzhang84_ `2026-06-12 21:35`
+
+**Sat – Saturday, Jun 13**
+
+- `c55da49` docs(paper_en): mirror title + §4.2 de-AI edits from TMLR version — _dongzhang84_ `2026-06-13 00:15`
 
 ---
 
