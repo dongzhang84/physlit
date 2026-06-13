@@ -430,3 +430,43 @@ before any production trial.
   OpenAI §3 fabrications the audit had to unwind.
 - Cost ≈ $25 USD. Report: `analysis/decay/03_decay_report.md`. Human-audit
   detail: `analysis/decay/03_decay_audit_human_review.md`.
+
+## [paper] — 2026-06-12
+
+### Write-up and TMLR submission preparation
+
+Experimental phase closed after `03_decay`. This entry covers the
+write-up phase only: **no new framework, no new production trials, no
+new API calls, nothing written to `results/`.** All three frameworks'
+data is sealed; the paper reports it.
+
+- Three parallel manuscripts built from the same results: `latex_en/`
+  (English), `latex_cn/` (Chinese), and `latex_tmlr/` (the TMLR
+  submission draft). `latex_tmlr/` is its own git repository and is
+  gitignored from the main repo. `docs/paper_en.md` is the readable
+  Markdown port kept in sync with `latex_en/` / `latex_tmlr/`.
+- Structure: 8 main sections (Intro, Methodology, the three framework
+  rounds, Cross-Framework Findings, Discussion, Conclusion) plus
+  Appendices A–D (pre-registration tags + SHA-256, and per-framework
+  observation sets, banned-word lists, N-condition checklists, and
+  Stage 3 scenarios). Heavy appendices, light main text.
+- **Headline metric is the composite = content ∧ structural axis**,
+  reported from the axiomatization-prompt arm: F=mv **6/15**
+  (`02_fmv.2`), Aristotelian **6/15** (`v0.3`), Decay World **0/15**
+  (content axis only — its prereg scopes the structural axis out). Note
+  this differs from the content-only **9/15** in the "Rounds at a
+  glance" table above and in the per-round `02_fmv`/`03_decay` entries:
+  both are correct, they count different axes. The paper standardizes
+  on the composite axis throughout; the sealed per-round entries keep
+  their original content-only baselines untouched.
+- External review: `latex_tmlr/tmlr_feedback_gpt_v1.txt` holds a
+  GPT-authored TMLR-style review (13 numbered items) plus a per-item
+  response log. Items 2/5/11 applied (abstract rewritten to lead with
+  the evaluation gap, Keywords line dropped, openness repetition
+  trimmed); items 3/4 rejected by the author (§1 stays uncompressed,
+  the Easy/Medium/Hard section titles stay); items 6/7/12/13 deferred
+  to a single pre-submission polish pass.
+- Next step: the deferred polish pass (tighten framework intro
+  paragraphs, foreground the contribution bullets, trim the conclusion
+  recap, fix LaTeX overfull boxes / warnings / build-mode consistency),
+  then submit to TMLR.

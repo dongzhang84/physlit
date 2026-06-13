@@ -5,6 +5,29 @@
 
 ---
 
+## Current Phase (2026-06): write-up and TMLR submission
+
+The experimental phase is **closed**. All three frameworks (F=mv,
+Aristotelian, Decay World) have been run, audited, and sealed. We are
+not running new trials. The active work is the paper.
+
+- **Headline metric**: composite PASS = content ∧ structural axis,
+  from the axiomatization-prompt arm. F=mv **6/15**, Aristotelian
+  **6/15**, Decay World **0/15** (content axis only). The content-only
+  **9/15** figures in older per-round notes are a different axis, not
+  an error — see the `[paper]` entry in `CHANGELOG.md`.
+- **Manuscripts**: `latex_tmlr/` is the TMLR submission draft and the
+  main battleground (its own git repo, gitignored from this repo).
+  `latex_en/` and `latex_cn/` are parallel English/Chinese LaTeX
+  versions; `docs/paper_en.md` is the readable Markdown port.
+- **Next step**: the deferred pre-submission polish pass tracked in
+  `latex_tmlr/tmlr_feedback_gpt_v1.txt` (GPT review + per-item response),
+  then submit to TMLR.
+- `README.md` and the `CHANGELOG.md` `[paper]` entry are the source of
+  truth for current status.
+
+---
+
 ## Tech Stack
 
 - **Language**: Python 3.13, strict typing throughout (`mypy --strict`)
