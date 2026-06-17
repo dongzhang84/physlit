@@ -1,11 +1,29 @@
 # Sprint Report
 
-**Generated:** 2026-06-13 07:16 UTC  
-**Showing:** last 6 week(s) of 6 total  
+**Generated:** 2026-06-17 07:12 UTC  
+**Showing:** last 7 week(s) of 7 total  
 
 ---
 
-## Week 6 _(current)_ · 2026-06-08 to 2026-06-14
+## Week 7 _(current)_ · 2026-06-15 to 2026-06-21
+
+| Stat | Value |
+|------|-------|
+| Status | ❌ Stalled |
+| Active days | 1 / 7 |
+| Total commits | 1 |
+
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|
+| ⚪ | ⚪ | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
+
+**Wed – Wednesday, Jun 17**
+
+- `c0f2e16` docs(paper_en): fix Robin/Finch and Erdős citations (GPT bib check) — _dongzhang84_ `2026-06-17 00:12`
+
+---
+
+## Week 6 · 2026-06-08 to 2026-06-14
 
 | Stat | Value |
 |------|-------|
