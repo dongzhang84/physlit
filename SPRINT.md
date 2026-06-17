@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-17 07:12 UTC  
+**Generated:** 2026-06-17 07:28 UTC  
 **Showing:** last 7 week(s) of 7 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 1 |
+| Total commits | 2 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **2** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 17**
 
+- `b321806` docs(paper_en): fix Robin and Co-Scientist references to arXiv 2025 — _dongzhang84_ `2026-06-17 00:27`
 - `c0f2e16` docs(paper_en): fix Robin/Finch and Erdős citations (GPT bib check) — _dongzhang84_ `2026-06-17 00:12`
 
 ---
