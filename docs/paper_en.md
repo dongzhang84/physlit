@@ -668,8 +668,8 @@ Five scenarios are evaluated at Stage 3. Four are quantitative. One is qualitati
 8. Huang, J., & Chang, K. C.-C. (2023). Towards Reasoning in Large Language Models: A Survey. arXiv preprint arXiv:2212.10403.
 9. Boiko, D. A., MacKnight, R., Kline, B., & Gomes, G. (2023). Autonomous Chemical Research with Large Language Models. *Nature*, 624, 570–578. doi:10.1038/s41586-023-06792-0.
 10. Romera-Paredes, B., et al. (2024). Mathematical Discoveries from Program Search with Large Language Models. *Nature*, 625, 468–475. doi:10.1038/s41586-023-06924-6.
-11. Gottweis, J., Natarajan, V., et al. (2026). Towards an AI Co-Scientist: A Multi-Agent System for Hypothesis Generation. *Nature*. Published online 19 May 2026.
-12. Ghareeb, A. E., et al. (2026). Robin: A Multi-Agent System for Automating Scientific Discovery. *Nature*. doi:10.1038/s41586-026-10652-y.
+11. Gottweis, J., Weng, W.-H., Daryin, A., Tu, T., Palepu, A., et al. (2025). Towards an AI Co-Scientist. arXiv preprint arXiv:2502.18864.
+12. Ghareeb, A. E., Chang, B., Mitchener, L., Yiu, A., Szostkiewicz, C. J., Laurent, J. M., Razzak, M. T., White, A. D., Hinks, M. M., & Rodriques, S. G. (2025). Robin: A Multi-Agent System for Automating Scientific Discovery. arXiv preprint arXiv:2505.13400.
 13. Lu, C., Lu, C., Lange, R. T., Foerster, J., Clune, J., & Ha, D. (2024). The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery. arXiv preprint arXiv:2408.06292.
 14. Trinh, T. H., Wu, Y., Le, Q. V., He, H., & Luong, T. (2024). Solving Olympiad Geometry without Human Demonstrations. *Nature*, 625, 476–482. doi:10.1038/s41586-023-06747-5.
 15. Alon, N., Bloom, T. F., Gowers, W. T., Litt, D., Sawin, W., Shankar, A., Tsimerman, J., Wang, V., & Wood, M. M. (2026). Remarks on the Disproof of the Unit Distance Conjecture. arXiv preprint arXiv:2605.20695. Human-verified companion to the OpenAI-generated counterexample.
