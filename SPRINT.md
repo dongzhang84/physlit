@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-17 07:47 UTC  
+**Generated:** 2026-06-19 05:31 UTC  
 **Showing:** last 7 week(s) of 7 total  
 
 ---
@@ -10,18 +10,22 @@
 | Stat | Value |
 |------|-------|
 | Status | ❌ Stalled |
-| Active days | 1 / 7 |
-| Total commits | 3 |
+| Active days | 2 / 7 |
+| Total commits | 4 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **3** | ⚪ | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **3** | **1** | ⚪ | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 17**
 
 - `6cffb4a` docs(paper_en): mirror §1 para 2 connected rewrite (no semicolons) — _dongzhang84_ `2026-06-17 00:46`
 - `b321806` docs(paper_en): fix Robin and Co-Scientist references to arXiv 2025 — _dongzhang84_ `2026-06-17 00:27`
 - `c0f2e16` docs(paper_en): fix Robin/Finch and Erdős citations (GPT bib check) — _dongzhang84_ `2026-06-17 00:12`
+
+**Thu – Thursday, Jun 18**
+
+- `0a676e9` docs(paper_en): soften 'no known AI work' to 'to our knowledge, no AI system' — _dongzhang84_ `2026-06-18 22:31`
 
 ---
 
