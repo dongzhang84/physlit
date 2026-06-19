@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-19 05:31 UTC  
+**Generated:** 2026-06-19 07:21 UTC  
 **Showing:** last 7 week(s) of 7 total  
 
 ---
@@ -9,13 +9,13 @@
 
 | Stat | Value |
 |------|-------|
-| Status | ❌ Stalled |
-| Active days | 2 / 7 |
-| Total commits | 4 |
+| Status | ⚠️ Slow |
+| Active days | 3 / 7 |
+| Total commits | 5 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **3** | **1** | ⚪ | ⚪ | ⚪ |
+| ⚪ | ⚪ | **3** | **1** | **1** | ⚪ | ⚪ |
 
 **Wed – Wednesday, Jun 17**
 
@@ -26,6 +26,10 @@
 **Thu – Thursday, Jun 18**
 
 - `0a676e9` docs(paper_en): soften 'no known AI work' to 'to our knowledge, no AI system' — _dongzhang84_ `2026-06-18 22:31`
+
+**Fri – Friday, Jun 19**
+
+- `14d8ff1` docs(paper_en): fix world-modeling opening claim (infrastructure for physical AI, not a synonym) — _dongzhang84_ `2026-06-19 00:20`
 
 ---
 
