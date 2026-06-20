@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-19 07:21 UTC  
+**Generated:** 2026-06-20 07:44 UTC  
 **Showing:** last 7 week(s) of 7 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ⚠️ Slow |
-| Active days | 3 / 7 |
-| Total commits | 5 |
+| Active days | 4 / 7 |
+| Total commits | 6 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **3** | **1** | **1** | ⚪ | ⚪ |
+| ⚪ | ⚪ | **3** | **1** | **1** | **1** | ⚪ |
 
 **Wed – Wednesday, Jun 17**
 
@@ -30,6 +30,10 @@
 **Fri – Friday, Jun 19**
 
 - `14d8ff1` docs(paper_en): fix world-modeling opening claim (infrastructure for physical AI, not a synonym) — _dongzhang84_ `2026-06-19 00:20`
+
+**Sat – Saturday, Jun 20**
+
+- `fd5d53d` docs(paper_en): reframe world-modeling sentence from researcher background to engineering-problem framing — _dongzhang84_ `2026-06-20 00:44`
 
 ---
 
