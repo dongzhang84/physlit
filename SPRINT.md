@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-21 06:45 UTC  
+**Generated:** 2026-06-21 06:58 UTC  
 **Showing:** last 7 week(s) of 7 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 4 / 7 |
-| Total commits | 9 |
+| Total commits | 10 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **3** | **1** | **1** | **4** | ⚪ |
+| ⚪ | ⚪ | **3** | **1** | **1** | **5** | ⚪ |
 
 **Wed – Wednesday, Jun 17**
 
@@ -33,6 +33,7 @@
 
 **Sat – Saturday, Jun 20**
 
+- `6817700` docs(paper_en): fix Whewell mischaracterization, mirror latex versions — _dongzhang84_ `2026-06-20 23:58`
 - `74b934f` docs(paper_en): frame Maxwell as running example + chronological order — _dongzhang84_ `2026-06-20 23:45`
 - `0e1d058` docs(paper_en): unify Induction-bullet Maxwell sentence ('Maxwell, for example, started ... and induced') — _dongzhang84_ `2026-06-20 23:34`
 - `2860e48` docs(paper_en): sync 'foundation' wording and 'let us return to the LLM' — _dongzhang84_ `2026-06-20 23:07`
