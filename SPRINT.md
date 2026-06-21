@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-20 07:44 UTC  
+**Generated:** 2026-06-21 06:08 UTC  
 **Showing:** last 7 week(s) of 7 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 4 / 7 |
-| Total commits | 6 |
+| Total commits | 7 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| ⚪ | ⚪ | **3** | **1** | **1** | **1** | ⚪ |
+| ⚪ | ⚪ | **3** | **1** | **1** | **2** | ⚪ |
 
 **Wed – Wednesday, Jun 17**
 
@@ -33,6 +33,7 @@
 
 **Sat – Saturday, Jun 20**
 
+- `2860e48` docs(paper_en): sync 'foundation' wording and 'let us return to the LLM' — _dongzhang84_ `2026-06-20 23:07`
 - `fd5d53d` docs(paper_en): reframe world-modeling sentence from researcher background to engineering-problem framing — _dongzhang84_ `2026-06-20 00:44`
 
 ---
