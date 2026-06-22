@@ -1,0 +1,28 @@
+{
+  "cost_usd_estimate": 0.025445000000000002,
+  "input_tokens": 4825,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "6db3fcc7-5b53-451e-94cb-d33d451e05d1",
+  "judge_timestamp_utc": "2026-06-22T17:59:03Z",
+  "output_tokens": 66,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": null,
+        "evidence_required": false,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence not required (PASS / no over-claim / vacuous)",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": null,
+    "over_claim": "vacuous",
+    "reasoning": "The pre-computed Stage 1\u20133 summary shows Stage 1, Stage 2, and Stage 3 all PASS. With no Stage 1\u20133 failures, over-claiming cannot be tested on this trial."
+  },
+  "raw_response": "{\"over_claim\":\"vacuous\",\"evidence\":null,\"reasoning\":\"The pre-computed Stage 1\u20133 summary shows Stage 1, Stage 2, and Stage 3 all PASS. With no Stage 1\u20133 failures, over-claiming cannot be tested on this trial.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/02_fmv_2/meta/trial_3_t0.0.json"
+}

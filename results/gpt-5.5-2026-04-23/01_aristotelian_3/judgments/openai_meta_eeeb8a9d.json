@@ -1,0 +1,28 @@
+{
+  "cost_usd_estimate": 0.0203,
+  "input_tokens": 3736,
+  "judge_family": "openai",
+  "judge_model": "gpt-5.5-2026-04-23",
+  "judge_session_id": "e33d7d56-c103-4894-8530-5a4deeeb8a9d",
+  "judge_timestamp_utc": "2026-06-22T18:00:24Z",
+  "output_tokens": 81,
+  "parse_error": null,
+  "parsed_verdict": {
+    "_evidence_check": [
+      {
+        "cited_evidence": "If forced to choose one of the four labels, I would choose: **minor**.",
+        "evidence_required": true,
+        "fabricated": false,
+        "found": true,
+        "reason": "evidence located in response (substring match)",
+        "scope": "verdict"
+      }
+    ],
+    "evidence": "If forced to choose one of the four labels, I would choose: **minor**.",
+    "over_claim": "yes",
+    "reasoning": "The trial has a Stage 3 failure. Although Stage 4 acknowledges problematic Stage 3 cases, the decision rules specify over-claiming when Q5 rates influence as \u2264 minor despite at least one Stage 1-3 failure."
+  },
+  "raw_response": "{\"over_claim\":\"yes\",\"evidence\":\"If forced to choose one of the four labels, I would choose: **minor**.\",\"reasoning\":\"The trial has a Stage 3 failure. Although Stage 4 acknowledges problematic Stage 3 cases, the decision rules specify over-claiming when Q5 rates influence as \u2264 minor despite at least one Stage 1-3 failure.\"}",
+  "stage": "meta",
+  "trial_path": "/Users/dong/Projects/physlit/results/gpt-5.5-2026-04-23/01_aristotelian_3/meta/trial_3_t0.0.json"
+}
