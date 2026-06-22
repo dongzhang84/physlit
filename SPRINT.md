@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-22 21:23 UTC  
+**Generated:** 2026-06-22 21:38 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 8 |
+| Total commits | 9 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **8** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **9** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
+- `525afac` docs/paper_en.md: pin over-claim denominator to content failures in the definition — _dongzhang84_ `2026-06-22 14:38`
 - `f83ee9f` docs/paper_en.md: neutralize baseline/treatment wording (Part B) — _dongzhang84_ `2026-06-22 14:23`
 - `e695a22` docs/paper_en.md: sync Stage 4 over-claim to structure arm (83/78/67), reframe band as consistently high — _dongzhang84_ `2026-06-22 12:47`
 - `f08af2d` analysis: resolve Stage 4 structure-arm over-claim audit (all 4 = yes) — _dongzhang84_ `2026-06-22 11:58`
