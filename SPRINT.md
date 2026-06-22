@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-22 21:55 UTC  
+**Generated:** 2026-06-22 22:49 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 10 |
+| Total commits | 11 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **10** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **11** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
+- `a8167a6` docs/paper_en.md: trim redundant F=mv re-introduction in section 3.1 — _dongzhang84_ `2026-06-22 15:49`
 - `4182433` docs/paper_en.md: clarify Decay rate as ~1% per second at first mention — _dongzhang84_ `2026-06-22 14:55`
 - `525afac` docs/paper_en.md: pin over-claim denominator to content failures in the definition — _dongzhang84_ `2026-06-22 14:38`
 - `f83ee9f` docs/paper_en.md: neutralize baseline/treatment wording (Part B) — _dongzhang84_ `2026-06-22 14:23`
