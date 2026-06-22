@@ -1,11 +1,29 @@
 # Sprint Report
 
-**Generated:** 2026-06-21 06:58 UTC  
-**Showing:** last 7 week(s) of 7 total  
+**Generated:** 2026-06-22 07:23 UTC  
+**Showing:** last 8 week(s) of 8 total  
 
 ---
 
-## Week 7 _(current)_ · 2026-06-15 to 2026-06-21
+## Week 8 _(current)_ · 2026-06-22 to 2026-06-28
+
+| Stat | Value |
+|------|-------|
+| Status | ❌ Stalled |
+| Active days | 1 / 7 |
+| Total commits | 1 |
+
+| Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|
+| **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+
+**Mon – Monday, Jun 22**
+
+- `6162a29` docs/paper_en.md: add Stage 4 over-claim summary table (Table 7), renumber prereg table to 8 — _dongzhang84_ `2026-06-22 00:23`
+
+---
+
+## Week 7 · 2026-06-15 to 2026-06-21
 
 | Stat | Value |
 |------|-------|
