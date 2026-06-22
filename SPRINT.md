@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-22 17:50 UTC  
+**Generated:** 2026-06-22 18:03 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 3 |
+| Total commits | 4 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **3** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **4** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
+- `f12c177` results: add Stage 4 meta over-claim verdicts for the structure arms — _dongzhang84_ `2026-06-22 11:03`
 - `824afd0` scripts: add Stage 4 over-claim backfill for the structure arms — _dongzhang84_ `2026-06-22 10:50`
 - `b83df64` docs: add plan for scoring Stage 4 over-claim on the structure arm — _dongzhang84_ `2026-06-22 10:12`
 - `6162a29` docs/paper_en.md: add Stage 4 over-claim summary table (Table 7), renumber prereg table to 8 — _dongzhang84_ `2026-06-22 00:23`
