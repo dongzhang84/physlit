@@ -253,7 +253,7 @@ We do not apply the structural axis (N9–N12, §3.1) to this framework. A trial
 
 ### 5.2 Results
 
-We ran $N=5$ trials per model, for 15 trials in total. Table 4 gives the post-audit per-trial classification.
+We ran $N=5$ trials per model, for 15 trials in total. Table 4 gives the post-audit per-trial classification. The Over-claim column reports the Stage 4 metacognitive axis and is discussed for all three frameworks together in §6.4.
 
 **Table 4.** Post-audit per-trial classification for the Decay World framework. $N=5$ trials per model, 15 trials total. Stage 1, Stage 2, Stage 3 are the content-axis stages judged on N1–N6 (Appendix D). Stage 3 collapses five per-trial scenarios (four quantitative, one qualitative) by AND. Composite is the content axis alone: a trial PASSes only if all three content columns are PASS.
 
@@ -287,7 +287,7 @@ Second, the headline finding is the **ratio leak on Stage 3 quantitative scenari
 
 The direction column is unanimous. No model ever predicts the wrong sign of the change. The 23 ratio-leaked predictions are the failure mode we worried about most across all three frameworks and that did not appear at $F=mv$ (0 of 45 ratio-leaked there) or at Aristotelian (Stage 3 scenarios there are largely qualitative). At Decay it appears 38% of the time. The typical leak is a model that has correctly named the per-second exponential decay but computes the per-scenario number using a standard-physics relation, most often by treating an unstated energy as the underlying decaying quantity and back-deriving the measured quantity from it (which gives an inconsistent rate across domains). The model's qualitative physics intuition and its quantitative physics computation come apart cleanly here. Across the prior two frameworks, the cosmetic banned-token check passed and the audit caught the leak in words. Here the banned-token check passes and the audit catches the leak in numbers.
 
-Third, Stage 4 over-claim is **10 of 15 (67%)** on failure-containing trials. Every Decay trial is a failure-containing trial, so the denominator is the full 15. This is the low end of a consistently high over-claim rate across the three frameworks (67–83%), discussed in §6. The Decay-specific observation is that the most common over-claim pattern is the model asserting Stage 1–2 cleared while the trial's Stage 1 or Stage 2 was in fact a FAIL: under self-review, the model defends its induction even when the induction did not actually establish a universal rate.
+Third, the most common Stage 4 over-claim pattern here is the model asserting Stage 1–2 cleared while the trial's Stage 1 or Stage 2 was in fact a FAIL: under self-review, the model defends its induction even when the induction did not actually establish a universal rate.
 
 ### 5.3 Takeaway
 
