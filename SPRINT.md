@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-23 06:50 UTC  
+**Generated:** 2026-06-23 23:50 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ❌ Stalled |
-| Active days | 1 / 7 |
-| Total commits | 22 |
+| Active days | 2 / 7 |
+| Total commits | 23 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **22** | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -41,6 +41,10 @@
 - `824afd0` scripts: add Stage 4 over-claim backfill for the structure arms — _dongzhang84_ `2026-06-22 10:50`
 - `b83df64` docs: add plan for scoring Stage 4 over-claim on the structure arm — _dongzhang84_ `2026-06-22 10:12`
 - `6162a29` docs/paper_en.md: add Stage 4 over-claim summary table (Table 7), renumber prereg table to 8 — _dongzhang84_ `2026-06-22 00:23`
+
+**Tue – Tuesday, Jun 23**
+
+- `431cd22` docs/paper_en.md: trim the Decay over-claim point to the framework-specific pattern — _dongzhang84_ `2026-06-23 16:50`
 
 ---
 
