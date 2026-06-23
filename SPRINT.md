@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-23 06:48 UTC  
+**Generated:** 2026-06-23 06:50 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 21 |
+| Total commits | 22 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **21** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **22** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
+- `8f977e8` docs/paper_en.md: align Decay overview to tmlr and drop the table tilde — _dongzhang84_ `2026-06-22 23:50`
 - `b76e791` docs/paper_en.md: drop the hedge on the Decay rate in the framework description — _dongzhang84_ `2026-06-22 23:48`
 - `2e03b90` docs/paper_en.md: fix overclaim that all four Aristotelian leak types pass the lexical check — _dongzhang84_ `2026-06-22 23:33`
 - `92c66ef` docs/paper_en.md: remove the 'Third' point from the Aristotelian results — _dongzhang84_ `2026-06-22 22:57`
