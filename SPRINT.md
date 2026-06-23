@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-23 05:57 UTC  
+**Generated:** 2026-06-23 06:33 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 19 |
+| Total commits | 20 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **19** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **20** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
+- `2e03b90` docs/paper_en.md: fix overclaim that all four Aristotelian leak types pass the lexical check — _dongzhang84_ `2026-06-22 23:33`
 - `92c66ef` docs/paper_en.md: remove the 'Third' point from the Aristotelian results — _dongzhang84_ `2026-06-22 22:57`
 - `e5e878c` docs/paper_en.md: simplify over-claim caption on Tables 2 and 3 — _dongzhang84_ `2026-06-22 22:39`
 - `eb587c1` docs/paper_en.md: use bare model names in the F=mv per-model PASS breakdown — _dongzhang84_ `2026-06-22 22:26`
