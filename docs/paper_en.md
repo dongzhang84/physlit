@@ -147,7 +147,7 @@ A second, orthogonal *structural axis* judges not what each rule says but how th
 
 ### 3.2 Results
 
-We ran $N=5$ trials per model, for 15 trials in total. Table 2 gives the post-audit per-trial classification.
+We ran $N=5$ trials per model, for 15 trials in total. Table 2 gives the post-audit per-trial classification. The Over-claim column reports the Stage 4 metacognitive axis and is discussed for all three frameworks together in §6.4.
 
 **Table 2.** Post-audit per-trial classification for the $F=mv$ framework. $N=5$ trials per model, 15 trials total. Stage 1, Stage 2, Stage 3 are the content-axis stages judged on N1–N6. Structural is the rule-set axis judged on N9–N12 (Appendix B). Composite is content $\land$ structural: a trial PASSes only if Stage 1, Stage 2, Stage 3, and Structural all PASS. Over-claim is the separate Stage 4 metacognitive axis (§6.4): yes/no on the content-FAIL trials that enter its denominator, and n/a on content-PASS trials, where over-claim is undefined.
 
@@ -203,7 +203,7 @@ The tested models are the same three: Claude Opus 4.7, GPT-5.5, and Gemini 3.1 P
 
 ### 4.2 Results
 
-We ran $N=5$ trials per model, for 15 trials in total. Table 3 gives the post-audit per-trial classification.
+We ran $N=5$ trials per model, for 15 trials in total. Table 3 gives the post-audit per-trial classification. The Over-claim column reports the Stage 4 metacognitive axis and is discussed for all three frameworks together in §6.4.
 
 **Table 3.** Post-audit per-trial classification for the Aristotelian framework. $N=5$ trials per model, 15 trials total. Stage 1, Stage 2, Stage 3 are the content-axis stages judged on N1–N8. Structural is the rule-set axis judged on N9–N12 (Appendix C). Composite is content $\land$ structural: a trial PASSes only if Stage 1, Stage 2, Stage 3, and Structural all PASS. Over-claim is the separate Stage 4 metacognitive axis (§6.4): yes/no on the content-FAIL trials that enter its denominator, and n/a on content-PASS trials, where over-claim is undefined.
 
