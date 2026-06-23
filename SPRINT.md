@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-23 00:59 UTC  
+**Generated:** 2026-06-23 05:17 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 14 |
+| Total commits | 15 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **14** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **15** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
+- `21a79a9` docs/paper_en.md: remove the 'Third' point from the F=mv results — _dongzhang84_ `2026-06-22 22:16`
 - `445087d` docs/paper_en.md: point to the Over-claim column at the F=mv and Aristotelian results tables — _dongzhang84_ `2026-06-22 17:59`
 - `a1dbd01` docs/paper_en.md: clarify N1-N6 are judging criteria, not a target rule count — _dongzhang84_ `2026-06-22 17:16`
 - `9febc5c` docs/paper_en.md: clarify the axiomatization instruction sentence — _dongzhang84_ `2026-06-22 16:29`
