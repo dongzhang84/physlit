@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-22 23:29 UTC  
+**Generated:** 2026-06-23 00:16 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,14 +11,15 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 1 / 7 |
-| Total commits | 12 |
+| Total commits | 13 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **12** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **13** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
+- `a1dbd01` docs/paper_en.md: clarify N1-N6 are judging criteria, not a target rule count — _dongzhang84_ `2026-06-22 17:16`
 - `9febc5c` docs/paper_en.md: clarify the axiomatization instruction sentence — _dongzhang84_ `2026-06-22 16:29`
 - `a8167a6` docs/paper_en.md: trim redundant F=mv re-introduction in section 3.1 — _dongzhang84_ `2026-06-22 15:49`
 - `4182433` docs/paper_en.md: clarify Decay rate as ~1% per second at first mention — _dongzhang84_ `2026-06-22 14:55`
