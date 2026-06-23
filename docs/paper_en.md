@@ -117,7 +117,7 @@ We run experiments in three parallel physics worlds (two counterfactual and one 
 
 **Aristotelian mechanics (Medium).** The second world imports an entire historical framework. A body's natural motion is determined by its elemental composition (earth, water, air, fire), and an object moves toward where its dominant element naturally belongs. The framework is real, internally self-consistent, and widely covered by modern physics textbooks, almost always labeled as a "counterexample." The cognitive pressure is not that the framework is unfamiliar but that the model has seen it many times in training, always with the label "this is wrong." Reasoning inside the framework requires suspending that label.
 
-**Decay World (Hard).** The third world is a single rule: every directly measurable physical quantity loses about 1\% of its value per second (a multiplicative factor of roughly $0.99$ per second). The rule runs simultaneously across mechanical, thermal, rotational, and orbital domains. There is no underlying substrate (such as "energy") serving as the carrier of the rule, and all standard dissipation mechanisms (friction, damping, air resistance, viscosity, radiation) are explicitly turned off in the observation design. The cognitive pressure is multi-axis: a counterfactual rule, cross-domain unification of a single rate, and the absence of any conserved substrate.
+**Decay World (Hard).** The third world is a single rule: every directly measurable physical quantity loses 1\% of its value per second. The rule runs simultaneously across mechanical, thermal, rotational, and orbital domains. There is no underlying substrate (such as "energy") serving as the carrier of the rule, and all standard dissipation mechanisms (friction, damping, air resistance, viscosity, radiation) are explicitly turned off in the observation design. The cognitive pressure is multi-axis: a counterfactual rule, cross-domain unification of a single rate, and the absence of any conserved substrate.
 
 **Table 1.** The three parallel physics worlds used in this paper.
 
@@ -125,7 +125,7 @@ We run experiments in three parallel physics worlds (two counterfactual and one 
 |---|---|---|---|
 | $F=mv$ | Easy | Counterfactual | $F=mv$ instead of $F=ma$ |
 | Aristotelian | Medium | Historical | Element-determined natural motion |
-| Decay World | Hard | Counterfactual | $\sim 1\%$/s decay across 4 domains |
+| Decay World | Hard | Counterfactual | $1\%$/s decay across 4 domains |
 
 The detailed design, observation sets, criteria, and pre-registration tags of the three worlds are given in Sections 3 through 5.
 
