@@ -309,7 +309,7 @@ The three frameworks were ordered by intended difficulty before any experiment r
 
 **$F=mv$ (Easy).** Failures spread across all three judged moves, with each model failing on a different one. Claude loses 2 of 5 trials at Stage 2 formulation. GPT loses 3 of 5 at the structural axis, induction-clean but with a disorganized rule set. Gemini fails Stage 1 induction in 4 of 5 trials by reimporting $F=ma$. The framework is shallow enough that the per-model capability gap is visible as three different bottlenecks at once.
 
-**Aristotelian (Medium).** Per-model differentiation collapses into a single shared bottleneck: Stage 1 induction in the face of a strong training-data prior. All three models' failures concentrate at Stage 1 or its Stage 2 inheritance, and the model ordering on composite is driven by their ability to suppress the "Aristotle was wrong" rebuttal sentence that training data overwhelmingly endorses. The structural axis, which was a major differentiator at $F=mv$, is uniformly PASSed under the axiomatization prompt and contributes nothing to the variance.
+**Aristotelian (Medium).** The dominant bottleneck is induction under a strong training-data prior, surfacing as Stage 1 failures and their Stage 2 inheritance, most visibly in Gemini's four Stage 1 FAILs. The model ordering on composite is driven by each model's ability to suppress the "Aristotle was wrong" rebuttal sentence that training data overwhelmingly endorses. The structural axis, which was a major differentiator at $F=mv$, is uniformly PASSed under the axiomatization prompt and contributes nothing to the variance.
 
 **Decay (Hard).** The bottleneck shifts again, this time to a different stage. Every Decay trial fails by Stage 3. The qualitative direction column is unanimous across 60 quantitative predictions (0 direction-wrong), but the ratio column is wrong on 23 of 60. The Stage 1 failures that do occur (8 of 15) concentrate on N4 (universality across domains), not on the hidden-substrate trap P2 the prereg flagged as the modal danger.
 
@@ -318,7 +318,7 @@ The three frameworks were ordered by intended difficulty before any experiment r
 | Framework | Composite PASS | Primary failure stage | Failure mode |
 |---|---|---|---|
 | $F=mv$ | 6/15 | Different per model | Per-model bottleneck heterogeneity |
-| Aristotelian | 6/15 | Stage 1 (all three models) | Training-prior leak |
+| Aristotelian | 6/15 | Stage 1 induction | Training-prior leak |
 | Decay World | 0/15 | Stage 3 (14 of 15 trials) | Quantitative ratio leak |
 
 The pattern across the three frameworks reads as a **bottleneck migration**: from per-model heterogeneity at $F=mv$, to a shared Stage 1 training-prior bottleneck at Aristotelian, to a Stage 3 quantitative-computation bottleneck at Decay. A composite count alone would not show this migration. The decomposition into Stage 1 / Stage 2 / Stage 3 / structural (§2.1) is the instrument that surfaces it.
