@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-24 05:53 UTC  
+**Generated:** 2026-06-24 05:56 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 26 |
+| Total commits | 27 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | **4** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **22** | **5** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -44,6 +44,7 @@
 
 **Tue – Tuesday, Jun 23**
 
+- `d700e79` docs/paper_en.md: fix Decay banned-list token and layer counts (20+/three) — _dongzhang84_ `2026-06-23 22:56`
 - `aa9b448` docs/paper_en.md: clarify Decay Stage 3 failure wording ('fails by Stage 3'), table 14 of 15 — _dongzhang84_ `2026-06-23 22:53`
 - `697e54a` docs/paper_en.md: fix Claude Stage 2 FAIL count in Decay results (3 of 5 -> 2 of 5) — _dongzhang84_ `2026-06-23 21:48`
 - `a21516f` docs/paper_en.md: restore the 6.4 over-claim pointer as a plain sentence in the Decay point — _dongzhang84_ `2026-06-23 17:07`
