@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-23 23:50 UTC  
+**Generated:** 2026-06-24 00:07 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 23 |
+| Total commits | 24 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **22** | **2** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -44,6 +44,7 @@
 
 **Tue – Tuesday, Jun 23**
 
+- `a21516f` docs/paper_en.md: restore the 6.4 over-claim pointer as a plain sentence in the Decay point — _dongzhang84_ `2026-06-23 17:07`
 - `431cd22` docs/paper_en.md: trim the Decay over-claim point to the framework-specific pattern — _dongzhang84_ `2026-06-23 16:50`
 
 ---
