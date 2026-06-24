@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-24 04:48 UTC  
+**Generated:** 2026-06-24 05:53 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 25 |
+| Total commits | 26 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | **3** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **22** | **4** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -44,6 +44,7 @@
 
 **Tue – Tuesday, Jun 23**
 
+- `aa9b448` docs/paper_en.md: clarify Decay Stage 3 failure wording ('fails by Stage 3'), table 14 of 15 — _dongzhang84_ `2026-06-23 22:53`
 - `697e54a` docs/paper_en.md: fix Claude Stage 2 FAIL count in Decay results (3 of 5 -> 2 of 5) — _dongzhang84_ `2026-06-23 21:48`
 - `a21516f` docs/paper_en.md: restore the 6.4 over-claim pointer as a plain sentence in the Decay point — _dongzhang84_ `2026-06-23 17:07`
 - `431cd22` docs/paper_en.md: trim the Decay over-claim point to the framework-specific pattern — _dongzhang84_ `2026-06-23 16:50`
