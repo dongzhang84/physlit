@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-25 02:02 UTC  
+**Generated:** 2026-06-25 02:03 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 29 |
+| Total commits | 30 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | **6** | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **22** | **6** | **2** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -53,6 +53,7 @@
 
 **Wed – Wednesday, Jun 24**
 
+- `fb04127` docs/paper_en.md: F=mv judge row to content-axis-only (12: 10/12 Claude, 2/12 OpenAI) — _dongzhang84_ `2026-06-24 19:03`
 - `9ecba7c` docs/paper_en.md: revert gradient table to 15 of 15 (cumulative fails-by-Stage-3 reading) — _dongzhang84_ `2026-06-24 19:02`
 
 ---
