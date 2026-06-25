@@ -319,7 +319,7 @@ The three frameworks were ordered by intended difficulty before any experiment r
 |---|---|---|---|
 | $F=mv$ | 6/15 | Different per model | Per-model bottleneck heterogeneity |
 | Aristotelian | 6/15 | Stage 1 induction | Training-prior leak |
-| Decay World | 0/15 | Stage 3 (14 of 15 trials) | Quantitative ratio leak |
+| Decay World | 0/15 | Stage 3 (15 of 15 trials) | Quantitative ratio leak |
 
 The pattern across the three frameworks reads as a **bottleneck migration**: from per-model heterogeneity at $F=mv$, to a shared Stage 1 training-prior bottleneck at Aristotelian, to a Stage 3 quantitative-computation bottleneck at Decay. A composite count alone would not show this migration. The decomposition into Stage 1 / Stage 2 / Stage 3 / structural (§2.1) is the instrument that surfaces it.
 
