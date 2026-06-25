@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-25 14:52 UTC  
+**Generated:** 2026-06-25 18:14 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 4 / 7 |
-| Total commits | 37 |
+| Total commits | 38 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | **6** | **7** | **2** | ⚪ | ⚪ | ⚪ |
+| **22** | **6** | **7** | **3** | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -63,6 +63,7 @@
 
 **Thu – Thursday, Jun 25**
 
+- `5b6da8e` docs/paper_en.md: add Figure 2 caption + in-text ref in 6.1 (bottleneck figure) — _dongzhang84_ `2026-06-25 11:13`
 - `d9cf8d6` docs/paper_en.md: align Conclusion judge-failure + Aristotelian bottleneck with 6.1/6.4 fixes — _dongzhang84_ `2026-06-25 07:52`
 - `5a2e776` docs/paper_en.md: reframe 7.2 judge limitation as auditable baseline; add judge/subject overlap acknowledgment — _dongzhang84_ `2026-06-25 07:33`
 
