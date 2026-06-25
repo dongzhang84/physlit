@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-25 06:43 UTC  
+**Generated:** 2026-06-25 14:34 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ⚠️ Slow |
-| Active days | 3 / 7 |
-| Total commits | 35 |
+| Active days | 4 / 7 |
+| Total commits | 36 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | **6** | **7** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **22** | **6** | **7** | **1** | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -60,6 +60,10 @@
 - `41e1a2d` docs/paper_en.md: reorder §6 (over-claim -> 6.2, judge sections -> 6.3/6.4); cycle cross-refs — _dongzhang84_ `2026-06-24 19:26`
 - `fb04127` docs/paper_en.md: F=mv judge row to content-axis-only (12: 10/12 Claude, 2/12 OpenAI) — _dongzhang84_ `2026-06-24 19:03`
 - `9ecba7c` docs/paper_en.md: revert gradient table to 15 of 15 (cumulative fails-by-Stage-3 reading) — _dongzhang84_ `2026-06-24 19:02`
+
+**Thu – Thursday, Jun 25**
+
+- `5a2e776` docs/paper_en.md: reframe 7.2 judge limitation as auditable baseline; add judge/subject overlap acknowledgment — _dongzhang84_ `2026-06-25 07:33`
 
 ---
 
