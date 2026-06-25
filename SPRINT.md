@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-24 06:45 UTC  
+**Generated:** 2026-06-25 02:02 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -9,13 +9,13 @@
 
 | Stat | Value |
 |------|-------|
-| Status | ❌ Stalled |
-| Active days | 2 / 7 |
-| Total commits | 28 |
+| Status | ⚠️ Slow |
+| Active days | 3 / 7 |
+| Total commits | 29 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | **6** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **22** | **6** | **1** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -50,6 +50,10 @@
 - `697e54a` docs/paper_en.md: fix Claude Stage 2 FAIL count in Decay results (3 of 5 -> 2 of 5) — _dongzhang84_ `2026-06-23 21:48`
 - `a21516f` docs/paper_en.md: restore the 6.4 over-claim pointer as a plain sentence in the Decay point — _dongzhang84_ `2026-06-23 17:07`
 - `431cd22` docs/paper_en.md: trim the Decay over-claim point to the framework-specific pattern — _dongzhang84_ `2026-06-23 16:50`
+
+**Wed – Wednesday, Jun 24**
+
+- `9ecba7c` docs/paper_en.md: revert gradient table to 15 of 15 (cumulative fails-by-Stage-3 reading) — _dongzhang84_ `2026-06-24 19:02`
 
 ---
 
