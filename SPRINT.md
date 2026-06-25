@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-25 04:52 UTC  
+**Generated:** 2026-06-25 04:55 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ⚠️ Slow |
 | Active days | 3 / 7 |
-| Total commits | 33 |
+| Total commits | 34 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | **6** | **5** | ⚪ | ⚪ | ⚪ | ⚪ |
+| **22** | **6** | **6** | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -53,6 +53,7 @@
 
 **Wed – Wednesday, Jun 24**
 
+- `7f9973d` docs/paper_en.md: de-AI 6.4 (plainer contribution sentence, smoother two-forms intro) — _dongzhang84_ `2026-06-24 21:54`
 - `e5333d7` docs/paper_en.md: condense §6.4 to 3 paragraphs, fix overstated engineering catch, drop script name — _dongzhang84_ `2026-06-24 21:51`
 - `901a72c` docs/paper_en.md: trim redundant closing sentence in §6.2 over-claim — _dongzhang84_ `2026-06-24 21:33`
 - `41e1a2d` docs/paper_en.md: reorder §6 (over-claim -> 6.2, judge sections -> 6.3/6.4); cycle cross-refs — _dongzhang84_ `2026-06-24 19:26`
