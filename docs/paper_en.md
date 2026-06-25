@@ -336,10 +336,10 @@ Each of the three frameworks triggered the prereg's 25% disagreement-rate thresh
 | Framework | Disagree cases | Claude judge | OpenAI judge |
 |---|---|---|---|
 | Aristotelian | 17 | 3/17 (18%) | 14/17 (**82%**) |
-| $F=mv$ | 14 | 11/14 (**79%**) | 3/14 (21%) |
+| $F=mv$ | 12 | 10/12 (**83%**) | 2/12 (17%) |
 | Decay World | 18 | 12/18 (**67%**) | 6/18 (33%) |
 
-The pattern is a reversal. On Aristotelian's content axis the OpenAI judge agreed with the human audit on 14 of 17 disagree cases (82%), and Claude on only 3 of 17. The very next framework, $F=mv$, reverses this completely: Claude matched the audit on 11 of 14 (79%), and OpenAI on only 3 of 14. Decay shifts the picture again, with Claude leading but at a smaller margin (12 of 18, or 67%). The two judges are the same models across the three rounds with the same dual-judge architecture. The criteria and prompts differ per framework (each framework has its own Stage 1 prompt and banned-word list), but the architecture is unchanged.
+The pattern is a reversal. On Aristotelian's content axis the OpenAI judge agreed with the human audit on 14 of 17 disagree cases (82%), and Claude on only 3 of 17. The very next framework, $F=mv$, reverses this completely: Claude matched the audit on 10 of 12 (83%), and OpenAI on only 2 of 12. Decay shifts the picture again, with Claude leading but at a smaller margin (12 of 18, or 67%). The two judges are the same models across the three rounds with the same dual-judge architecture. The criteria and prompts differ per framework (each framework has its own Stage 1 prompt and banned-word list), but the architecture is unchanged.
 
 The implication is that the "more reliable" LLM judge is framework-dependent and cannot be predicted from prior rounds. A reader who saw only the $F=mv$ judging results would conclude that Claude is the better content judge. A reader who saw only Aristotelian would conclude the opposite. Both readings would be wrong on the next framework. Single-judge LLM evaluation in this paradigm is unsafe in a specific way: not "judges are sometimes wrong", which is true and uninteresting, but "no judge is reliably more reliable across frameworks". This is direct support for the dual-judge plus disagreement-rate plus audit architecture (§2.3). The two judges are needed not as one good and one redundant but as two whose disagreements need a tie-breaker we can trust.
 
