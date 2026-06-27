@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-27 16:42 UTC  
+**Generated:** 2026-06-27 21:26 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ✅ Good |
 | Active days | 6 / 7 |
-| Total commits | 42 |
+| Total commits | 43 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | **6** | **7** | **4** | **1** | **2** | ⚪ |
+| **22** | **6** | **7** | **4** | **1** | **3** | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -74,6 +74,7 @@
 
 **Sat – Saturday, Jun 27**
 
+- `dd4f8ff` docs/paper_en.md: update Fig 1 caption for expanded pipeline figure (dual judges/audit, over-claim, models) — _dongzhang84_ `2026-06-27 14:26`
 - `0d3b35b` docs/paper_en.md: clarify Table 5 Decay cell to 14/15 Stage 3 FAIL + reconcile with cumulative fails-by-Stage-3 in body — _dongzhang84_ `2026-06-27 09:42`
 - `0eb6c06` docs/paper_en.md: fix Fig 2 caption re Decay structural axis + add rationale for dropping structural axis at Decay — _dongzhang84_ `2026-06-27 09:34`
 
