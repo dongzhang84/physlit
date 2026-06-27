@@ -707,3 +707,96 @@ Five scenarios are evaluated at Stage 3. Four are quantitative. One is qualitati
 46. Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., Buck, S., Chambers, C. D., Chin, G., Christensen, G., et al. (2015). Promoting an open research culture. *Science*, 348(6242), 1422–1425.
 47. Lloyd, G. E. R. (1968). *Aristotle: The Growth and Structure of his Thought*. Cambridge University Press, Cambridge.
 48. Clagett, M. (1959). *The Science of Mechanics in the Middle Ages*. University of Wisconsin Press, Madison.
+
+---
+
+## Appendix E: Prompt Architecture and Availability
+
+The four-stage protocol (§2.1) is driven by four model-facing prompts, each run in an independent session. Every stage's prompt takes the previous stage's final response text as input and produces the input to the next stage:
+
+- Stage 1 (induction): the framework's observation set → an induced rule set.
+- Stage 2 (formulation): the Stage 1 final response → operational rules.
+- Stage 3 (prediction): the Stage 2 final response plus the application scenarios → quantitative predictions.
+- Stage 4 (review): the Stage 1–3 final responses → a self-assessment.
+
+The structure-prompt arm differs from the no-cue initial round in the Stage 1 prompt alone: it inserts the axiomatization paragraph (the "smallest set of rules" instruction) reproduced below. Decay World uses this structure-prompt Stage 1 from the start (§5).
+
+| Prompt family | Input | Output | Per-fw. | Reproduced here |
+|---|---|---|---|---|
+| Stage 1 induction | observation set | induced rule set | yes | yes (full, below) |
+| Stage 2 formulation | Stage 1 response | operational rules | minor | repo only |
+| Stage 3 prediction | Stage 2 response, scenarios | predictions | yes | repo only |
+| Stage 4 review | Stage 1–3 responses | self-assessment | no | questions below |
+| Judge prompts | model output, criteria | PASS/FAIL | yes | repo only |
+
+We reproduce one complete prompt in full: the structure-prompt (axiomatization) Stage 1 prompt for $F=mv$, the key experimental treatment behind the headline composite results. The `{{observations}}` placeholder is filled with the framework's observation set (Appendix B), and the banned-token instruction is the third bullet. The counterfactual rule $F=mv$ is never stated: the only thing the model is told is to induce a self-consistent rule set.
+
+```text
+You are presented with a list of observed phenomena from a world whose
+physics may not match the physics you know.
+
+**Critical instructions:**
+
+- Treat the observations as given. Do not dispute them, do not assume
+  the observer is mistaken, and do not import information from outside
+  the list.
+- Describe this world using only ordinary descriptive language and the
+  vocabulary the observations themselves introduce — push, pull,
+  effort, pace, speed, heavy, light, fall, and the like.
+- Do **not** use any of these words, in any form, anywhere in your
+  response: *velocity*, *acceleration*, *inertia*, *momentum*,
+  *mass*, *gravity*, *friction*, *energy*. Do not name a physicist,
+  and do not write the relation `F = ma`. Naming one of
+  these concepts only to deny that it applies still counts as using
+  it — to say this world lacks a gradual speeding-up, write "the pace
+  does not increase", not "there is no acceleration".
+
+Observations:
+
+{{observations}}
+
+Your task: propose a self-consistent set of rules that explains every
+observation above, using only the language permitted above.
+
+Aim for the **smallest** set of rules that still explains every
+observation. Do not state as a separate rule anything that already
+follows from rules you have given; if one rule is a special case or a
+consequence of another, say so instead of listing it on its own.
+Prefer a few general rules over a long list of specific ones.
+
+Return your rules as a numbered list. Be specific. After the list,
+briefly note any observation that remains in tension with your rules
+and what makes it difficult.
+```
+
+The Stage 4 review prompt presents the model with its own Stage 1–3 responses (shown to it in place of the placeholders) and asks five questions. The Stage 4 over-claim metric (§6.2) is defined relative to these questions, so we reproduce them verbatim:
+
+```text
+Reflect on these responses and answer each question below. Be
+specific: quote phrases from your prior responses where relevant, and
+identify exact moments rather than giving general impressions.
+
+**Q1.** Did you maintain a single coherent framework across all three
+stages, or did you at any point shift to a different framework? If you
+shifted, identify the moment and the reason.
+
+**Q2.** Did any of your responses use concepts that were not
+introduced or implied by the original observations? If so, name the
+concepts and quote the phrases where they appear.
+
+**Q3.** In your Stage 3 predictions, are there any cases where the
+prediction does not actually follow from the operational rules you
+stated at Stage 2? If so, identify the scenario and the gap.
+
+**Q4.** A second observer might claim that the framework you reasoned
+within differs from standard physics in specific ways. Without naming
+the framework, list the three or four most consequential differences
+between the framework you used and the physics you would otherwise
+default to.
+
+**Q5.** Estimate, on a four-point scale (none / minor / moderate /
+major), how much your Stage 3 predictions were influenced by standard
+physics rather than by your Stage 2 operational rules.
+```
+
+The full verbatim prompts for every framework, stage, and round, together with the four judge prompts (content, structural, per-scenario, and Stage 4 over-claim), are released in the repository under the locked pre-registration tags (Appendix A). We do not reproduce them all here because there are multiple prompts per framework and the canonical versions are the tagged files.
