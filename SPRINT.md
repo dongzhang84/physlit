@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-27 03:48 UTC  
+**Generated:** 2026-06-27 16:34 UTC  
 **Showing:** last 8 week(s) of 8 total  
 
 ---
@@ -10,12 +10,12 @@
 | Stat | Value |
 |------|-------|
 | Status | ✅ Good |
-| Active days | 5 / 7 |
-| Total commits | 40 |
+| Active days | 6 / 7 |
+| Total commits | 41 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **22** | **6** | **7** | **4** | **1** | ⚪ | ⚪ |
+| **22** | **6** | **7** | **4** | **1** | **1** | ⚪ |
 
 **Mon – Monday, Jun 22**
 
@@ -71,6 +71,10 @@
 **Fri – Friday, Jun 26**
 
 - `447afac` docs/paper_en.md: add Appendix E (prompt architecture + full F=mv axiomatized Stage 1 prompt + Stage 4 questions) — _dongzhang84_ `2026-06-26 20:48`
+
+**Sat – Saturday, Jun 27**
+
+- `0eb6c06` docs/paper_en.md: fix Fig 2 caption re Decay structural axis + add rationale for dropping structural axis at Decay — _dongzhang84_ `2026-06-27 09:34`
 
 ---
 
