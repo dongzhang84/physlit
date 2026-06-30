@@ -488,7 +488,7 @@ A passing Stage 1 induction must satisfy all six conditions. Failing any one tri
 - **N3. More heaviness, less pace.** The rules state that, under one and the same push, a heavier body moves at a smaller pace than a lighter one.
 - **N4. Motion is simultaneous with the push.** The rules state both that a body is at its full pace as soon as the push acts and that a body stops the instant the push ends.
 - **N5. Bodies fall at one common, unchanging pace.** The rules state that released bodies fall at a pace that is the same for a heavy and a light body and unchanging during the fall.
-- **N6. A released body falls straight down.** The rules state that an object released from a moving hand falls straight down from the point of release, with no forward sailing.
+- **N6. Pushes combine.** The rules state that two pushes acting on one body combine: same-direction pushes add, and opposite-direction pushes subtract.
 
 ### Suspicious failure modes F1–F7
 
@@ -649,11 +649,11 @@ The judge runs the checks in order and halts at the first FAIL.
 
 Five scenarios are evaluated at Stage 3. Four are quantitative. One is qualitative. Each scenario has an explicit Decay World prediction and a discriminating standard-physics alternative. The predictions below are the Decay World answers used as the PASS reference.
 
-- **Scenario 1. Pendulum amplitude after thirty seconds.** A pendulum is released from amplitude 12 cm in still air. After 30 seconds the amplitude is approximately $12 \times 0.99^{30} \approx 8.9$ cm.
-- **Scenario 2. Hot tea cooling for sixty seconds.** A cup of hot tea at 350 K is sealed in an insulated vacuum chamber. After 60 seconds the temperature is approximately $350 \times 0.99^{60} \approx 191$ K.
-- **Scenario 3. Spinning flywheel after one hundred seconds.** A flywheel is set spinning at 200 rad/s on a polished point in vacuum. After 100 seconds its rate is approximately $200 \times 0.99^{100} \approx 74$ rad/s.
+- **Scenario 1. Pendulum swing angle after thirty seconds.** A pendulum is released from rest at a swing angle of $10^\circ$ in still air. After 30 seconds the swing angle is approximately $10 \times 0.99^{30} \approx 7.4^\circ$.
+- **Scenario 2. Hot tea cooling for sixty seconds.** A cup of tea is sealed at 400 K inside a perfectly insulated vacuum chamber. After 60 seconds the temperature is approximately $400 \times 0.99^{60} \approx 219$ K, below the surrounding room temperature.
+- **Scenario 3. Spinning flywheel after one hundred seconds.** A flywheel is set spinning at 200 rad/s on a polished point in vacuum. After 100 seconds its rate is approximately $200 \times 0.99^{100} \approx 73$ rad/s.
 - **Scenario 4. Orbital radius shrinkage over sixty seconds.** A marble orbits a heavy fixed sphere at radius 1.0 m in vacuum. After 60 seconds the radius is approximately $1.0 \times 0.99^{60} \approx 0.55$ m.
-- **Scenario 5. Will an ideal pendulum ever stop?** A pendulum in still air. The Decay World prediction is that the amplitude shrinks toward zero with no lower bound: $0.99^t \to 0$ as $t \to \infty$. The standard-physics PASS reference is the same qualitative answer, and the framework discriminates on the trajectory rather than the asymptote.
+- **Scenario 5. Will an ideal pendulum ever stop?** A pendulum with a frictionless pivot in an evacuated chamber, released from a $10^\circ$ swing angle. The Decay World prediction is that it eventually stops: the swing angle shrinks at about $0.99$ per second, falling to one-hundredth of the starting angle (about $0.1^\circ$) at $t \approx 458$ seconds. The standard-physics reference treats it as a conservative oscillator that swings forever, so the framework discriminates on whether the model commits to the decaying trajectory.
 
 ---
 
