@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-30 00:42 UTC  
+**Generated:** 2026-06-30 18:06 UTC  
 **Showing:** last 8 week(s) of 9 total  
 
 ---
@@ -10,16 +10,20 @@
 | Stat | Value |
 |------|-------|
 | Status | ❌ Stalled |
-| Active days | 1 / 7 |
-| Total commits | 1 |
+| Active days | 2 / 7 |
+| Total commits | 2 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **1** | **1** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 29**
 
 - `ee67cbc` docs/paper_en.md: fix App B N6 (Pushes combine) + App D Stage 3 scenarios 1/2/3/5 to match locked prereg — _dongzhang84_ `2026-06-29 17:42`
+
+**Tue – Tuesday, Jun 30**
+
+- `ea4cd2f` docs: add project-timeline.md (development timeline from git history; experiments sealed before write-up) — _dongzhang84_ `2026-06-30 11:06`
 
 ---
 
