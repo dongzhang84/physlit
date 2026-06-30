@@ -1,6 +1,6 @@
 # Sprint Report
 
-**Generated:** 2026-06-30 18:16 UTC  
+**Generated:** 2026-06-30 18:54 UTC  
 **Showing:** last 8 week(s) of 9 total  
 
 ---
@@ -11,11 +11,11 @@
 |------|-------|
 | Status | ❌ Stalled |
 | Active days | 2 / 7 |
-| Total commits | 3 |
+| Total commits | 4 |
 
 | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|
-| **1** | **2** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
+| **1** | **3** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ |
 
 **Mon – Monday, Jun 29**
 
@@ -23,6 +23,7 @@
 
 **Tue – Tuesday, Jun 30**
 
+- `729f520` chore: gitignore private/ folder for local-only notes — _dongzhang84_ `2026-06-30 11:54`
 - `488812d` docs/project-timeline.md: merge analysis + writing into one phase (5 phases total) — _dongzhang84_ `2026-06-30 11:15`
 - `ea4cd2f` docs: add project-timeline.md (development timeline from git history; experiments sealed before write-up) — _dongzhang84_ `2026-06-30 11:06`
 
