@@ -71,3 +71,6 @@ docs/related_*.md
 
 # Outreach / promotion plan — local only, do not push.
 docs/outreach_*.md
+
+# Local private notes (never pushed)
+private/
