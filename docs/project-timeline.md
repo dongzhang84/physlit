@@ -35,16 +35,12 @@ Each round is anchored by a locked, SHA-256-sealed pre-registration tag:
 Peak activity on May 18 (60 commits in one day); May 17–22 ran 27–60 commits
 per day. **By May 22 every experimental round was locked and sealed.**
 
-## Phase 3 — Analysis consolidation
-**May 26 – May 28**
+## Phase 3 — Analysis and paper writing
+**May 26 – June 12**
 
-Per-round results consolidated into the `analysis/` findings write-ups.
-
-## Phase 4 — Paper writing: multi-version progression
-**from May 28**
-
-The manuscript advanced through four versions, each starting on a different
-date:
+Per-round results were first consolidated into the `analysis/` findings
+write-ups, after which the manuscript advanced through four versions, each
+starting on a different date:
 
 | Start | Version | Notes |
 |---|---|---|
@@ -53,7 +49,7 @@ date:
 | Jun 10 | `docs/paper_en.md` | readable English Markdown |
 | Jun 12 | `latex_tmlr` (TMLR draft) | the submission draft, main focus |
 
-## Phase 5 — TMLR polish and finalization
+## Phase 4 — TMLR polish and finalization
 **Jun 12 – Jun 29 (the long tail)**
 
 Sentence-by-sentence polishing of the TMLR draft: Section 6 reorder, an
@@ -62,7 +58,7 @@ dual-judge / human-audit evaluation pipeline, and the Decay World Stage 3
 scenarios reconciled against the locked pre-registration. Heaviest day
 Jun 22 (main repo 34 commits, TMLR draft 17 commits).
 
-## Phase 6 — arXiv submission
+## Phase 5 — arXiv submission
 **Jun 30**
 
 Manuscript finalized and prepared for arXiv submission.
